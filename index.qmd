@@ -1,0 +1,18 @@
+---
+title: Contenidos
+format: html
+listing:
+  # This template is tricky as fuck
+  # - It is very space-sensitive
+  # - I included some logic for visualizing the subdir structure.
+  #   If you find any problems related to that consider removing the functionality entirely 
+  template: index.ejs
+  fields: [title, subtitle]
+  sort: "path" 
+  contents:
+    - 'src/**/*.qmd'
+    - 'src/**/*.pdf'
+---
+
+[Moodle](https://moodle.unizar.es/add/course/view.php?id=111172)
+[Online Pascal](https://www.onlinegdb.com/online_pascal_compiler)

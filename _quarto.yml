@@ -1,0 +1,17 @@
+lang: es
+project:
+  title: DevOps
+  type: website
+  render: 
+    - index.qmd
+    - 'src/**/*.qmd'
+  preview:
+    port: 7777
+    browser: false
+  resources:
+    - 'src/**/*.pdf'
+  output-dir: _output
+format:
+  html:
+    theme: [ src/style/custom.scss]
+    code-copy: true
