@@ -1,15 +1,105 @@
 ---
 title: Presentación de la Asignatura
 subtitle: Información general
+draft: true
 ---
 
 ## Profesores
 
 - Sergio Martín Segura (`segura@unizar.es`)
+    - Teoría, problemas y prácticas
+    - Despacho: L2.09, Ada Byron
 - Miguel Ángel Latre Abadía (`latre@unizar.es`)
+    - Prácticas
+    - Despacho: D2.22, Ada Byron
 
 _Tutorías: Consultar enlace en Moodle_
 
 ---
 
+## Organización
+
+- **Clases teóricas**: 2 horas semanales
+- **Clases de problemas**: 1 hora semanal
+- **Prácticas de laboratorio**: 2 horas cada dos semanas
+
+---
+
+### Sesiones de teoría
+
+- **Introducción** de conceptos **fundamentales**
+- **Resolución magistral** de ejercicios de ejemplo
+
+---
+
+### Sesiones de problemas
+
+- **Resolución autónoma** de ejercicios sencillos
+    - Se puede traer ordenador
+    - Se **aconseja** resolver los ejercicios en papel
+
+---
+
+### Sesiones de prácticas
+
+- **Resolución autónoma** de ejercicios complejos
+    - Se puede traer ordenador personal o usar los del laboratorio
+- Se realizarán `7` sesiones.
+    - `P0`: No evaluable
+    - `P1` a `P6`: Evaluables
+- Alumnos divididos por **grupos**
+    - Grupos **pre-asignados** por la coordinación del grado
+    - Cada grupo tiene un **profesor asignado**
+- Resolución **individual**
+- Entregas con **fecha común**
+    - Implica traer preparada la práctica a la sesión
+
+---
+
+## Evaluación final
+
+- La nota final, tal cual indica la [guía docente](https://estudios.unizar.es/estudio/asignatura?anyo_academico=2024&asignatura_id=32107&estudio_id=20240167&centro_id=110&plan_id_nk=653), se calcula:
+    - $70\%$ Examen escrito (mínimo $5$)
+    - $30\%$ Nota de prácticas (dos opciones):
+        - Entregas de prácticas
+        - Examen práctico final (anula la nota de entregas)
+- Se deberá obtener una nota mínima de $5$ ponderada para aprobar la asignatura
+- Segunda convocatoria
+    - Examen escrito + Examen práctico final
+    - Mismas ponderaciones
+
+---
+
+### Examen escrito
+
+- Escrito en papel
+- Resolución de problemas
+    - 3 o 4 ejercicios, según dificultad
+- Evaluación de los ejercicios
+    - Se valorará la **correctitud** y la **claridad** de la solución
+    - Error de concepto grave: $0$
+- Prohibido cualquier material de consulta o dispositivo de comunicación.
+    - En caso de plagio, se abrirá un expediente y la calificación quedará **pendiente** de su resolución.
+
+---
+
+### Entregas de Prácticas
+
+- Se entregarán **6 prácticas evaluables**
+- Las entregas se realizarán a través de Moodle
+    - **No** se admitirán entregas fuera de plazo
+    - **No** se admitirán entregas por otro medio que no sea Moodle.
+- En caso de plagio, se abrirá un expediente y la calificación quedará **pendiente** de su resolución.
+
+---
+
+### Examen práctico final
+
+- **Voluntario**
+- Su realización **anula** la nota de las entregas
+- **No** se recomienda esta opción frente a las entregas contínuas
+
+---
+
+## ¿Dudas? {.center}
 
