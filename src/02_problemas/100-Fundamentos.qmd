@@ -1,0 +1,9 @@
+---
+title: Problemas 100
+subtitle: Fundamentos
+draft: true
+---
+
+{{< include "./ejercicios/malabares_de_variables.md" >}}
+
+
