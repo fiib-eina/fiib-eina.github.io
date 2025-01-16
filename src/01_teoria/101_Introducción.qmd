@@ -1,4 +1,5 @@
 ---
 title: Teoría 000
 subtitle: Computadores y Lenguajes
+draft: true
 ---

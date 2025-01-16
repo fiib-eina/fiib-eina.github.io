@@ -1,7 +1,6 @@
 ---
 title: Presentación de la Asignatura
 subtitle: Información general
-draft: true
 ---
 
 ## Profesores
