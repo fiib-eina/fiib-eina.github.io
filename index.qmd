@@ -1,5 +1,5 @@
 ---
-title: Contenidos
+title: Fundamentos de informática
 format: html
 listing:
   # This template is tricky as fuck
@@ -14,5 +14,5 @@ listing:
     - 'src/**/*.pdf'
 ---
 
-[Moodle](https://moodle.unizar.es/add/course/view.php?id=111172)
-[Online Pascal](https://www.onlinegdb.com/online_pascal_compiler)
+<!-- [Moodle](https://moodle.unizar.es/add/course/view.php?id=111172) -->
+<!-- [Online Pascal](https://www.onlinegdb.com/online_pascal_compiler) -->

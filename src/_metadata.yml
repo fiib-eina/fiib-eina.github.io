@@ -5,19 +5,19 @@ format:
 
     # Format Options
     date-format: long
-    theme: [default, style/custom.scss]
+    theme: [default, _style/custom.scss]
     # Slides
-    incremental: true
+    incremental: false
     slide-number: true
     self-contained-math: true
     title-slide-attributes:
-      data-background-image: style/logos/unizar-black.svg
+      data-background-image: _style/logos/unizar-black.svg
       data-background-size: auto 600px
       data-background-opacity: "0.30"
       data-background-color: "#223d71"
     code-copy: true
     # Slide Content
-    logo: style/logos/unizar-diis-white.svg
+    logo: _style/logos/unizar-diis-white.svg
     smaller: false
     # Slide Tools
     overview: true
@@ -37,7 +37,7 @@ format:
     footnotes-hover: true
     reference-links: true
     reference-location: document
-    footer: "Fundamentos de Infomrática 2024-2025"
+    footer: "Fundamentos de Informática"
     link-external-icon: true
     smooth-scroll: true
     link-external-newwindow: true

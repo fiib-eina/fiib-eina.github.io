@@ -1,0 +1,123 @@
+---
+title: Práctica 0
+subtitle: Introducción
+---
+
+## Objetivos
+
+- Instalar el entorno de trabajo
+- Familiarizarse con el entorno de trabajo
+    - Editor de texto
+    - Terminal
+- Aprender a ejecutar (no escribir) código Python
+- Intuyendo Python
+- Entregar
+
+---
+
+## Instalación del entorno de trabajo
+
+![Instalación de VSCode]()
+
+---
+
+## Familiarizarse con el entorno de trabajo
+
+---
+
+### Directorio 
+
+Organizaremos el código de cada práctica en su propio directorio (carpeta).
+
+```
+./
+├── p0
+│   ├── hello.py
+│   ├── ej1.py
+│   └── ej2.py
+├── p1
+├── ...
+└── p6
+```
+
+---
+
+### Visual Studio Code
+
+Abrid `Visual Studio Code`.
+
+<!-- TODO: Imagen de VSCode -->
+
+---
+
+#### VSCode: Arbol de ficheros
+
+---
+
+#### VSCode: Editor de texto
+
+---
+
+#### VSCode: Terminal
+
+---
+
+## Aprender a ejecutar (no escribir) código Python
+
+---
+
+## Intuyendo Python
+
+Lee el código de los siguientes ficheros y trata de entender qué hace cada uno.
+
+- [hello.py](hello.py)
+- [saluda.py](hello.py)
+- [ej1.py](ej1.py)
+- [ej2.py](ej2.py)
+- [ej3.py](ej3.py)
+
+---
+
+**hello.py**
+
+```python
+{{< include "hello.py" >}}
+```
+
+---
+
+**saluda.py**
+
+```python
+{{< include "saluda.py" >}}
+```
+
+---
+
+**ej1.py**
+
+```python
+{{< include "ej1.py" >}}
+```
+
+---
+
+**ej2.py**
+
+```python
+{{< include "ej2.py" >}}
+```
+
+---
+
+**ej3.py**
+
+```python
+{{< include "ej3.py" >}}
+```
+
+
+---
+
+## Entregar
+

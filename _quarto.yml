@@ -13,5 +13,5 @@ project:
   output-dir: _output
 format:
   html:
-    theme: [ src/style/custom.scss]
+    theme: [ src/_style/custom.scss]
     code-copy: true
