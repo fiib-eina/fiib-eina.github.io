@@ -414,15 +414,107 @@
 </section>
 <section id="instalación-del-entorno-de-trabajo" class="slide level2">
 <h2>Instalación del entorno de trabajo</h2>
-
-<img data-src=".png" class="r-stretch quarto-figure-center"><p class="caption">Instalación de VSCode</p></section>
-<section id="familiarizarse-con-el-entorno-de-trabajo" class="slide level2">
-<h2>Familiarizarse con el entorno de trabajo</h2>
+<p>Para desarrollar en <code>python</code> necesitamos:</p>
+<ul>
+<li>Interprete de Python: <a href="https://www.python.org/downloads/">Python</a></li>
+<li>Entorno de desarrollo: <a href="https://code.visualstudio.com/download">Visual Studio Code</a></li>
+</ul>
 </section>
 <section class="slide level2">
 
-<h3 id="directorio">Directorio</h3>
-<p>Organizaremos el código de cada práctica en su propio directorio (carpeta).</p>
+<h3 id="instalación-de-python">Instalación de Python</h3>
+<ul>
+<li>Descarga el instalador de Python desde la <a href="https://www.python.org/downloads/">página oficial</a>.</li>
+<li>Configura la instalación de Python en tu sistema.</li>
+<li>Verifica la instalación.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="img/01-descarga-python.png" class="r-stretch quarto-figure-center"><p class="caption">descarga-python</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/02-instalacion-python-conf-lab.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-python-conf-lab</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/03-instalacion-python-progreso.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-python-progreso</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/04-instalacion-python-fin.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-python-fin</p></section>
+<section class="slide level2">
+
+<h3 id="instalación-de-vscode">Instalación de VSCode</h3>
+<ul>
+<li>Descarga el instalador de Visual Studio Code desde la <a href="https://code.visualstudio.com/download">página oficial</a>.</li>
+<li>Configura la instalación de Visual Studio Code y acepta los términos de licencia.
+<ul>
+<li>Asegúrate de seleccionar las opciones de integración con el sistema.</li>
+</ul></li>
+<li>Configura el tema y las extensiones de Visual Studio Code.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="img/05-descarga-vsc.png" class="r-stretch quarto-figure-center"><p class="caption">descarga-vsc</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/06-instalacion-vsc-licencia.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-licencia</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/07-instalacion-vsc-dir.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-dir</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/08-instalacion-vsc-menu.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-menu</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/09-instalacion-vsc-extra.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-extra</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/10-instalacion-vsc-ini.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-ini</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/11-instalacion-vsc-progreso.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-progreso</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/12-instalacion-vsc-fin.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-fin</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/13-conf-vsc-tema.png" class="r-stretch quarto-figure-center"><p class="caption">conf-vsc-tema</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/14-conf-vsc-extensiones.png" class="r-stretch quarto-figure-center"><p class="caption">conf-vsc-extensiones</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/15-conf-vsc-ext-python.png" class="r-stretch quarto-figure-center"><p class="caption">conf-vsc-ext-python</p></section>
+<section id="familiarizarse-con-el-entorno-de-trabajo" class="slide level2">
+<h2>Familiarizarse con el entorno de trabajo</h2>
+<p>Durante el proceso de desarrollo, siempre tendremos en cuenta:</p>
+<ul>
+<li><strong>Sistema ficheros:</strong> Localización de los programas</li>
+<li><strong>Código fuente:</strong> Contenido de los programas</li>
+<li><strong>Terminal:</strong> Ejecución de programas python</li>
+</ul>
+<p>Estos tres elementos pueden ser controlados desde <code>Visual Studio Code</code>.</p>
+</section>
+<section class="slide level2">
+
+<h3 id="sistema-de-ficheros">Sistema de ficheros</h3>
+<p>Se recomienda seguir la siguiente estructura para tener todos los programas organizados. Agruparemos el código de cada práctica en su propio directorio (carpeta).</p>
 <pre><code>./
 ├── p0
 │&nbsp;&nbsp; ├── hello.py
@@ -434,79 +526,197 @@
 </section>
 <section class="slide level2">
 
+<p><strong>Tarea:</strong> Crea la estructura de directorios en tu sistema de ficheros utiliizando el <code>Explorador de Windows</code>.</p>
+<ol type="1">
+<li><code>Click derecho</code> &gt; <code>Nueva</code> &gt; <code>Carpeta</code> &gt; <code>p0</code></li>
+<li>Accede a la carpeta <code>p0</code></li>
+<li><code>Click derecho</code> &gt; <code>Nuevo</code> &gt; <code>Documento de texto</code> &gt; <code>saludo.py</code>
+<ol type="1">
+<li>Asegúrate de que la extensión del fichero es <code>.py</code></li>
+</ol></li>
+</ol>
+<p><em>Nota:</em> Algunas versiones de Windows oculan por defecto las extensiones de los ficheros. Puedes mostrarlas en <code>Vista</code> &gt; <code>Mostrar u ocultar</code> &gt; <code>Extensiones de nombre de archivo</code>.</p>
+</section>
+<section class="slide level2">
+
 <h3 id="visual-studio-code">Visual Studio Code</h3>
-<p>Abrid <code>Visual Studio Code</code>.</p>
-<!-- TODO: Imagen de VSCode -->
-</section>
-<section class="slide level2">
-
-<h4 id="vscode-arbol-de-ficheros">VSCode: Arbol de ficheros</h4>
-</section>
-<section class="slide level2">
-
-<h4 id="vscode-editor-de-texto">VSCode: Editor de texto</h4>
-</section>
-<section class="slide level2">
-
-<h4 id="vscode-terminal">VSCode: Terminal</h4>
-</section>
-<section id="aprender-a-ejecutar-no-escribir-código-python" class="slide level2">
-<h2>Aprender a ejecutar (no escribir) código Python</h2>
-</section>
-<section id="intuyendo-python" class="slide level2">
-<h2>Intuyendo Python</h2>
-<p>Lee el código de los siguientes ficheros y trata de entender qué hace cada uno.</p>
+<p><strong>Tarea:</strong> Abrid <code>Visual Studio Code</code>:</p>
 <ul>
-<li><a href="hello.py">hello.py</a></li>
-<li><a href="hello.py">saluda.py</a></li>
-<li><a href="ej1.py">ej1.py</a></li>
-<li><a href="ej2.py">ej2.py</a></li>
-<li><a href="ej3.py">ej3.py</a></li>
+<li>Forma 1:
+<ol type="1">
+<li>En el explorador &gt; Acede a la carpeta <code>p0</code></li>
+<li><code>Click derecho</code> &gt; <code>Abrir directorio en VSCode</code></li>
+<li>Confirma que confías en el directorio</li>
+</ol></li>
+<li>Forma 2:
+<ol type="1">
+<li>Abre <code>Visual Studio Code</code></li>
+<li><code>Abrir carpeta...</code> &gt; Selecciona la carpeta <code>p0</code></li>
+<li>Confirma que confías en el directorio</li>
+</ol></li>
 </ul>
 </section>
 <section class="slide level2">
 
-<p><strong>hello.py</strong></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="bu">print</span>(<span class="st">"Hello world"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<img data-src="img/16-trabajo-vsc-abrir-carpeta.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-abrir-carpeta</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/17-trabajo-vsc-sel-dir.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-sel-dir</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/18-trabajo-vsc-trust.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-trust</p></section>
+<section class="slide level2">
+
+<h3 id="vscode-arbol-de-ficheros">VSCode: Arbol de ficheros</h3>
+<p>El arbol de ficheros muestra la estructura de directorios y ficheros del proyecto.</p>
+<p><strong>Tarea:</strong> Crea un nuevo fichero <code>hello.py</code> en la carpeta <code>p0</code>.</p>
+<ol type="1">
+<li><code>Nuevo fichero</code> (Icono del fichero con el signo +)</li>
+<li>Escribe el nombre</li>
+</ol>
 </section>
 <section class="slide level2">
 
-<p><strong>saluda.py</strong></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co">"""El programa pide un nombre al usuario.</span></span>
-<span id="cb3-2"><a></a><span class="co">Luego escribe en la pantalla "Hola, NOMBRE"."""</span></span>
-<span id="cb3-3"><a></a></span>
-<span id="cb3-4"><a></a>nombre <span class="op">=</span> <span class="bu">input</span>(<span class="st">"¿Cómo te llamas? "</span>)</span>
-<span id="cb3-5"><a></a><span class="bu">print</span>(<span class="st">"Hola,"</span>, nombre)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<img data-src="img/19-trabajo-vsc-entorno.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-entorno</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/20-trabajo-vsc-crear-fichero.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-crear-fichero</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/21-trabajo-vsc-nombrar-fichero.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-nombrar-fichero</p></section>
+<section class="slide level2">
+
+<h3 id="vscode-editor-de-texto">VSCode: Editor de texto</h3>
+<p>El editor de texto es donde escribiremos el código fuente de los programas.</p>
+<p><strong>Tarea:</strong> Escribe tu primer programa Python.</p>
+<ol type="1">
+<li>Abre el fichero <code>hello.py</code> desde el arbol de ficheros</li>
+<li>Escribe el siguiente código:</li>
+<li>Guarda los cambios (Ctrl+S)</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="bu">print</span>(<span class="st">"Hello, World!"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
-<p><strong>ej1.py</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>a <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Introduce un número: "</span>))</span>
-<span id="cb4-2"><a></a>b <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Introduce otro número: "</span>))</span>
-<span id="cb4-3"><a></a></span>
-<span id="cb4-4"><a></a><span class="bu">print</span>(a <span class="op">+</span> b)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<img data-src="img/22-trabajo-vsc-escribir-codigo.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-escribir-codigo</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/23-trabajo-vsc-guardar.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-guardar</p></section>
+<section class="slide level2">
+
+<h3 id="vscode-terminal">VSCode: Terminal</h3>
+<p>La terminal es donde ejecutaremos los programas.</p>
+<p><strong>Tarea:</strong> Ejecuta el programa <code>hello.py</code> desde la terminal de VSCode.</p>
+<ol type="1">
+<li>Abre la terminal de VSCode (<code>Terminal</code> &gt; <code>Nueva terminal</code>)</li>
+<li>Ejecuta el programa <code>hello.py</code> con el siguiente comando:</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="ex">py</span> hello.py</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
-<p><strong>ej2.py</strong></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>pi <span class="op">=</span> <span class="fl">3.14159</span></span>
-<span id="cb5-2"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Escribe un número real"</span>))</span>
+<p>Otra forma más rápida de ejecutar el programa es pulsando el botón de <code>Run</code> que aparece en la parte superior derecha del editor.</p>
+
+<img data-src="img/24-trabajo-vsc-ejecutar.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-ejecutar</p></section>
+<section id="programa-interactivo" class="slide level2">
+<h2>Programa interactivo</h2>
+<ul>
+<li>Más adelante en el curso aprenderás a hacer programas que requieran de la <strong>interacción</strong> del usuario.</li>
+<li>Dicha interacción se realiza tamibién en la propia <strong>terminal</strong>.</li>
+<li>Para familiarizarte ahora con este comportamiento, vamos a escribir y ejecutar un programa interactivo.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p><strong>Tarea:</strong> Crea y ejecuta un programa interactivo.</p>
+<ol type="1">
+<li>Utiliza el arbol de ficheros para abrir el fichero <code>saluda.py</code></li>
+<li>Escribe el <a href="saluda.py">código</a> en <code>saluda.py</code>.</li>
+<li>Ejecuta el programa <code>saluda.py</code> desde la terminal de VSCode o pulsando el botón de <code>Run</code>.</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="co">""" Sergio Marín Segura - 622612</span></span>
+<span id="cb4-2"><a></a><span class="co">El programa pide un nombre al usuario.</span></span>
+<span id="cb4-3"><a></a><span class="co">Luego escribe en la pantalla "Hola, NOMBRE".</span></span>
+<span id="cb4-4"><a></a><span class="co">"""</span></span>
+<span id="cb4-5"><a></a></span>
+<span id="cb4-6"><a></a><span class="co"># Pide al usuario que escriba su nombre, lo lee de teclado y lo guarda en «nombre»</span></span>
+<span id="cb4-7"><a></a>nombre <span class="op">=</span> <span class="bu">input</span>(<span class="st">"¿Cómo te llamas? "</span>)</span>
+<span id="cb4-8"><a></a></span>
+<span id="cb4-9"><a></a><span class="co"># Saluda al usuario escribiendo un mensaje personalizado en la pantalla </span></span>
+<span id="cb4-10"><a></a><span class="bu">print</span>(<span class="st">"Hola,"</span>, nombre)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h3 id="comentarios-de-código-y-docstring">Comentarios de código y docstring</h3>
+<p>Observa cómo en la primera línea del programa <code>saluda.py</code> se describe el funcionamiento del programa.</p>
+<p>En un fichero python podemos escribir tres “tipos de texto” distintos:</p>
+<ul>
+<li><strong>Código:</strong> Líneas de código que se ejecutan
+<ul>
+<li>Sigue la sintaixs de Python</li>
+</ul></li>
+<li><strong>Docstring:</strong> Texto que sirve para documentar el código
+<ul>
+<li>Se escribe entre tres comillas-dobles <code>""" ... """</code></li>
+</ul></li>
+<li><strong>Comentarios:</strong> Cualquier otro texto que no se ejecuta ni se interpreta
+<ul>
+<li>Se escribe tras el símbolo <code>#</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="intuyendo-python" class="slide level2">
+<h2>Intuyendo Python</h2>
+<p>A continuación evaluaremos nuestra capacidad de intuir y entender el funcionamiento de código <code>python</code>.</p>
+<p><strong>Tarea:</strong> Documenta los siguientes programas en un <em>docstring</em>.</p>
+<ol type="1">
+<li>Descarga o copia los ficheros en la carpeta <code>p0</code>.</li>
+<li>Abrelos con el editor de texto y lee su contenido.</li>
+<li>Ejecuta los programas desde la terminal de VSCode.</li>
+<li>Añade un <em>docstring</em> al principio de cada fichero incluyendo tu nombre y explicando qué hace el programa.</li>
+</ol>
+<p><em>Nota:</em> Puedes hacer <code>Click derecho</code> &gt; <code>Guardar enlace como...</code> en los nombres de cada fichero para descargarlos o hacer click en el <code>icono del portapapeles</code> para copiar todo el contenido.</p>
+</section>
+<section class="slide level2">
+
+<p><strong><a href="ej1.py">ej1.py</a></strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>a <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Introduce un número: "</span>))</span>
+<span id="cb5-2"><a></a>b <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Introduce otro número: "</span>))</span>
 <span id="cb5-3"><a></a></span>
-<span id="cb5-4"><a></a><span class="bu">print</span>(pi <span class="op">*</span> (x <span class="op">**</span> <span class="dv">2</span>))</span>
-<span id="cb5-5"><a></a></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-4"><a></a><span class="bu">print</span>(a <span class="op">+</span> b)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong><a href="ej2.py">ej2.py</a></strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>pi <span class="op">=</span> <span class="fl">3.14159265358979323846</span></span>
+<span id="cb6-2"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Escribe un número real: "</span>))</span>
+<span id="cb6-3"><a></a></span>
+<span id="cb6-4"><a></a><span class="bu">print</span>(pi <span class="op">*</span> (x <span class="op">**</span> <span class="dv">2</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong><a href="ej3.py">ej3.py</a></strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Introduce un número: "</span>))</span>
+<span id="cb7-2"><a></a></span>
+<span id="cb7-3"><a></a><span class="cf">if</span> x <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
+<span id="cb7-4"><a></a>    <span class="bu">print</span>(x)</span>
+<span id="cb7-5"><a></a><span class="cf">else</span>:</span>
+<span id="cb7-6"><a></a>    <span class="bu">print</span>(<span class="op">-</span>x)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section class="slide level2">
-
-<p><strong>ej3.py</strong></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>x <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Introduce un número: "</span>))</span>
-<span id="cb6-2"><a></a></span>
-<span id="cb6-3"><a></a><span class="cf">if</span> x <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
-<span id="cb6-4"><a></a>    <span class="bu">print</span>(x)</span>
-<span id="cb6-5"><a></a><span class="cf">else</span>:</span>
-<span id="cb6-6"><a></a>    <span class="bu">print</span>(<span class="op">-</span>x)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="entregar" class="slide level2">
-<h2>Entregar</h2>
+<section id="entrega-de-la-práctica" class="slide level2">
+<h2>Entrega de la práctica</h2>
+<p>Todas las prácticas se entregarán a través de <strong>Moodle</strong>. Esta <code>Práctica 0</code> no es evaluable, pero sí se deberá entregar para familiarizarse con el proceso.</p>
+<p><strong>Tarea:</strong> Entrega el código de la práctica.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Verifica que has nombrado correctamente los ficheros. Un fichero mal nombrado no será evaluado.</label></li>
+<li><label><input type="checkbox">Verifica que has añadido un <em>docstring</em> a cada fichero son tu nombre y NIP.</label></li>
+<li><label><input type="checkbox">Verifica que el funcionamiento de los programas es correcto.</label></li>
+<li><label><input type="checkbox">Accede a la entrega en moodle y lee si hay instrucciones extra.</label></li>
+<li><label><input type="checkbox">Sube los ficheros <code>*.py</code> individualmente (no comprimidos).</label></li>
+</ul>
+<p><em>Nota:</em> No se aceptarán entregas fuera de plazo. En el caso de que se acerque la <em>deadline</em>, se recomienda al menos subir los ejercicios que se hayan terminado. <strong>Se podrán resubir</strong> tantas veces como se desee antes de la <em>deadline</em>.</p>
 
 <div class="quarto-auto-generated-content">
 <p><img src="../../_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
@@ -546,7 +756,7 @@
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'smaller': false,
+'smaller': true,
  
         // Display controls in the bottom right corner
         controls: false,
