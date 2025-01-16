@@ -17,17 +17,107 @@ subtitle: Introducción
 
 ## Instalación del entorno de trabajo
 
-![Instalación de VSCode]()
+Para desarrollar en `python` necesitamos:
+
+- Interprete de Python: [Python](https://www.python.org/downloads/)
+- Entorno de desarrollo: [Visual Studio Code](https://code.visualstudio.com/download)
+
+---
+
+### Instalación de Python
+
+- Descarga el instalador de Python desde la [página oficial](https://www.python.org/downloads/).
+- Configura la instalación de Python en tu sistema.
+- Verifica la instalación.
+
+---
+
+![descarga-python](img/01-descarga-python.png)
+
+---
+
+![instalacion-python-conf-lab](img/02-instalacion-python-conf-lab.png)
+
+---
+
+![instalacion-python-progreso](img/03-instalacion-python-progreso.png)
+
+---
+
+![instalacion-python-fin](img/04-instalacion-python-fin.png)
+
+---
+
+### Instalación de VSCode
+
+- Descarga el instalador de Visual Studio Code desde la [página oficial](https://code.visualstudio.com/download).
+- Configura la instalación de Visual Studio Code y acepta los términos de licencia.
+    - Asegúrate de seleccionar las opciones de integración con el sistema.
+- Configura el tema y las extensiones de Visual Studio Code.
+
+---
+
+![descarga-vsc](img/05-descarga-vsc.png)
+
+---
+
+![instalacion-vsc-licencia](img/06-instalacion-vsc-licencia.png)
+
+---
+
+![instalacion-vsc-dir](img/07-instalacion-vsc-dir.png)
+
+---
+
+![instalacion-vsc-menu](img/08-instalacion-vsc-menu.png)
+
+---
+
+![instalacion-vsc-extra](img/09-instalacion-vsc-extra.png)
+
+---
+
+![instalacion-vsc-ini](img/10-instalacion-vsc-ini.png)
+
+---
+
+![instalacion-vsc-progreso](img/11-instalacion-vsc-progreso.png)
+
+---
+
+![instalacion-vsc-fin](img/12-instalacion-vsc-fin.png)
+
+---
+
+![conf-vsc-tema](img/13-conf-vsc-tema.png)
+
+---
+
+![conf-vsc-extensiones](img/14-conf-vsc-extensiones.png)
+
+---
+
+![conf-vsc-ext-python](img/15-conf-vsc-ext-python.png)
+
 
 ---
 
 ## Familiarizarse con el entorno de trabajo
 
+Durante el proceso de desarrollo, siempre tendremos en cuenta:
+
+- **Sistema ficheros:** Localización de los programas
+- **Código fuente:** Contenido de los programas
+- **Terminal:** Ejecución de programas python
+
+Estos tres elementos pueden ser controlados desde `Visual Studio Code`.
+
 ---
 
-### Directorio 
+### Sistema de ficheros
 
-Organizaremos el código de cada práctica en su propio directorio (carpeta).
+Se recomienda seguir la siguiente estructura para tener todos los programas organizados.
+Agruparemos el código de cada práctica en su propio directorio (carpeta).
 
 ```
 ./
@@ -42,51 +132,126 @@ Organizaremos el código de cada práctica en su propio directorio (carpeta).
 
 ---
 
+**Tarea:** Crea la estructura de directorios en tu sistema de ficheros utiliizando el `Explorador de Windows`.
+
+1. `Click derecho` > `Nueva` > `Carpeta` > `p0`
+1. Accede a la carpeta `p0`
+1. `Click derecho` > `Nuevo` > `Documento de texto` > `saludo.py`
+    1. Asegúrate de que la extensión del fichero es `.py`
+
+_Nota:_ Algunas versiones de Windows oculan por defecto las extensiones de los ficheros. Puedes mostrarlas en `Vista` > `Mostrar u ocultar` > `Extensiones de nombre de archivo`.
+
+---
+
 ### Visual Studio Code
 
-Abrid `Visual Studio Code`.
+**Tarea:** Abrid `Visual Studio Code`:
 
-<!-- TODO: Imagen de VSCode -->
-
----
-
-#### VSCode: Arbol de ficheros
-
----
-
-#### VSCode: Editor de texto
-
----
-
-#### VSCode: Terminal
+- Forma 1:
+    1. En el explorador > Acede a la carpeta `p0`
+    1. `Click derecho` > `Abrir directorio en VSCode`
+    1. Confirma que confías en el directorio
+- Forma 2:
+    1. Abre `Visual Studio Code`
+    1. `Abrir carpeta...` > Selecciona la carpeta `p0`
+    1. Confirma que confías en el directorio
 
 ---
 
-## Aprender a ejecutar (no escribir) código Python
+![trabajo-vsc-abrir-carpeta](img/16-trabajo-vsc-abrir-carpeta.png)
 
 ---
 
-## Intuyendo Python
-
-Lee el código de los siguientes ficheros y trata de entender qué hace cada uno.
-
-- [hello.py](hello.py)
-- [saluda.py](hello.py)
-- [ej1.py](ej1.py)
-- [ej2.py](ej2.py)
-- [ej3.py](ej3.py)
+![trabajo-vsc-sel-dir](img/17-trabajo-vsc-sel-dir.png)
 
 ---
 
-**hello.py**
+![trabajo-vsc-trust](img/18-trabajo-vsc-trust.png)
+
+
+---
+
+### VSCode: Arbol de ficheros
+
+El arbol de ficheros muestra la estructura de directorios y ficheros del proyecto.
+
+**Tarea:** Crea un nuevo fichero `hello.py` en la carpeta `p0`.
+
+1. `Nuevo fichero` (Icono del fichero con el signo +)
+1. Escribe el nombre
+
+---
+
+![trabajo-vsc-entorno](img/19-trabajo-vsc-entorno.png)
+
+---
+
+![trabajo-vsc-crear-fichero](img/20-trabajo-vsc-crear-fichero.png)
+
+---
+
+![trabajo-vsc-nombrar-fichero](img/21-trabajo-vsc-nombrar-fichero.png)
+
+---
+
+### VSCode: Editor de texto
+
+El editor de texto es donde escribiremos el código fuente de los programas.
+
+**Tarea:** Escribe tu primer programa Python.
+
+1. Abre el fichero `hello.py` desde el arbol de ficheros
+1. Escribe el siguiente código:
+1. Guarda los cambios (Ctrl+S)
 
 ```python
-{{< include "hello.py" >}}
+print("Hello, World!")
 ```
 
 ---
 
-**saluda.py**
+![trabajo-vsc-escribir-codigo](img/22-trabajo-vsc-escribir-codigo.png)
+
+---
+
+![trabajo-vsc-guardar](img/23-trabajo-vsc-guardar.png)
+
+---
+
+### VSCode: Terminal
+
+La terminal es donde ejecutaremos los programas.
+
+**Tarea:** Ejecuta el programa `hello.py` desde la terminal de VSCode.
+
+1. Abre la terminal de VSCode (`Terminal` > `Nueva terminal`)
+1. Ejecuta el programa `hello.py` con el siguiente comando:
+
+```sh
+py hello.py
+```
+
+---
+
+Otra forma más rápida de ejecutar el programa es pulsando el botón de `Run` que aparece en la parte superior derecha del editor.
+
+![trabajo-vsc-ejecutar](img/24-trabajo-vsc-ejecutar.png)
+
+---
+
+## Programa interactivo
+
+- Más adelante en el curso aprenderás a hacer programas que requieran de la **interacción** del usuario.
+- Dicha interacción se realiza tamibién en la propia **terminal**.
+- Para familiarizarte ahora con este comportamiento, vamos a escribir y ejecutar un programa interactivo.
+
+---
+
+**Tarea:** Crea y ejecuta un programa interactivo.
+
+1. Utiliza el arbol de ficheros para abrir el fichero `saluda.py`
+1. Escribe el [código](saluda.py) en `saluda.py`. 
+1. Ejecuta el programa `saluda.py` desde la terminal de VSCode o pulsando el botón de `Run`.
 
 ```python
 {{< include "saluda.py" >}}
@@ -94,30 +259,68 @@ Lee el código de los siguientes ficheros y trata de entender qué hace cada uno
 
 ---
 
-**ej1.py**
+### Comentarios de código y docstring
+
+Observa cómo en la primera línea del programa `saluda.py` se describe el funcionamiento del programa.
+
+En un fichero python podemos escribir tres "tipos de texto" distintos:
+
+- **Código:** Líneas de código que se ejecutan
+    - Sigue la sintaixs de Python
+- **Docstring:** Texto que sirve para documentar el código
+    - Se escribe entre tres comillas-dobles `""" ... """`
+- **Comentarios:** Cualquier otro texto que no se ejecuta ni se interpreta
+    - Se escribe tras el símbolo `#`
+
+---
+
+## Intuyendo Python
+
+A continuación evaluaremos nuestra capacidad de intuir y entender el funcionamiento de código `python`.
+
+**Tarea:** Documenta los siguientes programas en un _docstring_.
+
+1. Descarga o copia los ficheros en la carpeta `p0`.
+1. Abrelos con el editor de texto y lee su contenido.
+1. Ejecuta los programas desde la terminal de VSCode.
+1. Añade un _docstring_ al principio de cada fichero incluyendo tu nombre y explicando qué hace el programa.
+
+_Nota:_ Puedes hacer `Click derecho` > `Guardar enlace como...` en los nombres de cada fichero para descargarlos o hacer click en el `icono del portapapeles` para copiar todo el contenido.
+
+---
+
+**[ej1.py](ej1.py)**
 
 ```python
 {{< include "ej1.py" >}}
 ```
 
----
-
-**ej2.py**
+**[ej2.py](ej2.py)**
 
 ```python
 {{< include "ej2.py" >}}
 ```
 
----
-
-**ej3.py**
+**[ej3.py](ej3.py)**
 
 ```python
 {{< include "ej3.py" >}}
 ```
 
-
 ---
 
-## Entregar
+## Entrega de la práctica
+
+Todas las prácticas se entregarán a través de **Moodle**.
+Esta `Práctica 0` no es evaluable, pero sí se deberá entregar para familiarizarse con el proceso.
+
+**Tarea:** Entrega el código de la práctica.
+
+- [ ] Verifica que has nombrado correctamente los ficheros. Un fichero mal nombrado no será evaluado.
+- [ ] Verifica que has añadido un _docstring_ a cada fichero son tu nombre y NIP.
+- [ ] Verifica que el funcionamiento de los programas es correcto.
+- [ ] Accede a la entrega en moodle y lee si hay instrucciones extra.
+- [ ] Sube los ficheros `*.py` individualmente (no comprimidos).
+
+_Nota:_ No se aceptarán entregas fuera de plazo. En el caso de que se acerque la _deadline_, se recomienda al menos subir los ejercicios que se hayan terminado. **Se podrán resubir** tantas veces como se desee antes de la _deadline_.
 

@@ -18,7 +18,7 @@ format:
     code-copy: true
     # Slide Content
     logo: _style/logos/unizar-diis-white.svg
-    smaller: false
+    smaller: true
     # Slide Tools
     overview: true
     chalkboard: false

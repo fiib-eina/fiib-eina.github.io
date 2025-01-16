@@ -1,4 +1,0 @@
----
-title: Teoría 00
-subtitle: Presentación
----
