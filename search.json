@@ -25,34 +25,27 @@
     "href": "src/03_practicas/p0/00_Introductoria.html#programa-interactivo",
     "title": "Práctica 0",
     "section": "Programa interactivo",
-    "text": "Programa interactivo\n\nMás adelante en el curso aprenderás a hacer programas que requieran de la interacción del usuario.\nDicha interacción se realiza tamibién en la propia terminal.\nPara familiarizarte ahora con este comportamiento, vamos a escribir y ejecutar un programa interactivo."
+    "text": "Programa interactivo\n\nMás adelante en el curso aprenderás a hacer programas que requieran de la interacción del usuario.\nDicha interacción se realiza también en la propia terminal.\nPara familiarizarte ahora con este comportamiento, vamos a escribir y ejecutar un programa interactivo."
   },
   {
     "objectID": "src/03_practicas/p0/00_Introductoria.html#intuyendo-python",
     "href": "src/03_practicas/p0/00_Introductoria.html#intuyendo-python",
     "title": "Práctica 0",
     "section": "Intuyendo Python",
-    "text": "Intuyendo Python\nA continuación evaluaremos nuestra capacidad de intuir y entender el funcionamiento de código python.\nTarea: Documenta los siguientes programas en un docstring.\n\nDescarga o copia los ficheros en la carpeta p0.\nAbrelos con el editor de texto y lee su contenido.\nEjecuta los programas desde la terminal de VSCode.\nAñade un docstring al principio de cada fichero incluyendo tu nombre y explicando qué hace el programa.\n\nNota: Puedes hacer Click derecho &gt; Guardar enlace como... en los nombres de cada fichero para descargarlos o hacer click en el icono del portapapeles para copiar todo el contenido."
+    "text": "Intuyendo Python\nA continuación evaluaremos nuestra capacidad de intuir y entender el funcionamiento de código python.\nTarea: Documenta los siguientes programas en un docstring.\n\nDescarga o copia los ficheros en la carpeta p0.\nÁbrelos con el editor de texto y lee su contenido.\nEjecuta los programas desde la terminal de VSCode.\nAñade un docstring al principio de cada fichero incluyendo tu nombre y explicando qué hace el programa.\n\nNota: Puedes hacer Click derecho &gt; Guardar enlace como... en los nombres de cada fichero para descargarlos o hacer click en el icono del portapapeles para copiar todo el contenido."
   },
   {
     "objectID": "src/03_practicas/p0/00_Introductoria.html#entrega-de-la-práctica",
     "href": "src/03_practicas/p0/00_Introductoria.html#entrega-de-la-práctica",
     "title": "Práctica 0",
     "section": "Entrega de la práctica",
-    "text": "Entrega de la práctica\nTodas las prácticas se entregarán a través de Moodle. Esta Práctica 0 no es evaluable, pero sí se deberá entregar para familiarizarse con el proceso.\nTarea: Entrega el código de la práctica.\n\nVerifica que has nombrado correctamente los ficheros. Un fichero mal nombrado no será evaluado.\nVerifica que has añadido un docstring a cada fichero son tu nombre y NIP.\nVerifica que el funcionamiento de los programas es correcto.\nAccede a la entrega en moodle y lee si hay instrucciones extra.\nSube los ficheros *.py individualmente (no comprimidos).\n\nNota: No se aceptarán entregas fuera de plazo. En el caso de que se acerque la deadline, se recomienda al menos subir los ejercicios que se hayan terminado. Se podrán resubir tantas veces como se desee antes de la deadline.\n\n\n\n\nFundamentos de Informática"
-  },
-  {
-    "objectID": "src/01_teoria/000_Presentación.html#profesores",
-    "href": "src/01_teoria/000_Presentación.html#profesores",
-    "title": "Presentación de la Asignatura",
-    "section": "Profesores",
-    "text": "Profesores\n\nSergio Martín Segura (segura@unizar.es)\nMiguel Ángel Latre Abadía (latre@unizar.es)\n\nTutorías: Consultar enlace en Moodle"
+    "text": "Entrega de la práctica\nTodas las prácticas se entregarán a través de Moodle. Esta Práctica 0 no es evaluable, pero sí se deberá entregar para familiarizarse con el proceso.\nTarea: Entrega el código de la práctica.\n\nVerifica que has nombrado correctamente los ficheros. Un fichero mal nombrado no será evaluado.\nVerifica que has añadido un docstring a cada fichero son tu nombre y NIP.\nVerifica que el funcionamiento de los programas es correcto.\nAccede a la entrega en Moodle y lee si hay instrucciones extra.\nSube los ficheros *.py individualmente (no comprimidos).\n\nNota: No se aceptarán entregas fuera de plazo. En el caso de que se acerque la fecha límite de entrega, se recomienda al menos subir los ejercicios que se hayan terminado. Se podrán resubir tantas veces como se desee antes de la fecha límite de entrega.\n\n\n\n\nFundamentos de Informática"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Fundamentos de informática",
     "section": "",
-    "text": "01_teoria/ Presentación de la Asignatura - Información general \n\n\n01_teoria/ Teoría 000 - Computadores y Lenguajes \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n\nNo hay resultados"
+    "text": "01_teoria/ Teoría 000 - Computadores y Lenguajes \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n\nNo hay resultados"
   }
 ]
