@@ -42,10 +42,38 @@
     "text": "Entrega de la práctica\nTodas las prácticas se entregarán a través de Moodle. Esta Práctica 0 no es evaluable, pero sí se deberá entregar para familiarizarse con el proceso.\nTarea: Entrega el código de la práctica.\n\nVerifica que has nombrado correctamente los ficheros. Un fichero mal nombrado no será evaluado.\nVerifica que has añadido un docstring a cada fichero son tu nombre y NIP.\nVerifica que el funcionamiento de los programas es correcto.\nAccede a la entrega en Moodle y lee si hay instrucciones extra.\nSube los ficheros *.py individualmente (no comprimidos).\n\nNota: No se aceptarán entregas fuera de plazo. En el caso de que se acerque la fecha límite de entrega, se recomienda al menos subir los ejercicios que se hayan terminado. Se podrán resubir tantas veces como se desee antes de la fecha límite de entrega.\n\n\n\n\nFundamentos de Informática"
   },
   {
+    "objectID": "src/01_teoria/000_Presentación.html#profesores",
+    "href": "src/01_teoria/000_Presentación.html#profesores",
+    "title": "Presentación de la Asignatura",
+    "section": "Profesores",
+    "text": "Profesores\n\nSergio Martín Segura (segura@unizar.es)\n\nTeoría, problemas y prácticas\nDespacho: L2.09, Ada Byron\n\nMiguel Ángel Latre Abadía (latre@unizar.es)\n\nPrácticas\nDespacho: D2.22, Ada Byron\n\n\nTutorías: Consultar enlace en Moodle"
+  },
+  {
+    "objectID": "src/01_teoria/000_Presentación.html#organización",
+    "href": "src/01_teoria/000_Presentación.html#organización",
+    "title": "Presentación de la Asignatura",
+    "section": "Organización",
+    "text": "Organización\n\nClases teóricas: 2 horas semanales\nClases de problemas: 1 hora semanal\nPrácticas de laboratorio: 2 horas cada dos semanas"
+  },
+  {
+    "objectID": "src/01_teoria/000_Presentación.html#evaluación-final",
+    "href": "src/01_teoria/000_Presentación.html#evaluación-final",
+    "title": "Presentación de la Asignatura",
+    "section": "Evaluación final",
+    "text": "Evaluación final\n\nLa nota final, tal cual indica la guía docente, se calcula:\n\n\\(70\\%\\) Examen escrito (mínimo \\(5\\))\n\\(30\\%\\) Nota de prácticas (dos opciones):\n\nEntregas de prácticas\nExamen práctico final (anula la nota de entregas)\n\n\nSe deberá obtener una nota mínima de \\(5\\) ponderada para aprobar la asignatura\nSegunda convocatoria\n\nExamen escrito + Examen práctico final\nMismas ponderaciones"
+  },
+  {
+    "objectID": "src/01_teoria/000_Presentación.html#dudas",
+    "href": "src/01_teoria/000_Presentación.html#dudas",
+    "title": "Presentación de la Asignatura",
+    "section": "¿Dudas?",
+    "text": "¿Dudas?\n\n\n\n\nFundamentos de Informática"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Fundamentos de informática",
     "section": "",
-    "text": "01_teoria/ Teoría 000 - Computadores y Lenguajes \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n\nNo hay resultados"
+    "text": "01_teoria/ Presentación de la Asignatura - Información general \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n\nNo hay resultados"
   }
 ]
