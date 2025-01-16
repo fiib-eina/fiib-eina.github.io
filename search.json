@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "src/03_practicas/p0/00_Introductoria.html#objetivos",
+    "href": "src/03_practicas/p0/00_Introductoria.html#objetivos",
+    "title": "Práctica 0",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nInstalar el entorno de trabajo\nFamiliarizarse con el entorno de trabajo\n\nEditor de texto\nTerminal\n\nAprender a ejecutar (no escribir) código Python\nIntuyendo Python\nEntregar"
+  },
+  {
+    "objectID": "src/03_practicas/p0/00_Introductoria.html#instalación-del-entorno-de-trabajo",
+    "href": "src/03_practicas/p0/00_Introductoria.html#instalación-del-entorno-de-trabajo",
+    "title": "Práctica 0",
+    "section": "Instalación del entorno de trabajo",
+    "text": "Instalación del entorno de trabajo\n\nInstalación de VSCode"
+  },
+  {
+    "objectID": "src/03_practicas/p0/00_Introductoria.html#familiarizarse-con-el-entorno-de-trabajo",
+    "href": "src/03_practicas/p0/00_Introductoria.html#familiarizarse-con-el-entorno-de-trabajo",
+    "title": "Práctica 0",
+    "section": "Familiarizarse con el entorno de trabajo",
+    "text": "Familiarizarse con el entorno de trabajo"
+  },
+  {
+    "objectID": "src/03_practicas/p0/00_Introductoria.html#aprender-a-ejecutar-no-escribir-código-python",
+    "href": "src/03_practicas/p0/00_Introductoria.html#aprender-a-ejecutar-no-escribir-código-python",
+    "title": "Práctica 0",
+    "section": "Aprender a ejecutar (no escribir) código Python",
+    "text": "Aprender a ejecutar (no escribir) código Python"
+  },
+  {
+    "objectID": "src/03_practicas/p0/00_Introductoria.html#intuyendo-python",
+    "href": "src/03_practicas/p0/00_Introductoria.html#intuyendo-python",
+    "title": "Práctica 0",
+    "section": "Intuyendo Python",
+    "text": "Intuyendo Python\nLee el código de los siguientes ficheros y trata de entender qué hace cada uno.\n\nhello.py\nsaluda.py\nej1.py\nej2.py\nej3.py"
+  },
+  {
+    "objectID": "src/03_practicas/p0/00_Introductoria.html#entregar",
+    "href": "src/03_practicas/p0/00_Introductoria.html#entregar",
+    "title": "Práctica 0",
+    "section": "Entregar",
+    "text": "Entregar\n\n\n\n\nFundamentos de Informática"
+  },
+  {
+    "objectID": "src/01_teoria/000_Presentación.html#profesores",
+    "href": "src/01_teoria/000_Presentación.html#profesores",
+    "title": "Presentación de la Asignatura",
+    "section": "Profesores",
+    "text": "Profesores\n\nSergio Martín Segura (segura@unizar.es)\nMiguel Ángel Latre Abadía (latre@unizar.es)\n\nTutorías: Consultar enlace en Moodle"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Fundamentos de informática",
+    "section": "",
+    "text": "01_teoria/ Presentación de la Asignatura - Información general \n\n\n01_teoria/ Teoría 000 - Computadores y Lenguajes \n\n\n02_problemas/ Teoría 00 - Presentación \n\n\n02_problemas/ Introducción - \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n\nNo hay resultados"
+  }
+]
