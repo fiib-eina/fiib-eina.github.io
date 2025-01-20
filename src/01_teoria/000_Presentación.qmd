@@ -75,7 +75,7 @@ _Tutorías: Consultar enlace en Moodle_
 - Resolución de problemas
     - 3 o 4 ejercicios, según dificultad
 - Evaluación de los ejercicios
-    - Se valorará la **correctitud** y la **claridad** de la solución
+    - Se valorará la **corrección** y la **claridad** de la solución
     - Error de concepto grave: $0$
 - Prohibido cualquier material de consulta o dispositivo de comunicación.
     - En caso de plagio, se abrirá un expediente y la calificación quedará **pendiente** de su resolución.
@@ -96,7 +96,7 @@ _Tutorías: Consultar enlace en Moodle_
 
 - **Voluntario**
 - Su realización **anula** la nota de las entregas
-- **No** se recomienda esta opción frente a las entregas contínuas
+- **No** se recomienda esta opción frente a las entregas continuas
 
 ---
 
