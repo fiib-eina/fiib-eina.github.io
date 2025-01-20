@@ -134,9 +134,9 @@ Agruparemos el código de cada práctica en su propio directorio (carpeta).
 
 **Tarea:** Crea la estructura de directorios en tu sistema de ficheros utilizando el `Explorador de Windows`.
 
-1. `Click derecho` > `Nueva` > `Carpeta` > `p0`
+1. `Clic derecho` > `Nueva` > `Carpeta` > `p0`
 1. Accede a la carpeta `p0`
-1. `Click derecho` > `Nuevo` > `Documento de texto` > `saludo.py`
+1. `Clic derecho` > `Nuevo` > `Documento de texto` > `saludo.py`
     1. Asegúrate de que la extensión del fichero es `.py`
 
 _Nota:_ Algunas versiones de Windows ocultan por defecto las extensiones de los ficheros. Puedes mostrarlas en `Vista` > `Mostrar u ocultar` > `Extensiones de nombre de archivo`.
@@ -149,7 +149,7 @@ _Nota:_ Algunas versiones de Windows ocultan por defecto las extensiones de los 
 
 - Forma 1:
     1. En el explorador > Acede a la carpeta `p0`
-    1. `Click derecho` > `Abrir directorio en VSCode`
+    1. `Clic derecho` > `Abrir directorio en VSCode`
     1. Confirma que confías en el directorio
 - Forma 2:
     1. Abre `Visual Studio Code`
@@ -285,7 +285,7 @@ A continuación evaluaremos nuestra capacidad de intuir y entender el funcionami
 1. Ejecuta los programas desde la terminal de VSCode.
 1. Añade un _docstring_ al principio de cada fichero incluyendo tu nombre y explicando qué hace el programa.
 
-_Nota:_ Puedes hacer `Click derecho` > `Guardar enlace como...` en los nombres de cada fichero para descargarlos o hacer click en el `icono del portapapeles` para copiar todo el contenido.
+_Nota:_ Puedes hacer `Clic derecho` > `Guardar enlace como...` en los nombres de cada fichero para descargarlos o hacer clic en el `icono del portapapeles` para copiar todo el contenido.
 
 ---
 
