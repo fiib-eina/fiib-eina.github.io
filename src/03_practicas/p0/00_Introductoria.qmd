@@ -317,7 +317,7 @@ Esta `Práctica 0` no es evaluable, pero sí se deberá entregar para familiariz
 **Tarea:** Entrega el código de la práctica.
 
 - [ ] Verifica que has nombrado correctamente los ficheros. Un fichero mal nombrado no será evaluado.
-- [ ] Verifica que has añadido un _docstring_ a cada fichero son tu nombre y NIP.
+- [ ] Verifica que has añadido un _docstring_ a cada fichero con tu nombre y NIP.
 - [ ] Verifica que el funcionamiento de los programas es correcto.
 - [ ] Accede a la entrega en Moodle y lee si hay instrucciones extra.
 - [ ] Sube los ficheros `*.py` individualmente (no comprimidos).
