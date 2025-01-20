@@ -2,8 +2,9 @@ format:
   revealjs: 
     # TODO: Selfcontained pages
     # embed-resources: true
-
     # Format Options
+    revealjs-plugins:
+      - tldraw
     date-format: long
     theme: [default, _style/custom.scss]
     # Slides
