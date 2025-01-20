@@ -1,6 +1,6 @@
 lang: es
 project:
-  title: DevOps
+  title: Fundamentos de Informática
   type: website
   render: 
     - index.qmd
