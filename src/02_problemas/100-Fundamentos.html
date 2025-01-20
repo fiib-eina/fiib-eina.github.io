@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.56">
 
-  <title>Fundamentos de Informática – Presentación de la Asignatura</title>
+  <title>Fundamentos de Informática – Problemas 100</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,6 +28,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #767676;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #767676;  padding-left: 4px; }
+    div.sourceCode
+      { color: #545454; background-color: #fefefe; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #545454; } /* Normal */
+    code span.al { color: #7928a1; } /* Alert */
+    code span.an { color: #696969; } /* Annotation */
+    code span.at { color: #a55a00; } /* Attribute */
+    code span.bn { color: #7928a1; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #d91e18; } /* ControlFlow */
+    code span.ch { color: #008000; } /* Char */
+    code span.cn { color: #d91e18; } /* Constant */
+    code span.co { color: #696969; } /* Comment */
+    code span.cv { color: #696969; font-style: italic; } /* CommentVar */
+    code span.do { color: #696969; font-style: italic; } /* Documentation */
+    code span.dt { color: #7928a1; } /* DataType */
+    code span.dv { color: #7928a1; } /* DecVal */
+    code span.er { color: #7928a1; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #a55a00; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #696969; } /* Information */
+    code span.kw { color: #d91e18; } /* Keyword */
+    code span.op { color: #00769e; } /* Operator */
+    code span.ot { color: #d91e18; } /* Other */
+    code span.pp { color: #7928a1; } /* Preprocessor */
+    code span.sc { color: #00769e; } /* SpecialChar */
+    code span.ss { color: #008000; } /* SpecialString */
+    code span.st { color: #008000; } /* String */
+    code span.va { color: #a55a00; } /* Variable */
+    code span.vs { color: #008000; } /* VerbatimString */
+    code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -326,145 +391,25 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="#223d71" data-background-image="../_style/logos/unizar-black.svg" data-background-opacity="0.30" data-background-size="auto 600px" class="quarto-title-block center">
-  <h1 class="title">Presentación de la Asignatura</h1>
-  <p class="subtitle">Información general</p>
+  <h1 class="title">Problemas 100</h1>
+  <p class="subtitle">Fundamentos</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="profesores" class="slide level2">
-<h2>Profesores</h2>
-<ul>
-<li>Sergio Martín Segura (<code>segura@unizar.es</code>)
-<ul>
-<li>Teoría, problemas y prácticas</li>
-<li>Despacho: L2.09, Ada Byron</li>
-</ul></li>
-<li>Miguel Ángel Latre Abadía (<code>latre@unizar.es</code>)
-<ul>
-<li>Prácticas</li>
-<li>Despacho: D2.22, Ada Byron</li>
-</ul></li>
-</ul>
-<p><em>Tutorías: Consultar enlace en Moodle</em></p>
-</section>
-<section id="organización" class="slide level2">
-<h2>Organización</h2>
-<ul>
-<li><strong>Clases teóricas</strong>: 2 horas semanales</li>
-<li><strong>Clases de problemas</strong>: 1 hora semanal</li>
-<li><strong>Prácticas de laboratorio</strong>: 2 horas cada dos semanas</li>
-</ul>
+<section id="malabares-de-variables" class="slide level2">
+<h2>Malabares de variables</h2>
+<p>Indica qué pintará por pantalla el siguiente código:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>a <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb1-2"><a></a>b <span class="op">=</span> a</span>
+<span id="cb1-3"><a></a>a <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb1-4"><a></a><span class="bu">print</span>(b)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
-<h3 id="sesiones-de-teoría">Sesiones de teoría</h3>
-<ul>
-<li><strong>Introducción</strong> de conceptos <strong>fundamentales</strong></li>
-<li><strong>Resolución magistral</strong> de ejercicios de ejemplo</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="sesiones-de-problemas">Sesiones de problemas</h3>
-<ul>
-<li><strong>Resolución autónoma</strong> de ejercicios sencillos
-<ul>
-<li>Se puede traer ordenador</li>
-<li>Se <strong>aconseja</strong> resolver los ejercicios en papel</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="sesiones-de-prácticas">Sesiones de prácticas</h3>
-<ul>
-<li><strong>Resolución autónoma</strong> de ejercicios complejos
-<ul>
-<li>Se puede traer ordenador personal o usar los del laboratorio</li>
-</ul></li>
-<li>Se realizarán <code>7</code> sesiones.
-<ul>
-<li><code>P0</code>: No evaluable</li>
-<li><code>P1</code> a <code>P6</code>: Evaluables</li>
-</ul></li>
-<li>Alumnos divididos por <strong>grupos</strong>
-<ul>
-<li>Grupos <strong>pre-asignados</strong> por la coordinación del grado</li>
-<li>Cada grupo tiene un <strong>profesor asignado</strong></li>
-</ul></li>
-<li>Resolución <strong>individual</strong></li>
-<li>Entregas con <strong>fecha común</strong>
-<ul>
-<li>Implica traer preparada la práctica a la sesión</li>
-</ul></li>
-</ul>
-</section>
-<section id="evaluación-final" class="slide level2">
-<h2>Evaluación final</h2>
-<ul>
-<li>La nota final, tal cual indica la <a href="https://estudios.unizar.es/estudio/asignatura?anyo_academico=2024&amp;asignatura_id=32107&amp;estudio_id=20240167&amp;centro_id=110&amp;plan_id_nk=653">guía docente</a>, se calcula:
-<ul>
-<li><span class="math inline">\(70\%\)</span> Examen escrito (mínimo <span class="math inline">\(5\)</span>)</li>
-<li><span class="math inline">\(30\%\)</span> Nota de prácticas (dos opciones):
-<ul>
-<li>Entregas de prácticas</li>
-<li>Examen práctico final (anula la nota de entregas)</li>
-</ul></li>
-</ul></li>
-<li>Se deberá obtener una nota mínima de <span class="math inline">\(5\)</span> ponderada para aprobar la asignatura</li>
-<li>Segunda convocatoria
-<ul>
-<li>Examen escrito + Examen práctico final</li>
-<li>Mismas ponderaciones</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="examen-escrito">Examen escrito</h3>
-<ul>
-<li>Escrito en papel</li>
-<li>Resolución de problemas
-<ul>
-<li>3 o 4 ejercicios, según dificultad</li>
-</ul></li>
-<li>Evaluación de los ejercicios
-<ul>
-<li>Se valorará la <strong>correctitud</strong> y la <strong>claridad</strong> de la solución</li>
-<li>Error de concepto grave: <span class="math inline">\(0\)</span></li>
-</ul></li>
-<li>Prohibido cualquier material de consulta o dispositivo de comunicación.
-<ul>
-<li>En caso de plagio, se abrirá un expediente y la calificación quedará <strong>pendiente</strong> de su resolución.</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="entregas-de-prácticas">Entregas de Prácticas</h3>
-<ul>
-<li>Se entregarán <strong>6 prácticas evaluables</strong></li>
-<li>Las entregas se realizarán a través de Moodle
-<ul>
-<li><strong>No</strong> se admitirán entregas fuera de plazo</li>
-<li><strong>No</strong> se admitirán entregas por otro medio que no sea Moodle.</li>
-</ul></li>
-<li>En caso de plagio, se abrirá un expediente y la calificación quedará <strong>pendiente</strong> de su resolución.</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="examen-práctico-final">Examen práctico final</h3>
-<ul>
-<li><strong>Voluntario</strong></li>
-<li>Su realización <strong>anula</strong> la nota de las entregas</li>
-<li><strong>No</strong> se recomienda esta opción frente a las entregas contínuas</li>
-</ul>
-</section>
-<section id="dudas" class="slide level2 center">
-<h2>¿Dudas?</h2>
+<p><strong>Solución:</strong></p>
+<pre><code>3</code></pre>
 
 <div class="quarto-auto-generated-content">
 <p><img src="../_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
