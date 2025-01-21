@@ -33,6 +33,7 @@
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-tldraw/index.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style>html{ scroll-behavior: smooth; }</style>
   <style type="text/css">
@@ -432,7 +433,7 @@
 </ul></li>
 <li>Evaluación de los ejercicios
 <ul>
-<li>Se valorará la <strong>correctitud</strong> y la <strong>claridad</strong> de la solución</li>
+<li>Se valorará la <strong>corrección</strong> y la <strong>claridad</strong> de la solución</li>
 <li>Error de concepto grave: <span class="math inline">\(0\)</span></li>
 </ul></li>
 <li>Prohibido cualquier material de consulta o dispositivo de comunicación.
@@ -460,7 +461,7 @@
 <ul>
 <li><strong>Voluntario</strong></li>
 <li>Su realización <strong>anula</strong> la nota de las entregas</li>
-<li><strong>No</strong> se recomienda esta opción frente a las entregas contínuas</li>
+<li><strong>No</strong> se recomienda esta opción frente a las entregas continuas</li>
 </ul>
 </section>
 <section id="dudas" class="slide level2 center">
@@ -483,6 +484,8 @@
   <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-tldraw/index.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-tldraw/bind-func.js"></script>
   <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -674,7 +677,7 @@
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealTldraw, QuartoSupport,
 
           RevealMath,
           RevealNotes,

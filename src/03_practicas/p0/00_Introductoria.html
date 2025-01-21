@@ -98,6 +98,7 @@
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-tldraw/index.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style>html{ scroll-behavior: smooth; }</style>
   <style type="text/css">
@@ -528,9 +529,9 @@
 
 <p><strong>Tarea:</strong> Crea la estructura de directorios en tu sistema de ficheros utilizando el <code>Explorador de Windows</code>.</p>
 <ol type="1">
-<li><code>Click derecho</code> &gt; <code>Nueva</code> &gt; <code>Carpeta</code> &gt; <code>p0</code></li>
+<li><code>Clic derecho</code> &gt; <code>Nueva</code> &gt; <code>Carpeta</code> &gt; <code>p0</code></li>
 <li>Accede a la carpeta <code>p0</code></li>
-<li><code>Click derecho</code> &gt; <code>Nuevo</code> &gt; <code>Documento de texto</code> &gt; <code>saludo.py</code>
+<li><code>Clic derecho</code> &gt; <code>Nuevo</code> &gt; <code>Documento de texto</code> &gt; <code>saludo.py</code>
 <ol type="1">
 <li>Asegúrate de que la extensión del fichero es <code>.py</code></li>
 </ol></li>
@@ -545,7 +546,7 @@
 <li>Forma 1:
 <ol type="1">
 <li>En el explorador &gt; Acede a la carpeta <code>p0</code></li>
-<li><code>Click derecho</code> &gt; <code>Abrir directorio en VSCode</code></li>
+<li><code>Clic derecho</code> &gt; <code>Abrir directorio en VSCode</code></li>
 <li>Confirma que confías en el directorio</li>
 </ol></li>
 <li>Forma 2:
@@ -683,7 +684,7 @@
 <li>Ejecuta los programas desde la terminal de VSCode.</li>
 <li>Añade un <em>docstring</em> al principio de cada fichero incluyendo tu nombre y explicando qué hace el programa.</li>
 </ol>
-<p><em>Nota:</em> Puedes hacer <code>Click derecho</code> &gt; <code>Guardar enlace como...</code> en los nombres de cada fichero para descargarlos o hacer click en el <code>icono del portapapeles</code> para copiar todo el contenido.</p>
+<p><em>Nota:</em> Puedes hacer <code>Clic derecho</code> &gt; <code>Guardar enlace como...</code> en los nombres de cada fichero para descargarlos o hacer clic en el <code>icono del portapapeles</code> para copiar todo el contenido.</p>
 </section>
 <section class="slide level2">
 
@@ -711,10 +712,10 @@
 <p><strong>Tarea:</strong> Entrega el código de la práctica.</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Verifica que has nombrado correctamente los ficheros. Un fichero mal nombrado no será evaluado.</label></li>
-<li><label><input type="checkbox">Verifica que has añadido un <em>docstring</em> a cada fichero son tu nombre y NIP.</label></li>
+<li><label><input type="checkbox">Verifica que has añadido un <em>docstring</em> a cada fichero con tu nombre y NIP.</label></li>
 <li><label><input type="checkbox">Verifica que el funcionamiento de los programas es correcto.</label></li>
 <li><label><input type="checkbox">Accede a la entrega en Moodle y lee si hay instrucciones extra.</label></li>
-<li><label><input type="checkbox">Sube los ficheros <code>*.py</code> individualmente (no comprimidos).</label></li>
+<li><label><input type="checkbox">Sube los ficheros <code>*.py</code> individualmente (sin comprimir y sin crear carpetas adicionales).</label></li>
 </ul>
 <p><em>Nota:</em> No se aceptarán entregas fuera de plazo. En el caso de que se acerque la fecha límite de entrega, se recomienda al menos subir los ejercicios que se hayan terminado. <strong>Se podrán resubir</strong> tantas veces como se desee antes de la fecha límite de entrega.</p>
 
@@ -735,6 +736,8 @@
   <script src="../../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-tldraw/index.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-tldraw/bind-func.js"></script>
   <script src="../../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -926,7 +929,7 @@
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealTldraw, QuartoSupport,
 
           RevealMath,
           RevealNotes,
