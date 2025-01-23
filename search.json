@@ -74,6 +74,34 @@
     "href": "index.html",
     "title": "Fundamentos de informática",
     "section": "",
-    "text": "01_teoria/ Presentación de la Asignatura - Información general \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n\nNo hay resultados"
+    "text": "01_teoria/ Presentación de la Asignatura - Información general \n\n\n01_teoria/ Teoría 000 - Computadores y Lenguajes \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "src/01_teoria/101_Introducción.html#que-es-la-informática",
+    "href": "src/01_teoria/101_Introducción.html#que-es-la-informática",
+    "title": "Teoría 000",
+    "section": "¿Que es la informática?",
+    "text": "¿Que es la informática?\n\nProcesamiento de información automática\nInformación: Conjunto de datos numéricos, alfabéticos o alfanuméricos necesarios para plantear y resolver un problema\nTratamiento de la información:\n\nEntrada: Introducción de los datos del problema\nProcesamiento: Transformación de datos\nSalida: Presentación de resultados"
+  },
+  {
+    "objectID": "src/01_teoria/101_Introducción.html#historia-de-la-informática",
+    "href": "src/01_teoria/101_Introducción.html#historia-de-la-informática",
+    "title": "Teoría 000",
+    "section": "Historia de la Informática",
+    "text": "Historia de la Informática"
+  },
+  {
+    "objectID": "src/01_teoria/101_Introducción.html#hardware",
+    "href": "src/01_teoria/101_Introducción.html#hardware",
+    "title": "Teoría 000",
+    "section": "Hardware",
+    "text": "Hardware"
+  },
+  {
+    "objectID": "src/01_teoria/101_Introducción.html#software",
+    "href": "src/01_teoria/101_Introducción.html#software",
+    "title": "Teoría 000",
+    "section": "Software",
+    "text": "Software"
   }
 ]
