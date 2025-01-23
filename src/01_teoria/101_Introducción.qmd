@@ -1,7 +1,458 @@
 ---
 title: Teoría 000
 subtitle: Computadores y Lenguajes
-draft: true
+---
+
+## ¿Que es la informática? 
+- Procesamiento de **inform**ación autom**ática**
+- **Información**: Conjunto de datos numéricos, alfabéticos o alfanuméricos necesarios para plantear y resolver un problema
+- **Tratamiento de la información**:
+    - **Entrada**: Introducción de los datos del problema
+    - **Procesamiento**: Transformación de datos
+    - **Salida**: Presentación de resultados
+
+---
+
+::: {.center .r-fit-text}
+**Datos** y **Procesos**
+:::
+
+---
+
+### La informática es ubicua 
+
+::: {.columns}
+::: {.column width="50%"}
+
+- PCs
+- Supercomputadoras
+- Smartphones
+- Electrodomésticos
+- Cajeros automáticos
+- Consolas
+- Robots
+- ...
+
+:::
+::: {.column width="50%"}
+
+![](img/ejemplos-computadores.png)
+
+:::
+:::
+
+
+---
+
+## Historia de la Informática {.center}
+
+---
+
+### 300-500 a.C.: El Ábaco
+
+::: {.columns}
+::: {.column width="50%"}
+
+- Primer dispositivo de cálculo conocido
+- Utilizado para realizar operaciones básicas como suma y resta
+- Base para el desarrollo de herramientas más complejas
+
+:::
+::: {.column width="50%"}
+
+![](./img/abaco.jpeg)
+
+:::
+:::
+
+---
+
+### Siglo II a.C.: Máquina de Anticitera
+
+::: {.columns}
+::: {.column width="50%"}
+
+- Primer mecanismo conocido de engranajes complejos
+- Utilizado para predecir posiciones astronómicas y eclipses
+- Introducción de conceptos de cálculo mecánico en la astronomía
+
+:::
+::: {.column width="50%"}
+
+![](./img/anticitera.jpg)
+
+:::
+:::
+
+---
+
+### Siglos VIII-IX: Al-Juarismi
+
+::: {.columns}
+::: {.column width="50%"}
+
+- Introdujo el álgebra en su obra "Al-Kitab al-Mukhtasar fi Hisab al-Jabr wal-Muqabala"
+- Sentó las bases para los algoritmos y sistemas numéricos actuales.
+- Desarrollo del sistema decimal y de técnicas de resolución de ecuaciones
+
+:::
+::: {.column width="50%"}
+
+![](./img/al-juarismi.jpg)
+
+:::
+:::
+
+---
+
+### Siglo XVII: La Pascalina de Blaise Pascal
+
+::: {.columns}
+::: {.column width="50%"}
+
+- Primer calculador mecánico funcional
+- Utilizaba ruedas dentadas para realizar sumas y restas
+- Inspiró futuros dispositivos de cálculo automatizado
+
+:::
+::: {.column width="50%"}
+
+![](./img/pascalina.jpg)
+
+:::
+:::
+
+---
+
+### Siglo XIX: El Telar de Jacquard
+
+::: {.columns}
+::: {.column width="50%"}
+
+- Introducción de tarjetas perforadas para controlar patrones en telares
+- Base conceptual para la programación mediante instrucciones predefinidas
+- Influencia directa en los diseños de máquinas computacionales posteriores
+
+:::
+::: {.column width="50%"}
+
+![](./img/telar-1.jpg)
+![](./img/telar-2.jpg)
+
+:::
+:::
+
+---
+
+### Década de 1830: La Máquina Analítica de Charles Babbage
+
+::: {.columns}
+::: {.column width="50%"}
+
+- Primer diseño conceptual de un computador programable
+- Incorporaba memoria, unidad aritmética y control por tarjetas perforadas
+- Visionaria pero nunca construida completamente en su época
+
+:::
+::: {.column width="50%"}
+
+![](./img/charles-babbage.jpg)
+
+:::
+:::
+
+---
+
+![](./img/maquina-analitica.jpg)
+
+---
+
+### Década de 1840: Ada Lovelace
+
+::: {.columns}
+::: {.column width="50%"}
+
+- Reconocida como la primera programadora
+- Escribió el primer algoritmo diseñado para ejecutarse en la Máquina Analítica
+- Identificó el potencial de las máquinas más allá del cálculo numérico
+
+:::
+::: {.column width="50%"}
+
+![](./img/ada_lovelace.jpg)
+
+:::
+:::
+
+
+---
+
+### Década de 1940: Primera Generación de Computadoras
+
+- Bombe
+- Z3
+- Colossus
+
 ---
 
 
+### 1939-1940: Z3
+
+::: {.columns}
+::: {.column width="50%"}
+
+- Diseñada por Konrad Zuse en 1941
+- Primera computadora electromecánica programable
+    - Utilizaba relés electromeánicos
+- Usada para ayudar en cálculos de ingeniería
+
+:::
+::: {.column width="50%"}
+
+![](./img/z3.jpeg)
+
+:::
+:::
+
+---
+
+### 1939-1940: Máquina Bombe
+
+::: {.columns}
+::: {.column width="50%"}
+
+- Diseñada por Alan Turing y Gordon Welchman
+- Compuradora electromecánica
+- Usada para descifrar códigos de la máquina Enigma alemana
+    - No programable
+    - Probaba todas las posibles configuraciones de la máquina Enigma
+
+:::
+::: {.column width="50%"}
+
+![](./img/bombe.jpg)
+
+:::
+:::
+
+
+---
+
+### Década de 1943-1944: Colossus
+
+::: {.columns}
+::: {.column width="50%"}
+
+- Diseñada por Tommy Flowers y el equipo de Bletchley Park
+- Primera computadora digital electrónica
+    - Utilizaba tubos de vacío (muchísimo más rápidos que los relés)
+- Usada para descifrar códigos de la máquina Lorenz alemana
+    - Ligeramente programable, pero no de propósito general
+
+:::
+::: {.column width="50%"}
+
+![](./img/colosus.jpg)
+
+:::
+:::
+
+---
+
+### 1945: ENIAC
+
+::: {.columns}
+::: {.column width="50%"}
+
+- Primera computadora electrónica de propósito general
+- Capaz de realizar 5,000 operaciones por segundo
+- Usaba tubos de vacío, ocupaba una sala entera
+
+:::
+::: {.column width="50%"}
+
+![](./img/eniac.jpg)
+
+:::
+:::
+
+---
+
+### Década de 1950: EDVAC
+
+::: {.columns}
+::: {.column width="50%"}
+
+- Introducción del concepto de programa almacenado
+- Evolución significativa respecto al ENIAC, más eficiente y versátil
+- Datos y programas residían en la misma memoria
+
+:::
+::: {.column width="50%"}
+
+![](./img/edvac.jpeg)
+
+:::
+:::
+
+
+---
+
+## Hardware {.center}
+
+---
+
+### Sistema Binario
+
+- Unidades de información
+    - **Bit**: Dígito binario (0 o 1)
+    - **Byte**: Conjunto de 8 bits
+- Base 2
+
+::: {.r-fit-text}
+```
+
+2562 = 2*10^3   1101 = 1*2^3 = 1*8 = 8
+     + 5*10^2        + 1*2^2 = 1*4 = 4
+     + 6*10^1        + 0*2^1 = 0*2 = 0
+     + 2*10^0        + 1*2^0 = 1*0 = 1
+
+```
+:::
+
+---
+
+### Representaciones en Sistema Binario
+
+- Representación de datos
+    - **Números**: Representación binaria de números enteros y reales
+    - **Texto**: Codificación de caracteres mediante tablas de caracteres
+    - **Imágenes**: Representación de píxeles mediante valores numéricos
+    - **Vídeo**: Secuencia de imágenes
+    - **Sonido**: Representación de ondas sonoras mediante valores numéricos
+
+::: {.r-fit-text}
+```
+           3 = 1*2^1 + 1*2^0        =      11
+          33 = 1*2^5 + 1*2^0        =  100001
+      E (69) = 1*2^6 + 1*2^2+ 1*2^0 = 1000101
+morado (RGB) = (2/3 rojo, 3/3 azul)
+             = (2,0,3) = (10,00,11) =  100011
+```
+:::
+
+---
+
+### Modelo de Von Neumann
+
+![Modelo Von Neumann](img/modelo-von-neumann.png)
+
+---
+
+### Partes de un Computador
+
+::: {.columns}
+::: {.column width="50%"}
+
+- **Procesador (CPU)**
+    - Unidad de control (CU)
+    - Unidad aritmético-lógica (ALU)
+- **Memoria**
+    - Gran velocidad de acceso
+    - RAM o ROM: Volátil o permanente
+- **Almacenamiento**
+    - Disco duro, SSD, etc.
+    - Almacenamiento permanente
+:::
+::: {.column width="50%"}
+
+- **Dispositivos de Entrada/Salida**
+    - Periféricos para interactuar con la computadora
+    - Transferecia a través de buses de datos
+        - PCI, USB, etc.
+:::
+:::
+
+---
+
+### Partes de un Computador
+
+![Partes de un Computador](./img/pc-parts.png)
+
+---
+
+![](./img/maquina-analitica.jpg)
+
+::: {.notes}
+Destacar los paralelismos entre la máquina analítica de Babbage y los computadores actuales.
+Diferencias:
+- The Store: Memoria RAM o Disco
+- The Mill: CPU
+- The Steam engine: Fuente de alimentación
+- The Printer: Salida (dispositivos de salida)
+- Opetacion Cards, Variable Cards and Number Cards: Software
+:::
+
+---
+
+### Jerarquía de Memoria
+
+::: {.columns}
+::: {.column width="50%"}
+
+- Existen dos reglas fundamentales:
+    - A **mayor capacidad**, **menor velocidad**
+    - A **mayor velocidad**, **mayor coste**
+- Por ello, se utilizan distintos tipos de memoria
+    - **Registros**: Memoria interna del procesador
+    - **Memoria caché**: Memoria de alta velocidad
+    - **Memoria principal**: Memoria RAM
+    - **Memoria secundaria**: Almacenamiento permanente
+
+:::
+::: {.column width="50%"}
+
+![](./img/jerarquia-memoria.png)
+
+:::
+:::
+
+
+---
+
+## Software {.center}
+
+---
+
+### Software
+
+- La propiedad más valiosa de un computador es su capacidad para ejecutar distintos programas: **programable**
+- **Software**: Conjunto de _programas y datos_ que controlan el funcionamiento de un computador
+    - Un programa permite **automatizar** una tarea
+- El software permite **abstraer** el hardware
+    - Un programa puede leer un fichero esté en un disco duro o en un USB
+
+---
+
+### Clasificación del software
+
+- **Software de sistema**: Controla el hardware y proporciona servicios a los programas de aplicación
+    - **Sistemas operativos**: Windows, Linux, macOS
+    - **Controladores de dispositivos**: Drivers
+
+- **Software de aplicación**: Realiza tareas específicas para el usuario
+    - **Ofimática**: Microsoft Office, LibreOffice
+    - **Multimedia**: VLC, Photoshop
+    - **Navegadores web**: Chrome, Firefox
+
+---
+
+### La abstracción en la informática
+
+- **Abstracción**: Proceso de ocultar detalles de implementación y mostrar solo las características esenciales de un objeto
+- **Bajo nivel**: Representación cercana al hardware
+    - Operaciones directas sobre la memoria
+    - Dependientes del hardware
+- **Alto nivel**: Representación al problema
+    - Abstracciones como variables, objetos, funciones, etc.
+    - Portables entre distintos hardwares
