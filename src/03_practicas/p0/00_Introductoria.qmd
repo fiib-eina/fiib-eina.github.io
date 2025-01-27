@@ -19,7 +19,7 @@ subtitle: Introducción
 
 Para desarrollar en `python` necesitamos:
 
-- Interprete de Python: [Python](https://www.python.org/downloads/)
+- Intérprete de Python: [Python](https://www.python.org/downloads/)
 - Entorno de desarrollo: [Visual Studio Code](https://code.visualstudio.com/download)
 
 ---
