@@ -1,0 +1,272 @@
+---
+title: Teoría 102
+subtitle: Lenguajes
+---
+
+## Algoritmo {.center}
+
+---
+
+### ¿Qué es un algoritmo?
+
+- **Descripción detallada de cómo resolver un determinado problema**
+- **Secuencia de acciones para obtener la solución al problema**
+- **Conjunto de instrucciones que se ejecutan en un orden determinado**
+
+---
+
+- **¿Cómo cambiar las pilas del mando de la TV?**
+    1. Tomar el mando de la TV
+    2. Localizar la tapa de las pilas
+    3. Quitar el tornillo (si tiene)
+    4. Abrir la tapa
+    5. Quitar las pilas viejas
+    6. Colocar las pilas nuevas
+    7. Colocar la tapa
+    8. Apretar el tornillo (si tiene)
+
+---
+
+### Anatomía de un algoritmo
+
+-   Declaración precisa de condiciones de partida: **entrada**
+-   Especificación del estado final: **salida**
+-   **Descripción detallada** de los pasos individuales
+    - Operaciones **simples** que ayudan en la **progresión** hacia el estado final
+
+---
+
+### Características de un algoritmo
+
+- **Precisión** : Expresarse de forma no ambigua
+- **Determinismo** : Mismo estado final para las mismas entradas
+- **Finitud** : Tener una descripción finita
+
+---
+
+### Limitaciones computacionales
+
+- Problemas ambiguos
+- Problemas con demasiados pasos para acabar
+- Problemas matemáticamente imposibles
+
+---
+
+### Programa = algoritmo + estructuras de datos {.center}
+
+---
+
+## Lenguajes de programación {.center}
+
+---
+
+- Un **lenguaje de programación** es
+    - un **lenguaje formal** que 
+    - especifica una serie de **instrucciones** que,
+    - al ser **ejecutadas** por un ordenador,
+    - permiten realizar **una tarea concreta**
+
+_El idioma en el que los humanos se comunican con las máquinas_
+
+---
+
+### Estilos de programación
+
+-   Diferentes estilos: **imperativa**, funcional, declarativa, etc.
+    - En esta asignatura, nos centraremos en la **programación imperativa**
+-   **Programación imperativa**: **Estado** + **Instrucciones**
+    - **_Estado_**: conjunto de variables que definen de manera unívoca la situación de un sistema
+    - **_Instrucciones_**: operaciones que modifican el estado del programa
+    - Cada **instrucción** ayuda a la progresión hacia el **estado final**
+
+---
+
+### Niveles de lenguajes de programación
+
+- Un computador sólo **entiende** instrucciones _sencillas_:
+    - **ISA** (Instruction Set Architecture): Es el conjunto de instrucciones que un procesador puede ejecutar
+    - Cada arquitectura de procesador tiene su propia ISA
+- Estas instrucciones básicas bastan para construir programas complejos
+- Según su nivel de abstracción:
+    - Lenguajes de **bajo nivel** se encuentran cerca del leguaje de la máquina
+    - Lenguajes más sofisticados (de **alto nivel**) buscan acercar la programación al lenguaje humano
+
+---
+
+#### Código máquina
+
+::: {.columns}
+::: {.column width="60%"}
+
+-   Lenguaje que entiende el ordenador: **código máquina**
+-   Anteriormente, los programas se escribían directamente en codificación binaria (ejemplo: perforando tarjetas)
+    -   `Agujero = 1, sin agujero = 0`
+    -   **Errores** frecuentes, muy difíciles de encontrar y corregir
+    -   Se programaba directamente en base al hardware a usar
+    -   Un programa escrito para un hardware **no es compatible con otro difrente**
+        - Poco versátil
+:::
+::: {.column width="40%"}
+
+![Tarjeta Perforada](./img/tarjetaPerforada.jpg)
+
+:::
+:::
+
+
+
+---
+
+#### Lenguaje ensamblador
+
+::: {.columns}
+::: {.column width="60%"}
+
+-   Permite escribir instrucciones del procesador y representar los datos con identificadores más entendibles por el programador
+-   Sin embargo, todavía es **difícil de entender** (bajo nivel)
+-   Todavía está condicionado por el hardware a usar:
+    - `Diferentes máquinas = diferentes programas`
+    - Poco versátil
+
+:::
+::: {.column width="40%"}
+
+![Código ensamblador](./img/ensamblador)
+
+:::
+:::
+
+
+---
+
+#### Lenguajes de alto nivel
+::: {.columns}
+::: {.column width="60%"}
+
+-   Soportan abstracciones que entiende el programador,<br>_¡pero no la máquina!_
+-   Más fáciles de utilizar para programar
+-   No dependen de la máquina utilizada
+-   Menos eficientes que los de bajo nivel
+-   **Necesitan compiladores/traductores** al lenguaje máquina
+-   Facilitan detección de errores
+
+:::
+::: {.column width="40%"}
+
+```python
+def suma(a, b):
+    return a + b
+```
+
+:::
+:::
+
+
+---
+
+#### Primer lenguaje de alto nivel: FORTRAN, 1957
+
+- FORTRAN (FORmula TRANslation): John Backus, 1957
+    - **Código fuente:** texto escrito en lenguaje de alto nivel (texto plano)
+    - **Compilador:** traduce el código fuente a lenguaje máquina
+- Aún se utiliza en:
+    - Ciencia e ingeniería
+    - Finanza 
+
+---
+
+### Evolución de los lenguajes
+
+![https://www.cs.fsu.edu/~engelen/courses/COP402004/](./img/genealogy2)
+
+---
+
+## Lenguajes de alto nivel {.center}
+
+---
+
+### Tipos de lengujes de alto nivel
+
+::: {.columns}
+::: {.column width="50%"}
+
+**Lenguajes compilados**
+
+-   La traducción se realiza **una sola vez** durante la **compilación**
+-   Durante la ejecución, **no se requiere el código fuente**
+-   Cada plataforma requiere su propia compilación
+-   **Usos**: sistemas operativos, videojuegos, edición de vídeo...
+-   _Ejemplos_: Pascal, Ada, C/C++, Fortran...
+ 
+:::
+::: {.column width="50%"}
+
+**Lenguajes interpretados**
+
+-   La traducción se realiza **cada vez que se ejecuta el programa**
+-   Un **intérprete** interpreta y ejecuta las instrucciones: **más lento**
+-   El mismo programa sirve en múltiples plataformas: **portabilidad**
+-   **Usos**: aplicaciones web, sistemas multiplataforma, telfs. móviles...
+-   _Ejemplos_: **Python**, Perl, PHP, Scratch...
+:::
+:::
+
+
+
+---
+
+### Compilador
+
+- **Código fuente** $\rightarrow$ **Aplicación ejecutable**
+- Requiere tres elementos: un compilador, un ensamblador y un enlazador
+    - **Compilador**: Código escrito $\rightarrow$ Código ensamblador
+    - **Ensamblador**: Código ensamblador $\rightarrow$ Código máquina (ficheros objeto)
+    - **Enlazador**: Código máquina (ficheros objeto) $\rightarrow$ Código maquina ejecutable
+- El compilador, no sólo traduce el código, sino que también verifica:
+    - Revisión léxica (_¿usa las palabras reservadas correctamente?_)
+    - Revisión sintáctica (_¿la frase es gramaticalmente correcta?_)
+    - Revisión semántica (_¿tiene sentido la frase?_)
+
+---
+
+### Interprete
+
+- **Código fuente** $\rightarrow$ **Ejecución**
+- Sólo requiere un elemento:
+    - **Interprete**: lee el código fuente y lo ejecuta directamente
+- **Ventajas**:
+    - **Portabilidad**: no es necesario compilar para cada plataforma
+    - **Facilidad de depuración**: errores más fáciles de encontrar
+    - **Flexibilidad**: permite ejecutar código de forma interactiva
+
+---
+
+## Entorno Integrado de Desarrollo {.center}
+
+---
+
+### _Integrated Development Environment_ (IDE)
+
+Aplicaciones integradas compuestas por:
+
+- Un **editor** avanzado de código fuente
+    - Resalta las palabras reservadas
+    - Gestiona las sangrías del texto
+- Un **intérprete** o **compilador**
+- Una **consola** o **terminal** para ejecutar comandos
+- [Opcional] Un **depurador** integrado (no lo veremos en esta asignatura)
+
+---
+
+### Proceso de trabajo
+
+1. **Diseño de una solución** al problema
+2. **Codificación** de la solución
+3. **Ejecución** del programa
+4. **Verificación** del resultado
+5. **Mientras hay errores**
+6. **Corrección** de errores
+7. Volver al paso 3
+
+---
+
