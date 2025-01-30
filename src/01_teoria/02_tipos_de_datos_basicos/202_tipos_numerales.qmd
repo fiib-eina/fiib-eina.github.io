@@ -1,0 +1,600 @@
+---
+title: Teoría 202
+subtitle: Tipos Numerales
+draft: true
+---
+
+# Primeras instrucciones: Asignación
+
+::: frame
+Primeras instrucciones: Asignación
+
+`identificador = expresión;`
+
+-   Operador de asignación: símbolo `=`
+
+-   [**Copia el resultado de evaluar una expresión**]{.underline}[^1] a
+    una variable
+
+-   El tipo de datos de la variable (parte izquierda de la asignación)
+    ha de coincidir con el tipo de datos de la evaluación de la
+    expresión (parte derecha)
+
+    -   ¿Qué ocurrirá si el tipo NO es compatible? $\Rightarrow$
+        [**error de compilación**]{.alert}
+
+-   Ejemplos:
+
+    ::: lrbox
+    ``` {style="slideExample"}
+    dias = 5 - 1; // la variable dias toma el valor del
+                  // resultado de la expresión 5 - 1 (valor 4)
+    horas = dias; // a horas se le asigna el valor que hay en dias
+    horas = 6;    // se cambia el valor de horas, pero
+                  // dias sigue teniendo el mismo valor
+    ```
+    :::
+:::
+
+# Tipos de datos en C++
+
+::: frame
+Tipos de datos en C++
+
+[**Tipos de datos primitivos en C++**]{style="background-color: black"}
+
+-   **Enteros**: para representar números enteros
+
+-   **Reales**: para representar números reales
+
+-   **Booleanos**: para representar valores de cierto o falso
+
+-   **Caracteres**: para representar un carácter
+
+**¿Qué necesitamos saber?**
+
+-   Su palabra reservada (`int`, `double`, \...)
+
+-   Su rango de valores (*¿puedo representar un D.N.I. con un `int`?*)
+
+-   Sus literales (*¿un número real se escribe 1,7 o 1.7?*)
+
+-   Sus operaciones disponibles (*¿puedo sumar números enteros?*)
+:::
+
+::: frame
+Tipos de datos primitivos en C++
+
+::: small
+                               **Palabra clave**                               **Tipo de dato**   **Tamaño (en bits)**
+  --------------------------------------------------------------------------- ------------------ ----------------------
+                                    `char`                                         carácter                8
+                                    `short`                                         entero                16\*
+                                     `int`                                          entero                32\*
+                                    `long`                                          entero                32\*
+                                    `float`                                          real                  32
+                                  `long long`                                       entero                64\*
+                                   `double`                                          real                  64
+                                 `long double`                                       real                 96\*
+                                    `bool`                                         booleano           8 (1 bit)\*
+                                    `void`                                        tipo nulo                \-
+   $^*$Pueden depender del compilador, S.O. y microprocesador del ordenador.                     
+:::
+:::
+
+# Enteros
+
+::: frame
+Enteros Tipos enteros
+
+C++ dispone de [**cuatro tipos básicos de enteros**]{.underline}
+diferentes:
+
+::: small
+                           **Palabra clave**                            **Tipo de dato**   **Tamaño (en bits)**
+  -------------------------------------------------------------------- ------------------ ----------------------
+                                 `char`                                     carácter                8
+                                `short`                                      entero               16$^*$
+                                 `int`                                       entero               32$^*$
+                                 `long`                                      entero               32$^*$
+                                `float`                                       real                  32
+                              `long long`                                    entero               64$^*$
+                                `double`                                      real                  64
+                             `long double`                                    real                96$^*$
+                                 `bool`                                     booleano           8 (1 bit)\*
+                                 `void`                                    tipo nulo                \-
+   $^*$Dependen del compilador, S.O. y microprocesador del ordenador.                     
+:::
+:::
+
+::: frame
+Enteros Representación (externa)
+
+-   **Secuencia de uno o más dígitos** (caracteres 0, 1, \... 9)
+
+-   Precedidos por símbolo `+` o símbolo `-`
+
+**Primeros ejemplos de uso**
+
+``` {style="slideExample"}
+int a;         // declaración de variable de tipo entero a
+int b = 3;     // declaración de variable de tipo entero b,
+               // inicializada al valor 3
+long c = -523; // inicialización a -523
+c = +444;      // ahora c vale 444
+```
+:::
+
+::: frame
+Enteros Rango de valores
+
+-   Rango de los números enteros en matemáticas:
+
+    -   Entre $-\infty$ y $+\infty$ en $\mathbb{Z}$ (\..., -3, -2, -1,
+        0, 1, 2, 3, \...)
+
+-   Rango de los números enteros en informática:
+
+    -   Entre un mínimo y un máximo, determinado por el tipo de dato
+        usado
+
+::: center
+![image](images/dominio.pdf){width="0.8\\columnwidth"}
+:::
+
+**Rango de valores según tipo de dato entero**
+
+-   16 bits $\rightarrow$ $2^{16} = 65536$ valores (rango
+    $[-32767,+32767]$)
+
+-   32 bits $\rightarrow$ $2^{32} = 4294967296$ valores (rango
+    $[-2147483647,+2147483647]$)
+:::
+
+::: frame
+Enteros Rango de valores
+
+**Reglas para selección de tipo**
+
+-   Si el dato a representar pertenece al intervalo $[-32767,32767]$:
+    usa `short`
+
+-   Si el dato a representar no pertenece al intervalo $[-32767,32767]$
+    y tiene menos de 10 cifras: usa `int`
+
+-   Si el dato a representar tiene más de 10 cifras\...
+
+    -   `long long` (64 bits $\rightarrow 2^{64}= 18446744073709551616$
+        valores)
+:::
+
+::: frame
+Enteros Operadores
+
+-   Operadores **aritméticos:**
+
+    -   Suma: `+`
+
+    -   Resta: `-`
+
+    -   Multiplicación: `*`
+
+    -   División entera: `/`
+
+    -   Módulo (resto de la división): `%` **¡Ojo!**
+
+    [no hay]{.alert} un operador de potenciación.
+
+-   Operadores **de comparación**:\
+    (devuelven un valor lógico (booleano): Verdadero o Falso)
+
+    -   Mayor estricto: `>`
+
+    -   Mayor o igual: `>=`
+
+    -   Menor estricto: `<`
+
+    -   Menor o igual: `<=`
+
+    -   Igualdad: `==` **¡Atención!**
+
+    -   Desigualdad: `!=`
+:::
+
+# Reales
+
+::: frame
+Reales Tipos reales
+
+C++ dispone de [**tres tipos básicos de números reales**]{.underline}
+diferentes:
+
+::: small
+                           **Palabra clave**                            **Tipo de dato**   **Tamaño (en bits)**
+  -------------------------------------------------------------------- ------------------ ----------------------
+                                 `char`                                     carácter                8
+                                `short`                                      entero               16$^*$
+                                 `int`                                       entero               32$^*$
+                                 `long`                                      entero               32$^*$
+                                `float`                                       real                  32
+                              `long long`                                    entero               64$^*$
+                                `double`                                      real                  64
+                             `long double`                                    real                96$^*$
+                                 `bool`                                     booleano            8 (1 bit)
+                                 `void`                                    tipo nulo                \-
+   $^*$Dependen del compilador, S.O. y microprocesador del ordenador.                     
+:::
+:::
+
+::: frame
+Reales Representación (externa)
+
+::: itemize
+**Secuencia de uno o más dígitos (caracteres 0, 1, \... 9)**
+
+Precedidos por símbolo `+` o símbolo `-`
+
+**La secuencia acaba en un punto** (carácter de la coma decimal)
+
+**Luego, tiene 0 o más dígitos después del punto** (los decimales
+
+Admiten **notación científica** (también llamada notación exponencial,
+e.g. `-1.23E+10`)
+:::
+
+**Primeros ejemplos de uso**
+
+``` {style="slideExample"}
+float a;          // declaración de variable real a
+float b = 456.3;
+double c = -523.; // el valor -523 (sin decimales)
+c = +456.5E-7;
+float d = 0.0;
+```
+:::
+
+::: frame
+Reales Rango de valores
+
+-   Rango de los números reales en matemáticas\...
+
+    -   Entre $-\infty$ y $+\infty$ en $\mathbb{R}$
+
+-   Rango de los números reales en informática:
+
+    -   Entre un mínimo y un máximo, **con un [subconjunto
+        finito]{.underline} de valores representables**
+
+::: center
+![image](images/dominioReales.png){width="90%"}
+:::
+:::
+
+::: frame
+Reales Rango de valores
+
+$0.7$ en binario es $0.10110011001100110...$
+
+-   Si truncamos a $11$ bits $\rightarrow 0.1011001100$ que en decimal
+    es $0.69921875$
+
+-   Si redondeamos a $11$ bits $\rightarrow 0.1011001101$ que en decimal
+    es $0.700195312$
+
+```{=html}
+<!-- -->
+```
+-   Lectura recomendada: 'Examples of floating point problems'[^2]
+
+-   Ejercicio: el número real *262144.0*
+
+    <https://float.exposed/0x48800000>
+:::
+
+::: frame
+Reales Operadores
+
+-   Operadores **aritméticos:**
+
+    -   Suma: `+`
+
+    -   Resta: `-`
+
+    -   Multiplicación: `*`
+
+    -   División: `/`
+
+    [no hay]{.alert} un operador de potenciación.
+
+-   Operadores **de comparación**:\
+    (devuelven un valor lógico (booleano): Verdadero o Falso)
+
+    -   Mayor estricto: `>`
+
+    -   Mayor o igual: `>=`
+
+    -   Menor estricto: `<`
+
+    -   Menor o igual: `<=`
+
+    -   Igualdad: `==`
+
+    -   Desigualdad: `!=`
+:::
+
+::: frame
+Reales Funciones matemáticas de la biblioteca `<cmath>`
+
+-   `abs(x)`: $|x|$
+
+-   `sqrt(x)`: $\sqrt{x}$
+
+-   `sin(x)`: seno de $x$ ($x$ en radianes)
+
+-   `cos(x)`: coseno de $x$ ($x$ en radianes)
+
+-   `atan(x)`: ángulo (en radianes) cuya tangente es $x$
+
+-   `log(x)`: logaritmo neperiano de $x$
+
+-   `exp(x)`: $e^x$
+
+-   `pow(x, exp)`: $x^{exp}$
+
+-   `round(x)`: mayor entero $e$ tal que $e \leq x+0.5$
+
+-   `ceil(x)`: redondeo al entero más grande
+
+-   `floor(x)`: redondeo al entero más pequeño
+:::
+
+# Bibliotecas de C++
+
+::: frame
+Bibliotecas de C++ ¿Qué son?
+
+-   Junto con el compilador de C++ se incluyen ciertos archivos:
+    **bibliotecas (o librerías) de funciones**
+
+-   Contienen código objeto para realizar diversas tareas: escribir por
+    pantalla, leer datos, manejar números, calcular funciones
+    matemáticas, manejar ficheros, descargarse un fichero de internet,
+    \...
+
+-   Tareas difíciles de programar (o que se usan con frecuencia)
+
+-   Se pueden utilizar fácilmente sin necesidad de preocuparnos por su
+    implementación
+
+-   Biblioteca en C++:
+
+    -   fichero objeto (.a, .so, .dll, ...)
+
+    -   fichero de cabeceras (.h, .hpp, ...).
+:::
+
+::: frame
+Bibliotecas de C++ Declaración de bibliotecas
+
+``` {style="slideExample"}
+#include <nombre del fichero de cabeceras>(*@ \footnote{Muchas veces usaremos: nombre de la biblioteca} @*)
+```
+
+-   Se escribe entre `<` y `>`
+
+-   **Se colocan [al principio]{.underline} del código fuente**
+
+**Ejemplos**:
+
+``` {style="slideExample"}
+#include <iostream>
+#include <cmath>
+```
+
+**Mirar:**
+
+::: itemize
+<https://en.cppreference.com/w/cpp/header/cmath>
+
+<https://github.com/gcc-mirror/gcc/blob/master/libstdc++-v3/include/c_std/cmath>
+:::
+:::
+
+::: frame
+Bibliotecas de C++ Bibliotecas estándar de C++
+
+-   `iostream`: funciones de entrada y salida estándar, incluyendo la
+    escritura en pantalla y la lectura en el teclado
+
+    -   [**Esta biblioteca es indispensable**]{.alert} en nuestros
+        programas
+
+-   `cstdio`: funciones para manipular datos de entrada y salida
+
+-   `cstdlib`: funciones de utilidades de uso general
+
+-   `cmath`: definiciones de constantes universales y funciones
+    matemáticas
+
+-   `string`: funciones para trabajar con cadenas de caracteres (texto)
+
+-   `vector`: funcionalidades para trabajar con vectores y matrices
+
+-   `fstream`: funcionalidades para trabajar con ficheros (persistencia)
+:::
+
+# Caracteres y cadenas
+
+::: frame
+Caracteres Tipo carácter
+
+C++ dispone de [**un tipo básico de carácter**]{.underline}:
+
+::: small
+                           **Palabra clave**                            **Tipo de dato**   **Tamaño (en bits)**
+  -------------------------------------------------------------------- ------------------ ----------------------
+                                 `char`                                     carácter                8
+                                `short`                                      entero               16$^*$
+                                 `int`                                       entero               32$^*$
+                                 `long`                                      entero               32$^*$
+                                `float`                                       real                  32
+                              `long long`                                    entero               64$^*$
+                                `double`                                      real                  64
+                             `long double`                                    real                96$^*$
+                                 `bool`                                     booleano            8 (1 bit)
+                                 `void`                                    tipo nulo                \-
+   $^*$Dependen del compilador, S.O. y microprocesador del ordenador.                     
+:::
+:::
+
+::: frame
+Caracteres Representación (externa)
+
+-   Una letra, escrita [**entre comillas simples**]{.underline}
+
+    -   En el teclado español, se encuentra a la derecha del 0 (junto
+        con el carácter `?`)
+
+**Primeros ejemplos de uso**
+
+``` {style="slideExample"}
+char a;       // declaración de variable de tipo carácter
+char b = 'a'; // definición de variable b
+              // e inicialización a literal 'a'
+char c = '3'; // variable inicializada al valor '3'
+              // que NO ES valor 3, ¡ojo!
+```
+:::
+
+::: frame
+Caracteres Rango de valores
+
+[**Caracteres imprimibles**]{style="background-color: black"}
+
+-   Caracteres alfabéticos: `'a','b',...,'z','A','B',...,'Z'`
+
+-   Caracteres numéricos o dígitos: `'0','1',...,'9'`
+
+-   Otros caracteres imprescindibles: `'+','-','.',' ',...`
+:::
+
+::: frame
+Caracteres Representación interna: tabla ASCII
+
+::: center
+![image](images/tablaASCII.png){width=".75\\columnwidth"}\
+(filas y columnas en notación hexadecimal \[base 16\])
+:::
+
+::: flushleft
+*Créditos*: <https://es.wikipedia.org/wiki/ASCII> (tabla de 1968)
+:::
+:::
+
+::: frame
+Caracteres Operadores
+
+-   Operadores **de comparación**:\
+    (devuelven un valor lógico (booleano): Verdadero o Falso)
+
+    -   Mayor estricto: `>`
+
+    -   Mayor o igual: `>=`
+
+    -   Menor estricto: `<`
+
+    -   Menor o igual: `<=`
+
+    -   Igualdad: `==`
+
+    -   Desigualdad: `!=`
+
+-   Operaciones de **conversión** (cast):
+
+    -   `(char){entero}`: devuelve el carácter asociado al entero dado,
+        según la tabla ASCII
+
+    ```{=html}
+    <!-- -->
+    ```
+        char a = 'b';         // la variable a contendrá el caracter 'b'
+        int valor = (int) a;  // la variable valor contendrá el entero 98
+        int otro = (int) 'c'; // la variable otro contendrá el entero 99
+:::
+
+::: frame
+Cadenas Representación
+
+-   Cero o más letras, [**entre comillas dobles**]{.underline}
+
+    -   En el teclado español, se encuentran en la tecla del número 2
+        (junto con el carácter `@`)
+
+-   **Por ahora, solo vamos a trabajar con los literales de cadena**
+
+**Primeros ejemplos de uso**
+
+    "Hola, mundo!"
+    "" // cadena vacía
+:::
+
+# Constantes
+
+::: frame
+Constantes
+
+-   El valor del dato [**permanece inalterado**]{.underline} durante la
+    ejecución del programa
+
+    -   ¿Qué ocurrirá si se intenta cambiar el valor de una constante en
+        el código?\
+        $\Rightarrow$ [**error de compilación**]{.alert}
+
+-   Declaración similar a las variables, pero:
+
+    -   Se precede el tipo de dato con la palabra reservada `const`
+
+    -   Hay que indicar el valor que toma la constante durante todo el
+        programa
+
+-   **Recomendación**: utilizar mayúsculas para los identificadores
+
+Ejemplos:
+
+::: lrbox
+``` {style="slideExample"}
+const int DIAS_SEMANA = 7;
+  const float NUMERO_PI = 3.141592;
+  const char OPCION_SALIR = 'c';
+```
+:::
+:::
+
+::: frame
+Tareas para la próxima clase
+
+1.  **Repasa los conceptos vistos y responde las siguientes preguntas**:
+
+    -   *¿Qué es una variable? ¿Y una constante?*
+
+    -   *¿Cómo se define una variable?*
+
+    -   *Enumera las restricciones para definir un identificador de una
+        variable o constante*
+
+    -   *Define una variable entera para representar un DNI, ¿qué tipo
+        de entero es apropiado?*
+
+    -   *Define una variable de tipo real y asígnale el valor 2.3*
+
+    -   *Define una variable de tipo carácter y asígnale la primera
+        letra de tu nombre*
+:::
+
+#  {#section .unnumbered}
+
+[^1]: Una expresión es un conjunto de valores, operaciones y funciones
+    que dan como resultado un único valor
+
+[^2]: <https://jvns.ca/blog/2023/01/13/examples-of-floating-point-problems/>
+

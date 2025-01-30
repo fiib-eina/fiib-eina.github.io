@@ -1,0 +1,313 @@
+---
+title: Teoría 201
+subtitle: Python
+draft: true
+---
+
+## Fundamentos de Python {.center}
+
+---
+
+### Estructura de un programa Python
+
+-   Programa Python: **conjunto de instrucciones**
+    -   **Instrucción**: elemento mínimo de un programa, que cambia su estado
+-   Las instrucciones se separan entre sí utilizando **saltos de línea**
+    -   Si una instrucción es muy larga, se puede dividir en varias líneas
+
+---
+
+**El programa más simple en Python**
+
+```python
+
+
+
+```
+
+- Efectivamente, este programa no hace nada (pero es un programa válido)
+
+---
+
+## Variables {.center}
+
+---
+
+### ¿Qué es una variable?
+
+- Una variable es una **abstracción** de un dato que **cambia durante la ejecución del programa**
+- Una variable se compone de: 
+    - **Nombre** (o identificador representativo)
+    - **Tipo de dato** (o conjunto de valores que puede tomar)
+    - **Valor** (o contenido actual)
+
+```python
+edad = 20      # Variable de tipo entero
+altura = 1.75  # Variable de tipo real
+```
+
+---
+
+### Declaración (o definición) de variable
+
+- A diferencia de otros lenguajes, python **no requiere de una definición** antes del primer uso de la variable.
+    - _Usar_ una variable: utilizar su nombre o identificador en el código fuente
+- Una variable **será declarada en el momento en el que la usemos** por primera vez
+
+```python
+a = 5  # Declaración de variable
+a = 7  
+```
+
+---
+
+### Identificadores válidos
+
+- El identificador (nombre) de una variable debe cumplir con ciertas **reglas**:
+    - Combinación de letras (alfabeto inglés), números y el carácter `_`
+        - Prohibido: espacio, `!`, `@`, `#`, etc.
+    - El primer carácter no puede ser un número
+    - No puede ser palabra reservada de Python:
+        - `if`, `for`, `while`, `def`, `import`, `True`, `False`, etc.
+    - Python distingue mayúsculas de minúsculas
+        - `edad` y `Edad` son identificadores distintas
+
+---
+
+#### Recomendaciones para identificadores
+
+- Elige identificadores descriptivos y autoexplicativos
+- Utiliza el caracter `_` para separar palabras (`snake_case`)
+- Mantén un estilo uniforme en todo el programa
+
+_Nombrar es un arte_
+
+---
+
+#### Ejemplos de identificadores 
+
+::: {.columns}
+::: {.column width="40%"}
+
+**Válidos**
+
+- `mensaje`
+- `h12_5`
+- `_56op`
+- `mañana` (no recomendado)
+
+:::
+::: {.column width="60%"}
+
+**Inválidos**
+
+- `int` (palabra reservada)
+- `v.a` (punto no permitido)
+- `eje-x` (guion no permitido)
+- `6hola` (número al inicio)
+
+:::
+:::
+
+---
+
+### Tipos de datos
+
+- Python es un lenguaje de programación **muy flexible**
+- Las variables **no están atadas a un mismo tipo de dato** durante toda su existencia
+    - Una misma variable puede ser primero un número y luego una letra
+- **Que se pueda NO QUIERE DECIR QUE SE DEBA**
+    - Es **recomendable** mantener el tipo de dato consistente en una variable
+    - Es tarea nuestra ser **disciplinados** y **usar bien** las variables
+
+_Si creo una variable para guardar un número, no la usaré para otra cosa que no sea guardar números_
+
+---
+
+## Asignación {.center}
+
+---
+
+### Asignación de valores a variables
+
+- La `asignación` es una **instrucción** que **cambia el valor de una variable**
+- En Python, la asignación se realiza con el operador `=`<br>y tiene la forma `identificador = expresión`
+    - **Identificador**: nombre de la variable que va a recibir el valor
+    - **Expresión**: valor que se va a asignar a la variable
+
+```python
+# Asignamos a la variable identificada como a
+# el valor de la expresión 9
+a = 9
+## Ahora a vale 9
+```
+
+---
+
+### Expresiones
+
+- Una **expresión** es una construcción que produce un valor cuando se la evalua
+- Puede ser un valor literal, una variable, una operación, etc.
+    - _Veremos más detalles de esto en los próximos temas_
+
+```python
+# Expresión literal (se evalúa como 5) 
+a = 5 
+
+# Expresión variable (se evalúa como el valor de a,
+# que en este momento es 5)
+b = a  
+
+# Expresión operación (se evalúa como 4)
+c = 2 + 2  
+
+# Expresión operación con variables 
+d = a + b
+```
+
+---
+
+### Expresiones en las asignaciones
+
+- En una **asinación**, la componente a la derecha del signo `=` es una **expresión**
+- El orden en el que se ejecuta es:
+    1. Se evalúa el valor de la expresión
+    2. Si la variable no existe, se crea
+    3. Se copia ese valor en la variable
+
+---
+
+### Expresiones vs Instrucciones
+
+- **Instrucción**: es una **acción** que realiza el programa
+    - **Cambia el estado del programa**
+- **Expresión**: es una **evaluación** que produce un **valor**
+
+```python
+a = 2 + 2
+```
+
+- El código anterior contiene:
+    - $1$ instrucción de asignación
+    - $1$ expresión de suma
+    - $2$ expresiones literales
+
+---
+
+## Modelo de ejecución imperativa {.center}
+
+---
+
+### Composición secuencial de un programa
+
+- El **paradigma imperativo** dicta que un programa es un **estado** y un **conjunto de instrucciones** que lo modifican.
+- El orden en que las instrucciones de un programa serán ejecutadas es:
+    - **Secuencial**: una instrucción después de la otra
+    - **Descendente**: de arriba hacia abajo
+
+```python
+a = 1
+b = 2
+```
+
+- La instrucción `a = 1` se ejecuta antes que `b = 2`
+
+---
+
+#### ¿Que valores tienen `a` y `b` al final de este código?
+
+```python
+a = 1
+b = a
+a = 2
+```
+
+---
+
+## Entrada/Salida {.center}
+
+---
+
+### Entrada salida por consola
+
+- Los programas que desarrollaremos en este curso **interactuarán** con el usuario a través de la **consola**.
+- Nuestros programas podrás:
+    - **Mostar** datos y mensajes al usuario
+    - **Leer** datos que el usuario introduzca
+- Cuando nos refiramos a las operaciones de _entrada/salida_ hablaremos desde la perspectiva del programa:
+    - **Salida**: mostrar (**escribir**) datos al usuario
+    - **Entrada**: recibir (**leer**) datos del usuario
+
+---
+
+### Escribir en consola
+
+- Para que nuestro programa python pueda escribir en la consola:
+    - Dedicaremos una instrucción a invocar a la función `print`
+    - La función `print` **muestra** el valor de una expresión en la consola
+- Su sintaxis es `print(expresión)`
+    - **Expresión**: valor que se desea mostrar en la consola
+    - _Asegúrate de que escribes correctamente **los paréntesis**_
+
+```python
+# Imprimirá el número 2 en la consola
+print(2)
+```
+
+
+---
+
+### Leer de la consola
+
+- Para que nuestro programa python pueda leer de la consola:
+    - Invocaremos a la función `input` como parte de una expresión
+    - La función `input` **devuelve** el valor introducido por el usuario
+- Su sintaxis es `input()`
+
+```python
+# Leerá un valor introducido por el usuario y lo almacenará en a
+a = input()
+```
+
+---
+
+### Leer valores numéricos
+
+- La función `input` **siempre** devuelve un valor de tipo texto
+- Para convertir ese texto en un valor numérico con el que podamos operar, utilizaremos las funciones `int` y `float`
+    - `int`: convierte un texto en un número entero
+    - `float`: convierte un texto en un número real
+- En los próximas temas profundizaremos en el _por qué_ de esto
+
+```python
+a = int(input())
+b = a + 1
+```
+
+---
+
+## Ejercicios {.center}
+
+---
+
+- ¿Qué hace el siguiente código?
+
+```python
+print("Qué tal?")
+print("Hola")
+```
+
+---
+
+- ¿Qué hace el siguiente código?
+
+```python
+print("Introduce tu nota de prácticas")
+practicas = int(input())
+print("Introduce tu nota de examen")
+examen = int(input())
+media = 0.7 * teoria + 0.3 * practicas
+print("Tu nota media es")
+print(media)
+```
+
