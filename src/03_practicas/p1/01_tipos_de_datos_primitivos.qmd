@@ -1,0 +1,35 @@
+---
+title: Practica 1
+subtitle: Tipos Primitivos
+draft: true
+---
+
+## Rectángulo
+
+Implementa un programa que:
+
+- Solicite al usuario las coordenadas de dos esquinas opuestas de un rectángulo.
+    - `x1`, `y1`, `x2`, `y2`
+- Usando esas coordenadas, calcule:
+    - El área del rectángulo
+    - El perímetro del rectángulo
+
+<!-- ![Ejemplo]() -->
+
+```
+Introduzca x1:
+2
+Introduzca y1:
+3
+Introduzca x2:
+5
+Introduzca y2:
+6
+
+El área del rectángulo es:
+9.0
+
+El perímetro del rectángulo es:
+12.0
+```
+
