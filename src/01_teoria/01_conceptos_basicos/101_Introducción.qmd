@@ -1,5 +1,5 @@
 ---
-title: Teoría 000
+title: Teoría 101
 subtitle: Computadores y Lenguajes
 ---
 

@@ -177,7 +177,7 @@ def suma(a, b):
 
 ### Evolución de los lenguajes
 
-![https://www.cs.fsu.edu/~engelen/courses/COP402004/](./img/genealogy2)
+![https://www.cs.fsu.edu/~engelen/courses/COP402004/](./img/genealogy2.png)
 
 ---
 
