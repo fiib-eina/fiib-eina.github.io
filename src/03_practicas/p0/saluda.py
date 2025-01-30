@@ -1,4 +1,4 @@
-""" Sergio Marín Segura - 622612
+""" Sergio Martín Segura - 622612
 El programa pide un nombre al usuario.
 Luego escribe en la pantalla "Hola, NOMBRE".
 """

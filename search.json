@@ -11,7 +11,7 @@
     "href": "src/03_practicas/p0/00_Introductoria.html#instalación-del-entorno-de-trabajo",
     "title": "Práctica 0",
     "section": "Instalación del entorno de trabajo",
-    "text": "Instalación del entorno de trabajo\nPara desarrollar en python necesitamos:\n\nInterprete de Python: Python\nEntorno de desarrollo: Visual Studio Code"
+    "text": "Instalación del entorno de trabajo\nPara desarrollar en python necesitamos:\n\nIntérprete de Python: Python\nEntorno de desarrollo: Visual Studio Code"
   },
   {
     "objectID": "src/03_practicas/p0/00_Introductoria.html#familiarizarse-con-el-entorno-de-trabajo",
@@ -42,6 +42,41 @@
     "text": "Entrega de la práctica\nTodas las prácticas se entregarán a través de Moodle. Esta Práctica 0 no es evaluable, pero sí se deberá entregar para familiarizarse con el proceso.\nTarea: Entrega el código de la práctica.\n\nVerifica que has nombrado correctamente los ficheros. Un fichero mal nombrado no será evaluado.\nVerifica que has añadido un docstring a cada fichero con tu nombre y NIP.\nVerifica que el funcionamiento de los programas es correcto.\nAccede a la entrega en Moodle y lee si hay instrucciones extra.\nSube los ficheros *.py individualmente (sin comprimir y sin crear carpetas adicionales).\n\nNota: No se aceptarán entregas fuera de plazo. En el caso de que se acerque la fecha límite de entrega, se recomienda al menos subir los ejercicios que se hayan terminado. Se podrán resubir tantas veces como se desee antes de la fecha límite de entrega.\n\n\n\n\nFundamentos de Informática"
   },
   {
+    "objectID": "src/01_teoria/101_Introducción.html#que-es-la-informática",
+    "href": "src/01_teoria/101_Introducción.html#que-es-la-informática",
+    "title": "Teoría 000",
+    "section": "¿Que es la informática?",
+    "text": "¿Que es la informática?\n\nProcesamiento de información automática\nInformación: Conjunto de datos numéricos, alfabéticos o alfanuméricos necesarios para plantear y resolver un problema\nTratamiento de la información:\n\nEntrada: Introducción de los datos del problema\nProcesamiento: Transformación de datos\nSalida: Presentación de resultados"
+  },
+  {
+    "objectID": "src/01_teoria/101_Introducción.html#historia-de-la-informática",
+    "href": "src/01_teoria/101_Introducción.html#historia-de-la-informática",
+    "title": "Teoría 000",
+    "section": "Historia de la Informática",
+    "text": "Historia de la Informática"
+  },
+  {
+    "objectID": "src/01_teoria/101_Introducción.html#hardware",
+    "href": "src/01_teoria/101_Introducción.html#hardware",
+    "title": "Teoría 000",
+    "section": "Hardware",
+    "text": "Hardware"
+  },
+  {
+    "objectID": "src/01_teoria/101_Introducción.html#software",
+    "href": "src/01_teoria/101_Introducción.html#software",
+    "title": "Teoría 000",
+    "section": "Software",
+    "text": "Software"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Fundamentos de informática",
+    "section": "",
+    "text": "01_teoria/ Presentación de la Asignatura - Información general \n\n\n01_teoria/ Teoría 000 - Computadores y Lenguajes \n\n\n01_teoria/ Teoría 102 - Lenguajes \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n\nNo hay resultados"
+  },
+  {
     "objectID": "src/01_teoria/000_Presentación.html#profesores",
     "href": "src/01_teoria/000_Presentación.html#profesores",
     "title": "Presentación de la Asignatura",
@@ -70,38 +105,31 @@
     "text": "¿Dudas?\n\n\n\n\nFundamentos de Informática"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Fundamentos de informática",
-    "section": "",
-    "text": "01_teoria/ Presentación de la Asignatura - Información general \n\n\n01_teoria/ Teoría 000 - Computadores y Lenguajes \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n\nNo hay resultados"
+    "objectID": "src/01_teoria/102_Lenguajes.html#algoritmo",
+    "href": "src/01_teoria/102_Lenguajes.html#algoritmo",
+    "title": "Teoría 102",
+    "section": "Algoritmo",
+    "text": "Algoritmo"
   },
   {
-    "objectID": "src/01_teoria/101_Introducción.html#que-es-la-informática",
-    "href": "src/01_teoria/101_Introducción.html#que-es-la-informática",
-    "title": "Teoría 000",
-    "section": "¿Que es la informática?",
-    "text": "¿Que es la informática?\n\nProcesamiento de información automática\nInformación: Conjunto de datos numéricos, alfabéticos o alfanuméricos necesarios para plantear y resolver un problema\nTratamiento de la información:\n\nEntrada: Introducción de los datos del problema\nProcesamiento: Transformación de datos\nSalida: Presentación de resultados"
+    "objectID": "src/01_teoria/102_Lenguajes.html#lenguajes-de-programación",
+    "href": "src/01_teoria/102_Lenguajes.html#lenguajes-de-programación",
+    "title": "Teoría 102",
+    "section": "Lenguajes de programación",
+    "text": "Lenguajes de programación"
   },
   {
-    "objectID": "src/01_teoria/101_Introducción.html#historia-de-la-informática",
-    "href": "src/01_teoria/101_Introducción.html#historia-de-la-informática",
-    "title": "Teoría 000",
-    "section": "Historia de la Informática",
-    "text": "Historia de la Informática"
+    "objectID": "src/01_teoria/102_Lenguajes.html#lenguajes-de-alto-nivel-1",
+    "href": "src/01_teoria/102_Lenguajes.html#lenguajes-de-alto-nivel-1",
+    "title": "Teoría 102",
+    "section": "Lenguajes de alto nivel",
+    "text": "Lenguajes de alto nivel"
   },
   {
-    "objectID": "src/01_teoria/101_Introducción.html#hardware",
-    "href": "src/01_teoria/101_Introducción.html#hardware",
-    "title": "Teoría 000",
-    "section": "Hardware",
-    "text": "Hardware"
-  },
-  {
-    "objectID": "src/01_teoria/101_Introducción.html#software",
-    "href": "src/01_teoria/101_Introducción.html#software",
-    "title": "Teoría 000",
-    "section": "Software",
-    "text": "Software"
+    "objectID": "src/01_teoria/102_Lenguajes.html#entorno-integrado-de-desarrollo",
+    "href": "src/01_teoria/102_Lenguajes.html#entorno-integrado-de-desarrollo",
+    "title": "Teoría 102",
+    "section": "Entorno Integrado de Desarrollo",
+    "text": "Entorno Integrado de Desarrollo"
   }
 ]

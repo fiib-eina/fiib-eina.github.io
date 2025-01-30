@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="es"><head>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-html/tabby.min.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.56">
 
-  <title>Fundamentos de Informática – Práctica 0</title>
+  <title>Fundamentos de Informática – Teoría 102</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -94,12 +94,12 @@
     code span.vs { color: #008000; } /* VerbatimString */
     code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto.css">
-  <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../../../site_libs/revealjs/plugin/reveal-tldraw/index.css" rel="stylesheet">
-  <link href="../../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-tldraw/index.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style>html{ scroll-behavior: smooth; }</style>
   <style type="text/css">
 
@@ -391,336 +391,313 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-color="#223d71" data-background-image="../../_style/logos/unizar-black.svg" data-background-opacity="0.30" data-background-size="auto 600px" class="quarto-title-block center">
-  <h1 class="title">Práctica 0</h1>
-  <p class="subtitle">Introducción</p>
+<section id="title-slide" data-background-color="#223d71" data-background-image="../_style/logos/unizar-black.svg" data-background-opacity="0.30" data-background-size="auto 600px" class="quarto-title-block center">
+  <h1 class="title">Teoría 102</h1>
+  <p class="subtitle">Lenguajes</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="objetivos" class="slide level2">
-<h2>Objetivos</h2>
-<ul>
-<li>Instalar el entorno de trabajo</li>
-<li>Familiarizarse con el entorno de trabajo
-<ul>
-<li>Editor de texto</li>
-<li>Terminal</li>
-</ul></li>
-<li>Aprender a ejecutar (no escribir) código Python</li>
-<li>Intuyendo Python</li>
-<li>Entregar</li>
-</ul>
+<section id="algoritmo" class="slide level2 center">
+<h2>Algoritmo</h2>
 </section>
-<section id="instalación-del-entorno-de-trabajo" class="slide level2">
-<h2>Instalación del entorno de trabajo</h2>
-<p>Para desarrollar en <code>python</code> necesitamos:</p>
+<section class="slide level2">
+
+<h3 id="qué-es-un-algoritmo">¿Qué es un algoritmo?</h3>
 <ul>
-<li>Intérprete de Python: <a href="https://www.python.org/downloads/">Python</a></li>
-<li>Entorno de desarrollo: <a href="https://code.visualstudio.com/download">Visual Studio Code</a></li>
+<li><strong>Descripción detallada de cómo resolver un determinado problema</strong></li>
+<li><strong>Secuencia de acciones para obtener la solución al problema</strong></li>
+<li><strong>Conjunto de instrucciones que se ejecutan en un orden determinado</strong></li>
 </ul>
 </section>
 <section class="slide level2">
 
-<h3 id="instalación-de-python">Instalación de Python</h3>
 <ul>
-<li>Descarga el instalador de Python desde la <a href="https://www.python.org/downloads/">página oficial</a>.</li>
-<li>Configura la instalación de Python en tu sistema.</li>
-<li>Verifica la instalación.</li>
-</ul>
-</section>
-<section class="slide level2">
-
-
-<img data-src="img/01-descarga-python.png" class="r-stretch quarto-figure-center"><p class="caption">descarga-python</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/02-instalacion-python-conf-lab.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-python-conf-lab</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/03-instalacion-python-progreso.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-python-progreso</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/04-instalacion-python-fin.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-python-fin</p></section>
-<section class="slide level2">
-
-<h3 id="instalación-de-vscode">Instalación de VSCode</h3>
-<ul>
-<li>Descarga el instalador de Visual Studio Code desde la <a href="https://code.visualstudio.com/download">página oficial</a>.</li>
-<li>Configura la instalación de Visual Studio Code y acepta los términos de licencia.
-<ul>
-<li>Asegúrate de seleccionar las opciones de integración con el sistema.</li>
-</ul></li>
-<li>Configura el tema y las extensiones de Visual Studio Code.</li>
-</ul>
-</section>
-<section class="slide level2">
-
-
-<img data-src="img/05-descarga-vsc.png" class="r-stretch quarto-figure-center"><p class="caption">descarga-vsc</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/06-instalacion-vsc-licencia.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-licencia</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/07-instalacion-vsc-dir.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-dir</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/08-instalacion-vsc-menu.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-menu</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/09-instalacion-vsc-extra.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-extra</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/10-instalacion-vsc-ini.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-ini</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/11-instalacion-vsc-progreso.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-progreso</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/12-instalacion-vsc-fin.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-fin</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/13-conf-vsc-tema.png" class="r-stretch quarto-figure-center"><p class="caption">conf-vsc-tema</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/14-conf-vsc-extensiones.png" class="r-stretch quarto-figure-center"><p class="caption">conf-vsc-extensiones</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/15-conf-vsc-ext-python.png" class="r-stretch quarto-figure-center"><p class="caption">conf-vsc-ext-python</p></section>
-<section id="familiarizarse-con-el-entorno-de-trabajo" class="slide level2">
-<h2>Familiarizarse con el entorno de trabajo</h2>
-<p>Durante el proceso de desarrollo, siempre tendremos en cuenta:</p>
-<ul>
-<li><strong>Sistema ficheros:</strong> Localización de los programas</li>
-<li><strong>Código fuente:</strong> Contenido de los programas</li>
-<li><strong>Terminal:</strong> Ejecución de programas python</li>
-</ul>
-<p>Estos tres elementos pueden ser controlados desde <code>Visual Studio Code</code>.</p>
-</section>
-<section class="slide level2">
-
-<h3 id="sistema-de-ficheros">Sistema de ficheros</h3>
-<p>Se recomienda seguir la siguiente estructura para tener todos los programas organizados. Agruparemos el código de cada práctica en su propio directorio (carpeta).</p>
-<pre><code>./
-├── p0
-│&nbsp;&nbsp; ├── hello.py
-│&nbsp;&nbsp; ├── ej1.py
-│&nbsp;&nbsp; └── ej2.py
-├── p1
-├── ...
-└── p6</code></pre>
-</section>
-<section class="slide level2">
-
-<p><strong>Tarea:</strong> Crea la estructura de directorios en tu sistema de ficheros utilizando el <code>Explorador de Windows</code>.</p>
+<li><strong>¿Cómo cambiar las pilas del mando de la TV?</strong>
 <ol type="1">
-<li><code>Clic derecho</code> &gt; <code>Nueva</code> &gt; <code>Carpeta</code> &gt; <code>p0</code></li>
-<li>Accede a la carpeta <code>p0</code></li>
-<li><code>Clic derecho</code> &gt; <code>Nuevo</code> &gt; <code>Documento de texto</code> &gt; <code>saludo.py</code>
-<ol type="1">
-<li>Asegúrate de que la extensión del fichero es <code>.py</code></li>
-</ol></li>
-</ol>
-<p><em>Nota:</em> Algunas versiones de Windows ocultan por defecto las extensiones de los ficheros. Puedes mostrarlas en <code>Vista</code> &gt; <code>Mostrar u ocultar</code> &gt; <code>Extensiones de nombre de archivo</code>.</p>
-</section>
-<section class="slide level2">
-
-<h3 id="visual-studio-code">Visual Studio Code</h3>
-<p><strong>Tarea:</strong> Abrid <code>Visual Studio Code</code>:</p>
-<ul>
-<li>Forma 1:
-<ol type="1">
-<li>En el explorador &gt; Acede a la carpeta <code>p0</code></li>
-<li><code>Clic derecho</code> &gt; <code>Abrir directorio en VSCode</code></li>
-<li>Confirma que confías en el directorio</li>
-</ol></li>
-<li>Forma 2:
-<ol type="1">
-<li>Abre <code>Visual Studio Code</code></li>
-<li><code>Abrir carpeta...</code> &gt; Selecciona la carpeta <code>p0</code></li>
-<li>Confirma que confías en el directorio</li>
+<li>Tomar el mando de la TV</li>
+<li>Localizar la tapa de las pilas</li>
+<li>Quitar el tornillo (si tiene)</li>
+<li>Abrir la tapa</li>
+<li>Quitar las pilas viejas</li>
+<li>Colocar las pilas nuevas</li>
+<li>Colocar la tapa</li>
+<li>Apretar el tornillo (si tiene)</li>
 </ol></li>
 </ul>
 </section>
 <section class="slide level2">
 
-
-<img data-src="img/16-trabajo-vsc-abrir-carpeta.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-abrir-carpeta</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/17-trabajo-vsc-sel-dir.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-sel-dir</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/18-trabajo-vsc-trust.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-trust</p></section>
-<section class="slide level2">
-
-<h3 id="vscode-árbol-de-ficheros">VSCode: Árbol de ficheros</h3>
-<p>El árbol de ficheros muestra la estructura de directorios y ficheros del proyecto.</p>
-<p><strong>Tarea:</strong> Crea un nuevo fichero <code>hello.py</code> en la carpeta <code>p0</code>.</p>
-<ol type="1">
-<li><code>Nuevo fichero</code> (Icono del fichero con el signo +)</li>
-<li>Escribe el nombre</li>
-</ol>
-</section>
-<section class="slide level2">
-
-
-<img data-src="img/19-trabajo-vsc-entorno.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-entorno</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/20-trabajo-vsc-crear-fichero.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-crear-fichero</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/21-trabajo-vsc-nombrar-fichero.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-nombrar-fichero</p></section>
-<section class="slide level2">
-
-<h3 id="vscode-editor-de-texto">VSCode: Editor de texto</h3>
-<p>El editor de texto es donde escribiremos el código fuente de los programas.</p>
-<p><strong>Tarea:</strong> Escribe tu primer programa Python.</p>
-<ol type="1">
-<li>Abre el fichero <code>hello.py</code> desde el árbol de ficheros</li>
-<li>Escribe el siguiente código:</li>
-<li>Guarda los cambios (Ctrl+S)</li>
-</ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="bu">print</span>(<span class="st">"Hello, World!"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2">
-
-
-<img data-src="img/22-trabajo-vsc-escribir-codigo.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-escribir-codigo</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/23-trabajo-vsc-guardar.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-guardar</p></section>
-<section class="slide level2">
-
-<h3 id="vscode-terminal">VSCode: Terminal</h3>
-<p>La terminal es donde ejecutaremos los programas.</p>
-<p><strong>Tarea:</strong> Ejecuta el programa <code>hello.py</code> desde la terminal de VSCode.</p>
-<ol type="1">
-<li>Abre la terminal de VSCode (<code>Terminal</code> &gt; <code>Nueva terminal</code>)</li>
-<li>Ejecuta el programa <code>hello.py</code> con el siguiente comando:</li>
-</ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="ex">py</span> hello.py</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2">
-
-<p>Otra forma más rápida de ejecutar el programa es pulsando el botón de <code>Run</code> que aparece en la parte superior derecha del editor.</p>
-
-<img data-src="img/24-trabajo-vsc-ejecutar.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-ejecutar</p></section>
-<section id="programa-interactivo" class="slide level2">
-<h2>Programa interactivo</h2>
+<h3 id="anatomía-de-un-algoritmo">Anatomía de un algoritmo</h3>
 <ul>
-<li>Más adelante en el curso aprenderás a hacer programas que requieran de la <strong>interacción</strong> del usuario.</li>
-<li>Dicha interacción se realiza también en la propia <strong>terminal</strong>.</li>
-<li>Para familiarizarte ahora con este comportamiento, vamos a escribir y ejecutar un programa interactivo.</li>
+<li>Declaración precisa de condiciones de partida: <strong>entrada</strong></li>
+<li>Especificación del estado final: <strong>salida</strong></li>
+<li><strong>Descripción detallada</strong> de los pasos individuales
+<ul>
+<li>Operaciones <strong>simples</strong> que ayudan en la <strong>progresión</strong> hacia el estado final</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="características-de-un-algoritmo">Características de un algoritmo</h3>
+<ul>
+<li><strong>Precisión</strong> : Expresarse de forma no ambigua</li>
+<li><strong>Determinismo</strong> : Mismo estado final para las mismas entradas</li>
+<li><strong>Finitud</strong> : Tener una descripción finita</li>
 </ul>
 </section>
 <section class="slide level2">
 
-<p><strong>Tarea:</strong> Crea y ejecuta un programa interactivo.</p>
-<ol type="1">
-<li>Utiliza el árbol de ficheros para crear el fichero <code>saluda.py</code></li>
-<li>Escribe el <a href="saluda.py">código</a> en <code>saluda.py</code>.</li>
-<li>Ejecuta el programa <code>saluda.py</code> desde la terminal de VSCode o pulsando el botón de <code>Run</code>.</li>
-</ol>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="co">""" Sergio Martín Segura - 622612</span></span>
-<span id="cb4-2"><a></a><span class="co">El programa pide un nombre al usuario.</span></span>
-<span id="cb4-3"><a></a><span class="co">Luego escribe en la pantalla "Hola, NOMBRE".</span></span>
-<span id="cb4-4"><a></a><span class="co">"""</span></span>
-<span id="cb4-5"><a></a></span>
-<span id="cb4-6"><a></a><span class="co"># Pide al usuario que escriba su nombre, lo lee de teclado y lo guarda en «nombre»</span></span>
-<span id="cb4-7"><a></a>nombre <span class="op">=</span> <span class="bu">input</span>(<span class="st">"¿Cómo te llamas? "</span>)</span>
-<span id="cb4-8"><a></a></span>
-<span id="cb4-9"><a></a><span class="co"># Saluda al usuario escribiendo un mensaje personalizado en la pantalla </span></span>
-<span id="cb4-10"><a></a><span class="bu">print</span>(<span class="st">"Hola,"</span>, nombre)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<h3 id="limitaciones-computacionales">Limitaciones computacionales</h3>
+<ul>
+<li>Problemas ambiguos</li>
+<li>Problemas con demasiados pasos para acabar</li>
+<li>Problemas matemáticamente imposibles</li>
+</ul>
 </section>
 <section class="slide level2">
 
-<h3 id="comentarios-de-código-y-docstring">Comentarios de código y docstring</h3>
-<p>Observa cómo en la primera línea del programa <code>saluda.py</code> se describe el funcionamiento del programa.</p>
-<p>En un fichero python podemos escribir tres “tipos de texto” distintos:</p>
-<ul>
-<li><strong>Código:</strong> Líneas de código que se ejecutan
-<ul>
-<li>Sigue la sintaxis de Python</li>
-</ul></li>
-<li><strong>Docstring:</strong> Texto que sirve para documentar el código
-<ul>
-<li>Se escribe entre tres comillas-dobles <code>""" ... """</code></li>
-</ul></li>
-<li><strong>Comentarios:</strong> Cualquier otro texto que no se ejecuta ni se interpreta
-<ul>
-<li>Se escribe tras el símbolo <code>#</code></li>
-</ul></li>
-</ul>
+<h3 class="center" id="programa-algoritmo-estructuras-de-datos">Programa = algoritmo + estructuras de datos</h3>
 </section>
-<section id="intuyendo-python" class="slide level2">
-<h2>Intuyendo Python</h2>
-<p>A continuación evaluaremos nuestra capacidad de intuir y entender el funcionamiento de código <code>python</code>.</p>
-<p><strong>Tarea:</strong> Documenta los siguientes programas en un <em>docstring</em>.</p>
-<ol type="1">
-<li>Descarga o copia los ficheros en la carpeta <code>p0</code>.</li>
-<li>Ábrelos con el editor de texto y lee su contenido.</li>
-<li>Ejecuta los programas desde la terminal de VSCode.</li>
-<li>Añade un <em>docstring</em> al principio de cada fichero incluyendo tu nombre y explicando qué hace el programa.</li>
-</ol>
-<p><em>Nota:</em> Puedes hacer <code>Clic derecho</code> &gt; <code>Guardar enlace como...</code> en los nombres de cada fichero para descargarlos o hacer clic en el <code>icono del portapapeles</code> para copiar todo el contenido.</p>
+<section id="lenguajes-de-programación" class="slide level2 center">
+<h2>Lenguajes de programación</h2>
 </section>
 <section class="slide level2">
 
-<p><strong><a href="ej1.py">ej1.py</a></strong></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>a <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Introduce un número: "</span>))</span>
-<span id="cb5-2"><a></a>b <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Introduce otro número: "</span>))</span>
-<span id="cb5-3"><a></a></span>
-<span id="cb5-4"><a></a><span class="bu">print</span>(a <span class="op">+</span> b)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong><a href="ej2.py">ej2.py</a></strong></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>pi <span class="op">=</span> <span class="fl">3.14159265358979323846</span></span>
-<span id="cb6-2"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Escribe un número real: "</span>))</span>
-<span id="cb6-3"><a></a></span>
-<span id="cb6-4"><a></a><span class="bu">print</span>(pi <span class="op">*</span> (x <span class="op">**</span> <span class="dv">2</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong><a href="ej3.py">ej3.py</a></strong></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Introduce un número: "</span>))</span>
-<span id="cb7-2"><a></a></span>
-<span id="cb7-3"><a></a><span class="cf">if</span> x <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
-<span id="cb7-4"><a></a>    <span class="bu">print</span>(x)</span>
-<span id="cb7-5"><a></a><span class="cf">else</span>:</span>
-<span id="cb7-6"><a></a>    <span class="bu">print</span>(<span class="op">-</span>x)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="entrega-de-la-práctica" class="slide level2">
-<h2>Entrega de la práctica</h2>
-<p>Todas las prácticas se entregarán a través de <strong>Moodle</strong>. Esta <code>Práctica 0</code> no es evaluable, pero sí se deberá entregar para familiarizarse con el proceso.</p>
-<p><strong>Tarea:</strong> Entrega el código de la práctica.</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Verifica que has nombrado correctamente los ficheros. Un fichero mal nombrado no será evaluado.</label></li>
-<li><label><input type="checkbox">Verifica que has añadido un <em>docstring</em> a cada fichero con tu nombre y NIP.</label></li>
-<li><label><input type="checkbox">Verifica que el funcionamiento de los programas es correcto.</label></li>
-<li><label><input type="checkbox">Accede a la entrega en Moodle y lee si hay instrucciones extra.</label></li>
-<li><label><input type="checkbox">Sube los ficheros <code>*.py</code> individualmente (sin comprimir y sin crear carpetas adicionales).</label></li>
+<ul>
+<li>Un <strong>lenguaje de programación</strong> es
+<ul>
+<li>un <strong>lenguaje formal</strong> que</li>
+<li>especifica una serie de <strong>instrucciones</strong> que,</li>
+<li>al ser <strong>ejecutadas</strong> por un ordenador,</li>
+<li>permiten realizar <strong>una tarea concreta</strong></li>
+</ul></li>
 </ul>
-<p><em>Nota:</em> No se aceptarán entregas fuera de plazo. En el caso de que se acerque la fecha límite de entrega, se recomienda al menos subir los ejercicios que se hayan terminado. <strong>Se podrán resubir</strong> tantas veces como se desee antes de la fecha límite de entrega.</p>
+<p><em>El idioma en el que los humanos se comunican con las máquinas</em></p>
+</section>
+<section class="slide level2">
+
+<h3 id="estilos-de-programación">Estilos de programación</h3>
+<ul>
+<li>Diferentes estilos: <strong>imperativa</strong>, funcional, declarativa, etc.
+<ul>
+<li>En esta asignatura, nos centraremos en la <strong>programación imperativa</strong></li>
+</ul></li>
+<li><strong>Programación imperativa</strong>: <strong>Estado</strong> + <strong>Instrucciones</strong>
+<ul>
+<li><strong><em>Estado</em></strong>: conjunto de variables que definen de manera unívoca la situación de un sistema</li>
+<li><strong><em>Instrucciones</em></strong>: operaciones que modifican el estado del programa</li>
+<li>Cada <strong>instrucción</strong> ayuda a la progresión hacia el <strong>estado final</strong></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="niveles-de-lenguajes-de-programación">Niveles de lenguajes de programación</h3>
+<ul>
+<li>Un computador sólo <strong>entiende</strong> instrucciones <em>sencillas</em>:
+<ul>
+<li><strong>ISA</strong> (Instruction Set Architecture): Es el conjunto de instrucciones que un procesador puede ejecutar</li>
+<li>Cada arquitectura de procesador tiene su propia ISA</li>
+</ul></li>
+<li>Estas instrucciones básicas bastan para construir programas complejos</li>
+<li>Según su nivel de abstracción:
+<ul>
+<li>Lenguajes de <strong>bajo nivel</strong> se encuentran cerca del leguaje de la máquina</li>
+<li>Lenguajes más sofisticados (de <strong>alto nivel</strong>) buscan acercar la programación al lenguaje humano</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="código-máquina">Código máquina</h4>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Lenguaje que entiende el ordenador: <strong>código máquina</strong></li>
+<li>Anteriormente, los programas se escribían directamente en codificación binaria (ejemplo: perforando tarjetas)
+<ul>
+<li><code>Agujero = 1, sin agujero = 0</code></li>
+<li><strong>Errores</strong> frecuentes, muy difíciles de encontrar y corregir</li>
+<li>Se programaba directamente en base al hardware a usar</li>
+<li>Un programa escrito para un hardware <strong>no es compatible con otro difrente</strong>
+<ul>
+<li>Poco versátil</li>
+</ul></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./img/tarjetaPerforada.jpg"></p>
+<figcaption>Tarjeta Perforada</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h4 id="lenguaje-ensamblador">Lenguaje ensamblador</h4>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Permite escribir instrucciones del procesador y representar los datos con identificadores más entendibles por el programador</li>
+<li>Sin embargo, todavía es <strong>difícil de entender</strong> (bajo nivel)</li>
+<li>Todavía está condicionado por el hardware a usar:
+<ul>
+<li><code>Diferentes máquinas = diferentes programas</code></li>
+<li>Poco versátil</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./img/ensamblador.png"></p>
+<figcaption>Código ensamblador</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h4 id="lenguajes-de-alto-nivel">Lenguajes de alto nivel</h4>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Soportan abstracciones que entiende el programador,<br><em>¡pero no la máquina!</em></li>
+<li>Más fáciles de utilizar para programar</li>
+<li>No dependen de la máquina utilizada</li>
+<li>Menos eficientes que los de bajo nivel</li>
+<li><strong>Necesitan compiladores/traductores</strong> al lenguaje máquina</li>
+<li>Facilitan detección de errores</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="kw">def</span> suma(a, b):</span>
+<span id="cb1-2"><a></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h4 id="primer-lenguaje-de-alto-nivel-fortran-1957">Primer lenguaje de alto nivel: FORTRAN, 1957</h4>
+<ul>
+<li>FORTRAN (FORmula TRANslation): John Backus, 1957
+<ul>
+<li><strong>Código fuente:</strong> texto escrito en lenguaje de alto nivel (texto plano)</li>
+<li><strong>Compilador:</strong> traduce el código fuente a lenguaje máquina</li>
+</ul></li>
+<li>Aún se utiliza en:
+<ul>
+<li>Ciencia e ingeniería</li>
+<li>Finanza</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="evolución-de-los-lenguajes">Evolución de los lenguajes</h3>
+
+<img data-src="./img/genealogy2.png" class="r-stretch quarto-figure-center"><p class="caption">https://www.cs.fsu.edu/~engelen/courses/COP402004/</p></section>
+<section id="lenguajes-de-alto-nivel-1" class="slide level2 center">
+<h2>Lenguajes de alto nivel</h2>
+</section>
+<section class="slide level2">
+
+<h3 id="tipos-de-lengujes-de-alto-nivel">Tipos de lengujes de alto nivel</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Lenguajes compilados</strong></p>
+<ul>
+<li>La traducción se realiza <strong>una sola vez</strong> durante la <strong>compilación</strong></li>
+<li>Durante la ejecución, <strong>no se requiere el código fuente</strong></li>
+<li>Cada plataforma requiere su propia compilación</li>
+<li><strong>Usos</strong>: sistemas operativos, videojuegos, edición de vídeo…</li>
+<li><em>Ejemplos</em>: Pascal, Ada, C/C++, Fortran…</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Lenguajes interpretados</strong></p>
+<ul>
+<li>La traducción se realiza <strong>cada vez que se ejecuta el programa</strong></li>
+<li>Un <strong>intérprete</strong> interpreta y ejecuta las instrucciones: <strong>más lento</strong></li>
+<li>El mismo programa sirve en múltiples plataformas: <strong>portabilidad</strong></li>
+<li><strong>Usos</strong>: aplicaciones web, sistemas multiplataforma, telfs. móviles…</li>
+<li><em>Ejemplos</em>: <strong>Python</strong>, Perl, PHP, Scratch…</li>
+</ul>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h3 id="compilador">Compilador</h3>
+<ul>
+<li><strong>Código fuente</strong> <span class="math inline">\(\rightarrow\)</span> <strong>Aplicación ejecutable</strong></li>
+<li>Requiere tres elementos: un compilador, un ensamblador y un enlazador
+<ul>
+<li><strong>Compilador</strong>: Código escrito <span class="math inline">\(\rightarrow\)</span> Código ensamblador</li>
+<li><strong>Ensamblador</strong>: Código ensamblador <span class="math inline">\(\rightarrow\)</span> Código máquina (ficheros objeto)</li>
+<li><strong>Enlazador</strong>: Código máquina (ficheros objeto) <span class="math inline">\(\rightarrow\)</span> Código maquina ejecutable</li>
+</ul></li>
+<li>El compilador, no sólo traduce el código, sino que también verifica:
+<ul>
+<li>Revisión léxica (<em>¿usa las palabras reservadas correctamente?</em>)</li>
+<li>Revisión sintáctica (<em>¿la frase es gramaticalmente correcta?</em>)</li>
+<li>Revisión semántica (<em>¿tiene sentido la frase?</em>)</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="interprete">Interprete</h3>
+<ul>
+<li><strong>Código fuente</strong> <span class="math inline">\(\rightarrow\)</span> <strong>Ejecución</strong></li>
+<li>Sólo requiere un elemento:
+<ul>
+<li><strong>Interprete</strong>: lee el código fuente y lo ejecuta directamente</li>
+</ul></li>
+<li><strong>Ventajas</strong>:
+<ul>
+<li><strong>Portabilidad</strong>: no es necesario compilar para cada plataforma</li>
+<li><strong>Facilidad de depuración</strong>: errores más fáciles de encontrar</li>
+<li><strong>Flexibilidad</strong>: permite ejecutar código de forma interactiva</li>
+</ul></li>
+</ul>
+</section>
+<section id="entorno-integrado-de-desarrollo" class="slide level2 center">
+<h2>Entorno Integrado de Desarrollo</h2>
+</section>
+<section class="slide level2">
+
+<h3 id="integrated-development-environment-ide"><em>Integrated Development Environment</em> (IDE)</h3>
+<p>Aplicaciones integradas compuestas por:</p>
+<ul>
+<li>Un <strong>editor</strong> avanzado de código fuente
+<ul>
+<li>Resalta las palabras reservadas</li>
+<li>Gestiona las sangrías del texto</li>
+</ul></li>
+<li>Un <strong>intérprete</strong> o <strong>compilador</strong></li>
+<li>Una <strong>consola</strong> o <strong>terminal</strong> para ejecutar comandos</li>
+<li>[Opcional] Un <strong>depurador</strong> integrado (no lo veremos en esta asignatura)</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="proceso-de-trabajo">Proceso de trabajo</h3>
+<ol type="1">
+<li><strong>Diseño de una solución</strong> al problema</li>
+<li><strong>Codificación</strong> de la solución</li>
+<li><strong>Ejecución</strong> del programa</li>
+<li><strong>Verificación</strong> del resultado</li>
+<li><strong>Mientras hay errores</strong></li>
+<li><strong>Corrección</strong> de errores</li>
+<li>Volver al paso 3</li>
+</ol>
+</section>
+<section class="slide level2">
+
 
 <div class="quarto-auto-generated-content">
-<p><img src="../../_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
+<p><img src="../_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>Fundamentos de Informática</p>
 </div>
@@ -730,21 +707,21 @@
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="../../../site_libs/revealjs/dist/reveal.js"></script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/reveal-tldraw/index.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/reveal-tldraw/bind-func.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-tldraw/index.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-tldraw/bind-func.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="../../../site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -1134,5 +1111,5 @@
     </script>
     
 
-<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
