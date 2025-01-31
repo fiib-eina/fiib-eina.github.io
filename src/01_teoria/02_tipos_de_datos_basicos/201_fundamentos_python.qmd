@@ -1,7 +1,6 @@
 ---
 title: Teoría 201
 subtitle: Python
-draft: true
 ---
 
 ## Fundamentos de Python {.center}
