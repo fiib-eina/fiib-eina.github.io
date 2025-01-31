@@ -42,30 +42,72 @@
     "text": "Entrega de la práctica\nTodas las prácticas se entregarán a través de Moodle. Esta Práctica 0 no es evaluable, pero sí se deberá entregar para familiarizarse con el proceso.\nTarea: Entrega el código de la práctica.\n\nVerifica que has nombrado correctamente los ficheros. Un fichero mal nombrado no será evaluado.\nVerifica que has añadido un docstring a cada fichero con tu nombre y NIP.\nVerifica que el funcionamiento de los programas es correcto.\nAccede a la entrega en Moodle y lee si hay instrucciones extra.\nSube los ficheros *.py individualmente (sin comprimir y sin crear carpetas adicionales).\n\nNota: No se aceptarán entregas fuera de plazo. En el caso de que se acerque la fecha límite de entrega, se recomienda al menos subir los ejercicios que se hayan terminado. Se podrán resubir tantas veces como se desee antes de la fecha límite de entrega.\n\n\n\n\nFundamentos de Informática"
   },
   {
-    "objectID": "src/01_teoria/101_Introducción.html#que-es-la-informática",
-    "href": "src/01_teoria/101_Introducción.html#que-es-la-informática",
-    "title": "Teoría 000",
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_fundamentos_python.html#fundamentos-de-python",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_fundamentos_python.html#fundamentos-de-python",
+    "title": "Teoría 201",
+    "section": "Fundamentos de Python",
+    "text": "Fundamentos de Python"
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_fundamentos_python.html#variables",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_fundamentos_python.html#variables",
+    "title": "Teoría 201",
+    "section": "Variables",
+    "text": "Variables"
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_fundamentos_python.html#asignación",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_fundamentos_python.html#asignación",
+    "title": "Teoría 201",
+    "section": "Asignación",
+    "text": "Asignación"
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_fundamentos_python.html#modelo-de-ejecución-imperativa",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_fundamentos_python.html#modelo-de-ejecución-imperativa",
+    "title": "Teoría 201",
+    "section": "Modelo de ejecución imperativa",
+    "text": "Modelo de ejecución imperativa"
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_fundamentos_python.html#entradasalida",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_fundamentos_python.html#entradasalida",
+    "title": "Teoría 201",
+    "section": "Entrada/Salida",
+    "text": "Entrada/Salida"
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_fundamentos_python.html#ejercicios",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_fundamentos_python.html#ejercicios",
+    "title": "Teoría 201",
+    "section": "Ejercicios",
+    "text": "Ejercicios"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#que-es-la-informática",
+    "href": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#que-es-la-informática",
+    "title": "Teoría 101",
     "section": "¿Que es la informática?",
     "text": "¿Que es la informática?\n\nProcesamiento de información automática\nInformación: Conjunto de datos numéricos, alfabéticos o alfanuméricos necesarios para plantear y resolver un problema\nTratamiento de la información:\n\nEntrada: Introducción de los datos del problema\nProcesamiento: Transformación de datos\nSalida: Presentación de resultados"
   },
   {
-    "objectID": "src/01_teoria/101_Introducción.html#historia-de-la-informática",
-    "href": "src/01_teoria/101_Introducción.html#historia-de-la-informática",
-    "title": "Teoría 000",
+    "objectID": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#historia-de-la-informática",
+    "href": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#historia-de-la-informática",
+    "title": "Teoría 101",
     "section": "Historia de la Informática",
     "text": "Historia de la Informática"
   },
   {
-    "objectID": "src/01_teoria/101_Introducción.html#hardware",
-    "href": "src/01_teoria/101_Introducción.html#hardware",
-    "title": "Teoría 000",
+    "objectID": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#hardware",
+    "href": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#hardware",
+    "title": "Teoría 101",
     "section": "Hardware",
     "text": "Hardware"
   },
   {
-    "objectID": "src/01_teoria/101_Introducción.html#software",
-    "href": "src/01_teoria/101_Introducción.html#software",
-    "title": "Teoría 000",
+    "objectID": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#software",
+    "href": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#software",
+    "title": "Teoría 101",
     "section": "Software",
     "text": "Software"
   },
@@ -74,60 +116,60 @@
     "href": "index.html",
     "title": "Fundamentos de informática",
     "section": "",
-    "text": "01_teoria/ Presentación de la Asignatura - Información general \n\n\n01_teoria/ Teoría 000 - Computadores y Lenguajes \n\n\n01_teoria/ Teoría 102 - Lenguajes \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n\nNo hay resultados"
+    "text": "01_teoria/00_presentacion/ Presentación de la Asignatura - Información general \n\n\n01_teoria/01_conceptos_basicos/ Teoría 101 - Computadores y Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 102 - Lenguajes \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 201 - Python \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n\nNo hay resultados"
   },
   {
-    "objectID": "src/01_teoria/000_Presentación.html#profesores",
-    "href": "src/01_teoria/000_Presentación.html#profesores",
+    "objectID": "src/01_teoria/00_presentacion/000_Presentación.html#profesores",
+    "href": "src/01_teoria/00_presentacion/000_Presentación.html#profesores",
     "title": "Presentación de la Asignatura",
     "section": "Profesores",
     "text": "Profesores\n\nSergio Martín Segura (segura@unizar.es)\n\nTeoría, problemas y prácticas\nDespacho: L2.09, Ada Byron\n\nMiguel Ángel Latre Abadía (latre@unizar.es)\n\nPrácticas\nDespacho: D2.22, Ada Byron\n\n\nTutorías: Consultar enlace en Moodle"
   },
   {
-    "objectID": "src/01_teoria/000_Presentación.html#organización",
-    "href": "src/01_teoria/000_Presentación.html#organización",
+    "objectID": "src/01_teoria/00_presentacion/000_Presentación.html#organización",
+    "href": "src/01_teoria/00_presentacion/000_Presentación.html#organización",
     "title": "Presentación de la Asignatura",
     "section": "Organización",
     "text": "Organización\n\nClases teóricas: 2 horas semanales\nClases de problemas: 1 hora semanal\nPrácticas de laboratorio: 2 horas cada dos semanas"
   },
   {
-    "objectID": "src/01_teoria/000_Presentación.html#evaluación-final",
-    "href": "src/01_teoria/000_Presentación.html#evaluación-final",
+    "objectID": "src/01_teoria/00_presentacion/000_Presentación.html#evaluación-final",
+    "href": "src/01_teoria/00_presentacion/000_Presentación.html#evaluación-final",
     "title": "Presentación de la Asignatura",
     "section": "Evaluación final",
     "text": "Evaluación final\n\nLa nota final, tal cual indica la guía docente, se calcula:\n\n\\(70\\%\\) Examen escrito (mínimo \\(5\\))\n\\(30\\%\\) Nota de prácticas (dos opciones):\n\nEntregas de prácticas\nExamen práctico final (anula la nota de entregas)\n\n\nSe deberá obtener una nota mínima de \\(5\\) ponderada para aprobar la asignatura\nSegunda convocatoria\n\nExamen escrito + Examen práctico final\nMismas ponderaciones"
   },
   {
-    "objectID": "src/01_teoria/000_Presentación.html#dudas",
-    "href": "src/01_teoria/000_Presentación.html#dudas",
+    "objectID": "src/01_teoria/00_presentacion/000_Presentación.html#dudas",
+    "href": "src/01_teoria/00_presentacion/000_Presentación.html#dudas",
     "title": "Presentación de la Asignatura",
     "section": "¿Dudas?",
     "text": "¿Dudas?\n\n\n\n\nFundamentos de Informática"
   },
   {
-    "objectID": "src/01_teoria/102_Lenguajes.html#algoritmo",
-    "href": "src/01_teoria/102_Lenguajes.html#algoritmo",
+    "objectID": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#algoritmo",
+    "href": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#algoritmo",
     "title": "Teoría 102",
     "section": "Algoritmo",
     "text": "Algoritmo"
   },
   {
-    "objectID": "src/01_teoria/102_Lenguajes.html#lenguajes-de-programación",
-    "href": "src/01_teoria/102_Lenguajes.html#lenguajes-de-programación",
+    "objectID": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#lenguajes-de-programación",
+    "href": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#lenguajes-de-programación",
     "title": "Teoría 102",
     "section": "Lenguajes de programación",
     "text": "Lenguajes de programación"
   },
   {
-    "objectID": "src/01_teoria/102_Lenguajes.html#lenguajes-de-alto-nivel-1",
-    "href": "src/01_teoria/102_Lenguajes.html#lenguajes-de-alto-nivel-1",
+    "objectID": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#lenguajes-de-alto-nivel-1",
+    "href": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#lenguajes-de-alto-nivel-1",
     "title": "Teoría 102",
     "section": "Lenguajes de alto nivel",
     "text": "Lenguajes de alto nivel"
   },
   {
-    "objectID": "src/01_teoria/102_Lenguajes.html#entorno-integrado-de-desarrollo",
-    "href": "src/01_teoria/102_Lenguajes.html#entorno-integrado-de-desarrollo",
+    "objectID": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#entorno-integrado-de-desarrollo",
+    "href": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#entorno-integrado-de-desarrollo",
     "title": "Teoría 102",
     "section": "Entorno Integrado de Desarrollo",
     "text": "Entorno Integrado de Desarrollo"

@@ -2,9 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
-      "/src/01_teoria/000_Presentación.html",
-      "/src/01_teoria/101_Introducción.html",
-      "/src/01_teoria/102_Lenguajes.html",
+      "/src/01_teoria/00_presentacion/000_Presentación.html",
+      "/src/01_teoria/01_conceptos_basicos/101_Introducción.html",
+      "/src/01_teoria/01_conceptos_basicos/102_Lenguajes.html",
+      "/src/01_teoria/02_tipos_de_datos_basicos/201_fundamentos_python.html",
       "/src/03_practicas/p0/00_Introductoria.html"
     ]
   }
