@@ -5,6 +5,11 @@ draft: true
 ---
 
 ## Conversión de centímetros a pulgadas
+
+### Pulgadas
+
+**Fichero:** `a_pulgadas.py`
+
 Desarrolla un programa en Python que solicite al usuario un número real, que representará una longitud medida en centímetros, y escriba en la pantalla la medida equivalente en pulgadas.
 
 <!-- ![Ejemplo]() -->
@@ -17,6 +22,7 @@ En pulgadas son:
 ```
 
 Otro ejemplo de ejecución:
+
 ```
 Introduce un valor en centímetros:
 25.234
@@ -25,6 +31,11 @@ En pulgadas son:
 ```
 
 Una pulgada anglosajona actual equivale a 25,4 mm.
+
+### Cambio de divisas
+
+### Fahrenheit
+
 
 ## Rectángulo
 
@@ -36,9 +47,11 @@ Implementa un programa que:
     - El área del rectángulo
     - El perímetro del rectángulo
 
-<!-- ![Ejemplo]() -->
+<!-- ![Rectángulo de ejemplo]() -->
 
 ---
+
+<!-- TODO: Forzar escenario que requiera abs() -->
 
 ```
 Introduzca x1:
@@ -56,4 +69,13 @@ El área del rectángulo es:
 El perímetro del rectángulo es:
 12.0
 ```
+
+## Habitación de hotel
+
+Escribe un programa en Python, llamado `habitacion.py`, que pida al usuario el número de habitación
+
+## Condiciones booleanas
+
+Escribe un programa en Python, llamado `entrePares.py`, que pida al usuario tres números enteros y diga si se cumple que los tres números son pares, positivos y además el 2º número está comprendido estrictamente entre el 1º y el 3º.
+
 
