@@ -1,6 +1,7 @@
 ---
 title: Teoría 101
 subtitle: Computadores y Lenguajes
+format: revealjs
 ---
 
 ## ¿Que es la informática? 

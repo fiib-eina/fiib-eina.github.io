@@ -1,6 +1,7 @@
 ---
 title: Teoría 102
 subtitle: Lenguajes
+format: revealjs
 ---
 
 ## Algoritmo {.center}

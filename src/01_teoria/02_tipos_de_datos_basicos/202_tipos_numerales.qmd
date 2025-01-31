@@ -1,6 +1,7 @@
 ---
 title: Teoría 202
 subtitle: Tipos Numerales
+format: revealjs
 draft: true
 ---
 

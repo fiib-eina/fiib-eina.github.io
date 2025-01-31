@@ -1,6 +1,7 @@
 ---
 title: Presentación de la Asignatura
 subtitle: Información general
+format: revealjs
 ---
 
 ## Profesores

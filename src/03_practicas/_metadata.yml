@@ -1,9 +1,0 @@
-format:
-  pdf:
-    pdf-engine: lualatex
-    documentclass: scrreprt
-    fontsize: 15pt
-    toc: false
-    number-sections: true
-    colorlinks: true
-    highlight-style: github

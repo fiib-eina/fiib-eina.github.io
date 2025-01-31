@@ -1,6 +1,7 @@
 ---
 title: Problemas 100
 subtitle: Fundamentos
+format: html
 draft: true
 ---
 

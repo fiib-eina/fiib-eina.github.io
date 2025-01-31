@@ -1,6 +1,7 @@
 ---
 title: Teoría 201
 subtitle: Python
+format: revealjs
 ---
 
 ## Fundamentos de Python {.center}
