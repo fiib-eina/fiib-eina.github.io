@@ -146,7 +146,7 @@ a = 9
 
 ### Expresiones
 
-- Una **expresión** es una construcción que produce un valor cuando se la evalua
+- Una **expresión** es una construcción que produce un valor cuando se la evalúa
 - Puede ser un valor literal, una variable, una operación, etc.
     - _Veremos más detalles de esto en los próximos temas_
 
@@ -169,7 +169,7 @@ d = a + b
 
 ### Expresiones en las asignaciones
 
-- En una **asinación**, la componente a la derecha del signo `=` es una **expresión**
+- En una **asignación**, la componente a la derecha del signo `=` es una **expresión**
 - El orden en el que se ejecuta es:
     1. Se evalúa el valor de la expresión
     2. Si la variable no existe, se crea
@@ -232,7 +232,7 @@ a = 2
 
 - Los programas que desarrollaremos en este curso **interactuarán** con el usuario a través de la **consola**.
 - Nuestros programas podrás:
-    - **Mostar** datos y mensajes al usuario
+    - **Mostrar** datos y mensajes al usuario
     - **Leer** datos que el usuario introduzca
 - Cuando nos refiramos a las operaciones de _entrada/salida_ hablaremos desde la perspectiva del programa:
     - **Salida**: mostrar (**escribir**) datos al usuario
@@ -293,7 +293,7 @@ b = a + 1
 - ¿Qué hace el siguiente código?
 
 ```python
-print("Qué tal?")
+print("¿Qué tal?")
 print("Hola")
 ```
 
@@ -302,12 +302,11 @@ print("Hola")
 - ¿Qué hace el siguiente código?
 
 ```python
-print("Introduce tu nota de prácticas")
+print("Introduce tu nota de prácticas: ")
 practicas = int(input())
-print("Introduce tu nota de examen")
+print("Introduce tu nota de examen: ")
 examen = int(input())
-media = 0.7 * teoria + 0.3 * practicas
-print("Tu nota media es")
+media = 0.7 * examen + 0.3 * practicas
+print("Tu nota media es: ")
 print(media)
 ```
-

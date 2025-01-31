@@ -83,12 +83,12 @@ _El idioma en el que los humanos se comunican con las máquinas_
 
 ### Niveles de lenguajes de programación
 
-- Un computador sólo **entiende** instrucciones _sencillas_:
+- Un computador solo **entiende** instrucciones _sencillas_:
     - **ISA** (Instruction Set Architecture): Es el conjunto de instrucciones que un procesador puede ejecutar
     - Cada arquitectura de procesador tiene su propia ISA
 - Estas instrucciones básicas bastan para construir programas complejos
 - Según su nivel de abstracción:
-    - Lenguajes de **bajo nivel** se encuentran cerca del leguaje de la máquina
+    - Lenguajes de **bajo nivel** se encuentran cerca del lenguaje de la máquina
     - Lenguajes más sofisticados (de **alto nivel**) buscan acercar la programación al lenguaje humano
 
 ---
@@ -103,7 +103,7 @@ _El idioma en el que los humanos se comunican con las máquinas_
     -   `Agujero = 1, sin agujero = 0`
     -   **Errores** frecuentes, muy difíciles de encontrar y corregir
     -   Se programaba directamente en base al hardware a usar
-    -   Un programa escrito para un hardware **no es compatible con otro difrente**
+    -   Un programa escrito para un hardware **no es compatible con otro diferente**
         - Poco versátil
 :::
 ::: {.column width="40%"}
@@ -185,7 +185,7 @@ def suma(a, b):
 
 ---
 
-### Tipos de lengujes de alto nivel
+### Tipos de lenguajes de alto nivel
 
 ::: {.columns}
 ::: {.column width="50%"}
