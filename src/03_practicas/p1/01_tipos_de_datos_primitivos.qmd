@@ -1,8 +1,30 @@
 ---
-title: Practica 1
+title: Práctica 1
 subtitle: Tipos Primitivos
 draft: true
 ---
+
+## Conversión de centímetros a pulgadas
+Desarrolla un programa en Python que solicite al usuario un número real, que representará una longitud medida en centímetros, y escriba en la pantalla la medida equivalente en pulgadas.
+
+<!-- ![Ejemplo]() -->
+Un ejemplo de ejecución: 
+```
+Introduce un valor en centímetros:
+1
+En pulgadas son: 
+0.39370078740157477
+```
+
+Otro ejemplo de ejecución:
+```
+Introduce un valor en centímetros:
+25.234
+En pulgadas son: 
+9.934645669291339
+```
+
+Una pulgada anglosajona actual equivale a 25,4 mm.
 
 ## Rectángulo
 
@@ -15,6 +37,8 @@ Implementa un programa que:
     - El perímetro del rectángulo
 
 <!-- ![Ejemplo]() -->
+
+---
 
 ```
 Introduzca x1:
