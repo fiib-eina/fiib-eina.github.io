@@ -13,30 +13,25 @@ Desarrolla un programa en Python que solicite al usuario un número real, que re
 Una pulgada anglosajona actual equivale a 25,4 mm.
 
 Un ejemplo de ejecución: 
-```
-Introduce un valor en centímetros: 
-𝟭
-En pulgadas son: 
-0.39370078740157477
-```
+
+| Introduce un valor en centímetros: 
+| **1**
+| En pulgadas son: 
+| 0.39370078740157477
 
 Otro ejemplo de ejecución:
 
-```
-Introduce un valor en centímetros:
-𝟮𝟱.𝟰
-En pulgadas son: 
-10.0
-```
+| Introduce un valor en centímetros:
+| **25.4**
+| En pulgadas son: 
+| 10.0
 
 Y otro más:
 
-```
-Introduce un valor en centímetros:
-𝟴𝟰.𝟬𝟮𝟱
-En pulgadas son: 
-33.080708661417326
-```
+| Introduce un valor en centímetros:
+| **84.025**
+| En pulgadas son: 
+| 33.080708661417326
 
 **Entrega:** Escribe tu programa en un fichero denominado `pulgadas.py`.
 
@@ -47,27 +42,25 @@ Escribe un programa en Python que solicite una temperatura expresada en grados F
 
 La fórmula que proporciona la equivalencia entre grados Celsius y Fahrenheit es
 
-$C=\frac{5}{9}(F - 32)$
+$$
+C=\frac{5}{9}(F - 32)
+$$
 
 donde _C_ es la temperatura en grados Celsius y _F_ es la temperatura en grados Fahrenheit.
 
 Un ejemplo de ejecución:
 
-```
-Escriba una temperatura expresada en grados Fahrenheit: 
-𝟯𝟮
-En grados Celsius son: 
-0.0
-```
+| Escriba una temperatura expresada en grados Fahrenheit: 
+| **32**
+| En grados Celsius son: 
+| 0.0
 
 Y otro:
 
-```
-Escriba una temperatura expresada en grados Fahrenheit: 
--𝟰𝟱𝟵.𝟲𝟳
-En grados Celsius son: 
--273.15000000000003
-```
+| Escriba una temperatura expresada en grados Fahrenheit: 
+| **-459.67**
+| En grados Celsius son: 
+| -273.15000000000003
 
 Aunque probablemente no sea cierto, se dice que Daniel Gabriel Fahrenheit estableció el límite superior de su escala (100 °F) en la temperatura del cuerpo humano.
 Utiliza tu programa para comprobar que Fahrenheit tenía fiebre cuando calibró su escala.
@@ -83,23 +76,19 @@ Para este mes de febrero, ha establecido que va a cambiar un euro por 161,03241 
 
 Escribe un programa en Python que pida al usuario que escriba una cantidad **no negativa** de dinero expresada en euros y le informe de su equivalente en yenes:
 
-```
-Escriba una cantidad no negativa de dinero en euros:
-𝟰𝟯.𝟲𝟱
-Yenes: 
-7036.
-```
+| Escriba una cantidad no negativa de dinero en euros:
+| **43.65**
+| Yenes: 
+| 7036.
 
 Como los yenes no tienen moneda fraccionaria (los _senes_ dejaron de utilizarse en 1953), queremos que el número de yenes resultante se escriba sin decimales.
 
 Un segundo ejemplo se presenta a continuación para ilustrar el comportamiento deseado del programa:
 
-```
-Escriba una cantidad no negativa de dinero en euros:
-𝟰𝟯.𝟲𝟵
-Yenes: 
-7043.
-```
+| Escriba una cantidad no negativa de dinero en euros:
+| **43.69**
+| Yenes: 
+| 7043.
 
 **Entrega:** Escribe tu programa en un fichero denominado `yenes.py`.
 
@@ -118,41 +107,37 @@ Implementa un programa que:
 
 Un ejemplo de ejecución del programa solicitado:
 
-```
-Introduzca x1:
-𝟮
-Introduzca y1:
-𝟯
-Introduzca x2:
-𝟱
-Introduzca y2:
-𝟲
-
-El área del rectángulo es:
-9.0
-
-El perímetro del rectángulo es:
-12.0
-```
+| Introduzca x1:
+| **2**
+| Introduzca y1:
+| **3**
+| Introduzca x2:
+| **5**
+| Introduzca y2:
+| **6**
+| 
+| El área del rectángulo es:
+| 9.0
+| 
+| El perímetro del rectángulo es:
+| 12.0
 
 Y otro:
 
-```
-Introduzca x1:
-𝟭.𝟱
-Introduzca y1:
-𝟳.𝟰
-Introduzca x2:
-𝟲.𝟴
-Introduzca y2:
-𝟮.𝟯
-
-El área del rectángulo es:
-27.03
-
-El perímetro del rectángulo es:
-20.8
-```
+| Introduzca x1:
+| **1.5**
+| Introduzca y1:
+| **7.4**
+| Introduzca x2:
+| **6.8**
+| Introduzca y2:
+| **2.3**
+| 
+| El área del rectángulo es:
+| 27.03
+| 
+| El perímetro del rectángulo es:
+| 20.8
 
 **Entrega:** Escribe tu programa en un fichero denominado `rectangulo.py`.
 
@@ -161,30 +146,26 @@ El perímetro del rectángulo es:
 
 Escribe un programa en Python que interaccione con el usuario mostrando el siguiente comportamiento:
 
-```
-Escriba un número de habitación:
-𝟱𝟭𝟰
-
-Planta:
-5
-Número:
-14
-```
+| Escriba un número de habitación:
+| **514**
+| 
+| Planta:
+| 5
+| Número:
+| 14
 
 El número de habitación escrito por el usuario sigue el convenio habitual de numeración de habitaciones en hoteles: el número de centenas indican la planta en la que está la habitación y las decenas y unidades indican el número de habitación dentro de la planta.
 Por el momento, vamos a suponer que **el usuario siempre va a escribir números positivos que representan números de habitación válidas con formato establecido.**
 
 Un segundo ejemplo se presenta a continuación para ilustrar el comportamiento deseado del programa.
 
-```
-Escriba un número de habitación: 
-𝟭𝟴𝟬𝟯
-
-Planta:
-18
-Número:
-3
-```
+| Escriba un número de habitación: 
+| **1803**
+| 
+| Planta:
+| 18
+| Número:
+| 3
 
 **Entrega:** Escribe tu programa en un fichero denominado `hotel.py`.
 
@@ -193,27 +174,24 @@ Número:
 
 Escribe un programa en Python que pida al usuario tres números enteros y diga si se cumple que los tres números son pares, positivos y además el segundo número está comprendido estrictamente entre el primero y el tercero: 
 
-```
-Escribe un primer número:
-𝟮
-Escribe un segundo número:
-𝟰
-Escribe un tercer número:
-𝟴
-Cumplen todas las condiciones:
-True
-```
+| Escribe un primer número:
+| **2**
+| Escribe un segundo número:
+| **4**
+| Escribe un tercer número:
+| **8**
+| Cumplen todas las condiciones:
+| True
 
 Otro ejemplo de ejecución:
-```
-Escribe un primer número:
-𝟯
-Escribe un segundo número:
--𝟮
-Escribe un tercer número:
--𝟱
-Cumplen todas las condiciones:
-False
-```
+
+| Escribe un primer número:
+| **3**
+| Escribe un segundo número:
+| **-2**
+| Escribe un tercer número:
+| **-5**
+| Cumplen todas las condiciones:
+| False
 
 **Entrega:** Escribe tu programa en un fichero denominado `entre_pares.py`.
