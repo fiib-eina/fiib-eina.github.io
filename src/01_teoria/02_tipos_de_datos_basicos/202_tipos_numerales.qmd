@@ -246,7 +246,7 @@ math.abs(-3)  # invoca la función abs de la biblioteca math
 | -- | -- | -- |
 | nativa | `int(x)` | **Convierte** la entrada a entero |
 | nativa | `float(x)` | **Convierte** la entrada a real |
-| nativa | `abs(x)` | Valos absoluto |
+| nativa | `abs(x)` | Valor absoluto |
 | nativa | `round(x)` | Redondeo |
 | math   | `math.sqrt(x)` | Raíz cuadrada |
 | math   | `math.sin(x)` | Seno |
@@ -254,8 +254,8 @@ math.abs(-3)  # invoca la función abs de la biblioteca math
 | math   | `math.atan(x)` | Arcotangente |
 | math   | `math.log(x)` | Logaritmo |
 | math   | `math.exp(x)` | Exponencial |
-| math   | `math.floor(x)` | Parte entera |
-| math   | `math.ceil(x)` | Parte entera + 1 |
+| math   | `math.floor(x)` | Entero por defecto |
+| math   | `math.ceil(x)` | Entero por exceso |
 
 ---
 
