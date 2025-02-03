@@ -195,3 +195,15 @@ Otro ejemplo de ejecución:
 | False
 
 **Entrega:** Escribe tu programa en un fichero denominado `entre_pares.py`.
+
+
+## Entrega de la práctica
+
+**Antes del sábado 15 de febrero a las 18:00,** deberán haberse subido a Moodle los siguientes ficheros:
+
+- [ ] `pulgadas.py`
+- [ ] `fahrenheit.py`
+- [ ] `yenes.py`
+- [ ] `rectangulo.py`
+- [ ] `hotel.py`
+- [ ] `entre_pares.py`
