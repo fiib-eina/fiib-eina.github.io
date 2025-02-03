@@ -79,7 +79,7 @@ Escribe un programa en Python que pida al usuario que escriba una cantidad **no 
 | Escriba una cantidad no negativa de dinero en euros:
 | **43.65**
 | Yenes: 
-| 7036.
+| 7029
 
 Como los yenes no tienen moneda fraccionaria (los _senes_ dejaron de utilizarse en 1953), queremos que el número de yenes resultante se escriba sin decimales.
 
@@ -88,7 +88,7 @@ Un segundo ejemplo se presenta a continuación para ilustrar el comportamiento d
 | Escriba una cantidad no negativa de dinero en euros:
 | **43.69**
 | Yenes: 
-| 7043.
+| 7036
 
 **Entrega:** Escribe tu programa en un fichero denominado `yenes.py`.
 
