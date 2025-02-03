@@ -28,6 +28,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #767676;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #767676;  padding-left: 4px; }
+    div.sourceCode
+      { color: #545454; background-color: #fefefe; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #545454; } /* Normal */
+    code span.al { color: #7928a1; } /* Alert */
+    code span.an { color: #696969; } /* Annotation */
+    code span.at { color: #a55a00; } /* Attribute */
+    code span.bn { color: #7928a1; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #d91e18; } /* ControlFlow */
+    code span.ch { color: #008000; } /* Char */
+    code span.cn { color: #d91e18; } /* Constant */
+    code span.co { color: #696969; } /* Comment */
+    code span.cv { color: #696969; font-style: italic; } /* CommentVar */
+    code span.do { color: #696969; font-style: italic; } /* Documentation */
+    code span.dt { color: #7928a1; } /* DataType */
+    code span.dv { color: #7928a1; } /* DecVal */
+    code span.er { color: #7928a1; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #a55a00; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #696969; } /* Information */
+    code span.kw { color: #d91e18; } /* Keyword */
+    code span.op { color: #00769e; } /* Operator */
+    code span.ot { color: #d91e18; } /* Other */
+    code span.pp { color: #7928a1; } /* Preprocessor */
+    code span.sc { color: #00769e; } /* SpecialChar */
+    code span.ss { color: #008000; } /* SpecialString */
+    code span.st { color: #008000; } /* String */
+    code span.va { color: #a55a00; } /* Variable */
+    code span.vs { color: #008000; } /* VerbatimString */
+    code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -334,210 +399,142 @@
 </div>
 
 </section>
-<section id="primeras-instrucciones-asignación" class="title-slide slide level1 center">
-<h1>Primeras instrucciones: Asignación</h1>
-<div class="frame">
-<p>Primeras instrucciones: Asignación</p>
-<p><code>identificador = expresión;</code></p>
-<ul>
-<li><p>Operador de asignación: símbolo <code>=</code></p></li>
-<li><p><u><strong>Copia el resultado de evaluar una expresión</strong></u><a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a> a una variable</p></li>
-<li><p>El tipo de datos de la variable (parte izquierda de la asignación) ha de coincidir con el tipo de datos de la evaluación de la expresión (parte derecha)</p>
-<ul>
-<li>¿Qué ocurrirá si el tipo NO es compatible? <span class="math inline">\(\Rightarrow\)</span> <span class="alert"><strong>error de compilación</strong></span></li>
-</ul></li>
-<li><p>Ejemplos:</p>
-<div class="lrbox">
-<pre style="slideExample"><code>dias = 5 - 1; // la variable dias toma el valor del
-              // resultado de la expresión 5 - 1 (valor 4)
-horas = dias; // a horas se le asigna el valor que hay en dias
-horas = 6;    // se cambia el valor de horas, pero
-              // dias sigue teniendo el mismo valor</code></pre>
-</div></li>
-</ul>
-</div>
-<aside></aside></section>
-
-<section id="tipos-de-datos-en-c" class="title-slide slide level1 center">
-<h1>Tipos de datos en C++</h1>
-<div class="frame">
-<p>Tipos de datos en C++</p>
-<p><span style="background-color: black"><strong>Tipos de datos primitivos en C++</strong></span></p>
-<ul>
-<li><p><strong>Enteros</strong>: para representar números enteros</p></li>
-<li><p><strong>Reales</strong>: para representar números reales</p></li>
-<li><p><strong>Booleanos</strong>: para representar valores de cierto o falso</p></li>
-<li><p><strong>Caracteres</strong>: para representar un carácter</p></li>
-</ul>
-<p><strong>¿Qué necesitamos saber?</strong></p>
-<ul>
-<li><p>Su palabra reservada (<code>int</code>, <code>double</code>, ...)</p></li>
-<li><p>Su rango de valores (<em>¿puedo representar un D.N.I. con un <code>int</code>?</em>)</p></li>
-<li><p>Sus literales (<em>¿un número real se escribe 1,7 o 1.7?</em>)</p></li>
-<li><p>Sus operaciones disponibles (<em>¿puedo sumar números enteros?</em>)</p></li>
-</ul>
-</div>
-<div class="frame">
-<p>Tipos de datos primitivos en C++</p>
-<div class="small">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;"><strong>Palabra clave</strong></th>
-<th style="text-align: center;"><strong>Tipo de dato</strong></th>
-<th style="text-align: center;"><strong>Tamaño (en bits)</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><code>char</code></td>
-<td style="text-align: center;">carácter</td>
-<td style="text-align: center;">8</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>short</code></td>
-<td style="text-align: center;">entero</td>
-<td style="text-align: center;">16*</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>int</code></td>
-<td style="text-align: center;">entero</td>
-<td style="text-align: center;">32*</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>long</code></td>
-<td style="text-align: center;">entero</td>
-<td style="text-align: center;">32*</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>float</code></td>
-<td style="text-align: center;">real</td>
-<td style="text-align: center;">32</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>long long</code></td>
-<td style="text-align: center;">entero</td>
-<td style="text-align: center;">64*</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>double</code></td>
-<td style="text-align: center;">real</td>
-<td style="text-align: center;">64</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>long double</code></td>
-<td style="text-align: center;">real</td>
-<td style="text-align: center;">96*</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>bool</code></td>
-<td style="text-align: center;">booleano</td>
-<td style="text-align: center;">8 (1 bit)*</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>void</code></td>
-<td style="text-align: center;">tipo nulo</td>
-<td style="text-align: center;">-</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(^*\)</span>Pueden depender del compilador, S.O. y microprocesador del ordenador.</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<section id="tipos-de-datos-en-python" class="slide level2 center">
+<h2>Tipos de datos en Python</h2>
 </section>
+<section class="slide level2">
 
-<section id="enteros" class="title-slide slide level1 center">
-<h1>Enteros</h1>
-<div class="frame">
-<p>Enteros Tipos enteros</p>
-<p>C++ dispone de <u><strong>cuatro tipos básicos de enteros</strong></u> diferentes:</p>
-<div class="small">
-<table class="caption-top">
+<h3 id="tipos-de-datos-primitivos-en-python">Tipos de datos primitivos en Python</h3>
+<ul>
+<li><strong>Enteros</strong>: para representar números enteros</li>
+<li><strong>Reales</strong>: para representar números reales</li>
+<li><strong>Booleanos</strong>: para representar valores de cierto o falso</li>
+<li><strong>Texto</strong>: para representar cadenas de caracteres</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="para-cada-tipo-de-dato-nos-interesa-saber">Para cada tipo de dato, nos interesa saber…</h3>
+<ul>
+<li>Su <strong>palabra reservada</strong> (<code>int</code>, <code>float</code>, etc.)</li>
+<li>Su <strong>rango de valores</strong> (<em>¿puedo representar un D.N.I. con un <code>int</code>?</em>)</li>
+<li>Sus literales (<em>¿un número real se escribe 1,7 o 1.7?</em>)</li>
+<li>Sus operaciones disponibles (<em>¿puedo sumar números enteros?</em>)</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="section"></h3>
+</section>
+<section class="slide level2">
+
+<h3 id="tipos-implícitos">Tipos implícitos</h3>
+<ul>
+<li>Recordad que Python es un lenguaje de <strong>tipado dinámico</strong>
+<ul>
+<li>No es necesario declarar el tipo de una variable</li>
+<li>La palabra reservada de cada tipo será útil para operaciones específicas</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>edad <span class="op">=</span> <span class="dv">21</span>  <span class="co"># Python infiere que edad es un entero (int)</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="enteros" class="slide level2">
+<h2>Enteros</h2>
+</section>
+<section class="slide level2">
+
+<h3 id="números-enteros-en-otros-lenguajes">Números enteros en otros lenguajes</h3>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 28%">
+<col style="width: 34%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;"><strong>Palabra clave</strong></th>
-<th style="text-align: center;"><strong>Tipo de dato</strong></th>
-<th style="text-align: center;"><strong>Tamaño (en bits)</strong></th>
+<th><strong>Palabra clave</strong></th>
+<th><strong>Tipo de dato</strong></th>
+<th><strong>Tamaño (en bits)</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><code>char</code></td>
-<td style="text-align: center;">carácter</td>
-<td style="text-align: center;">8</td>
+<td><code>char</code></td>
+<td>carácter</td>
+<td>8</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><code>short</code></td>
-<td style="text-align: center;">entero</td>
-<td style="text-align: center;">16<span class="math inline">\(^*\)</span></td>
+<td><code>short</code></td>
+<td>entero</td>
+<td>16<span class="math inline">\(^*\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><code>int</code></td>
-<td style="text-align: center;">entero</td>
-<td style="text-align: center;">32<span class="math inline">\(^*\)</span></td>
+<td><code>int</code></td>
+<td>entero</td>
+<td>32<span class="math inline">\(^*\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><code>long</code></td>
-<td style="text-align: center;">entero</td>
-<td style="text-align: center;">32<span class="math inline">\(^*\)</span></td>
+<td><code>long</code></td>
+<td>entero</td>
+<td>32<span class="math inline">\(^*\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><code>float</code></td>
-<td style="text-align: center;">real</td>
-<td style="text-align: center;">32</td>
+<td><code>float</code></td>
+<td>real</td>
+<td>32</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><code>long long</code></td>
-<td style="text-align: center;">entero</td>
-<td style="text-align: center;">64<span class="math inline">\(^*\)</span></td>
+<td><code>long long</code></td>
+<td>entero</td>
+<td>64<span class="math inline">\(^*\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><code>double</code></td>
-<td style="text-align: center;">real</td>
-<td style="text-align: center;">64</td>
+<td><code>double</code></td>
+<td>real</td>
+<td>64</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><code>long double</code></td>
-<td style="text-align: center;">real</td>
-<td style="text-align: center;">96<span class="math inline">\(^*\)</span></td>
+<td><code>long double</code></td>
+<td>real</td>
+<td>96<span class="math inline">\(^*\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><code>bool</code></td>
-<td style="text-align: center;">booleano</td>
-<td style="text-align: center;">8 (1 bit)*</td>
+<td><code>bool</code></td>
+<td>booleano</td>
+<td>8 (1 bit)*</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><code>void</code></td>
-<td style="text-align: center;">tipo nulo</td>
-<td style="text-align: center;">-</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(^*\)</span>Dependen del compilador, S.O. y microprocesador del ordenador.</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td><code>void</code></td>
+<td>tipo nulo</td>
+<td>-</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="frame">
-<p>Enteros Representación (externa)</p>
+</section>
+<section class="slide level2">
+
+<h3 id="números-enteros-en-python">Números enteros en Python</h3>
+<ul>
+<li><strong>Palabra reservada</strong>: <code>int</code></li>
+<li><strong>Dominio</strong>: <em>depende de la arquitectura de la máquina</em></li>
+<li><strong>Literales</strong>: <code>1</code>, <code>-3</code>, <code>0</code>, <code>001</code>,</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="enteros-representación-externa">Enteros Representación (externa)</h3>
 <ul>
 <li><p><strong>Secuencia de uno o más dígitos</strong> (caracteres 0, 1, ... 9)</p></li>
 <li><p>Precedidos por símbolo <code>+</code> o símbolo <code>-</code></p></li>
 </ul>
-<p><strong>Primeros ejemplos de uso</strong></p>
-<pre style="slideExample"><code>int a;         // declaración de variable de tipo entero a
+<pre><code>int a;         // declaración de variable de tipo entero a
 int b = 3;     // declaración de variable de tipo entero b,
                // inicializada al valor 3
 long c = -523; // inicialización a -523
 c = +444;      // ahora c vale 444</code></pre>
-</div>
-<div class="frame">
+</section>
+<section class="slide level2">
+
 <p>Enteros Rango de valores</p>
 <ul>
 <li><p>Rango de los números enteros en matemáticas:</p>
@@ -549,21 +546,20 @@ c = +444;      // ahora c vale 444</code></pre>
 <li>Entre un mínimo y un máximo, determinado por el tipo de dato usado</li>
 </ul></li>
 </ul>
-<div class="center">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><embed data-src="images/dominio.pdf"></p>
 <figcaption>image</figcaption>
 </figure>
 </div>
-</div>
 <p><strong>Rango de valores según tipo de dato entero</strong></p>
 <ul>
 <li><p>16 bits <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(2^{16} = 65536\)</span> valores (rango <span class="math inline">\([-32767,+32767]\)</span>)</p></li>
 <li><p>32 bits <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(2^{32} = 4294967296\)</span> valores (rango <span class="math inline">\([-2147483647,+2147483647]\)</span>)</p></li>
 </ul>
-</div>
-<div class="frame">
+</section>
+<section class="slide level2">
+
 <p>Enteros Rango de valores</p>
 <p><strong>Reglas para selección de tipo</strong></p>
 <ul>
@@ -574,8 +570,9 @@ c = +444;      // ahora c vale 444</code></pre>
 <li><code>long long</code> (64 bits <span class="math inline">\(\rightarrow 2^{64}= 18446744073709551616\)</span> valores)</li>
 </ul></li>
 </ul>
-</div>
-<div class="frame">
+</section>
+<section class="slide level2">
+
 <p>Enteros Operadores</p>
 <ul>
 <li><p>Operadores <strong>aritméticos:</strong></p>
@@ -598,15 +595,16 @@ c = +444;      // ahora c vale 444</code></pre>
 <li><p>Desigualdad: <code>!=</code></p></li>
 </ul></li>
 </ul>
-</div>
 </section>
-
+<section>
 <section id="reales" class="title-slide slide level1 center">
 <h1>Reales</h1>
-<div class="frame">
+
+</section>
+<section class="slide level2">
+
 <p>Reales Tipos reales</p>
 <p>C++ dispone de <u><strong>tres tipos básicos de números reales</strong></u> diferentes:</p>
-<div class="small">
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -673,25 +671,24 @@ c = +444;      // ahora c vale 444</code></pre>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="frame">
+</section>
+<section class="slide level2">
+
 <p>Reales Representación (externa)</p>
-<div class="itemize">
 <p><strong>Secuencia de uno o más dígitos (caracteres 0, 1, ... 9)</strong></p>
 <p>Precedidos por símbolo <code>+</code> o símbolo <code>-</code></p>
 <p><strong>La secuencia acaba en un punto</strong> (carácter de la coma decimal)</p>
 <p><strong>Luego, tiene 0 o más dígitos después del punto</strong> (los decimales</p>
 <p>Admiten <strong>notación científica</strong> (también llamada notación exponencial, e.g.&nbsp;<code>-1.23E+10</code>)</p>
-</div>
 <p><strong>Primeros ejemplos de uso</strong></p>
-<pre style="slideExample"><code>float a;          // declaración de variable real a
+<pre><code>float a;          // declaración de variable real a
 float b = 456.3;
 double c = -523.; // el valor -523 (sin decimales)
 c = +456.5E-7;
 float d = 0.0;</code></pre>
-</div>
-<div class="frame">
+</section>
+<section class="slide level2">
+
 <p>Reales Rango de valores</p>
 <ul>
 <li><p>Rango de los números reales en matemáticas...</p>
@@ -703,16 +700,10 @@ float d = 0.0;</code></pre>
 <li>Entre un mínimo y un máximo, <strong>con un <u>subconjunto finito</u> de valores representables</strong></li>
 </ul></li>
 </ul>
-<div class="center">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/dominioReales.png" style="width:90.0%"></p>
-<figcaption>image</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="frame">
+
+<img data-src="images/dominioReales.png" style="width:90.0%" class="r-stretch quarto-figure-center"><p class="caption">image</p></section>
+<section class="slide level2">
+
 <p>Reales Rango de valores</p>
 <p><span class="math inline">\(0.7\)</span> en binario es <span class="math inline">\(0.10110011001100110...\)</span></p>
 <ul>
@@ -721,12 +712,13 @@ float d = 0.0;</code></pre>
 </ul>
 <!-- -->
 <ul>
-<li><p>Lectura recomendada: ‘Examples of floating point problems’<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a></p></li>
+<li><p>Lectura recomendada: ‘Examples of floating point problems’<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a></p></li>
 <li><p>Ejercicio: el número real <em>262144.0</em></p>
 <p><a href="https://float.exposed/0x48800000" class="uri">https://float.exposed/0x48800000</a></p></li>
 </ul>
-</div>
-<div class="frame">
+<aside></aside></section>
+<section class="slide level2">
+
 <p>Reales Operadores</p>
 <ul>
 <li><p>Operadores <strong>aritméticos:</strong></p>
@@ -748,8 +740,9 @@ float d = 0.0;</code></pre>
 <li><p>Desigualdad: <code>!=</code></p></li>
 </ul></li>
 </ul>
-</div>
-<div class="frame">
+</section>
+<section class="slide level2">
+
 <p>Reales Funciones matemáticas de la biblioteca <code>&lt;cmath&gt;</code></p>
 <ul>
 <li><p><code>abs(x)</code>: <span class="math inline">\(|x|\)</span></p></li>
@@ -764,12 +757,14 @@ float d = 0.0;</code></pre>
 <li><p><code>ceil(x)</code>: redondeo al entero más grande</p></li>
 <li><p><code>floor(x)</code>: redondeo al entero más pequeño</p></li>
 </ul>
-</div>
-<aside></aside></section>
-
+</section></section>
+<section>
 <section id="bibliotecas-de-c" class="title-slide slide level1 center">
 <h1>Bibliotecas de C++</h1>
-<div class="frame">
+
+</section>
+<section class="slide level2">
+
 <p>Bibliotecas de C++ ¿Qué son?</p>
 <ul>
 <li><p>Junto con el compilador de C++ se incluyen ciertos archivos: <strong>bibliotecas (o librerías) de funciones</strong></p></li>
@@ -782,24 +777,24 @@ float d = 0.0;</code></pre>
 <li><p>fichero de cabeceras (.h, .hpp, …).</p></li>
 </ul></li>
 </ul>
-</div>
-<div class="frame">
+</section>
+<section class="slide level2">
+
 <p>Bibliotecas de C++ Declaración de bibliotecas</p>
-<pre style="slideExample"><code>#include &lt;nombre del fichero de cabeceras&gt;(*@ \footnote{Muchas veces usaremos: nombre de la biblioteca} @*)</code></pre>
+<pre><code>#include &lt;nombre del fichero de cabeceras&gt;(*@ \footnote{Muchas veces usaremos: nombre de la biblioteca} @*)</code></pre>
 <ul>
 <li><p>Se escribe entre <code>&lt;</code> y <code>&gt;</code></p></li>
 <li><p><strong>Se colocan <u>al principio</u> del código fuente</strong></p></li>
 </ul>
 <p><strong>Ejemplos</strong>:</p>
-<pre style="slideExample"><code>#include &lt;iostream&gt;
+<pre><code>#include &lt;iostream&gt;
 #include &lt;cmath&gt;</code></pre>
 <p><strong>Mirar:</strong></p>
-<div class="itemize">
 <p><a href="https://en.cppreference.com/w/cpp/header/cmath" class="uri">https://en.cppreference.com/w/cpp/header/cmath</a></p>
 <p><a href="https://github.com/gcc-mirror/gcc/blob/master/libstdc++-v3/include/c_std/cmath" class="uri">https://github.com/gcc-mirror/gcc/blob/master/libstdc++-v3/include/c_std/cmath</a></p>
-</div>
-</div>
-<div class="frame">
+</section>
+<section class="slide level2">
+
 <p>Bibliotecas de C++ Bibliotecas estándar de C++</p>
 <ul>
 <li><p><code>iostream</code>: funciones de entrada y salida estándar, incluyendo la escritura en pantalla y la lectura en el teclado</p>
@@ -813,15 +808,16 @@ float d = 0.0;</code></pre>
 <li><p><code>vector</code>: funcionalidades para trabajar con vectores y matrices</p></li>
 <li><p><code>fstream</code>: funcionalidades para trabajar con ficheros (persistencia)</p></li>
 </ul>
-</div>
-</section>
-
+</section></section>
+<section>
 <section id="caracteres-y-cadenas" class="title-slide slide level1 center">
 <h1>Caracteres y cadenas</h1>
-<div class="frame">
+
+</section>
+<section class="slide level2">
+
 <p>Caracteres Tipo carácter</p>
 <p>C++ dispone de <u><strong>un tipo básico de carácter</strong></u>:</p>
-<div class="small">
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -888,9 +884,9 @@ float d = 0.0;</code></pre>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="frame">
+</section>
+<section class="slide level2">
+
 <p>Caracteres Representación (externa)</p>
 <ul>
 <li><p>Una letra, escrita <u><strong>entre comillas simples</strong></u></p>
@@ -899,32 +895,31 @@ float d = 0.0;</code></pre>
 </ul></li>
 </ul>
 <p><strong>Primeros ejemplos de uso</strong></p>
-<pre style="slideExample"><code>char a;       // declaración de variable de tipo carácter
+<pre><code>char a;       // declaración de variable de tipo carácter
 char b = 'a'; // definición de variable b
               // e inicialización a literal 'a'
 char c = '3'; // variable inicializada al valor '3'
               // que NO ES valor 3, ¡ojo!</code></pre>
-</div>
-<div class="frame">
+</section>
+<section class="slide level2">
+
 <p>Caracteres Rango de valores</p>
-<p><span style="background-color: black"><strong>Caracteres imprimibles</strong></span></p>
+<p>[<strong>Caracteres imprimibles</strong>]</p>
 <ul>
 <li><p>Caracteres alfabéticos: <code>'a','b',...,'z','A','B',...,'Z'</code></p></li>
 <li><p>Caracteres numéricos o dígitos: <code>'0','1',...,'9'</code></p></li>
 <li><p>Otros caracteres imprescindibles: <code>'+','-','.',' ',...</code></p></li>
 </ul>
-</div>
-<div class="frame">
+</section>
+<section class="slide level2">
+
 <p>Caracteres Representación interna: tabla ASCII</p>
-<div class="center">
 <p><img data-src="images/tablaASCII.png" alt="image"><br>
 (filas y columnas en notación hexadecimal [base 16])</p>
-</div>
-<div class="flushleft">
 <p><em>Créditos</em>: <a href="https://es.wikipedia.org/wiki/ASCII" class="uri">https://es.wikipedia.org/wiki/ASCII</a> (tabla de 1968)</p>
-</div>
-</div>
-<div class="frame">
+</section>
+<section class="slide level2">
+
 <p>Caracteres Operadores</p>
 <ul>
 <li><p>Operadores <strong>de comparación</strong>:<br>
@@ -946,8 +941,9 @@ char c = '3'; // variable inicializada al valor '3'
 int valor = (int) a;  // la variable valor contendrá el entero 98
 int otro = (int) 'c'; // la variable otro contendrá el entero 99</code></pre></li>
 </ul>
-</div>
-<div class="frame">
+</section>
+<section class="slide level2">
+
 <p>Cadenas Representación</p>
 <ul>
 <li><p>Cero o más letras, <u><strong>entre comillas dobles</strong></u></p>
@@ -959,12 +955,14 @@ int otro = (int) 'c'; // la variable otro contendrá el entero 99</code></pre></
 <p><strong>Primeros ejemplos de uso</strong></p>
 <pre><code>"Hola, mundo!"
 "" // cadena vacía</code></pre>
-</div>
-</section>
-
+</section></section>
+<section>
 <section id="constantes" class="title-slide slide level1 center">
 <h1>Constantes</h1>
-<div class="frame">
+
+</section>
+<section class="slide level2">
+
 <p>Constantes</p>
 <ul>
 <li><p>El valor del dato <u><strong>permanece inalterado</strong></u> durante la ejecución del programa</p>
@@ -980,13 +978,12 @@ int otro = (int) 'c'; // la variable otro contendrá el entero 99</code></pre></
 <li><p><strong>Recomendación</strong>: utilizar mayúsculas para los identificadores</p></li>
 </ul>
 <p>Ejemplos:</p>
-<div class="lrbox">
-<pre style="slideExample"><code>const int DIAS_SEMANA = 7;
+<pre><code>const int DIAS_SEMANA = 7;
   const float NUMERO_PI = 3.141592;
   const char OPCION_SALIR = 'c';</code></pre>
-</div>
-</div>
-<div class="frame">
+</section>
+<section class="slide level2">
+
 <p>Tareas para la próxima clase</p>
 <ol type="1">
 <li><p><strong>Repasa los conceptos vistos y responde las siguientes preguntas</strong>:</p>
@@ -999,9 +996,7 @@ int otro = (int) 'c'; // la variable otro contendrá el entero 99</code></pre></
 <li><p><em>Define una variable de tipo carácter y asígnale la primera letra de tu nombre</em></p></li>
 </ul></li>
 </ol>
-</div>
-</section>
-
+</section></section>
 <section id="section" class="title-slide slide level1 unnumbered center">
 <h1></h1>
 
@@ -1016,8 +1011,7 @@ int otro = (int) 'c'; // la variable otro contendrá el entero 99</code></pre></
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Notas</h2>
 
 <ol>
-<li id="fn1"><p>Una expresión es un conjunto de valores, operaciones y funciones que dan como resultado un único valor</p></li>
-<li id="fn2"><p><a href="https://jvns.ca/blog/2023/01/13/examples-of-floating-point-problems/" class="uri">https://jvns.ca/blog/2023/01/13/examples-of-floating-point-problems/</a></p></li>
+<li id="fn1"><p><a href="https://jvns.ca/blog/2023/01/13/examples-of-floating-point-problems/" class="uri">https://jvns.ca/blog/2023/01/13/examples-of-floating-point-problems/</a></p></li>
 </ol>
 </section>
     </div>
