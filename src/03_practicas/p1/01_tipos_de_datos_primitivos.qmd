@@ -46,7 +46,7 @@ $$
 C=\frac{5}{9}(F - 32)
 $$
 
-donde _C_ es la temperatura en grados Celsius y _F_ es la temperatura en grados Fahrenheit.
+donde $C$ es la temperatura en grados Celsius y $F$ es la temperatura en grados Fahrenheit.
 
 Un ejemplo de ejecución:
 
