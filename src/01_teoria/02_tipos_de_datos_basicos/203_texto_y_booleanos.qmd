@@ -1,0 +1,133 @@
+---
+title: Teoría 203
+subtitle: Tipos Numerales
+format: revealjs
+draft: true
+---
+
+Caracteres Representación (externa)
+
+-   Una letra, escrita [**entre comillas simples**]{.underline}
+
+    -   En el teclado español, se encuentra a la derecha del 0 (junto
+        con el carácter `?`)
+
+**Primeros ejemplos de uso**
+
+``` 
+char a;       // declaración de variable de tipo carácter
+char b = 'a'; // definición de variable b
+              // e inicialización a literal 'a'
+char c = '3'; // variable inicializada al valor '3'
+              // que NO ES valor 3, ¡ojo!
+```
+
+
+---
+
+Caracteres Rango de valores
+
+[**Caracteres imprimibles**]
+
+-   Caracteres alfabéticos: `'a','b',...,'z','A','B',...,'Z'`
+
+-   Caracteres numéricos o dígitos: `'0','1',...,'9'`
+
+-   Otros caracteres imprescindibles: `'+','-','.',' ',...`
+
+
+---
+
+Caracteres Representación interna: tabla ASCII
+
+
+![image](images/tablaASCII.png){width=".75\\columnwidth"}\
+(filas y columnas en notación hexadecimal \[base 16\])
+
+
+
+*Créditos*: <https://es.wikipedia.org/wiki/ASCII> (tabla de 1968)
+
+
+
+---
+
+Caracteres Operadores
+
+-   Operadores **de comparación**:\
+    (devuelven un valor lógico (booleano): Verdadero o Falso)
+
+    -   Mayor estricto: `>`
+
+    -   Mayor o igual: `>=`
+
+    -   Menor estricto: `<`
+
+    -   Menor o igual: `<=`
+
+    -   Igualdad: `==`
+
+    -   Desigualdad: `!=`
+
+-   Operaciones de **conversión** (cast):
+
+    -   `(char){entero}`: devuelve el carácter asociado al entero dado,
+        según la tabla ASCII
+
+    ```{=html}
+    <!-- -->
+    ```
+        char a = 'b';         // la variable a contendrá el caracter 'b'
+        int valor = (int) a;  // la variable valor contendrá el entero 98
+        int otro = (int) 'c'; // la variable otro contendrá el entero 99
+
+
+---
+
+Cadenas Representación
+
+-   Cero o más letras, [**entre comillas dobles**]{.underline}
+
+    -   En el teclado español, se encuentran en la tecla del número 2
+        (junto con el carácter `@`)
+
+-   **Por ahora, solo vamos a trabajar con los literales de cadena**
+
+**Primeros ejemplos de uso**
+
+    "Hola, mundo!"
+    "" // cadena vacía
+
+---
+
+## Constantes
+
+---
+
+Constantes
+
+-   El valor del dato [**permanece inalterado**]{.underline} durante la
+    ejecución del programa
+
+    -   ¿Qué ocurrirá si se intenta cambiar el valor de una constante en
+        el código?\
+        $\Rightarrow$ [**error de compilación**]{.alert}
+
+-   Declaración similar a las variables, pero:
+
+    -   Se precede el tipo de dato con la palabra reservada `const`
+
+    -   Hay que indicar el valor que toma la constante durante todo el
+        programa
+
+-   **Recomendación**: utilizar mayúsculas para los identificadores
+
+Ejemplos:
+
+
+``` 
+DIAS_SEMANA = 7;
+NUMERO_PI = 3.141592;
+OPCION_SALIR = 'c';
+```
+

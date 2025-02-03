@@ -5,597 +5,309 @@ format: revealjs
 draft: true
 ---
 
-# Primeras instrucciones: Asignación
+## Tipos de datos en Python {.center}
 
-::: frame
-Primeras instrucciones: Asignación
+---
 
-`identificador = expresión;`
+### Tipos de datos básicos en Python
 
--   Operador de asignación: símbolo `=`
+- Todos los lenguajes cuentan con una serie de tipos básicos.
+- Los tipos básicos de Python que estudiaremos son:
+    - **Enteros**: para representar números enteros
+    - **Reales**: para representar números reales
+    - **Booleanos**: para representar valores de cierto o falso
+    - **Texto**: para representar cadenas de caracteres
 
--   [**Copia el resultado de evaluar una expresión**]{.underline}[^1] a
-    una variable
+---
 
--   El tipo de datos de la variable (parte izquierda de la asignación)
-    ha de coincidir con el tipo de datos de la evaluación de la
-    expresión (parte derecha)
+### Para cada tipo de dato, nos interesa saber...
 
-    -   ¿Qué ocurrirá si el tipo NO es compatible? $\Rightarrow$
-        [**error de compilación**]{.alert}
+- Su **palabra reservada**
+    - `int`, `float`, etc.
+- Sus **literales** 
+    - _¿un número real se escribe 1,7 o 1.7?_
+- Su **dominio** (rango de valores)
+    - _¿puedo representar un D.N.I. con un `int`?_
+- Sus **operaciones** disponibles 
+    - _¿puedo sumar números enteros?_
 
--   Ejemplos:
+---
 
-    ::: lrbox
-    ``` {style="slideExample"}
-    dias = 5 - 1; // la variable dias toma el valor del
-                  // resultado de la expresión 5 - 1 (valor 4)
-    horas = dias; // a horas se le asigna el valor que hay en dias
-    horas = 6;    // se cambia el valor de horas, pero
-                  // dias sigue teniendo el mismo valor
-    ```
-    :::
-:::
+#### Dominio de un tipo de dato
 
-# Tipos de datos en C++
+- El **dominio** de un tipo de dato es el conjunto de valores que puede representar
+- A diferencia de las matemáticas, en programación:
+    - **Todos los tipos de datos tienen un dominio finito**
+- El _tamaño_ de un tipo de dato determina su dominio
+    - Un tipo de dato que requiere **más bits** podrá representar **más valores**
 
-::: frame
-Tipos de datos en C++
+---
 
-[**Tipos de datos primitivos en C++**]{style="background-color: black"}
+### Tipos implícitos
 
--   **Enteros**: para representar números enteros
+- Recordad que Python es un lenguaje de **tipado dinámico**
+    - No es necesario declarar el tipo de una variable
+    - La palabra reservada de cada tipo será útil para operaciones específicas
 
--   **Reales**: para representar números reales
-
--   **Booleanos**: para representar valores de cierto o falso
-
--   **Caracteres**: para representar un carácter
-
-**¿Qué necesitamos saber?**
-
--   Su palabra reservada (`int`, `double`, \...)
-
--   Su rango de valores (*¿puedo representar un D.N.I. con un `int`?*)
-
--   Sus literales (*¿un número real se escribe 1,7 o 1.7?*)
-
--   Sus operaciones disponibles (*¿puedo sumar números enteros?*)
-:::
-
-::: frame
-Tipos de datos primitivos en C++
-
-::: small
-                               **Palabra clave**                               **Tipo de dato**   **Tamaño (en bits)**
-  --------------------------------------------------------------------------- ------------------ ----------------------
-                                    `char`                                         carácter                8
-                                    `short`                                         entero                16\*
-                                     `int`                                          entero                32\*
-                                    `long`                                          entero                32\*
-                                    `float`                                          real                  32
-                                  `long long`                                       entero                64\*
-                                   `double`                                          real                  64
-                                 `long double`                                       real                 96\*
-                                    `bool`                                         booleano           8 (1 bit)\*
-                                    `void`                                        tipo nulo                \-
-   $^*$Pueden depender del compilador, S.O. y microprocesador del ordenador.                     
-:::
-:::
-
-# Enteros
-
-::: frame
-Enteros Tipos enteros
-
-C++ dispone de [**cuatro tipos básicos de enteros**]{.underline}
-diferentes:
-
-::: small
-                           **Palabra clave**                            **Tipo de dato**   **Tamaño (en bits)**
-  -------------------------------------------------------------------- ------------------ ----------------------
-                                 `char`                                     carácter                8
-                                `short`                                      entero               16$^*$
-                                 `int`                                       entero               32$^*$
-                                 `long`                                      entero               32$^*$
-                                `float`                                       real                  32
-                              `long long`                                    entero               64$^*$
-                                `double`                                      real                  64
-                             `long double`                                    real                96$^*$
-                                 `bool`                                     booleano           8 (1 bit)\*
-                                 `void`                                    tipo nulo                \-
-   $^*$Dependen del compilador, S.O. y microprocesador del ordenador.                     
-:::
-:::
-
-::: frame
-Enteros Representación (externa)
-
--   **Secuencia de uno o más dígitos** (caracteres 0, 1, \... 9)
-
--   Precedidos por símbolo `+` o símbolo `-`
-
-**Primeros ejemplos de uso**
-
-``` {style="slideExample"}
-int a;         // declaración de variable de tipo entero a
-int b = 3;     // declaración de variable de tipo entero b,
-               // inicializada al valor 3
-long c = -523; // inicialización a -523
-c = +444;      // ahora c vale 444
-```
-:::
-
-::: frame
-Enteros Rango de valores
-
--   Rango de los números enteros en matemáticas:
-
-    -   Entre $-\infty$ y $+\infty$ en $\mathbb{Z}$ (\..., -3, -2, -1,
-        0, 1, 2, 3, \...)
-
--   Rango de los números enteros en informática:
-
-    -   Entre un mínimo y un máximo, determinado por el tipo de dato
-        usado
-
-::: center
-![image](images/dominio.pdf){width="0.8\\columnwidth"}
-:::
-
-**Rango de valores según tipo de dato entero**
-
--   16 bits $\rightarrow$ $2^{16} = 65536$ valores (rango
-    $[-32767,+32767]$)
-
--   32 bits $\rightarrow$ $2^{32} = 4294967296$ valores (rango
-    $[-2147483647,+2147483647]$)
-:::
-
-::: frame
-Enteros Rango de valores
-
-**Reglas para selección de tipo**
-
--   Si el dato a representar pertenece al intervalo $[-32767,32767]$:
-    usa `short`
-
--   Si el dato a representar no pertenece al intervalo $[-32767,32767]$
-    y tiene menos de 10 cifras: usa `int`
-
--   Si el dato a representar tiene más de 10 cifras\...
-
-    -   `long long` (64 bits $\rightarrow 2^{64}= 18446744073709551616$
-        valores)
-:::
-
-::: frame
-Enteros Operadores
-
--   Operadores **aritméticos:**
-
-    -   Suma: `+`
-
-    -   Resta: `-`
-
-    -   Multiplicación: `*`
-
-    -   División entera: `/`
-
-    -   Módulo (resto de la división): `%` **¡Ojo!**
-
-    [no hay]{.alert} un operador de potenciación.
-
--   Operadores **de comparación**:\
-    (devuelven un valor lógico (booleano): Verdadero o Falso)
-
-    -   Mayor estricto: `>`
-
-    -   Mayor o igual: `>=`
-
-    -   Menor estricto: `<`
-
-    -   Menor o igual: `<=`
-
-    -   Igualdad: `==` **¡Atención!**
-
-    -   Desigualdad: `!=`
-:::
-
-# Reales
-
-::: frame
-Reales Tipos reales
-
-C++ dispone de [**tres tipos básicos de números reales**]{.underline}
-diferentes:
-
-::: small
-                           **Palabra clave**                            **Tipo de dato**   **Tamaño (en bits)**
-  -------------------------------------------------------------------- ------------------ ----------------------
-                                 `char`                                     carácter                8
-                                `short`                                      entero               16$^*$
-                                 `int`                                       entero               32$^*$
-                                 `long`                                      entero               32$^*$
-                                `float`                                       real                  32
-                              `long long`                                    entero               64$^*$
-                                `double`                                      real                  64
-                             `long double`                                    real                96$^*$
-                                 `bool`                                     booleano            8 (1 bit)
-                                 `void`                                    tipo nulo                \-
-   $^*$Dependen del compilador, S.O. y microprocesador del ordenador.                     
-:::
-:::
-
-::: frame
-Reales Representación (externa)
-
-::: itemize
-**Secuencia de uno o más dígitos (caracteres 0, 1, \... 9)**
-
-Precedidos por símbolo `+` o símbolo `-`
-
-**La secuencia acaba en un punto** (carácter de la coma decimal)
-
-**Luego, tiene 0 o más dígitos después del punto** (los decimales
-
-Admiten **notación científica** (también llamada notación exponencial,
-e.g. `-1.23E+10`)
-:::
-
-**Primeros ejemplos de uso**
-
-``` {style="slideExample"}
-float a;          // declaración de variable real a
-float b = 456.3;
-double c = -523.; // el valor -523 (sin decimales)
-c = +456.5E-7;
-float d = 0.0;
-```
-:::
-
-::: frame
-Reales Rango de valores
-
--   Rango de los números reales en matemáticas\...
-
-    -   Entre $-\infty$ y $+\infty$ en $\mathbb{R}$
-
--   Rango de los números reales en informática:
-
-    -   Entre un mínimo y un máximo, **con un [subconjunto
-        finito]{.underline} de valores representables**
-
-::: center
-![image](images/dominioReales.png){width="90%"}
-:::
-:::
-
-::: frame
-Reales Rango de valores
-
-$0.7$ en binario es $0.10110011001100110...$
-
--   Si truncamos a $11$ bits $\rightarrow 0.1011001100$ que en decimal
-    es $0.69921875$
-
--   Si redondeamos a $11$ bits $\rightarrow 0.1011001101$ que en decimal
-    es $0.700195312$
-
-```{=html}
-<!-- -->
-```
--   Lectura recomendada: 'Examples of floating point problems'[^2]
-
--   Ejercicio: el número real *262144.0*
-
-    <https://float.exposed/0x48800000>
-:::
-
-::: frame
-Reales Operadores
-
--   Operadores **aritméticos:**
-
-    -   Suma: `+`
-
-    -   Resta: `-`
-
-    -   Multiplicación: `*`
-
-    -   División: `/`
-
-    [no hay]{.alert} un operador de potenciación.
-
--   Operadores **de comparación**:\
-    (devuelven un valor lógico (booleano): Verdadero o Falso)
-
-    -   Mayor estricto: `>`
-
-    -   Mayor o igual: `>=`
-
-    -   Menor estricto: `<`
-
-    -   Menor o igual: `<=`
-
-    -   Igualdad: `==`
-
-    -   Desigualdad: `!=`
-:::
-
-::: frame
-Reales Funciones matemáticas de la biblioteca `<cmath>`
-
--   `abs(x)`: $|x|$
-
--   `sqrt(x)`: $\sqrt{x}$
-
--   `sin(x)`: seno de $x$ ($x$ en radianes)
-
--   `cos(x)`: coseno de $x$ ($x$ en radianes)
-
--   `atan(x)`: ángulo (en radianes) cuya tangente es $x$
-
--   `log(x)`: logaritmo neperiano de $x$
-
--   `exp(x)`: $e^x$
-
--   `pow(x, exp)`: $x^{exp}$
-
--   `round(x)`: mayor entero $e$ tal que $e \leq x+0.5$
-
--   `ceil(x)`: redondeo al entero más grande
-
--   `floor(x)`: redondeo al entero más pequeño
-:::
-
-# Bibliotecas de C++
-
-::: frame
-Bibliotecas de C++ ¿Qué son?
-
--   Junto con el compilador de C++ se incluyen ciertos archivos:
-    **bibliotecas (o librerías) de funciones**
-
--   Contienen código objeto para realizar diversas tareas: escribir por
-    pantalla, leer datos, manejar números, calcular funciones
-    matemáticas, manejar ficheros, descargarse un fichero de internet,
-    \...
-
--   Tareas difíciles de programar (o que se usan con frecuencia)
-
--   Se pueden utilizar fácilmente sin necesidad de preocuparnos por su
-    implementación
-
--   Biblioteca en C++:
-
-    -   fichero objeto (.a, .so, .dll, ...)
-
-    -   fichero de cabeceras (.h, .hpp, ...).
-:::
-
-::: frame
-Bibliotecas de C++ Declaración de bibliotecas
-
-``` {style="slideExample"}
-#include <nombre del fichero de cabeceras>(*@ \footnote{Muchas veces usaremos: nombre de la biblioteca} @*)
+```python
+edad = 21  # Python infiere que edad es un entero (int)
 ```
 
--   Se escribe entre `<` y `>`
+::: {.callout-tip}
+En VSCode puedes colocar el puntero de tu ratón (_hover_) sobre una variable para recibir una pista sobre su tipo.
+:::
 
--   **Se colocan [al principio]{.underline} del código fuente**
+---
 
-**Ejemplos**:
+## Enteros {.center}
 
-``` {style="slideExample"}
-#include <iostream>
-#include <cmath>
+---
+
+### Números enteros en Python
+
+- **Palabra reservada**: `int`
+- **Literales**: `1`, `-3`, `0`, `1`, `3_000_000`, `2E3`
+- **Dominio**: _depende de la arquitectura de la máquina_
+- **Operadores**:
+    - **Aritméticos**: `+`, `-`, `*`, `/`, `//`, `%`, `**`
+    - **Comparación**: `>`, `>=`, `<`, `<=`, `==`, `!=`
+
+---
+
+### Enteros: Representación literal
+
+- Secuencia de uno o más dígitos (caracteres 0, 1, ..., 9)
+- Pueden ir precedidos por un signo (`+` o `-`)
+- Barras bajas (`_`) para separar dígitos
+- Python admite notación científica
+- No se permiten ceros a la izquierda
+
+```python 
+b = 3    
+c = -523
+c = +444
+d = 2
+e = 4_0_0
+f = 2E3
 ```
 
-**Mirar:**
+---
 
-::: itemize
-<https://en.cppreference.com/w/cpp/header/cmath>
+### Enteros: Dominio
 
-<https://github.com/gcc-mirror/gcc/blob/master/libstdc++-v3/include/c_std/cmath>
-:::
-:::
+- En matemáticas:
+    - Dominio $[-\infty,+\infty]$ 
+- En informática:
+    - Entre un **mínimo** y un **máximo** 
+    - Dependen de la arquitectura de la máquina
 
-::: frame
-Bibliotecas de C++ Bibliotecas estándar de C++
+---
 
--   `iostream`: funciones de entrada y salida estándar, incluyendo la
-    escritura en pantalla y la lectura en el teclado
+#### Enteros: Dominio en otros lenguajes
 
-    -   [**Esta biblioteca es indispensable**]{.alert} en nuestros
-        programas
+|   **Palabra clave**     |  **Tipo de dato**  |  **Tamaño (en bits)**  |
+| ----------------------- | ------------------ | ---------------------- |
+|        `short`          |       entero       |         16             |
+|         `int`           |       entero       |         32             |
+|         `long`          |       entero       |         32             |
+|      `long long`        |       entero       |         64             |
 
--   `cstdio`: funciones para manipular datos de entrada y salida
 
--   `cstdlib`: funciones de utilidades de uso general
+---
 
--   `cmath`: definiciones de constantes universales y funciones
-    matemáticas
+#### Enteros: Dominio en python
 
--   `string`: funciones para trabajar con cadenas de caracteres (texto)
+- En Python, **todos los tipos de enteros están unificados** en `int`
 
--   `vector`: funcionalidades para trabajar con vectores y matrices
+---
 
--   `fstream`: funcionalidades para trabajar con ficheros (persistencia)
-:::
+### Enteros: Operadores
 
-# Caracteres y cadenas
+- Operadores **aritméticos:**
+    - Suma: `+`
+    - Resta: `-`
+    - Multiplicación: `*`
+    - División: `/`
+    - División entera: `//`
+    - Módulo (resto de la división): `%` **¡Ojo!**
+    - Potencia: `**`
 
-::: frame
-Caracteres Tipo carácter
+- Operadores **de comparación**:
+    - Mayor estricto: `>`
+    - Mayor o igual: `>=`
+    - Menor estricto: `<`
+    - Menor o igual: `<=`
+    - Igualdad: `==` **¡Atención!**
+    - Desigualdad: `!=`
 
-C++ dispone de [**un tipo básico de carácter**]{.underline}:
+---
 
-::: small
-                           **Palabra clave**                            **Tipo de dato**   **Tamaño (en bits)**
-  -------------------------------------------------------------------- ------------------ ----------------------
-                                 `char`                                     carácter                8
-                                `short`                                      entero               16$^*$
-                                 `int`                                       entero               32$^*$
-                                 `long`                                      entero               32$^*$
-                                `float`                                       real                  32
-                              `long long`                                    entero               64$^*$
-                                `double`                                      real                  64
-                             `long double`                                    real                96$^*$
-                                 `bool`                                     booleano            8 (1 bit)
-                                 `void`                                    tipo nulo                \-
-   $^*$Dependen del compilador, S.O. y microprocesador del ordenador.                     
-:::
-:::
+# Reales {.center}
 
-::: frame
-Caracteres Representación (externa)
+---
 
--   Una letra, escrita [**entre comillas simples**]{.underline}
+### Números reales en Python
 
-    -   En el teclado español, se encuentra a la derecha del 0 (junto
-        con el carácter `?`)
+- **Palabra reservada**: `float`
+- **Literales**: `1`, `1.0`, `0.3`, `.2`, `1e-3`
+- **Dominio**: _depende de la arquitectura de la máquina_
+- **Operadores**:
+    - **Aritméticos**: `+`, `-`, `*`, `/`, `**`
+    - **Comparación**: `>`, `>=`, `<`, `<=`, `==`, `!=`
 
-**Primeros ejemplos de uso**
+---
 
-``` {style="slideExample"}
-char a;       // declaración de variable de tipo carácter
-char b = 'a'; // definición de variable b
-              // e inicialización a literal 'a'
-char c = '3'; // variable inicializada al valor '3'
-              // que NO ES valor 3, ¡ojo!
+### Reales: Dominio
+
+- En matemáticas:
+    - Dominio $[-\infty,+\infty]$ 
+- En informática:
+    - Entre un **mínimo** y un **máximo** 
+    - Dependen de la arquitectura de la máquina
+
+---
+
+#### Reales: Dominio en otros lenguajes
+
+|   **Palabra clave**     |  **Tipo de dato**  |  **Tamaño (en bits)**  |
+| ----------------------- | ------------------ | ---------------------- |
+|        `float`          |        real        |           32           |
+|        `double`         |        real        |           64           |
+|     `long double`       |        real        |         96             |
+
+---
+
+#### Enteros: Dominio en python
+
+- En Python, **todos los tipos de reales están unificados** en `float`
+
+---
+
+### Reales: Operadores
+
+- Operadores **aritméticos:**
+    - Suma: `+`
+    - Resta: `-`
+    - Multiplicación: `*`
+    - División: `/`
+    - Potencia: `**`
+- Operadores **de comparación**:\
+    - Mayor estricto: `>`
+    - Mayor o igual: `>=`
+    - Menor estricto: `<`
+    - Menor o igual: `<=`
+    - Igualdad: `==`
+    - Desigualdad: `!=`
+
+---
+
+## Funciones numéricas {.center}
+
+
+---
+
+### Funciones: Breve introducción
+
+- Una **función** es un bloque de código que realiza una tarea específica
+- **De momento**, no vamos a preocuparnos por **cómo se definen**,
+    - sino por **cómo se utilizan**
+- Para ejecutar una función, se ha de **invocar** o **llamar** a la función
+    - Se hace escribiendo el nombre de la función seguido de paréntesis `()`
+    - Si la función requiere **argumentos**, se escriben dentro de los paréntesis
+
+```python
+print("Hola, mundo!")  # La función se llama print, y recibe un argumento
 ```
-:::
 
-::: frame
-Caracteres Rango de valores
+---
 
-[**Caracteres imprimibles**]{style="background-color: black"}
+### Bibliotecas (libraries) de Python
 
--   Caracteres alfabéticos: `'a','b',...,'z','A','B',...,'Z'`
+- Uno de los principios fundamentales del desarrollo software es la **reutilización**
+- Funcionalidades comunes **han sido ya implementadas por otros**
+- Algunas de estas funcionalidades existen disponibles en el propio lenguaje
+    - `print()` o `input()`
+- Algunas de estas funcionalidades han sido **integradas por defecto** en el intérprete de Python.
+    - El conjunto de funcionalidades incorporadas forma parte de la _Standard Library_ (`stdlib`).
+    - Existen **muchas** otras funciones, algunas de las cuales usaremos con frecuencia.
+- Para utilizar una función de alguna de estas bibliotecas, **debemos importarla**.
 
--   Caracteres numéricos o dígitos: `'0','1',...,'9'`
+```python
+import math  # importa la biblioteca math
 
--   Otros caracteres imprescindibles: `'+','-','.',' ',...`
-:::
-
-::: frame
-Caracteres Representación interna: tabla ASCII
-
-::: center
-![image](images/tablaASCII.png){width=".75\\columnwidth"}\
-(filas y columnas en notación hexadecimal \[base 16\])
-:::
-
-::: flushleft
-*Créditos*: <https://es.wikipedia.org/wiki/ASCII> (tabla de 1968)
-:::
-:::
-
-::: frame
-Caracteres Operadores
-
--   Operadores **de comparación**:\
-    (devuelven un valor lógico (booleano): Verdadero o Falso)
-
-    -   Mayor estricto: `>`
-
-    -   Mayor o igual: `>=`
-
-    -   Menor estricto: `<`
-
-    -   Menor o igual: `<=`
-
-    -   Igualdad: `==`
-
-    -   Desigualdad: `!=`
-
--   Operaciones de **conversión** (cast):
-
-    -   `(char){entero}`: devuelve el carácter asociado al entero dado,
-        según la tabla ASCII
-
-    ```{=html}
-    <!-- -->
-    ```
-        char a = 'b';         // la variable a contendrá el caracter 'b'
-        int valor = (int) a;  // la variable valor contendrá el entero 98
-        int otro = (int) 'c'; // la variable otro contendrá el entero 99
-:::
-
-::: frame
-Cadenas Representación
-
--   Cero o más letras, [**entre comillas dobles**]{.underline}
-
-    -   En el teclado español, se encuentran en la tecla del número 2
-        (junto con el carácter `@`)
-
--   **Por ahora, solo vamos a trabajar con los literales de cadena**
-
-**Primeros ejemplos de uso**
-
-    "Hola, mundo!"
-    "" // cadena vacía
-:::
-
-# Constantes
-
-::: frame
-Constantes
-
--   El valor del dato [**permanece inalterado**]{.underline} durante la
-    ejecución del programa
-
-    -   ¿Qué ocurrirá si se intenta cambiar el valor de una constante en
-        el código?\
-        $\Rightarrow$ [**error de compilación**]{.alert}
-
--   Declaración similar a las variables, pero:
-
-    -   Se precede el tipo de dato con la palabra reservada `const`
-
-    -   Hay que indicar el valor que toma la constante durante todo el
-        programa
-
--   **Recomendación**: utilizar mayúsculas para los identificadores
-
-Ejemplos:
-
-::: lrbox
-``` {style="slideExample"}
-const int DIAS_SEMANA = 7;
-  const float NUMERO_PI = 3.141592;
-  const char OPCION_SALIR = 'c';
+math.abs(-3)  # invoca la función abs de la biblioteca math
 ```
-:::
-:::
 
-::: frame
-Tareas para la próxima clase
+---
 
-1.  **Repasa los conceptos vistos y responde las siguientes preguntas**:
+### Funciones numéricas nativas y de la `stdlib`
 
-    -   *¿Qué es una variable? ¿Y una constante?*
+| Biblioteca | Invocación | Descripción |
+| -- | -- | -- |
+| nativa | `int(x)` | **Convierte** la entrada a entero |
+| nativa | `float(x)` | **Convierte** la entrada a real |
+| nativa | `abs(x)` | Valos absoluto |
+| nativa | `round(x)` | Redondeo |
+| math   | `math.sqrt(x)` | Raíz cuadrada |
+| math   | `math.sin(x)` | Seno |
+| math   | `math.cos(x)` | Coseno |
+| math   | `math.atan(x)` | Arcotangente |
+| math   | `math.log(x)` | Logaritmo |
+| math   | `math.exp(x)` | Exponencial |
+| math   | `math.floor(x)` | Parte entera |
+| math   | `math.ceil(x)` | Parte entera + 1 |
 
-    -   *¿Cómo se define una variable?*
+---
 
-    -   *Enumera las restricciones para definir un identificador de una
-        variable o constante*
+## Expresiones avanzadas con números {.center}
 
-    -   *Define una variable entera para representar un DNI, ¿qué tipo
-        de entero es apropiado?*
+---
 
-    -   *Define una variable de tipo real y asígnale el valor 2.3*
+### Tipos de los operandos y resultados
 
-    -   *Define una variable de tipo carácter y asígnale la primera
-        letra de tu nombre*
-:::
+- Cada operación está compuesta por una serie de **operandos** y genera un **resultado** 
+    - _Ej_: `3 + 4` es una expresión que toma dos `int` y devuelve un `int`
+- La mayoría de operadores aritméticos permiten combinar operandos de diferentes tipos
+    - _Ej_: `3 + 4.0` es una expresión que toma un `int` y un `float` y devuelve un `float`
+- Algunas operaciones toman operandos de un tipo y devuelven un resultado de otro tipo
+    - _Ej_: `3 / 4` es una expresión que toma dos `int` y devuelve un `float`
+- Algunas funciones numéricas requieren operandos de un tipo específico (un int)
+    - _Ej_: `math.factorial(3)` requiere un `int` y devuelve un `int`
+- Recuerda que:
+    - `float()` convierte cualquier `int` en un `float` equivalente
+    - `int()` **elimina los decimales** de un `float` y lo convierte en un `int`
 
-#  {#section .unnumbered}
+---
 
-[^1]: Una expresión es un conjunto de valores, operaciones y funciones
-    que dan como resultado un único valor
+## Ejercicios {.center}
 
-[^2]: <https://jvns.ca/blog/2023/01/13/examples-of-floating-point-problems/>
+---
+
+¿De qué **tipo** es cada una de las siguientes variables?
+
+```python
+a = 3 + 2.1
+b = 3 / 2
+c = 3 // 2
+d = 3 ** 2
+e = int(2.1)
+f = round(2.1)
+g = math.sqrt(4)
+h = int(a) * c * d
+```
+
+---
+
+¿Qué resultado se obtiene al ejecutar el siguiente código?
+
+```python
+```
+
+---
+
+Encuentra el fallo en el siguiente código:
+
+```python
+```
+
 

@@ -5,3 +5,5 @@ sol
 /.quarto/
 
 Session.vim
+bindings.lua
+sandbox*
