@@ -10,7 +10,7 @@
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.56">
 
-  <title>Fundamentos de Informática – Teoría 202</title>
+  <title>Fundamentos de Informática – Teoría 203</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,71 +28,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #767676;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #767676;  padding-left: 4px; }
-    div.sourceCode
-      { color: #545454; background-color: #fefefe; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #545454; } /* Normal */
-    code span.al { color: #7928a1; } /* Alert */
-    code span.an { color: #696969; } /* Annotation */
-    code span.at { color: #a55a00; } /* Attribute */
-    code span.bn { color: #7928a1; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #d91e18; } /* ControlFlow */
-    code span.ch { color: #008000; } /* Char */
-    code span.cn { color: #d91e18; } /* Constant */
-    code span.co { color: #696969; } /* Comment */
-    code span.cv { color: #696969; font-style: italic; } /* CommentVar */
-    code span.do { color: #696969; font-style: italic; } /* Documentation */
-    code span.dt { color: #7928a1; } /* DataType */
-    code span.dv { color: #7928a1; } /* DecVal */
-    code span.er { color: #7928a1; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #a55a00; } /* Float */
-    code span.fu { color: #06287e; } /* Function */
-    code span.im { } /* Import */
-    code span.in { color: #696969; } /* Information */
-    code span.kw { color: #d91e18; } /* Keyword */
-    code span.op { color: #00769e; } /* Operator */
-    code span.ot { color: #d91e18; } /* Other */
-    code span.pp { color: #7928a1; } /* Preprocessor */
-    code span.sc { color: #00769e; } /* SpecialChar */
-    code span.ss { color: #008000; } /* SpecialString */
-    code span.st { color: #008000; } /* String */
-    code span.va { color: #a55a00; } /* Variable */
-    code span.vs { color: #008000; } /* VerbatimString */
-    code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -392,486 +327,107 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="#223d71" data-background-image="../../../src/_style/logos/unizar-black.svg" data-background-opacity="0.30" data-background-size="auto 600px" class="quarto-title-block center">
-  <h1 class="title">Teoría 202</h1>
+  <h1 class="title">Teoría 203</h1>
   <p class="subtitle">Tipos Numerales</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="tipos-de-datos-en-python" class="slide level2 center">
-<h2>Tipos de datos en Python</h2>
+<section class="slide level2">
+
+<p>Caracteres Representación (externa)</p>
+<ul>
+<li><p>Una letra, escrita <u><strong>entre comillas simples</strong></u></p>
+<ul>
+<li>En el teclado español, se encuentra a la derecha del 0 (junto con el carácter <code>?</code>)</li>
+</ul></li>
+</ul>
+<p><strong>Primeros ejemplos de uso</strong></p>
+<pre><code>char a;       // declaración de variable de tipo carácter
+char b = 'a'; // definición de variable b
+              // e inicialización a literal 'a'
+char c = '3'; // variable inicializada al valor '3'
+              // que NO ES valor 3, ¡ojo!</code></pre>
 </section>
 <section class="slide level2">
 
-<h3 id="tipos-de-datos-básicos-en-python">Tipos de datos básicos en Python</h3>
+<p>Caracteres Rango de valores</p>
+<p>[<strong>Caracteres imprimibles</strong>]</p>
 <ul>
-<li>Todos los lenguajes cuentan con una serie de tipos básicos.</li>
-<li>Los tipos básicos de Python que estudiaremos son:
-<ul>
-<li><strong>Enteros</strong>: para representar números enteros</li>
-<li><strong>Reales</strong>: para representar números reales</li>
-<li><strong>Booleanos</strong>: para representar valores de cierto o falso</li>
-<li><strong>Texto</strong>: para representar cadenas de caracteres</li>
-</ul></li>
+<li><p>Caracteres alfabéticos: <code>'a','b',...,'z','A','B',...,'Z'</code></p></li>
+<li><p>Caracteres numéricos o dígitos: <code>'0','1',...,'9'</code></p></li>
+<li><p>Otros caracteres imprescindibles: <code>'+','-','.',' ',...</code></p></li>
 </ul>
 </section>
 <section class="slide level2">
 
-<h3 id="para-cada-tipo-de-dato-nos-interesa-saber">Para cada tipo de dato, nos interesa saber…</h3>
+<p>Caracteres Representación interna: tabla ASCII</p>
+<p><img data-src="images/tablaASCII.png" alt="image"><br>
+(filas y columnas en notación hexadecimal [base 16])</p>
+<p><em>Créditos</em>: <a href="https://es.wikipedia.org/wiki/ASCII" class="uri">https://es.wikipedia.org/wiki/ASCII</a> (tabla de 1968)</p>
+</section>
+<section class="slide level2">
+
+<p>Caracteres Operadores</p>
 <ul>
-<li>Su <strong>palabra reservada</strong>
+<li><p>Operadores <strong>de comparación</strong>:<br>
+(devuelven un valor lógico (booleano): Verdadero o Falso)</p>
 <ul>
-<li><code>int</code>, <code>float</code>, etc.</li>
+<li><p>Mayor estricto: <code>&gt;</code></p></li>
+<li><p>Mayor o igual: <code>&gt;=</code></p></li>
+<li><p>Menor estricto: <code>&lt;</code></p></li>
+<li><p>Menor o igual: <code>&lt;=</code></p></li>
+<li><p>Igualdad: <code>==</code></p></li>
+<li><p>Desigualdad: <code>!=</code></p></li>
 </ul></li>
-<li>Sus <strong>literales</strong>
+<li><p>Operaciones de <strong>conversión</strong> (cast):</p>
 <ul>
-<li><em>¿un número real se escribe 1,7 o 1.7?</em></li>
-</ul></li>
-<li>Su <strong>dominio</strong> (rango de valores)
-<ul>
-<li><em>¿puedo representar un D.N.I. con un <code>int</code>?</em></li>
-</ul></li>
-<li>Sus <strong>operaciones</strong> disponibles
-<ul>
-<li><em>¿puedo sumar números enteros?</em></li>
-</ul></li>
+<li><code>(char){entero}</code>: devuelve el carácter asociado al entero dado, según la tabla ASCII</li>
+</ul>
+<!-- -->
+<pre><code>char a = 'b';         // la variable a contendrá el caracter 'b'
+int valor = (int) a;  // la variable valor contendrá el entero 98
+int otro = (int) 'c'; // la variable otro contendrá el entero 99</code></pre></li>
 </ul>
 </section>
 <section class="slide level2">
 
-<h4 id="dominio-de-un-tipo-de-dato">Dominio de un tipo de dato</h4>
+<p>Cadenas Representación</p>
 <ul>
-<li>El <strong>dominio</strong> de un tipo de dato es el conjunto de valores que puede representar</li>
-<li>A diferencia de las matemáticas, en programación:
+<li><p>Cero o más letras, <u><strong>entre comillas dobles</strong></u></p>
 <ul>
-<li><strong>Todos los tipos de datos tienen un dominio finito</strong></li>
+<li>En el teclado español, se encuentran en la tecla del número 2 (junto con el carácter <code>@</code>)</li>
 </ul></li>
-<li>El <em>tamaño</em> de un tipo de dato determina su dominio
-<ul>
-<li>Un tipo de dato que requiere <strong>más bits</strong> podrá representar <strong>más valores</strong></li>
-</ul></li>
+<li><p><strong>Por ahora, solo vamos a trabajar con los literales de cadena</strong></p></li>
 </ul>
+<p><strong>Primeros ejemplos de uso</strong></p>
+<pre><code>"Hola, mundo!"
+"" // cadena vacía</code></pre>
+</section>
+<section id="constantes" class="slide level2">
+<h2>Constantes</h2>
 </section>
 <section class="slide level2">
 
-<h3 id="tipos-implícitos">Tipos implícitos</h3>
+<p>Constantes</p>
 <ul>
-<li>Recordad que Python es un lenguaje de <strong>tipado dinámico</strong>
+<li><p>El valor del dato <u><strong>permanece inalterado</strong></u> durante la ejecución del programa</p>
 <ul>
-<li>No es necesario declarar el tipo de una variable</li>
-<li>La palabra reservada de cada tipo será útil para operaciones específicas</li>
+<li>¿Qué ocurrirá si se intenta cambiar el valor de una constante en el código?<br>
+<span class="math inline">\(\Rightarrow\)</span> <span class="alert"><strong>error de compilación</strong></span></li>
 </ul></li>
+<li><p>Declaración similar a las variables, pero:</p>
+<ul>
+<li><p>Se precede el tipo de dato con la palabra reservada <code>const</code></p></li>
+<li><p>Hay que indicar el valor que toma la constante durante todo el programa</p></li>
+</ul></li>
+<li><p><strong>Recomendación</strong>: utilizar mayúsculas para los identificadores</p></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>edad <span class="op">=</span> <span class="dv">21</span>  <span class="co"># Python infiere que edad es un entero (int)</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>En VSCode puedes colocar el puntero de tu ratón (<em>hover</em>) sobre una variable para recibir una pista sobre su tipo.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="enteros" class="slide level2 center">
-<h2>Enteros</h2>
-</section>
-<section class="slide level2">
-
-<h3 id="números-enteros-en-python">Números enteros en Python</h3>
-<ul>
-<li><strong>Palabra reservada</strong>: <code>int</code></li>
-<li><strong>Literales</strong>: <code>1</code>, <code>-3</code>, <code>0</code>, <code>1</code>, <code>3_000_000</code>, <code>2E3</code></li>
-<li><strong>Dominio</strong>: <em>depende de la arquitectura de la máquina</em></li>
-<li><strong>Operadores</strong>:
-<ul>
-<li><strong>Aritméticos</strong>: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code>, <code>**</code></li>
-<li><strong>Comparación</strong>: <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>==</code>, <code>!=</code></li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="enteros-representación-literal">Enteros: Representación literal</h3>
-<ul>
-<li>Secuencia de uno o más dígitos (caracteres 0, 1, …, 9)</li>
-<li>Pueden ir precedidos por un signo (<code>+</code> o <code>-</code>)</li>
-<li>Barras bajas (<code>_</code>) para separar dígitos</li>
-<li>Python admite notación científica</li>
-<li>No se permiten ceros a la izquierda</li>
-</ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>b <span class="op">=</span> <span class="dv">3</span>    </span>
-<span id="cb2-2"><a></a>c <span class="op">=</span> <span class="op">-</span><span class="dv">523</span></span>
-<span id="cb2-3"><a></a>c <span class="op">=</span> <span class="op">+</span><span class="dv">444</span></span>
-<span id="cb2-4"><a></a>d <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb2-5"><a></a>e <span class="op">=</span> <span class="dv">4_0_0</span></span>
-<span id="cb2-6"><a></a>f <span class="op">=</span> <span class="fl">2E3</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2">
-
-<h3 id="enteros-dominio">Enteros: Dominio</h3>
-<ul>
-<li>En matemáticas:
-<ul>
-<li>Dominio <span class="math inline">\([-\infty,+\infty]\)</span></li>
-</ul></li>
-<li>En informática:
-<ul>
-<li>Entre un <strong>mínimo</strong> y un <strong>máximo</strong></li>
-<li>Dependen de la arquitectura de la máquina</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h4 id="enteros-dominio-en-otros-lenguajes">Enteros: Dominio en otros lenguajes</h4>
-<table class="caption-top" style="width:100%;">
-<colgroup>
-<col style="width: 36%">
-<col style="width: 28%">
-<col style="width: 34%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Palabra clave</strong></th>
-<th><strong>Tipo de dato</strong></th>
-<th><strong>Tamaño (en bits)</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>short</code></td>
-<td>entero</td>
-<td>16</td>
-</tr>
-<tr class="even">
-<td><code>int</code></td>
-<td>entero</td>
-<td>32</td>
-</tr>
-<tr class="odd">
-<td><code>long</code></td>
-<td>entero</td>
-<td>32</td>
-</tr>
-<tr class="even">
-<td><code>long long</code></td>
-<td>entero</td>
-<td>64</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section class="slide level2">
-
-<h4 id="enteros-dominio-en-python">Enteros: Dominio en python</h4>
-<ul>
-<li>En Python, <strong>todos los tipos de enteros están unificados</strong> en <code>int</code></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="enteros-operadores">Enteros: Operadores</h3>
-<ul>
-<li>Operadores <strong>aritméticos:</strong>
-<ul>
-<li>Suma: <code>+</code></li>
-<li>Resta: <code>-</code></li>
-<li>Multiplicación: <code>*</code></li>
-<li>División: <code>/</code></li>
-<li>División entera: <code>//</code></li>
-<li>Módulo (resto de la división): <code>%</code> <strong>¡Ojo!</strong></li>
-<li>Potencia: <code>**</code></li>
-</ul></li>
-<li>Operadores <strong>de comparación</strong>:
-<ul>
-<li>Mayor estricto: <code>&gt;</code></li>
-<li>Mayor o igual: <code>&gt;=</code></li>
-<li>Menor estricto: <code>&lt;</code></li>
-<li>Menor o igual: <code>&lt;=</code></li>
-<li>Igualdad: <code>==</code> <strong>¡Atención!</strong></li>
-<li>Desigualdad: <code>!=</code></li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-</section>
-<section>
-<section id="reales" class="title-slide slide level1 center">
-<h1>Reales</h1>
-
-</section>
-<section class="slide level2">
-
-<h3 id="números-reales-en-python">Números reales en Python</h3>
-<ul>
-<li><strong>Palabra reservada</strong>: <code>float</code></li>
-<li><strong>Literales</strong>: <code>1</code>, <code>1.0</code>, <code>0.3</code>, <code>.2</code>, <code>1e-3</code></li>
-<li><strong>Dominio</strong>: <em>depende de la arquitectura de la máquina</em></li>
-<li><strong>Operadores</strong>:
-<ul>
-<li><strong>Aritméticos</strong>: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>**</code></li>
-<li><strong>Comparación</strong>: <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>==</code>, <code>!=</code></li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="reales-dominio">Reales: Dominio</h3>
-<ul>
-<li>En matemáticas:
-<ul>
-<li>Dominio <span class="math inline">\([-\infty,+\infty]\)</span></li>
-</ul></li>
-<li>En informática:
-<ul>
-<li>Entre un <strong>mínimo</strong> y un <strong>máximo</strong></li>
-<li>Dependen de la arquitectura de la máquina</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h4 id="reales-dominio-en-otros-lenguajes">Reales: Dominio en otros lenguajes</h4>
-<table class="caption-top" style="width:100%;">
-<colgroup>
-<col style="width: 36%">
-<col style="width: 28%">
-<col style="width: 34%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Palabra clave</strong></th>
-<th><strong>Tipo de dato</strong></th>
-<th><strong>Tamaño (en bits)</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>float</code></td>
-<td>real</td>
-<td>32</td>
-</tr>
-<tr class="even">
-<td><code>double</code></td>
-<td>real</td>
-<td>64</td>
-</tr>
-<tr class="odd">
-<td><code>long double</code></td>
-<td>real</td>
-<td>96</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section class="slide level2">
-
-<h4 id="enteros-dominio-en-python-1">Enteros: Dominio en python</h4>
-<ul>
-<li>En Python, <strong>todos los tipos de reales están unificados</strong> en <code>float</code></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="reales-operadores">Reales: Operadores</h3>
-<ul>
-<li>Operadores <strong>aritméticos:</strong>
-<ul>
-<li>Suma: <code>+</code></li>
-<li>Resta: <code>-</code></li>
-<li>Multiplicación: <code>*</code></li>
-<li>División: <code>/</code></li>
-<li>Potencia: <code>**</code></li>
-</ul></li>
-<li>Operadores <strong>de comparación</strong>:<br>
-
-<ul>
-<li>Mayor estricto: <code>&gt;</code></li>
-<li>Mayor o igual: <code>&gt;=</code></li>
-<li>Menor estricto: <code>&lt;</code></li>
-<li>Menor o igual: <code>&lt;=</code></li>
-<li>Igualdad: <code>==</code></li>
-<li>Desigualdad: <code>!=</code></li>
-</ul></li>
-</ul>
-</section>
-<section id="funciones-numéricas" class="slide level2 center">
-<h2>Funciones numéricas</h2>
-</section>
-<section class="slide level2">
-
-<h3 id="funciones-breve-introducción">Funciones: Breve introducción</h3>
-<ul>
-<li>Una <strong>función</strong> es un bloque de código que realiza una tarea específica</li>
-<li><strong>De momento</strong>, no vamos a preocuparnos por <strong>cómo se definen</strong>,
-<ul>
-<li>sino por <strong>cómo se utilizan</strong></li>
-</ul></li>
-<li>Para ejecutar una función, se ha de <strong>invocar</strong> o <strong>llamar</strong> a la función
-<ul>
-<li>Se hace escribiendo el nombre de la función seguido de paréntesis <code>()</code></li>
-<li>Si la función requiere <strong>argumentos</strong>, se escriben dentro de los paréntesis</li>
-</ul></li>
-</ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="bu">print</span>(<span class="st">"Hola, mundo!"</span>)  <span class="co"># La función se llama print, y recibe un argumento</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2">
-
-<h3 id="bibliotecas-libraries-de-python">Bibliotecas (libraries) de Python</h3>
-<ul>
-<li>Uno de los principios fundamentales del desarrollo software es la <strong>reutilización</strong></li>
-<li>Funcionalidades comunes <strong>han sido ya implementadas por otros</strong></li>
-<li>Algunas de estas funcionalidades existen disponibles en el propio lenguaje
-<ul>
-<li><code>print()</code> o <code>input()</code></li>
-</ul></li>
-<li>Algunas de estas funcionalidades han sido <strong>integradas por defecto</strong> en el intérprete de Python.
-<ul>
-<li>El conjunto de funcionalidades incorporadas forma parte de la <em>Standard Library</em> (<code>stdlib</code>).</li>
-<li>Existen <strong>muchas</strong> otras funciones, algunas de las cuales usaremos con frecuencia.</li>
-</ul></li>
-<li>Para utilizar una función de alguna de estas bibliotecas, <strong>debemos importarla</strong>.</li>
-</ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="im">import</span> math  <span class="co"># importa la biblioteca math</span></span>
-<span id="cb4-2"><a></a></span>
-<span id="cb4-3"><a></a>math.<span class="bu">abs</span>(<span class="op">-</span><span class="dv">3</span>)  <span class="co"># invoca la función abs de la biblioteca math</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2">
-
-<h3 id="funciones-numéricas-nativas-y-de-la-stdlib">Funciones numéricas nativas y de la <code>stdlib</code></h3>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Biblioteca</th>
-<th>Invocación</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>nativa</td>
-<td><code>int(x)</code></td>
-<td><strong>Convierte</strong> la entrada a entero</td>
-</tr>
-<tr class="even">
-<td>nativa</td>
-<td><code>float(x)</code></td>
-<td><strong>Convierte</strong> la entrada a real</td>
-</tr>
-<tr class="odd">
-<td>nativa</td>
-<td><code>abs(x)</code></td>
-<td>Valor absoluto</td>
-</tr>
-<tr class="even">
-<td>nativa</td>
-<td><code>round(x)</code></td>
-<td>Redondeo</td>
-</tr>
-<tr class="odd">
-<td>math</td>
-<td><code>math.sqrt(x)</code></td>
-<td>Raíz cuadrada</td>
-</tr>
-<tr class="even">
-<td>math</td>
-<td><code>math.sin(x)</code></td>
-<td>Seno</td>
-</tr>
-<tr class="odd">
-<td>math</td>
-<td><code>math.cos(x)</code></td>
-<td>Coseno</td>
-</tr>
-<tr class="even">
-<td>math</td>
-<td><code>math.atan(x)</code></td>
-<td>Arcotangente</td>
-</tr>
-<tr class="odd">
-<td>math</td>
-<td><code>math.log(x)</code></td>
-<td>Logaritmo</td>
-</tr>
-<tr class="even">
-<td>math</td>
-<td><code>math.exp(x)</code></td>
-<td>Exponencial</td>
-</tr>
-<tr class="odd">
-<td>math</td>
-<td><code>math.floor(x)</code></td>
-<td>Entero por defecto</td>
-</tr>
-<tr class="even">
-<td>math</td>
-<td><code>math.ceil(x)</code></td>
-<td>Entero por exceso</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="expresiones-avanzadas-con-números" class="slide level2 center">
-<h2>Expresiones avanzadas con números</h2>
-</section>
-<section class="slide level2">
-
-<h3 id="tipos-de-los-operandos-y-resultados">Tipos de los operandos y resultados</h3>
-<ul>
-<li>Cada operación está compuesta por una serie de <strong>operandos</strong> y genera un <strong>resultado</strong>
-<ul>
-<li><em>Ej</em>: <code>3 + 4</code> es una expresión que toma dos <code>int</code> y devuelve un <code>int</code></li>
-</ul></li>
-<li>La mayoría de operadores aritméticos permiten combinar operandos de diferentes tipos
-<ul>
-<li><em>Ej</em>: <code>3 + 4.0</code> es una expresión que toma un <code>int</code> y un <code>float</code> y devuelve un <code>float</code></li>
-</ul></li>
-<li>Algunas operaciones toman operandos de un tipo y devuelven un resultado de otro tipo
-<ul>
-<li><em>Ej</em>: <code>3 / 4</code> es una expresión que toma dos <code>int</code> y devuelve un <code>float</code></li>
-</ul></li>
-<li>Algunas funciones numéricas requieren operandos de un tipo específico (un int)
-<ul>
-<li><em>Ej</em>: <code>math.factorial(3)</code> requiere un <code>int</code> y devuelve un <code>int</code></li>
-</ul></li>
-<li>Recuerda que:
-<ul>
-<li><code>float()</code> convierte cualquier <code>int</code> en un <code>float</code> equivalente</li>
-<li><code>int()</code> <strong>elimina los decimales</strong> de un <code>float</code> y lo convierte en un <code>int</code></li>
-</ul></li>
-</ul>
-</section>
-<section id="ejercicios" class="slide level2 center">
-<h2>Ejercicios</h2>
-</section>
-<section class="slide level2">
-
-<p>¿De qué <strong>tipo</strong> es cada una de las siguientes variables?</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>a <span class="op">=</span> <span class="dv">3</span> <span class="op">+</span> <span class="fl">2.1</span></span>
-<span id="cb5-2"><a></a>b <span class="op">=</span> <span class="dv">3</span> <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb5-3"><a></a>c <span class="op">=</span> <span class="dv">3</span> <span class="op">//</span> <span class="dv">2</span></span>
-<span id="cb5-4"><a></a>d <span class="op">=</span> <span class="dv">3</span> <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb5-5"><a></a>e <span class="op">=</span> <span class="bu">int</span>(<span class="fl">2.1</span>)</span>
-<span id="cb5-6"><a></a>f <span class="op">=</span> <span class="bu">round</span>(<span class="fl">2.1</span>)</span>
-<span id="cb5-7"><a></a>g <span class="op">=</span> math.sqrt(<span class="dv">4</span>)</span>
-<span id="cb5-8"><a></a>h <span class="op">=</span> <span class="bu">int</span>(a) <span class="op">*</span> c <span class="op">*</span> d</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2">
-
-<p>¿Qué resultado se obtiene al ejecutar el siguiente código?</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2">
-
-<p>Encuentra el fallo en el siguiente código:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Ejemplos:</p>
+<pre><code>DIAS_SEMANA = 7;
+NUMERO_PI = 3.141592;
+OPCION_SALIR = 'c';</code></pre>
 
 <div class="quarto-auto-generated-content">
 <p><img src="../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
@@ -879,7 +435,7 @@
 <p>Fundamentos de Informática</p>
 </div>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
