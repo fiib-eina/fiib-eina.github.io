@@ -297,16 +297,3 @@ h = int(a) * c * d
 
 ---
 
-¿Qué resultado se obtiene al ejecutar el siguiente código?
-
-```python
-```
-
----
-
-Encuentra el fallo en el siguiente código:
-
-```python
-```
-
-
