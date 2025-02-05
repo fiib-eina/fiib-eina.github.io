@@ -1,0 +1,185 @@
+---
+title: Problemas 2
+subtitle: Tipos Numéricos
+format: html
+draft: true
+---
+
+## Área y circunferencia
+
+Escribe un programa en Python que solicite al usuario el radio de un círculo y escriba en la pantalla el área y la longitud de la circunferencia correspondientes.
+
+$$
+Area = \pi r^2
+$$
+
+$$
+Circunferencia = 2 \pi r
+$$
+
+| Introduce el radio del círculo:
+| **1**
+| El área del círculo es:
+| 3.141592653589793
+| La circunferencia del círculo es:
+| 6.283185307179586
+
+<details>
+<summary>Solución</summary>
+
+```python
+PI = 3.141592653589793
+
+print("Introduce el radio del círculo:")
+radio = float(input())
+
+area = PI * (radio ** 2)
+circunferencia = 2 * PI * radio
+
+print("El área del círculo es:")
+print(area)
+
+print("La circunferencia del círculo es:")
+print(circunferencia)
+```
+
+</details>
+
+## Invertir un número de 2 cifras
+
+Escribe un programa en Python que solicite al usuario un número de dos cifras y escriba en la pantalla el número invertido.
+
+| Introduce un número de dos cifras:
+| **23**
+| El número invertido es:
+| 32
+
+<details>
+<summary>Solución</summary>
+
+```python
+print("Introduce un número de dos cifras:")
+numero = int(input())
+
+decenas = numero // 10
+unidades = numero % 10
+invertido = unidades * 10 + decenas
+
+print("El número invertido es:")
+print(invertido)
+```
+
+</details>
+
+
+## Invertir un número de 3 cifras
+
+Escribe un programa en Python que solicite al usuario un número de tres cifras y escriba en la pantalla el número invertido.
+
+| Introduce un número de tres cifras:
+| **123**
+| El número invertido es:
+| 321
+
+<details>
+<summary>Solución</summary>
+
+```python
+print("Introduce un número de tres cifras:")
+numero = int(input())
+
+centenas = numero // 100
+decenas = (numero % 100) // 10
+unidades = numero % 10
+
+invertido = unidades * 100 + decenas * 10 + centenas
+
+print("El número invertido es:")
+print(invertido)
+```
+
+</details>
+
+<details>
+<summary>Solución alternativa</summary>
+
+```python
+print("Introduce un número de tres cifras:")
+numero = int(input())
+
+numero_restante = numero
+
+unidades = numero % 10
+numero_restante = numero // 10
+
+decenas = numero_restante % 10
+numero_restante = numero_restante // 10
+
+centenas = numero_restante % 10
+numero_restante = numero_restante // 10
+
+invertido = unidades * 100 + decenas * 10 + centenas
+
+print("El número invertido es:")
+print(invertido)
+```
+
+</details>
+
+## Suma de dígitos
+
+Escribe un programa en Python que solicite al usuario un número de tres cifras y escriba en la pantalla la suma de sus dígitos.
+
+| Introduce un número de tres cifras:
+| **123**
+| La suma de los dígitos es:
+| 6
+
+<details>
+<summary>Solución</summary>
+
+```python
+print("Introduce un número de tres cifras:")
+numero = int(input())
+
+centenas = numero // 100
+decenas = (numero % 100) // 10
+unidades = numero % 10
+
+suma = centenas + decenas + unidades
+
+print("La suma de los dígitos es:")
+print(suma)
+```
+
+## Promedio de 3 números
+
+Escribe un programa en Python que solicite al usuario tres números enteros y escriba en la pantalla el promedio de los tres.
+
+| Introduce el primer número:
+| **1**
+| Introduce el segundo número:
+| **2**
+| Introduce el tercer número:
+| **3**
+| El promedio de los tres números es:
+| 2.0
+
+<details>
+<summary>Solución</summary>
+
+```python
+print("Introduce el primer número:")
+numero1 = int(input())
+print("Introduce el segundo número:")
+numero2 = int(input())
+print("Introduce el tercer número:")
+numero3 = int(input())
+
+promedio = (numero1 + numero2 + numero3) / 3
+
+print("El promedio de los tres números es:")
+print(promedio)
+```
+</details>
+
