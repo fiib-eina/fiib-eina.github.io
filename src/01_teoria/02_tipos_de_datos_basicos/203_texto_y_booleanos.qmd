@@ -1,133 +1,367 @@
 ---
 title: Teoría 203
-subtitle: Tipos Numerales
+subtitle: Texto y Booleanos
 format: revealjs
-draft: true
 ---
 
-Caracteres Representación (externa)
+## Cadenas de texto {.center}
 
--   Una letra, escrita [**entre comillas simples**]{.underline}
+---
 
-    -   En el teclado español, se encuentra a la derecha del 0 (junto
-        con el carácter `?`)
+### Cadenas de texto en Python
 
-**Primeros ejemplos de uso**
+- **Palabra reservada**: `str`
+- **Literales**: `"hola"`, `'hola'`, `""`, `''`, `f"hola {nombre}"`
+- **Dominio**: desde **0 caracteres** hasta **lo que quepa en memoria**
+- **Operadores**:
+    - **Cadenas**: `+`
+    - **Comparación**: `>`, `>=`, `<`, `<=`, `==`, `!=`
 
-``` 
-char a;       // declaración de variable de tipo carácter
-char b = 'a'; // definición de variable b
-              // e inicialización a literal 'a'
-char c = '3'; // variable inicializada al valor '3'
-              // que NO ES valor 3, ¡ojo!
+---
+
+### Cadenas de texto: Representación literal
+
+- Pareja de **comillas simples**, **dobles**, _otras representaciones especiales_
+    - Daremos preferencia a las **comillas dobles**
+- Contiene una cadena de **cero** o **más caracteres** en su interior
+- A veces querremos representar caracteres especiales: las propias comillas, saltos de línea, tabuladores, etc.
+    - Podemos utilizar **secuencias de escape** para representar estos caracteres
+        - El caracter `\` indica que el siguiente caracter es especial
+    - Para el caso de las comillas, podemos utilizar el otro tipo de comillas
+- Las cadenas **no pueden contener saltos de línea**, necesitamos utilizar `\n` para ello
+
+```python
+texto0 = ""                                # cadena vacía
+texto1 = "Hola, mundo!"                    # cadena de texto normal
+texto2 = 'Y Arquímedes dijo: "Eureka!"'    # comillas simples para envolver comillas dobles
+texto3 = "Y Arquímedes dijo: \"Eureka!\""  # caracter de escape para comillas dobles
+texto4 = "Frase en\ndos líneas"            # salto de línea
+```
+
+---
+
+
+### Cadenas de texto: Dominio
+
+- Una cadena de texto es una **secuencia de caracteres** 
+- Dicha secuencia puede ser de **cualquier longitud**
+    - Desde **cero caracteres** (cadena vacía)
+    - Hasta **lo que quepa en memoria**
+- Python soporta cualquier caracter soportado en [UCS-4](https://en.wikipedia.org/wiki/UTF-32)
+    - Caracteres ASCII: `a`, `A`, `1`, `!`, `?`, _espacio en blanco_
+    - Caracteres especiales: `\n` (_salto de línea_), `\t` (_tabulador_)
+    - Caracteres Latin-1: `á`, `é`, `í`, `ó`, `ú`, `ñ`, `ü`
+    - Caracteres Kanji: `漢`, `字`, `漢字`
+    - Caracteres Unicode: `💪`, `🙈`, `💩`, `💦`
+
+```python
+texto = "Hola, mundo! 😉"
+```
+
+---
+
+### Cadenas de texto: Representación interna
+
+- Python utiliza **UTF-8** para representar las cadenas de texto
+    - **UTF-8** es un formato de codificación de caracteres que permite representar cualquier caracter Unicode
+    - Cada caracter se representa con un número variable de bytes
+    - Los caracteres ASCII se representan con un byte
+    - Los caracteres no ASCII se representan con más de un byte
+- La tabla **ASCII** es un acuerdo de representación de caracteres en inglés
+    - Cada caracter se representa con **un número** de 7 bits
+    - Ejemplos: `A` (65), `Z` (90), `a` (97), `0` (48), `!` (33)
+- La codiciación de los caracteres _no-ASCII_ sigue un principio similar
+    - Los detalles quedan _fuera del alcance de este curso_
+
+---
+
+#### Tabla ASCII
+
+![https://es.wikipedia.org/wiki/ASCII](./img/tablaASCII.png)
+
+---
+
+### Cadenas de texto: Operadores
+
+- Operadores de **cadenas de texto**:
+    - **Concatenación**: `+`
+- Operadores de **comparación**:
+    - `==`, `!=`, `>`, `>=`, `<`, `<=`
+
+**Ejemplos**:
+
+```python
+texto1 = "Hola"
+texto2 = "mundo"
+texto3 = texto1 + ", " + texto2 + "!"
+
+cond1  = "Hola" == "hola"  # Falso
+cond2  = "aa" < "ab"       # Verdadero
+```
+
+---
+
+### Cadenas de texto: Funciones
+
+| Función  | Descripción                       |
+|----------|-----------------------------------|
+| `str()`  | Conversión a cadena               |
+| `ord()`  | Valor ASCII de un carácter        |
+| `chr()`  | Carácter ASCII de un valor (`str`)|
+| `len()`  | Longitud de la cadena             |
+
+**Ejemplos**:
+
+```python
+texto = str(42)       # str: "42"
+letra = chr(65)       # chr: "A"
+valor = ord('A')      # int: 65
+longitud = len(texto) # int: 2
+```
+
+---
+
+### Tipos de string especiales
+
+- Python ofrece varios tipos de strings especiales
+    - **Triple comilla**
+    - **Raw strings**
+    - **F-strings**
+
+---
+
+#### Triple comilla
+
+- Acepta comillas **simples** o **dobles**: `"""texto"""`, `'''texto'''`
+    - Permite escribir cadenas de texto multilínea
+    - Útil para documentar funciones, clases, módulos, etc.
+
+```python
+texto = """Este es un texto
+que ocupa varias líneas
+y se escribe con triple comilla"""
+```
+
+---
+
+#### Raw strings
+
+- Una `r` **inmediatamente antes** de las comillas: `r"texto"`
+    - Ignora los caracteres de escape
+    - Útil para expresiones regulares, rutas de archivos, etc.
+
+```python
+fichero1 =  "C:\\Users\\usuario\\archivo.txt"  # Tenemos que escapar cada barra
+fichero2 = r"C:\Users\usuario\archivo.txt"     # La r indica que el contenide se toma literalmente
+```
+
+---
+
+#### F-strings
+
+- Una `r` **inmediatamente antes** de las comillas: `f"texto {variable}"`
+    - Permite incluir variables dentro de una cadena de texto
+    - Útil para formatear cadenas de texto
+
+```python
+nombre = "Juan"
+edad = 21
+
+saludo2 = "Hola, me llamo " + nombre + " y tengo " + edad + " años"  # Concatenando
+saludo2 = f"Hola, me llamo {nombre} y tengo {edad} años"             # F-string
+```
+
+---
+
+
+## Booleanos {.center}
+
+---
+
+### Booleanos en Python
+
+- **Palabra reservada**: `bool`
+- **Literales**: `True`, `False`
+- **Dominio**: `True`, `False`
+- **Operadores**:
+    - **Lógicos**: `and`, `or`, `not`
+
+---
+
+### Booleanos: Representación literal
+
+- Los booleanos son un tipo de dato **binario**
+    - Solo pueden tomar dos valores: `True` o `False`
+- La primera letra **mayúscula** es **obligatoria**
+
+```python
+cond1 = True
+cond2 = False
+```
+
+---
+
+### Booleanos: Dominio
+
+- Los booleanos representan **valores de verdad**
+    - `True` representa **verdadero**
+    - `False` representa **falso**
+- Los booleanos son el resultado de **aserciones lógicas**
+
+---
+
+### Booleanos: Operadores
+
+- Operadores **booleanos**:
+    - **Conjunción**: `and`
+    - **Disyunción**: `or`
+    - **Negación**: `not`
+
+---
+
+#### Tabla de verdad de los operadores lógicos
+
+::: {.columns}
+::: {.column width="37%"}
+
+**AND**
+
+| `a` | `b` | `a and b` |
+|-----|-----|----------:|
+| ✅  | ✅  | ✅        |
+| ✅  | ❌  | ❌        |
+| ❌  | ✅  | ❌        |
+| ❌  | ❌  | ❌        |
+
+:::
+::: {.column width="37%"}
+
+**OR**
+
+| `a` | `b` | `a or b` |
+|-----|-----|---------:|
+| ✅  | ✅  | ✅       |
+| ✅  | ❌  | ✅       |
+| ❌  | ✅  | ✅       |
+| ❌  | ❌  | ❌       |
+
+:::
+::: {.column width="26%"}
+
+**NOT**
+
+| `a` | `not a` |
+|-----|--------:|
+| ✅  | ❌      |
+| ❌  | ✅      |
+
+:::
+:::
+
+
+---
+
+#### Ejemplos de operaciones lógicas
+
+
+```python
+ha_llovido = True
+he_fregado_el_suelo = False
+
+el_suelo_esta_mojado = ha_llovido or he_fregado_el_suelo
+```
+
+```python
+aprobado_practicas = True
+aprobado_teoricas = True
+aprobado_problemas = False
+
+aprobado = aprobado_practicas and aprobado_teoricas  # Los problemas no cuentan
+```
+
+```python
+tengo_leche = False
+tengo_agua = True
+tengo_pure_en_polvo = True
+
+puedo_hacer_pure = (tengo_leche or tengo_agua) and tengo_pure_en_polvo
+```
+
+```python
+estoy_en_casa = False
+llega_un_paquete = True
+
+entrega_fallida = not estoy_en_casa and llega_un_paquete  # 
+# El not tiene prioridad:  (not estoy_en_casa) and llega_un_paquete
+```
+
+---
+
+### Booleanos: Funciones
+
+- Aunque en Python existe la función `bool()`:
+    - **NO ES ACONSEJABLE UTILIZARLA** (_No funciona como esperaríais_)
+    - Evalua la **veracidad** de una variable y su comportamiento depende del tipo de dato
+        - Un entero es _falso_ si es **0**
+        - Una cadena de texto es _falsa_ si está **vacía**
+- En su lugar, para **obtener** valores booleanos utilizaremos siempre<br>**operadores de comparación**:
+    - `==`, `!=`, `>`, `>=`, `<`, `<=`
+
+**Ejemplos**:
+
+```python
+# CUIDADO
+verdadero = bool("True")  # True
+falso = bool("False")     # True
+
+# CORRECTO
+valor = "No"               # El usuario introduce "Si" o "No"
+verdadero = valor == "Si"  # False
+```
+
+---
+
+#### Ejemplos: El _Bar Zoomer_
+
+- El _Bar Zoomer_ sólo abre los **fines de semana**.<br>
+- El _Bar Zoomer_ no admite **menores**, ni **boomers**, ni **millennials**.
+
+```python
+edad = 21
+
+es_mayor_de_edad = edad >= 18                                                     # True
+es_zoomer = es_mayor_de_edad and edad < 25                                        # True
+# es_zoomer = 18 <= edad < 25   # Python soporta comparaciones encadenadas
+
+dia_de_la_semana = "Lunes"
+es_fin_de_semana = dia_de_la_semana == "Sábado" or dia_de_la_semana == "Domingo"  # False
+
+puede_entrar = es_zoomer and es_fin_de_semana                                     # False
 ```
 
 
 ---
 
-Caracteres Rango de valores
+#### Ejemplos: Derecho a beca
 
-[**Caracteres imprimibles**]
+- Existen dos tipos de becas: las becas **sociales** y las becas de **excelencia**.
+    - Las becas sociales se otorgan a los **nuevos estudiantes** cuyos **ingresos familiares** no superen los **30.000€**.
+    - Las becas de excelencia se otorgan a los estudiantes con una **nota media** igual o superior a **9.5**.
 
--   Caracteres alfabéticos: `'a','b',...,'z','A','B',...,'Z'`
+```python
+ingresos_anuales = 500_000
+num_matriculas = 1
+nota_media = 9.8
 
--   Caracteres numéricos o dígitos: `'0','1',...,'9'`
+primera_matricula = num_matriculas == 1                        # True
+ingresos_superiores = ingresos_anuales > 30_000                # True
 
--   Otros caracteres imprescindibles: `'+','-','.',' ',...`
+beca_social = primera_matricula and not ingresos_superiores    # False
+beca_excelencia = nota_media >= 9.5                            # True
 
-
----
-
-Caracteres Representación interna: tabla ASCII
-
-
-![image](images/tablaASCII.png){width=".75\\columnwidth"}\
-(filas y columnas en notación hexadecimal \[base 16\])
-
-
-
-*Créditos*: <https://es.wikipedia.org/wiki/ASCII> (tabla de 1968)
-
-
-
----
-
-Caracteres Operadores
-
--   Operadores **de comparación**:\
-    (devuelven un valor lógico (booleano): Verdadero o Falso)
-
-    -   Mayor estricto: `>`
-
-    -   Mayor o igual: `>=`
-
-    -   Menor estricto: `<`
-
-    -   Menor o igual: `<=`
-
-    -   Igualdad: `==`
-
-    -   Desigualdad: `!=`
-
--   Operaciones de **conversión** (cast):
-
-    -   `(char){entero}`: devuelve el carácter asociado al entero dado,
-        según la tabla ASCII
-
-    ```{=html}
-    <!-- -->
-    ```
-        char a = 'b';         // la variable a contendrá el caracter 'b'
-        int valor = (int) a;  // la variable valor contendrá el entero 98
-        int otro = (int) 'c'; // la variable otro contendrá el entero 99
-
-
----
-
-Cadenas Representación
-
--   Cero o más letras, [**entre comillas dobles**]{.underline}
-
-    -   En el teclado español, se encuentran en la tecla del número 2
-        (junto con el carácter `@`)
-
--   **Por ahora, solo vamos a trabajar con los literales de cadena**
-
-**Primeros ejemplos de uso**
-
-    "Hola, mundo!"
-    "" // cadena vacía
-
----
-
-## Constantes
-
----
-
-Constantes
-
--   El valor del dato [**permanece inalterado**]{.underline} durante la
-    ejecución del programa
-
-    -   ¿Qué ocurrirá si se intenta cambiar el valor de una constante en
-        el código?\
-        $\Rightarrow$ [**error de compilación**]{.alert}
-
--   Declaración similar a las variables, pero:
-
-    -   Se precede el tipo de dato con la palabra reservada `const`
-
-    -   Hay que indicar el valor que toma la constante durante todo el
-        programa
-
--   **Recomendación**: utilizar mayúsculas para los identificadores
-
-Ejemplos:
-
-
-``` 
-DIAS_SEMANA = 7;
-NUMERO_PI = 3.141592;
-OPCION_SALIR = 'c';
+beca = beca_social or beca_excelencia                          # True
 ```
+
+_**Propuesta**_: Adapta el ejemplo de las becas para que sea interactivo (`print()` y `input()`) y comprueba su funcionamiento para distintos valores de entrada.
+
 

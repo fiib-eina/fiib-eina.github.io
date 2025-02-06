@@ -1,0 +1,112 @@
+---
+title: Problemas 3
+subtitle: Texto y Booleanos
+format: html
+draft: true
+---
+
+
+## Lectura de datos y formato de salida
+
+Escribe un programa en Python que solicite al usuario su nombre y su edad, y escriba en la pantalla un mensaje de bienvenida.
+
+| Introduce tu nombre:
+| **Juan**
+| Introduce tu edad:
+| **21**
+| Bienvenido, Juan. Tienes 21 años.
+
+<details>
+<summary>Solución</summary>
+
+```python
+print("Introduce tu nombre:")
+nombre = input()
+print("Introduce tu edad:")
+edad = int(input())
+
+print("Bienvenido," + nombre + ". Tienes " + str(edad) + " años.")
+```
+
+</details>
+
+<details>
+<summary>Solución alternativa</summary>
+
+```python
+print("Introduce tu nombre:")
+nombre = input()
+print("Introduce tu edad:")
+edad = int(input())
+
+print(f"Bienvenido, {nombre}. Tienes {edad} años.")
+```
+
+</details>
+
+---
+
+## Determina si es una casilla de Oca
+
+Escribe un programa en Python que solicite al usuario un número de casilla y determine si es una casilla de Oca.
+
+Las casillas de Oca son aquellas que cumplen alguna de las siguientes condiciones:
+- Son múltiplos de 9
+- Son múltiplos de 5
+
+| Introduce el número de casilla:
+| **9**
+| ¿Es casilla de Oca?
+| True
+
+<details>
+<summary>Solución</summary>
+
+```python
+print("Introduce el número de casilla:")
+
+casilla = int(input())
+
+es_oca = (casilla % 9 == 0) or (casilla % 5 == 0)  # Los paréntesis son opcionales
+
+print("¿Es casilla de Oca?")
+print(es_oca)
+
+```
+
+</details>
+
+
+---
+
+## Determina si es un año bisiesto
+
+Escribe un programa en Python que solicite al usuario un año y determine si es bisiesto.
+
+Un año es bisiesto si 
+- es **divisible por 4**, excepto aquellos 
+    - **divisibles por 100**
+    - pero **no por 400**.
+
+| Introduce el año:
+| **2020**
+| ¿Es año bisiesto?
+| True
+
+<details>
+<summary>Solución</summary>
+
+```python
+print("Introduce el año:")
+año = int(input())
+
+es_bisiesto = (año % 4 == 0) and not (año % 100 == 0 and año % 400 != 0)
+# es_bisiesto = (año % 4 == 0) and (año % 100 != 0 or año % 400 == 0)
+
+print("¿Es año bisiesto?")
+
+print(es_bisiesto)
+```
+
+</details>
+
