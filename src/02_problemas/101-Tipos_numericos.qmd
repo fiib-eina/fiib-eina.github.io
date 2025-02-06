@@ -2,7 +2,6 @@
 title: Problemas 2
 subtitle: Tipos Numéricos
 format: html
-draft: true
 ---
 
 ## Área y circunferencia
@@ -44,6 +43,41 @@ print(circunferencia)
 ```
 
 </details>
+
+## En fin, la hipotenusa
+
+Escribe un programa Python que solicite al usuario los catetos de un triángulo rectángulo y escriba en la pantalla la longitud de la hipotenusa.
+
+$$
+Hipotenusa = \sqrt{cateto1^2 + cateto2^2}
+$$
+
+| Introduce la longitud del primer cateto:
+| **3**
+| Introduce la longitud del segundo cateto:
+| **4**
+| La longitud de la hipotenusa es:
+| 5.0
+
+<details>
+<summary>Solución</summary>
+
+```python
+import math
+
+print("Introduce la longitud del primer cateto:")
+cateto1 = float(input())
+print("Introduce la longitud del segundo cateto:")
+cateto2 = float(input())
+
+hipotenusa = math.sqrt(cateto1 ** 2 + cateto2 ** 2)
+
+print("La longitud de la hipotenusa es:")
+print(hipotenusa)
+```
+
+</details>
+
 
 ## Invertir un número de 2 cifras
 
