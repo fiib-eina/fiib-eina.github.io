@@ -649,10 +649,11 @@
 <span id="cb4-4"><a></a><span class="co">"""</span></span>
 <span id="cb4-5"><a></a></span>
 <span id="cb4-6"><a></a><span class="co"># Pide al usuario que escriba su nombre, lo lee de teclado y lo guarda en «nombre»</span></span>
-<span id="cb4-7"><a></a>nombre <span class="op">=</span> <span class="bu">input</span>(<span class="st">"¿Cómo te llamas? "</span>)</span>
-<span id="cb4-8"><a></a></span>
-<span id="cb4-9"><a></a><span class="co"># Saluda al usuario escribiendo un mensaje personalizado en la pantalla </span></span>
-<span id="cb4-10"><a></a><span class="bu">print</span>(<span class="st">"Hola,"</span>, nombre)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-7"><a></a><span class="bu">print</span>(<span class="st">"¿Cómo te llamas? "</span>)</span>
+<span id="cb4-8"><a></a>nombre <span class="op">=</span> <span class="bu">input</span>()</span>
+<span id="cb4-9"><a></a></span>
+<span id="cb4-10"><a></a><span class="co"># Saluda al usuario escribiendo un mensaje personalizado en la pantalla </span></span>
+<span id="cb4-11"><a></a><span class="bu">print</span>(<span class="st">"Hola,"</span>, nombre)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
@@ -689,22 +690,26 @@
 <section class="slide level2">
 
 <p><strong><a href="ej1.py">ej1.py</a></strong></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>a <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Introduce un número: "</span>))</span>
-<span id="cb5-2"><a></a>b <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Introduce otro número: "</span>))</span>
-<span id="cb5-3"><a></a></span>
-<span id="cb5-4"><a></a><span class="bu">print</span>(a <span class="op">+</span> b)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número: "</span>)</span>
+<span id="cb5-2"><a></a>a <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb5-3"><a></a><span class="bu">print</span>(<span class="st">"Introduce otro número: "</span>)</span>
+<span id="cb5-4"><a></a>b <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb5-5"><a></a></span>
+<span id="cb5-6"><a></a><span class="bu">print</span>(a <span class="op">+</span> b)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong><a href="ej2.py">ej2.py</a></strong></p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>pi <span class="op">=</span> <span class="fl">3.14159265358979323846</span></span>
-<span id="cb6-2"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Escribe un número real: "</span>))</span>
-<span id="cb6-3"><a></a></span>
-<span id="cb6-4"><a></a><span class="bu">print</span>(pi <span class="op">*</span> (x <span class="op">**</span> <span class="dv">2</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-2"><a></a><span class="bu">print</span>(<span class="st">"Escribe un número real: "</span>)</span>
+<span id="cb6-3"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
+<span id="cb6-4"><a></a></span>
+<span id="cb6-5"><a></a><span class="bu">print</span>(pi <span class="op">*</span> (x <span class="op">**</span> <span class="dv">2</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong><a href="ej3.py">ej3.py</a></strong></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>(<span class="st">"Introduce un número: "</span>))</span>
-<span id="cb7-2"><a></a></span>
-<span id="cb7-3"><a></a><span class="cf">if</span> x <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
-<span id="cb7-4"><a></a>    <span class="bu">print</span>(x)</span>
-<span id="cb7-5"><a></a><span class="cf">else</span>:</span>
-<span id="cb7-6"><a></a>    <span class="bu">print</span>(<span class="op">-</span>x)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número: "</span>)</span>
+<span id="cb7-2"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
+<span id="cb7-3"><a></a></span>
+<span id="cb7-4"><a></a><span class="cf">if</span> x <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
+<span id="cb7-5"><a></a>    <span class="bu">print</span>(x)</span>
+<span id="cb7-6"><a></a><span class="cf">else</span>:</span>
+<span id="cb7-7"><a></a>    <span class="bu">print</span>(<span class="op">-</span>x)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="entrega-de-la-práctica" class="slide level2">
 <h2>Entrega de la práctica</h2>
