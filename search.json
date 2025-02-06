@@ -42,130 +42,53 @@
     "text": "Entrega de la práctica\nTodas las prácticas se entregarán a través de Moodle. Esta Práctica 0 no es evaluable, pero sí se deberá entregar para familiarizarse con el proceso.\nTarea: Entrega el código de la práctica.\n\nVerifica que has nombrado correctamente los ficheros. Un fichero mal nombrado no será evaluado.\nVerifica que has añadido un docstring a cada fichero con tu nombre y NIP.\nVerifica que el funcionamiento de los programas es correcto.\nAccede a la entrega en Moodle y lee si hay instrucciones extra.\nSube los ficheros *.py individualmente (sin comprimir y sin crear carpetas adicionales).\n\nNota: No se aceptarán entregas fuera de plazo. En el caso de que se acerque la fecha límite de entrega, se recomienda al menos subir los ejercicios que se hayan terminado. Se podrán resubir tantas veces como se desee antes de la fecha límite de entrega.\n\n\n\n\nFundamentos de Informática"
   },
   {
-    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#tipos-de-datos-en-python",
-    "href": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#tipos-de-datos-en-python",
-    "title": "Teoría 202",
-    "section": "Tipos de datos en Python",
-    "text": "Tipos de datos en Python"
-  },
-  {
-    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#enteros",
-    "href": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#enteros",
-    "title": "Teoría 202",
-    "section": "Enteros",
-    "text": "Enteros"
-  },
-  {
-    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#funciones-numéricas",
-    "href": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#funciones-numéricas",
-    "title": "Teoría 202",
-    "section": "Funciones numéricas",
-    "text": "Funciones numéricas"
-  },
-  {
-    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#expresiones-avanzadas-con-números",
-    "href": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#expresiones-avanzadas-con-números",
-    "title": "Teoría 202",
-    "section": "Expresiones avanzadas con números",
-    "text": "Expresiones avanzadas con números"
-  },
-  {
-    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#ejercicios",
-    "href": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#ejercicios",
-    "title": "Teoría 202",
-    "section": "Ejercicios",
-    "text": "Ejercicios"
-  },
-  {
-    "objectID": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#algoritmo",
-    "href": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#algoritmo",
-    "title": "Teoría 102",
-    "section": "Algoritmo",
-    "text": "Algoritmo"
-  },
-  {
-    "objectID": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#lenguajes-de-programación",
-    "href": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#lenguajes-de-programación",
-    "title": "Teoría 102",
-    "section": "Lenguajes de programación",
-    "text": "Lenguajes de programación"
-  },
-  {
-    "objectID": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#lenguajes-de-alto-nivel-1",
-    "href": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#lenguajes-de-alto-nivel-1",
-    "title": "Teoría 102",
-    "section": "Lenguajes de alto nivel",
-    "text": "Lenguajes de alto nivel"
-  },
-  {
-    "objectID": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#entorno-integrado-de-desarrollo",
-    "href": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#entorno-integrado-de-desarrollo",
-    "title": "Teoría 102",
-    "section": "Entorno Integrado de Desarrollo",
-    "text": "Entorno Integrado de Desarrollo"
-  },
-  {
-    "objectID": "src/01_teoria/00_presentacion/000_Presentación.html#profesores",
-    "href": "src/01_teoria/00_presentacion/000_Presentación.html#profesores",
-    "title": "Presentación de la Asignatura",
-    "section": "Profesores",
-    "text": "Profesores\n\nSergio Martín Segura (segura@unizar.es)\n\nTeoría, problemas y prácticas\nDespacho: L2.09, Ada Byron\n\nMiguel Ángel Latre Abadía (latre@unizar.es)\n\nPrácticas\nDespacho: D2.22, Ada Byron\n\n\nTutorías: Consultar enlace en Moodle"
-  },
-  {
-    "objectID": "src/01_teoria/00_presentacion/000_Presentación.html#organización",
-    "href": "src/01_teoria/00_presentacion/000_Presentación.html#organización",
-    "title": "Presentación de la Asignatura",
-    "section": "Organización",
-    "text": "Organización\n\nClases teóricas: 2 horas semanales\nClases de problemas: 1 hora semanal\nPrácticas de laboratorio: 2 horas cada dos semanas"
-  },
-  {
-    "objectID": "src/01_teoria/00_presentacion/000_Presentación.html#evaluación-final",
-    "href": "src/01_teoria/00_presentacion/000_Presentación.html#evaluación-final",
-    "title": "Presentación de la Asignatura",
-    "section": "Evaluación final",
-    "text": "Evaluación final\n\nLa nota final, tal cual indica la guía docente, se calcula:\n\n\\(70\\%\\) Examen escrito (mínimo \\(5\\))\n\\(30\\%\\) Nota de prácticas (dos opciones):\n\nEntregas de prácticas\nExamen práctico final (anula la nota de entregas)\n\n\nSe deberá obtener una nota mínima de \\(5\\) ponderada para aprobar la asignatura\nSegunda convocatoria\n\nExamen escrito + Examen práctico final\nMismas ponderaciones"
-  },
-  {
-    "objectID": "src/01_teoria/00_presentacion/000_Presentación.html#dudas",
-    "href": "src/01_teoria/00_presentacion/000_Presentación.html#dudas",
-    "title": "Presentación de la Asignatura",
-    "section": "¿Dudas?",
-    "text": "¿Dudas?\n\n\n\n\nFundamentos de Informática"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Fundamentos de informática",
+    "objectID": "src/02_problemas/101-Tipos_numericos.html",
+    "href": "src/02_problemas/101-Tipos_numericos.html",
+    "title": "Problemas 2",
     "section": "",
-    "text": "01_teoria/00_presentacion/ Presentación de la Asignatura - Información general \n\n\n01_teoria/01_conceptos_basicos/ Teoría 101 - Computadores y Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 102 - Lenguajes \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 201 - Python \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 202 - Tipos Numerales \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n03_practicas/p1/ Práctica 1 - Tipos Primitivos \n\n\n\nNo hay resultados"
+    "text": "Escribe un programa en Python que solicite al usuario el radio de un círculo y escriba en la pantalla el área y la longitud de la circunferencia correspondientes.\n\\[\nArea = \\pi r^2\n\\]\n\\[\nCircunferencia = 2 \\pi r\n\\]\nIntroduce el radio del círculo:\n1\nEl área del círculo es:\n3.141592653589793\nLa circunferencia del círculo es:\n6.283185307179586\n\n\nSolución\n\nPI = 3.141592653589793\n\nprint(\"Introduce el radio del círculo:\")\nradio = float(input())\n\narea = PI * (radio ** 2)\ncircunferencia = 2 * PI * radio\n\nprint(\"El área del círculo es:\")\nprint(area)\n\nprint(\"La circunferencia del círculo es:\")\nprint(circunferencia)"
   },
   {
-    "objectID": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#que-es-la-informática",
-    "href": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#que-es-la-informática",
-    "title": "Teoría 101",
-    "section": "¿Que es la informática?",
-    "text": "¿Que es la informática?\n\nProcesamiento de información automática\nInformación: Conjunto de datos numéricos, alfabéticos o alfanuméricos necesarios para plantear y resolver un problema\nTratamiento de la información:\n\nEntrada: Introducción de los datos del problema\nProcesamiento: Transformación de datos\nSalida: Presentación de resultados"
+    "objectID": "src/02_problemas/101-Tipos_numericos.html#área-y-circunferencia",
+    "href": "src/02_problemas/101-Tipos_numericos.html#área-y-circunferencia",
+    "title": "Problemas 2",
+    "section": "",
+    "text": "Escribe un programa en Python que solicite al usuario el radio de un círculo y escriba en la pantalla el área y la longitud de la circunferencia correspondientes.\n\\[\nArea = \\pi r^2\n\\]\n\\[\nCircunferencia = 2 \\pi r\n\\]\nIntroduce el radio del círculo:\n1\nEl área del círculo es:\n3.141592653589793\nLa circunferencia del círculo es:\n6.283185307179586\n\n\nSolución\n\nPI = 3.141592653589793\n\nprint(\"Introduce el radio del círculo:\")\nradio = float(input())\n\narea = PI * (radio ** 2)\ncircunferencia = 2 * PI * radio\n\nprint(\"El área del círculo es:\")\nprint(area)\n\nprint(\"La circunferencia del círculo es:\")\nprint(circunferencia)"
   },
   {
-    "objectID": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#historia-de-la-informática",
-    "href": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#historia-de-la-informática",
-    "title": "Teoría 101",
-    "section": "Historia de la Informática",
-    "text": "Historia de la Informática"
+    "objectID": "src/02_problemas/101-Tipos_numericos.html#en-fin-la-hipotenusa",
+    "href": "src/02_problemas/101-Tipos_numericos.html#en-fin-la-hipotenusa",
+    "title": "Problemas 2",
+    "section": "2 En fin, la hipotenusa",
+    "text": "2 En fin, la hipotenusa\nEscribe un programa Python que solicite al usuario los catetos de un triángulo rectángulo y escriba en la pantalla la longitud de la hipotenusa.\n\\[\nHipotenusa = \\sqrt{cateto1^2 + cateto2^2}\n\\]\nIntroduce la longitud del primer cateto:\n3\nIntroduce la longitud del segundo cateto:\n4\nLa longitud de la hipotenusa es:\n5.0\n\n\nSolución\n\nimport math\n\nprint(\"Introduce la longitud del primer cateto:\")\ncateto1 = float(input())\nprint(\"Introduce la longitud del segundo cateto:\")\ncateto2 = float(input())\n\nhipotenusa = math.sqrt(cateto1 ** 2 + cateto2 ** 2)\n\nprint(\"La longitud de la hipotenusa es:\")\nprint(hipotenusa)"
   },
   {
-    "objectID": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#hardware",
-    "href": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#hardware",
-    "title": "Teoría 101",
-    "section": "Hardware",
-    "text": "Hardware"
+    "objectID": "src/02_problemas/101-Tipos_numericos.html#invertir-un-número-de-2-cifras",
+    "href": "src/02_problemas/101-Tipos_numericos.html#invertir-un-número-de-2-cifras",
+    "title": "Problemas 2",
+    "section": "3 Invertir un número de 2 cifras",
+    "text": "3 Invertir un número de 2 cifras\nEscribe un programa en Python que solicite al usuario un número de dos cifras y escriba en la pantalla el número invertido.\nIntroduce un número de dos cifras:\n23\nEl número invertido es:\n32\n\n\nSolución\n\nprint(\"Introduce un número de dos cifras:\")\nnumero = int(input())\n\ndecenas = numero // 10\nunidades = numero % 10\ninvertido = unidades * 10 + decenas\n\nprint(\"El número invertido es:\")\nprint(invertido)"
   },
   {
-    "objectID": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#software",
-    "href": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#software",
-    "title": "Teoría 101",
-    "section": "Software",
-    "text": "Software"
+    "objectID": "src/02_problemas/101-Tipos_numericos.html#invertir-un-número-de-3-cifras",
+    "href": "src/02_problemas/101-Tipos_numericos.html#invertir-un-número-de-3-cifras",
+    "title": "Problemas 2",
+    "section": "4 Invertir un número de 3 cifras",
+    "text": "4 Invertir un número de 3 cifras\nEscribe un programa en Python que solicite al usuario un número de tres cifras y escriba en la pantalla el número invertido.\nIntroduce un número de tres cifras:\n123\nEl número invertido es:\n321\n\n\nSolución\n\nprint(\"Introduce un número de tres cifras:\")\nnumero = int(input())\n\ncentenas = numero // 100\ndecenas = (numero % 100) // 10\nunidades = numero % 10\n\ninvertido = unidades * 100 + decenas * 10 + centenas\n\nprint(\"El número invertido es:\")\nprint(invertido)\n\n\n\nSolución alternativa\n\nprint(\"Introduce un número de tres cifras:\")\nnumero = int(input())\n\nnumero_restante = numero\n\nunidades = numero % 10\nnumero_restante = numero // 10\n\ndecenas = numero_restante % 10\nnumero_restante = numero_restante // 10\n\ncentenas = numero_restante % 10\nnumero_restante = numero_restante // 10\n\ninvertido = unidades * 100 + decenas * 10 + centenas\n\nprint(\"El número invertido es:\")\nprint(invertido)"
+  },
+  {
+    "objectID": "src/02_problemas/101-Tipos_numericos.html#suma-de-dígitos",
+    "href": "src/02_problemas/101-Tipos_numericos.html#suma-de-dígitos",
+    "title": "Problemas 2",
+    "section": "5 Suma de dígitos",
+    "text": "5 Suma de dígitos\nEscribe un programa en Python que solicite al usuario un número de tres cifras y escriba en la pantalla la suma de sus dígitos.\nIntroduce un número de tres cifras:\n123\nLa suma de los dígitos es:\n6\n\n\nSolución\n\nprint(\"Introduce un número de tres cifras:\")\nnumero = int(input())\n\ncentenas = numero // 100\ndecenas = (numero % 100) // 10\nunidades = numero % 10\n\nsuma = centenas + decenas + unidades\n\nprint(\"La suma de los dígitos es:\")\nprint(suma)"
+  },
+  {
+    "objectID": "src/02_problemas/101-Tipos_numericos.html#promedio-de-3-números",
+    "href": "src/02_problemas/101-Tipos_numericos.html#promedio-de-3-números",
+    "title": "Problemas 2",
+    "section": "6 Promedio de 3 números",
+    "text": "6 Promedio de 3 números\nEscribe un programa en Python que solicite al usuario tres números enteros y escriba en la pantalla el promedio de los tres.\nIntroduce el primer número:\n1\nIntroduce el segundo número:\n2\nIntroduce el tercer número:\n3\nEl promedio de los tres números es:\n2.0\n\n\nSolución\n\nprint(\"Introduce el primer número:\")\nnumero1 = int(input())\nprint(\"Introduce el segundo número:\")\nnumero2 = int(input())\nprint(\"Introduce el tercer número:\")\nnumero3 = int(input())\n\npromedio = (numero1 + numero2 + numero3) / 3\n\nprint(\"El promedio de los tres números es:\")\nprint(promedio)"
   },
   {
     "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_fundamentos_python.html#fundamentos-de-python",
@@ -206,6 +129,132 @@
     "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_fundamentos_python.html#ejercicios",
     "href": "src/01_teoria/02_tipos_de_datos_basicos/201_fundamentos_python.html#ejercicios",
     "title": "Teoría 201",
+    "section": "Ejercicios",
+    "text": "Ejercicios"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#que-es-la-informática",
+    "href": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#que-es-la-informática",
+    "title": "Teoría 101",
+    "section": "¿Que es la informática?",
+    "text": "¿Que es la informática?\n\nProcesamiento de información automática\nInformación: Conjunto de datos numéricos, alfabéticos o alfanuméricos necesarios para plantear y resolver un problema\nTratamiento de la información:\n\nEntrada: Introducción de los datos del problema\nProcesamiento: Transformación de datos\nSalida: Presentación de resultados"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#historia-de-la-informática",
+    "href": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#historia-de-la-informática",
+    "title": "Teoría 101",
+    "section": "Historia de la Informática",
+    "text": "Historia de la Informática"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#hardware",
+    "href": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#hardware",
+    "title": "Teoría 101",
+    "section": "Hardware",
+    "text": "Hardware"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#software",
+    "href": "src/01_teoria/01_conceptos_basicos/101_Introducción.html#software",
+    "title": "Teoría 101",
+    "section": "Software",
+    "text": "Software"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Fundamentos de informática",
+    "section": "",
+    "text": "01_teoria/00_presentacion/ Presentación de la Asignatura - Información general \n\n\n01_teoria/01_conceptos_basicos/ Teoría 101 - Computadores y Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 102 - Lenguajes \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 201 - Python \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 202 - Tipos Numerales \n\n\n02_problemas/ Problemas 2 - Tipos Numéricos \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n03_practicas/p1/ Práctica 1 - Tipos Primitivos \n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "src/01_teoria/00_presentacion/000_Presentación.html#profesores",
+    "href": "src/01_teoria/00_presentacion/000_Presentación.html#profesores",
+    "title": "Presentación de la Asignatura",
+    "section": "Profesores",
+    "text": "Profesores\n\nSergio Martín Segura (segura@unizar.es)\n\nTeoría, problemas y prácticas\nDespacho: L2.09, Ada Byron\n\nMiguel Ángel Latre Abadía (latre@unizar.es)\n\nPrácticas\nDespacho: D2.22, Ada Byron\n\n\nTutorías: Consultar enlace en Moodle"
+  },
+  {
+    "objectID": "src/01_teoria/00_presentacion/000_Presentación.html#organización",
+    "href": "src/01_teoria/00_presentacion/000_Presentación.html#organización",
+    "title": "Presentación de la Asignatura",
+    "section": "Organización",
+    "text": "Organización\n\nClases teóricas: 2 horas semanales\nClases de problemas: 1 hora semanal\nPrácticas de laboratorio: 2 horas cada dos semanas"
+  },
+  {
+    "objectID": "src/01_teoria/00_presentacion/000_Presentación.html#evaluación-final",
+    "href": "src/01_teoria/00_presentacion/000_Presentación.html#evaluación-final",
+    "title": "Presentación de la Asignatura",
+    "section": "Evaluación final",
+    "text": "Evaluación final\n\nLa nota final, tal cual indica la guía docente, se calcula:\n\n\\(70\\%\\) Examen escrito (mínimo \\(5\\))\n\\(30\\%\\) Nota de prácticas (dos opciones):\n\nEntregas de prácticas\nExamen práctico final (anula la nota de entregas)\n\n\nSe deberá obtener una nota mínima de \\(5\\) ponderada para aprobar la asignatura\nSegunda convocatoria\n\nExamen escrito + Examen práctico final\nMismas ponderaciones"
+  },
+  {
+    "objectID": "src/01_teoria/00_presentacion/000_Presentación.html#dudas",
+    "href": "src/01_teoria/00_presentacion/000_Presentación.html#dudas",
+    "title": "Presentación de la Asignatura",
+    "section": "¿Dudas?",
+    "text": "¿Dudas?\n\n\n\n\nFundamentos de Informática"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#algoritmo",
+    "href": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#algoritmo",
+    "title": "Teoría 102",
+    "section": "Algoritmo",
+    "text": "Algoritmo"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#lenguajes-de-programación",
+    "href": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#lenguajes-de-programación",
+    "title": "Teoría 102",
+    "section": "Lenguajes de programación",
+    "text": "Lenguajes de programación"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#lenguajes-de-alto-nivel-1",
+    "href": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#lenguajes-de-alto-nivel-1",
+    "title": "Teoría 102",
+    "section": "Lenguajes de alto nivel",
+    "text": "Lenguajes de alto nivel"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#entorno-integrado-de-desarrollo",
+    "href": "src/01_teoria/01_conceptos_basicos/102_Lenguajes.html#entorno-integrado-de-desarrollo",
+    "title": "Teoría 102",
+    "section": "Entorno Integrado de Desarrollo",
+    "text": "Entorno Integrado de Desarrollo"
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#tipos-de-datos-en-python",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#tipos-de-datos-en-python",
+    "title": "Teoría 202",
+    "section": "Tipos de datos en Python",
+    "text": "Tipos de datos en Python"
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#enteros",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#enteros",
+    "title": "Teoría 202",
+    "section": "Enteros",
+    "text": "Enteros"
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#funciones-numéricas",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#funciones-numéricas",
+    "title": "Teoría 202",
+    "section": "Funciones numéricas",
+    "text": "Funciones numéricas"
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#expresiones-avanzadas-con-números",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#expresiones-avanzadas-con-números",
+    "title": "Teoría 202",
+    "section": "Expresiones avanzadas con números",
+    "text": "Expresiones avanzadas con números"
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#ejercicios",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html#ejercicios",
+    "title": "Teoría 202",
     "section": "Ejercicios",
     "text": "Ejercicios"
   },
