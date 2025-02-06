@@ -1,0 +1,39 @@
+---
+title: Práctica 4
+subtitle: Funciones
+format: html
+draft: true
+---
+
+## Números amigos
+
+Dos números enteros positivos $a$ y $b$ son amigos si la suma de los divisores propios de $a$ es igual a $b$ y la suma de los divisores propios de $b$ es igual a $a$.
+
+Desarrolla:
+
+- Una función `suma_divisores_propios()` que reciba un número entero positivo y devuelva la suma de sus divisores propios.
+- Una función `son_amigos()` que reciba dos números enteros positivos y devuelva `True` si son amigos y `False` en caso contrario.
+- Un programa en Python que solicite al usuario un número entero positivo `n` y encuentre los primero `n` pares de números amigos.
+
+| Introduce un número entero positivo:
+| **10**
+| Los números amigos menores que 1000 son:
+| 220 y 284
+| 1184 y 1210
+| 2620 y 2924
+| 5020 y 5564
+| 6232 y 6368
+| 10744 y 10856
+| 12285 y 14595
+| 17296 y 18416
+| 63020 y 76084
+| 66928 y 66992
+
+**Entrega:** Escribe tu programa en un fichero denominado `amigos.py`.
+
+
+## Entrega de la práctica
+
+**Antes del _ las __:__,** deberán haberse subido a Moodle los siguientes ficheros:
+
+- [ ] `amigos.py`
