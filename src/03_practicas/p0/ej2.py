@@ -1,4 +1,5 @@
 pi = 3.14159265358979323846
-x = float(input("Escribe un número real: "))
+print("Escribe un número real: ")
+x = float(input())
 
 print(pi * (x ** 2))
