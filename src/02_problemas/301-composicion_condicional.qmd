@@ -1,0 +1,35 @@
+---
+title: Problemas 4
+subtitle: Composición condicional
+format: html
+draft: true
+---
+
+## ¿Está seguro de que desea eliminar el archivo?
+
+Escribe un programa en Python que solicite al usuario una respuesta y determine si está seguro de eliminar un archivo.
+El programa debe aceptar las respuestas `s`, `n`, `si` y `no`.
+
+| ¿Está seguro de que desea eliminar el archivo? (s)i/(n)o:
+| **si**
+| ARCHIVO ELIMINADO
+
+| ¿Está seguro de que desea eliminar el archivo? (s)i/(n)o:
+| **n**
+| SKIP
+
+<details>
+<summary>Solución</summary>
+
+```python
+print("¿Está seguro de que desea eliminar el archivo? (s)i/(n)o:")
+respuesta = input()
+
+if respuesta == "s" or respuesta == "si":
+    print("ARCHIVO ELIMINADO")
+elif respuesta == "n" or respuesta == "no":
+    print("SKIP")
+```
+
+</details>
+

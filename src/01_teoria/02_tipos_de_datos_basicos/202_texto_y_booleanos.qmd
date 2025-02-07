@@ -1,5 +1,5 @@
 ---
-title: Teoría 203
+title: Teoría 202
 subtitle: Texto y Booleanos
 format: revealjs
 ---

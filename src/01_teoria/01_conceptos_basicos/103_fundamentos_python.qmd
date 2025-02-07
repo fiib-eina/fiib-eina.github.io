@@ -1,5 +1,5 @@
 ---
-title: Teoría 201
+title: Teoría 103
 subtitle: Python
 format: revealjs
 ---

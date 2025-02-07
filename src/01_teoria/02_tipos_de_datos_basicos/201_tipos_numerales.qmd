@@ -1,5 +1,5 @@
 ---
-title: Teoría 202
+title: Teoría 201
 subtitle: Tipos Numerales
 format: revealjs
 ---
