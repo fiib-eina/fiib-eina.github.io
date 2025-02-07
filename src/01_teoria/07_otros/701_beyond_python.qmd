@@ -1,0 +1,10 @@
+---
+title: Teoría 701
+subtitle: Beyond Python
+format: revealjs
+draft: true
+---
+
+## Chapter {.center}
+
+

@@ -46,6 +46,7 @@ format:
     chalkboard: false
     menu: true
     # Navigation
+    history: false
     progress: true
     touch: true
     # Code

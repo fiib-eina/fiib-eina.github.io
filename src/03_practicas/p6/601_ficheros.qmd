@@ -1,0 +1,12 @@
+---
+title: Práctica 3
+subtitle: Tipos Primitivos
+format: html
+draft: true
+---
+
+## Entrega de la práctica
+
+**Antes del _ _ de _ a las __:__,** deberán haberse subido a Moodle los siguientes ficheros:
+
+- [ ] `.py`

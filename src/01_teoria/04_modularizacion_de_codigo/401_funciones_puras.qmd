@@ -1,0 +1,10 @@
+---
+title: Teoría 401
+subtitle: Funciones puras
+format: revealjs
+draft: true
+---
+
+## Chapter {.center}
+
+

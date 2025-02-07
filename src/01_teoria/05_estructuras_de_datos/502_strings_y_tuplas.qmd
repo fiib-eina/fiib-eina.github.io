@@ -1,0 +1,10 @@
+---
+title: Teoría 502
+subtitle: Strings y Tuplas
+format: revealjs
+draft: true
+---
+
+## Chapter {.center}
+
+

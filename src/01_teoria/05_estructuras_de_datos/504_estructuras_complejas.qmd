@@ -1,0 +1,10 @@
+---
+title: Teoría 504
+subtitle: Estructuras complejas
+format: revealjs
+draft: true
+---
+
+## Chapter {.center}
+
+
