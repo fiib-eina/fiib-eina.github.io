@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://fiib-eina.github.io/src/03_practicas/p0/00_Introductoria.html</loc>
+    <loc>https://fiib-eina.github.io/src/03_practicas/p0/00_introductoria.html</loc>
     <lastmod>2025-01-30T20:07:20.932Z</lastmod>
   </url>
   <url>
@@ -9,39 +9,39 @@
     <lastmod>2025-02-03T15:32:29.243Z</lastmod>
   </url>
   <url>
-    <loc>https://fiib-eina.github.io/src/02_problemas/101-Tipos_numericos.html</loc>
-    <lastmod>2025-02-06T07:57:46.625Z</lastmod>
+    <loc>https://fiib-eina.github.io/src/02_problemas/100-fundamentos.html</loc>
+    <lastmod>2025-02-06T23:51:59.816Z</lastmod>
   </url>
   <url>
-    <loc>https://fiib-eina.github.io/src/01_teoria/02_tipos_de_datos_basicos/203_texto_y_booleanos.html</loc>
-    <lastmod>2025-02-06T23:33:15.933Z</lastmod>
+    <loc>https://fiib-eina.github.io/src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html</loc>
+    <lastmod>2025-02-07T00:35:10.250Z</lastmod>
   </url>
   <url>
-    <loc>https://fiib-eina.github.io/src/01_teoria/02_tipos_de_datos_basicos/201_fundamentos_python.html</loc>
-    <lastmod>2025-01-31T17:16:55.316Z</lastmod>
+    <loc>https://fiib-eina.github.io/src/01_teoria/01_conceptos_basicos/102_lenguajes.html</loc>
+    <lastmod>2025-01-31T16:57:27.647Z</lastmod>
   </url>
   <url>
-    <loc>https://fiib-eina.github.io/src/01_teoria/01_conceptos_basicos/101_Introducción.html</loc>
-    <lastmod>2025-01-31T17:19:08.608Z</lastmod>
+    <loc>https://fiib-eina.github.io/src/01_teoria/00_presentacion/000_presentación.html</loc>
+    <lastmod>2025-01-31T16:59:22.287Z</lastmod>
   </url>
   <url>
     <loc>https://fiib-eina.github.io/index.html</loc>
     <lastmod>2025-01-16T15:49:05.995Z</lastmod>
   </url>
   <url>
-    <loc>https://fiib-eina.github.io/src/01_teoria/00_presentacion/000_Presentación.html</loc>
-    <lastmod>2025-01-31T16:59:22.287Z</lastmod>
+    <loc>https://fiib-eina.github.io/src/01_teoria/01_conceptos_basicos/101_introducción.html</loc>
+    <lastmod>2025-01-31T17:19:08.608Z</lastmod>
   </url>
   <url>
-    <loc>https://fiib-eina.github.io/src/01_teoria/01_conceptos_basicos/102_Lenguajes.html</loc>
-    <lastmod>2025-01-31T16:57:27.647Z</lastmod>
+    <loc>https://fiib-eina.github.io/src/01_teoria/01_conceptos_basicos/103_fundamentos_python.html</loc>
+    <lastmod>2025-02-07T00:34:22.195Z</lastmod>
   </url>
   <url>
-    <loc>https://fiib-eina.github.io/src/01_teoria/02_tipos_de_datos_basicos/202_tipos_numerales.html</loc>
-    <lastmod>2025-02-06T20:55:01.679Z</lastmod>
+    <loc>https://fiib-eina.github.io/src/01_teoria/02_tipos_de_datos_basicos/202_texto_y_booleanos.html</loc>
+    <lastmod>2025-02-07T00:35:18.111Z</lastmod>
   </url>
   <url>
-    <loc>https://fiib-eina.github.io/src/02_problemas/100-Fundamentos.html</loc>
-    <lastmod>2025-02-06T23:51:59.816Z</lastmod>
+    <loc>https://fiib-eina.github.io/src/02_problemas/201-tipos_numericos.html</loc>
+    <lastmod>2025-02-06T07:57:46.625Z</lastmod>
   </url>
 </urlset>
