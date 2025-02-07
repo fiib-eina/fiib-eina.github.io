@@ -70,7 +70,7 @@ texto = "Hola, mundo! 😉"
 - La tabla **ASCII** es un acuerdo de representación de caracteres en inglés
     - Cada caracter se representa con **un número** de 7 bits
     - Ejemplos: `A` (65), `Z` (90), `a` (97), `0` (48), `!` (33)
-- La codiciación de los caracteres _no-ASCII_ sigue un principio similar
+- La codificación de los caracteres _no-ASCII_ sigue un principio similar
     - Los detalles quedan _fuera del alcance de este curso_
 
 ---
@@ -114,8 +114,11 @@ cond2  = "aa" < "ab"       # Verdadero
 
 ```python
 texto = str(42)       # str: "42"
-letra = chr(65)       # chr: "A"
-valor = ord('A')      # int: 65
+
+valor = ord("A")      # int: 65
+letra = chr(65)       # str: "A"
+igual = chr(ord("A")) # str: "A"
+
 longitud = len(texto) # int: 2
 ```
 
@@ -134,12 +137,32 @@ longitud = len(texto) # int: 2
 
 - Acepta comillas **simples** o **dobles**: `"""texto"""`, `'''texto'''`
     - Permite escribir cadenas de texto multilínea
-    - Útil para documentar funciones, clases, módulos, etc.
+    - Útil para:
+        - Documentar funciones, clases, módulos, etc.
+        - _Outputs_ de texto extensos
 
 ```python
-texto = """Este es un texto
-que ocupa varias líneas
+texto = """Este es un texto que ocupa varias líneas
 y se escribe con triple comilla"""
+```
+
+```python
+print("""⠀
+    ⠀⠀⠀⡄⡀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⣼⣿⠇⠀⠀⠈⢿⣿⣦⠀
+    ⠀⢰⣿⣿⠀⠀⠀⠀⠀⢿⣿⡇
+    ⠀⠸⣿⣿⣷⣶⣿⣿⣿⣿⣿⡇
+    ⠀⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⡆
+    ⠀⠀⡾⢿⣿⣿⠛⢿⣿⣿⣿⣿
+    ⠀⠀⢷⡈⣿⣿⣆⢘⣿⣿⣿⡟
+    ⠀⠀⠘⢿⣿⣿⣿⣿⣿⣿⡟⠁
+    ⠀⣀⡄⣰⣿⣿⣿⣿⣿⣿⣿⠀
+    ⠈⠛⢸⣿⣿⣿⣿⣿⣿⣿⣿⡇
+    ⠀⠀⠈⠿⣿⣿⣿⣿⣿⣿⣿⡇
+    ⠀⠀⠀⠀⢻⣿⣿⣿⣿⣿⣿⠇
+    ⠀⠀⠀⠀⠸⣿⠁⠙⠃⢿⠟⠀
+""")
+# Credits: https://emojicombos.com/hollow-knight
 ```
 
 ---
@@ -159,7 +182,7 @@ fichero2 = r"C:\Users\usuario\archivo.txt"     # La r indica que el contenide se
 
 #### F-strings
 
-- Una `r` **inmediatamente antes** de las comillas: `f"texto {variable}"`
+- Una `f` **inmediatamente antes** de las comillas: `f"texto {variable}"`
     - Permite incluir variables dentro de una cadena de texto
     - Útil para formatear cadenas de texto
 
@@ -167,7 +190,7 @@ fichero2 = r"C:\Users\usuario\archivo.txt"     # La r indica que el contenide se
 nombre = "Juan"
 edad = 21
 
-saludo2 = "Hola, me llamo " + nombre + " y tengo " + edad + " años"  # Concatenando
+saludo1 = "Hola, me llamo " + nombre + " y tengo " + edad + " años"  # Concatenando
 saludo2 = f"Hola, me llamo {nombre} y tengo {edad} años"             # F-string
 ```
 
@@ -301,7 +324,7 @@ entrega_fallida = not estoy_en_casa and llega_un_paquete  #
 
 - Aunque en Python existe la función `bool()`:
     - **NO ES ACONSEJABLE UTILIZARLA** (_No funciona como esperaríais_)
-    - Evalua la **veracidad** de una variable y su comportamiento depende del tipo de dato
+    - Evalua la **veracidad** de una variable depende del tipo de dato
         - Un entero es _falso_ si es **0**
         - Una cadena de texto es _falsa_ si está **vacía**
 - En su lugar, para **obtener** valores booleanos utilizaremos siempre<br>**operadores de comparación**:
