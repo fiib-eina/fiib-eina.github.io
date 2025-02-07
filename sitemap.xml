@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://fiib-eina.github.io/src/03_practicas/p0/00_introductoria.html</loc>
+    <loc>https://fiib-eina.github.io/src/03_practicas/p0/101_introductoria.html</loc>
     <lastmod>2025-01-30T20:07:20.932Z</lastmod>
   </url>
   <url>
-    <loc>https://fiib-eina.github.io/src/03_practicas/p1/01_tipos_de_datos_primitivos.html</loc>
+    <loc>https://fiib-eina.github.io/src/03_practicas/p1/201_tipos_de_datos_primitivos.html</loc>
     <lastmod>2025-02-03T15:32:29.243Z</lastmod>
   </url>
   <url>
@@ -42,6 +42,6 @@
   </url>
   <url>
     <loc>https://fiib-eina.github.io/src/02_problemas/201-tipos_numericos.html</loc>
-    <lastmod>2025-02-06T07:57:46.625Z</lastmod>
+    <lastmod>2025-02-07T14:17:19.058Z</lastmod>
   </url>
 </urlset>

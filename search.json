@@ -1,84 +1,84 @@
 [
   {
-    "objectID": "src/03_practicas/p0/00_introductoria.html#objetivos",
-    "href": "src/03_practicas/p0/00_introductoria.html#objetivos",
+    "objectID": "src/03_practicas/p0/101_introductoria.html#objetivos",
+    "href": "src/03_practicas/p0/101_introductoria.html#objetivos",
     "title": "Práctica 0",
     "section": "Objetivos",
     "text": "Objetivos\n\nInstalar el entorno de trabajo\nFamiliarizarse con el entorno de trabajo\n\nEditor de texto\nTerminal\n\nAprender a ejecutar (no escribir) código Python\nIntuyendo Python\nEntregar"
   },
   {
-    "objectID": "src/03_practicas/p0/00_introductoria.html#instalación-del-entorno-de-trabajo",
-    "href": "src/03_practicas/p0/00_introductoria.html#instalación-del-entorno-de-trabajo",
+    "objectID": "src/03_practicas/p0/101_introductoria.html#instalación-del-entorno-de-trabajo",
+    "href": "src/03_practicas/p0/101_introductoria.html#instalación-del-entorno-de-trabajo",
     "title": "Práctica 0",
     "section": "Instalación del entorno de trabajo",
     "text": "Instalación del entorno de trabajo\nPara desarrollar en python necesitamos:\n\nIntérprete de Python: Python\nEntorno de desarrollo: Visual Studio Code"
   },
   {
-    "objectID": "src/03_practicas/p0/00_introductoria.html#familiarizarse-con-el-entorno-de-trabajo",
-    "href": "src/03_practicas/p0/00_introductoria.html#familiarizarse-con-el-entorno-de-trabajo",
+    "objectID": "src/03_practicas/p0/101_introductoria.html#familiarizarse-con-el-entorno-de-trabajo",
+    "href": "src/03_practicas/p0/101_introductoria.html#familiarizarse-con-el-entorno-de-trabajo",
     "title": "Práctica 0",
     "section": "Familiarizarse con el entorno de trabajo",
     "text": "Familiarizarse con el entorno de trabajo\nDurante el proceso de desarrollo, siempre tendremos en cuenta:\n\nSistema ficheros: Localización de los programas\nCódigo fuente: Contenido de los programas\nTerminal: Ejecución de programas python\n\nEstos tres elementos pueden ser controlados desde Visual Studio Code."
   },
   {
-    "objectID": "src/03_practicas/p0/00_introductoria.html#programa-interactivo",
-    "href": "src/03_practicas/p0/00_introductoria.html#programa-interactivo",
+    "objectID": "src/03_practicas/p0/101_introductoria.html#programa-interactivo",
+    "href": "src/03_practicas/p0/101_introductoria.html#programa-interactivo",
     "title": "Práctica 0",
     "section": "Programa interactivo",
     "text": "Programa interactivo\n\nMás adelante en el curso aprenderás a hacer programas que requieran de la interacción del usuario.\nDicha interacción se realiza también en la propia terminal.\nPara familiarizarte ahora con este comportamiento, vamos a escribir y ejecutar un programa interactivo."
   },
   {
-    "objectID": "src/03_practicas/p0/00_introductoria.html#intuyendo-python",
-    "href": "src/03_practicas/p0/00_introductoria.html#intuyendo-python",
+    "objectID": "src/03_practicas/p0/101_introductoria.html#intuyendo-python",
+    "href": "src/03_practicas/p0/101_introductoria.html#intuyendo-python",
     "title": "Práctica 0",
     "section": "Intuyendo Python",
     "text": "Intuyendo Python\nA continuación evaluaremos nuestra capacidad de intuir y entender el funcionamiento de código python.\nTarea: Documenta los siguientes programas en un docstring.\n\nDescarga o copia los ficheros en la carpeta p0.\nÁbrelos con el editor de texto y lee su contenido.\nEjecuta los programas desde la terminal de VSCode.\nAñade un docstring al principio de cada fichero incluyendo tu nombre y explicando qué hace el programa.\n\nNota: Puedes hacer Clic derecho &gt; Guardar enlace como... en los nombres de cada fichero para descargarlos o hacer clic en el icono del portapapeles para copiar todo el contenido."
   },
   {
-    "objectID": "src/03_practicas/p0/00_introductoria.html#entrega-de-la-práctica",
-    "href": "src/03_practicas/p0/00_introductoria.html#entrega-de-la-práctica",
+    "objectID": "src/03_practicas/p0/101_introductoria.html#entrega-de-la-práctica",
+    "href": "src/03_practicas/p0/101_introductoria.html#entrega-de-la-práctica",
     "title": "Práctica 0",
     "section": "Entrega de la práctica",
     "text": "Entrega de la práctica\nTodas las prácticas se entregarán a través de Moodle. Esta Práctica 0 no es evaluable, pero sí se deberá entregar para familiarizarse con el proceso.\nTarea: Entrega el código de la práctica.\n\nVerifica que has nombrado correctamente los ficheros. Un fichero mal nombrado no será evaluado.\nVerifica que has añadido un docstring a cada fichero con tu nombre y NIP.\nVerifica que el funcionamiento de los programas es correcto.\nAccede a la entrega en Moodle y lee si hay instrucciones extra.\nSube los ficheros *.py individualmente (sin comprimir y sin crear carpetas adicionales).\n\nNota: No se aceptarán entregas fuera de plazo. En el caso de que se acerque la fecha límite de entrega, se recomienda al menos subir los ejercicios que se hayan terminado. Se podrán resubir tantas veces como se desee antes de la fecha límite de entrega.\n\n\n\n\nFundamentos de Informática"
   },
   {
-    "objectID": "src/03_practicas/p1/01_tipos_de_datos_primitivos.html",
-    "href": "src/03_practicas/p1/01_tipos_de_datos_primitivos.html",
+    "objectID": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html",
+    "href": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html",
     "title": "Práctica 1",
     "section": "",
     "text": "Desarrolla un programa en Python que solicite al usuario un número real, que representará una longitud medida en centímetros, y escriba en la pantalla la medida equivalente en pulgadas.\nUna pulgada anglosajona actual equivale a 25,4 mm.\nUn ejemplo de ejecución:\nIntroduce un valor en centímetros:\n1\nEn pulgadas son:\n0.39370078740157477\nOtro ejemplo de ejecución:\nIntroduce un valor en centímetros:\n25.4\nEn pulgadas son:\n10.0\nY otro más:\nIntroduce un valor en centímetros:\n84.025\nEn pulgadas son:\n33.080708661417326\nEntrega: Escribe tu programa en un fichero denominado pulgadas.py.\n\n\n\nEscribe un programa en Python que solicite una temperatura expresada en grados Fahrenheit y escriba en la pantalla su equivalente en grados Celsius.\nLa fórmula que proporciona la equivalencia entre grados Celsius y Fahrenheit es\n\\[\nC=\\frac{5}{9}(F - 32)\n\\]\ndonde \\(C\\) es la temperatura en grados Celsius y \\(F\\) es la temperatura en grados Fahrenheit.\nUn ejemplo de ejecución:\nEscriba una temperatura expresada en grados Fahrenheit:\n32\nEn grados Celsius son:\n0.0\nY otro:\nEscriba una temperatura expresada en grados Fahrenheit:\n-459.67\nEn grados Celsius son:\n-273.15000000000003\nAunque probablemente no sea cierto, se dice que Daniel Gabriel Fahrenheit estableció el límite superior de su escala (100 °F) en la temperatura del cuerpo humano. Utiliza tu programa para comprobar que Fahrenheit tenía fiebre cuando calibró su escala.\nEntrega: Escribe tu programa en un fichero denominado fahrenheit.py.\n\n\n\nUna casa de cambio de moneda se ha especializado en dos divisas: euro y yen. Esta casa de cambio utiliza una tasa de conversión de euros a yenes fija durante todo un mes. Para este mes de febrero, ha establecido que va a cambiar un euro por 161,03241 yenes.\nEscribe un programa en Python que pida al usuario que escriba una cantidad no negativa de dinero expresada en euros y le informe de su equivalente en yenes:\nEscriba una cantidad no negativa de dinero en euros:\n43.65\nYenes:\n7029\nComo los yenes no tienen moneda fraccionaria (los senes dejaron de utilizarse en 1953), queremos que el número de yenes resultante se escriba sin decimales.\nUn segundo ejemplo se presenta a continuación para ilustrar el comportamiento deseado del programa:\nEscriba una cantidad no negativa de dinero en euros:\n43.69\nYenes:\n7036\nEntrega: Escribe tu programa en un fichero denominado yenes.py."
   },
   {
-    "objectID": "src/03_practicas/p1/01_tipos_de_datos_primitivos.html#problemas-de-conversión",
-    "href": "src/03_practicas/p1/01_tipos_de_datos_primitivos.html#problemas-de-conversión",
+    "objectID": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#problemas-de-conversión",
+    "href": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#problemas-de-conversión",
     "title": "Práctica 1",
     "section": "",
     "text": "Desarrolla un programa en Python que solicite al usuario un número real, que representará una longitud medida en centímetros, y escriba en la pantalla la medida equivalente en pulgadas.\nUna pulgada anglosajona actual equivale a 25,4 mm.\nUn ejemplo de ejecución:\nIntroduce un valor en centímetros:\n1\nEn pulgadas son:\n0.39370078740157477\nOtro ejemplo de ejecución:\nIntroduce un valor en centímetros:\n25.4\nEn pulgadas son:\n10.0\nY otro más:\nIntroduce un valor en centímetros:\n84.025\nEn pulgadas son:\n33.080708661417326\nEntrega: Escribe tu programa en un fichero denominado pulgadas.py.\n\n\n\nEscribe un programa en Python que solicite una temperatura expresada en grados Fahrenheit y escriba en la pantalla su equivalente en grados Celsius.\nLa fórmula que proporciona la equivalencia entre grados Celsius y Fahrenheit es\n\\[\nC=\\frac{5}{9}(F - 32)\n\\]\ndonde \\(C\\) es la temperatura en grados Celsius y \\(F\\) es la temperatura en grados Fahrenheit.\nUn ejemplo de ejecución:\nEscriba una temperatura expresada en grados Fahrenheit:\n32\nEn grados Celsius son:\n0.0\nY otro:\nEscriba una temperatura expresada en grados Fahrenheit:\n-459.67\nEn grados Celsius son:\n-273.15000000000003\nAunque probablemente no sea cierto, se dice que Daniel Gabriel Fahrenheit estableció el límite superior de su escala (100 °F) en la temperatura del cuerpo humano. Utiliza tu programa para comprobar que Fahrenheit tenía fiebre cuando calibró su escala.\nEntrega: Escribe tu programa en un fichero denominado fahrenheit.py.\n\n\n\nUna casa de cambio de moneda se ha especializado en dos divisas: euro y yen. Esta casa de cambio utiliza una tasa de conversión de euros a yenes fija durante todo un mes. Para este mes de febrero, ha establecido que va a cambiar un euro por 161,03241 yenes.\nEscribe un programa en Python que pida al usuario que escriba una cantidad no negativa de dinero expresada en euros y le informe de su equivalente en yenes:\nEscriba una cantidad no negativa de dinero en euros:\n43.65\nYenes:\n7029\nComo los yenes no tienen moneda fraccionaria (los senes dejaron de utilizarse en 1953), queremos que el número de yenes resultante se escriba sin decimales.\nUn segundo ejemplo se presenta a continuación para ilustrar el comportamiento deseado del programa:\nEscriba una cantidad no negativa de dinero en euros:\n43.69\nYenes:\n7036\nEntrega: Escribe tu programa en un fichero denominado yenes.py."
   },
   {
-    "objectID": "src/03_practicas/p1/01_tipos_de_datos_primitivos.html#rectángulo",
-    "href": "src/03_practicas/p1/01_tipos_de_datos_primitivos.html#rectángulo",
+    "objectID": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#rectángulo",
+    "href": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#rectángulo",
     "title": "Práctica 1",
     "section": "2 Rectángulo",
     "text": "2 Rectángulo\nImplementa un programa que:\n\nSolicite al usuario las coordenadas de dos esquinas opuestas de un rectángulo.\n\nx1, y1, x2, y2\n\nUsando esas coordenadas, calcule:\n\nEl área del rectángulo\nEl perímetro del rectángulo\n\n\n\nUn ejemplo de ejecución del programa solicitado:\nIntroduzca x1:\n2\nIntroduzca y1:\n3\nIntroduzca x2:\n5\nIntroduzca y2:\n6\n\nEl área del rectángulo es:\n9.0\n\nEl perímetro del rectángulo es:\n12.0\nY otro:\nIntroduzca x1:\n1.5\nIntroduzca y1:\n7.4\nIntroduzca x2:\n6.8\nIntroduzca y2:\n2.3\n\nEl área del rectángulo es:\n27.03\n\nEl perímetro del rectángulo es:\n20.8\nEntrega: Escribe tu programa en un fichero denominado rectangulo.py."
   },
   {
-    "objectID": "src/03_practicas/p1/01_tipos_de_datos_primitivos.html#habitación-de-hotel",
-    "href": "src/03_practicas/p1/01_tipos_de_datos_primitivos.html#habitación-de-hotel",
+    "objectID": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#habitación-de-hotel",
+    "href": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#habitación-de-hotel",
     "title": "Práctica 1",
     "section": "3 Habitación de hotel",
     "text": "3 Habitación de hotel\nEscribe un programa en Python que interaccione con el usuario mostrando el siguiente comportamiento:\nEscriba un número de habitación:\n514\n\nPlanta:\n5\nNúmero:\n14\nEl número de habitación escrito por el usuario sigue el convenio habitual de numeración de habitaciones en hoteles: el número de centenas indican la planta en la que está la habitación y las decenas y unidades indican el número de habitación dentro de la planta. Por el momento, vamos a suponer que el usuario siempre va a escribir números positivos que representan números de habitación válidas con formato establecido.\nUn segundo ejemplo se presenta a continuación para ilustrar el comportamiento deseado del programa.\nEscriba un número de habitación:\n1803\n\nPlanta:\n18\nNúmero:\n3\nEntrega: Escribe tu programa en un fichero denominado hotel.py."
   },
   {
-    "objectID": "src/03_practicas/p1/01_tipos_de_datos_primitivos.html#condiciones-booleanas",
-    "href": "src/03_practicas/p1/01_tipos_de_datos_primitivos.html#condiciones-booleanas",
+    "objectID": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#condiciones-booleanas",
+    "href": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#condiciones-booleanas",
     "title": "Práctica 1",
     "section": "4 Condiciones booleanas",
     "text": "4 Condiciones booleanas\nEscribe un programa en Python que pida al usuario tres números enteros y diga si se cumple que los tres números son pares, positivos y además el segundo número está comprendido estrictamente entre el primero y el tercero:\nEscribe un primer número:\n2\nEscribe un segundo número:\n4\nEscribe un tercer número:\n8\nCumplen todas las condiciones:\nTrue\nOtro ejemplo de ejecución:\nEscribe un primer número:\n3\nEscribe un segundo número:\n-2\nEscribe un tercer número:\n-5\nCumplen todas las condiciones:\nFalse\nEntrega: Escribe tu programa en un fichero denominado entre_pares.py."
   },
   {
-    "objectID": "src/03_practicas/p1/01_tipos_de_datos_primitivos.html#entrega-de-la-práctica",
-    "href": "src/03_practicas/p1/01_tipos_de_datos_primitivos.html#entrega-de-la-práctica",
+    "objectID": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#entrega-de-la-práctica",
+    "href": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#entrega-de-la-práctica",
     "title": "Práctica 1",
     "section": "5 Entrega de la práctica",
     "text": "5 Entrega de la práctica\nAntes del sábado 15 de febrero a las 18:00, deberán haberse subido a Moodle los siguientes ficheros:\n\npulgadas.py\nfahrenheit.py\nyenes.py\nrectangulo.py\nhotel.py\nentre_pares.py"
