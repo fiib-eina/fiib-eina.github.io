@@ -5,6 +5,687 @@ format: revealjs
 draft: true
 ---
 
-## Chapter {.center}
+## Límites de la composición secuencial {.center}
 
+---
+
+### Límites de la composición secuencial
+
+::: {.columns}
+::: {.column width="70%"}
+
+- Hasta ahora hemos visto cómo **componer** programas a través de **secuencias de instrucciones**
+- Estas secuencias se ejecutan de manera **lineal**, una detrás de otra
+- Esto se denomina **composición secuencial**
+
+_**No todos los programas pueden ser escritos de manera secuencial**_
+
+```python
+print("Hola")
+print("Qué tal?")
+print("Yo bien")
+print("Adiós")
+```
+
+:::
+::: {.column width="30%"}
+
+![](./img/secuencial.png){height=500px}
+
+:::
+:::
+
+---
+
+#### Ejemplo: Números pares e impares
+
+Escribe un programa Python que pida al usuario un número y muestre si es par o impar:
+
+| Escriba un número:
+| **4**
+| El número 4 es par
+
+| Escriba un número:
+| **5**
+| El número 4 es impar
+
+---
+
+#### Ejemplo: División por cero
+
+Escribe un programa Python que pida al usuario dos números y muestre su división:
+
+| Escriba un número:
+| **4**
+| Escriba otro número:
+| **2**
+| 4 / 2 = 2
+
+| Escriba un número:
+| **4**
+| Escriba otro número:
+| **0**
+| No se puede dividir por cero!
+
+---
+
+#### Ejemplo: Ecuación de segundo grado
+
+Escribe un programa Python que dado los coeficientes de una ecuación de segundo grado, muestre sus soluciones:
+
+::: {.columns}
+::: {.column width="33%"}
+
+| Escriba el coeficiente a:
+| **1**
+| Escriba el coeficiente b:
+| **-3**
+| Escriba el coeficiente c:
+| **2**
+| x1 = 2.0, x2 = 1.0
+
+:::
+::: {.column width="33%"}
+
+| Escriba el coeficiente a:
+| **1**
+| Escriba el coeficiente b:
+| **-2**
+| Escriba el coeficiente c:
+| **1**
+| x1 = 1.0
+
+:::
+::: {.column width="33%"}
+
+| Escriba el coeficiente a:
+| **1**
+| Escriba el coeficiente b:
+| **1**
+| Escriba el coeficiente c:
+| **1**
+| No reales
+
+:::
+:::
+
+---
+
+### Límites de la composición secuencial
+
+- Todos estos programas tienen algo en común:
+    - En función de **una condición**, se deberán ejecutar unas acciones y otras
+    - Existe al menos una **decisión** que tomar
+
+---
+
+## Composición condicional {.center}
+
+---
+
+### Composición condicional: `if`
+
+::: {.columns}
+::: {.column width="70%"}
+
+- La **composición condicional** es una estructura de control que permite **tomar decisiones** en función de una condición.
+- Evalúa una **expresión lógica** (valor _booleano_) y ejecuta un **bloque de instrucciones** si la condición es verdadera.
+- El **bloque de instrucciones** que se ejecuta condicionalmente se **identifica** por su **indentación**.
+
+```python
+# bloque_de_instrucciones_principal_1
+
+if condicion:
+    # bloque_de_instrucciones que
+    # se ejecuta si condicion es True
+
+# bloque_de_instrucciones_principal_2
+```
+
+:::
+::: {.column width="30%"}
+
+![](./img/if.png){height=500px}
+
+:::
+:::
+
+---
+
+#### Ejemplo: Print trivial
+
+```python
+print("Uno")
+
+if True:
+    print("Dos")
+
+if False:
+    print("Tres")
+
+print("Cuatro")
+```
+
+<details>
+<summary>Output</summary>
+
+| Uno
+| Dos
+| Cuatro
+
+</details>
+
+---
+
+#### Ejemplo: Warning
+
+```python
+print("Escriba un número:")
+a = int(input())
+
+if a < 0:
+    print(f"WARNING: El número {a} es negativo")
+
+print(f"El número es {a}")
+```
+
+| Escriba un número:
+| **5**
+| El número es 5
+
+| Escriba un número:
+| **-5**
+| WARNING: El número -5 es negativo
+| El número es -5
+
+---
+
+#### Ejemplo: Asignación condicional
+
+```python
+print("Escriba un número:")
+a = int(input())
+
+if a < 0:
+    a = 0
+
+print(f"El número es {a}")
+```
+
+| Escriba un número:
+| **5**
+| El número es 5
+
+| Escriba un número:
+| **-5**
+| El número es 0
+
+---
+
+#### Ejemplo: Bloques de múltiples instrucciones
+
+```python
+
+print("Escriba un número:")
+a = int(input())
+
+if a < 0:
+    a = 0
+    print("El número es negativo")
+    print("Se ha cambiado a 0")
+
+print(f"El número es {a}")
+```
+| Escriba un número:
+| **5**
+| El número es 5
+
+| Escriba un número:
+| **-5**
+| El número es 0
+| Se ha cambiado a 0
+| El número es 0
+
+---
+
+### Compocisión condicional: `if-else`
+
+::: {.columns}
+::: {.column width="70%"}
+
+- A veces es necesario **ejecutar un bloque de instrucciones** si la condición es verdadera y **otro bloque** si es falsa.
+- La estructura `if-else` permite **tomar decisiones** en función de una condición.
+    - Si condición es **verdadera**, ejecuta el **primer bloque**.
+    - Si condición es **falsa**, ejecuta el **segundo bloque**.
+    - **NUNCA** se ejecutan ambos bloques.
+
+```python
+# bloque_de_instrucciones_principal_1
+
+if condicion:
+    # bloque_de_instrucciones_1
+    # se ejecuta si condicion es True
+else:
+    # bloque_de_instrucciones_2
+    # se ejecuta si condicion es False
+
+#bloque_de_instrucciones_principal_2
+```
+
+:::
+::: {.column width="30%"}
+
+![](./img/if-else.png){max-height=500px}
+
+:::
+:::
+
+---
+
+#### Ejemplo: Print trivial
+
+```python
+print("Uno")
+
+if False:
+    print("Dos")
+else:
+    print("Tres")
+
+print("Cuatro")
+```
+
+<details>
+<summary>Output</summary>
+
+| Uno
+| Tres
+| Cuatro
+
+</details>
+
+---
+
+#### Ejemplo: Números pares e impares
+
+```python
+print("Escriba un número:")
+numero = int(input())
+
+if numero % 2 == 0:
+    print(f"El número {numero} es par")
+else:
+    print(f"El número {numero} es impar")
+```
+
+| Escriba un número:
+| **4**
+| El número 4 es par
+
+| Escriba un número:
+| **5**
+| El número 4 es impar
+
+---
+
+#### Ejemplo: División por cero
+
+```python
+print("Escriba un número:")
+a = int(input())
+
+print("Escriba otro número:")
+b = int(input())
+
+if b == 0:
+    print("No se puede dividir por cero!")
+else:
+    print(f"{a} / {b} = {a / b}")
+```
+
+| Escriba un número:
+| **4**
+| Escriba otro número:
+| **2**
+| 4 / 2 = 2
+
+| Escriba un número:
+| **4**
+| Escriba otro número:
+| **0**
+| No se puede dividir por cero!
+
+---
+
+### Composición condicional: `if-elif-else`
+
+::: {.columns}
+::: {.column width="70%"}
+
+- A veces es necesario **evaluar múltiples condiciones**.
+- La estructura `if-elif-else` permite **encadenar decisiones** en función de varias condiciones.
+
+```python
+# bloque_de_instrucciones_principal_1
+
+if condicion_1:
+    # bloque_de_instrucciones_1
+    # se ejecuta si condicion_1 es True
+elif condicion_2:
+    # bloque_de_instrucciones_2
+    # se ejecuta si condicion_2 es True (y condicion_1 fue False)
+else:
+    # bloque_de_instrucciones_3
+    # se ejecuta si condicion_1 y condicion_2 son False
+
+#bloque_de_instrucciones_principal_2
+```
+
+:::
+::: {.column width="30%"}
+
+![](./img/if-else-if.png){max-height=500px}
+
+:::
+:::
+
+---
+
+#### Ejemplo: Print trivial
+
+```python
+print("Uno")
+
+if True:
+    print("Dos")
+elif True:
+    print("Tres")
+else:
+    print("Cuatro")
+
+print("Cinco")
+```
+
+<details>
+<summary>Output</summary>
+
+| Uno
+| Dos
+| Cinco
+
+</details>
+
+---
+
+#### Ejemplo: Ecuación de segundo grado
+
+::: {.columns}
+::: {.column width="55%"}
+
+```python
+import math
+
+print("Escriba el coeficiente a:")
+a = float(input())
+
+print("Escriba el coeficiente b:")
+b = float(input())
+
+print("Escriba el coeficiente c:")
+c = float(input())
+
+discriminante = b ** 2 - 4 * a * c
+
+if discriminante > 0:
+    x1 = (-b + math.sqrt(discriminante)) / (2 * a)
+    x2 = (-b - math.sqrt(discriminante)) / (2 * a)
+    print(f"x1 = {x1}, x2 = {x2}")
+elif discriminante == 0:
+    x = -b / (2 * a)
+    print(f"x = {x}")
+else:
+    print("No reales")
+```
+
+:::
+::: {.column width="45%"}
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
+| Escriba el coeficiente a:
+| **1**
+| Escriba el coeficiente b:
+| **-3**
+| Escriba el coeficiente c:
+| **2**
+| x1 = 2.0, x2 = 1.0
+
+:::
+:::
+
+---
+
+### Anidado de condicionales
+
+- Llamamos **anidado** (nesting) a la **composición** de **estructuras** dentro de otras.
+- Para definir un bucle, utilizamos la **indentación**.
+    - Distintos niveles de indentación indican distintos niveles de anidamiento.
+
+```python
+if condicion_1:
+    # Se ejecuta si condicion_1 es True
+    if condicion_2:
+        # Se ejecuta si condicion_1 y condicion_2 son True
+    else:
+        # Se ejecuta si condicion_1 es True y condicion_2 es False
+# Se ejecuta siempre
+```
+
+---
+
+#### Estructuras análogas: anidado vs `and`
+
+- Para combinar dos expresiones **no siempre es necesario** recurir al anidamiento
+- Recuerda que conoces los **operadores lógicos** `and`, `or` y `not`
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+if condicion_1:
+    if condicion_2:
+        # Se ejecuta si:
+        # condicion_1 y condicion_2 son True
+# Se ejecuta siempre
+```
+
+:::
+::: {.column width="50%"}
+
+```python
+if condicion_1 and condicion_2:
+        # Se ejecuta si:
+        # condicion_1 y condicion_2 son True
+# Se ejecuta siempre
+```
+
+:::
+:::
+
+---
+
+#### Estructuras análogas: `if-elif-else` vs `if-else`
+
+- La estructura `if-elif-else` puede replicarse con anidando `if-else`
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+if condicion_1:
+    # bloque_de_instrucciones_1
+elif condicion_2:
+    # bloque_de_instrucciones_2
+else:
+    # bloque_de_instrucciones_3
+```
+
+:::
+::: {.column width="50%"}
+
+```python
+if condicion_1:
+    # bloque_de_instrucciones_1
+else:
+    if condicion_2:
+        # bloque_de_instrucciones_2
+    else:
+        # bloque_de_instrucciones_3
+```
+
+:::
+:::
+
+---
+
+#### Ejemplo: 
+
+
+
+---
+
+#### Ejemplo: Ecuación de segundo grado (anidado)
+
+```python
+import math
+
+print("Escriba el coeficiente a:")
+a = float(input())
+
+print("Escriba el coeficiente b:")
+b = float(input())
+
+print("Escriba el coeficiente c:")
+c = float(input())
+
+discriminante = b ** 2 - 4 * a * c
+
+if discriminante > 0:
+    x1 = (-b + math.sqrt(discriminante)) / (2 * a)
+    x2 = (-b - math.sqrt(discriminante)) / (2 * a)
+    print(f"x1 = {x1}, x2 = {x2}")
+else:
+    if discriminante == 0:
+        x = -b / (2 * a)
+        print(f"x = {x}")
+    else:
+        print("No reales")
+```
+
+_Nota:_ Este ejemplo sirve para ilustrar el anidamiento. En la práctica, es preferible utilizar `if-elif-else`.
+
+---
+
+## Usos avanzados de la composición condicional {.center}
+
+---
+
+### Interacción conditional
+
+- Recuerda que la interacción con el usuario se realiza también mediante **instrucciones**.
+- Estas instrucciones pueden estar dentro de un **bloque condicional**.
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+print("Introduzce tu edad:")
+edad = int(input())
+
+if edad < 18:
+    print("¿Autorización paterna? (s/n)")
+    res = input()
+    if res == "s":
+        print("Adelante")  # Código repetido
+    else:
+        print("Lo siento, no puedes pasar")
+else:
+    print("Adelante")  # Código repetido
+```
+
+:::
+::: {.column width="50%"}
+
+| Introduzce tu edad:
+| **21**
+| Adelante
+
+| Introduzce tu edad:
+| **15**
+| ¿Autorización paterna? (s/n)
+| **s**
+| Adelante
+
+:::
+:::
+
+---
+
+#### Alternativas al ejercicio anterior
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+print("Introduzce tu edad:")
+edad = int(input())
+
+
+if edad < 18:
+    print("¿Autorización paterna? (s/n)")
+    res = input()
+    if res == "s":
+        permiso = True
+    else:
+        permiso = False
+else:
+    permiso = True
+
+if permiso:
+    print("Adelante")
+else:
+    print("Lo siento, no puedes pasar")
+```
+
+**Cuidado** con definir siempre un valor para `permiso`.
+
+:::
+::: {.column width="50%"}
+
+```python
+print("Introduzce tu edad:")
+edad = int(input())
+
+permiso = False
+
+if edad < 18:
+    print("¿Autorización paterna? (s/n)")
+    res = input()
+    if res == "s":
+        permiso = True
+else:
+    permiso = True
+
+if permiso:
+    print("Adelante")
+else:
+    print("Lo siento, no puedes pasar")
+```
+
+**Nota:** En este caso, `permiso` se asume inicialmente `False`.
+
+:::
+:::
 
