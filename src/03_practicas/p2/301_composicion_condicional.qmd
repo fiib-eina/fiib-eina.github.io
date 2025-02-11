@@ -1,12 +1,211 @@
 ---
 title: Práctica 2
-subtitle: Tipos Primitivos
+subtitle: Composición condicional
 format: html
 draft: true
 ---
 
+## Calificaciones
+
+### Matrículas de honor
+
+El artículo 14.2 del [acuerdo de 22 de diciembre de 2010, del Consejo de Gobierno, por el que se aprueba el Reglamento de normas de evaluación y aprendizaje de la Universidad de Zaragoza](https://academico.unizar.es/sites/academico/files/archivos/gradoymaster/legislacion/reglamentodenormasdeevaluaciondelaprendizaje.pdf) establece: 
+
+_La mención «Matrícula de Honor» podrá ser otorgada a estudiantes que hayan obtenido una calificación igual o superior a 9 en la asignatura. Su número no podrá exceder del 5 % de los estudiantes matriculados en dicha asignatura en el correspondiente grupo docente, salvo cuando sea inferior a 20, en cuyo caso se podrá conceder una sola matrícula de honor._
+
+Escribe un programa en Python que solicite al usuario el número de matriculados en un grupo docente de una asignatura y escriba el número máximo de matrículas de honor que pueden otorgarse en la Universidad de Zaragoza con ese número de matriculados.
+
+Por ejemplo:
+
+| Escribe el número de matriculados en un grupo docente: 
+| **58**
+| Se pueden otorgar como máximo 2 matrículas de honor.
+
+Otro ejemplo:
+
+| Escribe el número de matriculados en un grupo docente: 
+| **19**
+| Se pueden otorgar como máximo 1 matrículas de honor.
+
+**Entrega:** Escribe tu programa en un fichero denominado `matriculas.py`.
+
+
+### Calificaciones cualitativas
+
+El artículo 14.1 del mencionado [Reglamento](https://academico.unizar.es/sites/academico/files/archivos/gradoymaster/legislacion/reglamentodenormasdeevaluaciondelaprendizaje.pdf) establece a su vez que _los resultados de cada una de las materias del plan de estudios se calificarán de 0 a 10 [...], añadiendo una calificación cualitativa según la siguiente escala:_ de 0 a 5, suspenso; de 5 a 7, aprobado; de 7 a 9, notable y de 9 a 10, sobresaliente.
+
+Escribe un programa en Python que solicite al usuario el valor de una calificación numérica de un estudiante y escriba en la pantalla la calificación cualitativa correspondiente.
+
+Ejemplos de ejecución:
+
+| Escribe la nota numérica:
+| **8**
+| Calificación: Notable.
+
+| Escribe la nota numérica:
+| **4.99**
+| Calificación: Suspenso.
+
+Ten en cuenta la posibilidad de que el usuario introduzca calificaciones no válidas fuera del intervalo [0, 10]:
+
+| Escribe la nota numérica:
+| **12.5**
+| Nota numérica no válida.
+
+| Escribe la nota numérica:
+| **-3**
+| Nota numérica no válida.
+
+**Entrega:** Escribe tu programa en un fichero denominado `notas.py`.
+
+
+## Malabares con instrucciones condicionales
+
+Escribe un programa en Python que solicite un valor entero al usuario y realice las siguientes acciones:
+
+ - Si el valor dado por el usuario es par, lo dividirá entre 2. Después:
+	 - Si el resultado de esta división es impar, elevará el resultado al cuadrado.
+	 - Por el contrario, si el resultado de la división es par, lo volverá a dividir entre 2.
+ - En el caso de que el valor dado por el usuario sea impar, entonces:
+	 - Si el valor dado es positivo, lo multiplicará por 5.
+	 - Si es negativo, le cambiará el signo.
+
+Finalmente, el programa informará al usuario del valor transformado, escribiendo por pantalla el resultado.
+
+Ejemplos de ejecución:
+
+| Introduzca un número entero:
+| **5**
+| Resultado: 25
+
+| Introduzca un número entero: 
+| **-2**
+| Resultado: 1
+
+| Introduzca un número entero: 
+| **-45**
+| Resultado: 45
+
+| Introduzca un número entero: 
+| **-68**
+| Resultado: -17
+
+| Introduzca un número entero: 
+| **10**
+| Resultado: 25
+
+| Introduzca un número entero: 
+| **0**
+| Resultado: 0
+
+**Entrega:** Escribe tu programa en un fichero denominado `malabares.py`.
+
+
+## Triángulos
+
+Escribe un programa en Python que solicite al usuario las longitudes de los tres lados de un triángulo y que escriba en la pantalla si dicho triángulo es equilátero, isósceles o escaleno.
+
+El programa debe presentar una forma de interacción con el usuario como la que se muestra en los ejemplos siguientes, que corresponden con ejecuciones independientes del programa:
+
+| Escriba las longitudes de los lados de un triángulo:
+| **4.1**
+| **4.1**
+| **4.1**
+| El triángulo es equilátero.
+
+| Escriba las longitudes de los lados de un triángulo:
+| **2**
+| **2**
+| **3**
+| El triángulo es isósceles.
+
+| Escriba las longitudes de los lados de un triángulo:
+| **3.5**
+| **6**
+| **6**
+| El triángulo es isósceles.
+
+| Escriba las longitudes de los lados de un triángulo:
+| **3**
+| **6**
+| **3**
+| El triángulo es isósceles.
+
+| Escriba las longitudes de los lados de un triángulo:
+| **3**
+| **4**
+| **5**
+| El triángulo es escaleno.
+
+| Escriba las longitudes de los lados de un triángulo:
+| **6**
+| **0**
+| **5**
+| Algún dato no es estrictamente positivo.
+
+| Escriba las longitudes de los lados de un triángulo:
+| **-2**
+| **3**
+| **5**
+| Algún dato no es estrictamente positivo.
+
+Resuelve el problema de forma incremental, es decir, construyendo distintas versiones del programa que, poco a poco, vayan incorporando los requisitos solicitados en el enunciado.
+En particular, se sugiere seguir el siguiente proceso:
+
+- Comienza escribiendo un programa que pida los tres datos al usuario y, si los tres son iguales, escriba en la pantalla el mensaje «El triángulo es equilátero».
+- Continúa modificando el programa para que, además de ser capaz de determinar si el triángulo es equilátero, determine también uno de los casos en los que es isósceles (por ejemplo, cuando los dos primeros lados son iguales).
+- Continúa haciendo que el programa detecte los otros dos casos en los que el triángulo es isósceles (cuando los dos últimos lados son los iguales y cuando son iguales el primero y el tercero).
+- Complétalo haciendo que escriba que es escaleno cuando no sea equilátero ni isósceles.
+- Por último, añade el código necesario para que el programa compruebe si los tres datos suministrados por el usuario son positivos y haz que, en caso de que no lo sean, escriba el mensaje de error «Algún dato no es positivo». 
+
+**Entrega:** Escribe tu programa en un fichero denominado `triangulos.py`.
+
+
+## Cajero automático
+
+Escribe un programa en Python que tenga el siguiente comportamiento:
+
+| Cantidad a retirar en euros:
+| **280**
+| 
+| Billetes 50 €: 5
+| Billetes 20 €: 1
+| Billetes 10 €: 1
+
+El programa informa al usuario del número de billetes que le devolverá el cajero automático de un banco al retirar la cantidad de dinero especificada.
+El cajero dispone únicamente de billetes de diez, de veinte y de cincuenta euros y siempre va a minimizar el número de billetes a entregar.
+
+| Cantidad a retirar en euros:
+| **590**
+| 
+| Billetes 50 €: 11
+| Billetes 20 €: 2
+| Billetes 10 €: 0
+
+Las cantidades que se pueden retirar del cajero tienen que ser estrictamente positivas, múltiplos de 10 e iguales o inferiores al límite máximo de disposición en cajero de 600 €.
+Este aspecto debe ser comprobado por el programa:
+
+| Cantidad a retirar en euros:
+| **-10**
+| Error: la cantidad a retirar no puede ser negativa.
+
+| Cantidad a retirar en euros:
+| **800**
+| Error: la cantidad a retirar excede el límite máximo.
+
+| Cantidad a retirar en euros:
+| **225**
+| Error: la cantidad a retirar tiene que ser un múltiplo de 10.
+
+**Entrega:** Escribe tu programa en un fichero denominado `cajero.py`.
+
+
 ## Entrega de la práctica
 
-**Antes del _ _ de _ a las __:__,** deberán haberse subido a Moodle los siguientes ficheros:
+**Antes del sábado 1 de marzo a las 18:00,** deberán haberse subido a Moodle los siguientes ficheros:
 
-- [ ] `.py`
+- [ ] `matriculas.py`
+- [ ] `notas.py`
+- [ ] `malabares.py`
+- [ ] `triangulos.py`
+- [ ] `cajero.py`
