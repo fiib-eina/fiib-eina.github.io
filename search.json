@@ -84,6 +84,34 @@
     "text": "5 Entrega de la práctica\nAntes del sábado 15 de febrero a las 18:00, deberán haberse subido a Moodle los siguientes ficheros:\n\npulgadas.py\nfahrenheit.py\nyenes.py\nrectangulo.py\nhotel.py\nentre_pares.py"
   },
   {
+    "objectID": "src/02_problemas/301-composicion_condicional.html",
+    "href": "src/02_problemas/301-composicion_condicional.html",
+    "title": "Problemas 3",
+    "section": "",
+    "text": "Escribe un programa en Python que solicite al usuario una respuesta y determine si está seguro de eliminar un archivo. El programa debe aceptar las respuestas s, n, si y no.\n¿Está seguro de que desea eliminar el archivo? (s)i/(n)o:\nsi\nARCHIVO ELIMINADO\n¿Está seguro de que desea eliminar el archivo? (s)i/(n)o:\nn\nSKIP\n\n\nSolución\n\nprint(\"¿Está seguro de que desea eliminar el archivo? (s)i/(n)o:\")\nrespuesta = input()\n\nif respuesta == \"s\" or respuesta == \"si\":\n    print(\"ARCHIVO ELIMINADO\")\nelif respuesta == \"n\" or respuesta == \"no\":\n    print(\"SKIP\")"
+  },
+  {
+    "objectID": "src/02_problemas/301-composicion_condicional.html#está-seguro-de-que-desea-eliminar-el-archivo",
+    "href": "src/02_problemas/301-composicion_condicional.html#está-seguro-de-que-desea-eliminar-el-archivo",
+    "title": "Problemas 3",
+    "section": "",
+    "text": "Escribe un programa en Python que solicite al usuario una respuesta y determine si está seguro de eliminar un archivo. El programa debe aceptar las respuestas s, n, si y no.\n¿Está seguro de que desea eliminar el archivo? (s)i/(n)o:\nsi\nARCHIVO ELIMINADO\n¿Está seguro de que desea eliminar el archivo? (s)i/(n)o:\nn\nSKIP\n\n\nSolución\n\nprint(\"¿Está seguro de que desea eliminar el archivo? (s)i/(n)o:\")\nrespuesta = input()\n\nif respuesta == \"s\" or respuesta == \"si\":\n    print(\"ARCHIVO ELIMINADO\")\nelif respuesta == \"n\" or respuesta == \"no\":\n    print(\"SKIP\")"
+  },
+  {
+    "objectID": "src/02_problemas/301-composicion_condicional.html#determina-si-es-una-casilla-de-oca",
+    "href": "src/02_problemas/301-composicion_condicional.html#determina-si-es-una-casilla-de-oca",
+    "title": "Problemas 3",
+    "section": "2 Determina si es una casilla de Oca",
+    "text": "2 Determina si es una casilla de Oca\nEscribe un programa en Python que solicite al usuario un número de casilla y determine si es una casilla de Oca.\nLas casillas de Oca son aquellas que cumplen alguna de las siguientes condiciones: - Son múltiplos de 9 - Son múltiplos de 5\nIntroduce el número de casilla:\n9\n¿Es casilla de Oca?\nTrue\n\n\nSolución\n\nprint(\"Introduce el número de casilla:\")\n\ncasilla = int(input())\n\nes_oca = (casilla % 9 == 0) or (casilla % 5 == 0)  # Los paréntesis son opcionales\n\nprint(\"¿Es casilla de Oca?\")\nprint(es_oca)"
+  },
+  {
+    "objectID": "src/02_problemas/301-composicion_condicional.html#determina-si-es-un-año-bisiesto",
+    "href": "src/02_problemas/301-composicion_condicional.html#determina-si-es-un-año-bisiesto",
+    "title": "Problemas 3",
+    "section": "3 Determina si es un año bisiesto",
+    "text": "3 Determina si es un año bisiesto\nEscribe un programa en Python que solicite al usuario un año y determine si es bisiesto.\nUn año es bisiesto si - es divisible por 4, excepto aquellos - divisibles por 100 - pero no por 400.\nIntroduce el año:\n2020\n¿Es año bisiesto?\nTrue\n\n\nSolución\n\nprint(\"Introduce el año:\")\naño = int(input())\n\nes_bisiesto = (año % 4 == 0) and not (año % 100 == 0 and año % 400 != 0)\n# es_bisiesto = (año % 4 == 0) and (año % 100 != 0 or año % 400 == 0)\n\nprint(\"¿Es año bisiesto?\")\n\nprint(es_bisiesto)"
+  },
+  {
     "objectID": "src/02_problemas/100-fundamentos.html",
     "href": "src/02_problemas/100-fundamentos.html",
     "title": "Problemas 1",
@@ -207,7 +235,7 @@
     "href": "index.html",
     "title": "Fundamentos de informática",
     "section": "",
-    "text": "01_teoria/00_presentacion/ Presentación de la Asignatura - Información general \n\n\n01_teoria/01_conceptos_basicos/ Teoría 101 - Computadores y Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 102 - Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 103 - Python \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 201 - Tipos Numerales \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 202 - Texto y Booleanos \n\n\n02_problemas/ Problemas 1 - Fundamentos \n\n\n02_problemas/ Problemas 2 - Tipos Numéricos \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n03_practicas/p1/ Práctica 1 - Tipos Primitivos \n\n\n\nNo hay resultados"
+    "text": "01_teoria/00_presentacion/ Presentación de la Asignatura - Información general \n\n\n01_teoria/01_conceptos_basicos/ Teoría 101 - Computadores y Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 102 - Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 103 - Python \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 201 - Tipos Numerales \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 202 - Texto y Booleanos \n\n\n02_problemas/ Problemas 1 - Fundamentos \n\n\n02_problemas/ Problemas 2 - Tipos Numéricos \n\n\n02_problemas/ Problemas 3 - Composición condicional \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n03_practicas/p1/ Práctica 1 - Tipos Primitivos \n\n\n\nNo hay resultados"
   },
   {
     "objectID": "src/01_teoria/01_conceptos_basicos/101_introducción.html#que-es-la-informática",
