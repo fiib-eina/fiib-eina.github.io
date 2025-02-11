@@ -248,7 +248,7 @@ print(f"El número es {a}")
 
 ---
 
-### Compocisión condicional: `if-else`
+### Composición condicional: `if-else`
 
 ::: {.columns}
 ::: {.column width="70%"}
@@ -487,7 +487,7 @@ if condicion_1:
 
 #### Estructuras análogas: anidado vs `and`
 
-- Para combinar dos expresiones **no siempre es necesario** recurir al anidamiento
+- Para combinar dos expresiones **no siempre es necesario** recurrir al anidamiento
 - Recuerda que conoces los **operadores lógicos** `and`, `or` y `not`
 
 ::: {.columns}
@@ -601,7 +601,7 @@ _Nota:_ Este ejemplo sirve para ilustrar el anidamiento. En la práctica, es pre
 ::: {.column width="50%"}
 
 ```python
-print("Introduzce tu edad:")
+print("Introduce tu edad:")
 edad = int(input())
 
 if edad < 18:
@@ -618,11 +618,11 @@ else:
 :::
 ::: {.column width="50%"}
 
-| Introduzce tu edad:
+| Introduce tu edad:
 | **21**
 | Adelante
 
-| Introduzce tu edad:
+| Introduce tu edad:
 | **15**
 | ¿Autorización paterna? (s/n)
 | **s**
@@ -639,7 +639,7 @@ else:
 ::: {.column width="50%"}
 
 ```python
-print("Introduzce tu edad:")
+print("Introduce tu edad:")
 edad = int(input())
 
 
@@ -665,7 +665,7 @@ else:
 ::: {.column width="50%"}
 
 ```python
-print("Introduzce tu edad:")
+print("Introduce tu edad:")
 edad = int(input())
 
 permiso = False
