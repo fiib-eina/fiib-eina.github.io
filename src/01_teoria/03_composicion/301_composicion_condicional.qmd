@@ -2,7 +2,6 @@
 title: Teoría 301
 subtitle: Composición condicional
 format: revealjs
-draft: true
 ---
 
 ## Límites de la composición secuencial {.center}
@@ -248,7 +247,7 @@ print(f"El número es {a}")
 
 ---
 
-### Composición condicional: `if-else`
+### Compocisión condicional: `if-else`
 
 ::: {.columns}
 ::: {.column width="70%"}
@@ -487,7 +486,7 @@ if condicion_1:
 
 #### Estructuras análogas: anidado vs `and`
 
-- Para combinar dos expresiones **no siempre es necesario** recurrir al anidamiento
+- Para combinar dos expresiones **no siempre es necesario** recurir al anidamiento
 - Recuerda que conoces los **operadores lógicos** `and`, `or` y `not`
 
 ::: {.columns}
@@ -601,7 +600,7 @@ _Nota:_ Este ejemplo sirve para ilustrar el anidamiento. En la práctica, es pre
 ::: {.column width="50%"}
 
 ```python
-print("Introduce tu edad:")
+print("Introduzce tu edad:")
 edad = int(input())
 
 if edad < 18:
@@ -618,11 +617,11 @@ else:
 :::
 ::: {.column width="50%"}
 
-| Introduce tu edad:
+| Introduzce tu edad:
 | **21**
 | Adelante
 
-| Introduce tu edad:
+| Introduzce tu edad:
 | **15**
 | ¿Autorización paterna? (s/n)
 | **s**
@@ -639,7 +638,7 @@ else:
 ::: {.column width="50%"}
 
 ```python
-print("Introduce tu edad:")
+print("Introduzce tu edad:")
 edad = int(input())
 
 
@@ -665,7 +664,7 @@ else:
 ::: {.column width="50%"}
 
 ```python
-print("Introduce tu edad:")
+print("Introduzce tu edad:")
 edad = int(input())
 
 permiso = False
