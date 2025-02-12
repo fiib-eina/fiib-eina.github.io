@@ -37,7 +37,7 @@ elif respuesta == "n" or respuesta == "no":
 
 Escribe un programa en Python que solicite al usuario un número de casilla y determine si es una casilla de Oca.
 
-Una casilla es Oca si es multiplo de 9 o (múltiplo de 9) + 5.
+Una casilla es Oca si es múltiplo de 9 o (múltiplo de 9) + 5.
 
 - `5, 9, 14, 18, 23, 27, 32, 36, 41, 45, 50, 54, 59`
 
@@ -81,7 +81,7 @@ Un año es bisiesto si
 
 ```python
 print("Introduce el año:")
-año = int(input())
+anyo = int(input())
 
 es_bisiesto = anyo % 4 == 0 and (anyo % 100 != 0 or anyo % 400 == 0)
 # es_bisiesto = (anyo % 4 == 0 and anyo % 100 != 0) or anyo % 400 == 0
