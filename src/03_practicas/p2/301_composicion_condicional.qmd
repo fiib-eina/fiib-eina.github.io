@@ -46,7 +46,7 @@ Ejemplos de ejecución:
 | **4.99**
 | Calificación: Suspenso.
 
-Ten en cuenta la posibilidad de que el usuario introduzca calificaciones no válidas fuera del intervalo [0, 10]:
+Ten en cuenta la posibilidad de que el usuario introduzca calificaciones no válidas fuera del intervalo $[0, 10]$:
 
 | Escribe la nota numérica:
 | **12.5**
