@@ -33,15 +33,13 @@ elif respuesta == "n" or respuesta == "no":
 
 </details>
 
----
-
 ## Determina si es una casilla de Oca
 
 Escribe un programa en Python que solicite al usuario un número de casilla y determine si es una casilla de Oca.
 
-Las casillas de Oca son aquellas que cumplen alguna de las siguientes condiciones:
-- Son múltiplos de 9
-- Son múltiplos de 5
+Una casilla es Oca si es multiplo de 9 o (múltiplo de 9) + 5.
+
+- `5, 9, 14, 18, 23, 27, 32, 36, 41, 45, 50, 54, 59`
 
 | Introduce el número de casilla:
 | **9**
@@ -56,7 +54,7 @@ print("Introduce el número de casilla:")
 
 casilla = int(input())
 
-es_oca = (casilla % 9 == 0) or (casilla % 5 == 0)  # Los paréntesis son opcionales
+es_oca = casilla % 9 == 0 or casilla % 9 == 5
 
 print("¿Es casilla de Oca?")
 print(es_oca)
@@ -65,16 +63,13 @@ print(es_oca)
 
 </details>
 
----
-
 ## Determina si es un año bisiesto
 
 Escribe un programa en Python que solicite al usuario un año y determine si es bisiesto.
 
 Un año es bisiesto si 
-- es **divisible por 4**, excepto aquellos 
-    - **divisibles por 100**
-    - pero **no por 400**.
+- es **divisible por 4** y **no es divisibles por 100**
+- o es **divisible por 400**.
 
 | Introduce el año:
 | **2020**
@@ -88,8 +83,8 @@ Un año es bisiesto si
 print("Introduce el año:")
 año = int(input())
 
-es_bisiesto = (año % 4 == 0) and not (año % 100 == 0 and año % 400 != 0)
-# es_bisiesto = (año % 4 == 0) and (año % 100 != 0 or año % 400 == 0)
+es_bisiesto = anyo % 4 == 0 and (anyo % 100 != 0 or anyo % 400 == 0)
+# es_bisiesto = (anyo % 4 == 0 and anyo % 100 != 0) or anyo % 400 == 0
 
 print("¿Es año bisiesto?")
 
@@ -98,4 +93,96 @@ print(es_bisiesto)
 
 </details>
 
+## Saludar según la hora
+
+Escribe un programa en Python que solicite al usuario una hora y salude según la hora introducida.
+Saludo según el rango de horas:
+
+- De `07:00` a `11:59` : Buenos días
+- De `12:00` a `19:59` : Buenas tardes
+- De `20:00` a `06:59` : Buenas noches
+
+| Introduce la hora:
+| **8**
+| Buenos días
+
+| Introduce la hora:
+| **14**
+| Buenas tardes
+
+<details>
+<summary>Solución</summary>
+
+```python
+print("Introduce la hora:")
+hora = int(input())
+
+if 7 <= hora < 12:
+    print("Buenos días")
+elif 12 <= hora < 20:
+    print("Buenas tardes")
+if 20 <= hora <= 24 or 0 <= hora < 7:
+    print("Buenas noches")
+```
+
+</details>
+
+<details>
+
+<summary>Solución más sencilla</summary>
+
+```python
+print("Introduce la hora:")
+hora = int(input())
+
+if 7 <= hora < 12:
+    print("Buenos días")
+elif 12 <= hora < 20:
+    print("Buenas tardes")
+else:
+    print("Buenas noches")
+```
+
+</details>
+
+## Números ordenados
+
+Escribe un programa en Python que solicite al usuario tres números y determine si están ordenados de menor a mayor, de mayor a menor o desordenados.
+
+| Introduce tres números:
+| **1**
+| **2**
+| **3**
+| Están ordenados de menor a mayor
+
+| Introduce tres números:
+| **3**
+| **2**
+| **1**
+| Están ordenados de mayor a menor
+
+| Introduce tres números:
+| **2**
+| **3**
+| **1**
+| No están ordenados
+
+<details>
+<summary>Solución</summary>
+
+```python
+print("Introduce tres números:")
+a = int(input())
+b = int(input())
+c = int(input())
+
+if a < b < c:
+    print("Están ordenados de menor a mayor")
+elif a > b > c:
+    print("Están ordenados de mayor a menor")
+else:
+    print("No están ordenados")
+```
+
+</details>
 
