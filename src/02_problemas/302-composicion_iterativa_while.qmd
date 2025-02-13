@@ -5,4 +5,68 @@ format: html
 draft: true
 ---
 
-## 
+## ¿Está seguro de que desea eliminar el archivo?
+
+Escribe un programa en Python que solicite al usuario una respuesta y determine si está seguro de eliminar un archivo.
+El programa debe aceptar las respuestas `s`, `n`, `si` y `no`.
+Si la respuesta no es ninguna de las anteriores, el programa repetirá la pregunta hasta que se introduzca una respuesta válida.
+
+| ¿Está seguro de que desea eliminar el archivo? (s)i/(n)o:
+| **yeppers**
+| ¿Está seguro de que desea eliminar el archivo? (s)i/(n)o:
+| **s**
+| ARCHIVO ELIMINADO
+
+| ¿Está seguro de que desea eliminar el archivo? (s)i/(n)o:
+| **n**
+| SKIP
+
+<details>
+<summary>Solución</summary>
+
+```python
+correcto = False
+
+while not correcto:
+    print("¿Está seguro de que desea eliminar el archivo? (s)i/(n)o:")
+    respuesta = input()
+
+    if respuesta == "s" or respuesta == "si":
+        print("ARCHIVO ELIMINADO")
+        correcto = True
+    elif respuesta == "n" or respuesta == "no":
+        print("SKIP")
+        correcto = True
+```
+
+</details>
+
+## Sumar las cifras de un número
+
+Escribe un programa en Python que solicite al usuario un número entero de `n` cifras y que sume todas las cifras de dicho número.
+
+| Introduce un número entero:
+| **123**
+| La suma de las cifras es:
+| 6
+
+<details>
+<summary>Solución</summary>
+
+```python
+print("Introduce un número de tres cifras:")
+numero = int(input())
+
+numero_restante = numero
+suma = 0
+
+while numero_restante > 0:
+    unidades = numero % 10
+    numero_restante = numero // 10
+    suma = suma + unidades
+
+print("La suma de las cifras es:")
+print(suma)
+```
+
+</details>

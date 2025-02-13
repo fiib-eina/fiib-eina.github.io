@@ -2,7 +2,6 @@
 title: Problemas 3
 subtitle: Composición condicional
 format: html
-draft: true
 ---
 
 ## ¿Está seguro de que desea eliminar el archivo?
@@ -68,6 +67,7 @@ print(es_oca)
 Escribe un programa en Python que solicite al usuario un año y determine si es bisiesto.
 
 Un año es bisiesto si 
+
 - es **divisible por 4** y **no es divisibles por 100**
 - o es **divisible por 400**.
 
@@ -83,11 +83,27 @@ Un año es bisiesto si
 print("Introduce el año:")
 anyo = int(input())
 
-es_bisiesto = anyo % 4 == 0 and (anyo % 100 != 0 or anyo % 400 == 0)
-# es_bisiesto = (anyo % 4 == 0 and anyo % 100 != 0) or anyo % 400 == 0
+es_bisiesto = (anyo % 4 == 0 and anyo % 100 != 0) or anyo % 400 == 0
 
 print("¿Es año bisiesto?")
+print(es_bisiesto)
+```
 
+</details>
+
+<details>
+<summary>Solución más legible</summary>
+
+```python
+print("Introduce el año:")
+año = int(input())
+
+multiplo_4 = anyo % 4 == 0
+multiplo_100 = anyo % 100 == 0
+multiplo_400 = anyo % 400 == 0
+es_bisiesto = multiplo_400 or (multiplo_4 and not multiplo_100)
+
+print("¿Es año bisiesto?")
 print(es_bisiesto)
 ```
 
