@@ -123,7 +123,7 @@
     "href": "src/02_problemas/301-composicion_condicional.html#números-ordenados",
     "title": "Problemas 3",
     "section": "5 Números ordenados",
-    "text": "5 Números ordenados\nEscribe un programa en Python que solicite al usuario tres números y determine si están ordenados de menor a mayor, de mayor a menor o desordenados.\nIntroduce tres números:\n1\n2\n3\nEstán ordenados de menor a mayor\nIntroduce tres números:\n3\n2\n1\nEstán ordenados de mayor a menor\nIntroduce tres números:\n2\n3\n1\nNo están ordenados\n\n\nSolución\n\nprint(\"Introduce tres números:\")\na = int(input())\nb = int(input())\nc = int(input())\n\nif a &lt; b &lt; c:\n    print(\"Están ordenados de menor a mayor\")\nelif a &gt; b &gt; c:\n    print(\"Están ordenados de mayor a menor\")\nelse:\n    print(\"No están ordenados\")"
+    "text": "5 Números ordenados\nEscribe un programa en Python que solicite al usuario tres números y determine si están ordenados de menor a mayor, de mayor a menor o desordenados.\nIntroduce tres números:\n1\n2\n3\nEstán ordenados de menor a mayor\nIntroduce tres números:\n3\n2\n1\nEstán ordenados de mayor a menor\nIntroduce tres números:\n2\n3\n1\nNo están ordenados\n\n\nSolución\n\nprint(\"Introduce tres números:\")\na = int(input())\nb = int(input())\nc = int(input())\n\nif a &lt;= b &lt;= c:\n    print(\"Están ordenados de menor a mayor\")\nelif a &gt;= b &gt;= c:\n    print(\"Están ordenados de mayor a menor\")\nelse:\n    print(\"No están ordenados\")"
   },
   {
     "objectID": "src/02_problemas/100-fundamentos.html",
