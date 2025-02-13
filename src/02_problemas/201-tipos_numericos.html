@@ -198,19 +198,19 @@ La circunferencia del círculo es:<br>
 <summary>
 Solución
 </summary>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>PI <span class="op">=</span> <span class="fl">3.141592653589793</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Introduce el radio del círculo:"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>radio <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> PI <span class="op">*</span> (radio <span class="op">**</span> <span class="dv">2</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>circunferencia <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> PI <span class="op">*</span> radio</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"El área del círculo es:"</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(area)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"La circunferencia del círculo es:"</span>)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(circunferencia)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>PI <span class="op">=</span> <span class="fl">3.141592653589793</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="bu">print</span>(<span class="st">"Introduce el radio del círculo:"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4"></a>radio <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
+<span id="cb1-5"><a href="#cb1-5"></a></span>
+<span id="cb1-6"><a href="#cb1-6"></a>area <span class="op">=</span> PI <span class="op">*</span> (radio <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb1-7"><a href="#cb1-7"></a>circunferencia <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> PI <span class="op">*</span> radio</span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="bu">print</span>(<span class="st">"El área del círculo es:"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="bu">print</span>(area)</span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="bu">print</span>(<span class="st">"La circunferencia del círculo es:"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="bu">print</span>(circunferencia)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </section>
 <section id="en-fin-la-hipotenusa" class="level2" data-number="2">
@@ -229,17 +229,17 @@ La longitud de la hipotenusa es:<br>
 <summary>
 Solución
 </summary>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Introduce la longitud del primer cateto:"</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>cateto1 <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Introduce la longitud del segundo cateto:"</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>cateto2 <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>hipotenusa <span class="op">=</span> math.sqrt(cateto1 <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> cateto2 <span class="op">**</span> <span class="dv">2</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"La longitud de la hipotenusa es:"</span>)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(hipotenusa)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> math</span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="bu">print</span>(<span class="st">"Introduce la longitud del primer cateto:"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4"></a>cateto1 <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="bu">print</span>(<span class="st">"Introduce la longitud del segundo cateto:"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6"></a>cateto2 <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
+<span id="cb2-7"><a href="#cb2-7"></a></span>
+<span id="cb2-8"><a href="#cb2-8"></a>hipotenusa <span class="op">=</span> math.sqrt(cateto1 <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> cateto2 <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb2-9"><a href="#cb2-9"></a></span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="bu">print</span>(<span class="st">"La longitud de la hipotenusa es:"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="bu">print</span>(hipotenusa)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </section>
 <section id="invertir-un-número-de-2-cifras" class="level2" data-number="3">
@@ -253,15 +253,15 @@ El número invertido es:<br>
 <summary>
 Solución
 </summary>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Introduce un número de dos cifras:"</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>numero <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>decenas <span class="op">=</span> numero <span class="op">//</span> <span class="dv">10</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>unidades <span class="op">=</span> numero <span class="op">%</span> <span class="dv">10</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>invertido <span class="op">=</span> unidades <span class="op">*</span> <span class="dv">10</span> <span class="op">+</span> decenas</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"El número invertido es:"</span>)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(invertido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="bu">print</span>(<span class="st">"Introduce un número de dos cifras:"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2"></a>numero <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a>decenas <span class="op">=</span> numero <span class="op">//</span> <span class="dv">10</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>unidades <span class="op">=</span> numero <span class="op">%</span> <span class="dv">10</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>invertido <span class="op">=</span> unidades <span class="op">*</span> <span class="dv">10</span> <span class="op">+</span> decenas</span>
+<span id="cb3-7"><a href="#cb3-7"></a></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="bu">print</span>(<span class="st">"El número invertido es:"</span>)</span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="bu">print</span>(invertido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </section>
 <section id="invertir-un-número-de-3-cifras" class="level2" data-number="4">
@@ -275,40 +275,40 @@ El número invertido es:<br>
 <summary>
 Solución
 </summary>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Introduce un número de tres cifras:"</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>numero <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>centenas <span class="op">=</span> numero <span class="op">//</span> <span class="dv">100</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>decenas <span class="op">=</span> (numero <span class="op">%</span> <span class="dv">100</span>) <span class="op">//</span> <span class="dv">10</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>unidades <span class="op">=</span> numero <span class="op">%</span> <span class="dv">10</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>invertido <span class="op">=</span> unidades <span class="op">*</span> <span class="dv">100</span> <span class="op">+</span> decenas <span class="op">*</span> <span class="dv">10</span> <span class="op">+</span> centenas</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"El número invertido es:"</span>)</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(invertido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="bu">print</span>(<span class="st">"Introduce un número de tres cifras:"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2"></a>numero <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a>centenas <span class="op">=</span> numero <span class="op">//</span> <span class="dv">100</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>decenas <span class="op">=</span> (numero <span class="op">%</span> <span class="dv">100</span>) <span class="op">//</span> <span class="dv">10</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>unidades <span class="op">=</span> numero <span class="op">%</span> <span class="dv">10</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a></span>
+<span id="cb4-8"><a href="#cb4-8"></a>invertido <span class="op">=</span> unidades <span class="op">*</span> <span class="dv">100</span> <span class="op">+</span> decenas <span class="op">*</span> <span class="dv">10</span> <span class="op">+</span> centenas</span>
+<span id="cb4-9"><a href="#cb4-9"></a></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="bu">print</span>(<span class="st">"El número invertido es:"</span>)</span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="bu">print</span>(invertido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <details>
 <summary>
 Solución alternativa
 </summary>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Introduce un número de tres cifras:"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>numero <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>numero_restante <span class="op">=</span> numero</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>unidades <span class="op">=</span> numero <span class="op">%</span> <span class="dv">10</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>numero_restante <span class="op">=</span> numero <span class="op">//</span> <span class="dv">10</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>decenas <span class="op">=</span> numero_restante <span class="op">%</span> <span class="dv">10</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>numero_restante <span class="op">=</span> numero_restante <span class="op">//</span> <span class="dv">10</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>centenas <span class="op">=</span> numero_restante <span class="op">%</span> <span class="dv">10</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>numero_restante <span class="op">=</span> numero_restante <span class="op">//</span> <span class="dv">10</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>invertido <span class="op">=</span> unidades <span class="op">*</span> <span class="dv">100</span> <span class="op">+</span> decenas <span class="op">*</span> <span class="dv">10</span> <span class="op">+</span> centenas</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"El número invertido es:"</span>)</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(invertido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="bu">print</span>(<span class="st">"Introduce un número de tres cifras:"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2"></a>numero <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb5-3"><a href="#cb5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4"></a>numero_restante <span class="op">=</span> numero</span>
+<span id="cb5-5"><a href="#cb5-5"></a></span>
+<span id="cb5-6"><a href="#cb5-6"></a>unidades <span class="op">=</span> numero <span class="op">%</span> <span class="dv">10</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a>numero_restante <span class="op">=</span> numero <span class="op">//</span> <span class="dv">10</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a></span>
+<span id="cb5-9"><a href="#cb5-9"></a>decenas <span class="op">=</span> numero_restante <span class="op">%</span> <span class="dv">10</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a>numero_restante <span class="op">=</span> numero_restante <span class="op">//</span> <span class="dv">10</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a></span>
+<span id="cb5-12"><a href="#cb5-12"></a>centenas <span class="op">=</span> numero_restante <span class="op">%</span> <span class="dv">10</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a>numero_restante <span class="op">=</span> numero_restante <span class="op">//</span> <span class="dv">10</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a></span>
+<span id="cb5-15"><a href="#cb5-15"></a>invertido <span class="op">=</span> unidades <span class="op">*</span> <span class="dv">100</span> <span class="op">+</span> decenas <span class="op">*</span> <span class="dv">10</span> <span class="op">+</span> centenas</span>
+<span id="cb5-16"><a href="#cb5-16"></a></span>
+<span id="cb5-17"><a href="#cb5-17"></a><span class="bu">print</span>(<span class="st">"El número invertido es:"</span>)</span>
+<span id="cb5-18"><a href="#cb5-18"></a><span class="bu">print</span>(invertido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </section>
 <section id="suma-de-dígitos" class="level2" data-number="5">
@@ -322,17 +322,17 @@ La suma de los dígitos es:<br>
 <summary>
 Solución
 </summary>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Introduce un número de tres cifras:"</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>numero <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>centenas <span class="op">=</span> numero <span class="op">//</span> <span class="dv">100</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>decenas <span class="op">=</span> (numero <span class="op">%</span> <span class="dv">100</span>) <span class="op">//</span> <span class="dv">10</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>unidades <span class="op">=</span> numero <span class="op">%</span> <span class="dv">10</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>suma <span class="op">=</span> centenas <span class="op">+</span> decenas <span class="op">+</span> unidades</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"La suma de los dígitos es:"</span>)</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(suma)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="bu">print</span>(<span class="st">"Introduce un número de tres cifras:"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2"></a>numero <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb6-3"><a href="#cb6-3"></a></span>
+<span id="cb6-4"><a href="#cb6-4"></a>centenas <span class="op">=</span> numero <span class="op">//</span> <span class="dv">100</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a>decenas <span class="op">=</span> (numero <span class="op">%</span> <span class="dv">100</span>) <span class="op">//</span> <span class="dv">10</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a>unidades <span class="op">=</span> numero <span class="op">%</span> <span class="dv">10</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a></span>
+<span id="cb6-8"><a href="#cb6-8"></a>suma <span class="op">=</span> centenas <span class="op">+</span> decenas <span class="op">+</span> unidades</span>
+<span id="cb6-9"><a href="#cb6-9"></a></span>
+<span id="cb6-10"><a href="#cb6-10"></a><span class="bu">print</span>(<span class="st">"La suma de los dígitos es:"</span>)</span>
+<span id="cb6-11"><a href="#cb6-11"></a><span class="bu">print</span>(suma)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details></section>
 <section id="promedio-de-3-números" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="promedio-de-3-números"><span class="header-section-number">6</span> Promedio de 3 números</h2>
@@ -349,17 +349,17 @@ El promedio de los tres números es:<br>
 <summary>
 Solución
 </summary>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Introduce el primer número:"</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>numero1 <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Introduce el segundo número:"</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>numero2 <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Introduce el tercer número:"</span>)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>numero3 <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>promedio <span class="op">=</span> (numero1 <span class="op">+</span> numero2 <span class="op">+</span> numero3) <span class="op">/</span> <span class="dv">3</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"El promedio de los tres números es:"</span>)</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(promedio)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="bu">print</span>(<span class="st">"Introduce el primer número:"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2"></a>numero1 <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="bu">print</span>(<span class="st">"Introduce el segundo número:"</span>)</span>
+<span id="cb7-4"><a href="#cb7-4"></a>numero2 <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="bu">print</span>(<span class="st">"Introduce el tercer número:"</span>)</span>
+<span id="cb7-6"><a href="#cb7-6"></a>numero3 <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb7-7"><a href="#cb7-7"></a></span>
+<span id="cb7-8"><a href="#cb7-8"></a>promedio <span class="op">=</span> (numero1 <span class="op">+</span> numero2 <span class="op">+</span> numero3) <span class="op">/</span> <span class="dv">3</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a></span>
+<span id="cb7-10"><a href="#cb7-10"></a><span class="bu">print</span>(<span class="st">"El promedio de los tres números es:"</span>)</span>
+<span id="cb7-11"><a href="#cb7-11"></a><span class="bu">print</span>(promedio)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 

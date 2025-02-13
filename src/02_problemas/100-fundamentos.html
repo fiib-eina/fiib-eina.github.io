@@ -150,9 +150,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="asignaciones-secuenciales" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="asignaciones-secuenciales"><span class="header-section-number">1</span> Asignaciones secuenciales</h2>
 <p>¿Qué valor tienen las variables <code>a</code> y <code>b</code> al final del siguiente código?</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">10</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>b <span class="op">=</span> a</span>
+<span id="cb1-3"><a href="#cb1-3"></a>a <span class="op">=</span> <span class="dv">10</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <details>
 <summary>
 Solución
@@ -180,39 +180,39 @@ Solución
 <section id="cambio-de-valores" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="cambio-de-valores"><span class="header-section-number">2</span> Cambio de valores</h2>
 <p>Consigue que el valor de <code>a</code> pase a ser el de <code>b</code> y el de <code>b</code> pase a ser el de <code>a</code>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ??</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)  <span class="co"># 10</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b)  <span class="co"># 5</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>b <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co"># ??</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="bu">print</span>(a)  <span class="co"># 10</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="bu">print</span>(b)  <span class="co"># 5</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <details>
 <summary>
 Solución
 </summary>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> a</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> b</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> temp</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)  <span class="co"># 10</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b)  <span class="co"># 5</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>b <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a>temp <span class="op">=</span> a</span>
+<span id="cb3-5"><a href="#cb3-5"></a>a <span class="op">=</span> b</span>
+<span id="cb3-6"><a href="#cb3-6"></a>b <span class="op">=</span> temp</span>
+<span id="cb3-7"><a href="#cb3-7"></a></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="bu">print</span>(a)  <span class="co"># 10</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="bu">print</span>(b)  <span class="co"># 5</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </section>
 <section id="averigua-el-tipo-de-dato" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="averigua-el-tipo-de-dato"><span class="header-section-number">3</span> Averigua el tipo de dato</h2>
 <p>¿Cuál es el tipo de dato de cada una de las siguientes variables?</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="fl">5.0</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="st">"5"</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> a <span class="op">+</span> b</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> a <span class="op">*</span> <span class="dv">2</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> b <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> a <span class="op">+</span> <span class="bu">int</span>(c)</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="bu">str</span>(a) <span class="op">+</span> c</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>b <span class="op">=</span> <span class="fl">5.0</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>c <span class="op">=</span> <span class="st">"5"</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>d <span class="op">=</span> a <span class="op">+</span> b</span>
+<span id="cb4-5"><a href="#cb4-5"></a>e <span class="op">=</span> a <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>f <span class="op">=</span> b <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>g <span class="op">=</span> a <span class="op">+</span> <span class="bu">int</span>(c)</span>
+<span id="cb4-8"><a href="#cb4-8"></a>h <span class="op">=</span> <span class="bu">str</span>(a) <span class="op">+</span> c</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <details>
 <summary>
 Solución
