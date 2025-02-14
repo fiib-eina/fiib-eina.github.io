@@ -5,6 +5,36 @@ format: html
 draft: true
 ---
 
+## Seguimiento de la ejecución de un bucle
+
+Escribe la secuencia de **números de línea** que se ejecutarán en el siguiente bucle `while`:
+
+- 1, 2, 3, ...
+
+```python
+count = 1
+while count <= 3:
+    print(count)
+    count += 1
+print("Fin")
+```
+
+<details>
+<summary>Solución</summary>
+
+| 1, 2,        _(evalua como True)_
+| 3, 4, 2,     _(evalua como True)_
+| 3, 4, 2      _(evalua como True)_
+| 3, 4, **2**  _(evalua como False)_
+| 5
+
+**Fíjate** que la línea `2` se ejecuta **también** al final de la última iteración.
+
+</details>
+
+
+---
+
 ## ¿Está seguro de que desea eliminar el archivo?
 
 Escribe un programa en Python que solicite al usuario una respuesta y determine si está seguro de eliminar un archivo.
@@ -37,6 +67,41 @@ while not correcto:
     elif respuesta == "n" or respuesta == "no":
         print("SKIP")
         correcto = True
+```
+
+</details>
+
+## Sumar una secuencia
+
+Escribe un programa en Python que solicite iterativamente una secuencia de números enteros. Dicha secuencia terminará cuando el usuario introduzca un número negativo. El programa debe sumar todos los números introducidos y mostrar el resultado.
+
+| Introduce un número entero:
+| **1**
+| Introduce un número entero:
+| **2**
+| Introduce un número entero:
+| **3**
+| Introduce un número entero:
+| **-1**
+| La suma de los números es:
+| 6
+
+<details>
+<summary>Solución</summary>
+
+```python
+suma = 0
+numero = 0
+
+while numero >= 0:
+    print("Introduce un número entero:")
+    numero = int(input())
+
+    if numero >= 0:
+        suma = suma + numero
+
+print("La suma de los números es:")
+print(suma)
 ```
 
 </details>

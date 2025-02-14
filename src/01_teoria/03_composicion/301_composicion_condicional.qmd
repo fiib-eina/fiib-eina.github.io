@@ -29,7 +29,7 @@ print("Adiós")
 :::
 ::: {.column width="30%"}
 
-![](./img/secuencial.png){height=500px}
+![](./img/secuencial.png)
 
 :::
 :::
@@ -122,13 +122,23 @@ Escribe un programa Python que dado los coeficientes de una ecuación de segundo
 
 ---
 
-### Composición condicional: `if`
+### Composición condicional: concepto
+
+- La **composición condicional** es una estructura de control que permite **tomar decisiones** en función de una condición.
+- Existen distintas formas de conseguir esto en python:
+    - [`if`](#if), [`if-else`](#if-else), [`if-elif-else`](#if-elif-else)
+
+---
+
+### Composición condicional: `if` {#if}
 
 ::: {.columns}
 ::: {.column width="70%"}
 
-- La **composición condicional** es una estructura de control que permite **tomar decisiones** en función de una condición.
-- Evalúa una **expresión lógica** (valor _booleano_) y ejecuta un **bloque de instrucciones** si la condición es verdadera.
+- La estructura `if` permite **condicionar** la ejecución de un bloque de instrucciones *si* se cumple **una condición**.
+    1. Evalúa una **expresión lógica** (valor _booleano_)
+    2. Si el valor es `True`: ejecuta el bloque.
+    3. Si el valor es `False`: no ejecuta el bloque.
 - El **bloque de instrucciones** que se ejecuta condicionalmente se **identifica** por su **indentación**.
 
 ```python
@@ -152,6 +162,11 @@ if condicion:
 ---
 
 #### Ejemplo: Print trivial
+```python
+count = 0
+while count < 100:
+    print("I will lock my computer when I leave my desk")
+```
 
 ```python
 print("Uno")
@@ -247,7 +262,7 @@ print(f"El número es {a}")
 
 ---
 
-### Compocisión condicional: `if-else`
+### Compocisión condicional: `if-else` {#if-else}
 
 ::: {.columns}
 ::: {.column width="70%"}
@@ -274,7 +289,7 @@ else:
 :::
 ::: {.column width="30%"}
 
-![](./img/if-else.png){max-height=500px}
+![](./img/if-else.png)
 
 :::
 :::
@@ -356,13 +371,14 @@ else:
 
 ---
 
-### Composición condicional: `if-elif-else`
+### Composición condicional: `if-elif-else` {#if-elif-else}
 
 ::: {.columns}
 ::: {.column width="70%"}
 
 - A veces es necesario **evaluar múltiples condiciones**.
 - La estructura `if-elif-else` permite **encadenar decisiones** en función de varias condiciones.
+- La sección `else` **no es obligatoria**, pero será necesaria en la mayoría de problemas.
 
 ```python
 # bloque_de_instrucciones_principal_1

@@ -2,9 +2,473 @@
 title: Teoría 302
 subtitle: Composición Iterativa I
 format: revealjs
-draft: true
 ---
 
-## Chapter {.center}
+## Limites de la composición secuencial y condicional {.center}
+
+---
+
+### Limites de la composición secuencial y condicional
+
+- En la sesión anterior vimos cómo **componer** programas de modo que **algunas instrucciones sólo se ejecuten si se cumple una condición**
+    - Composición **secuencial** y **condicional**
+
+::: {.callout-warning}
+No todos los programas pueden ser escritos de manera secuencial y condicional
+:::
+
+---
+
+#### Ejemplo: Repetición de un mensaje 100 veces
+
+Escribe programa Python que imprima por pantalla la siquiente frase **100 veces**:
+
+- _I will lock my computer when I leave my desk_
+
+![](./img/bart.jpg)
+
+::: {.callout-tip}
+¿Es implementable con composición secuencial y condicional?
+:::
+
+---
+
+
+- **Sí**, se puede resolver con composición secuencial
+
+```python
+print("I will lock my computer when I leave my desk")
+print("I will lock my computer when I leave my desk")
+print("I will lock my computer when I leave my desk")
+print("I will lock my computer when I leave my desk")
+print("I will lock my computer when I leave my desk")
+print("I will lock my computer when I leave my desk")
+print("I will lock my computer when I leave my desk")
+print("I will lock my computer when I leave my desk")
+print("I will lock my computer when I leave my desk")
+print("I will lock my computer when I leave my desk")
+# 90 veces más
+```
+
+- **Inconveniente**: Repetitivo
+
+---
+
+#### Ejemplo: Repetición de un mensaje N veces
+
+Escribe programa Python que solicite un número entero al usuario y que imprima por pantalla la siquiente frase **tantas veces** como el número introducido:
+
+- _I will lock my computer when I leave my desk_
+
+```python
+print("Introduce un número entero:")
+n = int(input())
+
+print("I will lock my computer when I leave my desk")
+print("I will lock my computer when I leave my desk")
+# ...
+```
+
+- **Inconveniente**: Cuando paro?
+
+```python
+print("Introduce un número entero:")
+n = int(input())
+
+if n > 1:
+    print("I will lock my computer when I leave my desk")
+if n > 2:
+    print("I will lock my computer when I leave my desk")
+# ...
+```
+
+- **Inconveniente**: Y si `n` es muy grande?
+
+---
+
+#### Ejemplo: Calculo de múltiplos de 3
+
+Escribe programa Python que imprima por pantalla todos los **múltiplos de 3 menores que 100**.
+
+```python
+if 1 % 3 == 0:
+    print(1)
+
+if 2 % 3 == 0:
+    print(2)
+
+if 3 % 3 == 0:
+    print(3)
+# ...
+```
+
+- **Mismos problemas que antes**
+
+---
+
+### Limites de la composición secuencial y condicional
+
+- Todos estos programas tienen cumplen al menos una de estas dos condiciones:
+    - Requieren un número determinado de pasos **demasiado grande** 
+    - Requieren un número **indeterminado** de pasos
+
+---
+
+## Composición Iterativa {.center}
+
+---
+
+### Composición Iterativa: concepto
+
+- La **composición iterativa** es una estructura de control que permite **repetir** un **bloque de instrucciones**.
+- Existen varias formas de composición iterativa
+    - [`while`](#while), [`for`](#for)
+
+---
+
+### Composición Iterativa: `while`
+
+::: {.columns}
+::: {.column width="70%"}
+
+- La estructura `while` permite **repetir** la ejecución de un bloque de instrucciones **mientras** se cumpla **una condición**.
+    1. Evalúa una **expresión lógica** (valor _booleano_)
+    2. Si el valor es `True`: ejecuta el bloque.
+        - Al terminal el bloque, **vuelve arriba** para evaluar la condición de nuevo.
+    3. Si el valor es `False`: no ejecuta el bloque.
+- El **bloque de instrucciones** que se ejecuta iterativamente se **identifica** por su **indentación**.
+
+```python
+# bloque_de_instrucciones_principal_1
+
+while condicion:
+    # bloque_de_instrucciones que
+    # se ejecuta si condicion es True
+
+# bloque_de_instrucciones_principal_2
+```
+
+:::
+::: {.column width="30%"}
+
+![](./img/while.png)
+
+:::
+:::
+
+---
+
+#### Ejemplo: Repetición de un mensaje 100 veces (fallido)
+
+- Para resolver el problema de la repetición de un mensaje 100 veces, utilizaremos un bucle `while` que **repita** la instrucción `print()` 100 veces.
+    - Necesitaremos una forma de **contar** las veces que se ha repetido el mensaje.
+    - Necesitaremos una **condición** que nos permita **salir** del bucle.
+
+**¿Funcionará?**
+
+```python
+count = 0
+while count < 100:
+    print("I will lock my computer when I leave my desk")
+```
+
+| I will lock my computer when I leave my desk
+| I will lock my computer when I leave my desk
+| I will lock my computer when I leave my desk
+| _... hasta el infinito_
+
+---
+
+- ¿Qué problema tiene este programa?
+    - **Bucle infinito**: `count` nunca se incrementa
+- ¿Cómo solucionarlo?
+    - **Incrementar** el valor de `count` en cada iteración
+
+---
+
+### Incremento de una variable
+
+- Un concepto fundamental de los **bucles** es **modificar el estado de la condición**.
+    - Si dentro del bloque de una iteración **ninguna de las variables usadas en la condición** cambia, estaremos ante un **bucle infinito**.
+- La forma más común de modificación en los bucles es **incrementar** o **decrementar** una variable.
+- Estas variables que **comienzan con un valor específico** y **se incrementan o decrementan en cada iteración** las llamaremos **acumuladores**.
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+count = 0
+while count < 3:
+    print("Hello")
+    count = count + 1
+print("Bye")
+```
+
+:::
+::: {.column width="50%"}
+
+| Hello
+| Hello
+| Hello
+| Bye
+
+:::
+:::
+
+---
+
+#### Ejemplo: Repetición de un mensaje 100 veces (correcto)
+
+- Sabiendo esto, podemos corregir el programa anterior:
+    - **Incrementar** el valor de `count` en cada iteración
+
+```python
+count = 0
+while count < 100:
+    print("I will lock my computer when I leave my desk")
+    count = count + 1
+```
+
+| I will lock my computer when I leave my desk
+| I will lock my computer when I leave my desk
+| I will lock my computer when I leave my desk
+| _... 97 veces más_
+
+---
+
+### Incremento de una variable: asignación aumentada
+
+- En la sección anterior, vimos por primera vez el **uso de una variable en su propia asignación**.
+    - `count = count + 1`
+- Esta es una operación **muy común** en los bucles.
+- En Python, existe la **asignación aumentada**.
+    - `count += 1`: Equivale a `count = count + 1`
+    - `count -= 1`: Equivale a `count = count - 1`
+- **OtrosAtajo**: `*=` (producto), `/=` (división), `%=` (resto), `**=` (potencia)
+
+---
+
+#### Ejemplo: Repetición de un mensaje 100 veces (alternativa con asignación aumentada)
+
+- Sabiendo esto, podemos corregir el programa anterior:
+    - **Incrementar** el valor de `count` en cada iteración
+
+```python
+count = 0
+while count < 100:
+    print("I will lock my computer when I leave my desk")
+    count += 1
+```
+
+| I will lock my computer when I leave my desk
+| I will lock my computer when I leave my desk
+| I will lock my computer when I leave my desk
+| _... 97 veces más_
+
+---
+
+#### Ejemplo: Contar hasta 5
+
+- En el ejemplo anterior, todas las **iteraciones** ejecutaban las instrucciones con exactamente los mismos **valores**
+    - por lo que el resultado de **cada iteración** era **idéntico**.
+- Sin embargo, **entre una iteración y otra** los **valores de las variables** no siempre serán los mismos.
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+count = 1
+while count <= 5:
+    print(count)
+    count += 1
+```
+
+:::
+::: {.column width="50%"}
+
+| 1
+| 2
+| 3
+| 4
+| 5
+
+:::
+:::
+
+---
+
+#### Ejemplo: Repetición de un mensaje N veces
+
+
+```python
+print("Introduce un número entero:")
+n = int(input())
+
+count = 0
+while count < n:
+    print("I will lock my computer when I leave my desk")
+    count += 1
+```
+
+- Hemos decidido (recomendable, será necesario más adelante):
+    - **iniciar** la variable `count = 0` y **terminar** el bucle cuando `count < n`.
+- Sería equivalente:
+    - **iniciar** la variable `count = 1` y **terminar** el bucle cuando `count <= n`.
+
+---
+
+#### Ejemplo: Calculo de múltiplos de 3
+
+Este programa imprime por pantalla todos los **múltiplos de 3 menores que 100**.
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+num = 1
+
+while num < 100:
+    if num % 3 == 0:
+        print(num)
+    num += 1
+```
+
+:::
+::: {.column width="50%"}
+
+| 3
+| 6
+| 9
+| _... hasta 99_
+
+:::
+:::
+
+
+---
+
+#### Ejemplo: Sumatorio
+
+- Los **acumuladores** tienen muchos usos más alla de **contar** las iteraciones de un bucle
+    - Por ejemplo, podemos utilizar  para calcular **sumatorios**
+
+$$
+\sum_{i=1}^{100} 2i^2
+$$
+
+```python
+sumatorio = 0
+i = 1
+while i <= 100:
+    sumatorio += 2 * (i ** 2)
+    i += 1
+```
+
+---
+
+### Bucles anidados
+
+- Al igual que con las estructuras condicionales, podemos **anidar** bucles.
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+x = 0
+while x < 3:
+    y = 0
+    while y < 3:
+        print(f"x={x}, y={y}")
+        y += 1
+    x += 1
+```
+
+:::
+::: {.column width="50%"}
+
+| x=0, y=0
+| x=0, y=1
+| x=0, y=2
+| x=1, y=0
+| x=1, y=1
+| x=1, y=2
+| x=2, y=0
+| x=2, y=1
+| x=2, y=2
+
+:::
+:::
+
+---
+
+#### Ejemplo: Tabla de multiplicar
+
+Escribe un programa en Python que imprima por pantalla la tabla de multiplicar del 1 al 10.
+
+```python
+x = 1
+
+while x <= 10:
+    y = 1
+    while y <= 10:
+        print(f"{x} x {y} = {x * y}")
+        y += 1
+    x += 1
+```
+
+- Fíjate en cómo en este caso iniciamos las como `x = 1` e `y = 1` y terminamos los bucles cuando `x <= 10` e `y <= 10`.
+    - Esto es porque nos interesa que tengan estos valores.
+    - **Piensa qué implicaciones tendría iniciar `x = 0` y terminar el bucle cuando `x < 10`**
+
+---
+
+## Usos avanzados de `while` {.center}
+
+---
+
+### Interacción con el usuario
+
+- Recuerda que la interacción con el usuario se realiza también mediante **instrucciones**.
+- Estas instrucciones pueden estar dentro de un **bloque condicional**.
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+print("Introduce un número par:")
+n = int(input())
+while n % 2 != 0:
+    print("Introduce un número par:")
+    n = int(input())
+```
+
+```python
+n = 1
+while n % 2 != 0:
+    print("Introduce un número par:")
+    n = int(input())
+```
+
+```python
+par = False
+while not par:
+    print("Introduce un número par:")
+    n = int(input())
+    if n % 2 == 0:
+        par = True
+```
+
+:::
+::: {.column width="50%"}
+
+| Introduce un número par:
+| **3**
+| Introduce un número par:
+| **5**
+| Introduce un número par:
+| **4**
+
+:::
+:::
 
 

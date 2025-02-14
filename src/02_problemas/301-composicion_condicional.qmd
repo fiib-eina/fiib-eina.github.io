@@ -32,6 +32,8 @@ elif respuesta == "n" or respuesta == "no":
 
 </details>
 
+---
+
 ## Determina si es una casilla de Oca
 
 Escribe un programa en Python que solicite al usuario un número de casilla y determine si es una casilla de Oca.
@@ -44,6 +46,11 @@ Una casilla es Oca si es múltiplo de 9 o (múltiplo de 9) + 5.
 | **9**
 | ¿Es casilla de Oca?
 | True
+
+| Introduce el número de casilla:
+| **6**
+| ¿Es casilla de Oca?
+| False
 
 <details>
 <summary>Solución</summary>
@@ -111,7 +118,7 @@ print(es_bisiesto)
 
 ## Saludar según la hora
 
-Escribe un programa en Python que solicite al usuario una hora y salude según la hora introducida.
+Escribe un programa en Python que solicite al usuario un número entero que represente la hora y salude según la hora introducida.
 Saludo según el rango de horas:
 
 - De `07:00` a `11:59` : Buenos días
@@ -137,7 +144,7 @@ if 7 <= hora < 12:
     print("Buenos días")
 elif 12 <= hora < 20:
     print("Buenas tardes")
-if 20 <= hora <= 24 or 0 <= hora < 7:
+elif 20 <= hora <= 24 or 0 <= hora < 7:
     print("Buenas noches")
 ```
 
@@ -192,9 +199,9 @@ a = int(input())
 b = int(input())
 c = int(input())
 
-if a < b < c:
+if a <= b <= c:
     print("Están ordenados de menor a mayor")
-elif a > b > c:
+elif a >= b >= c:
     print("Están ordenados de mayor a menor")
 else:
     print("No están ordenados")
