@@ -270,7 +270,7 @@
     "href": "index.html",
     "title": "Fundamentos de informática",
     "section": "",
-    "text": "01_teoria/00_presentacion/ Presentación de la Asignatura - Información general \n\n\n01_teoria/01_conceptos_basicos/ Teoría 101 - Computadores y Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 102 - Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 103 - Python \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 201 - Tipos Numerales \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 202 - Texto y Booleanos \n\n\n01_teoria/03_composicion/ Teoría 301 - Composición condicional \n\n\n01_teoria/03_composicion/ &lt;b&gt;Teoría 302&lt;/b&gt; - Composición Iterativa I \n\n\n02_problemas/ Problemas 1 - Fundamentos \n\n\n02_problemas/ Problemas 2 - Tipos Numéricos \n\n\n02_problemas/ Problemas 3 - Composición condicional \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n03_practicas/p1/ Práctica 1 - Tipos Primitivos \n\n\n\nNo hay resultados"
+    "text": "01_teoria/00_presentacion/ Presentación de la Asignatura - Información general \n\n\n01_teoria/01_conceptos_basicos/ Teoría 101 - Computadores y Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 102 - Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 103 - Python \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 201 - Tipos Numerales \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 202 - Texto y Booleanos \n\n\n01_teoria/03_composicion/ Teoría 301 - Composición condicional \n\n\n01_teoria/03_composicion/ Teoría 302 - Composición Iterativa I \n\n\n02_problemas/ Problemas 1 - Fundamentos \n\n\n02_problemas/ Problemas 2 - Tipos Numéricos \n\n\n02_problemas/ Problemas 3 - Composición condicional \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n03_practicas/p1/ Práctica 1 - Tipos Primitivos \n\n\n\nNo hay resultados"
   },
   {
     "objectID": "src/01_teoria/01_conceptos_basicos/101_introducción.html#que-es-la-informática",
@@ -355,6 +355,27 @@
     "title": "Teoría 202",
     "section": "Booleanos",
     "text": "Booleanos"
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/302_composicion_iterativa_while.html#limites-de-la-composición-secuencial-y-condicional",
+    "href": "src/01_teoria/03_composicion/302_composicion_iterativa_while.html#limites-de-la-composición-secuencial-y-condicional",
+    "title": "Teoría 302",
+    "section": "Limites de la composición secuencial y condicional",
+    "text": "Limites de la composición secuencial y condicional"
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/302_composicion_iterativa_while.html#composición-iterativa",
+    "href": "src/01_teoria/03_composicion/302_composicion_iterativa_while.html#composición-iterativa",
+    "title": "Teoría 302",
+    "section": "Composición Iterativa",
+    "text": "Composición Iterativa"
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/302_composicion_iterativa_while.html#usos-avanzados-de-while",
+    "href": "src/01_teoria/03_composicion/302_composicion_iterativa_while.html#usos-avanzados-de-while",
+    "title": "Teoría 302",
+    "section": "Usos avanzados de while",
+    "text": "Usos avanzados de while"
   },
   {
     "objectID": "src/02_problemas/201-tipos_numericos.html",
