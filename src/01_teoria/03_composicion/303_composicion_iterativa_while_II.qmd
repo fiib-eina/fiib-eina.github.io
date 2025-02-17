@@ -1,8 +1,351 @@
 ---
 title: Teoría 302
-subtitle: Composición Iterativa I
+subtitle: Composición Iterativa II
 format: revealjs
 draft: true
 ---
 
+## Composición Iterativa II {.center}
 
+---
+
+### Acumuladores
+
+- Existe un patrón de problema común en el que nuestro programa ha de **acumular** un **resultado** de forma **iterativa**.
+- Estas variables **acumuladoras** han siempre de ser **inicializadas** antes de comenzar la iteración.
+    - Ej. `accum = 0`
+- Recuerda que conoces los operadores de _asignación aumentada_.
+    - Ej. `accum += 1`
+- Según el tipo de operación que vaya a recibir la variable acumuladora, deberemos inicializarla con un valor adecuado.
+    - Ej. `accum = 1` para multiplicaciones.
+
+---
+
+#### Ejemplo: Suma de los primeros `n` números naturales
+
+- Escribe un programa Python que solicite un número entero positivo `n` al usuario y calcule la suma de los primeros `n` números naturales.
+    - Deberemos _recorrer_ los `n` primeros números naturales (incluyendo `n`).
+    - Para cada número, deberemos _acumular_ la suma.
+
+| Introduce un número entero positivo:
+| **5**
+| La suma de los primeros 5 números naturales es 15
+
+---
+
+**Solución**
+
+```python
+print("Introduce un número entero positivo:")
+n = int(input())
+
+suma = 0
+
+i = 1
+while i <= n:
+    suma = suma + i
+    i += 1
+
+print(f"La suma de los primeros {n} números naturales es {suma}")
+```
+
+---
+
+**Implementación alternativa**
+
+```python
+print("Introduce un número entero positivo:")
+n = int(input())
+
+suma = 0
+
+while n > 0:
+    suma = suma + n
+    n = n - 1
+
+# Ya no podemos saber cuantos números nos pidieron
+# print(f"La suma de los primeros {n} números naturales es {suma}")
+print(f"La suma es {suma}")
+```
+
+---
+
+#### Ejemplo: Suma de todos los múlitplos de 3 o 5 menores que 1000
+
+- Escribe un programa Python que calcule la suma de todos los múltiplos de 3 o 5 menores que 1000.
+    - Deberemos _recorrer_ los números menores que 1000.
+    - Para los números que sean múltiplos de 3 o 5, deberemos _acumular_ la suma.
+
+| La suma de los múltiplos de 3 o 5 menores que 1000 es 233168
+
+---
+
+**Solución**
+
+```python
+suma = 0
+
+i = 0
+while i < 1000:
+    if i % 3 == 0 or i % 5 == 0:
+        suma = suma + i
+    i += 1
+
+print(f"La suma de los múltiplos de 3 o 5 menores que 1000 es {suma}")
+```
+
+---
+
+#### Ejemplo: Factorial
+
+- Escribe un programa Python que solicite un número entero positivo `n` al usuario y calcule el factorial de `n`.
+    - Deberemos _recorrer_ los números desde `n` hasta 1.
+    - Para cada número, deberemos _acumular_ el producto.
+
+| Introduce un número entero positivo:
+| **5**
+| El factorial de 5 es 120
+
+---
+
+**Encuentra los errores**
+
+```python
+print("Introduce un número entero positivo:")
+n = int(input())
+
+factorial = 0
+
+i = 0
+while i < n:
+    print(f"i: {i}, factorial: {factorial}")
+    factorial *= i
+    i += 1
+
+print(f"El factorial de {n} es {factorial}")
+```
+
+---
+
+**Encuentra los errores**
+
+- Errores:
+    - `i=0` debería ser `i=1`
+    - `factorial=0` debería ser `factorial=1`
+    - `i<n` debería ser `i<=n`
+
+```python
+print("Introduce un número entero positivo:")
+n = int(input())
+
+factorial = 1
+
+i = 1
+while i <= n:
+    print(f"i: {i}, factorial: {factorial}")
+    factorial *= i
+    i += 1
+
+print(f"El factorial de {n} es {factorial}")
+```
+
+---
+
+### Secuencias
+
+- Existe un patrón de problema común en el que nuestro programa ha de explorar una **secuencia** de **tamaño indeterminado** de elementos.
+- En este tipo de problemas será habitual:
+    - Determinar una **condición de parada**.
+    - Implementar un **bucle** que se repita mientras la condición de parada no se cumpla.
+
+---
+
+#### Ejemplo: Suma de los números introducidos por el usuario
+
+- Escribe un programa Python que solicite al usuario **números enteros** (positivos o negativos) y calcule la suma de todos los números introducidos.
+    - Deberemos _recorrer_ los números introducidos por el usuario.
+    - Para cada número, deberemos _acumular_ la suma.
+    - Deberemos _parar_ cuando el usuario **introduzca un número igual a 0**.
+
+| Introduce un número entero:
+| **5**
+| Introduce un número entero:
+| **-3**
+| Introduce un número entero:
+| **2**
+| Introduce un número entero:
+| **0**
+| La suma de los números introducidos es 4
+
+---
+
+**Solución**
+
+```python
+suma = 0  # Acumulador
+
+continuar = True
+
+while continuar:
+    print("Introduce un número entero:")
+    n = int(input())
+
+    if n == 0:
+        continuar = False
+    else:
+        suma = suma + n
+
+print(f"La suma de los números introducidos es {suma}")
+```
+
+---
+
+**Implementación alternativa**
+
+```python
+suma = 0  # Acumulador
+
+print("Introduce un número entero:")
+n = int(input())
+
+while n != 0:
+    suma = suma + n
+
+    print("Introduce un número entero:")
+    n = int(input())
+
+print(f"La suma de los números introducidos es {suma}")
+```
+
+---
+
+### Búsqueda
+
+- Existe un patrón de problema común en el que nuestro programa ha de **buscar** un **elemento** en una **secuencia**.
+- En este tipo de problemas será habitual:
+    - Determinar un valor inicial para el **elemento** buscado.
+    - Implementar un **bucle** que se repita mientras la condición de parada no se cumpla.
+    - **Comparar** el **elemento** actual con el **elemento** buscado.
+
+---
+
+#### Ejemplo: Adivina el número
+
+- Escribe un programa Python que simule un juego en el que el usuario ha de adivinar un número secreto.
+    - El número secreto es `42`.
+
+| Introduce un número:
+| **5**
+| Introduce un número:
+| **23**
+| Introduce un número:
+| **42**
+| ¡Encontrado!
+
+---
+
+**Solución**
+
+```python
+NUMERO_SECRETO = 42
+
+encontrado = False
+
+while not encontrado:
+    print("Introduce un número:")
+    n = int(input())
+
+    if n == NUMERO_SECRETO:
+        encontrado = True
+
+if encontrado:
+    print("¡Encontrado!")
+```
+
+---
+
+#### Ejemplo: Adivina el número (con rendición)
+
+- Escribe un programa Python que simule un juego en el que el usuario ha de adivinar un número secreto.
+    - El número secreto es `42`.
+    - El usuario puede rendirse introduciendo el número `0`.
+
+| Introduce un número:
+| **5**
+| Introduce un número:
+| **0**
+| ¡Rendido!
+
+---
+
+**Solución**
+
+```python
+NUMERO_SECRETO = 42
+
+encontrado = False
+n = -1  # Cualquier valor que no sea 0
+
+while not encontrado and n != 0:
+    print("Introduce un número:")
+    n = int(input())
+
+    if n == NUMERO_SECRETO:
+        encontrado = True
+
+if encontrado:
+    print("¡Encontrado!")
+else:
+    print("¡Rendido!")
+```
+
+---
+
+### Errores _off-by-one_
+
+- Los errores _off-by-one_ son errores comunes en los que se produce un desfase de una unidad.
+- Estos errores suelen producirse **en bucles** y en **índices** (lo veremos más adelante).
+- Los elementos problemáticos suelen ser:
+    - El valor de inicio de una variable
+    - La expresión booleana de comparación (`<` en lugar de `<=`)
+    - La instrucción de incremento/decremento
+
+---
+
+#### Ejemplo: Suma de los primeros `n` números naturales
+
+- Escribe un programa Python que solicite un número entero positivo `n` al usuario y calcule la suma de los primeros `n` números naturales.
+
+**Encuentra el error**
+
+```python
+print("Introduce un número entero positivo:")
+n = int(input())
+
+suma = 0
+
+i = 1
+while i < n:
+    suma = suma + i
+    i += 1
+
+print(f"La suma de los primeros {n} números naturales es {suma}")
+```
+
+---
+
+**Encuentra el error**
+
+```python
+print("Introduce un número entero positivo:")
+n = int(input())
+
+suma = 0
+
+i = 1
+while i <= n:
+    i += 1
+    suma = suma + i
+
+print(f"La suma de los primeros {n} números naturales es {suma}")
+```

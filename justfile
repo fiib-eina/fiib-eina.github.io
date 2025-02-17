@@ -15,5 +15,5 @@ publish: list_preview
 preview:
     quarto preview
 
-build *files:
+render *files:
     quarto render {{files}}

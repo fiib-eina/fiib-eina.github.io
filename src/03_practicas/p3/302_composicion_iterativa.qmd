@@ -5,6 +5,42 @@ format: html
 draft: true
 ---
 
+## La caja fuerte del West Bank
+
+Una caja 
+
+
+**Solución**
+
+```python
+NUMERO_SECRETO_1 = 8
+NUMERO_SECRETO_2 = 23
+NUMERO_SECRETO_3 = 42
+
+encontrado = False
+
+print("Introduce el primer número:")
+n = int(input())
+while not encontrado and n != 0:
+    if n == NUMERO_SECRETO_1:
+        print("OK! Introduce el segundo número:")
+        n = int(input())
+        if n == NUMERO_SECRETO_2:
+            print("OK! Introduce el tercer número:")
+            n = int(input())
+            if n == NUMERO_SECRETO_3:
+                encontrado = True
+    else:
+        print("Error. Introduce el primer número:")
+        n = int(input())
+
+if encontrado:
+    print("¡Encontrado!")
+else:
+    print("No encontrado")
+```
+
+
 ## Entrega de la práctica
 
 **Antes del _ _ de _ a las __:__,** deberán haberse subido a Moodle los siguientes ficheros:
