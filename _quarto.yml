@@ -13,7 +13,9 @@ project:
   output-dir: _output
 format:
   html:
-    theme: [default, src/_style/custom.scss]
+    theme: 
+      light: [default, src/_style/custom.scss]
+      dark:  [default, src/_style/custom.scss, src/_style/dark.scss]
     code-copy: true
     code-line-numbers: true
     toc: true
@@ -23,8 +25,6 @@ format:
     link-external-icon: true
     callout-appearance: simple
   revealjs:
-    # TODO: Selfcontained pages
-    # embed-resources: true
     # Format Options
     revealjs-plugins:
       - tldraw

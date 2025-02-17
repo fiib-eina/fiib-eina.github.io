@@ -29,11 +29,21 @@ $unizar: #223d71; // Pantone 653 - Corporate colour
 
 // Define colors and fonts
 $background-color: white;
+$text: black;
 //$title-font: 'Source Sans 3', sans-serif;
 //$subtitle-font: 'Source Sans 3', sans-serif;
 $unizar-gray: #4D4F53; // unizar gray color
 $unizar-description-gray: #595959;
 $unizar-white: #FFFDFD; // unizar white color
+
+/*
+@media (prefers-color-scheme: dark) {
+}
+*/
+
+details>summary {
+  margin: 15px 0 0 0;
+}
 
 // scss variables
 // $presentation-font-size-root: 35px;
@@ -148,8 +158,8 @@ pre.numberSource {
   }
 }
 
-.callout-body > .callout-content > p {
-    font-weight: bold;
+.callout-body>.callout-content>p {
+  font-weight: bold;
 }
 
 // ------------------------------
