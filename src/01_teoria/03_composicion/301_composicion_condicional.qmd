@@ -198,7 +198,7 @@ print("Escriba un número:")
 a = int(input())
 
 if a < 0:
-    print(f"WARNING: El número {a} es negativo")
+    print(f"ATENCIÓN: El número {a} es negativo")
 
 print(f"El número es {a}")
 ```
@@ -209,7 +209,7 @@ print(f"El número es {a}")
 
 | Escriba un número:
 | **-5**
-| WARNING: El número -5 es negativo
+| ATENCIÓN: El número -5 es negativo
 | El número es -5
 
 ---
