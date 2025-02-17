@@ -1,0 +1,4 @@
+format:
+    html: default
+    revealjs:
+        output-ext:  "reveal.html"
