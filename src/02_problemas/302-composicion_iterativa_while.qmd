@@ -135,3 +135,34 @@ print(suma)
 ```
 
 </details>
+
+## Invertir un número
+
+Escribe un programa en Python que solicite al usuario un número y escriba en la pantalla el número invertido.
+
+| Introduce un número:
+| **12345678**
+| El número invertido es:
+| 87654321
+
+<details>
+<summary>Solución</summary>
+
+```python
+
+print("Introduce un número:")
+numero = int(input())
+
+invertido = 0
+
+while numero > 0:
+    unidades = numero % 10
+    numero = numero // 10
+    invertido = invertido * 10 + unidades
+
+print("El número invertido es:")
+print(invertido)
+```
+
+</details>
+
