@@ -1,6 +1,6 @@
 ---
 title: Práctica 3
-subtitle: Tipos Primitivos
+subtitle: Composición iterativa
 format: html
 draft: true
 ---
@@ -43,6 +43,6 @@ else:
 
 ## Entrega de la práctica
 
-**Antes del _ _ de _ a las __:__,** deberán haberse subido a Moodle los siguientes ficheros:
+**Antes del 15 de marzo a las 18:00,** deberán haberse subido a Moodle los siguientes ficheros:
 
-- [ ] `.py`
+- [ ] `caja.py`

@@ -70,7 +70,7 @@ print(f"La suma es {suma}")
 
 ---
 
-#### Ejemplo: Suma de todos los múlitplos de 3 o 5 menores que 1000
+#### Ejemplo: Suma de todos los múltiplos de 3 o 5 menores que 1000
 
 - Escribe un programa Python que calcule la suma de todos los múltiplos de 3 o 5 menores que 1000.
     - Deberemos _recorrer_ los números menores que 1000.

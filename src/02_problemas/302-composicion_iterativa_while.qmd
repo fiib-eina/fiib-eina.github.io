@@ -22,10 +22,10 @@ print("Fin")
 <details>
 <summary>Solución</summary>
 
-| 1, 2,        _(evalua como True)_
-| 3, 4, 2,     _(evalua como True)_
-| 3, 4, 2      _(evalua como True)_
-| 3, 4, **2**  _(evalua como False)_
+| 1, 2,        _(evalúa como True)_
+| 3, 4, 2,     _(evalúa como True)_
+| 3, 4, 2      _(evalúa como True)_
+| 3, 4, **2**  _(evalúa como False)_
 | 5
 
 **Fíjate** que la línea `2` se ejecuta **también** al final de la última iteración.
@@ -119,15 +119,15 @@ Escribe un programa en Python que solicite al usuario un número entero de `n` c
 <summary>Solución</summary>
 
 ```python
-print("Introduce un número de tres cifras:")
-numero = int(input())
+print("Introduce un número entero:")
+numero = abs(int(input()))
 
 numero_restante = numero
 suma = 0
 
 while numero_restante > 0:
-    unidades = numero % 10
-    numero_restante = numero // 10
+    unidades = numero_restante % 10
+    numero_restante = numero_restante // 10
     suma = suma + unidades
 
 print("La suma de las cifras es:")

@@ -4,11 +4,11 @@ subtitle: Composición Iterativa I
 format: revealjs
 ---
 
-## Limites de la composición secuencial y condicional {.center}
+## Límites de la composición secuencial y condicional {.center}
 
 ---
 
-### Limites de la composición secuencial y condicional
+### Límites de la composición secuencial y condicional
 
 - En la sesión anterior vimos cómo **componer** programas de modo que **algunas instrucciones sólo se ejecuten si se cumple una condición**
     - Composición **secuencial** y **condicional**
@@ -21,7 +21,7 @@ No todos los programas pueden ser escritos de manera secuencial y condicional
 
 #### Ejemplo: Repetición de un mensaje 100 veces
 
-Escribe programa Python que imprima por pantalla la siquiente frase **100 veces**:
+Escribe programa Python que imprima por pantalla la siguiente frase **100 veces**:
 
 - _I will lock my computer when I leave my desk_
 
@@ -56,7 +56,7 @@ print("I will lock my computer when I leave my desk")
 
 #### Ejemplo: Repetición de un mensaje N veces
 
-Escribe programa Python que solicite un número entero al usuario y que imprima por pantalla la siquiente frase **tantas veces** como el número introducido:
+Escribe programa Python que solicite un número entero al usuario y que imprima por pantalla la siguiente frase **tantas veces** como el número introducido:
 
 - _I will lock my computer when I leave my desk_
 
@@ -106,7 +106,7 @@ if 3 % 3 == 0:
 
 ---
 
-### Limites de la composición secuencial y condicional
+### Límites de la composición secuencial y condicional
 
 - Todos estos programas tienen cumplen al menos una de estas dos condiciones:
     - Requieren un número determinado de pasos **demasiado grande** 
@@ -244,7 +244,7 @@ while count < 100:
 - En Python, existe la **asignación aumentada**.
     - `count += 1`: Equivale a `count = count + 1`
     - `count -= 1`: Equivale a `count = count - 1`
-- **OtrosAtajo**: `*=` (producto), `/=` (división), `%=` (resto), `**=` (potencia)
+- **Otros atajos**: `*=` (producto), `/=` (división), `%=` (resto), `**=` (potencia)
 
 ---
 
@@ -349,7 +349,7 @@ while num < 100:
 
 #### Ejemplo: Sumatorio
 
-- Los **acumuladores** tienen muchos usos más alla de **contar** las iteraciones de un bucle
+- Los **acumuladores** tienen muchos usos más allá de **contar** las iteraciones de un bucle
     - Por ejemplo, podemos utilizar  para calcular **sumatorios**
 
 $$
