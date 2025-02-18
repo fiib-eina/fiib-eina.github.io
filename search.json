@@ -154,6 +154,13 @@
     "text": "3 Averigua el tipo de dato\n¿Cuál es el tipo de dato de cada una de las siguientes variables?\na = 5\nb = 5.0\nc = \"5\"\nd = a + b\ne = a * 2\nf = b / 2\ng = a + int(c)\nh = str(a) + c\n\n\nSolución\n\n\n\n\nVariable\nTipo de dato\n\n\n\n\na\nint\n\n\nb\nfloat\n\n\nc\nstr\n\n\nd\nfloat\n\n\ne\nint\n\n\nf\nfloat\n\n\ng\nint\n\n\nh\nstr"
   },
   {
+    "objectID": "src/01_teoria/03_composicion/303_composicion_iterativa_while_II.html#composición-iterativa-ii",
+    "href": "src/01_teoria/03_composicion/303_composicion_iterativa_while_II.html#composición-iterativa-ii",
+    "title": "Teoría 302",
+    "section": "Composición Iterativa II",
+    "text": "Composición Iterativa II"
+  },
+  {
     "objectID": "src/01_teoria/03_composicion/301_composicion_condicional.html#límites-de-la-composición-secuencial",
     "href": "src/01_teoria/03_composicion/301_composicion_condicional.html#límites-de-la-composición-secuencial",
     "title": "Teoría 301",
@@ -270,7 +277,7 @@
     "href": "index.html",
     "title": "Fundamentos de informática",
     "section": "",
-    "text": "01_teoria/00_presentacion/ Presentación de la Asignatura - Información general \n\n\n01_teoria/01_conceptos_basicos/ Teoría 101 - Computadores y Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 102 - Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 103 - Python \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 201 - Tipos Numerales \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 202 - Texto y Booleanos \n\n\n01_teoria/03_composicion/ Teoría 301 - Composición condicional \n\n\n01_teoria/03_composicion/ Teoría 302 - Composición Iterativa I \n\n\n02_problemas/ Problemas 1 - Fundamentos \n\n\n02_problemas/ Problemas 2 - Tipos Numéricos \n\n\n02_problemas/ Problemas 3 - Composición condicional \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n03_practicas/p1/ Práctica 1 - Tipos Primitivos \n\n\n03_practicas/p2/ Práctica 2 - Composición condicional \n\n\n\nNo hay resultados"
+    "text": "01_teoria/00_presentacion/ Presentación de la Asignatura - Información general \n\n\n01_teoria/01_conceptos_basicos/ Teoría 101 - Computadores y Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 102 - Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 103 - Python \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 201 - Tipos Numerales \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 202 - Texto y Booleanos \n\n\n01_teoria/03_composicion/ Teoría 301 - Composición condicional \n\n\n01_teoria/03_composicion/ Teoría 302 - Composición Iterativa I \n\n\n01_teoria/03_composicion/ Teoría 302 - Composición Iterativa II \n\n\n02_problemas/ Problemas 1 - Fundamentos \n\n\n02_problemas/ Problemas 2 - Tipos Numéricos \n\n\n02_problemas/ Problemas 3 - Composición condicional \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n03_practicas/p1/ Práctica 1 - Tipos Primitivos \n\n\n03_practicas/p2/ Práctica 2 - Composición condicional \n\n\n\nNo hay resultados"
   },
   {
     "objectID": "src/01_teoria/01_conceptos_basicos/101_introducción.html#que-es-la-informática",
