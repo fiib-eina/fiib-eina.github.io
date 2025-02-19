@@ -1,8 +1,7 @@
 ---
 title: Problemas 4
-subtitle: Composición iterativa
+subtitle: 'Composición iterativa: while'
 format: html
-draft: true
 ---
 
 ## Seguimiento de la ejecución de un bucle
@@ -71,6 +70,33 @@ while not correcto:
 
 </details>
 
+<details>
+
+<summary>Solución alternativa</summary>
+
+```python
+correcto = False
+eliminar = False
+
+while not correcto:
+    print("¿Está seguro de que desea eliminar el archivo? (s)i/(n)o:")
+    respuesta = input()
+
+    if respuesta == "s" or respuesta == "si":
+        correcto = True
+        eliminar = True
+    elif respuesta == "n" or respuesta == "no":
+        correcto = True
+        eliminar = False
+
+if eliminar:
+    print("ARCHIVO ELIMINADO")
+else:
+    print("SKIP")
+```
+
+</details>
+
 ## Sumar una secuencia
 
 Escribe un programa en Python que solicite iterativamente una secuencia de números enteros. Dicha secuencia terminará cuando el usuario introduzca un número negativo. El programa debe sumar todos los números introducidos y mostrar el resultado.
@@ -83,8 +109,7 @@ Escribe un programa en Python que solicite iterativamente una secuencia de núme
 | **3**
 | Introduce un número entero:
 | **-1**
-| La suma de los números es:
-| 6
+| La suma de los números es: 6
 
 <details>
 <summary>Solución</summary>
@@ -100,15 +125,34 @@ while numero >= 0:
     if numero >= 0:
         suma = suma + numero
 
-print("La suma de los números es:")
-print(suma)
+print(f"La suma de los números es: {suma}")
+```
+
+</details>
+
+<details>
+<summary>Solución</summary>
+
+```python
+suma = 0
+
+print("Introduce un número entero:")
+numero = int(input())
+
+while numero >= 0:
+    suma = suma + numero
+
+    print("Introduce un número entero:")
+    numero = int(input())
+
+print(f"La suma de los números es: {suma}")
 ```
 
 </details>
 
 ## Sumar las cifras de un número
 
-Escribe un programa en Python que solicite al usuario un número entero de `n` cifras y que sume todas las cifras de dicho número.
+Escribe un programa en Python que solicite al usuario un número entero de `n` cifras y que sume todas las cifras de dicho número. _Pista: puedes inspirarte en la [solución alternativa de "Invertir un número de 3 cifras"](./201-tipos_numericos.qmd#invertir-un-número-de-3-cifras)_
 
 | Introduce un número entero:
 | **123**
@@ -120,7 +164,7 @@ Escribe un programa en Python que solicite al usuario un número entero de `n` c
 
 ```python
 print("Introduce un número entero:")
-numero = abs(int(input()))
+numero = int(input())
 
 numero_restante = numero
 suma = 0
@@ -149,7 +193,6 @@ Escribe un programa en Python que solicite al usuario un número y escriba en la
 <summary>Solución</summary>
 
 ```python
-
 print("Introduce un número:")
 numero = int(input())
 
@@ -162,6 +205,61 @@ while numero > 0:
 
 print("El número invertido es:")
 print(invertido)
+```
+
+</details>
+
+## Adivina el PIN
+
+Escribe un programa en Python que simule un sistema de seguridad que solicita al usuario un PIN de 4 dígitos.
+El PIN correcto es `1234`.
+El usuario tendrá un máximo de 3 intentos para adivinar el PIN.
+
+| Introduce el PIN:
+| **1234**
+| ¡PIN correcto!
+
+| Introduce el PIN:
+| **4321**
+| PIN incorrecto. Te quedan 2 intentos.
+| Introduce el PIN:
+| **1234**
+| ¡PIN correcto!
+
+| Introduce el PIN:
+| **0000**
+| PIN incorrecto. Te quedan 2 intentos.
+| Introduce el PIN:
+| **0000**
+| PIN incorrecto. Te quedan 1 intentos.
+| Introduce el PIN:
+| **0000**
+| PIN incorrecto. Te quedan 0 intentos.
+| ¡Bloqueado!
+
+<details>
+<summary>Solución</summary>
+
+```python
+PIN_CORRECTO = 1234
+intentos = 3
+encontrado = False
+
+while not encontrado and intentos > 0:
+    print("Introduce el PIN:")
+    pin = int(input())
+
+    if pin == PIN_CORRECTO:
+        encontrado = True
+    else:
+        intentos -= 1
+        print(f"PIN incorrecto. Te quedan {intentos} intentos.")
+
+if encontrado:
+    print("¡PIN correcto!")
+else:
+    print("¡Bloqueado!")
+
 ```
 
 </details>
