@@ -154,123 +154,312 @@
     "text": "3 Averigua el tipo de dato\n¿Cuál es el tipo de dato de cada una de las siguientes variables?\na = 5\nb = 5.0\nc = \"5\"\nd = a + b\ne = a * 2\nf = b / 2\ng = a + int(c)\nh = str(a) + c\n\n\nSolución\n\n\n\n\nVariable\nTipo de dato\n\n\n\n\na\nint\n\n\nb\nfloat\n\n\nc\nstr\n\n\nd\nfloat\n\n\ne\nint\n\n\nf\nfloat\n\n\ng\nint\n\n\nh\nstr"
   },
   {
-    "objectID": "src/01_teoria/03_composicion/303_composicion_iterativa_while_II.html#composición-iterativa-ii",
-    "href": "src/01_teoria/03_composicion/303_composicion_iterativa_while_II.html#composición-iterativa-ii",
+    "objectID": "src/01_teoria/06_ficheros/601_ficheros.reveal.html#chapter",
+    "href": "src/01_teoria/06_ficheros/601_ficheros.reveal.html#chapter",
+    "title": "Teoría 601",
+    "section": "Chapter",
+    "text": "Chapter"
+  },
+  {
+    "objectID": "src/01_teoria/05_estructuras_de_datos/503_objetos.reveal.html#chapter",
+    "href": "src/01_teoria/05_estructuras_de_datos/503_objetos.reveal.html#chapter",
+    "title": "Teoría 503",
+    "section": "Chapter",
+    "text": "Chapter"
+  },
+  {
+    "objectID": "src/01_teoria/05_estructuras_de_datos/501_listas.reveal.html#chapter",
+    "href": "src/01_teoria/05_estructuras_de_datos/501_listas.reveal.html#chapter",
+    "title": "Teoría 501",
+    "section": "Chapter",
+    "text": "Chapter"
+  },
+  {
+    "objectID": "src/01_teoria/04_modularizacion_de_codigo/402_paso_por_referencia.reveal.html#chapter",
+    "href": "src/01_teoria/04_modularizacion_de_codigo/402_paso_por_referencia.reveal.html#chapter",
+    "title": "Teoría 402",
+    "section": "Chapter",
+    "text": "Chapter"
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/305_composicion_iterativa_for_II.reveal.html#chapter",
+    "href": "src/01_teoria/03_composicion/305_composicion_iterativa_for_II.reveal.html#chapter",
+    "title": "Teoría 303",
+    "section": "Chapter",
+    "text": "Chapter"
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/303_composicion_iterativa_while_II.reveal.html#composición-iterativa-ii",
+    "href": "src/01_teoria/03_composicion/303_composicion_iterativa_while_II.reveal.html#composición-iterativa-ii",
     "title": "Teoría 302",
     "section": "Composición Iterativa II",
     "text": "Composición Iterativa II"
   },
   {
-    "objectID": "src/01_teoria/03_composicion/301_composicion_condicional.html#límites-de-la-composición-secuencial",
-    "href": "src/01_teoria/03_composicion/301_composicion_condicional.html#límites-de-la-composición-secuencial",
+    "objectID": "src/01_teoria/03_composicion/303_composicion_iterativa_while_II.html",
+    "href": "src/01_teoria/03_composicion/303_composicion_iterativa_while_II.html",
+    "title": "Teoría 302",
+    "section": "",
+    "text": "Existe un patrón de problema común en el que nuestro programa ha de acumular un resultado de forma iterativa.\nEstas variables acumuladoras han siempre de ser inicializadas antes de comenzar la iteración.\n\nEj. accum = 0\n\nRecuerda que conoces los operadores de asignación aumentada.\n\nEj. accum += 1\n\nSegún el tipo de operación que vaya a recibir la variable acumuladora, deberemos inicializarla con un valor adecuado.\n\nEj. accum = 1 para multiplicaciones.\n\n\n\n\n\n\nEscribe un programa Python que solicite un número entero positivo n al usuario y calcule la suma de los primeros n números naturales.\n\nDeberemos recorrer los n primeros números naturales (incluyendo n).\nPara cada número, deberemos acumular la suma.\n\n\nIntroduce un número entero positivo:\n5\nLa suma de los primeros 5 números naturales es 15\n\nSolución\nprint(\"Introduce un número entero positivo:\")\nn = int(input())\n\nsuma = 0\n\ni = 1\nwhile i &lt;= n:\n    suma = suma + i\n    i += 1\n\nprint(f\"La suma de los primeros {n} números naturales es {suma}\")\n\nImplementación alternativa\nprint(\"Introduce un número entero positivo:\")\nn = int(input())\n\nsuma = 0\n\nwhile n &gt; 0:\n    suma = suma + n\n    n = n - 1\n\n# Ya no podemos saber cuantos números nos pidieron\n# print(f\"La suma de los primeros {n} números naturales es {suma}\")\nprint(f\"La suma es {suma}\")\n\n\n\n\n\nEscribe un programa Python que calcule la suma de todos los múltiplos de 3 o 5 menores que 1000.\n\nDeberemos recorrer los números menores que 1000.\nPara los números que sean múltiplos de 3 o 5, deberemos acumular la suma.\n\n\nLa suma de los múltiplos de 3 o 5 menores que 1000 es 233168\n\nSolución\nsuma = 0\n\ni = 0\nwhile i &lt; 1000:\n    if i % 3 == 0 or i % 5 == 0:\n        suma = suma + i\n    i += 1\n\nprint(f\"La suma de los múltiplos de 3 o 5 menores que 1000 es {suma}\")\n\n\n\n\n\nEscribe un programa Python que solicite un número entero positivo n al usuario y calcule el factorial de n.\n\nDeberemos recorrer los números desde n hasta 1.\nPara cada número, deberemos acumular el producto.\n\n\nIntroduce un número entero positivo:\n5\nEl factorial de 5 es 120\n\nEncuentra los errores\nprint(\"Introduce un número entero positivo:\")\nn = int(input())\n\nfactorial = 0\n\ni = 0\nwhile i &lt; n:\n    print(f\"i: {i}, factorial: {factorial}\")\n    factorial *= i\n    i += 1\n\nprint(f\"El factorial de {n} es {factorial}\")\n\nEncuentra los errores\n\nErrores:\n\ni=0 debería ser i=1\nfactorial=0 debería ser factorial=1\ni&lt;n debería ser i&lt;=n\n\n\nprint(\"Introduce un número entero positivo:\")\nn = int(input())\n\nfactorial = 1\n\ni = 1\nwhile i &lt;= n:\n    print(f\"i: {i}, factorial: {factorial}\")\n    factorial *= i\n    i += 1\n\nprint(f\"El factorial de {n} es {factorial}\")\n\n\n\n\n\n\nExiste un patrón de problema común en el que nuestro programa ha de explorar una secuencia de tamaño indeterminado de elementos.\nEn este tipo de problemas será habitual:\n\nDeterminar una condición de parada.\nImplementar un bucle que se repita mientras la condición de parada no se cumpla.\n\n\n\n\n\n\nEscribe un programa Python que solicite al usuario números enteros (positivos o negativos) y calcule la suma de todos los números introducidos.\n\nDeberemos recorrer los números introducidos por el usuario.\nPara cada número, deberemos acumular la suma.\nDeberemos parar cuando el usuario introduzca un número igual a 0.\n\n\nIntroduce un número entero:\n5\nIntroduce un número entero:\n-3\nIntroduce un número entero:\n2\nIntroduce un número entero:\n0\nLa suma de los números introducidos es 4\n\nSolución\nsuma = 0  # Acumulador\n\ncontinuar = True\n\nwhile continuar:\n    print(\"Introduce un número entero:\")\n    n = int(input())\n\n    if n == 0:\n        continuar = False\n    else:\n        suma = suma + n\n\nprint(f\"La suma de los números introducidos es {suma}\")\n\nImplementación alternativa\nsuma = 0  # Acumulador\n\nprint(\"Introduce un número entero:\")\nn = int(input())\n\nwhile n != 0:\n    suma = suma + n\n\n    print(\"Introduce un número entero:\")\n    n = int(input())\n\nprint(f\"La suma de los números introducidos es {suma}\")\n\n\n\n\n\n\nExiste un patrón de problema común en el que nuestro programa ha de buscar un elemento en una secuencia.\nEn este tipo de problemas será habitual:\n\nDeterminar un valor inicial para el elemento buscado.\nImplementar un bucle que se repita mientras la condición de parada no se cumpla.\nComparar el elemento actual con el elemento buscado.\n\n\n\n\n\n\nEscribe un programa Python que simule un juego en el que el usuario ha de adivinar un número secreto.\n\nEl número secreto es 42.\n\n\nIntroduce un número:\n5\nIntroduce un número:\n23\nIntroduce un número:\n42\n¡Encontrado!\n\nSolución\nNUMERO_SECRETO = 42\n\nencontrado = False\n\nwhile not encontrado:\n    print(\"Introduce un número:\")\n    n = int(input())\n\n    if n == NUMERO_SECRETO:\n        encontrado = True\n\nif encontrado:\n    print(\"¡Encontrado!\")\n\n\n\n\n\nEscribe un programa Python que simule un juego en el que el usuario ha de adivinar un número secreto.\n\nEl número secreto es 42.\nEl usuario puede rendirse introduciendo el número 0.\n\n\nIntroduce un número:\n5\nIntroduce un número:\n0\n¡Rendido!\n\nSolución\nNUMERO_SECRETO = 42\n\nencontrado = False\nn = -1  # Cualquier valor que no sea 0\n\nwhile not encontrado and n != 0:\n    print(\"Introduce un número:\")\n    n = int(input())\n\n    if n == NUMERO_SECRETO:\n        encontrado = True\n\nif encontrado:\n    print(\"¡Encontrado!\")\nelse:\n    print(\"¡Rendido!\")\n\n\n\n\n\n\nLos errores off-by-one son errores comunes en los que se produce un desfase de una unidad.\nEstos errores suelen producirse en bucles y en índices (lo veremos más adelante).\nLos elementos problemáticos suelen ser:\n\nEl valor de inicio de una variable\nLa expresión booleana de comparación (&lt; en lugar de &lt;=)\nLa instrucción de incremento/decremento\n\n\n\n\n\n\nEscribe un programa Python que solicite un número entero positivo n al usuario y calcule la suma de los primeros n números naturales.\n\nEncuentra el error\nprint(\"Introduce un número entero positivo:\")\nn = int(input())\n\nsuma = 0\n\ni = 1\nwhile i &lt; n:\n    suma = suma + i\n    i += 1\n\nprint(f\"La suma de los primeros {n} números naturales es {suma}\")\n\nEncuentra el error\nprint(\"Introduce un número entero positivo:\")\nn = int(input())\n\nsuma = 0\n\ni = 1\nwhile i &lt;= n:\n    i += 1\n    suma = suma + i\n\nprint(f\"La suma de los primeros {n} números naturales es {suma}\")"
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/303_composicion_iterativa_while_II.html#composición-iterativa-ii",
+    "href": "src/01_teoria/03_composicion/303_composicion_iterativa_while_II.html#composición-iterativa-ii",
+    "title": "Teoría 302",
+    "section": "",
+    "text": "Existe un patrón de problema común en el que nuestro programa ha de acumular un resultado de forma iterativa.\nEstas variables acumuladoras han siempre de ser inicializadas antes de comenzar la iteración.\n\nEj. accum = 0\n\nRecuerda que conoces los operadores de asignación aumentada.\n\nEj. accum += 1\n\nSegún el tipo de operación que vaya a recibir la variable acumuladora, deberemos inicializarla con un valor adecuado.\n\nEj. accum = 1 para multiplicaciones.\n\n\n\n\n\n\nEscribe un programa Python que solicite un número entero positivo n al usuario y calcule la suma de los primeros n números naturales.\n\nDeberemos recorrer los n primeros números naturales (incluyendo n).\nPara cada número, deberemos acumular la suma.\n\n\nIntroduce un número entero positivo:\n5\nLa suma de los primeros 5 números naturales es 15\n\nSolución\nprint(\"Introduce un número entero positivo:\")\nn = int(input())\n\nsuma = 0\n\ni = 1\nwhile i &lt;= n:\n    suma = suma + i\n    i += 1\n\nprint(f\"La suma de los primeros {n} números naturales es {suma}\")\n\nImplementación alternativa\nprint(\"Introduce un número entero positivo:\")\nn = int(input())\n\nsuma = 0\n\nwhile n &gt; 0:\n    suma = suma + n\n    n = n - 1\n\n# Ya no podemos saber cuantos números nos pidieron\n# print(f\"La suma de los primeros {n} números naturales es {suma}\")\nprint(f\"La suma es {suma}\")\n\n\n\n\n\nEscribe un programa Python que calcule la suma de todos los múltiplos de 3 o 5 menores que 1000.\n\nDeberemos recorrer los números menores que 1000.\nPara los números que sean múltiplos de 3 o 5, deberemos acumular la suma.\n\n\nLa suma de los múltiplos de 3 o 5 menores que 1000 es 233168\n\nSolución\nsuma = 0\n\ni = 0\nwhile i &lt; 1000:\n    if i % 3 == 0 or i % 5 == 0:\n        suma = suma + i\n    i += 1\n\nprint(f\"La suma de los múltiplos de 3 o 5 menores que 1000 es {suma}\")\n\n\n\n\n\nEscribe un programa Python que solicite un número entero positivo n al usuario y calcule el factorial de n.\n\nDeberemos recorrer los números desde n hasta 1.\nPara cada número, deberemos acumular el producto.\n\n\nIntroduce un número entero positivo:\n5\nEl factorial de 5 es 120\n\nEncuentra los errores\nprint(\"Introduce un número entero positivo:\")\nn = int(input())\n\nfactorial = 0\n\ni = 0\nwhile i &lt; n:\n    print(f\"i: {i}, factorial: {factorial}\")\n    factorial *= i\n    i += 1\n\nprint(f\"El factorial de {n} es {factorial}\")\n\nEncuentra los errores\n\nErrores:\n\ni=0 debería ser i=1\nfactorial=0 debería ser factorial=1\ni&lt;n debería ser i&lt;=n\n\n\nprint(\"Introduce un número entero positivo:\")\nn = int(input())\n\nfactorial = 1\n\ni = 1\nwhile i &lt;= n:\n    print(f\"i: {i}, factorial: {factorial}\")\n    factorial *= i\n    i += 1\n\nprint(f\"El factorial de {n} es {factorial}\")\n\n\n\n\n\n\nExiste un patrón de problema común en el que nuestro programa ha de explorar una secuencia de tamaño indeterminado de elementos.\nEn este tipo de problemas será habitual:\n\nDeterminar una condición de parada.\nImplementar un bucle que se repita mientras la condición de parada no se cumpla.\n\n\n\n\n\n\nEscribe un programa Python que solicite al usuario números enteros (positivos o negativos) y calcule la suma de todos los números introducidos.\n\nDeberemos recorrer los números introducidos por el usuario.\nPara cada número, deberemos acumular la suma.\nDeberemos parar cuando el usuario introduzca un número igual a 0.\n\n\nIntroduce un número entero:\n5\nIntroduce un número entero:\n-3\nIntroduce un número entero:\n2\nIntroduce un número entero:\n0\nLa suma de los números introducidos es 4\n\nSolución\nsuma = 0  # Acumulador\n\ncontinuar = True\n\nwhile continuar:\n    print(\"Introduce un número entero:\")\n    n = int(input())\n\n    if n == 0:\n        continuar = False\n    else:\n        suma = suma + n\n\nprint(f\"La suma de los números introducidos es {suma}\")\n\nImplementación alternativa\nsuma = 0  # Acumulador\n\nprint(\"Introduce un número entero:\")\nn = int(input())\n\nwhile n != 0:\n    suma = suma + n\n\n    print(\"Introduce un número entero:\")\n    n = int(input())\n\nprint(f\"La suma de los números introducidos es {suma}\")\n\n\n\n\n\n\nExiste un patrón de problema común en el que nuestro programa ha de buscar un elemento en una secuencia.\nEn este tipo de problemas será habitual:\n\nDeterminar un valor inicial para el elemento buscado.\nImplementar un bucle que se repita mientras la condición de parada no se cumpla.\nComparar el elemento actual con el elemento buscado.\n\n\n\n\n\n\nEscribe un programa Python que simule un juego en el que el usuario ha de adivinar un número secreto.\n\nEl número secreto es 42.\n\n\nIntroduce un número:\n5\nIntroduce un número:\n23\nIntroduce un número:\n42\n¡Encontrado!\n\nSolución\nNUMERO_SECRETO = 42\n\nencontrado = False\n\nwhile not encontrado:\n    print(\"Introduce un número:\")\n    n = int(input())\n\n    if n == NUMERO_SECRETO:\n        encontrado = True\n\nif encontrado:\n    print(\"¡Encontrado!\")\n\n\n\n\n\nEscribe un programa Python que simule un juego en el que el usuario ha de adivinar un número secreto.\n\nEl número secreto es 42.\nEl usuario puede rendirse introduciendo el número 0.\n\n\nIntroduce un número:\n5\nIntroduce un número:\n0\n¡Rendido!\n\nSolución\nNUMERO_SECRETO = 42\n\nencontrado = False\nn = -1  # Cualquier valor que no sea 0\n\nwhile not encontrado and n != 0:\n    print(\"Introduce un número:\")\n    n = int(input())\n\n    if n == NUMERO_SECRETO:\n        encontrado = True\n\nif encontrado:\n    print(\"¡Encontrado!\")\nelse:\n    print(\"¡Rendido!\")\n\n\n\n\n\n\nLos errores off-by-one son errores comunes en los que se produce un desfase de una unidad.\nEstos errores suelen producirse en bucles y en índices (lo veremos más adelante).\nLos elementos problemáticos suelen ser:\n\nEl valor de inicio de una variable\nLa expresión booleana de comparación (&lt; en lugar de &lt;=)\nLa instrucción de incremento/decremento\n\n\n\n\n\n\nEscribe un programa Python que solicite un número entero positivo n al usuario y calcule la suma de los primeros n números naturales.\n\nEncuentra el error\nprint(\"Introduce un número entero positivo:\")\nn = int(input())\n\nsuma = 0\n\ni = 1\nwhile i &lt; n:\n    suma = suma + i\n    i += 1\n\nprint(f\"La suma de los primeros {n} números naturales es {suma}\")\n\nEncuentra el error\nprint(\"Introduce un número entero positivo:\")\nn = int(input())\n\nsuma = 0\n\ni = 1\nwhile i &lt;= n:\n    i += 1\n    suma = suma + i\n\nprint(f\"La suma de los primeros {n} números naturales es {suma}\")"
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/301_composicion_condicional.reveal.html#límites-de-la-composición-secuencial",
+    "href": "src/01_teoria/03_composicion/301_composicion_condicional.reveal.html#límites-de-la-composición-secuencial",
     "title": "Teoría 301",
     "section": "Límites de la composición secuencial",
     "text": "Límites de la composición secuencial"
   },
   {
-    "objectID": "src/01_teoria/03_composicion/301_composicion_condicional.html#composición-condicional",
-    "href": "src/01_teoria/03_composicion/301_composicion_condicional.html#composición-condicional",
+    "objectID": "src/01_teoria/03_composicion/301_composicion_condicional.reveal.html#composición-condicional",
+    "href": "src/01_teoria/03_composicion/301_composicion_condicional.reveal.html#composición-condicional",
     "title": "Teoría 301",
     "section": "Composición condicional",
     "text": "Composición condicional"
   },
   {
-    "objectID": "src/01_teoria/03_composicion/301_composicion_condicional.html#usos-avanzados-de-la-composición-condicional",
-    "href": "src/01_teoria/03_composicion/301_composicion_condicional.html#usos-avanzados-de-la-composición-condicional",
+    "objectID": "src/01_teoria/03_composicion/301_composicion_condicional.reveal.html#usos-avanzados-de-la-composición-condicional",
+    "href": "src/01_teoria/03_composicion/301_composicion_condicional.reveal.html#usos-avanzados-de-la-composición-condicional",
     "title": "Teoría 301",
     "section": "Usos avanzados de la composición condicional",
     "text": "Usos avanzados de la composición condicional"
   },
   {
-    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#tipos-de-datos-en-python",
-    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#tipos-de-datos-en-python",
+    "objectID": "src/01_teoria/03_composicion/301_composicion_condicional.html",
+    "href": "src/01_teoria/03_composicion/301_composicion_condicional.html",
+    "title": "Teoría 301",
+    "section": "",
+    "text": "Hasta ahora hemos visto cómo componer programas a través de secuencias de instrucciones\nEstas secuencias se ejecutan de manera lineal, una detrás de otra\nEsto se denomina composición secuencial\n\nNo todos los programas pueden ser escritos de manera secuencial\nprint(\"Hola\")\nprint(\"Qué tal?\")\nprint(\"Yo bien\")\nprint(\"Adiós\")\n\n\n\n\n\n\n\nEscribe un programa Python que pida al usuario un número y muestre si es par o impar:\nEscriba un número:\n4\nEl número 4 es par\nEscriba un número:\n5\nEl número 4 es impar\n\n\n\n\nEscribe un programa Python que pida al usuario dos números y muestre su división:\nEscriba un número:\n4\nEscriba otro número:\n2\n4 / 2 = 2\nEscriba un número:\n4\nEscriba otro número:\n0\nNo se puede dividir por cero!\n\n\n\n\nEscribe un programa Python que dado los coeficientes de una ecuación de segundo grado, muestre sus soluciones:\n\n\nEscriba el coeficiente a:\n1\nEscriba el coeficiente b:\n-3\nEscriba el coeficiente c:\n2\nx1 = 2.0, x2 = 1.0\n\nEscriba el coeficiente a:\n1\nEscriba el coeficiente b:\n-2\nEscriba el coeficiente c:\n1\nx1 = 1.0\n\nEscriba el coeficiente a:\n1\nEscriba el coeficiente b:\n1\nEscriba el coeficiente c:\n1\nNo reales\n\n\n\n\n\n\n\n\nTodos estos programas tienen algo en común:\n\nEn función de una condición, se deberán ejecutar unas acciones y otras\nExiste al menos una decisión que tomar"
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/301_composicion_condicional.html#límites-de-la-composición-secuencial",
+    "href": "src/01_teoria/03_composicion/301_composicion_condicional.html#límites-de-la-composición-secuencial",
+    "title": "Teoría 301",
+    "section": "",
+    "text": "Hasta ahora hemos visto cómo componer programas a través de secuencias de instrucciones\nEstas secuencias se ejecutan de manera lineal, una detrás de otra\nEsto se denomina composición secuencial\n\nNo todos los programas pueden ser escritos de manera secuencial\nprint(\"Hola\")\nprint(\"Qué tal?\")\nprint(\"Yo bien\")\nprint(\"Adiós\")\n\n\n\n\n\n\n\nEscribe un programa Python que pida al usuario un número y muestre si es par o impar:\nEscriba un número:\n4\nEl número 4 es par\nEscriba un número:\n5\nEl número 4 es impar\n\n\n\n\nEscribe un programa Python que pida al usuario dos números y muestre su división:\nEscriba un número:\n4\nEscriba otro número:\n2\n4 / 2 = 2\nEscriba un número:\n4\nEscriba otro número:\n0\nNo se puede dividir por cero!\n\n\n\n\nEscribe un programa Python que dado los coeficientes de una ecuación de segundo grado, muestre sus soluciones:\n\n\nEscriba el coeficiente a:\n1\nEscriba el coeficiente b:\n-3\nEscriba el coeficiente c:\n2\nx1 = 2.0, x2 = 1.0\n\nEscriba el coeficiente a:\n1\nEscriba el coeficiente b:\n-2\nEscriba el coeficiente c:\n1\nx1 = 1.0\n\nEscriba el coeficiente a:\n1\nEscriba el coeficiente b:\n1\nEscriba el coeficiente c:\n1\nNo reales\n\n\n\n\n\n\n\n\nTodos estos programas tienen algo en común:\n\nEn función de una condición, se deberán ejecutar unas acciones y otras\nExiste al menos una decisión que tomar"
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/301_composicion_condicional.html#composición-condicional",
+    "href": "src/01_teoria/03_composicion/301_composicion_condicional.html#composición-condicional",
+    "title": "Teoría 301",
+    "section": "2 Composición condicional",
+    "text": "2 Composición condicional\n\n\n2.1 Composición condicional: concepto\n\nLa composición condicional es una estructura de control que permite tomar decisiones en función de una condición.\nExisten distintas formas de conseguir esto en python:\n\nif, if-else, if-elif-else\n\n\n\n\n\n2.2 Composición condicional: if\n\n\n\nLa estructura if permite condicionar la ejecución de un bloque de instrucciones si se cumple una condición.\n\nEvalúa una expresión lógica (valor booleano)\nSi el valor es True: ejecuta el bloque.\nSi el valor es False: no ejecuta el bloque.\n\nEl bloque de instrucciones que se ejecuta condicionalmente se identifica por su indentación.\n\n# bloque_de_instrucciones_principal_1\n\nif condicion:\n    # bloque_de_instrucciones que\n    # se ejecuta si condicion es True\n\n# bloque_de_instrucciones_principal_2\n\n\n\n\n\n\n2.2.1 Ejemplo: Print trivial\ncount = 0\nwhile count &lt; 100:\n    print(\"I will lock my computer when I leave my desk\")\nprint(\"Uno\")\n\nif True:\n    print(\"Dos\")\n\nif False:\n    print(\"Tres\")\n\nprint(\"Cuatro\")\n\n\nOutput\n\nUno\nDos\nCuatro\n\n\n\n\n2.2.2 Ejemplo: Warning\nprint(\"Escriba un número:\")\na = int(input())\n\nif a &lt; 0:\n    print(f\"ATENCIÓN: El número {a} es negativo\")\n\nprint(f\"El número es {a}\")\nEscriba un número:\n5\nEl número es 5\nEscriba un número:\n-5\nATENCIÓN: El número -5 es negativo\nEl número es -5\n\n\n\n2.2.3 Ejemplo: Asignación condicional\nprint(\"Escriba un número:\")\na = int(input())\n\nif a &lt; 0:\n    a = 0\n\nprint(f\"El número es {a}\")\nEscriba un número:\n5\nEl número es 5\nEscriba un número:\n-5\nEl número es 0\n\n\n\n2.2.4 Ejemplo: Bloques de múltiples instrucciones\n\nprint(\"Escriba un número:\")\na = int(input())\n\nif a &lt; 0:\n    a = 0\n    print(\"El número es negativo\")\n    print(\"Se ha cambiado a 0\")\n\nprint(f\"El número es {a}\")\nEscriba un número:\n5\nEl número es 5\nEscriba un número:\n-5\nEl número es 0\nSe ha cambiado a 0\nEl número es 0\n\n\n\n\n2.3 Compocisión condicional: if-else\n\n\n\nA veces es necesario ejecutar un bloque de instrucciones si la condición es verdadera y otro bloque si es falsa.\nLa estructura if-else permite tomar decisiones en función de una condición.\n\nSi condición es verdadera, ejecuta el primer bloque.\nSi condición es falsa, ejecuta el segundo bloque.\nNUNCA se ejecutan ambos bloques.\n\n\n# bloque_de_instrucciones_principal_1\n\nif condicion:\n    # bloque_de_instrucciones_1\n    # se ejecuta si condicion es True\nelse:\n    # bloque_de_instrucciones_2\n    # se ejecuta si condicion es False\n\n#bloque_de_instrucciones_principal_2\n\n\n\n\n\n\n2.3.1 Ejemplo: Print trivial\nprint(\"Uno\")\n\nif False:\n    print(\"Dos\")\nelse:\n    print(\"Tres\")\n\nprint(\"Cuatro\")\n\n\nOutput\n\nUno\nTres\nCuatro\n\n\n\n\n2.3.2 Ejemplo: Números pares e impares\nprint(\"Escriba un número:\")\nnumero = int(input())\n\nif numero % 2 == 0:\n    print(f\"El número {numero} es par\")\nelse:\n    print(f\"El número {numero} es impar\")\nEscriba un número:\n4\nEl número 4 es par\nEscriba un número:\n5\nEl número 4 es impar\n\n\n\n2.3.3 Ejemplo: División por cero\nprint(\"Escriba un número:\")\na = int(input())\n\nprint(\"Escriba otro número:\")\nb = int(input())\n\nif b == 0:\n    print(\"No se puede dividir por cero!\")\nelse:\n    print(f\"{a} / {b} = {a / b}\")\nEscriba un número:\n4\nEscriba otro número:\n2\n4 / 2 = 2\nEscriba un número:\n4\nEscriba otro número:\n0\nNo se puede dividir por cero!\n\n\n\n\n2.4 Composición condicional: if-elif-else\n\n\n\nA veces es necesario evaluar múltiples condiciones.\nLa estructura if-elif-else permite encadenar decisiones en función de varias condiciones.\nLa sección else no es obligatoria, pero será necesaria en la mayoría de problemas.\n\n# bloque_de_instrucciones_principal_1\n\nif condicion_1:\n    # bloque_de_instrucciones_1\n    # se ejecuta si condicion_1 es True\nelif condicion_2:\n    # bloque_de_instrucciones_2\n    # se ejecuta si condicion_2 es True (y condicion_1 fue False)\nelse:\n    # bloque_de_instrucciones_3\n    # se ejecuta si condicion_1 y condicion_2 son False\n\n#bloque_de_instrucciones_principal_2\n\n\n\n\n\n\n2.4.1 Ejemplo: Print trivial\nprint(\"Uno\")\n\nif True:\n    print(\"Dos\")\nelif True:\n    print(\"Tres\")\nelse:\n    print(\"Cuatro\")\n\nprint(\"Cinco\")\n\n\nOutput\n\nUno\nDos\nCinco\n\n\n\n\n2.4.2 Ejemplo: Ecuación de segundo grado\n\n\nimport math\n\nprint(\"Escriba el coeficiente a:\")\na = float(input())\n\nprint(\"Escriba el coeficiente b:\")\nb = float(input())\n\nprint(\"Escriba el coeficiente c:\")\nc = float(input())\n\ndiscriminante = b ** 2 - 4 * a * c\n\nif discriminante &gt; 0:\n    x1 = (-b + math.sqrt(discriminante)) / (2 * a)\n    x2 = (-b - math.sqrt(discriminante)) / (2 * a)\n    print(f\"x1 = {x1}, x2 = {x2}\")\nelif discriminante == 0:\n    x = -b / (2 * a)\n    print(f\"x = {x}\")\nelse:\n    print(\"No reales\")\n\n\\[\nx = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\n\\]\nEscriba el coeficiente a:\n1\nEscriba el coeficiente b:\n-3\nEscriba el coeficiente c:\n2\nx1 = 2.0, x2 = 1.0\n\n\n\n\n\n\n2.5 Anidado de condicionales\n\nLlamamos anidado (nesting) a la composición de estructuras dentro de otras.\nPara definir un bucle, utilizamos la indentación.\n\nDistintos niveles de indentación indican distintos niveles de anidamiento.\n\n\nif condicion_1:\n    # Se ejecuta si condicion_1 es True\n    if condicion_2:\n        # Se ejecuta si condicion_1 y condicion_2 son True\n    else:\n        # Se ejecuta si condicion_1 es True y condicion_2 es False\n# Se ejecuta siempre\n\n\n2.5.1 Estructuras análogas: anidado vs and\n\nPara combinar dos expresiones no siempre es necesario recurir al anidamiento\nRecuerda que conoces los operadores lógicos and, or y not\n\n\n\nif condicion_1:\n    if condicion_2:\n        # Se ejecuta si:\n        # condicion_1 y condicion_2 son True\n# Se ejecuta siempre\n\nif condicion_1 and condicion_2:\n        # Se ejecuta si:\n        # condicion_1 y condicion_2 son True\n# Se ejecuta siempre\n\n\n\n\n\n2.5.2 Estructuras análogas: if-elif-else vs if-else\n\nLa estructura if-elif-else puede replicarse con anidando if-else\n\n\n\nif condicion_1:\n    # bloque_de_instrucciones_1\nelif condicion_2:\n    # bloque_de_instrucciones_2\nelse:\n    # bloque_de_instrucciones_3\n\nif condicion_1:\n    # bloque_de_instrucciones_1\nelse:\n    if condicion_2:\n        # bloque_de_instrucciones_2\n    else:\n        # bloque_de_instrucciones_3\n\n\n\n\n\n2.5.3 Ejemplo:\n\n\n\n2.5.4 Ejemplo: Ecuación de segundo grado (anidado)\nimport math\n\nprint(\"Escriba el coeficiente a:\")\na = float(input())\n\nprint(\"Escriba el coeficiente b:\")\nb = float(input())\n\nprint(\"Escriba el coeficiente c:\")\nc = float(input())\n\ndiscriminante = b ** 2 - 4 * a * c\n\nif discriminante &gt; 0:\n    x1 = (-b + math.sqrt(discriminante)) / (2 * a)\n    x2 = (-b - math.sqrt(discriminante)) / (2 * a)\n    print(f\"x1 = {x1}, x2 = {x2}\")\nelse:\n    if discriminante == 0:\n        x = -b / (2 * a)\n        print(f\"x = {x}\")\n    else:\n        print(\"No reales\")\nNota: Este ejemplo sirve para ilustrar el anidamiento. En la práctica, es preferible utilizar if-elif-else."
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/301_composicion_condicional.html#usos-avanzados-de-la-composición-condicional",
+    "href": "src/01_teoria/03_composicion/301_composicion_condicional.html#usos-avanzados-de-la-composición-condicional",
+    "title": "Teoría 301",
+    "section": "3 Usos avanzados de la composición condicional",
+    "text": "3 Usos avanzados de la composición condicional\n\n\n3.1 Interacción conditional\n\nRecuerda que la interacción con el usuario se realiza también mediante instrucciones.\nEstas instrucciones pueden estar dentro de un bloque condicional.\n\n\n\nprint(\"Introduzce tu edad:\")\nedad = int(input())\n\nif edad &lt; 18:\n    print(\"¿Autorización paterna? (s/n)\")\n    res = input()\n    if res == \"s\":\n        print(\"Adelante\")  # Código repetido\n    else:\n        print(\"Lo siento, no puedes pasar\")\nelse:\n    print(\"Adelante\")  # Código repetido\n\nIntroduzce tu edad:\n21\nAdelante\nIntroduzce tu edad:\n15\n¿Autorización paterna? (s/n)\ns\nAdelante\n\n\n\n\n3.1.1 Alternativas al ejercicio anterior\n\n\nprint(\"Introduzce tu edad:\")\nedad = int(input())\n\n\nif edad &lt; 18:\n    print(\"¿Autorización paterna? (s/n)\")\n    res = input()\n    if res == \"s\":\n        permiso = True\n    else:\n        permiso = False\nelse:\n    permiso = True\n\nif permiso:\n    print(\"Adelante\")\nelse:\n    print(\"Lo siento, no puedes pasar\")\nCuidado con definir siempre un valor para permiso.\n\nprint(\"Introduzce tu edad:\")\nedad = int(input())\n\npermiso = False\n\nif edad &lt; 18:\n    print(\"¿Autorización paterna? (s/n)\")\n    res = input()\n    if res == \"s\":\n        permiso = True\nelse:\n    permiso = True\n\nif permiso:\n    print(\"Adelante\")\nelse:\n    print(\"Lo siento, no puedes pasar\")\nNota: En este caso, permiso se asume inicialmente False."
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.reveal.html#tipos-de-datos-en-python",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.reveal.html#tipos-de-datos-en-python",
     "title": "Teoría 201",
     "section": "Tipos de datos en Python",
     "text": "Tipos de datos en Python"
   },
   {
-    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#enteros",
-    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#enteros",
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.reveal.html#enteros",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.reveal.html#enteros",
     "title": "Teoría 201",
     "section": "Enteros",
     "text": "Enteros"
   },
   {
-    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#funciones-numéricas",
-    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#funciones-numéricas",
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.reveal.html#funciones-numéricas",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.reveal.html#funciones-numéricas",
     "title": "Teoría 201",
     "section": "Funciones numéricas",
     "text": "Funciones numéricas"
   },
   {
-    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#expresiones-avanzadas-con-números",
-    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#expresiones-avanzadas-con-números",
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.reveal.html#expresiones-avanzadas-con-números",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.reveal.html#expresiones-avanzadas-con-números",
     "title": "Teoría 201",
     "section": "Expresiones avanzadas con números",
     "text": "Expresiones avanzadas con números"
   },
   {
-    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#ejercicios",
-    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#ejercicios",
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.reveal.html#ejercicios",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.reveal.html#ejercicios",
     "title": "Teoría 201",
     "section": "Ejercicios",
     "text": "Ejercicios"
   },
   {
-    "objectID": "src/01_teoria/01_conceptos_basicos/102_lenguajes.html#algoritmo",
-    "href": "src/01_teoria/01_conceptos_basicos/102_lenguajes.html#algoritmo",
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html",
+    "title": "Teoría 201",
+    "section": "",
+    "text": "Todos los lenguajes cuentan con una serie de tipos básicos.\nLos tipos básicos de Python que estudiaremos son:\n\nEnteros: para representar números enteros\nReales: para representar números reales\nBooleanos: para representar valores de cierto o falso\nTexto: para representar cadenas de caracteres\n\n\n\n\n\n\n\nSu palabra reservada\n\nint, float, etc.\n\nSus literales\n\n¿un número real se escribe 1,7 o 1.7?\n\nSu dominio (rango de valores)\n\n¿puedo representar un D.N.I. con un int?\n\nSus operaciones disponibles\n\n¿puedo sumar números enteros?\n\n\n\n\n\n\nEl dominio de un tipo de dato es el conjunto de valores que puede representar\nA diferencia de las matemáticas, en programación:\n\nTodos los tipos de datos tienen un dominio finito\n\nEl tamaño de un tipo de dato determina su dominio\n\nUn tipo de dato que requiere más bits podrá representar más valores\n\n\n\n\n\n\n\n\nRecordad que Python es un lenguaje de tipado dinámico\n\nNo es necesario declarar el tipo de una variable\nLa palabra reservada de cada tipo será útil para operaciones específicas\n\n\nedad = 21  # Python infiere que edad es un entero (int)\n\n\n\n\n\n\nEn VSCode puedes colocar el puntero de tu ratón (hover) sobre una variable para recibir una pista sobre su tipo."
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#tipos-de-datos-en-python",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#tipos-de-datos-en-python",
+    "title": "Teoría 201",
+    "section": "",
+    "text": "Todos los lenguajes cuentan con una serie de tipos básicos.\nLos tipos básicos de Python que estudiaremos son:\n\nEnteros: para representar números enteros\nReales: para representar números reales\nBooleanos: para representar valores de cierto o falso\nTexto: para representar cadenas de caracteres\n\n\n\n\n\n\n\nSu palabra reservada\n\nint, float, etc.\n\nSus literales\n\n¿un número real se escribe 1,7 o 1.7?\n\nSu dominio (rango de valores)\n\n¿puedo representar un D.N.I. con un int?\n\nSus operaciones disponibles\n\n¿puedo sumar números enteros?\n\n\n\n\n\n\nEl dominio de un tipo de dato es el conjunto de valores que puede representar\nA diferencia de las matemáticas, en programación:\n\nTodos los tipos de datos tienen un dominio finito\n\nEl tamaño de un tipo de dato determina su dominio\n\nUn tipo de dato que requiere más bits podrá representar más valores\n\n\n\n\n\n\n\n\nRecordad que Python es un lenguaje de tipado dinámico\n\nNo es necesario declarar el tipo de una variable\nLa palabra reservada de cada tipo será útil para operaciones específicas\n\n\nedad = 21  # Python infiere que edad es un entero (int)\n\n\n\n\n\n\nEn VSCode puedes colocar el puntero de tu ratón (hover) sobre una variable para recibir una pista sobre su tipo."
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#enteros",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#enteros",
+    "title": "Teoría 201",
+    "section": "0.2 Enteros",
+    "text": "0.2 Enteros\n\n\n0.2.1 Números enteros en Python\n\nPalabra reservada: int\nLiterales: 1, -3, 0, 1, 3_000_000, 2E3\nDominio: depende de la arquitectura de la máquina\nOperadores:\n\nAritméticos: +, -, *, /, //, %, **\nComparación: &gt;, &gt;=, &lt;, &lt;=, ==, !=\n\n\n\n\n\n0.2.2 Enteros: Representación literal\n\nSecuencia de uno o más dígitos (caracteres 0, 1, …, 9)\nPueden ir precedidos por un signo (+ o -)\nBarras bajas (_) para separar dígitos\nPython admite notación científica\nNo se permiten ceros a la izquierda\n\nb = 3    \nc = -523\nc = +444\nd = 2\ne = 4_0_0\nf = 2E3\n\n\n\n0.2.3 Enteros: Dominio\n\nEn matemáticas:\n\nDominio \\([-\\infty,+\\infty]\\)\n\nEn informática:\n\nEntre un mínimo y un máximo\nDependen de la arquitectura de la máquina\n\n\n\n\n0.2.3.1 Enteros: Dominio en otros lenguajes\n\n\n\n\n\n\n\n\nPalabra clave\nTipo de dato\nTamaño (en bits)\n\n\n\n\nshort\nentero\n16\n\n\nint\nentero\n32\n\n\nlong\nentero\n32\n\n\nlong long\nentero\n64\n\n\n\n\n\n\n0.2.3.2 Enteros: Dominio en python\n\nEn Python, todos los tipos de enteros están unificados en int\n\n\n\n\n\n0.2.4 Enteros: Operadores\n\nOperadores aritméticos:\n\nSuma: +\nResta: -\nMultiplicación: *\nDivisión: /\nDivisión entera: //\nMódulo (resto de la división): % ¡Ojo!\nPotencia: **\n\nOperadores de comparación:\n\nMayor estricto: &gt;\nMayor o igual: &gt;=\nMenor estricto: &lt;\nMenor o igual: &lt;=\nIgualdad: == ¡Atención!\nDesigualdad: !="
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#funciones-numéricas",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#funciones-numéricas",
+    "title": "Teoría 201",
+    "section": "1.1 Funciones numéricas",
+    "text": "1.1 Funciones numéricas\n\n\n1.1.1 Funciones: Breve introducción\n\nUna función es un bloque de código que realiza una tarea específica\nDe momento, no vamos a preocuparnos por cómo se definen,\n\nsino por cómo se utilizan\n\nPara ejecutar una función, se ha de invocar o llamar a la función\n\nSe hace escribiendo el nombre de la función seguido de paréntesis ()\nSi la función requiere argumentos, se escriben dentro de los paréntesis\n\n\nprint(\"Hola, mundo!\")  # La función se llama print, y recibe un argumento\n\n\n\n1.1.2 Bibliotecas (libraries) de Python\n\nUno de los principios fundamentales del desarrollo software es la reutilización\nFuncionalidades comunes han sido ya implementadas por otros\nAlgunas de estas funcionalidades existen disponibles en el propio lenguaje\n\nprint() o input()\n\nAlgunas de estas funcionalidades han sido integradas por defecto en el intérprete de Python.\n\nEl conjunto de funcionalidades incorporadas forma parte de la Standard Library (stdlib).\nExisten muchas otras funciones, algunas de las cuales usaremos con frecuencia.\n\nPara utilizar una función de alguna de estas bibliotecas, debemos importarla.\n\nimport math  # importa la biblioteca math\n\nmath.abs(-3)  # invoca la función abs de la biblioteca math\n\n\n\n1.1.3 Funciones numéricas nativas y de la stdlib\n\n\n\nBiblioteca\nInvocación\nDescripción\n\n\n\n\nnativa\nint(x)\nConvierte la entrada a entero\n\n\nnativa\nfloat(x)\nConvierte la entrada a real\n\n\nnativa\nabs(x)\nValor absoluto\n\n\nnativa\nround(x)\nRedondeo\n\n\nmath\nmath.sqrt(x)\nRaíz cuadrada\n\n\nmath\nmath.sin(x)\nSeno\n\n\nmath\nmath.cos(x)\nCoseno\n\n\nmath\nmath.atan(x)\nArcotangente\n\n\nmath\nmath.log(x)\nLogaritmo\n\n\nmath\nmath.exp(x)\nExponencial\n\n\nmath\nmath.floor(x)\nEntero por defecto\n\n\nmath\nmath.ceil(x)\nEntero por exceso"
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#expresiones-avanzadas-con-números",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#expresiones-avanzadas-con-números",
+    "title": "Teoría 201",
+    "section": "1.2 Expresiones avanzadas con números",
+    "text": "1.2 Expresiones avanzadas con números\n\n\n1.2.1 Tipos de los operandos y resultados\n\nCada operación está compuesta por una serie de operandos y genera un resultado\n\nEj: 3 + 4 es una expresión que toma dos int y devuelve un int\n\nLa mayoría de operadores aritméticos permiten combinar operandos de diferentes tipos\n\nEj: 3 + 4.0 es una expresión que toma un int y un float y devuelve un float\n\nAlgunas operaciones toman operandos de un tipo y devuelven un resultado de otro tipo\n\nEj: 3 / 4 es una expresión que toma dos int y devuelve un float\n\nAlgunas funciones numéricas requieren operandos de un tipo específico (un int)\n\nEj: math.factorial(3) requiere un int y devuelve un int\n\nRecuerda que:\n\nfloat() convierte cualquier int en un float equivalente\nint() elimina los decimales de un float y lo convierte en un int"
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#ejercicios",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html#ejercicios",
+    "title": "Teoría 201",
+    "section": "1.3 Ejercicios",
+    "text": "1.3 Ejercicios\n\n¿De qué tipo es cada una de las siguientes variables?\na = 3 + 2.1\nb = 3 / 2\nc = 3 // 2\nd = 3 ** 2\ne = int(2.1)\nf = round(2.1)\ng = math.sqrt(4)\nh = int(a) * c * d"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/102_lenguajes.reveal.html#algoritmo",
+    "href": "src/01_teoria/01_conceptos_basicos/102_lenguajes.reveal.html#algoritmo",
     "title": "Teoría 102",
     "section": "Algoritmo",
     "text": "Algoritmo"
   },
   {
-    "objectID": "src/01_teoria/01_conceptos_basicos/102_lenguajes.html#lenguajes-de-programación",
-    "href": "src/01_teoria/01_conceptos_basicos/102_lenguajes.html#lenguajes-de-programación",
+    "objectID": "src/01_teoria/01_conceptos_basicos/102_lenguajes.reveal.html#lenguajes-de-programación",
+    "href": "src/01_teoria/01_conceptos_basicos/102_lenguajes.reveal.html#lenguajes-de-programación",
     "title": "Teoría 102",
     "section": "Lenguajes de programación",
     "text": "Lenguajes de programación"
   },
   {
-    "objectID": "src/01_teoria/01_conceptos_basicos/102_lenguajes.html#lenguajes-de-alto-nivel-1",
-    "href": "src/01_teoria/01_conceptos_basicos/102_lenguajes.html#lenguajes-de-alto-nivel-1",
+    "objectID": "src/01_teoria/01_conceptos_basicos/102_lenguajes.reveal.html#lenguajes-de-alto-nivel-1",
+    "href": "src/01_teoria/01_conceptos_basicos/102_lenguajes.reveal.html#lenguajes-de-alto-nivel-1",
     "title": "Teoría 102",
     "section": "Lenguajes de alto nivel",
     "text": "Lenguajes de alto nivel"
   },
   {
-    "objectID": "src/01_teoria/01_conceptos_basicos/102_lenguajes.html#entorno-integrado-de-desarrollo",
-    "href": "src/01_teoria/01_conceptos_basicos/102_lenguajes.html#entorno-integrado-de-desarrollo",
+    "objectID": "src/01_teoria/01_conceptos_basicos/102_lenguajes.reveal.html#entorno-integrado-de-desarrollo",
+    "href": "src/01_teoria/01_conceptos_basicos/102_lenguajes.reveal.html#entorno-integrado-de-desarrollo",
     "title": "Teoría 102",
     "section": "Entorno Integrado de Desarrollo",
     "text": "Entorno Integrado de Desarrollo"
   },
   {
-    "objectID": "src/01_teoria/00_presentacion/000_presentación.html#profesores",
-    "href": "src/01_teoria/00_presentacion/000_presentación.html#profesores",
+    "objectID": "src/01_teoria/01_conceptos_basicos/102_lenguajes.html",
+    "href": "src/01_teoria/01_conceptos_basicos/102_lenguajes.html",
+    "title": "Teoría 102",
+    "section": "",
+    "text": "Descripción detallada de cómo resolver un determinado problema\nSecuencia de acciones para obtener la solución al problema\nConjunto de instrucciones que se ejecutan en un orden determinado\n\n\n\n¿Cómo cambiar las pilas del mando de la TV?\n\nTomar el mando de la TV\nLocalizar la tapa de las pilas\nQuitar el tornillo (si tiene)\nAbrir la tapa\nQuitar las pilas viejas\nColocar las pilas nuevas\nColocar la tapa\nApretar el tornillo (si tiene)\n\n\n\n\n\n\n\nDeclaración precisa de condiciones de partida: entrada\nEspecificación del estado final: salida\nDescripción detallada de los pasos individuales\n\nOperaciones simples que ayudan en la progresión hacia el estado final\n\n\n\n\n\n\n\nPrecisión : Expresarse de forma no ambigua\nDeterminismo : Mismo estado final para las mismas entradas\nFinitud : Tener una descripción finita\n\n\n\n\n\n\nProblemas ambiguos\nProblemas con demasiados pasos para acabar\nProblemas matemáticamente imposibles"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/102_lenguajes.html#algoritmo",
+    "href": "src/01_teoria/01_conceptos_basicos/102_lenguajes.html#algoritmo",
+    "title": "Teoría 102",
+    "section": "",
+    "text": "Descripción detallada de cómo resolver un determinado problema\nSecuencia de acciones para obtener la solución al problema\nConjunto de instrucciones que se ejecutan en un orden determinado\n\n\n\n¿Cómo cambiar las pilas del mando de la TV?\n\nTomar el mando de la TV\nLocalizar la tapa de las pilas\nQuitar el tornillo (si tiene)\nAbrir la tapa\nQuitar las pilas viejas\nColocar las pilas nuevas\nColocar la tapa\nApretar el tornillo (si tiene)\n\n\n\n\n\n\n\nDeclaración precisa de condiciones de partida: entrada\nEspecificación del estado final: salida\nDescripción detallada de los pasos individuales\n\nOperaciones simples que ayudan en la progresión hacia el estado final\n\n\n\n\n\n\n\nPrecisión : Expresarse de forma no ambigua\nDeterminismo : Mismo estado final para las mismas entradas\nFinitud : Tener una descripción finita\n\n\n\n\n\n\nProblemas ambiguos\nProblemas con demasiados pasos para acabar\nProblemas matemáticamente imposibles"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/102_lenguajes.html#lenguajes-de-programación",
+    "href": "src/01_teoria/01_conceptos_basicos/102_lenguajes.html#lenguajes-de-programación",
+    "title": "Teoría 102",
+    "section": "2 Lenguajes de programación",
+    "text": "2 Lenguajes de programación\n\n\nUn lenguaje de programación es\n\nun lenguaje formal que\nespecifica una serie de instrucciones que,\nal ser ejecutadas por un ordenador,\npermiten realizar una tarea concreta\n\n\nEl idioma en el que los humanos se comunican con las máquinas\n\n\n2.1 Estilos de programación\n\nDiferentes estilos: imperativa, funcional, declarativa, etc.\n\nEn esta asignatura, nos centraremos en la programación imperativa\n\nProgramación imperativa: Estado + Instrucciones\n\nEstado: conjunto de variables que definen de manera unívoca la situación de un sistema\nInstrucciones: operaciones que modifican el estado del programa\nCada instrucción ayuda a la progresión hacia el estado final\n\n\n\n\n\n2.2 Niveles de lenguajes de programación\n\nUn computador solo entiende instrucciones sencillas:\n\nISA (Instruction Set Architecture): Es el conjunto de instrucciones que un procesador puede ejecutar\nCada arquitectura de procesador tiene su propia ISA\n\nEstas instrucciones básicas bastan para construir programas complejos\nSegún su nivel de abstracción:\n\nLenguajes de bajo nivel se encuentran cerca del lenguaje de la máquina\nLenguajes más sofisticados (de alto nivel) buscan acercar la programación al lenguaje humano\n\n\n\n\n2.2.1 Código máquina\n\n\n\nLenguaje que entiende el ordenador: código máquina\nAnteriormente, los programas se escribían directamente en codificación binaria (ejemplo: perforando tarjetas)\n\nAgujero = 1, sin agujero = 0\nErrores frecuentes, muy difíciles de encontrar y corregir\nSe programaba directamente en base al hardware a usar\nUn programa escrito para un hardware no es compatible con otro diferente\n\nPoco versátil\n\n\n\n\n\n\n\nTarjeta Perforada\n\n\n\n\n\n\n\n2.2.2 Lenguaje ensamblador\n\n\n\nPermite escribir instrucciones del procesador y representar los datos con identificadores más entendibles por el programador\nSin embargo, todavía es difícil de entender (bajo nivel)\nTodavía está condicionado por el hardware a usar:\n\nDiferentes máquinas = diferentes programas\nPoco versátil\n\n\n\n\n\n\nCódigo ensamblador\n\n\n\n\n\n\n\n2.2.3 Lenguajes de alto nivel\n\n\n\nSoportan abstracciones que entiende el programador,¡pero no la máquina!\nMás fáciles de utilizar para programar\nNo dependen de la máquina utilizada\nMenos eficientes que los de bajo nivel\nNecesitan compiladores/traductores al lenguaje máquina\nFacilitan detección de errores\n\n\ndef suma(a, b):\n    return a + b\n\n\n\n\n\n2.2.4 Primer lenguaje de alto nivel: FORTRAN, 1957\n\nFORTRAN (FORmula TRANslation): John Backus, 1957\n\nCódigo fuente: texto escrito en lenguaje de alto nivel (texto plano)\nCompilador: traduce el código fuente a lenguaje máquina\n\nAún se utiliza en:\n\nCiencia e ingeniería\nFinanza\n\n\n\n\n\n\n2.3 Evolución de los lenguajes\n\n\n\nhttps://www.cs.fsu.edu/~engelen/courses/COP402004/"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/102_lenguajes.html#lenguajes-de-alto-nivel-1",
+    "href": "src/01_teoria/01_conceptos_basicos/102_lenguajes.html#lenguajes-de-alto-nivel-1",
+    "title": "Teoría 102",
+    "section": "3 Lenguajes de alto nivel",
+    "text": "3 Lenguajes de alto nivel\n\n\n3.1 Tipos de lenguajes de alto nivel\n\n\nLenguajes compilados\n\nLa traducción se realiza una sola vez durante la compilación\nDurante la ejecución, no se requiere el código fuente\nCada plataforma requiere su propia compilación\nUsos: sistemas operativos, videojuegos, edición de vídeo…\nEjemplos: Pascal, Ada, C/C++, Fortran…\n\n\nLenguajes interpretados\n\nLa traducción se realiza cada vez que se ejecuta el programa\nUn intérprete interpreta y ejecuta las instrucciones: más lento\nEl mismo programa sirve en múltiples plataformas: portabilidad\nUsos: aplicaciones web, sistemas multiplataforma, telfs. móviles…\nEjemplos: Python, Perl, PHP, Scratch…\n\n\n\n\n\n\n3.2 Compilador\n\nCódigo fuente \\(\\rightarrow\\) Aplicación ejecutable\nRequiere tres elementos: un compilador, un ensamblador y un enlazador\n\nCompilador: Código escrito \\(\\rightarrow\\) Código ensamblador\nEnsamblador: Código ensamblador \\(\\rightarrow\\) Código máquina (ficheros objeto)\nEnlazador: Código máquina (ficheros objeto) \\(\\rightarrow\\) Código maquina ejecutable\n\nEl compilador, no sólo traduce el código, sino que también verifica:\n\nRevisión léxica (¿usa las palabras reservadas correctamente?)\nRevisión sintáctica (¿la frase es gramaticalmente correcta?)\nRevisión semántica (¿tiene sentido la frase?)\n\n\n\n\n\n3.3 Interprete\n\nCódigo fuente \\(\\rightarrow\\) Ejecución\nSólo requiere un elemento:\n\nInterprete: lee el código fuente y lo ejecuta directamente\n\nVentajas:\n\nPortabilidad: no es necesario compilar para cada plataforma\nFacilidad de depuración: errores más fáciles de encontrar\nFlexibilidad: permite ejecutar código de forma interactiva"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/102_lenguajes.html#entorno-integrado-de-desarrollo",
+    "href": "src/01_teoria/01_conceptos_basicos/102_lenguajes.html#entorno-integrado-de-desarrollo",
+    "title": "Teoría 102",
+    "section": "4 Entorno Integrado de Desarrollo",
+    "text": "4 Entorno Integrado de Desarrollo\n\n\n4.1 Integrated Development Environment (IDE)\nAplicaciones integradas compuestas por:\n\nUn editor avanzado de código fuente\n\nResalta las palabras reservadas\nGestiona las sangrías del texto\n\nUn intérprete o compilador\nUna consola o terminal para ejecutar comandos\n[Opcional] Un depurador integrado (no lo veremos en esta asignatura)\n\n\n\n\n4.2 Proceso de trabajo\n\nDiseño de una solución al problema\nCodificación de la solución\nEjecución del programa\nVerificación del resultado\nMientras hay errores\nCorrección de errores\nVolver al paso 3"
+  },
+  {
+    "objectID": "src/01_teoria/00_presentacion/000_presentación.reveal.html#profesores",
+    "href": "src/01_teoria/00_presentacion/000_presentación.reveal.html#profesores",
     "title": "Presentación de la Asignatura",
     "section": "Profesores",
     "text": "Profesores\n\nSergio Martín Segura (segura@unizar.es)\n\nTeoría, problemas y prácticas\nDespacho: L2.09, Ada Byron\n\nMiguel Ángel Latre Abadía (latre@unizar.es)\n\nPrácticas\nDespacho: D2.22, Ada Byron\n\n\nTutorías: Consultar enlace en Moodle"
   },
   {
-    "objectID": "src/01_teoria/00_presentacion/000_presentación.html#organización",
-    "href": "src/01_teoria/00_presentacion/000_presentación.html#organización",
+    "objectID": "src/01_teoria/00_presentacion/000_presentación.reveal.html#organización",
+    "href": "src/01_teoria/00_presentacion/000_presentación.reveal.html#organización",
     "title": "Presentación de la Asignatura",
     "section": "Organización",
     "text": "Organización\n\nClases teóricas: 2 horas semanales\nClases de problemas: 1 hora semanal\nPrácticas de laboratorio: 2 horas cada dos semanas"
   },
   {
-    "objectID": "src/01_teoria/00_presentacion/000_presentación.html#evaluación-final",
-    "href": "src/01_teoria/00_presentacion/000_presentación.html#evaluación-final",
+    "objectID": "src/01_teoria/00_presentacion/000_presentación.reveal.html#evaluación-final",
+    "href": "src/01_teoria/00_presentacion/000_presentación.reveal.html#evaluación-final",
     "title": "Presentación de la Asignatura",
     "section": "Evaluación final",
     "text": "Evaluación final\n\nLa nota final, tal cual indica la guía docente, se calcula:\n\n\\(70\\%\\) Examen escrito (mínimo \\(5\\))\n\\(30\\%\\) Nota de prácticas (dos opciones):\n\nEntregas de prácticas\nExamen práctico final (anula la nota de entregas)\n\n\nSe deberá obtener una nota mínima de \\(5\\) ponderada para aprobar la asignatura\nSegunda convocatoria\n\nExamen escrito + Examen práctico final\nMismas ponderaciones"
   },
   {
-    "objectID": "src/01_teoria/00_presentacion/000_presentación.html#dudas",
-    "href": "src/01_teoria/00_presentacion/000_presentación.html#dudas",
+    "objectID": "src/01_teoria/00_presentacion/000_presentación.reveal.html#dudas",
+    "href": "src/01_teoria/00_presentacion/000_presentación.reveal.html#dudas",
     "title": "Presentación de la Asignatura",
     "section": "¿Dudas?",
     "text": "¿Dudas?"
+  },
+  {
+    "objectID": "src/01_teoria/00_presentacion/000_presentación.html",
+    "href": "src/01_teoria/00_presentacion/000_presentación.html",
+    "title": "Presentación de la Asignatura",
+    "section": "",
+    "text": "Sergio Martín Segura (segura@unizar.es)\n\nTeoría, problemas y prácticas\nDespacho: L2.09, Ada Byron\n\nMiguel Ángel Latre Abadía (latre@unizar.es)\n\nPrácticas\nDespacho: D2.22, Ada Byron\n\n\nTutorías: Consultar enlace en Moodle"
+  },
+  {
+    "objectID": "src/01_teoria/00_presentacion/000_presentación.html#profesores",
+    "href": "src/01_teoria/00_presentacion/000_presentación.html#profesores",
+    "title": "Presentación de la Asignatura",
+    "section": "",
+    "text": "Sergio Martín Segura (segura@unizar.es)\n\nTeoría, problemas y prácticas\nDespacho: L2.09, Ada Byron\n\nMiguel Ángel Latre Abadía (latre@unizar.es)\n\nPrácticas\nDespacho: D2.22, Ada Byron\n\n\nTutorías: Consultar enlace en Moodle"
+  },
+  {
+    "objectID": "src/01_teoria/00_presentacion/000_presentación.html#organización",
+    "href": "src/01_teoria/00_presentacion/000_presentación.html#organización",
+    "title": "Presentación de la Asignatura",
+    "section": "2 Organización",
+    "text": "2 Organización\n\nClases teóricas: 2 horas semanales\nClases de problemas: 1 hora semanal\nPrácticas de laboratorio: 2 horas cada dos semanas\n\n\n\n2.1 Sesiones de teoría\n\nIntroducción de conceptos fundamentales\nResolución magistral de ejercicios de ejemplo\n\n\n\n\n2.2 Sesiones de problemas\n\nResolución autónoma de ejercicios sencillos\n\nSe puede traer ordenador\nSe aconseja resolver los ejercicios en papel\n\n\n\n\n\n2.3 Sesiones de prácticas\n\nResolución autónoma de ejercicios complejos\n\nSe puede traer ordenador personal o usar los del laboratorio\n\nSe realizarán 7 sesiones.\n\nP0: No evaluable\nP1 a P6: Evaluables\n\nAlumnos divididos por grupos\n\nGrupos pre-asignados por la coordinación del grado\nCada grupo tiene un profesor asignado\n\nResolución individual\nEntregas con fecha común\n\nImplica traer preparada la práctica a la sesión"
+  },
+  {
+    "objectID": "src/01_teoria/00_presentacion/000_presentación.html#evaluación-final",
+    "href": "src/01_teoria/00_presentacion/000_presentación.html#evaluación-final",
+    "title": "Presentación de la Asignatura",
+    "section": "3 Evaluación final",
+    "text": "3 Evaluación final\n\nLa nota final, tal cual indica la guía docente, se calcula:\n\n\\(70\\%\\) Examen escrito (mínimo \\(5\\))\n\\(30\\%\\) Nota de prácticas (dos opciones):\n\nEntregas de prácticas\nExamen práctico final (anula la nota de entregas)\n\n\nSe deberá obtener una nota mínima de \\(5\\) ponderada para aprobar la asignatura\nSegunda convocatoria\n\nExamen escrito + Examen práctico final\nMismas ponderaciones\n\n\n\n\n3.1 Examen escrito\n\nEscrito en papel\nResolución de problemas\n\n3 o 4 ejercicios, según dificultad\n\nEvaluación de los ejercicios\n\nSe valorará la corrección y la claridad de la solución\nError de concepto grave: \\(0\\)\n\nProhibido cualquier material de consulta o dispositivo de comunicación.\n\nEn caso de plagio, se abrirá un expediente y la calificación quedará pendiente de su resolución.\n\n\n\n\n\n3.2 Entregas de Prácticas\n\nSe entregarán 6 prácticas evaluables\nLas entregas se realizarán a través de Moodle\n\nNo se admitirán entregas fuera de plazo\nNo se admitirán entregas por otro medio que no sea Moodle.\n\nEn caso de plagio, se abrirá un expediente y la calificación quedará pendiente de su resolución.\n\n\n\n\n3.3 Examen práctico final\n\nVoluntario\nSu realización anula la nota de las entregas\nNo se recomienda esta opción frente a las entregas continuas"
+  },
+  {
+    "objectID": "src/01_teoria/00_presentacion/000_presentación.html#dudas",
+    "href": "src/01_teoria/00_presentacion/000_presentación.html#dudas",
+    "title": "Presentación de la Asignatura",
+    "section": "4 ¿Dudas?",
+    "text": "4 ¿Dudas?"
   },
   {
     "objectID": "index.html",
@@ -280,109 +469,284 @@
     "text": "01_teoria/00_presentacion/ Presentación de la Asignatura - Información general \n\n\n01_teoria/01_conceptos_basicos/ Teoría 101 - Computadores y Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 102 - Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 103 - Python \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 201 - Tipos Numerales \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 202 - Texto y Booleanos \n\n\n01_teoria/03_composicion/ Teoría 301 - Composición condicional \n\n\n01_teoria/03_composicion/ Teoría 302 - Composición Iterativa I \n\n\n01_teoria/03_composicion/ Teoría 302 - Composición Iterativa II \n\n\n02_problemas/ Problemas 1 - Fundamentos \n\n\n02_problemas/ Problemas 2 - Tipos Numéricos \n\n\n02_problemas/ Problemas 3 - Composición condicional \n\n\n02_problemas/ Problemas 4 - Composición iterativa: while \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n03_practicas/p1/ Práctica 1 - Tipos Primitivos \n\n\n03_practicas/p2/ Práctica 2 - Composición condicional \n\n\n\nNo hay resultados"
   },
   {
+    "objectID": "src/01_teoria/01_conceptos_basicos/101_introducción.html",
+    "href": "src/01_teoria/01_conceptos_basicos/101_introducción.html",
+    "title": "Teoría 101",
+    "section": "",
+    "text": "Procesamiento de información automática\nInformación: Conjunto de datos numéricos, alfabéticos o alfanuméricos necesarios para plantear y resolver un problema\nTratamiento de la información:\n\nEntrada: Introducción de los datos del problema\nProcesamiento: Transformación de datos\nSalida: Presentación de resultados\n\n\n\n\nDatos y Procesos\n\n\n\n\n\n\n\nPCs\nSupercomputadoras\nSmartphones\nElectrodomésticos\nCajeros automáticos\nConsolas\nRobots\n…"
+  },
+  {
     "objectID": "src/01_teoria/01_conceptos_basicos/101_introducción.html#que-es-la-informática",
     "href": "src/01_teoria/01_conceptos_basicos/101_introducción.html#que-es-la-informática",
     "title": "Teoría 101",
-    "section": "¿Que es la informática?",
-    "text": "¿Que es la informática?\n\nProcesamiento de información automática\nInformación: Conjunto de datos numéricos, alfabéticos o alfanuméricos necesarios para plantear y resolver un problema\nTratamiento de la información:\n\nEntrada: Introducción de los datos del problema\nProcesamiento: Transformación de datos\nSalida: Presentación de resultados"
+    "section": "",
+    "text": "Procesamiento de información automática\nInformación: Conjunto de datos numéricos, alfabéticos o alfanuméricos necesarios para plantear y resolver un problema\nTratamiento de la información:\n\nEntrada: Introducción de los datos del problema\nProcesamiento: Transformación de datos\nSalida: Presentación de resultados\n\n\n\n\nDatos y Procesos\n\n\n\n\n\n\n\nPCs\nSupercomputadoras\nSmartphones\nElectrodomésticos\nCajeros automáticos\nConsolas\nRobots\n…"
   },
   {
     "objectID": "src/01_teoria/01_conceptos_basicos/101_introducción.html#historia-de-la-informática",
     "href": "src/01_teoria/01_conceptos_basicos/101_introducción.html#historia-de-la-informática",
     "title": "Teoría 101",
-    "section": "Historia de la Informática",
-    "text": "Historia de la Informática"
+    "section": "2 Historia de la Informática",
+    "text": "2 Historia de la Informática\n\n\n2.1 300-500 a.C.: El Ábaco\n\n\n\nPrimer dispositivo de cálculo conocido\nUtilizado para realizar operaciones básicas como suma y resta\nBase para el desarrollo de herramientas más complejas\n\n\n\n\n\n\n\n\n2.2 Siglo II a.C.: Máquina de Anticitera\n\n\n\nPrimer mecanismo conocido de engranajes complejos\nUtilizado para predecir posiciones astronómicas y eclipses\nIntroducción de conceptos de cálculo mecánico en la astronomía\n\n\n\n\n\n\n\n\n2.3 Siglos VIII-IX: Al-Juarismi\n\n\n\nIntrodujo el álgebra en su obra “Al-Kitab al-Mukhtasar fi Hisab al-Jabr wal-Muqabala”\nSentó las bases para los algoritmos y sistemas numéricos actuales.\nDesarrollo del sistema decimal y de técnicas de resolución de ecuaciones\n\n\n\n\n\n\n\n\n2.4 Siglo XVII: La Pascalina de Blaise Pascal\n\n\n\nPrimer calculador mecánico funcional\nUtilizaba ruedas dentadas para realizar sumas y restas\nInspiró futuros dispositivos de cálculo automatizado\n\n\n\n\n\n\n\n\n2.5 Siglo XIX: El Telar de Jacquard\n\n\n\nIntroducción de tarjetas perforadas para controlar patrones en telares\nBase conceptual para la programación mediante instrucciones predefinidas\nInfluencia directa en los diseños de máquinas computacionales posteriores\n\n\n \n\n\n\n\n\n2.6 Década de 1830: La Máquina Analítica de Charles Babbage\n\n\n\nPrimer diseño conceptual de un computador programable\nIncorporaba memoria, unidad aritmética y control por tarjetas perforadas\nVisionaria pero nunca construida completamente en su época\n\n\n\n\n\n\n\n\n\n\n2.7 Década de 1840: Ada Lovelace\n\n\n\nReconocida como la primera programadora\nEscribió el primer algoritmo diseñado para ejecutarse en la Máquina Analítica\nIdentificó el potencial de las máquinas más allá del cálculo numérico\n\n\n\n\n\n\n\n\n2.8 Década de 1940: Primera Generación de Computadoras\n\nBombe\nZ3\nColossus\n\n\n\n\n2.9 1939-1940: Z3\n\n\n\nDiseñada por Konrad Zuse en 1941\nPrimera computadora electromecánica programable\n\nUtilizaba relés electromeánicos\n\nUsada para ayudar en cálculos de ingeniería\n\n\n\n\n\n\n\n\n2.10 1939-1940: Máquina Bombe\n\n\n\nDiseñada por Alan Turing y Gordon Welchman\nCompuradora electromecánica\nUsada para descifrar códigos de la máquina Enigma alemana\n\nNo programable\nProbaba todas las posibles configuraciones de la máquina Enigma\n\n\n\n\n\n\n\n\n\n2.11 Década de 1943-1944: Colossus\n\n\n\nDiseñada por Tommy Flowers y el equipo de Bletchley Park\nPrimera computadora digital electrónica\n\nUtilizaba tubos de vacío (muchísimo más rápidos que los relés)\n\nUsada para descifrar códigos de la máquina Lorenz alemana\n\nLigeramente programable, pero no de propósito general\n\n\n\n\n\n\n\n\n\n2.12 1945: ENIAC\n\n\n\nPrimera computadora electrónica de propósito general\nCapaz de realizar 5,000 operaciones por segundo\nUsaba tubos de vacío, ocupaba una sala entera\n\n\n\n\n\n\n\n\n2.13 Década de 1950: EDVAC\n\n\n\nIntroducción del concepto de programa almacenado\nEvolución significativa respecto al ENIAC, más eficiente y versátil\nDatos y programas residían en la misma memoria"
   },
   {
     "objectID": "src/01_teoria/01_conceptos_basicos/101_introducción.html#hardware",
     "href": "src/01_teoria/01_conceptos_basicos/101_introducción.html#hardware",
     "title": "Teoría 101",
-    "section": "Hardware",
-    "text": "Hardware"
+    "section": "3 Hardware",
+    "text": "3 Hardware\n\n\n3.1 Sistema Binario\n\nUnidades de información\n\nBit: Dígito binario (0 o 1)\nByte: Conjunto de 8 bits\n\nBase 2\n\n\n\n2562 = 2*10^3   1101 = 1*2^3 = 1*8 = 8\n     + 5*10^2        + 1*2^2 = 1*4 = 4\n     + 6*10^1        + 0*2^1 = 0*2 = 0\n     + 2*10^0        + 1*2^0 = 1*0 = 1\n\n\n\n\n\n3.2 Representaciones en Sistema Binario\n\nRepresentación de datos\n\nNúmeros: Representación binaria de números enteros y reales\nTexto: Codificación de caracteres mediante tablas de caracteres\nImágenes: Representación de píxeles mediante valores numéricos\nVídeo: Secuencia de imágenes\nSonido: Representación de ondas sonoras mediante valores numéricos\n\n\n\n           3 = 1*2^1 + 1*2^0        =      11\n          33 = 1*2^5 + 1*2^0        =  100001\n      E (69) = 1*2^6 + 1*2^2+ 1*2^0 = 1000101\nmorado (RGB) = (2/3 rojo, 3/3 azul)\n             = (2,0,3) = (10,00,11) =  100011\n\n\n\n\n3.3 Modelo de Von Neumann\n\n\n\nModelo Von Neumann\n\n\n\n\n\n3.4 Partes de un Computador\n\n\n\nProcesador (CPU)\n\nUnidad de control (CU)\nUnidad aritmético-lógica (ALU)\n\nMemoria\n\nGran velocidad de acceso\nRAM o ROM: Volátil o permanente\n\nAlmacenamiento\n\nDisco duro, SSD, etc.\nAlmacenamiento permanente\n\n\n\n\nDispositivos de Entrada/Salida\n\nPeriféricos para interactuar con la computadora\nTransferecia a través de buses de datos\n\nPCI, USB, etc.\n\n\n\n\n\n\n\n\n3.5 Partes de un Computador\n\n\n\nPartes de un Computador\n\n\n\n\n\nDestacar los paralelismos entre la máquina analítica de Babbage y los computadores actuales. Diferencias: - The Store: Memoria RAM o Disco - The Mill: CPU - The Steam engine: Fuente de alimentación - The Printer: Salida (dispositivos de salida) - Opetacion Cards, Variable Cards and Number Cards: Software\n\n\n\n\n3.6 Jerarquía de Memoria\n\n\n\nExisten dos reglas fundamentales:\n\nA mayor capacidad, menor velocidad\nA mayor velocidad, mayor coste\n\nPor ello, se utilizan distintos tipos de memoria\n\nRegistros: Memoria interna del procesador\nMemoria caché: Memoria de alta velocidad\nMemoria principal: Memoria RAM\nMemoria secundaria: Almacenamiento permanente"
   },
   {
     "objectID": "src/01_teoria/01_conceptos_basicos/101_introducción.html#software",
     "href": "src/01_teoria/01_conceptos_basicos/101_introducción.html#software",
     "title": "Teoría 101",
+    "section": "4 Software",
+    "text": "4 Software\n\n\n4.1 Software\n\nLa propiedad más valiosa de un computador es su capacidad para ejecutar distintos programas: programable\nSoftware: Conjunto de programas y datos que controlan el funcionamiento de un computador\n\nUn programa permite automatizar una tarea\n\nEl software permite abstraer el hardware\n\nUn programa puede leer un fichero esté en un disco duro o en un USB\n\n\n\n\n\n4.2 Clasificación del software\n\nSoftware de sistema: Controla el hardware y proporciona servicios a los programas de aplicación\n\nSistemas operativos: Windows, Linux, macOS\nControladores de dispositivos: Drivers\n\nSoftware de aplicación: Realiza tareas específicas para el usuario\n\nOfimática: Microsoft Office, LibreOffice\nMultimedia: VLC, Photoshop\nNavegadores web: Chrome, Firefox\n\n\n\n\n\n4.3 La abstracción en la informática\n\nAbstracción: Proceso de ocultar detalles de implementación y mostrar solo las características esenciales de un objeto\nBajo nivel: Representación cercana al hardware\n\nOperaciones directas sobre la memoria\nDependientes del hardware\n\nAlto nivel: Representación al problema\n\nAbstracciones como variables, objetos, funciones, etc.\nPortables entre distintos hardwares"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/101_introducción.reveal.html#que-es-la-informática",
+    "href": "src/01_teoria/01_conceptos_basicos/101_introducción.reveal.html#que-es-la-informática",
+    "title": "Teoría 101",
+    "section": "¿Que es la informática?",
+    "text": "¿Que es la informática?\n\nProcesamiento de información automática\nInformación: Conjunto de datos numéricos, alfabéticos o alfanuméricos necesarios para plantear y resolver un problema\nTratamiento de la información:\n\nEntrada: Introducción de los datos del problema\nProcesamiento: Transformación de datos\nSalida: Presentación de resultados"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/101_introducción.reveal.html#historia-de-la-informática",
+    "href": "src/01_teoria/01_conceptos_basicos/101_introducción.reveal.html#historia-de-la-informática",
+    "title": "Teoría 101",
+    "section": "Historia de la Informática",
+    "text": "Historia de la Informática"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/101_introducción.reveal.html#hardware",
+    "href": "src/01_teoria/01_conceptos_basicos/101_introducción.reveal.html#hardware",
+    "title": "Teoría 101",
+    "section": "Hardware",
+    "text": "Hardware"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/101_introducción.reveal.html#software",
+    "href": "src/01_teoria/01_conceptos_basicos/101_introducción.reveal.html#software",
+    "title": "Teoría 101",
     "section": "Software",
     "text": "Software"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.html",
+    "href": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.html",
+    "title": "Teoría 103",
+    "section": "",
+    "text": "Programa Python: conjunto de instrucciones\n\nInstrucción: elemento mínimo de un programa, que cambia su estado\n\nLas instrucciones se separan entre sí utilizando saltos de línea\n\nSi una instrucción es muy larga, se puede dividir en varias líneas\n\n\n\nEl programa más simple en Python\n\n\n\nEfectivamente, este programa no hace nada (pero es un programa válido)"
   },
   {
     "objectID": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.html#fundamentos-de-python",
     "href": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.html#fundamentos-de-python",
     "title": "Teoría 103",
-    "section": "Fundamentos de Python",
-    "text": "Fundamentos de Python"
+    "section": "",
+    "text": "Programa Python: conjunto de instrucciones\n\nInstrucción: elemento mínimo de un programa, que cambia su estado\n\nLas instrucciones se separan entre sí utilizando saltos de línea\n\nSi una instrucción es muy larga, se puede dividir en varias líneas\n\n\n\nEl programa más simple en Python\n\n\n\nEfectivamente, este programa no hace nada (pero es un programa válido)"
   },
   {
     "objectID": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.html#variables",
     "href": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.html#variables",
     "title": "Teoría 103",
-    "section": "Variables",
-    "text": "Variables"
+    "section": "2 Variables",
+    "text": "2 Variables\n\n\n2.1 ¿Qué es una variable?\n\nUna variable es una abstracción de un dato que cambia durante la ejecución del programa\nUna variable se compone de:\n\nNombre (o identificador representativo)\nTipo de dato (o conjunto de valores que puede tomar)\nValor (o contenido actual)\n\n\nedad = 20      # Variable de tipo entero\naltura = 1.75  # Variable de tipo real\n\n\n\n2.2 Declaración (o definición) de variable\n\nA diferencia de otros lenguajes, python no requiere de una definición antes del primer uso de la variable.\n\nUsar una variable: utilizar su nombre o identificador en el código fuente\n\nUna variable será declarada en el momento en el que la usemos por primera vez\n\na = 5  # Declaración de variable\na = 7  \n\n\n\n2.3 Identificadores válidos\n\nEl identificador (nombre) de una variable debe cumplir con ciertas reglas:\n\nCombinación de letras (alfabeto inglés), números y el carácter _\n\nProhibido: espacio, !, @, #, etc.\n\nEl primer carácter no puede ser un número\nNo puede ser palabra reservada de Python:\n\nif, for, while, def, import, True, False, etc.\n\nPython distingue mayúsculas de minúsculas\n\nedad y Edad son identificadores distintas\n\n\n\n\n\n2.3.1 Recomendaciones para identificadores\n\nElige identificadores descriptivos y autoexplicativos\nUtiliza el caracter _ para separar palabras (snake_case)\nMantén un estilo uniforme en todo el programa\n\nNombrar es un arte\n\n\n\n2.3.2 Ejemplos de identificadores\n\n\nVálidos\n\nmensaje\nh12_5\n_56op\nmañana (no recomendado)\n\n\nInválidos\n\nint (palabra reservada)\nv.a (punto no permitido)\neje-x (guion no permitido)\n6hola (número al inicio)\n\n\n\n\n\n\n\n2.4 Tipos de datos\n\nPython es un lenguaje de programación muy flexible\nLas variables no están atadas a un mismo tipo de dato durante toda su existencia\n\nUna misma variable puede ser primero un número y luego una letra\n\nQue se pueda NO QUIERE DECIR QUE SE DEBA\n\nEs recomendable mantener el tipo de dato consistente en una variable\nEs tarea nuestra ser disciplinados y usar bien las variables\n\n\nSi creo una variable para guardar un número, no la usaré para otra cosa que no sea guardar números"
   },
   {
     "objectID": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.html#asignación",
     "href": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.html#asignación",
     "title": "Teoría 103",
-    "section": "Asignación",
-    "text": "Asignación"
+    "section": "3 Asignación",
+    "text": "3 Asignación\n\n\n3.1 Asignación de valores a variables\n\nLa asignación es una instrucción que cambia el valor de una variable\nEn Python, la asignación se realiza con el operador =y tiene la forma identificador = expresión\n\nIdentificador: nombre de la variable que va a recibir el valor\nExpresión: valor que se va a asignar a la variable\n\n\n# Asignamos a la variable identificada como a\n# el valor de la expresión 9\na = 9\n## Ahora a vale 9\n\n\n\n3.2 Expresiones\n\nUna expresión es una construcción que produce un valor cuando se la evalúa\nPuede ser un valor literal, una variable, una operación, etc.\n\nVeremos más detalles de esto en los próximos temas\n\n\n# Expresión literal (se evalúa como 5) \na = 5 \n\n# Expresión variable (se evalúa como el valor de a,\n# que en este momento es 5)\nb = a  \n\n# Expresión operación (se evalúa como 4)\nc = 2 + 2  \n\n# Expresión operación con variables \nd = a + b\n\n\n\n3.3 Expresiones en las asignaciones\n\nEn una asignación, la componente a la derecha del signo = es una expresión\nEl orden en el que se ejecuta es:\n\nSe evalúa el valor de la expresión\nSi la variable no existe, se crea\nSe copia ese valor en la variable\n\n\n\n\n\n3.4 Expresiones vs Instrucciones\n\nInstrucción: es una acción que realiza el programa\n\nCambia el estado del programa\n\nExpresión: es una evaluación que produce un valor\n\na = 2 + 2\n\nEl código anterior contiene:\n\n\\(1\\) instrucción de asignación\n\\(1\\) expresión de suma\n\\(2\\) expresiones literales"
   },
   {
     "objectID": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.html#modelo-de-ejecución-imperativa",
     "href": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.html#modelo-de-ejecución-imperativa",
     "title": "Teoría 103",
-    "section": "Modelo de ejecución imperativa",
-    "text": "Modelo de ejecución imperativa"
+    "section": "4 Modelo de ejecución imperativa",
+    "text": "4 Modelo de ejecución imperativa\n\n\n4.1 Composición secuencial de un programa\n\nEl paradigma imperativo dicta que un programa es un estado y un conjunto de instrucciones que lo modifican.\nEl orden en que las instrucciones de un programa serán ejecutadas es:\n\nSecuencial: una instrucción después de la otra\nDescendente: de arriba hacia abajo\n\n\na = 1\nb = 2\n\nLa instrucción a = 1 se ejecuta antes que b = 2\n\n\n\n4.1.1 ¿Que valores tienen a y b al final de este código?\na = 1\nb = a\na = 2"
   },
   {
     "objectID": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.html#entradasalida",
     "href": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.html#entradasalida",
     "title": "Teoría 103",
-    "section": "Entrada/Salida",
-    "text": "Entrada/Salida"
+    "section": "5 Entrada/Salida",
+    "text": "5 Entrada/Salida\n\n\n5.1 Entrada salida por consola\n\nLos programas que desarrollaremos en este curso interactuarán con el usuario a través de la consola.\nNuestros programas podrás:\n\nMostrar datos y mensajes al usuario\nLeer datos que el usuario introduzca\n\nCuando nos refiramos a las operaciones de entrada/salida hablaremos desde la perspectiva del programa:\n\nSalida: mostrar (escribir) datos al usuario\nEntrada: recibir (leer) datos del usuario\n\n\n\n\n\n5.2 Escribir en consola\n\nPara que nuestro programa python pueda escribir en la consola:\n\nDedicaremos una instrucción a invocar a la función print\nLa función print muestra el valor de una expresión en la consola\n\nSu sintaxis es print(expresión)\n\nExpresión: valor que se desea mostrar en la consola\nAsegúrate de que escribes correctamente los paréntesis\n\n\n# Imprimirá el número 2 en la consola\nprint(2)\n\n\n\n5.3 Leer de la consola\n\nPara que nuestro programa python pueda leer de la consola:\n\nInvocaremos a la función input como parte de una expresión\nLa función input devuelve el valor introducido por el usuario\n\nSu sintaxis es input()\n\n# Leerá un valor introducido por el usuario y lo almacenará en a\na = input()\n\n\n\n5.4 Leer valores numéricos\n\nLa función input siempre devuelve un valor de tipo texto\nPara convertir ese texto en un valor numérico con el que podamos operar, utilizaremos las funciones int y float\n\nint: convierte un texto en un número entero\nfloat: convierte un texto en un número real\n\nEn los próximas temas profundizaremos en el por qué de esto\n\na = int(input())\nb = a + 1"
   },
   {
     "objectID": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.html#ejercicios",
     "href": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.html#ejercicios",
     "title": "Teoría 103",
+    "section": "6 Ejercicios",
+    "text": "6 Ejercicios\n\n\n¿Qué hace el siguiente código?\n\nprint(\"¿Qué tal?\")\nprint(\"Hola\")\n\n\n¿Qué hace el siguiente código?\n\nprint(\"Introduce tu nota de prácticas: \")\npracticas = int(input())\nprint(\"Introduce tu nota de examen: \")\nexamen = int(input())\nmedia = 0.7 * examen + 0.3 * practicas\nprint(\"Tu nota media es: \")\nprint(media)"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.reveal.html#fundamentos-de-python",
+    "href": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.reveal.html#fundamentos-de-python",
+    "title": "Teoría 103",
+    "section": "Fundamentos de Python",
+    "text": "Fundamentos de Python"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.reveal.html#variables",
+    "href": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.reveal.html#variables",
+    "title": "Teoría 103",
+    "section": "Variables",
+    "text": "Variables"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.reveal.html#asignación",
+    "href": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.reveal.html#asignación",
+    "title": "Teoría 103",
+    "section": "Asignación",
+    "text": "Asignación"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.reveal.html#modelo-de-ejecución-imperativa",
+    "href": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.reveal.html#modelo-de-ejecución-imperativa",
+    "title": "Teoría 103",
+    "section": "Modelo de ejecución imperativa",
+    "text": "Modelo de ejecución imperativa"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.reveal.html#entradasalida",
+    "href": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.reveal.html#entradasalida",
+    "title": "Teoría 103",
+    "section": "Entrada/Salida",
+    "text": "Entrada/Salida"
+  },
+  {
+    "objectID": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.reveal.html#ejercicios",
+    "href": "src/01_teoria/01_conceptos_basicos/103_fundamentos_python.reveal.html#ejercicios",
+    "title": "Teoría 103",
     "section": "Ejercicios",
     "text": "Ejercicios"
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/202_texto_y_booleanos.html",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/202_texto_y_booleanos.html",
+    "title": "Teoría 202",
+    "section": "",
+    "text": "Palabra reservada: str\nLiterales: \"hola\", 'hola', \"\", '', f\"hola {nombre}\"\nDominio: desde 0 caracteres hasta lo que quepa en memoria\nOperadores:\n\nCadenas: +\nComparación: &gt;, &gt;=, &lt;, &lt;=, ==, !=\n\n\n\n\n\n\n\nPareja de comillas simples, dobles, otras representaciones especiales\n\nDaremos preferencia a las comillas dobles\n\nContiene una cadena de cero o más caracteres en su interior\nA veces querremos representar caracteres especiales: las propias comillas, saltos de línea, tabuladores, etc.\n\nPodemos utilizar secuencias de escape para representar estos caracteres\n\nEl caracter \\ indica que el siguiente caracter es especial\n\nPara el caso de las comillas, podemos utilizar el otro tipo de comillas\n\nLas cadenas no pueden contener saltos de línea, necesitamos utilizar \\n para ello\n\ntexto0 = \"\"                                # cadena vacía\ntexto1 = \"Hola, mundo!\"                    # cadena de texto normal\ntexto2 = 'Y Arquímedes dijo: \"Eureka!\"'    # comillas simples para envolver comillas dobles\ntexto3 = \"Y Arquímedes dijo: \\\"Eureka!\\\"\"  # caracter de escape para comillas dobles\ntexto4 = \"Frase en\\ndos líneas\"            # salto de línea\n\n\n\n\n\nUna cadena de texto es una secuencia de caracteres\nDicha secuencia puede ser de cualquier longitud\n\nDesde cero caracteres (cadena vacía)\nHasta lo que quepa en memoria\n\nPython soporta cualquier caracter soportado en UCS-4\n\nCaracteres ASCII: a, A, 1, !, ?, espacio en blanco\nCaracteres especiales: \\n (salto de línea), \\t (tabulador)\nCaracteres Latin-1: á, é, í, ó, ú, ñ, ü\nCaracteres Kanji: 漢, 字, 漢字\nCaracteres Unicode: 💪, 🙈, 💩, 💦\n\n\ntexto = \"Hola, mundo! 😉\"\n\n\n\n\n\nPython utiliza UTF-8 para representar las cadenas de texto\n\nUTF-8 es un formato de codificación de caracteres que permite representar cualquier caracter Unicode\nCada caracter se representa con un número variable de bytes\nLos caracteres ASCII se representan con un byte\nLos caracteres no ASCII se representan con más de un byte\n\nLa tabla ASCII es un acuerdo de representación de caracteres en inglés\n\nCada caracter se representa con un número de 7 bits\nEjemplos: A (65), Z (90), a (97), 0 (48), ! (33)\n\nLa codificación de los caracteres no-ASCII sigue un principio similar\n\nLos detalles quedan fuera del alcance de este curso\n\n\n\n\n\n\n\n\nhttps://es.wikipedia.org/wiki/ASCII\n\n\n\n\n\n\n\n\nOperadores de cadenas de texto:\n\nConcatenación: +\n\nOperadores de comparación:\n\n==, !=, &gt;, &gt;=, &lt;, &lt;=\n\n\nEjemplos:\ntexto1 = \"Hola\"\ntexto2 = \"mundo\"\ntexto3 = texto1 + \", \" + texto2 + \"!\"\n\ncond1  = \"Hola\" == \"hola\"  # Falso\ncond2  = \"aa\" &lt; \"ab\"       # Verdadero\n\n\n\n\n\n\n\nFunción\nDescripción\n\n\n\n\nstr()\nConversión a cadena\n\n\nord()\nValor ASCII de un carácter\n\n\nchr()\nCarácter ASCII de un valor (str)\n\n\nlen()\nLongitud de la cadena\n\n\n\nEjemplos:\ntexto = str(42)       # str: \"42\"\n\nvalor = ord(\"A\")      # int: 65\nletra = chr(65)       # str: \"A\"\nigual = chr(ord(\"A\")) # str: \"A\"\n\nlongitud = len(texto) # int: 2\n\n\n\n\n\nPython ofrece varios tipos de strings especiales\n\nTriple comilla\nRaw strings\nF-strings\n\n\n\n\n\n\nAcepta comillas simples o dobles: \"\"\"texto\"\"\", '''texto'''\n\nPermite escribir cadenas de texto multilínea\nÚtil para:\n\nDocumentar funciones, clases, módulos, etc.\nOutputs de texto extensos\n\n\n\ntexto = \"\"\"Este es un texto que ocupa varias líneas\ny se escribe con triple comilla\"\"\"\nprint(\"\"\"⠀\n    ⠀⠀⠀⡄⡀⠀⠀⠀⠀⠀⠀⠀\n    ⠀⠀⣼⣿⠇⠀⠀⠈⢿⣿⣦⠀\n    ⠀⢰⣿⣿⠀⠀⠀⠀⠀⢿⣿⡇\n    ⠀⠸⣿⣿⣷⣶⣿⣿⣿⣿⣿⡇\n    ⠀⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⡆\n    ⠀⠀⡾⢿⣿⣿⠛⢿⣿⣿⣿⣿\n    ⠀⠀⢷⡈⣿⣿⣆⢘⣿⣿⣿⡟\n    ⠀⠀⠘⢿⣿⣿⣿⣿⣿⣿⡟⠁\n    ⠀⣀⡄⣰⣿⣿⣿⣿⣿⣿⣿⠀\n    ⠈⠛⢸⣿⣿⣿⣿⣿⣿⣿⣿⡇\n    ⠀⠀⠈⠿⣿⣿⣿⣿⣿⣿⣿⡇\n    ⠀⠀⠀⠀⢻⣿⣿⣿⣿⣿⣿⠇\n    ⠀⠀⠀⠀⠸⣿⠁⠙⠃⢿⠟⠀\n\"\"\")\n# Credits: https://emojicombos.com/hollow-knight\n\n\n\n\n\nUna r inmediatamente antes de las comillas: r\"texto\"\n\nIgnora los caracteres de escape\nÚtil para expresiones regulares, rutas de archivos, etc.\n\n\nfichero1 =  \"C:\\\\Users\\\\usuario\\\\archivo.txt\"  # Tenemos que escapar cada barra\nfichero2 = r\"C:\\Users\\usuario\\archivo.txt\"     # La r indica que el contenide se toma literalmente\n\n\n\n\n\nUna f inmediatamente antes de las comillas: f\"texto {variable}\"\n\nPermite incluir variables dentro de una cadena de texto\nÚtil para formatear cadenas de texto\n\n\nnombre = \"Juan\"\nedad = 21\n\nsaludo1 = \"Hola, me llamo \" + nombre + \" y tengo \" + edad + \" años\"  # Concatenando\nsaludo2 = f\"Hola, me llamo {nombre} y tengo {edad} años\"             # F-string"
   },
   {
     "objectID": "src/01_teoria/02_tipos_de_datos_basicos/202_texto_y_booleanos.html#cadenas-de-texto",
     "href": "src/01_teoria/02_tipos_de_datos_basicos/202_texto_y_booleanos.html#cadenas-de-texto",
     "title": "Teoría 202",
-    "section": "Cadenas de texto",
-    "text": "Cadenas de texto"
+    "section": "",
+    "text": "Palabra reservada: str\nLiterales: \"hola\", 'hola', \"\", '', f\"hola {nombre}\"\nDominio: desde 0 caracteres hasta lo que quepa en memoria\nOperadores:\n\nCadenas: +\nComparación: &gt;, &gt;=, &lt;, &lt;=, ==, !=\n\n\n\n\n\n\n\nPareja de comillas simples, dobles, otras representaciones especiales\n\nDaremos preferencia a las comillas dobles\n\nContiene una cadena de cero o más caracteres en su interior\nA veces querremos representar caracteres especiales: las propias comillas, saltos de línea, tabuladores, etc.\n\nPodemos utilizar secuencias de escape para representar estos caracteres\n\nEl caracter \\ indica que el siguiente caracter es especial\n\nPara el caso de las comillas, podemos utilizar el otro tipo de comillas\n\nLas cadenas no pueden contener saltos de línea, necesitamos utilizar \\n para ello\n\ntexto0 = \"\"                                # cadena vacía\ntexto1 = \"Hola, mundo!\"                    # cadena de texto normal\ntexto2 = 'Y Arquímedes dijo: \"Eureka!\"'    # comillas simples para envolver comillas dobles\ntexto3 = \"Y Arquímedes dijo: \\\"Eureka!\\\"\"  # caracter de escape para comillas dobles\ntexto4 = \"Frase en\\ndos líneas\"            # salto de línea\n\n\n\n\n\nUna cadena de texto es una secuencia de caracteres\nDicha secuencia puede ser de cualquier longitud\n\nDesde cero caracteres (cadena vacía)\nHasta lo que quepa en memoria\n\nPython soporta cualquier caracter soportado en UCS-4\n\nCaracteres ASCII: a, A, 1, !, ?, espacio en blanco\nCaracteres especiales: \\n (salto de línea), \\t (tabulador)\nCaracteres Latin-1: á, é, í, ó, ú, ñ, ü\nCaracteres Kanji: 漢, 字, 漢字\nCaracteres Unicode: 💪, 🙈, 💩, 💦\n\n\ntexto = \"Hola, mundo! 😉\"\n\n\n\n\n\nPython utiliza UTF-8 para representar las cadenas de texto\n\nUTF-8 es un formato de codificación de caracteres que permite representar cualquier caracter Unicode\nCada caracter se representa con un número variable de bytes\nLos caracteres ASCII se representan con un byte\nLos caracteres no ASCII se representan con más de un byte\n\nLa tabla ASCII es un acuerdo de representación de caracteres en inglés\n\nCada caracter se representa con un número de 7 bits\nEjemplos: A (65), Z (90), a (97), 0 (48), ! (33)\n\nLa codificación de los caracteres no-ASCII sigue un principio similar\n\nLos detalles quedan fuera del alcance de este curso\n\n\n\n\n\n\n\n\nhttps://es.wikipedia.org/wiki/ASCII\n\n\n\n\n\n\n\n\nOperadores de cadenas de texto:\n\nConcatenación: +\n\nOperadores de comparación:\n\n==, !=, &gt;, &gt;=, &lt;, &lt;=\n\n\nEjemplos:\ntexto1 = \"Hola\"\ntexto2 = \"mundo\"\ntexto3 = texto1 + \", \" + texto2 + \"!\"\n\ncond1  = \"Hola\" == \"hola\"  # Falso\ncond2  = \"aa\" &lt; \"ab\"       # Verdadero\n\n\n\n\n\n\n\nFunción\nDescripción\n\n\n\n\nstr()\nConversión a cadena\n\n\nord()\nValor ASCII de un carácter\n\n\nchr()\nCarácter ASCII de un valor (str)\n\n\nlen()\nLongitud de la cadena\n\n\n\nEjemplos:\ntexto = str(42)       # str: \"42\"\n\nvalor = ord(\"A\")      # int: 65\nletra = chr(65)       # str: \"A\"\nigual = chr(ord(\"A\")) # str: \"A\"\n\nlongitud = len(texto) # int: 2\n\n\n\n\n\nPython ofrece varios tipos de strings especiales\n\nTriple comilla\nRaw strings\nF-strings\n\n\n\n\n\n\nAcepta comillas simples o dobles: \"\"\"texto\"\"\", '''texto'''\n\nPermite escribir cadenas de texto multilínea\nÚtil para:\n\nDocumentar funciones, clases, módulos, etc.\nOutputs de texto extensos\n\n\n\ntexto = \"\"\"Este es un texto que ocupa varias líneas\ny se escribe con triple comilla\"\"\"\nprint(\"\"\"⠀\n    ⠀⠀⠀⡄⡀⠀⠀⠀⠀⠀⠀⠀\n    ⠀⠀⣼⣿⠇⠀⠀⠈⢿⣿⣦⠀\n    ⠀⢰⣿⣿⠀⠀⠀⠀⠀⢿⣿⡇\n    ⠀⠸⣿⣿⣷⣶⣿⣿⣿⣿⣿⡇\n    ⠀⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⡆\n    ⠀⠀⡾⢿⣿⣿⠛⢿⣿⣿⣿⣿\n    ⠀⠀⢷⡈⣿⣿⣆⢘⣿⣿⣿⡟\n    ⠀⠀⠘⢿⣿⣿⣿⣿⣿⣿⡟⠁\n    ⠀⣀⡄⣰⣿⣿⣿⣿⣿⣿⣿⠀\n    ⠈⠛⢸⣿⣿⣿⣿⣿⣿⣿⣿⡇\n    ⠀⠀⠈⠿⣿⣿⣿⣿⣿⣿⣿⡇\n    ⠀⠀⠀⠀⢻⣿⣿⣿⣿⣿⣿⠇\n    ⠀⠀⠀⠀⠸⣿⠁⠙⠃⢿⠟⠀\n\"\"\")\n# Credits: https://emojicombos.com/hollow-knight\n\n\n\n\n\nUna r inmediatamente antes de las comillas: r\"texto\"\n\nIgnora los caracteres de escape\nÚtil para expresiones regulares, rutas de archivos, etc.\n\n\nfichero1 =  \"C:\\\\Users\\\\usuario\\\\archivo.txt\"  # Tenemos que escapar cada barra\nfichero2 = r\"C:\\Users\\usuario\\archivo.txt\"     # La r indica que el contenide se toma literalmente\n\n\n\n\n\nUna f inmediatamente antes de las comillas: f\"texto {variable}\"\n\nPermite incluir variables dentro de una cadena de texto\nÚtil para formatear cadenas de texto\n\n\nnombre = \"Juan\"\nedad = 21\n\nsaludo1 = \"Hola, me llamo \" + nombre + \" y tengo \" + edad + \" años\"  # Concatenando\nsaludo2 = f\"Hola, me llamo {nombre} y tengo {edad} años\"             # F-string"
   },
   {
     "objectID": "src/01_teoria/02_tipos_de_datos_basicos/202_texto_y_booleanos.html#booleanos",
     "href": "src/01_teoria/02_tipos_de_datos_basicos/202_texto_y_booleanos.html#booleanos",
     "title": "Teoría 202",
+    "section": "2 Booleanos",
+    "text": "2 Booleanos\n\n\n2.1 Booleanos en Python\n\nPalabra reservada: bool\nLiterales: True, False\nDominio: True, False\nOperadores:\n\nLógicos: and, or, not\n\n\n\n\n\n2.2 Booleanos: Representación literal\n\nLos booleanos son un tipo de dato binario\n\nSolo pueden tomar dos valores: True o False\n\nLa primera letra mayúscula es obligatoria\n\ncond1 = True\ncond2 = False\n\n\n\n2.3 Booleanos: Dominio\n\nLos booleanos representan valores de verdad\n\nTrue representa verdadero\nFalse representa falso\n\nLos booleanos son el resultado de aserciones lógicas\n\n\n\n\n2.4 Booleanos: Operadores\n\nOperadores booleanos:\n\nConjunción: and\nDisyunción: or\nNegación: not\n\n\n\n\n2.4.1 Tabla de verdad de los operadores lógicos\n\n\nAND\n\n\n\na\nb\na and b\n\n\n\n\n✅\n✅\n✅\n\n\n✅\n❌\n❌\n\n\n❌\n✅\n❌\n\n\n❌\n❌\n❌\n\n\n\n\nOR\n\n\n\na\nb\na or b\n\n\n\n\n✅\n✅\n✅\n\n\n✅\n❌\n✅\n\n\n❌\n✅\n✅\n\n\n❌\n❌\n❌\n\n\n\n\nNOT\n\n\n\na\nnot a\n\n\n\n\n✅\n❌\n\n\n❌\n✅\n\n\n\n\n\n\n\n\n2.4.2 Ejemplos de operaciones lógicas\nha_llovido = True\nhe_fregado_el_suelo = False\n\nel_suelo_esta_mojado = ha_llovido or he_fregado_el_suelo\naprobado_practicas = True\naprobado_teoricas = True\naprobado_problemas = False\n\naprobado = aprobado_practicas and aprobado_teoricas  # Los problemas no cuentan\ntengo_leche = False\ntengo_agua = True\ntengo_pure_en_polvo = True\n\npuedo_hacer_pure = (tengo_leche or tengo_agua) and tengo_pure_en_polvo\nestoy_en_casa = False\nllega_un_paquete = True\n\nentrega_fallida = not estoy_en_casa and llega_un_paquete  # \n# El not tiene prioridad:  (not estoy_en_casa) and llega_un_paquete\n\n\n\n\n2.5 Booleanos: Funciones\n\nAunque en Python existe la función bool():\n\nNO ES ACONSEJABLE UTILIZARLA (No funciona como esperaríais)\nEvalua la veracidad de una variable depende del tipo de dato\n\nUn entero es falso si es 0\nUna cadena de texto es falsa si está vacía\n\n\nEn su lugar, para obtener valores booleanos utilizaremos siempreoperadores de comparación:\n\n==, !=, &gt;, &gt;=, &lt;, &lt;=\n\n\nEjemplos:\n# CUIDADO\nverdadero = bool(\"True\")  # True\nfalso = bool(\"False\")     # True\n\n# CORRECTO\nvalor = \"No\"               # El usuario introduce \"Si\" o \"No\"\nverdadero = valor == \"Si\"  # False\n\n\n2.5.1 Ejemplos: El Bar Zoomer\n\nEl Bar Zoomer sólo abre los fines de semana.\nEl Bar Zoomer no admite menores, ni boomers, ni millennials.\n\nedad = 21\n\nes_mayor_de_edad = edad &gt;= 18                                                     # True\nes_zoomer = es_mayor_de_edad and edad &lt; 25                                        # True\n# es_zoomer = 18 &lt;= edad &lt; 25   # Python soporta comparaciones encadenadas\n\ndia_de_la_semana = \"Lunes\"\nes_fin_de_semana = dia_de_la_semana == \"Sábado\" or dia_de_la_semana == \"Domingo\"  # False\n\npuede_entrar = es_zoomer and es_fin_de_semana                                     # False\n\n\n\n2.5.2 Ejemplos: Derecho a beca\n\nExisten dos tipos de becas: las becas sociales y las becas de excelencia.\n\nLas becas sociales se otorgan a los nuevos estudiantes cuyos ingresos familiares no superen los 30.000€.\nLas becas de excelencia se otorgan a los estudiantes con una nota media igual o superior a 9.5.\n\n\ningresos_anuales = 500_000\nnum_matriculas = 1\nnota_media = 9.8\n\nprimera_matricula = num_matriculas == 1                        # True\ningresos_superiores = ingresos_anuales &gt; 30_000                # True\n\nbeca_social = primera_matricula and not ingresos_superiores    # False\nbeca_excelencia = nota_media &gt;= 9.5                            # True\n\nbeca = beca_social or beca_excelencia                          # True\nPropuesta: Adapta el ejemplo de las becas para que sea interactivo (print() y input()) y comprueba su funcionamiento para distintos valores de entrada."
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/202_texto_y_booleanos.reveal.html#cadenas-de-texto",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/202_texto_y_booleanos.reveal.html#cadenas-de-texto",
+    "title": "Teoría 202",
+    "section": "Cadenas de texto",
+    "text": "Cadenas de texto"
+  },
+  {
+    "objectID": "src/01_teoria/02_tipos_de_datos_basicos/202_texto_y_booleanos.reveal.html#booleanos",
+    "href": "src/01_teoria/02_tipos_de_datos_basicos/202_texto_y_booleanos.reveal.html#booleanos",
+    "title": "Teoría 202",
     "section": "Booleanos",
     "text": "Booleanos"
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/302_composicion_iterativa_while.html",
+    "href": "src/01_teoria/03_composicion/302_composicion_iterativa_while.html",
+    "title": "Teoría 302",
+    "section": "",
+    "text": "En la sesión anterior vimos cómo componer programas de modo que algunas instrucciones sólo se ejecuten si se cumple una condición\n\nComposición secuencial y condicional\n\n\n\n\n\n\n\n\nNo todos los programas pueden ser escritos de manera secuencial y condicional\n\n\n\n\n\n\nEscribe programa Python que imprima por pantalla la siguiente frase 100 veces:\n\nI will lock my computer when I leave my desk\n\n\n\n\n\n\n\n\n¿Es implementable con composición secuencial y condicional?\n\n\n\n\n\nSí, se puede resolver con composición secuencial\n\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\n# 90 veces más\n\nInconveniente: Repetitivo\n\n\n\n\n\nEscribe programa Python que solicite un número entero al usuario y que imprima por pantalla la siguiente frase tantas veces como el número introducido:\n\nI will lock my computer when I leave my desk\n\nprint(\"Introduce un número entero:\")\nn = int(input())\n\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\n# ...\n\nInconveniente: Cuando paro?\n\nprint(\"Introduce un número entero:\")\nn = int(input())\n\nif n &gt; 1:\n    print(\"I will lock my computer when I leave my desk\")\nif n &gt; 2:\n    print(\"I will lock my computer when I leave my desk\")\n# ...\n\nInconveniente: Y si n es muy grande?\n\n\n\n\n\nEscribe programa Python que imprima por pantalla todos los múltiplos de 3 menores que 100.\nif 1 % 3 == 0:\n    print(1)\n\nif 2 % 3 == 0:\n    print(2)\n\nif 3 % 3 == 0:\n    print(3)\n# ...\n\nMismos problemas que antes\n\n\n\n\n\n\n\nTodos estos programas tienen cumplen al menos una de estas dos condiciones:\n\nRequieren un número determinado de pasos demasiado grande\nRequieren un número indeterminado de pasos"
   },
   {
     "objectID": "src/01_teoria/03_composicion/302_composicion_iterativa_while.html#límites-de-la-composición-secuencial-y-condicional",
     "href": "src/01_teoria/03_composicion/302_composicion_iterativa_while.html#límites-de-la-composición-secuencial-y-condicional",
     "title": "Teoría 302",
-    "section": "Límites de la composición secuencial y condicional",
-    "text": "Límites de la composición secuencial y condicional"
+    "section": "",
+    "text": "En la sesión anterior vimos cómo componer programas de modo que algunas instrucciones sólo se ejecuten si se cumple una condición\n\nComposición secuencial y condicional\n\n\n\n\n\n\n\n\nNo todos los programas pueden ser escritos de manera secuencial y condicional\n\n\n\n\n\n\nEscribe programa Python que imprima por pantalla la siguiente frase 100 veces:\n\nI will lock my computer when I leave my desk\n\n\n\n\n\n\n\n\n¿Es implementable con composición secuencial y condicional?\n\n\n\n\n\nSí, se puede resolver con composición secuencial\n\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\n# 90 veces más\n\nInconveniente: Repetitivo\n\n\n\n\n\nEscribe programa Python que solicite un número entero al usuario y que imprima por pantalla la siguiente frase tantas veces como el número introducido:\n\nI will lock my computer when I leave my desk\n\nprint(\"Introduce un número entero:\")\nn = int(input())\n\nprint(\"I will lock my computer when I leave my desk\")\nprint(\"I will lock my computer when I leave my desk\")\n# ...\n\nInconveniente: Cuando paro?\n\nprint(\"Introduce un número entero:\")\nn = int(input())\n\nif n &gt; 1:\n    print(\"I will lock my computer when I leave my desk\")\nif n &gt; 2:\n    print(\"I will lock my computer when I leave my desk\")\n# ...\n\nInconveniente: Y si n es muy grande?\n\n\n\n\n\nEscribe programa Python que imprima por pantalla todos los múltiplos de 3 menores que 100.\nif 1 % 3 == 0:\n    print(1)\n\nif 2 % 3 == 0:\n    print(2)\n\nif 3 % 3 == 0:\n    print(3)\n# ...\n\nMismos problemas que antes\n\n\n\n\n\n\n\nTodos estos programas tienen cumplen al menos una de estas dos condiciones:\n\nRequieren un número determinado de pasos demasiado grande\nRequieren un número indeterminado de pasos"
   },
   {
     "objectID": "src/01_teoria/03_composicion/302_composicion_iterativa_while.html#composición-iterativa",
     "href": "src/01_teoria/03_composicion/302_composicion_iterativa_while.html#composición-iterativa",
     "title": "Teoría 302",
-    "section": "Composición Iterativa",
-    "text": "Composición Iterativa"
+    "section": "2 Composición Iterativa",
+    "text": "2 Composición Iterativa\n\n\n2.1 Composición Iterativa: concepto\n\nLa composición iterativa es una estructura de control que permite repetir un bloque de instrucciones.\nExisten varias formas de composición iterativa\n\nwhile, for\n\n\n\n\n\n2.2 Composición Iterativa: while\n\n\n\nLa estructura while permite repetir la ejecución de un bloque de instrucciones mientras se cumpla una condición.\n\nEvalúa una expresión lógica (valor booleano)\nSi el valor es True: ejecuta el bloque.\n\nAl terminal el bloque, vuelve arriba para evaluar la condición de nuevo.\n\nSi el valor es False: no ejecuta el bloque.\n\nEl bloque de instrucciones que se ejecuta iterativamente se identifica por su indentación.\n\n# bloque_de_instrucciones_principal_1\n\nwhile condicion:\n    # bloque_de_instrucciones que\n    # se ejecuta si condicion es True\n\n# bloque_de_instrucciones_principal_2\n\n\n\n\n\n\n2.2.1 Ejemplo: Repetición de un mensaje 100 veces (fallido)\n\nPara resolver el problema de la repetición de un mensaje 100 veces, utilizaremos un bucle while que repita la instrucción print() 100 veces.\n\nNecesitaremos una forma de contar las veces que se ha repetido el mensaje.\nNecesitaremos una condición que nos permita salir del bucle.\n\n\n¿Funcionará?\ncount = 0\nwhile count &lt; 100:\n    print(\"I will lock my computer when I leave my desk\")\nI will lock my computer when I leave my desk\nI will lock my computer when I leave my desk\nI will lock my computer when I leave my desk\n… hasta el infinito\n\n\n¿Qué problema tiene este programa?\n\nBucle infinito: count nunca se incrementa\n\n¿Cómo solucionarlo?\n\nIncrementar el valor de count en cada iteración\n\n\n\n\n\n\n2.3 Incremento de una variable\n\nUn concepto fundamental de los bucles es modificar el estado de la condición.\n\nSi dentro del bloque de una iteración ninguna de las variables usadas en la condición cambia, estaremos ante un bucle infinito.\n\nLa forma más común de modificación en los bucles es incrementar o decrementar una variable.\nEstas variables que comienzan con un valor específico y se incrementan o decrementan en cada iteración las llamaremos acumuladores.\n\n\n\ncount = 0\nwhile count &lt; 3:\n    print(\"Hello\")\n    count = count + 1\nprint(\"Bye\")\n\nHello\nHello\nHello\nBye\n\n\n\n\n2.3.1 Ejemplo: Repetición de un mensaje 100 veces (correcto)\n\nSabiendo esto, podemos corregir el programa anterior:\n\nIncrementar el valor de count en cada iteración\n\n\ncount = 0\nwhile count &lt; 100:\n    print(\"I will lock my computer when I leave my desk\")\n    count = count + 1\nI will lock my computer when I leave my desk\nI will lock my computer when I leave my desk\nI will lock my computer when I leave my desk\n… 97 veces más\n\n\n\n\n2.4 Incremento de una variable: asignación aumentada\n\nEn la sección anterior, vimos por primera vez el uso de una variable en su propia asignación.\n\ncount = count + 1\n\nEsta es una operación muy común en los bucles.\nEn Python, existe la asignación aumentada.\n\ncount += 1: Equivale a count = count + 1\ncount -= 1: Equivale a count = count - 1\n\nOtros atajos: *= (producto), /= (división), %= (resto), **= (potencia)\n\n\n\n2.4.1 Ejemplo: Repetición de un mensaje 100 veces (alternativa con asignación aumentada)\n\nSabiendo esto, podemos corregir el programa anterior:\n\nIncrementar el valor de count en cada iteración\n\n\ncount = 0\nwhile count &lt; 100:\n    print(\"I will lock my computer when I leave my desk\")\n    count += 1\nI will lock my computer when I leave my desk\nI will lock my computer when I leave my desk\nI will lock my computer when I leave my desk\n… 97 veces más\n\n\n\n2.4.2 Ejemplo: Contar hasta 5\n\nEn el ejemplo anterior, todas las iteraciones ejecutaban las instrucciones con exactamente los mismos valores\n\npor lo que el resultado de cada iteración era idéntico.\n\nSin embargo, entre una iteración y otra los valores de las variables no siempre serán los mismos.\n\n\n\ncount = 1\nwhile count &lt;= 5:\n    print(count)\n    count += 1\n\n1\n2\n3\n4\n5\n\n\n\n\n\n2.4.3 Ejemplo: Repetición de un mensaje N veces\nprint(\"Introduce un número entero:\")\nn = int(input())\n\ncount = 0\nwhile count &lt; n:\n    print(\"I will lock my computer when I leave my desk\")\n    count += 1\n\nHemos decidido (recomendable, será necesario más adelante):\n\niniciar la variable count = 0 y terminar el bucle cuando count &lt; n.\n\nSería equivalente:\n\niniciar la variable count = 1 y terminar el bucle cuando count &lt;= n.\n\n\n\n\n\n2.4.4 Ejemplo: Calculo de múltiplos de 3\nEste programa imprime por pantalla todos los múltiplos de 3 menores que 100.\n\n\nnum = 1\n\nwhile num &lt; 100:\n    if num % 3 == 0:\n        print(num)\n    num += 1\n\n3\n6\n9\n… hasta 99\n\n\n\n\n\n2.4.5 Ejemplo: Sumatorio\n\nLos acumuladores tienen muchos usos más allá de contar las iteraciones de un bucle\n\nPor ejemplo, podemos utilizar para calcular sumatorios\n\n\n\\[\n\\sum_{i=1}^{100} 2i^2\n\\]\nsumatorio = 0\ni = 1\nwhile i &lt;= 100:\n    sumatorio += 2 * (i ** 2)\n    i += 1\n\n\n\n\n2.5 Bucles anidados\n\nAl igual que con las estructuras condicionales, podemos anidar bucles.\n\n\n\nx = 0\nwhile x &lt; 3:\n    y = 0\n    while y &lt; 3:\n        print(f\"x={x}, y={y}\")\n        y += 1\n    x += 1\n\nx=0, y=0\nx=0, y=1\nx=0, y=2\nx=1, y=0\nx=1, y=1\nx=1, y=2\nx=2, y=0\nx=2, y=1\nx=2, y=2\n\n\n\n\n2.5.1 Ejemplo: Tabla de multiplicar\nEscribe un programa en Python que imprima por pantalla la tabla de multiplicar del 1 al 10.\nx = 1\n\nwhile x &lt;= 10:\n    y = 1\n    while y &lt;= 10:\n        print(f\"{x} x {y} = {x * y}\")\n        y += 1\n    x += 1\n\nFíjate en cómo en este caso iniciamos las como x = 1 e y = 1 y terminamos los bucles cuando x &lt;= 10 e y &lt;= 10.\n\nEsto es porque nos interesa que tengan estos valores.\nPiensa qué implicaciones tendría iniciar x = 0 y terminar el bucle cuando x &lt; 10"
   },
   {
     "objectID": "src/01_teoria/03_composicion/302_composicion_iterativa_while.html#usos-avanzados-de-while",
     "href": "src/01_teoria/03_composicion/302_composicion_iterativa_while.html#usos-avanzados-de-while",
     "title": "Teoría 302",
+    "section": "3 Usos avanzados de while",
+    "text": "3 Usos avanzados de while\n\n\n3.1 Interacción con el usuario\n\nRecuerda que la interacción con el usuario se realiza también mediante instrucciones.\nEstas instrucciones pueden estar dentro de un bloque condicional.\n\n\n\nprint(\"Introduce un número par:\")\nn = int(input())\nwhile n % 2 != 0:\n    print(\"Introduce un número par:\")\n    n = int(input())\nn = 1\nwhile n % 2 != 0:\n    print(\"Introduce un número par:\")\n    n = int(input())\npar = False\nwhile not par:\n    print(\"Introduce un número par:\")\n    n = int(input())\n    if n % 2 == 0:\n        par = True\n\nIntroduce un número par:\n3\nIntroduce un número par:\n5\nIntroduce un número par:\n4"
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/302_composicion_iterativa_while.reveal.html#límites-de-la-composición-secuencial-y-condicional",
+    "href": "src/01_teoria/03_composicion/302_composicion_iterativa_while.reveal.html#límites-de-la-composición-secuencial-y-condicional",
+    "title": "Teoría 302",
+    "section": "Límites de la composición secuencial y condicional",
+    "text": "Límites de la composición secuencial y condicional"
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/302_composicion_iterativa_while.reveal.html#composición-iterativa",
+    "href": "src/01_teoria/03_composicion/302_composicion_iterativa_while.reveal.html#composición-iterativa",
+    "title": "Teoría 302",
+    "section": "Composición Iterativa",
+    "text": "Composición Iterativa"
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/302_composicion_iterativa_while.reveal.html#usos-avanzados-de-while",
+    "href": "src/01_teoria/03_composicion/302_composicion_iterativa_while.reveal.html#usos-avanzados-de-while",
+    "title": "Teoría 302",
     "section": "Usos avanzados de while",
     "text": "Usos avanzados de while"
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/304_composicion_iterativa_for.reveal.html#chapter",
+    "href": "src/01_teoria/03_composicion/304_composicion_iterativa_for.reveal.html#chapter",
+    "title": "Teoría 303",
+    "section": "Chapter",
+    "text": "Chapter"
+  },
+  {
+    "objectID": "src/01_teoria/04_modularizacion_de_codigo/401_funciones_puras.reveal.html#chapter",
+    "href": "src/01_teoria/04_modularizacion_de_codigo/401_funciones_puras.reveal.html#chapter",
+    "title": "Teoría 401",
+    "section": "Chapter",
+    "text": "Chapter"
+  },
+  {
+    "objectID": "src/01_teoria/04_modularizacion_de_codigo/403_modulos.reveal.html#chapter",
+    "href": "src/01_teoria/04_modularizacion_de_codigo/403_modulos.reveal.html#chapter",
+    "title": "Teoría 403",
+    "section": "Chapter",
+    "text": "Chapter"
+  },
+  {
+    "objectID": "src/01_teoria/05_estructuras_de_datos/502_strings_y_tuplas.reveal.html#chapter",
+    "href": "src/01_teoria/05_estructuras_de_datos/502_strings_y_tuplas.reveal.html#chapter",
+    "title": "Teoría 502",
+    "section": "Chapter",
+    "text": "Chapter"
+  },
+  {
+    "objectID": "src/01_teoria/05_estructuras_de_datos/504_estructuras_complejas.reveal.html#chapter",
+    "href": "src/01_teoria/05_estructuras_de_datos/504_estructuras_complejas.reveal.html#chapter",
+    "title": "Teoría 504",
+    "section": "Chapter",
+    "text": "Chapter"
+  },
+  {
+    "objectID": "src/01_teoria/07_otros/701_beyond_python.reveal.html#chapter",
+    "href": "src/01_teoria/07_otros/701_beyond_python.reveal.html#chapter",
+    "title": "Teoría 701",
+    "section": "Chapter",
+    "text": "Chapter"
   },
   {
     "objectID": "src/02_problemas/201-tipos_numericos.html",

@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dece3bd051e391dd7205a6b15f93dc59.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.40">
+
+  <title>Fundamentos de Informática – Teoría 201</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #767676;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #767676;  padding-left: 4px; }
+    div.sourceCode
+      { color: #545454; background-color: #fefefe; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #545454; } /* Normal */
+    code span.al { color: #7928a1; } /* Alert */
+    code span.an { color: #696969; } /* Annotation */
+    code span.at { color: #a55a00; } /* Attribute */
+    code span.bn { color: #7928a1; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #d91e18; } /* ControlFlow */
+    code span.ch { color: #008000; } /* Char */
+    code span.cn { color: #d91e18; } /* Constant */
+    code span.co { color: #696969; } /* Comment */
+    code span.cv { color: #696969; font-style: italic; } /* CommentVar */
+    code span.do { color: #696969; font-style: italic; } /* Documentation */
+    code span.dt { color: #7928a1; } /* DataType */
+    code span.dv { color: #7928a1; } /* DecVal */
+    code span.er { color: #7928a1; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #a55a00; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #696969; } /* Information */
+    code span.kw { color: #d91e18; } /* Keyword */
+    code span.op { color: #00769e; } /* Operator */
+    code span.ot { color: #d91e18; } /* Other */
+    code span.pp { color: #7928a1; } /* Preprocessor */
+    code span.sc { color: #00769e; } /* SpecialChar */
+    code span.ss { color: #008000; } /* SpecialString */
+    code span.st { color: #008000; } /* String */
+    code span.va { color: #a55a00; } /* Variable */
+    code span.vs { color: #008000; } /* VerbatimString */
+    code span.wa { color: #696969; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-4536f2f73d83d3882af517ae0235c067.css">
+  <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-tldraw/index.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style>html{ scroll-behavior: smooth; }</style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-color="#223d71" data-background-image="../../../src/_style/logos/unizar-black.svg" data-background-opacity="0.30" data-background-size="auto 600px" class="quarto-title-block center">
+  <h1 class="title">Teoría 201</h1>
+  <p class="subtitle">Tipos Numerales</p>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="tipos-de-datos-en-python" class="slide level2 center">
+<h2>Tipos de datos en Python</h2>
+</section>
+<section class="slide level2">
+
+<h3 id="tipos-de-datos-básicos-en-python">Tipos de datos básicos en Python</h3>
+<ul>
+<li>Todos los lenguajes cuentan con una serie de tipos básicos.</li>
+<li>Los tipos básicos de Python que estudiaremos son:
+<ul>
+<li><strong>Enteros</strong>: para representar números enteros</li>
+<li><strong>Reales</strong>: para representar números reales</li>
+<li><strong>Booleanos</strong>: para representar valores de cierto o falso</li>
+<li><strong>Texto</strong>: para representar cadenas de caracteres</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="para-cada-tipo-de-dato-nos-interesa-saber">Para cada tipo de dato, nos interesa saber…</h3>
+<ul>
+<li>Su <strong>palabra reservada</strong>
+<ul>
+<li><code>int</code>, <code>float</code>, etc.</li>
+</ul></li>
+<li>Sus <strong>literales</strong>
+<ul>
+<li><em>¿un número real se escribe 1,7 o 1.7?</em></li>
+</ul></li>
+<li>Su <strong>dominio</strong> (rango de valores)
+<ul>
+<li><em>¿puedo representar un D.N.I. con un <code>int</code>?</em></li>
+</ul></li>
+<li>Sus <strong>operaciones</strong> disponibles
+<ul>
+<li><em>¿puedo sumar números enteros?</em></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="dominio-de-un-tipo-de-dato">Dominio de un tipo de dato</h4>
+<ul>
+<li>El <strong>dominio</strong> de un tipo de dato es el conjunto de valores que puede representar</li>
+<li>A diferencia de las matemáticas, en programación:
+<ul>
+<li><strong>Todos los tipos de datos tienen un dominio finito</strong></li>
+</ul></li>
+<li>El <em>tamaño</em> de un tipo de dato determina su dominio
+<ul>
+<li>Un tipo de dato que requiere <strong>más bits</strong> podrá representar <strong>más valores</strong></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="tipos-implícitos">Tipos implícitos</h3>
+<ul>
+<li>Recordad que Python es un lenguaje de <strong>tipado dinámico</strong>
+<ul>
+<li>No es necesario declarar el tipo de una variable</li>
+<li>La palabra reservada de cada tipo será útil para operaciones específicas</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>edad <span class="op">=</span> <span class="dv">21</span>  <span class="co"># Python infiere que edad es un entero (int)</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-tip callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>En VSCode puedes colocar el puntero de tu ratón (<em>hover</em>) sobre una variable para recibir una pista sobre su tipo.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="enteros" class="slide level2 center">
+<h2>Enteros</h2>
+</section>
+<section class="slide level2">
+
+<h3 id="números-enteros-en-python">Números enteros en Python</h3>
+<ul>
+<li><strong>Palabra reservada</strong>: <code>int</code></li>
+<li><strong>Literales</strong>: <code>1</code>, <code>-3</code>, <code>0</code>, <code>1</code>, <code>3_000_000</code>, <code>2E3</code></li>
+<li><strong>Dominio</strong>: <em>depende de la arquitectura de la máquina</em></li>
+<li><strong>Operadores</strong>:
+<ul>
+<li><strong>Aritméticos</strong>: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code>, <code>**</code></li>
+<li><strong>Comparación</strong>: <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>==</code>, <code>!=</code></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="enteros-representación-literal">Enteros: Representación literal</h3>
+<ul>
+<li>Secuencia de uno o más dígitos (caracteres 0, 1, …, 9)</li>
+<li>Pueden ir precedidos por un signo (<code>+</code> o <code>-</code>)</li>
+<li>Barras bajas (<code>_</code>) para separar dígitos</li>
+<li>Python admite notación científica</li>
+<li>No se permiten ceros a la izquierda</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>b <span class="op">=</span> <span class="dv">3</span>    </span>
+<span id="cb2-2"><a></a>c <span class="op">=</span> <span class="op">-</span><span class="dv">523</span></span>
+<span id="cb2-3"><a></a>c <span class="op">=</span> <span class="op">+</span><span class="dv">444</span></span>
+<span id="cb2-4"><a></a>d <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb2-5"><a></a>e <span class="op">=</span> <span class="dv">4_0_0</span></span>
+<span id="cb2-6"><a></a>f <span class="op">=</span> <span class="fl">2E3</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h3 id="enteros-dominio">Enteros: Dominio</h3>
+<ul>
+<li>En matemáticas:
+<ul>
+<li>Dominio <span class="math inline">\([-\infty,+\infty]\)</span></li>
+</ul></li>
+<li>En informática:
+<ul>
+<li>Entre un <strong>mínimo</strong> y un <strong>máximo</strong></li>
+<li>Dependen de la arquitectura de la máquina</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="enteros-dominio-en-otros-lenguajes">Enteros: Dominio en otros lenguajes</h4>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 28%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Palabra clave</strong></th>
+<th><strong>Tipo de dato</strong></th>
+<th><strong>Tamaño (en bits)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>short</code></td>
+<td>entero</td>
+<td>16</td>
+</tr>
+<tr class="even">
+<td><code>int</code></td>
+<td>entero</td>
+<td>32</td>
+</tr>
+<tr class="odd">
+<td><code>long</code></td>
+<td>entero</td>
+<td>32</td>
+</tr>
+<tr class="even">
+<td><code>long long</code></td>
+<td>entero</td>
+<td>64</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h4 id="enteros-dominio-en-python">Enteros: Dominio en python</h4>
+<ul>
+<li>En Python, <strong>todos los tipos de enteros están unificados</strong> en <code>int</code></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="enteros-operadores">Enteros: Operadores</h3>
+<ul>
+<li>Operadores <strong>aritméticos:</strong>
+<ul>
+<li>Suma: <code>+</code></li>
+<li>Resta: <code>-</code></li>
+<li>Multiplicación: <code>*</code></li>
+<li>División: <code>/</code></li>
+<li>División entera: <code>//</code></li>
+<li>Módulo (resto de la división): <code>%</code> <strong>¡Ojo!</strong></li>
+<li>Potencia: <code>**</code></li>
+</ul></li>
+<li>Operadores <strong>de comparación</strong>:
+<ul>
+<li>Mayor estricto: <code>&gt;</code></li>
+<li>Mayor o igual: <code>&gt;=</code></li>
+<li>Menor estricto: <code>&lt;</code></li>
+<li>Menor o igual: <code>&lt;=</code></li>
+<li>Igualdad: <code>==</code> <strong>¡Atención!</strong></li>
+<li>Desigualdad: <code>!=</code></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+</section>
+<section>
+<section id="reales" class="title-slide slide level1 center">
+<h1>Reales</h1>
+
+</section>
+<section class="slide level2">
+
+<h3 id="números-reales-en-python">Números reales en Python</h3>
+<ul>
+<li><strong>Palabra reservada</strong>: <code>float</code></li>
+<li><strong>Literales</strong>: <code>1</code>, <code>1.0</code>, <code>0.3</code>, <code>.2</code>, <code>1e-3</code></li>
+<li><strong>Dominio</strong>: <em>depende de la arquitectura de la máquina</em></li>
+<li><strong>Operadores</strong>:
+<ul>
+<li><strong>Aritméticos</strong>: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>**</code></li>
+<li><strong>Comparación</strong>: <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>==</code>, <code>!=</code></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="reales-dominio">Reales: Dominio</h3>
+<ul>
+<li>En matemáticas:
+<ul>
+<li>Dominio <span class="math inline">\([-\infty,+\infty]\)</span></li>
+</ul></li>
+<li>En informática:
+<ul>
+<li>Entre un <strong>mínimo</strong> y un <strong>máximo</strong></li>
+<li>Dependen de la arquitectura de la máquina</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="reales-dominio-en-otros-lenguajes">Reales: Dominio en otros lenguajes</h4>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 28%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Palabra clave</strong></th>
+<th><strong>Tipo de dato</strong></th>
+<th><strong>Tamaño (en bits)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>float</code></td>
+<td>real</td>
+<td>32</td>
+</tr>
+<tr class="even">
+<td><code>double</code></td>
+<td>real</td>
+<td>64</td>
+</tr>
+<tr class="odd">
+<td><code>long double</code></td>
+<td>real</td>
+<td>96</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h4 id="enteros-dominio-en-python-1">Enteros: Dominio en python</h4>
+<ul>
+<li>En Python, <strong>todos los tipos de reales están unificados</strong> en <code>float</code></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="reales-operadores">Reales: Operadores</h3>
+<ul>
+<li>Operadores <strong>aritméticos:</strong>
+<ul>
+<li>Suma: <code>+</code></li>
+<li>Resta: <code>-</code></li>
+<li>Multiplicación: <code>*</code></li>
+<li>División: <code>/</code></li>
+<li>Potencia: <code>**</code></li>
+</ul></li>
+<li>Operadores <strong>de comparación</strong>:<br>
+
+<ul>
+<li>Mayor estricto: <code>&gt;</code></li>
+<li>Mayor o igual: <code>&gt;=</code></li>
+<li>Menor estricto: <code>&lt;</code></li>
+<li>Menor o igual: <code>&lt;=</code></li>
+<li>Igualdad: <code>==</code></li>
+<li>Desigualdad: <code>!=</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="funciones-numéricas" class="slide level2 center">
+<h2>Funciones numéricas</h2>
+</section>
+<section class="slide level2">
+
+<h3 id="funciones-breve-introducción">Funciones: Breve introducción</h3>
+<ul>
+<li>Una <strong>función</strong> es un bloque de código que realiza una tarea específica</li>
+<li><strong>De momento</strong>, no vamos a preocuparnos por <strong>cómo se definen</strong>,
+<ul>
+<li>sino por <strong>cómo se utilizan</strong></li>
+</ul></li>
+<li>Para ejecutar una función, se ha de <strong>invocar</strong> o <strong>llamar</strong> a la función
+<ul>
+<li>Se hace escribiendo el nombre de la función seguido de paréntesis <code>()</code></li>
+<li>Si la función requiere <strong>argumentos</strong>, se escriben dentro de los paréntesis</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="bu">print</span>(<span class="st">"Hola, mundo!"</span>)  <span class="co"># La función se llama print, y recibe un argumento</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h3 id="bibliotecas-libraries-de-python">Bibliotecas (libraries) de Python</h3>
+<ul>
+<li>Uno de los principios fundamentales del desarrollo software es la <strong>reutilización</strong></li>
+<li>Funcionalidades comunes <strong>han sido ya implementadas por otros</strong></li>
+<li>Algunas de estas funcionalidades existen disponibles en el propio lenguaje
+<ul>
+<li><code>print()</code> o <code>input()</code></li>
+</ul></li>
+<li>Algunas de estas funcionalidades han sido <strong>integradas por defecto</strong> en el intérprete de Python.
+<ul>
+<li>El conjunto de funcionalidades incorporadas forma parte de la <em>Standard Library</em> (<code>stdlib</code>).</li>
+<li>Existen <strong>muchas</strong> otras funciones, algunas de las cuales usaremos con frecuencia.</li>
+</ul></li>
+<li>Para utilizar una función de alguna de estas bibliotecas, <strong>debemos importarla</strong>.</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="im">import</span> math  <span class="co"># importa la biblioteca math</span></span>
+<span id="cb4-2"><a></a></span>
+<span id="cb4-3"><a></a>math.<span class="bu">abs</span>(<span class="op">-</span><span class="dv">3</span>)  <span class="co"># invoca la función abs de la biblioteca math</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h3 id="funciones-numéricas-nativas-y-de-la-stdlib">Funciones numéricas nativas y de la <code>stdlib</code></h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Biblioteca</th>
+<th>Invocación</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>nativa</td>
+<td><code>int(x)</code></td>
+<td><strong>Convierte</strong> la entrada a entero</td>
+</tr>
+<tr class="even">
+<td>nativa</td>
+<td><code>float(x)</code></td>
+<td><strong>Convierte</strong> la entrada a real</td>
+</tr>
+<tr class="odd">
+<td>nativa</td>
+<td><code>abs(x)</code></td>
+<td>Valor absoluto</td>
+</tr>
+<tr class="even">
+<td>nativa</td>
+<td><code>round(x)</code></td>
+<td>Redondeo</td>
+</tr>
+<tr class="odd">
+<td>math</td>
+<td><code>math.sqrt(x)</code></td>
+<td>Raíz cuadrada</td>
+</tr>
+<tr class="even">
+<td>math</td>
+<td><code>math.sin(x)</code></td>
+<td>Seno</td>
+</tr>
+<tr class="odd">
+<td>math</td>
+<td><code>math.cos(x)</code></td>
+<td>Coseno</td>
+</tr>
+<tr class="even">
+<td>math</td>
+<td><code>math.atan(x)</code></td>
+<td>Arcotangente</td>
+</tr>
+<tr class="odd">
+<td>math</td>
+<td><code>math.log(x)</code></td>
+<td>Logaritmo</td>
+</tr>
+<tr class="even">
+<td>math</td>
+<td><code>math.exp(x)</code></td>
+<td>Exponencial</td>
+</tr>
+<tr class="odd">
+<td>math</td>
+<td><code>math.floor(x)</code></td>
+<td>Entero por defecto</td>
+</tr>
+<tr class="even">
+<td>math</td>
+<td><code>math.ceil(x)</code></td>
+<td>Entero por exceso</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="expresiones-avanzadas-con-números" class="slide level2 center">
+<h2>Expresiones avanzadas con números</h2>
+</section>
+<section class="slide level2">
+
+<h3 id="tipos-de-los-operandos-y-resultados">Tipos de los operandos y resultados</h3>
+<ul>
+<li>Cada operación está compuesta por una serie de <strong>operandos</strong> y genera un <strong>resultado</strong>
+<ul>
+<li><em>Ej</em>: <code>3 + 4</code> es una expresión que toma dos <code>int</code> y devuelve un <code>int</code></li>
+</ul></li>
+<li>La mayoría de operadores aritméticos permiten combinar operandos de diferentes tipos
+<ul>
+<li><em>Ej</em>: <code>3 + 4.0</code> es una expresión que toma un <code>int</code> y un <code>float</code> y devuelve un <code>float</code></li>
+</ul></li>
+<li>Algunas operaciones toman operandos de un tipo y devuelven un resultado de otro tipo
+<ul>
+<li><em>Ej</em>: <code>3 / 4</code> es una expresión que toma dos <code>int</code> y devuelve un <code>float</code></li>
+</ul></li>
+<li>Algunas funciones numéricas requieren operandos de un tipo específico (un int)
+<ul>
+<li><em>Ej</em>: <code>math.factorial(3)</code> requiere un <code>int</code> y devuelve un <code>int</code></li>
+</ul></li>
+<li>Recuerda que:
+<ul>
+<li><code>float()</code> convierte cualquier <code>int</code> en un <code>float</code> equivalente</li>
+<li><code>int()</code> <strong>elimina los decimales</strong> de un <code>float</code> y lo convierte en un <code>int</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="ejercicios" class="slide level2 center">
+<h2>Ejercicios</h2>
+</section>
+<section class="slide level2">
+
+<p>¿De qué <strong>tipo</strong> es cada una de las siguientes variables?</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>a <span class="op">=</span> <span class="dv">3</span> <span class="op">+</span> <span class="fl">2.1</span></span>
+<span id="cb5-2"><a></a>b <span class="op">=</span> <span class="dv">3</span> <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb5-3"><a></a>c <span class="op">=</span> <span class="dv">3</span> <span class="op">//</span> <span class="dv">2</span></span>
+<span id="cb5-4"><a></a>d <span class="op">=</span> <span class="dv">3</span> <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb5-5"><a></a>e <span class="op">=</span> <span class="bu">int</span>(<span class="fl">2.1</span>)</span>
+<span id="cb5-6"><a></a>f <span class="op">=</span> <span class="bu">round</span>(<span class="fl">2.1</span>)</span>
+<span id="cb5-7"><a></a>g <span class="op">=</span> math.sqrt(<span class="dv">4</span>)</span>
+<span id="cb5-8"><a></a>h <span class="op">=</span> <span class="bu">int</span>(a) <span class="op">*</span> c <span class="op">*</span> d</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>Fundamentos de Informática</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-tldraw/index.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-tldraw/bind-func.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': true,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealTldraw, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copiado");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copiado");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+              // target, if specified
+              link.setAttribute("target", "_blank");
+              if (link.getAttribute("rel") === null) {
+                link.setAttribute("rel", "noopener");
+              }
+              // default icon
+              link.classList.add("external");
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
