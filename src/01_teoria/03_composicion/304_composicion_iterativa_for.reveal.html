@@ -27,8 +27,73 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #767676;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #767676;  padding-left: 4px; }
+    div.sourceCode
+      { color: #545454; background-color: #fefefe; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #545454; } /* Normal */
+    code span.al { color: #7928a1; } /* Alert */
+    code span.an { color: #696969; } /* Annotation */
+    code span.at { color: #a55a00; } /* Attribute */
+    code span.bn { color: #7928a1; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #d91e18; } /* ControlFlow */
+    code span.ch { color: #008000; } /* Char */
+    code span.cn { color: #d91e18; } /* Constant */
+    code span.co { color: #696969; } /* Comment */
+    code span.cv { color: #696969; font-style: italic; } /* CommentVar */
+    code span.do { color: #696969; font-style: italic; } /* Documentation */
+    code span.dt { color: #7928a1; } /* DataType */
+    code span.dv { color: #7928a1; } /* DecVal */
+    code span.er { color: #7928a1; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #a55a00; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #696969; } /* Information */
+    code span.kw { color: #d91e18; } /* Keyword */
+    code span.op { color: #00769e; } /* Operator */
+    code span.ot { color: #d91e18; } /* Other */
+    code span.pp { color: #7928a1; } /* Preprocessor */
+    code span.sc { color: #00769e; } /* SpecialChar */
+    code span.ss { color: #008000; } /* SpecialString */
+    code span.st { color: #008000; } /* String */
+    code span.va { color: #a55a00; } /* Variable */
+    code span.vs { color: #008000; } /* VerbatimString */
+    code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-4536f2f73d83d3882af517ae0235c067.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-0f4da39f2e1f4bca9785d2cc5275b602.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -129,14 +194,433 @@
 
 <section id="title-slide" data-background-color="#223d71" data-background-image="../../../src/_style/logos/unizar-black.svg" data-background-opacity="0.30" data-background-size="auto 600px" class="quarto-title-block center">
   <h1 class="title">Teoría 303</h1>
-  <p class="subtitle">Composición iterativa II</p>
+  <p class="subtitle">Composición iterativa III</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="chapter" class="slide level2 center">
-<h2>Chapter</h2>
+<section id="tipos-de-bucles" class="slide level2 center">
+<h2>Tipos de bucles</h2>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>En la sesión anterior, vimos que los bucles tienen <strong>usos muy diversos</strong>:
+<ul>
+<li>Validar datos, acumular cálculos, repetir mensajes por pantalla, etc.</li>
+</ul></li>
+<li>A efectos prácticos, todos cumplen una de estas estructuras:
+<ul>
+<li><em>Repetir una acción <strong>hasta obtener un resultado deseado</strong></em>.</li>
+<li><em>Repetur una acción <strong>un número determinado de veces</strong></em>.</li>
+</ul></li>
+<li>La diferencia entre ambos radica en <strong>si previamente conocemos o no el número de iteraciones</strong>.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Sumar números del 1 al 5:</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>suma <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-2"><a></a>i <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-3"><a></a><span class="cf">while</span> i <span class="op">&lt;=</span> <span class="dv">5</span>:</span>
+<span id="cb1-4"><a></a>    suma <span class="op">+=</span> i</span>
+<span id="cb1-5"><a></a>    i <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb1-6"><a></a><span class="bu">print</span>(<span class="ss">f"Iteraciones: </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">, Suma: </span><span class="sc">{</span>suma<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Sabemos que son 5 iteraciones.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Sumar hasta que <code>suma &gt; 100</code>:</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>suma <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-2"><a></a>i <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb2-3"><a></a><span class="cf">while</span> suma <span class="op">&lt;=</span> <span class="dv">100</span>:</span>
+<span id="cb2-4"><a></a>    suma <span class="op">+=</span> i</span>
+<span id="cb2-5"><a></a>    i <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb2-6"><a></a><span class="bu">print</span>(<span class="ss">f"Iteraciones: </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">, Suma: </span><span class="sc">{</span>suma<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>No sabemos cuántas iteraciones serán.</li>
+</ul>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h3 id="el-patrón-se-repite">El patrón se repite</h3>
+<ul>
+<li>El bucle <code>while</code> permite <strong>cubrir ambos casos</strong>, y es <strong>la opción más flexible</strong>.</li>
+<li>Sin embargo, <strong>cuando el número de iteraciones es conocido de antemano</strong>, siempre repetimos el mismo patrón.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Cuando no necesitamos valores de <code>i</code>:</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb3-2"><a></a></span>
+<span id="cb3-3"><a></a><span class="cf">while</span> i <span class="op">&lt;</span> NUM_ITERACIONES:</span>
+<span id="cb3-4"><a></a>    <span class="co"># Código que no usa la i</span></span>
+<span id="cb3-5"><a></a>    i <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<p><strong>Cuando vamos a usar la <code>i</code></strong>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>i <span class="op">=</span> VALOR_INICIAL</span>
+<span id="cb4-2"><a></a></span>
+<span id="cb4-3"><a></a><span class="cf">while</span> i <span class="op">&lt;=</span> VALOR_FINAL:</span>
+<span id="cb4-4"><a></a>    <span class="co"># Código que depende de la i</span></span>
+<span id="cb4-5"><a></a>    i <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<ul>
+<li>Elementos:
+<ul>
+<li>Una <strong>variable iteradora</strong>: <code>i</code></li>
+<li>Una condición de <strong>finalización del bucle</strong>: <code>i &lt; NUM_ITERACIONES</code></li>
+<li>Un <strong>incremento de la variable iteradora</strong>: <code>i += 1</code></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>Este patrón es tán común que <strong>la mayoría de lenguajes</strong> de programación tienen una <strong>estructura específica</strong> para facilitar usarlo:
+<ul>
+<li>La sintaxis: <code>for</code></li>
+</ul></li>
+<li>Su funcionamiento específico <strong>varía</strong> según el lenguaje.</li>
+<li>En el caso de Python, tecnicamente no implementa el patrón <code>for</code> sino <code>for-each</code>.
+<ul>
+<li><strong>AÚN</strong> NO VAMOS A ABORDAR ESA DIFERENCIA.</li>
+<li>De momento, utilizaremos el <code>for-each</code> como si fuera un <code>for</code>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="el-bucle-for" class="slide level2 center">
+<h2>El bucle <code>for</code></h2>
+</section>
+<section class="slide level2">
+
+<h3 id="composición-iterativa-for">Composición Iterativa: <code>for</code></h3>
+<div class="columns">
+<div class="column" style="width:80%;">
+<ul>
+<li>La estructura <code>for</code> es una <strong>forma simplificada</strong> de implementar un bucle <code>while</code> que itere un número determinado de veces.</li>
+<li>Se encarga <strong>automáticamente</strong> de:
+<ul>
+<li><strong>Inicializar</strong> la variable iteradora <strong>con el primer valor</strong>.</li>
+<li><strong>Incrementar</strong> la variable iteradora <strong>al final de la iteración</strong>.</li>
+<li><strong>Evaluar</strong> la condición <code>i &lt; VALOR_FINAL</code></li>
+</ul></li>
+<li>El <strong>segundo valor</strong> que pasamos a <code>range</code> <strong>NO</strong> se incluye en las iteraciones.</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="co"># bloque_de_instrucciones_principal_1</span></span>
+<span id="cb5-2"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(VALOR_INICIAL, VALOR_FINAL):</span>
+<span id="cb5-3"><a></a>    <span class="co"># bloque_de_instrucciones</span></span>
+<span id="cb5-4"><a></a><span class="co"># bloque_de_instrucciones_principal_2</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:20%;">
+<p><img data-src="./img/for.png"></p>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h3 id="uso-de-range">Uso de <code>range()</code></h3>
+<ul>
+<li>Es <strong>muy importante</strong> tener en cuenta el funcionamiento de <code>range()</code> para no comenter <a href="../../../src/01_teoria/03_composicion/303_composicion_iterativa_while_II.html#errores-off-by-one">errores <em>off by one</em></a>.
+<ul>
+<li><code>range(N, M)</code> genera números en el rango <code>[N, M)</code>.</li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">5</span>):</span>
+<span id="cb6-2"><a></a>    <span class="bu">print</span>(i)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="line-block">0<br>
+1<br>
+2<br>
+3<br>
+4</div>
+</div></div>
+<ul>
+<li>El <code>5</code> <strong>NO</strong> se incluye en las iteraciones.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-repetición-de-un-mensaje-100-veces-for">Ejemplo: Repetición de un mensaje 100 veces (for)</h4>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">100</span>):</span>
+<span id="cb7-2"><a></a>    <span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Los valores de <code>i</code> irán de 0 a 99.</li>
+<li>Eso da un total de 100 iteraciones.</li>
+</ul>
+<div class="callout callout-tip callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Trata de evitar manías como inicializar <code>i</code> a 1 si no es necesario. (<code>range(1, N+1)</code>)</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">100</span><span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb8-2"><a></a>    <span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<div class="callout callout-tip callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Es posible que tu editor avise de que la variable <code>i</code> no se usa en el código. Puedes llamarla <code>_</code> (barra baja) para indicar que no se va a usar, pero <strong>siempre</strong> tiene que haber una variable después de la palabra clave <code>for</code>.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-sumar-números-del-1-al-5-for">Ejemplo: Sumar números del 1 al 5 (for)</h4>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>suma <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb9-2"><a></a></span>
+<span id="cb9-3"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">5</span><span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb9-4"><a></a>    suma <span class="op">+=</span> i</span>
+<span id="cb9-5"><a></a></span>
+<span id="cb9-6"><a></a><span class="bu">print</span>(<span class="ss">f"Suma: </span><span class="sc">{</span>suma<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Aquí <strong>sí</strong> necesitamos usar valores específicos de <code>i</code>.
+<ul>
+<li>Usamos <code>5+1</code> porque resulta más explícito que <code>6</code>.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="cuando-usar-for-y-cuando-while">Cuando usar <code>for</code> y cuando <code>while</code></h3>
+<ul>
+<li>¿Conozco previamente el número de iteraciones (o rango de valores) que necesito?
+<ul>
+<li><strong>Si:</strong> <code>for</code></li>
+<li><strong>No:</strong> <code>while</code></li>
+</ul></li>
+<li><strong>Pistas</strong> (son sugerencias, no reglas):
+<ul>
+<li>Si te encuentras creando una variable <code>i</code> y la condición tiene la forma <code>i &lt; N</code>:
+<ul>
+<li>Seguramente puedas usar <code>for</code>.</li>
+</ul></li>
+<li>Si te preguntas cómo puedes evaluar una condición distinta de <code>i &lt; N</code>:
+<ul>
+<li>Probablemente necesites usar <code>while</code>.</li>
+</ul></li>
+<li><strong>Si te preguntas cómo puedes interrumpir</strong> un bucle <code>for</code> a mitad:
+<ul>
+<li>Casi seguro que necesitas usar <code>while</code>.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="ejercicio-cuándo-usar-for-y-while">Ejercicio: Cuándo usar <code>for</code> y <code>while</code></h4>
+<ul>
+<li>¿Qué tipo de bucle usarías para cada uno de los siguientes casos?
+<ol type="1">
+<li><details>
+<summary>
+Pedir un dato a un usuario hasta que introduzca un valor correcto.
+</summary>
+<code>while</code>
+</details></li>
+<li><details>
+<summary>
+Calcular el factorial de un número.
+</summary>
+<code>for</code>
+</details></li>
+<li><details>
+<summary>
+Pedir un número al usuario y mostrar los números pares hasta ese número.
+</summary>
+<code>for</code>
+</details></li>
+<li><details>
+<summary>
+Solicitar un número PIN con un máximo de 3 intentos.
+</summary>
+<code>while</code>
+</details></li>
+<li><details>
+<summary>
+Invertir las cifras de un número.
+</summary>
+<code>while</code>
+</details></li>
+<li><details>
+<summary>
+Solicitar 5 números al usuario y mostrar la media.
+</summary>
+<code>for</code>
+</details></li>
+<li><details>
+<summary>
+Solicitar una secuencia de números al usuario y mostrar la media.
+</summary>
+<code>while</code>
+</details></li>
+<li><details>
+<summary>
+Solicitar un numero N, solicitar luego N números al usuario y mostrar la media.
+</summary>
+<code>for</code>
+</details></li>
+</ol></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-sumar-números-hasta-n">Ejemplo: Sumar números hasta <code>n</code></h4>
+<p>Este programa solicita un número <code>n</code> al usuario y suma todos los números hasta <code>n</code>.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número:"</span>)</span>
+<span id="cb10-2"><a></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb10-3"><a></a></span>
+<span id="cb10-4"><a></a>suma <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb10-5"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>):  <span class="co"># El 0 no lo necesito</span></span>
+<span id="cb10-6"><a></a>    suma <span class="op">+=</span> i</span>
+<span id="cb10-7"><a></a></span>
+<span id="cb10-8"><a></a><span class="bu">print</span>(<span class="ss">f"La suma hasta </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> es </span><span class="sc">{</span>suma<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="line-block">Introduce un número:<br>
+<strong>5</strong><br>
+La suma hasta 5 es 15</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-factorial-for">Ejemplo: Factorial (for)</h4>
+<p>Este programa solicita un número <code>n</code> al usuario y calcula el factorial de <code>n</code>.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número:"</span>)</span>
+<span id="cb11-2"><a></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb11-3"><a></a></span>
+<span id="cb11-4"><a></a>factorial <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb11-5"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb11-6"><a></a>    factorial <span class="op">*=</span> i</span>
+<span id="cb11-7"><a></a></span>
+<span id="cb11-8"><a></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>n<span class="sc">}</span><span class="ss">! = </span><span class="sc">{</span>factorial<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="line-block">Introduce un número:<br>
+<strong>5</strong><br>
+5! = 120</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-media-de-3-números">Ejemplo: Media de 3 números</h4>
+<p>Este programa solicita 3 números al usuario y calcula la media.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>suma <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb12-2"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">3</span><span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb12-3"><a></a>    <span class="bu">print</span>(<span class="ss">f"Introduce el número </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">:"</span>)</span>
+<span id="cb12-4"><a></a>    suma <span class="op">+=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb12-5"><a></a></span>
+<span id="cb12-6"><a></a>media <span class="op">=</span> suma <span class="op">/</span> <span class="dv">3</span></span>
+<span id="cb12-7"><a></a><span class="bu">print</span>(<span class="ss">f"La media de los números es </span><span class="sc">{</span>media<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="line-block">Introduce el número 1:<br>
+<strong>2</strong><br>
+Introduce el número 2:<br>
+<strong>4</strong><br>
+Introduce el número 3:<br>
+<strong>6</strong><br>
+La media de los números es 4.0</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-media-de-n-números">Ejemplo: Media de N números</h4>
+<p>Este programa solicita 5 números al usuario y calcula la media.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce una cantidad:"</span>)</span>
+<span id="cb13-2"><a></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb13-3"><a></a></span>
+<span id="cb13-4"><a></a>suma <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb13-5"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb13-6"><a></a>    <span class="bu">print</span>(<span class="ss">f"Introduce el número </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">:"</span>)</span>
+<span id="cb13-7"><a></a>    suma <span class="op">+=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb13-8"><a></a></span>
+<span id="cb13-9"><a></a>media <span class="op">=</span> suma <span class="op">/</span> n</span>
+<span id="cb13-10"><a></a><span class="bu">print</span>(<span class="ss">f"La media de los números es </span><span class="sc">{</span>media<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="line-block">Introduce una cantidad:<br>
+<strong>3</strong><br>
+Introduce el número 1:<br>
+<strong>2</strong><br>
+Introduce el número 2:<br>
+<strong>4</strong><br>
+Introduce el número 3:<br>
+<strong>6</strong><br>
+La media de los números es 4.0</div>
+</div></div>
+</section>
+<section id="usos-avanzados-de-for" class="slide level2 center">
+<h2>Usos avanzados de <code>for</code></h2>
+</section>
+<section class="slide level2">
+
+<h3 id="usos-avanzados-de-range">Usos avanzados de <code>range()</code></h3>
+<ul>
+<li>La función <code>range()</code> es la encargada de determinar el rango de valores que se van a iterar.</li>
+<li>Realmente existen <strong>tres formas</strong> de usar <code>range()</code>:
+<ul>
+<li><code>range(N)</code>: Genera valores desde <code>0</code> hasta <code>N-1</code>.</li>
+<li><code>range(N, M)</code>: Genera valores desde <code>N</code> hasta <code>M-1</code>.</li>
+<li><code>range(N, M, S)</code>: Genera valores desde <code>N</code> hasta <code>M-1</code> <strong>incrementando</strong> <code>i+=S</code>.</li>
+</ul></li>
+<li>Es decir:
+<ul>
+<li><code>range(5)</code> <strong>=</strong> <code>range(0, 5)</code> <strong>=</strong> <code>range(0, 5, 1)</code>.</li>
+</ul></li>
+</ul>
+<div class="callout callout-tip callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Aunque resulte tentador escribir menos, <strong>es recomendable</strong> ser explícito y evitar <code>range(N)</code> en favor de <code>range(0, N)</code>.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-pinta-los-números-pares-del-0-al-10">Ejemplo: Pinta los números pares del 0 al 10</h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Usando <code>range(0, 11)</code></strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">11</span>):</span>
+<span id="cb14-2"><a></a>    <span class="cf">if</span> i <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb14-3"><a></a>        <span class="bu">print</span>(i)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">0<br>
+2<br>
+4<br>
+6<br>
+8<br>
+10</div>
+</div><div class="column" style="width:50%;">
+<p><strong>Usando <code>range(0, 11, 2)</code></strong></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">11</span>, <span class="dv">2</span>):</span>
+<span id="cb15-2"><a></a>    <span class="bu">print</span>(i)</span>
+<span id="cb15-3"><a></a> </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">0<br>
+2<br>
+4<br>
+6<br>
+8<br>
+10</div>
+</div></div>
 
 
 </section>
