@@ -33,6 +33,46 @@ Desarrolla:
 
 ## Algo con trigonometría y geografía
 
+<!--
+La idea es: usar pitágoras para calcular distancias entre pares de coordenadas (?) Por ejemplo, introduce tus coordenadas, luego introduce las coordenadas de varias ciudades y al final de programa te diré cual es la más cercana?
+
+Molaría igual complicarlo cambiando pitágoras por algún algoritmo geodésico o algo.
+-->
+
+## Triángulo de Tartaglia
+
+El triángulo de Tartaglia es un arreglo de números en forma de triángulo que se utiliza para mostrar los coeficientes binomiales. Los coeficientes binomiales son los números que aparecen en el desarrollo de un binomio elevado a una potencia entera. El triángulo de Tartaglia se construye de la siguiente forma:
+
+- La primera fila contiene un único número, el 1.
+- Cada número en cada fila se obtiene sumando los dos números de la fila anterior que están justo encima de él (a la izquierda y a la derecha).
+- Los números que no están en la primera fila ni en la diagonal principal se obtienen de la suma de los dos números de la fila anterior que están justo encima de él.
+- La diagonal principal contiene todos los números 1.
+- Cada fila tiene un número más que la anterior.
+
+La fórmula para calcular un coeficiente binomial es:
+
+$$
+\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}
+$$
+
+Escribe un programa Python que solicite al usuario un número entero positivo `n` y muestre las primeras `n` filas del triángulo de Tartaglia.
+
+| Introduce el número de filas:
+| **5**
+| 1
+| 1 1
+| 1 2 1
+| 1 3 3 1
+| 1 4 6 4 1
+| 1 5 10 10 5 1
+
+
+## Códigos Perdidos (Exploración de combinaciones)
+
+<!--Igual para funciones?-->
+
+Encuentra todos los pares de números entre 10 y 99 cuya suma de dígitos sea igual. Por ejemplo, 14 y 41.
+
 ## Entrega de la práctica
 
 **Antes del _ las __:__,** deberán haberse subido a Moodle los siguientes ficheros:

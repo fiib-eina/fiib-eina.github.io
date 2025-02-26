@@ -5,105 +5,155 @@ format: html
 draft: true
 ---
 
-## La caja fuerte del West Bank
-
-Las cajas fuertes de dial (o de combinación) son un tipo de caja fuerte que se abre mediante la introducción de una secuencia de números. En este caso, la caja fuerte del West Bank se abre introduciendo tres números secretos. Si la secuencia es correcta, la caja fuerte se abrirá.
-
-
-**Solución**
-
-```python
-NUMERO_SECRETO_1 = 8
-NUMERO_SECRETO_2 = 23
-NUMERO_SECRETO_3 = 42
-
-encontrado = False
-
-print("Introduce el primer número:")
-n = int(input())
-while not encontrado and n != 0:
-    if n == NUMERO_SECRETO_1:
-        print("OK! Introduce el segundo número:")
-        n = int(input())
-        if n == NUMERO_SECRETO_2:
-            print("OK! Introduce el tercer número:")
-            n = int(input())
-            if n == NUMERO_SECRETO_3:
-                encontrado = True
-    else:
-        print("Error. Introduce el primer número:")
-        n = int(input())
-
-if encontrado:
-    print("¡Encontrado!")
-else:
-    print("No encontrado")
-```
-
+<!--
 ## Ideas de problemas
 
 - Programa dirigido por menú, estilo <https://github.com/prog1-eina/tema-07-desarrollo-modular/blob/master/calculadora-main.cpp>
-- Determinar si un número es primo
+- ~Determinar si un número es primo~ 
 - Números repitunos, <https://github.com/prog1-eina/problemas-t05-enteros/blob/main/3-repituno.cpp> 
 - Eliminar cifras, <https://github.com/prog1-eina/problemas-t05-enteros/blob/main/4-quitar-cifra.cpp>  
 - Números amigos
 - Números perfectos, <https://github.com/prog1-eina/problemas-t04-instruccion-iterativa/blob/master/3-perfecto.cpp>
 - Suma de cuadrados vs. cuadrado de la suma ([Problema 6 de Project Euler](https://projecteuler.net/problem=6))
 - Otros problemas de Project Euler:
-    - Problema 2: Números de Fibonacci pares
-    - Problema 5: Menor múltiplo
-    - Problema 7: Diezmilésimo primer número primo
-    - Problema 12: Números triangulares altamente divisibles
+- Problema 2: Números de Fibonacci pares
+- Problema 5: Menor múltiplo
+- Problema 7: Diezmilésimo primer número primo
+- Problema 12: Números triangulares altamente divisibles
 - De problemas de FIM
-    - Desarrolla un programa que solicite un número natural $n \geq 1$ al usuario y que calcule y muestre en la pantalla el valor de la suma $\displaystyle\sum_{i=1}^n \dfrac{1}{i^2}$. El programa ha de solicitar el número natural de forma reiterada al usuario mientras que el número introducido no sea válido.
-    - Desarrolla un programa que solicite un número natural $n > 0$ al usuario, calcule y muestre por pantalla el valor de la siguiente suma: $\displaystyle\sum_{i=1}^n \sum_{j=1}^i j$. El programa ha de solicitar el número natural de forma reiterada al usuario mientras que el número introducido no sea válido.
-    - Desarrolla un programa que solicite al usuario de manera iterativa una secuencia de números reales no negativos y que termine en un número negativo (que no formará parte de la secuencia), y después calcule y muestre por pantalla la suma, media, el máximo y el mínimo de la secuencia de números introducidos por el usuario.
-    - Números triangulares
+- Desarrolla un programa que solicite un número natural $n \geq 1$ al usuario y que calcule y muestre en la pantalla el valor de la suma $\displaystyle\sum_{i=1}^n \dfrac{1}{i^2}$. El programa ha de solicitar el número natural de forma reiterada al usuario mientras que el número introducido no sea válido.
+- Desarrolla un programa que solicite un número natural $n > 0$ al usuario, calcule y muestre por pantalla el valor de la siguiente suma: $\displaystyle\sum_{i=1}^n \sum_{j=1}^i j$. El programa ha de solicitar el número natural de forma reiterada al usuario mientras que el número introducido no sea válido.
+- Desarrolla un programa que solicite al usuario de manera iterativa una secuencia de números reales no negativos y que termine en un número negativo (que no formará parte de la secuencia), y después calcule y muestre por pantalla la suma, media, el máximo y el mínimo de la secuencia de números introducidos por el usuario.
+- Números triangulares
 - De prácticas de FIM
-    - Doble factorial de números impares
-        El doble factorial es una función matemática que aparece en teoría de números y estadística. Para un número $n$ impar, su doble factorial se define como:
+- Doble factorial de números impares
+El doble factorial es una función matemática que aparece en teoría de números y estadística. Para un número $n$ impar, su doble factorial se define como:
 
-        $$
-        \displaystyle n!!=\prod _{k=1}^{\frac {n+1}{2}}(2k-1)=1\cdot 3\cdots (n-4)(n-2)n
-        $$
+$$
+\displaystyle n!!=\prod _{k=1}^{\frac {n+1}{2}}(2k-1)=1\cdot 3\cdots (n-4)(n-2)n
+$$
 
-        Por ejemplo, $9!!=1\cdot 3\cdot 5\cdot 7\cdot 9=945$.
+Por ejemplo, $9!!=1\cdot 3\cdot 5\cdot 7\cdot 9=945$.
 
-        Desarrolla un programa que calcule el doble factorial de un número $n$ impar dado por el usuario. Si el número introducido por el usuario es menor que cero o par, deberá volverse a pedir el número al usuario tantas veces como sea necesario hasta que se introduzca un número correcto (positivo e impar).
-    - Generación de números seudoaleatorios
-    - Aproximación a π con la serie de Leibniz
+Desarrolla un programa que calcule el doble factorial de un número $n$ impar dado por el usuario. Si el número introducido por el usuario es menor que cero o par, deberá volverse a pedir el número al usuario tantas veces como sea necesario hasta que se introduzca un número correcto (positivo e impar).
+- Generación de números seudoaleatorios
 
-        En matemáticas, la serie de Leibniz es una serie infinita que sirve para calcular el número π de forma aproximada:
+-->
 
-        $$
-        \displaystyle \sum_{n=0}^{\infty}\frac{(-1)^{n}}{2n+1}= 1 - \frac{1}{3} + \frac{1}{5} -\frac{1}{7} + \frac{1}{9} -\cdots = \frac{\pi}{4}
-        $$
+## La caja fuerte del West Bank
 
-## Códigos Perdidos (Exploración de combinaciones)
+Las cajas fuertes de dial (o de combinación) son un tipo de caja fuerte que se abre mediante la introducción de una secuencia de números. La caja fuerte del _West Bank_ se abre introduciendo tres números secretos (`8, 23, 42`).
 
-<!--Igual para funciones?-->
+- Si se acierta un número:
+    - La caja emitirá un chasquido (_tick_),
+    - y se podrá introducir el siguiente número.
+- Si falla en alguno:
+    - La caja se reseterará mitiendo un sonido (_clonk_),
+    - y tendrás que volver a empezar con el primer número.
+- Si aciertan los 3 números seguidos, sin fallos:
+    - La caja fuerte se abrirá.
+    - Mensaje: `<se abre>`
+- El usuario puede rendirse en cualquier momento introduciendo un `0`.
 
-Encuentra todos los pares de números entre 10 y 99 cuya suma de dígitos sea igual. Por ejemplo, 14 y 41.
+![](./img/safebox.jpg){ width=30% }
+
+| Bienvenido al West Bank!
+| \<frente a la caja fuerte\>
+| **8**
+| tick
+| **23**
+| tick
+| **42**
+| tick
+| \<se abre\>
+
+| Bienvenido al West Bank!
+| \<frente a la caja fuerte\>
+| **8**
+| tick
+| **1**
+| clonk
+| **8**
+| tick
+| **23**
+| tick
+| **42**
+| tick
+| \<se abre\>
+
+| Bienvenido al West Bank!
+| \<frente a la caja fuerte\>
+| **1**
+| clonk
+| **2**
+| clonk
+| **0**
+| \<se aleja caminando\>
+
+**Entrega:** Escribe tu programa en un fichero denominado `westbank.py`.
+
+## Serie de Leibniz
+
+En matemáticas, la serie de Leibniz es una serie infinita que sirve para calcular el número π de forma aproximada.
+
+$$
+\sum_{n=0}^{\infty}\frac{(-1)^{n}}{2n+1}= 1 - \frac{1}{3} + \frac{1}{5} -\frac{1}{7} + \frac{1}{9} -\cdots = \frac{\pi}{4}
+$$
+
+Escribe un programa Python que calcule una aproximación de $\pi$ mediante la serie de Leibniz. El programa ha de solicitar al usuario un número entero positivo `n` y calcular la suma de los `n` primeros términos de la serie de Leibniz. Finalmente, calculará y mostrará: el valor aproximado, el valor original (puedes usar el valor de `math.pi`) y el error entre ellos.
+
+| Número de términos:
+| **10**
+| Valor aproximado: 3.0418396189294032
+| Valor original: 3.141592653589793
+| Error: 0.09975303466038987
+
+| Número de términos:
+| **100**
+| Valor aproximado: 3.1315929035585537
+| Valor original: 3.141592653589793
+| Error: 0.00999975003123943
+
+**Entrega:** Escribe tu programa en un fichero denominado `leibniz.py`.
 
 ## Mano fuerte, mano débil
 
 En el juego de "Mano fuerte, mano débil" se enfrentan dos jugadores. Cada uno recibe dos cartas de una baraja de poker.
 El valor de cada carta viene dado por la siguiente tabla:
 
-| 2-10 | J  | Q  | K  | A  |
-| ---- | -  | -  | -  | -  |
-| 2-10 | 11 | 12 | 13 | 14 |
+| 2-10 | J   | Q   | K   | A   |
+| :--: | :-: | :-: | :-: | :-: |
+| 2-10 | 11  | 12  | 13  | 14  |
 
 Una mano gana a otra si ambas cartas son **superiores** a las del rival:
 
-- `14 3` gana a `2 13`
-- `14 2` empata con `3 3`
+- `14, 3` gana a `2, 13`
+- `14, 2` empata con `3, 3`
 - Es decir:
     - Sacar un 14 (as) garantiza victoria o empate. (Ninguna mano puede ganarte porque, como mínimo, empatas).
     - Sacar un 2 (carta más baja) garantiza cero victorias. (Cualquier mano te gana o empata).
 
 Escribe un programa Python que, dada una mano de un jugador (introducidas como los dos puntos de cada carta), calcule **cuantas combinaciones ganan, cuantas empatan y cuantas pierden**.
 **NO** has de tener en cuenta las probabilidades de que salga una carta, sólo contar cuantas combinaciones ganan, empatan o pierden.
+
+La siguiente tabla ilustra todas las combinaciones posibles para la mano `8, 10`.
+
+|    | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | T | J | Q | K | A |
+| -- | - | - | - | - | - | - | - | - | - | - | - | - | - |
+|  2 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
+|  3 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
+|  4 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
+|  5 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
+|  6 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
+|  7 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
+|  8 | o | o | o | o | o | o |   |   |   |   |   |   |   | 
+|  9 | o | o | o | o | o | o |   |   |   | x | x | x | x | 
+| 10 |   |   |   |   |   |   |   |   |   | x | x | x | x | 
+| 11 |   |   |   |   |   |   |   | x | x | x | x | x | x | 
+| 12 |   |   |   |   |   |   |   | x | x | x | x | x | x | 
+| 13 |   |   |   |   |   |   |   | x | x | x | x | x | x | 
+| 14 |   |   |   |   |   |   |   | x | x | x | x | x | x |
+
 
 | Introduce la primera carta:
 | **14**
@@ -121,27 +171,50 @@ Escribe un programa Python que, dada una mano de un jugador (introducidas como l
 | Empates:   77
 | Derrotas:  32
 
-La siguiente table ilustra todas las combinaciones posibles para la mano `8, 10`. Dibujar esta table **NO** forma parte del ejercicio.
+**Entrega:** Escribe tu programa en un fichero denominado `manofuerte.py`.
 
-```
-   | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | T | J | Q | K | A |
- 2 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
- 3 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
- 4 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
- 5 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
- 6 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
- 7 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
- 8 | o | o | o | o | o | o |   |   |   |   |   |   |   | 
- 9 | o | o | o | o | o | o |   |   |   | x | x | x | x | 
-10 |   |   |   |   |   |   |   |   |   | x | x | x | x | 
-11 |   |   |   |   |   |   |   | x | x | x | x | x | x | 
-12 |   |   |   |   |   |   |   | x | x | x | x | x | x | 
-13 |   |   |   |   |   |   |   | x | x | x | x | x | x | 
-14 |   |   |   |   |   |   |   | x | x | x | x | x | x |
-```
+## Mano fuerte, mano débil (II)
+
+**Partiendo del ejercicio anterior** (crea una copia del ejercicio una vez lo hayas acabado), extiende el funcionamiento del mismo añadiendo la represantación de la tabla de casos. En dicha tabla:
+
+_Tip:_ Recuerda lo aprendido en el ejercicio [Dibujar tablas de multiplicar](../../01_teoria/03_composicion/305_composicion_iterativa_for_II.qmd#ejercicio-dibujar-las-tablas-de-multiplicar)
+
+
+- `o` indica que tu mano gana.
+- `x` indica que tu mano pierde.
+- `.` indica que tu mano empata.
+
+| Introduce la primera carta:
+| **8**
+| Introduce la segunda carta:
+| **10**
+|
+|    | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | T | J | Q | K | A |
+|  2 | o | o | o | o | o | o | o | o | . | . | . | . | . | 
+|  3 | o | o | o | o | o | o | o | o | . | . | . | . | . | 
+|  4 | o | o | o | o | o | o | o | o | . | . | . | . | . | 
+|  5 | o | o | o | o | o | o | o | o | . | . | . | . | . | 
+|  6 | o | o | o | o | o | o | o | o | . | . | . | . | . | 
+|  7 | o | o | o | o | o | o | o | o | . | . | . | . | . | 
+|  8 | o | o | o | o | o | o | . | . | . | . | . | . | . | 
+|  9 | o | o | o | o | o | o | . | . | . | x | x | x | x | 
+| 10 | . | . | . | . | . | . | . | . | . | x | x | x | x | 
+| 11 | . | . | . | . | . | . | . | x | x | x | x | x | x | 
+| 12 | . | . | . | . | . | . | . | x | x | x | x | x | x | 
+| 13 | . | . | . | . | . | . | . | x | x | x | x | x | x | 
+| 14 | . | . | . | . | . | . | . | x | x | x | x | x | x |
+|
+| Victorias: 60
+| Empates:   77
+| Derrotas:  32
+
+**Entrega:** Escribe tu programa en un fichero denominado `manofuerte2.py`.
 
 ## Entrega de la práctica
 
 **Antes del 15 de marzo a las 18:00,** deberán haberse subido a Moodle los siguientes ficheros:
 
-- [ ] `caja.py`
+- [ ] `westbank.py`
+- [ ] `leibniz.py`
+- [ ] `manofuerte.py`
+- [ ] `manofuerte2.py`
