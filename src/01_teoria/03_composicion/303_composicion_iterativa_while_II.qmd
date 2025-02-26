@@ -1,5 +1,5 @@
 ---
-title: Teoría 302
+title: Teoría 303
 subtitle: Composición Iterativa II
 format: revealjs
 ---

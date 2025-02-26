@@ -7,7 +7,7 @@ draft: true
 
 ## La caja fuerte del West Bank
 
-Una caja 
+Las cajas fuertes de dial (o de combinación) son un tipo de caja fuerte que se abre mediante la introducción de una secuencia de números. En este caso, la caja fuerte del West Bank se abre introduciendo tres números secretos. Si la secuencia es correcta, la caja fuerte se abrirá.
 
 
 **Solución**
@@ -79,6 +79,66 @@ else:
         \displaystyle \sum_{n=0}^{\infty}\frac{(-1)^{n}}{2n+1}= 1 - \frac{1}{3} + \frac{1}{5} -\frac{1}{7} + \frac{1}{9} -\cdots = \frac{\pi}{4}
         $$
 
+## Códigos Perdidos (Exploración de combinaciones)
+
+<!--Igual para funciones?-->
+
+Encuentra todos los pares de números entre 10 y 99 cuya suma de dígitos sea igual. Por ejemplo, 14 y 41.
+
+## Mano fuerte, mano débil
+
+En el juego de "Mano fuerte, mano débil" se enfrentan dos jugadores. Cada uno recibe dos cartas de una baraja de poker.
+El valor de cada carta viene dado por la siguiente tabla:
+
+| 2-10 | J  | Q  | K  | A  |
+| ---- | -  | -  | -  | -  |
+| 2-10 | 11 | 12 | 13 | 14 |
+
+Una mano gana a otra si ambas cartas son **superiores** a las del rival:
+
+- `14 3` gana a `2 13`
+- `14 2` empata con `3 3`
+- Es decir:
+    - Sacar un 14 (as) garantiza victoria o empate. (Ninguna mano puede ganarte porque, como mínimo, empatas).
+    - Sacar un 2 (carta más baja) garantiza cero victorias. (Cualquier mano te gana o empata).
+
+Escribe un programa Python que, dada una mano de un jugador (introducidas como los dos puntos de cada carta), calcule **cuantas combinaciones ganan, cuantas empatan y cuantas pierden**.
+**NO** has de tener en cuenta las probabilidades de que salga una carta, sólo contar cuantas combinaciones ganan, empatan o pierden.
+
+| Introduce la primera carta:
+| **14**
+| Introduce la segunda carta:
+| **14**
+| Victorias: 144
+| Empates:   25
+| Derrotas:  0
+
+| Introduce la primera carta:
+| **8**
+| Introduce la segunda carta:
+| **10**
+| Victorias: 60
+| Empates:   77
+| Derrotas:  32
+
+La siguiente table ilustra todas las combinaciones posibles para la mano `8, 10`. Dibujar esta table **NO** forma parte del ejercicio.
+
+```
+   | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | T | J | Q | K | A |
+ 2 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
+ 3 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
+ 4 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
+ 5 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
+ 6 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
+ 7 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
+ 8 | o | o | o | o | o | o |   |   |   |   |   |   |   | 
+ 9 | o | o | o | o | o | o |   |   |   | x | x | x | x | 
+10 |   |   |   |   |   |   |   |   |   | x | x | x | x | 
+11 |   |   |   |   |   |   |   | x | x | x | x | x | x | 
+12 |   |   |   |   |   |   |   | x | x | x | x | x | x | 
+13 |   |   |   |   |   |   |   | x | x | x | x | x | x | 
+14 |   |   |   |   |   |   |   | x | x | x | x | x | x |
+```
 
 ## Entrega de la práctica
 

@@ -31,6 +31,7 @@ Desarrolla:
 
 **Entrega:** Escribe tu programa en un fichero denominado `amigos.py`.
 
+## Algo con trigonometría y geografía
 
 ## Entrega de la práctica
 

@@ -5,6 +5,29 @@ format: html
 draft: true
 ---
 
+## DNI checksum
+
+El último dígito de un DNI español se calcula a partir de los 8 primeros dígitos. Para ello, se divide la cifra entre 23 y se toma el resto. A continuación, se busca el carácter correspondiente en la siguiente tabla:
+
+| RESTO |	0 |	1 |	2 |	3 |	4 |	5 |	6 |	7 |	8 |	9 |	10 |	11 |
+| ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LETRA |	T |	R |	W |	A |	G |	M |	Y |	F |	P |	D |	X |	B |
+ 
+
+| RESTO |	12 |	13 |	14 |	15 |	16 |	17 |	18 |	19 |	20 |	21 |	22 |
+| ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LETRA |	N |	J |	Z |	S |	Q |	V |	H |	L |	C |	K |	E |
+
+Escribe un programa Python que solicite al usuario los 8 primeros dígitos de un DNI, la letra y muestre si el DNI es correcto o no.
+
+| Introduzca el DNI:
+| **12345678Z**
+| El DNI es correcto
+
+| Introduzca el DNI:
+| **12345678A**
+| El DNI no es correcto
+
 ## Entrega de la práctica
 
 **Antes del _ _ de _ a las __:__,** deberán haberse subido a Moodle los siguientes ficheros:

@@ -71,8 +71,26 @@ while not correcto:
 </details>
 
 <details>
+<summary>Solución alternativa I</summary>
 
-<summary>Solución alternativa</summary>
+```python
+print("¿Está seguro de que desea eliminar el archivo? (s)i/(n)o:")
+respuesta = input()
+
+while respuesta != "s" and respuesta != "si" and respuesta != "n" and respuesta != "no":
+    print("¿Está seguro de que desea eliminar el archivo? (s)i/(n)o:")
+    respuesta = input()
+
+if respuesta == "s" or respuesta == "si":
+    print("ARCHIVO ELIMINADO")
+else:
+    print("SKIP")
+```
+
+</details>
+
+<details>
+<summary>Solución alternativa II</summary>
 
 ```python
 correcto = False

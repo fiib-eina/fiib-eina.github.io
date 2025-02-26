@@ -1,10 +1,448 @@
 ---
-title: Teoría 303
-subtitle: Composición iterativa II
+title: Teoría 304
+subtitle: Composición Iterativa III
 format: revealjs
-draft: true
 ---
 
-## Chapter {.center}
+## Tipos de bucles {.center}
+
+---
+
+- En la sesión anterior, vimos que los bucles tienen **usos muy diversos**:
+    - Validar datos, acumular cálculos, repetir mensajes por pantalla, etc.
+- A efectos prácticos, todos cumplen una de estas estructuras:
+    - _Repetir una acción **hasta obtener un resultado deseado**_.
+    - _Repetur una acción **un número determinado de veces**_.
+- La diferencia entre ambos radica en **si previamente conocemos o no el número de iteraciones**.
+
+---
+
+::: {.columns}
+::: {.column width="50%"}
+
+**Sumar números del 1 al 5:**
+
+```python
+suma = 0
+i = 1
+while i <= 5:
+    suma += i
+    i += 1
+print(f"Iteraciones: {i}, Suma: {suma}")
+```
+
+- Sabemos que son 5 iteraciones.
+
+:::
+::: {.column width="50%"}
+
+**Sumar hasta que `suma > 100`:**
+
+```python
+suma = 0
+i = 1
+while suma <= 100:
+    suma += i
+    i += 1
+print(f"Iteraciones: {i}, Suma: {suma}")
+```
+
+- No sabemos cuántas iteraciones serán.
+
+:::
+:::
+
+---
+
+### El patrón se repite
+
+- El bucle `while` permite **cubrir ambos casos**, y es **la opción más flexible**.
+- Sin embargo, **cuando el número de iteraciones es conocido de antemano**, siempre repetimos el mismo patrón.
+
+::: {.columns}
+::: {.column width="50%"}
+
+**Cuando no necesitamos valores de `i`:**
+
+```python
+i = 0
+
+while i < NUM_ITERACIONES:
+    # Código que no usa la i
+    i += 1
+```
+
+:::
+::: {.column width="50%"}
+
+**Cuando vamos a usar la `i`**:
+
+```python
+i = VALOR_INICIAL
+
+while i <= VALOR_FINAL:
+    # Código que depende de la i
+    i += 1
+```
+
+:::
+:::
+
+- Elementos:
+    - Una **variable iteradora**: `i`
+    - Una condición de **finalización del bucle**: `i < NUM_ITERACIONES`
+    - Un **incremento de la variable iteradora**: `i += 1`
+
+---
+
+- Este patrón es tán común que **la mayoría de lenguajes** de programación tienen una **estructura específica** para facilitar usarlo:
+    - La sintaxis: `for`
+- Su funcionamiento específico **varía** según el lenguaje.
+- En el caso de Python, tecnicamente no implementa el patrón `for` sino `for-each`.
+    - **AÚN** NO VAMOS A ABORDAR ESA DIFERENCIA.
+    - De momento, utilizaremos el `for-each` como si fuera un `for`.
+
+---
+
+## El bucle `for` {.center}
+
+---
+
+### Composición Iterativa: `for`
+
+
+::: {.columns}
+::: {.column width="80%"}
+
+- La estructura `for` es una **forma simplificada** de implementar un bucle `while` que itere un número determinado de veces.
+- Se encarga **automáticamente** de:
+    - **Inicializar** la variable iteradora **con el primer valor**.
+    - **Incrementar** la variable iteradora **al final de la iteración**.
+    - **Evaluar** la condición `i < VALOR_FINAL`
+- El **segundo valor** que pasamos a `range` **NO** se incluye en las iteraciones.
+
+```python
+# bloque_de_instrucciones_principal_1
+for i in range(VALOR_INICIAL, VALOR_FINAL):
+    # bloque_de_instrucciones
+# bloque_de_instrucciones_principal_2
+```
+
+:::
+::: {.column width="20%"}
+
+![](./img/for.png)
+
+:::
+:::
+
+---
+
+### Uso de `range()`
+
+- Es **muy importante** tener en cuenta el funcionamiento de `range()` para no comenter [errores _off by one_](./303_composicion_iterativa_while_II.qmd#errores-off-by-one).
+    - `range(N, M)` genera números en el rango `[N, M)`.
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+for i in range(0, 5):
+    print(i)
+```
+:::
+::: {.column width="50%"}
+
+| 0
+| 1
+| 2
+| 3
+| 4
+
+:::
+:::
+
+- El `5` **NO** se incluye en las iteraciones.
+
+---
+
+#### Ejemplo: Repetición de un mensaje 100 veces (for)
+
+```python
+for i in range(0, 100):
+    print("I will lock my computer when I leave my desk")
+```
+
+- Los valores de `i` irán de 0 a 99.
+- Eso da un total de 100 iteraciones.
+
+::: {.callout-tip}
+
+Trata de evitar manías como inicializar `i` a 1 si no es necesario. (`range(1, N+1)`)
+
+```python
+for i in range(1, 100+1):
+    print("I will lock my computer when I leave my desk")
+```
+
+:::
+
+::: {.callout-tip}
+Es posible que tu editor avise de que la variable `i` no se usa en el código.
+Puedes llamarla `_` (barra baja) para indicar que no se va a usar, pero **siempre** tiene que haber una variable después de la palabra clave `for`.
+:::
+
+
+---
+
+#### Ejemplo: Sumar números del 1 al 5 (for)
+
+```python
+suma = 0
+
+for i in range(1, 5+1):
+    suma += i
+
+print(f"Suma: {suma}")
+```
+
+- Aquí **sí** necesitamos usar valores específicos de `i`.
+    - Usamos `5+1` porque resulta más explícito que `6`.
+
+
+---
+
+### Cuando usar `for` y cuando `while`
+
+- ¿Conozco previamente el número de iteraciones (o rango de valores) que necesito?
+    - **Si:** `for`
+    - **No:** `while`
+- **Pistas** (son sugerencias, no reglas):
+    - Si te encuentras creando una variable `i` y la condición tiene la forma `i < N`:
+        - Seguramente puedas usar `for`.
+    - Si te preguntas cómo puedes evaluar una condición distinta de `i < N`:
+        - Probablemente necesites usar `while`.
+    - **Si te preguntas cómo puedes interrumpir** un bucle `for` a mitad:
+        - Casi seguro que necesitas usar `while`.
+
+---
+
+#### Ejercicio: Cuándo usar `for` y `while`
+
+- ¿Qué tipo de bucle usarías para cada uno de los siguientes casos?
+    1. <details><summary>Pedir un dato a un usuario hasta que introduzca un valor correcto.</summary>
+        `while` </details>
+    2. <details><summary>Calcular el factorial de un número.</summary>
+        `for` </details>
+    3. <details><summary>Pedir un número al usuario y mostrar los números pares hasta ese número.</summary>
+        `for` </details>
+    4. <details><summary>Solicitar un número PIN con un máximo de 3 intentos.</summary>
+        `while` </details>
+    5. <details><summary>Invertir las cifras de un número.</summary>
+        `while` </details>
+    6. <details><summary>Solicitar 5 números al usuario y mostrar la media.</summary>
+        `for` </details>
+    7. <details><summary>Solicitar una secuencia de números al usuario y mostrar la media.</summary>
+        `while` </details>
+    8. <details><summary>Solicitar un numero N, solicitar luego N números al usuario y mostrar la media.</summary>
+        `for` </details>
+
+---
+
+#### Ejemplo: Sumar números hasta `n`
+
+Este programa solicita un número `n` al usuario y suma todos los números hasta `n`.
+
+::: {.columns}
+::: {.column width="50%"}
+
+
+```python
+print("Introduce un número:")
+n = int(input())
+
+suma = 0
+for i in range(1, n+1):  # El 0 no lo necesito
+    suma += i
+
+print(f"La suma hasta {n} es {suma}")
+```
+
+:::
+::: {.column width="50%"}
+
+| Introduce un número:
+| **5**
+| La suma hasta 5 es 15
+
+:::
+:::
+
+---
+
+#### Ejemplo: Factorial (for)
+
+Este programa solicita un número `n` al usuario y calcula el factorial de `n`.
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+print("Introduce un número:")
+n = int(input())
+
+factorial = 1
+for i in range(1, n+1):
+    factorial *= i
+
+print(f"{n}! = {factorial}")
+```
+
+:::
+::: {.column width="50%"}
+
+| Introduce un número:
+| **5**
+| 5! = 120
+
+:::
+:::
+
+
+---
+
+#### Ejemplo: Media de 3 números
+
+Este programa solicita 3 números al usuario y calcula la media.
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+suma = 0
+for i in range(1, 3+1):
+    print(f"Introduce el número {i}:")
+    suma += int(input())
+
+media = suma / 3
+print(f"La media de los números es {media}")
+```
+
+:::
+::: {.column width="50%"}
+
+| Introduce el número 1:
+| **2**
+| Introduce el número 2:
+| **4**
+| Introduce el número 3:
+| **6**
+| La media de los números es 4.0
+
+:::
+:::
+
+
+---
+
+#### Ejemplo: Media de N números
+
+Este programa solicita 5 números al usuario y calcula la media.
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+print("Introduce una cantidad:")
+n = int(input())
+
+suma = 0
+for i in range(1, n+1):
+    print(f"Introduce el número {i}:")
+    suma += int(input())
+
+media = suma / n
+print(f"La media de los números es {media}")
+```
+
+:::
+::: {.column width="50%"}
+
+| Introduce una cantidad:
+| **3**
+| Introduce el número 1:
+| **2**
+| Introduce el número 2:
+| **4**
+| Introduce el número 3:
+| **6**
+| La media de los números es 4.0
+
+:::
+:::
+
+---
+
+## Usos avanzados de `for` {.center}
+
+---
+
+### Usos avanzados de `range()`
+
+- La función `range()` es la encargada de determinar el rango de valores que se van a iterar.
+- Realmente existen **tres formas** de usar `range()`:
+    - `range(N)`: Genera valores desde `0` hasta `N-1`.
+    - `range(N, M)`: Genera valores desde `N` hasta `M-1`.
+    - `range(N, M, S)`: Genera valores desde `N` hasta `M-1` **incrementando** `i+=S`.
+- Es decir:
+    - `range(5)` **=** `range(0, 5)` **=** `range(0, 5, 1)`.
+
+
+:::{.callout-tip}
+Aunque resulte tentador escribir menos, **es recomendable** ser explícito y evitar `range(N)` en favor de `range(0, N)`.
+:::
+
+---
+
+#### Ejemplo: Pinta los números pares del 0 al 10
+
+::: {.columns}
+::: {.column width="50%"}
+
+**Usando `range(0, 11)`**
+
+```python
+for i in range(0, 11):
+    if i % 2 == 0:
+        print(i)
+```
+
+| 0
+| 2
+| 4
+| 6
+| 8
+| 10
+
+:::
+::: {.column width="50%"}
+
+**Usando `range(0, 11, 2)`**
+
+```python
+for i in range(0, 11, 2):
+    print(i)
+ 
+```
+
+| 0
+| 2
+| 4
+| 6
+| 8
+| 10
+
+:::
+:::
 
 
