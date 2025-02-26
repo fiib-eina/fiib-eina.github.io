@@ -84,6 +84,41 @@
     "text": "Entrega de la práctica\nTodas las prácticas se entregarán a través de Moodle. Esta Práctica 0 no es evaluable, pero sí se deberá entregar para familiarizarse con el proceso.\nTarea: Entrega el código de la práctica.\n\nVerifica que has nombrado correctamente los ficheros. Un fichero mal nombrado no será evaluado.\nVerifica que has añadido un docstring a cada fichero con tu nombre y NIP.\nVerifica que el funcionamiento de los programas es correcto.\nAccede a la entrega en Moodle y lee si hay instrucciones extra.\nSube los ficheros *.py individualmente (sin comprimir y sin crear carpetas adicionales).\n\nNota: No se aceptarán entregas fuera de plazo. En el caso de que se acerque la fecha límite de entrega, se recomienda al menos subir los ejercicios que se hayan terminado. Se podrán resubir tantas veces como se desee antes de la fecha límite de entrega."
   },
   {
+    "objectID": "src/02_problemas/303-composicion_iterativa_for.html",
+    "href": "src/02_problemas/303-composicion_iterativa_for.html",
+    "title": "Problemas 5",
+    "section": "",
+    "text": "Escribe un programa en Python que solicite al usuario una secuencia de números enteros positivos (terminada en 0) y que calcule la media de los números introducidos. Si el número introducido es negativo, el programa debe ignorarlo y seguir solicitando números.\nIntroduce un número entero:\n2\nIntroduce un número entero:\n-4\nIntroduce un número entero:\n4\nIntroduce un número entero:\n-1\nIntroduce un número entero:\n0\nLa media de los números es: 3.0\n\n\nSolución\n\nsuma = 0\ncontador = 0\n\nnumero = 1\nwhile numero != 0:\n    print(\"Introduce un número entero:\")\n    numero = int(input())\n\n    if numero &gt; 0:\n        suma += numero\n        contador += 1\n\nmedia = suma / contador\nprint(f\"La media de los números es: {media}\")"
+  },
+  {
+    "objectID": "src/02_problemas/303-composicion_iterativa_for.html#media-de-una-secuencia-de-enteros",
+    "href": "src/02_problemas/303-composicion_iterativa_for.html#media-de-una-secuencia-de-enteros",
+    "title": "Problemas 5",
+    "section": "",
+    "text": "Escribe un programa en Python que solicite al usuario una secuencia de números enteros positivos (terminada en 0) y que calcule la media de los números introducidos. Si el número introducido es negativo, el programa debe ignorarlo y seguir solicitando números.\nIntroduce un número entero:\n2\nIntroduce un número entero:\n-4\nIntroduce un número entero:\n4\nIntroduce un número entero:\n-1\nIntroduce un número entero:\n0\nLa media de los números es: 3.0\n\n\nSolución\n\nsuma = 0\ncontador = 0\n\nnumero = 1\nwhile numero != 0:\n    print(\"Introduce un número entero:\")\n    numero = int(input())\n\n    if numero &gt; 0:\n        suma += numero\n        contador += 1\n\nmedia = suma / contador\nprint(f\"La media de los números es: {media}\")"
+  },
+  {
+    "objectID": "src/02_problemas/303-composicion_iterativa_for.html#potencia-enésima",
+    "href": "src/02_problemas/303-composicion_iterativa_for.html#potencia-enésima",
+    "title": "Problemas 5",
+    "section": "2 Potencia enésima",
+    "text": "2 Potencia enésima\nEscribe un programa en Python que solicite al usuario dos números enteros positivos base y exponente y que calcule la potencia enésima de base elevado a exponente. El programa debe comprobar que base sea mayor estricto que cero y exponente sea mayor o igual que cero. No se permite el uso del operador **.\nIntroduce la base:\n2\nIntroduce el exponente:\n3\n2^3 = 8\nIntroduce la base:\n0\nIntroduce la base (mayor que 0):\n2\nIntroduce el exponente:\n-2\nIntroduce el exponente (mayor o igual que 0):\n3\n2^3 = 8\n\n\nSolución\n\nprint(\"Introduce la base:\")\nbase = int(input())\nwhile base &lt;= 0:\n    print(\"Introduce la base (mayor que 0):\")\n    base = int(input())\n\nprint(\"Introduce el exponente:\")\nexponente = int(input())\nwhile exponente &lt; 0:\n    print(\"Introduce el exponente (mayor o igual que 0):\")\n    exponente = int(input())\n\nresultado = 1\nfor i in range(0, exponente):\n    resultado *= base\n\nprint(f\"{base}^{exponente} = {resultado}\")"
+  },
+  {
+    "objectID": "src/02_problemas/303-composicion_iterativa_for.html#caja-de-nxm",
+    "href": "src/02_problemas/303-composicion_iterativa_for.html#caja-de-nxm",
+    "title": "Problemas 5",
+    "section": "3 Caja de NxM",
+    "text": "3 Caja de NxM\nEscribe un programa en Python que solicite al usuario dos números enteros positivos n y m y que dibuje una caja de n filas y m columnas. Las líneas horizontales se representarán con el caracter - (menos), las verticales con el caracter | (barra vertical) y las esquinas con el caracter + (más).\nIntroduce el número de filas:\n3\nIntroduce el número de columnas:\n3\n+---+\n|   |\n|   |\n|   |\n+---+\n\nIntroduce el número de filas:\n3\nIntroduce el número de columnas:\n7\n+-------+\n|       |\n|       |\n|       |\n+-------+\n\n\n\nSolución\n\nprint(\"Introduce el número de filas:\")\nn = int(input())\n\nprint(\"Introduce el número de columnas:\")\nm = int(input())\n\nprint(\"+\", end=\"\")\nfor i in range(0, m):\n    print(\"-\", end=\"\")\nprint(\"+\")\n\nfor i in range(0, n):\n    print(\"|\", end=\"\")\n    for j in range(0, m):\n        print(\" \", end=\"\")\n    print(\"|\")\n\nprint(\"+\", end=\"\")\nfor i in range(0, m):\n    print(\"-\", end=\"\")\nprint(\"+\")"
+  },
+  {
+    "objectID": "src/02_problemas/303-composicion_iterativa_for.html#triángulo-de-caracteres",
+    "href": "src/02_problemas/303-composicion_iterativa_for.html#triángulo-de-caracteres",
+    "title": "Problemas 5",
+    "section": "4 Triángulo de caracteres",
+    "text": "4 Triángulo de caracteres\nEscribe un programa en Python que solicite al usuario un carácter y un número entero positivo n y que dibuje un triángulo de n filas con el carácter introducido.\nIntroduce un carácter:\nx\nIntroduce un número entero:\n3\nx\nxx\nxxx\nIntroduce un carácter:\no\nIntroduce un número entero:\n5\no\noo\nooo\noooo\nooooo\n\n\nSolución\n\nprint(\"Introduce un carácter:\")\ncaracter = input()\nprint(\"Introduce un número entero:\")\nn = int(input())\n\nfor i in range(1, n+1):\n    for j in range(0, i):\n        print(caracter, end=\"\")\n    print()"
+  },
+  {
     "objectID": "src/02_problemas/301-composicion_condicional.html",
     "href": "src/02_problemas/301-composicion_condicional.html",
     "title": "Problemas 3",
@@ -480,7 +515,7 @@
     "href": "index.html",
     "title": "Fundamentos de informática",
     "section": "",
-    "text": "01_teoria/00_presentacion/ Presentación de la Asignatura - Información general \n\n\n01_teoria/01_conceptos_basicos/ Teoría 101 - Computadores y Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 102 - Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 103 - Python \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 201 - Tipos Numerales \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 202 - Texto y Booleanos \n\n\n01_teoria/03_composicion/ Teoría 301 - Composición condicional \n\n\n01_teoria/03_composicion/ Teoría 302 - Composición Iterativa I \n\n\n01_teoria/03_composicion/ Teoría 303 - Composición Iterativa II \n\n\n01_teoria/03_composicion/ Teoría 304 - Composición Iterativa III \n\n\n01_teoria/03_composicion/ Teoría 305 - Composición Iterativa IV \n\n\n02_problemas/ Problemas 1 - Fundamentos \n\n\n02_problemas/ Problemas 2 - Tipos Numéricos \n\n\n02_problemas/ Problemas 3 - Composición condicional \n\n\n02_problemas/ Problemas 4 - Composición iterativa: while \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n03_practicas/p1/ Práctica 1 - Tipos Primitivos \n\n\n03_practicas/p2/ Práctica 2 - Composición condicional \n\n\n\nNo hay resultados"
+    "text": "01_teoria/00_presentacion/ Presentación de la Asignatura - Información general \n\n\n01_teoria/01_conceptos_basicos/ Teoría 101 - Computadores y Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 102 - Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 103 - Python \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 201 - Tipos Numerales \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 202 - Texto y Booleanos \n\n\n01_teoria/03_composicion/ Teoría 301 - Composición condicional \n\n\n01_teoria/03_composicion/ Teoría 302 - Composición Iterativa I \n\n\n01_teoria/03_composicion/ Teoría 303 - Composición Iterativa II \n\n\n01_teoria/03_composicion/ Teoría 304 - Composición Iterativa III \n\n\n01_teoria/03_composicion/ Teoría 305 - Composición Iterativa IV \n\n\n02_problemas/ Problemas 1 - Fundamentos \n\n\n02_problemas/ Problemas 2 - Tipos Numéricos \n\n\n02_problemas/ Problemas 3 - Composición condicional \n\n\n02_problemas/ Problemas 4 - Composición iterativa: while \n\n\n02_problemas/ Problemas 5 - Composición iterativa: for y while \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n03_practicas/p1/ Práctica 1 - Tipos Primitivos \n\n\n03_practicas/p2/ Práctica 2 - Composición condicional \n\n\n\nNo hay resultados"
   },
   {
     "objectID": "src/01_teoria/00_presentacion/000_presentación.html",
