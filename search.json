@@ -217,11 +217,39 @@
     "text": "Chapter"
   },
   {
-    "objectID": "src/01_teoria/03_composicion/306_composicion_iterativa_avanzada.reveal.html#composición-iterativa-v",
-    "href": "src/01_teoria/03_composicion/306_composicion_iterativa_avanzada.reveal.html#composición-iterativa-v",
+    "objectID": "src/01_teoria/03_composicion/306_composicion_iterativa_avanzada.reveal.html#generación-de-números-pseudo-aleatorios",
+    "href": "src/01_teoria/03_composicion/306_composicion_iterativa_avanzada.reveal.html#generación-de-números-pseudo-aleatorios",
     "title": "Teoría 306",
-    "section": "Composición Iterativa V",
-    "text": "Composición Iterativa V"
+    "section": "Generación de números pseudo-aleatorios",
+    "text": "Generación de números pseudo-aleatorios"
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/306_composicion_iterativa_avanzada.reveal.html#cálculo-numérico",
+    "href": "src/01_teoria/03_composicion/306_composicion_iterativa_avanzada.reveal.html#cálculo-numérico",
+    "title": "Teoría 306",
+    "section": "Cálculo numérico",
+    "text": "Cálculo numérico"
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/306_composicion_iterativa_avanzada.html",
+    "href": "src/01_teoria/03_composicion/306_composicion_iterativa_avanzada.html",
+    "title": "Teoría 306",
+    "section": "",
+    "text": "Como se dijo en la primera sesión: los ordenadores son deterministas.\n\nLos programas que escribimos siempre producen el mismo resultado para una misma entrada.\n\nEso tiene sus ventajas:\n\nNos permite predecir el comportamiento de los programas.\nNos permite reproducir errores.\n\nSin embargo, a veces necesitamos aleatoriedad.\n\nJuegos, simulaciones, etc.\n\n\n\n\n\n\n\nLa forma de obtener “aleatoriedad” en un ordenador determinista es mediante los algortimos de generación de números pseudo-aleatorios.\nEstos algoritmos generan una secuencia de números que estadísticamente se comportan como si fueran aleatorios.\n\nEl algoritmo genera un nuevo número a partir del anterior: \\(x_n = f(x_{n-1})\\).\nNecesita un valor \\(x_0\\) para empezar.\n\nEste valor \\(x_0\\) inicial se denomina semilla.\n\nSi utilizamos la misma semilla, obtendremos la misma secuencia.\nDeberemos, entonces, dar con la forma de obtener esa primera semilla de forma segura.\n\n\n\n\n\n\n\nElegir la semilla para un programa pseudo-aleatorio puede ser un labor crítica de seguridad.\n\nSi se compromete la secuencia de números, se compromete la seguridad del sistema.\n\nExisten diversas fuentes que podemos usar para obtener una semilla (de menos segura, a más segura):\n\nPedir al usuario que introduzca un número.\nLeer la hora del sistema.\nLeer la temperatura del procesador.\nLeer la posición del ratón.\nLeer la entrada del usuario.\nUtilizar Hardware especializado.\n\n\n\n\n\nLavarand, the Wall of Entropy @ Cloudflare\n\n\n\n\n\n\n\nExisten algoritmos sencillos que podemos usar para generar números pseudo-aleatorios.\n\nSi bien es cierto que no son seguros, pueden ser útiles para fines didácticos.\n\nA modo de ejemplo, vamos a ver cómo funciona el algoritmo de congruencia lineal.\n\n\\(x_{n+1} = (a \\cdot x_n + c) \\mod m\\)\n\\(m&gt;0\\), \\(0 \\leq a &lt; m\\), \\(0 \\leq c &lt; m\\), \\(0 \\leq x_0 &lt; m\\)\n\n\n\n\nseed = 42\na = 22695477\nc = 1\nm = 2 ** 32\n\nfor i in range(0, 5):\n    seed = (a * seed + c) % m\n    print(seed)\n\n953210035\n3724055312\n1961185873\n1409857734\n3384186111\n\n\n\n\n\n\n\nEn lugar de implementar vuestra propia función de generación de números pseudo-aleatorios, podéis y deberéis utilizar librerías sofisticadas y seguras.\nEn Python, la librería random proporciona funciones para generar números pseudo-aleatorios.\n\nrandom.seed() establece la semilla.\nrandom.randint(a, b) genera un número entero aleatorio entre a y b.\nrandom.random() genera un número real aleatorio entre 0 y 1.\n\n\n\n\nimport random\n\nrandom.seed(42)\n\nfor i in range(0, 5):\n    print(random.randint(0, 2**32))\n\n2746317213\n1181241943\n958682846\n3163119785\n1812140441\n\n\n\n\n\nEscribe un programa en Python que simule un chequeo de habilidad: - El programa debe lanzar un dado de D20 (20 caras). - Si el resultado es mayor o igual que el umbral de habilidad (que el usuario introduce), el chequeo es exitoso.\nimport random\n\nrandom.seed(42)  # Semilla fija para reproducibilidad\n\nprint(\"Introduce el umbral de habilidad:\")\numbral = int(input())\n\nresultado = random.randint(1, 20)\nprint(f\"Resultado: {resultado}\")\nif resultado &gt;= umbral:\n    print(\"Pass!\")\nelse:\n    print(\"Fail!\")"
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/306_composicion_iterativa_avanzada.html#generación-de-números-pseudo-aleatorios",
+    "href": "src/01_teoria/03_composicion/306_composicion_iterativa_avanzada.html#generación-de-números-pseudo-aleatorios",
+    "title": "Teoría 306",
+    "section": "",
+    "text": "Como se dijo en la primera sesión: los ordenadores son deterministas.\n\nLos programas que escribimos siempre producen el mismo resultado para una misma entrada.\n\nEso tiene sus ventajas:\n\nNos permite predecir el comportamiento de los programas.\nNos permite reproducir errores.\n\nSin embargo, a veces necesitamos aleatoriedad.\n\nJuegos, simulaciones, etc.\n\n\n\n\n\n\n\nLa forma de obtener “aleatoriedad” en un ordenador determinista es mediante los algortimos de generación de números pseudo-aleatorios.\nEstos algoritmos generan una secuencia de números que estadísticamente se comportan como si fueran aleatorios.\n\nEl algoritmo genera un nuevo número a partir del anterior: \\(x_n = f(x_{n-1})\\).\nNecesita un valor \\(x_0\\) para empezar.\n\nEste valor \\(x_0\\) inicial se denomina semilla.\n\nSi utilizamos la misma semilla, obtendremos la misma secuencia.\nDeberemos, entonces, dar con la forma de obtener esa primera semilla de forma segura.\n\n\n\n\n\n\n\nElegir la semilla para un programa pseudo-aleatorio puede ser un labor crítica de seguridad.\n\nSi se compromete la secuencia de números, se compromete la seguridad del sistema.\n\nExisten diversas fuentes que podemos usar para obtener una semilla (de menos segura, a más segura):\n\nPedir al usuario que introduzca un número.\nLeer la hora del sistema.\nLeer la temperatura del procesador.\nLeer la posición del ratón.\nLeer la entrada del usuario.\nUtilizar Hardware especializado.\n\n\n\n\n\nLavarand, the Wall of Entropy @ Cloudflare\n\n\n\n\n\n\n\nExisten algoritmos sencillos que podemos usar para generar números pseudo-aleatorios.\n\nSi bien es cierto que no son seguros, pueden ser útiles para fines didácticos.\n\nA modo de ejemplo, vamos a ver cómo funciona el algoritmo de congruencia lineal.\n\n\\(x_{n+1} = (a \\cdot x_n + c) \\mod m\\)\n\\(m&gt;0\\), \\(0 \\leq a &lt; m\\), \\(0 \\leq c &lt; m\\), \\(0 \\leq x_0 &lt; m\\)\n\n\n\n\nseed = 42\na = 22695477\nc = 1\nm = 2 ** 32\n\nfor i in range(0, 5):\n    seed = (a * seed + c) % m\n    print(seed)\n\n953210035\n3724055312\n1961185873\n1409857734\n3384186111\n\n\n\n\n\n\n\nEn lugar de implementar vuestra propia función de generación de números pseudo-aleatorios, podéis y deberéis utilizar librerías sofisticadas y seguras.\nEn Python, la librería random proporciona funciones para generar números pseudo-aleatorios.\n\nrandom.seed() establece la semilla.\nrandom.randint(a, b) genera un número entero aleatorio entre a y b.\nrandom.random() genera un número real aleatorio entre 0 y 1.\n\n\n\n\nimport random\n\nrandom.seed(42)\n\nfor i in range(0, 5):\n    print(random.randint(0, 2**32))\n\n2746317213\n1181241943\n958682846\n3163119785\n1812140441\n\n\n\n\n\nEscribe un programa en Python que simule un chequeo de habilidad: - El programa debe lanzar un dado de D20 (20 caras). - Si el resultado es mayor o igual que el umbral de habilidad (que el usuario introduce), el chequeo es exitoso.\nimport random\n\nrandom.seed(42)  # Semilla fija para reproducibilidad\n\nprint(\"Introduce el umbral de habilidad:\")\numbral = int(input())\n\nresultado = random.randint(1, 20)\nprint(f\"Resultado: {resultado}\")\nif resultado &gt;= umbral:\n    print(\"Pass!\")\nelse:\n    print(\"Fail!\")"
+  },
+  {
+    "objectID": "src/01_teoria/03_composicion/306_composicion_iterativa_avanzada.html#cálculo-numérico",
+    "href": "src/01_teoria/03_composicion/306_composicion_iterativa_avanzada.html#cálculo-numérico",
+    "title": "Teoría 306",
+    "section": "2 Cálculo numérico",
+    "text": "2 Cálculo numérico\n\n\n2.1 Cálculo numérico\n\nUno de los primeros usos de la computación fue el cálculo numérico.\n\nEl cálculo numérico consiste en aproximar soluciones a problemas matemáticos.\n\nLos bucles y los números pseudo-aleatorios son dos herramientas muy útiles para realizar cálculos numéricos.\n\n\n\n2.1.1 Ejercicio: Aproximación de una integral por el método del punto medio\nEscribe un programa Python que calcule la integral de la función \\(f(x) = x^3\\) en el intervalo [0, 1] mediante la regla del punto medio.\nAnalíticamente:\n\\[\n\\int_{0}^{1} x^3 \\, dx = \\left.\\frac{x^4}{4}\\right|_0^1 = \\frac{1^4}{4} - \\frac{0^4}{4} = \\frac{1}{4}\n\\]\nNuméricamente\n\n\n\nPodemos aproximar numéricamente la integral:\n\nDividiendo el intervalo en subintervalos pequeños.\nCalculando el área de cada subintervalo.\n\n\n\n\n\n\n\nSolución:\ninicio = 0\nfin = 1\nintervalos = 1000\npaso = (fin - inicio) / intervalos\n\nintegral = 0  # acumulador\n\nx = inicio\nwhile x &lt; fin:\n    y = x ** 3  # f(x) = x^3\n    area = paso * y\n    integral += area\n    x += paso\n\nprint(integral)\n\n\n\n\n\n\n¿Por qué no podemos usar range(a, b, step)?\n\nLa función range solo acepta números enteros.\n¿Se te ocurre alguna forma de solucionarlo?\n\n\n\n\n\n\n\n2.1.2 Ejercicio: Aproximación de coseno por serie de Maclaurin\nEscribe un programa Python que calcule una aproximación del coseno de un número real x mediante la serie de Maclaurin:\n\\[\n\\cos(x) = \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{(2n)!}x^{2n} = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\frac{x^6}{6!} + \\cdots\n\\]\nEl programa debe solicitar el ángulo en radianes x y el número de términos n a sumar.\n\nSolución:\nimport math\n\nprint(\"Introduce el ángulo (en radianes):\")\nx = float(input())\nprint(\"Introduce el número de términos:\")\nn = int(input())\n\ncos_approx = 0\nfor i in range(0, n):\n    cos_approx += ((-1) ** i) * ((x ** (2 * i)) / math.factorial(2 * i))\n\nprint(cos_approx)\n\n\n\n2.1.3 Ejercicio: Aproximación de pi por método de Monte Carlo\nEscribe un programa Python que calcule una aproximación de \\(\\pi\\) mediante el método de Monte Carlo (simulación y conteo).\n\nSabemos que:\n\nPara un círculo de radio 1: \\(area_{círculo} = \\pi\\).\nPara un cuadrado de lado 2: \\(area_{cuadrado} = 4\\).\n\\(\\frac{area_{círculo}}{area_{cuadrado}} = \\frac{\\pi}{4}\\).\n\\(\\pi = 4 \\times \\frac{area_{círculo}}{area_{cuadrado}}\\).\n\n\n\n\nSimulamos que lanzamos dardos aleatoriamente en el cuadrado\n\nGeneramos puntos (x, y) aleatorios en el cuadrado.\nContamos cuantos caen dentro del círculo: \\(x^2 + y^2 \\leq 1\\).\nLa probabilidad de que un dardo caiga dentro del círculo es \\(\\frac{\\pi}{4}\\).\n\nUn\n\n\\(\\pi \\approx 4 \\times \\frac{dardos_{dentro}}{dardos_{total}}\\).\n\n\n\n\nSolución:\nimport random\n\nnum_dardos = 1000\n\ndardos_dentro = 0\nfor i in range(0, num_dardos):\n    x = random.uniform(-1, 1)\n    y = random.uniform(-1, 1)\n    if x ** 2 + y ** 2 &lt;= 1:\n        dardos_dentro += 1\n\npi_approx = 4 * dardos_dentro / num_dardos\nprint(pi_approx)"
   },
   {
     "objectID": "src/01_teoria/03_composicion/304_composicion_iterativa_for.reveal.html#tipos-de-bucles",
@@ -515,7 +543,7 @@
     "href": "index.html",
     "title": "Fundamentos de informática",
     "section": "",
-    "text": "01_teoria/00_presentacion/ Presentación de la Asignatura - Información general \n\n\n01_teoria/01_conceptos_basicos/ Teoría 101 - Computadores y Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 102 - Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 103 - Python \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 201 - Tipos Numerales \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 202 - Texto y Booleanos \n\n\n01_teoria/03_composicion/ Teoría 301 - Composición condicional \n\n\n01_teoria/03_composicion/ Teoría 302 - Composición Iterativa I \n\n\n01_teoria/03_composicion/ Teoría 303 - Composición Iterativa II \n\n\n01_teoria/03_composicion/ Teoría 304 - Composición Iterativa III \n\n\n01_teoria/03_composicion/ Teoría 305 - Composición Iterativa IV \n\n\n02_problemas/ Problemas 1 - Fundamentos \n\n\n02_problemas/ Problemas 2 - Tipos Numéricos \n\n\n02_problemas/ Problemas 3 - Composición condicional \n\n\n02_problemas/ Problemas 4 - Composición iterativa: while \n\n\n02_problemas/ Problemas 5 - Composición iterativa: for y while \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n03_practicas/p1/ Práctica 1 - Tipos Primitivos \n\n\n03_practicas/p2/ Práctica 2 - Composición condicional \n\n\n\nNo hay resultados"
+    "text": "01_teoria/00_presentacion/ Presentación de la Asignatura - Información general \n\n\n01_teoria/01_conceptos_basicos/ Teoría 101 - Computadores y Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 102 - Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 103 - Python \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 201 - Tipos Numerales \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 202 - Texto y Booleanos \n\n\n01_teoria/03_composicion/ Teoría 301 - Composición condicional \n\n\n01_teoria/03_composicion/ Teoría 302 - Composición Iterativa I \n\n\n01_teoria/03_composicion/ Teoría 303 - Composición Iterativa II \n\n\n01_teoria/03_composicion/ Teoría 304 - Composición Iterativa III \n\n\n01_teoria/03_composicion/ Teoría 305 - Composición Iterativa IV \n\n\n01_teoria/03_composicion/ Teoría 306 - Composición Iterativa V \n\n\n02_problemas/ Problemas 1 - Fundamentos \n\n\n02_problemas/ Problemas 2 - Tipos Numéricos \n\n\n02_problemas/ Problemas 3 - Composición condicional \n\n\n02_problemas/ Problemas 4 - Composición iterativa: while \n\n\n02_problemas/ Problemas 5 - Composición iterativa: for y while \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n03_practicas/p1/ Práctica 1 - Tipos Primitivos \n\n\n03_practicas/p2/ Práctica 2 - Composición condicional \n\n\n03_practicas/p3/ Práctica 3 - Composición iterativa \n\n\n\nNo hay resultados"
   },
   {
     "objectID": "src/01_teoria/00_presentacion/000_presentación.html",
@@ -826,11 +854,18 @@
     "text": "Otros usos avanzados de los bucles"
   },
   {
-    "objectID": "src/01_teoria/04_modularizacion_de_codigo/401_funciones_puras.reveal.html#chapter",
-    "href": "src/01_teoria/04_modularizacion_de_codigo/401_funciones_puras.reveal.html#chapter",
+    "objectID": "src/01_teoria/04_modularizacion_de_codigo/401_funciones_puras.reveal.html#funciones",
+    "href": "src/01_teoria/04_modularizacion_de_codigo/401_funciones_puras.reveal.html#funciones",
     "title": "Teoría 401",
-    "section": "Chapter",
-    "text": "Chapter"
+    "section": "Funciones",
+    "text": "Funciones"
+  },
+  {
+    "objectID": "src/01_teoria/04_modularizacion_de_codigo/401_funciones_puras.reveal.html#scope",
+    "href": "src/01_teoria/04_modularizacion_de_codigo/401_funciones_puras.reveal.html#scope",
+    "title": "Teoría 401",
+    "section": "Scope",
+    "text": "Scope"
   },
   {
     "objectID": "src/01_teoria/04_modularizacion_de_codigo/403_modulos.reveal.html#chapter",
@@ -999,5 +1034,47 @@
     "title": "Práctica 1",
     "section": "5 Entrega de la práctica",
     "text": "5 Entrega de la práctica\nAntes del sábado 15 de febrero a las 18:00, deberán haberse subido a Moodle los siguientes ficheros:\n\npulgadas.py\nfahrenheit.py\nyenes.py\nrectangulo.py\nhotel.py\nentre_pares.py"
+  },
+  {
+    "objectID": "src/03_practicas/p3/302_composicion_iterativa.html",
+    "href": "src/03_practicas/p3/302_composicion_iterativa.html",
+    "title": "Práctica 3",
+    "section": "",
+    "text": "Las cajas fuertes de dial (o de combinación) son un tipo de caja fuerte que se abre mediante la introducción de una secuencia de números. La caja fuerte del West Bank se abre introduciendo tres números secretos (8, 23, 42).\n\nSi se acierta un número:\n\nLa caja emitirá un chasquido (tick),\ny se podrá introducir el siguiente número.\n\nSi falla en alguno:\n\nLa caja se reseterará mitiendo un sonido (clonk),\ny tendrás que volver a empezar con el primer número.\n\nSi aciertan los 3 números seguidos, sin fallos:\n\nLa caja fuerte se abrirá.\nMensaje: &lt;se abre&gt;\n\nEl usuario puede rendirse en cualquier momento introduciendo un 0.\n\n\nBienvenido al West Bank!\n&lt;frente a la caja fuerte&gt;\n8\ntick\n23\ntick\n42\ntick\n&lt;se abre&gt;\nBienvenido al West Bank!\n&lt;frente a la caja fuerte&gt;\n8\ntick\n1\nclonk\n8\ntick\n23\ntick\n42\ntick\n&lt;se abre&gt;\nBienvenido al West Bank!\n&lt;frente a la caja fuerte&gt;\n1\nclonk\n2\nclonk\n0\n&lt;se aleja caminando&gt;\nEntrega: Escribe tu programa en un fichero denominado westbank.py."
+  },
+  {
+    "objectID": "src/03_practicas/p3/302_composicion_iterativa.html#la-caja-fuerte-del-west-bank",
+    "href": "src/03_practicas/p3/302_composicion_iterativa.html#la-caja-fuerte-del-west-bank",
+    "title": "Práctica 3",
+    "section": "",
+    "text": "Las cajas fuertes de dial (o de combinación) son un tipo de caja fuerte que se abre mediante la introducción de una secuencia de números. La caja fuerte del West Bank se abre introduciendo tres números secretos (8, 23, 42).\n\nSi se acierta un número:\n\nLa caja emitirá un chasquido (tick),\ny se podrá introducir el siguiente número.\n\nSi falla en alguno:\n\nLa caja se reseterará mitiendo un sonido (clonk),\ny tendrás que volver a empezar con el primer número.\n\nSi aciertan los 3 números seguidos, sin fallos:\n\nLa caja fuerte se abrirá.\nMensaje: &lt;se abre&gt;\n\nEl usuario puede rendirse en cualquier momento introduciendo un 0.\n\n\nBienvenido al West Bank!\n&lt;frente a la caja fuerte&gt;\n8\ntick\n23\ntick\n42\ntick\n&lt;se abre&gt;\nBienvenido al West Bank!\n&lt;frente a la caja fuerte&gt;\n8\ntick\n1\nclonk\n8\ntick\n23\ntick\n42\ntick\n&lt;se abre&gt;\nBienvenido al West Bank!\n&lt;frente a la caja fuerte&gt;\n1\nclonk\n2\nclonk\n0\n&lt;se aleja caminando&gt;\nEntrega: Escribe tu programa en un fichero denominado westbank.py."
+  },
+  {
+    "objectID": "src/03_practicas/p3/302_composicion_iterativa.html#serie-de-leibniz",
+    "href": "src/03_practicas/p3/302_composicion_iterativa.html#serie-de-leibniz",
+    "title": "Práctica 3",
+    "section": "2 Serie de Leibniz",
+    "text": "2 Serie de Leibniz\nEn matemáticas, la serie de Leibniz es una serie infinita que sirve para calcular el número \\(\\pi\\) de forma aproximada.\n\\[\n\\sum_{n=0}^{\\infty}\\frac{(-1)^{n}}{2n+1}= 1 - \\frac{1}{3} + \\frac{1}{5} -\\frac{1}{7} + \\frac{1}{9} -\\cdots = \\frac{\\pi}{4}\n\\]\nEscribe un programa Python que calcule una aproximación de \\(\\pi\\) mediante la serie de Leibniz. El programa ha de solicitar al usuario un número entero positivo n y calcular la suma de los n primeros términos de la serie de Leibniz. Finalmente, calculará y mostrará: el valor aproximado, el valor original (puedes usar el valor de math.pi) y el error entre ellos.\nNúmero de términos:\n10\nValor aproximado: 3.0418396189294032\nValor original: 3.141592653589793\nError: 0.09975303466038987\nNúmero de términos:\n100\nValor aproximado: 3.1315929035585537\nValor original: 3.141592653589793\nError: 0.00999975003123943\nEntrega: Escribe tu programa en un fichero denominado leibniz.py."
+  },
+  {
+    "objectID": "src/03_practicas/p3/302_composicion_iterativa.html#mano-fuerte-mano-débil",
+    "href": "src/03_practicas/p3/302_composicion_iterativa.html#mano-fuerte-mano-débil",
+    "title": "Práctica 3",
+    "section": "3 Mano fuerte, mano débil",
+    "text": "3 Mano fuerte, mano débil\nEn el juego de “Mano fuerte, mano débil” se enfrentan dos jugadores. Cada uno recibe dos cartas de una baraja de poker. El valor de cada carta viene dado por la siguiente tabla:\n\n\n\n2-10\nJ\nQ\nK\nA\n\n\n\n\n2-10\n11\n12\n13\n14\n\n\n\nUna mano gana a otra si ambas cartas son superiores a las del rival (no importa la posición de la carta)\n\n14, 3 gana a 2, 13 (porque 14&gt;13 y 3&gt;2)\n14, 3 gana a 13, 2 (porque 14&gt;13 y 3&gt;2)\n14, 2 empata con 3, 3 (porque 14&gt;3 y 2&lt;3)\n8, 4 pierde con 14, 8 (porque 8&gt;4 y 14&gt;8)\n8, 4 empata con 8, 8 (porque 4&lt;8 y 8=8)\nEsto genera varias reglas implícitas:\n\nSacar un 14 (as) garantiza victoria o empate. (Ninguna mano puede ganarte porque, como mínimo, empatas).\nSacar un 2 (carta más baja) garantiza cero victorias. (Cualquier mano te gana o empata).\n\n\nLa siguiente tabla ilustra todas las combinaciones posibles para la mano 8, 10.\n\n\n\n\n2\n3\n4\n5\n6\n7\n8\n9\nT\nJ\nQ\nK\nA\n\n\n\n\n2\no\no\no\no\no\no\no\no\n\n\n\n\n\n\n\n3\no\no\no\no\no\no\no\no\n\n\n\n\n\n\n\n4\no\no\no\no\no\no\no\no\n\n\n\n\n\n\n\n5\no\no\no\no\no\no\no\no\n\n\n\n\n\n\n\n6\no\no\no\no\no\no\no\no\n\n\n\n\n\n\n\n7\no\no\no\no\no\no\no\no\n\n\n\n\n\n\n\n8\no\no\no\no\no\no\n\n\n\n\n\n\n\n\n\n9\no\no\no\no\no\no\n\n\n\nx\nx\nx\nx\n\n\n10\n\n\n\n\n\n\n\n\n\nx\nx\nx\nx\n\n\n11\n\n\n\n\n\n\n\nx\nx\nx\nx\nx\nx\n\n\n12\n\n\n\n\n\n\n\nx\nx\nx\nx\nx\nx\n\n\n13\n\n\n\n\n\n\n\nx\nx\nx\nx\nx\nx\n\n\n14\n\n\n\n\n\n\n\nx\nx\nx\nx\nx\nx\n\n\n\nEscribe un programa Python que, dada una mano de un jugador (introducidas como los dos puntos de cada carta), calcule cuantas combinaciones ganan, cuantas empatan y cuantas pierden. NO has de tener en cuenta las probabilidades de que salga una carta, sólo contar cuantas combinaciones ganan, empatan o pierden.\nIntroduce la primera carta:\n14\nIntroduce la segunda carta:\n14\nVictorias: 144\nEmpates: 25\nDerrotas: 0\nIntroduce la primera carta:\n8\nIntroduce la segunda carta:\n10\nVictorias: 60\nEmpates: 77\nDerrotas: 32\nEntrega: Escribe tu programa en un fichero denominado manofuerte.py."
+  },
+  {
+    "objectID": "src/03_practicas/p3/302_composicion_iterativa.html#mano-fuerte-mano-débil-ii",
+    "href": "src/03_practicas/p3/302_composicion_iterativa.html#mano-fuerte-mano-débil-ii",
+    "title": "Práctica 3",
+    "section": "4 Mano fuerte, mano débil (II)",
+    "text": "4 Mano fuerte, mano débil (II)\nPartiendo del ejercicio anterior (crea una copia del ejercicio una vez lo hayas acabado), extiende el funcionamiento del mismo añadiendo la represantación de la tabla de casos. En dicha tabla:\n\no indica que tu mano gana.\nx indica que tu mano pierde.\n. indica que tu mano empata.\n\nTip: Recuerda lo aprendido en el ejercicio Dibujar tablas de multiplicar\nIntroduce la primera carta:\n8\nIntroduce la segunda carta:\n10\n\n  | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | T | J | Q | K | A |\n2 | o | o | o | o | o | o | o | o | . | . | . | . | . |\n3 | o | o | o | o | o | o | o | o | . | . | . | . | . |\n4 | o | o | o | o | o | o | o | o | . | . | . | . | . |\n5 | o | o | o | o | o | o | o | o | . | . | . | . | . |\n6 | o | o | o | o | o | o | o | o | . | . | . | . | . |\n7 | o | o | o | o | o | o | o | o | . | . | . | . | . |\n8 | o | o | o | o | o | o | . | . | . | . | . | . | . |\n9 | o | o | o | o | o | o | . | . | . | x | x | x | x |\nT | . | . | . | . | . | . | . | . | . | x | x | x | x |\nJ | . | . | . | . | . | . | . | x | x | x | x | x | x |\nQ | . | . | . | . | . | . | . | x | x | x | x | x | x |\nK | . | . | . | . | . | . | . | x | x | x | x | x | x |\nA | . | . | . | . | . | . | . | x | x | x | x | x | x |\n\nVictorias: 60\nEmpates: 77\nDerrotas: 32\nEntrega: Escribe tu programa en un fichero denominado manofuerte2.py."
+  },
+  {
+    "objectID": "src/03_practicas/p3/302_composicion_iterativa.html#entrega-de-la-práctica",
+    "href": "src/03_practicas/p3/302_composicion_iterativa.html#entrega-de-la-práctica",
+    "title": "Práctica 3",
+    "section": "5 Entrega de la práctica",
+    "text": "5 Entrega de la práctica\nAntes del 15 de marzo a las 18:00, deberán haberse subido a Moodle los siguientes ficheros:\n\nwestbank.py\nleibniz.py\nmanofuerte.py\nmanofuerte2.py"
   }
 ]

@@ -200,49 +200,197 @@
 </div>
 
 </section>
-<section id="composición-iterativa-v" class="slide level2 center">
-<h2>Composición Iterativa V</h2>
-<!-- TODO: Pillar ideas de los ejercicios de MEC -->
+<section id="generación-de-números-pseudo-aleatorios" class="slide level2 center">
+<h2>Generación de números pseudo-aleatorios</h2>
 </section>
 <section class="slide level2">
 
-<h3 id="cálculo-numérico-ii">Cálculo numérico II</h3>
+<h3 id="el-determinismo-en-la-informática">El determinismo en la informática</h3>
+<ul>
+<li>Como se dijo en la primera sesión: los ordenadores son <strong>deterministas</strong>.
+<ul>
+<li>Los programas que escribimos siempre producen el mismo resultado para una misma entrada.</li>
+</ul></li>
+<li>Eso tiene sus <strong>ventajas</strong>:
+<ul>
+<li>Nos permite <strong>predecir</strong> el comportamiento de los programas.</li>
+<li>Nos permite <strong>reproducir</strong> errores.</li>
+</ul></li>
+<li>Sin embargo, a veces necesitamos <strong>aleatoriedad</strong>.
+<ul>
+<li>Juegos, simulaciones, etc.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="números-pseudo-aleatorios">Números pseudo-aleatorios</h3>
+<ul>
+<li>La forma de obtener <em>“aleatoriedad”</em> en un ordenador determinista es mediante los <strong>algortimos de generación de números pseudo-aleatorios</strong>.</li>
+<li>Estos algoritmos generan una <strong>secuencia de números</strong> que <strong>estadísticamente</strong> se comportan como si fueran aleatorios.
+<ul>
+<li>El algoritmo genera un nuevo número a partir del anterior: <span class="math inline">\(x_n = f(x_{n-1})\)</span>.</li>
+<li>Necesita un valor <span class="math inline">\(x_0\)</span> para empezar.</li>
+</ul></li>
+<li>Este valor <span class="math inline">\(x_0\)</span> inicial se denomina <strong>semilla</strong>.
+<ul>
+<li>Si utilizamos <strong>la misma semilla</strong>, obtendremos <strong>la misma secuencia</strong>.</li>
+<li>Deberemos, entonces, dar con la forma de <strong>obtener esa primera semilla de forma segura</strong>.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="orígenes-de-semillas">Orígenes de semillas</h3>
+<ul>
+<li>Elegir la <strong>semilla</strong> para un programa pseudo-aleatorio puede ser un labor crítica de <strong>seguridad</strong>.
+<ul>
+<li>Si se compromete la secuencia de números, se compromete la seguridad del sistema.</li>
+</ul></li>
+<li>Existen diversas fuentes que podemos usar para obtener una semilla (de menos segura, a más segura):
+<ul>
+<li>Pedir al usuario que <strong>introduzca un número</strong>.</li>
+<li>Leer la <strong>hora del sistema</strong>.</li>
+<li>Leer la <strong>temperatura del procesador</strong>.</li>
+<li>Leer la <strong>posición del ratón</strong>.</li>
+<li>Leer la <strong>entrada del usuario</strong>.</li>
+<li>Utilizar <strong>Hardware especializado</strong>.</li>
+</ul></li>
+</ul>
+
+<img data-src="./img/lavarand.jpg" class="r-stretch quarto-figure-center"><p class="caption">Lavarand, the Wall of Entropy @ Cloudflare</p></section>
+<section class="slide level2">
+
+<h3 id="números-pseudo-aleatorios-a-mano">Números pseudo-aleatorios a mano</h3>
+<ul>
+<li>Existen algoritmos sencillos que podemos usar para generar números pseudo-aleatorios.
+<ul>
+<li>Si bien es cierto que no son seguros, pueden ser útiles para <strong>fines didácticos</strong>.</li>
+</ul></li>
+<li>A modo de ejemplo, vamos a ver cómo funciona el <strong>algoritmo de congruencia lineal</strong>.
+<ul>
+<li><span class="math inline">\(x_{n+1} = (a \cdot x_n + c) \mod m\)</span></li>
+<li><span class="math inline">\(m&gt;0\)</span>, <span class="math inline">\(0 \leq a &lt; m\)</span>, <span class="math inline">\(0 \leq c &lt; m\)</span>, <span class="math inline">\(0 \leq x_0 &lt; m\)</span></li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>seed <span class="op">=</span> <span class="dv">42</span></span>
+<span id="cb1-2"><a></a>a <span class="op">=</span> <span class="dv">22695477</span></span>
+<span id="cb1-3"><a></a>c <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-4"><a></a>m <span class="op">=</span> <span class="dv">2</span> <span class="op">**</span> <span class="dv">32</span></span>
+<span id="cb1-5"><a></a></span>
+<span id="cb1-6"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">5</span>):</span>
+<span id="cb1-7"><a></a>    seed <span class="op">=</span> (a <span class="op">*</span> seed <span class="op">+</span> c) <span class="op">%</span> m</span>
+<span id="cb1-8"><a></a>    <span class="bu">print</span>(seed)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="line-block">953210035<br>
+3724055312<br>
+1961185873<br>
+1409857734<br>
+3384186111</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h3 id="números-pseudo-aleatorios-en-python">Números pseudo-aleatorios en Python</h3>
+<ul>
+<li>En lugar de implementar vuestra propia función de generación de números pseudo-aleatorios, podéis y <strong>deberéis</strong> utilizar librerías sofisticadas y seguras.</li>
+<li>En Python, la librería <code>random</code> proporciona funciones para generar números pseudo-aleatorios.
+<ul>
+<li><code>random.seed()</code> establece <strong>la semilla</strong>.</li>
+<li><code>random.randint(a, b)</code> genera un <strong>número entero</strong> aleatorio entre <code>a</code> y <code>b</code>.</li>
+<li><code>random.random()</code> genera un <strong>número real</strong> aleatorio entre 0 y 1.</li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> random</span>
+<span id="cb2-2"><a></a></span>
+<span id="cb2-3"><a></a>random.seed(<span class="dv">42</span>)</span>
+<span id="cb2-4"><a></a></span>
+<span id="cb2-5"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">5</span>):</span>
+<span id="cb2-6"><a></a>    <span class="bu">print</span>(random.randint(<span class="dv">0</span>, <span class="dv">2</span><span class="op">**</span><span class="dv">32</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="line-block">2746317213<br>
+1181241943<br>
+958682846<br>
+3163119785<br>
+1812140441</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-ability-check">Ejemplo: Ability Check</h4>
+<p>Escribe un programa en Python que simule un <strong>chequeo de habilidad</strong>: - El programa debe lanzar un dado de D20 (20 caras). - Si el resultado es mayor o igual que el umbral de habilidad (que el usuario introduce), el chequeo es <strong>exitoso</strong>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">import</span> random</span>
+<span id="cb3-2"><a></a></span>
+<span id="cb3-3"><a></a>random.seed(<span class="dv">42</span>)  <span class="co"># Semilla fija para reproducibilidad</span></span>
+<span id="cb3-4"><a></a></span>
+<span id="cb3-5"><a></a><span class="bu">print</span>(<span class="st">"Introduce el umbral de habilidad:"</span>)</span>
+<span id="cb3-6"><a></a>umbral <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb3-7"><a></a></span>
+<span id="cb3-8"><a></a>resultado <span class="op">=</span> random.randint(<span class="dv">1</span>, <span class="dv">20</span>)</span>
+<span id="cb3-9"><a></a><span class="bu">print</span>(<span class="ss">f"Resultado: </span><span class="sc">{</span>resultado<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb3-10"><a></a><span class="cf">if</span> resultado <span class="op">&gt;=</span> umbral:</span>
+<span id="cb3-11"><a></a>    <span class="bu">print</span>(<span class="st">"Pass!"</span>)</span>
+<span id="cb3-12"><a></a><span class="cf">else</span>:</span>
+<span id="cb3-13"><a></a>    <span class="bu">print</span>(<span class="st">"Fail!"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="cálculo-numérico" class="slide level2 center">
+<h2>Cálculo numérico</h2>
+</section>
+<section class="slide level2">
+
+<h3 id="cálculo-numérico-1">Cálculo numérico</h3>
 <ul>
 <li>Uno de los primeros usos de la computación fue el <strong>cálculo numérico</strong>.
 <ul>
 <li>El cálculo numérico consiste en <strong>aproximar</strong> soluciones a problemas matemáticos.</li>
 </ul></li>
-<li>Los bucles <code>for</code> son una herramienta muy útil para realizar cálculos numéricos.</li>
+<li>Los <strong>bucles</strong> y <strong>los números pseudo-aleatorios</strong> son dos herramientas muy útiles para realizar <strong>cálculos numéricos</strong>.</li>
 </ul>
 </section>
 <section class="slide level2">
 
-<h4 id="ejercicio-calcular-una-integral-de-forma-numérica">Ejercicio: Calcular una integral de forma numérica</h4>
+<h4 id="ejercicio-aproximación-de-una-integral-por-el-método-del-punto-medio">Ejercicio: Aproximación de una integral por el método del punto medio</h4>
 <p>Escribe un programa Python que calcule la integral de la función <span class="math inline">\(f(x) = x^3\)</span> en el intervalo <code>[0, 1]</code> mediante la regla del punto medio.</p>
-<p>Sabemos que analíticamente:</p>
+<p><strong>Analíticamente:</strong></p>
 <p><span class="math display">\[
 \int_{0}^{1} x^3 \, dx = \left.\frac{x^4}{4}\right|_0^1 = \frac{1^4}{4} - \frac{0^4}{4} = \frac{1}{4}
 \]</span></p>
+<p><strong>Numéricamente</strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Podemos aproximar numéricamente la integral:
+<ul>
+<li><strong>Dividiendo</strong> el intervalo en <strong>subintervalos pequeños</strong>.</li>
+<li>Calculando <strong>el área</strong> de cada subintervalo.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><img data-src="./img/integra.png"></p>
+</div></div>
 </section>
 <section class="slide level2">
 
 <p><strong>Solución:</strong></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>a <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb1-2"><a></a>b <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb1-3"><a></a>n <span class="op">=</span> <span class="dv">1000</span></span>
-<span id="cb1-4"><a></a>step <span class="op">=</span> (b <span class="op">-</span> a) <span class="op">/</span> n</span>
-<span id="cb1-5"><a></a></span>
-<span id="cb1-6"><a></a>integral <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb1-7"><a></a></span>
-<span id="cb1-8"><a></a><span class="co"># for x in range(a, b, step):</span></span>
-<span id="cb1-9"><a></a>x <span class="op">=</span> a</span>
-<span id="cb1-10"><a></a><span class="cf">while</span> x <span class="op">&lt;</span> b:</span>
-<span id="cb1-11"><a></a>    y <span class="op">=</span> x <span class="op">**</span> <span class="dv">3</span>  <span class="co"># f(x) = x^3</span></span>
-<span id="cb1-12"><a></a>    area <span class="op">=</span> step <span class="op">*</span> y</span>
-<span id="cb1-13"><a></a>    integral <span class="op">+=</span> area</span>
-<span id="cb1-14"><a></a>    x <span class="op">+=</span> step</span>
-<span id="cb1-15"><a></a></span>
-<span id="cb1-16"><a></a><span class="bu">print</span>(integral)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>inicio <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb4-2"><a></a>fin <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb4-3"><a></a>intervalos <span class="op">=</span> <span class="dv">1000</span></span>
+<span id="cb4-4"><a></a>paso <span class="op">=</span> (fin <span class="op">-</span> inicio) <span class="op">/</span> intervalos</span>
+<span id="cb4-5"><a></a></span>
+<span id="cb4-6"><a></a>integral <span class="op">=</span> <span class="dv">0</span>  <span class="co"># acumulador</span></span>
+<span id="cb4-7"><a></a></span>
+<span id="cb4-8"><a></a>x <span class="op">=</span> inicio</span>
+<span id="cb4-9"><a></a><span class="cf">while</span> x <span class="op">&lt;</span> fin:</span>
+<span id="cb4-10"><a></a>    y <span class="op">=</span> x <span class="op">**</span> <span class="dv">3</span>  <span class="co"># f(x) = x^3</span></span>
+<span id="cb4-11"><a></a>    area <span class="op">=</span> paso <span class="op">*</span> y</span>
+<span id="cb4-12"><a></a>    integral <span class="op">+=</span> area</span>
+<span id="cb4-13"><a></a>    x <span class="op">+=</span> paso</span>
+<span id="cb4-14"><a></a></span>
+<span id="cb4-15"><a></a><span class="bu">print</span>(integral)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-tip callout-style-simple">
 <div class="callout-body">
 <div class="callout-icon-container">
@@ -260,20 +408,75 @@
 </section>
 <section class="slide level2">
 
-<h4 id="ejercicio-aproximación-de-pi">Ejercicio: Aproximación de <span class="math inline">\(\pi\)</span></h4>
-<p>Escribe un programa Python que calcule una aproximación de <span class="math inline">\(\pi\)</span> mediante la fórmula de Leibniz:</p>
+<h4 id="ejercicio-aproximación-de-coseno-por-serie-de-maclaurin">Ejercicio: Aproximación de coseno por serie de Maclaurin</h4>
+<p>Escribe un programa Python que calcule una aproximación del coseno de un número real <code>x</code> mediante la serie de Maclaurin:</p>
 <p><span class="math display">\[
-\pi = 4 \left(1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \ldots\right)x
+\cos(x) = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n)!}x^{2n} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots
 \]</span></p>
+<p>El programa debe solicitar el ángulo en radianes <code>x</code> y el número de términos <code>n</code> a sumar.</p>
 </section>
 <section class="slide level2">
 
 <p><strong>Solución:</strong></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>n <span class="op">=</span> <span class="dv">1000</span></span>
-<span id="cb2-2"><a></a>pi <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb2-3"><a></a></span>
-<span id="cb2-4"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, n):</span>
-<span id="cb2-5"><a></a>    pi <span class="op">+=</span> <span class="dv">4</span> <span class="op">*</span> ((<span class="op">-</span><span class="dv">1</span>) <span class="op">**</span> i) <span class="op">/</span> (<span class="dv">2</span> <span class="op">*</span> i <span class="op">+</span> <span class="dv">1</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="im">import</span> math</span>
+<span id="cb5-2"><a></a></span>
+<span id="cb5-3"><a></a><span class="bu">print</span>(<span class="st">"Introduce el ángulo (en radianes):"</span>)</span>
+<span id="cb5-4"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
+<span id="cb5-5"><a></a><span class="bu">print</span>(<span class="st">"Introduce el número de términos:"</span>)</span>
+<span id="cb5-6"><a></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb5-7"><a></a></span>
+<span id="cb5-8"><a></a>cos_approx <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-9"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, n):</span>
+<span id="cb5-10"><a></a>    cos_approx <span class="op">+=</span> ((<span class="op">-</span><span class="dv">1</span>) <span class="op">**</span> i) <span class="op">*</span> ((x <span class="op">**</span> (<span class="dv">2</span> <span class="op">*</span> i)) <span class="op">/</span> math.factorial(<span class="dv">2</span> <span class="op">*</span> i))</span>
+<span id="cb5-11"><a></a></span>
+<span id="cb5-12"><a></a><span class="bu">print</span>(cos_approx)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejercicio-aproximación-de-pi-por-método-de-monte-carlo">Ejercicio: Aproximación de pi por método de Monte Carlo</h4>
+<p>Escribe un programa Python que calcule una aproximación de <span class="math inline">\(\pi\)</span> mediante el método de Monte Carlo (simulación y conteo).</p>
+<ul>
+<li>Sabemos que:
+<ul>
+<li>Para un círculo de radio 1: <span class="math inline">\(area_{círculo} = \pi\)</span>.</li>
+<li>Para un cuadrado de lado 2: <span class="math inline">\(area_{cuadrado} = 4\)</span>.</li>
+<li><span class="math inline">\(\frac{area_{círculo}}{area_{cuadrado}} = \frac{\pi}{4}\)</span>.</li>
+<li><span class="math inline">\(\pi = 4 \times \frac{area_{círculo}}{area_{cuadrado}}\)</span>.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>Simulamos que lanzamos dardos aleatoriamente en el cuadrado
+<ul>
+<li>Generamos puntos <code>(x, y)</code> aleatorios en el cuadrado.</li>
+<li>Contamos cuantos caen dentro del círculo: <span class="math inline">\(x^2 + y^2 \leq 1\)</span>.</li>
+<li>La probabilidad de que un dardo caiga dentro del círculo es <span class="math inline">\(\frac{\pi}{4}\)</span>.
+<ul>
+<li>Un</li>
+</ul></li>
+<li><span class="math inline">\(\pi \approx 4 \times \frac{dardos_{dentro}}{dardos_{total}}\)</span>.</li>
+</ul></li>
+</ul>
+
+<img data-src="./img/montecarlo.gif" class="r-stretch"></section>
+<section class="slide level2">
+
+<p><strong>Solución:</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="im">import</span> random</span>
+<span id="cb6-2"><a></a></span>
+<span id="cb6-3"><a></a>num_dardos <span class="op">=</span> <span class="dv">1000</span></span>
+<span id="cb6-4"><a></a></span>
+<span id="cb6-5"><a></a>dardos_dentro <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb6-6"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, num_dardos):</span>
+<span id="cb6-7"><a></a>    x <span class="op">=</span> random.uniform(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb6-8"><a></a>    y <span class="op">=</span> random.uniform(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb6-9"><a></a>    <span class="cf">if</span> x <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> y <span class="op">**</span> <span class="dv">2</span> <span class="op">&lt;=</span> <span class="dv">1</span>:</span>
+<span id="cb6-10"><a></a>        dardos_dentro <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb6-11"><a></a></span>
+<span id="cb6-12"><a></a>pi_approx <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> dardos_dentro <span class="op">/</span> num_dardos</span>
+<span id="cb6-13"><a></a><span class="bu">print</span>(pi_approx)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
