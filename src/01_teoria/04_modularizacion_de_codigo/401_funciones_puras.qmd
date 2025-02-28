@@ -5,6 +5,18 @@ format: revealjs
 draft: true
 ---
 
-## Chapter {.center}
+## Funciones {.center}
 
+---
 
+## Scope
+
+---
+
+```python
+for i in range(1,11):
+    if i%5==0 and i%2==0:
+        valor = i
+
+print(valor)
+```
