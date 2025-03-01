@@ -347,7 +347,7 @@ print(f"La media de los números es {media}")
 
 #### Ejemplo: Media de N números
 
-Este programa solicita 5 números al usuario y calcula la media.
+Este programa solicita una cantidad de números `n` al usuario y, después, esos `n` números y calcula la media.
 
 ::: {.columns}
 ::: {.column width="50%"}
