@@ -12,7 +12,7 @@ format: revealjs
     - Validar datos, acumular cálculos, repetir mensajes por pantalla, etc.
 - A efectos prácticos, todos cumplen una de estas estructuras:
     - _Repetir una acción **hasta obtener un resultado deseado**_.
-    - _Repetur una acción **un número determinado de veces**_.
+    - _Repetir una acción **un número determinado de veces**_.
 - La diferencia entre ambos radica en **si previamente conocemos o no el número de iteraciones**.
 
 ---
@@ -98,7 +98,7 @@ while i <= VALOR_FINAL:
 - Este patrón es tán común que **la mayoría de lenguajes** de programación tienen una **estructura específica** para facilitar usarlo:
     - La sintaxis: `for`
 - Su funcionamiento específico **varía** según el lenguaje.
-- En el caso de Python, tecnicamente no implementa el patrón `for` sino `for-each`.
+- En el caso de Python, técnicamente no implementa el patrón `for` sino `for-each`.
     - **AÚN** NO VAMOS A ABORDAR ESA DIFERENCIA.
     - De momento, utilizaremos el `for-each` como si fuera un `for`.
 
@@ -140,7 +140,7 @@ for i in range(VALOR_INICIAL, VALOR_FINAL):
 
 ### Uso de `range()`
 
-- Es **muy importante** tener en cuenta el funcionamiento de `range()` para no comenter [errores _off by one_](./303_composicion_iterativa_while_II.qmd#errores-off-by-one).
+- Es **muy importante** tener en cuenta el funcionamiento de `range()` para no cometer [errores _off by one_](./303_composicion_iterativa_while_II.qmd#errores-off-by-one).
     - `range(N, M)` genera números en el rango `[N, M)`.
 
 ::: {.columns}
