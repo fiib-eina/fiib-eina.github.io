@@ -89,6 +89,13 @@ Las cajas fuertes de dial (o de combinación) son un tipo de caja fuerte que se 
 | **0**
 | \<se aleja caminando\>
 
+<details>
+<summary> Diagrama de estados </summary>
+
+![](./img/sd_west_bank.png)
+
+</details>
+
 **Entrega:** Escribe tu programa en un fichero denominado `westbank.py`.
 
 ## Serie de Leibniz
@@ -148,11 +155,11 @@ La siguiente tabla ilustra todas las combinaciones posibles para la mano `8, 10`
 |  7 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
 |  8 | o | o | o | o | o | o |   |   |   |   |   |   |   | 
 |  9 | o | o | o | o | o | o |   |   |   | x | x | x | x | 
-| 10 |   |   |   |   |   |   |   |   |   | x | x | x | x | 
-| 11 |   |   |   |   |   |   |   | x | x | x | x | x | x | 
-| 12 |   |   |   |   |   |   |   | x | x | x | x | x | x | 
-| 13 |   |   |   |   |   |   |   | x | x | x | x | x | x | 
-| 14 |   |   |   |   |   |   |   | x | x | x | x | x | x |
+| T  |   |   |   |   |   |   |   |   |   | x | x | x | x | 
+| J  |   |   |   |   |   |   |   | x | x | x | x | x | x | 
+| Q  |   |   |   |   |   |   |   | x | x | x | x | x | x | 
+| K  |   |   |   |   |   |   |   | x | x | x | x | x | x | 
+| A  |   |   |   |   |   |   |   | x | x | x | x | x | x |
 
 Escribe un programa Python que, dada una mano de un jugador (introducidas como los dos puntos de cada carta), calcule **cuantas combinaciones ganan, cuantas empatan y cuantas pierden**.
 **NO** has de tener en cuenta las probabilidades de que salga una carta, sólo contar cuantas combinaciones ganan, empatan o pierden.
@@ -186,29 +193,31 @@ Escribe un programa Python que, dada una mano de un jugador (introducidas como l
 
 _Tip:_ Recuerda lo aprendido en el ejercicio [Dibujar tablas de multiplicar](../../01_teoria/03_composicion/305_composicion_iterativa_for_II.qmd#ejercicio-dibujar-las-tablas-de-multiplicar)
 
-| Introduce la primera carta:
-| **8**
-| Introduce la segunda carta:
-| **10**
-|
-|   | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | T | J | Q | K | A |
-| 2 | o | o | o | o | o | o | o | o | . | . | . | . | . |
-| 3 | o | o | o | o | o | o | o | o | . | . | . | . | . |
-| 4 | o | o | o | o | o | o | o | o | . | . | . | . | . |
-| 5 | o | o | o | o | o | o | o | o | . | . | . | . | . |
-| 6 | o | o | o | o | o | o | o | o | . | . | . | . | . |
-| 7 | o | o | o | o | o | o | o | o | . | . | . | . | . |
-| 8 | o | o | o | o | o | o | . | . | . | . | . | . | . |
-| 9 | o | o | o | o | o | o | . | . | . | x | x | x | x |
-| T | . | . | . | . | . | . | . | . | . | x | x | x | x |
-| J | . | . | . | . | . | . | . | x | x | x | x | x | x |
-| Q | . | . | . | . | . | . | . | x | x | x | x | x | x |
-| K | . | . | . | . | . | . | . | x | x | x | x | x | x |
-| A | . | . | . | . | . | . | . | x | x | x | x | x | x |
-|
-| Victorias: 60
-| Empates:   77
-| Derrotas:  32
+<pre class="line-block">
+Introduce la primera carta:
+<b>8</b>
+Introduce la segunda carta:
+<b>10</b>
+
+   |  2 |  3 |  4 |  5 |  6 |  7 |  8 |  9 | 10 | 11 | 12 | 13 | 14 |
+ 2 |  o |  o |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |
+ 3 |  o |  o |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |
+ 4 |  o |  o |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |
+ 5 |  o |  o |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |
+ 6 |  o |  o |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |
+ 7 |  o |  o |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |
+ 8 |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |  . |  . |
+ 9 |  o |  o |  o |  o |  o |  o |  . |  . |  . |  x |  x |  x |  x |
+10 |  . |  . |  . |  . |  . |  . |  . |  . |  . |  x |  x |  x |  x |
+11 |  . |  . |  . |  . |  . |  . |  . |  x |  x |  x |  x |  x |  x |
+12 |  . |  . |  . |  . |  . |  . |  . |  x |  x |  x |  x |  x |  x |
+13 |  . |  . |  . |  . |  . |  . |  . |  x |  x |  x |  x |  x |  x |
+14 |  . |  . |  . |  . |  . |  . |  . |  x |  x |  x |  x |  x |  x |
+
+Victorias: 60
+Empates:   77
+Derrotas:  32
+</pre>
 
 **Entrega:** Escribe tu programa en un fichero denominado `manofuerte2.py`.
 

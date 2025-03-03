@@ -44,7 +44,23 @@ format: revealjs
     - Leer la **entrada del usuario**.
     - Utilizar **Hardware especializado**.
 
+---
+
+::: {.columns}
+::: {.column width="50%"}
+
+- Lavarand es un muro de lámparas de lava construido por Cloudflare para generar números aleatorios.
+    - Las lámparas de lava se iluminan y se apagan de forma aleatoria.
+    - Se captura el estado de las lámparas y se convierte en un número aleatorio.
+    - Se actualiza cada 60 segundos.
+
+:::
+::: {.column width="50%"}
+
 ![Lavarand, the Wall of Entropy @ Cloudflare](./img/lavarand.jpg)
+
+:::
+:::
 
 ---
 
