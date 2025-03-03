@@ -189,12 +189,12 @@ Desarrolla un programa que calcule el doble factorial de un número $n$ impar da
 <li>La caja emitirá un chasquido (<em>tick</em>),</li>
 <li>y se podrá introducir el siguiente número.</li>
 </ul></li>
-<li>Si falla en alguno:
+<li>Si se falla en alguno:
 <ul>
-<li>La caja se reseterará mitiendo un sonido (<em>clonk</em>),</li>
+<li>La caja se reinicia emitiendo un sonido (<em>clonk</em>),</li>
 <li>y tendrás que volver a empezar con el primer número.</li>
 </ul></li>
-<li>Si aciertan los 3 números seguidos, sin fallos:
+<li>Si se aciertan los tres números seguidos, sin fallos:
 <ul>
 <li>La caja fuerte se abrirá.</li>
 <li>Mensaje: <code>&lt;se abre&gt;</code></li>
@@ -240,16 +240,16 @@ clonk<br>
 <p><span class="math display">\[
 \sum_{n=0}^{\infty}\frac{(-1)^{n}}{2n+1}= 1 - \frac{1}{3} + \frac{1}{5} -\frac{1}{7} + \frac{1}{9} -\cdots = \frac{\pi}{4}
 \]</span></p>
-<p>Escribe un programa Python que calcule una aproximación de <span class="math inline">\(\pi\)</span> mediante la serie de Leibniz. El programa ha de solicitar al usuario un número entero positivo <code>n</code> y calcular la suma de los <code>n</code> primeros términos de la serie de Leibniz. Finalmente, calculará y mostrará: el valor aproximado, el valor original (puedes usar el valor de <code>math.pi</code>) y el error entre ellos.</p>
+<p>Escribe un programa Python que calcule una aproximación de <span class="math inline">\(\pi\)</span> mediante la serie de Leibniz. El programa ha de solicitar al usuario un número entero positivo <code>n</code> y calcular la suma de los <code>n</code> primeros términos de la serie de Leibniz. Finalmente, calculará y mostrará: el valor aproximado, el valor real (puedes usar el valor de <code>math.pi</code>) y el error entre ellos.</p>
 <div class="line-block">Número de términos:<br>
 <strong>10</strong><br>
 Valor aproximado: 3.0418396189294032<br>
-Valor original: 3.141592653589793<br>
+Valor real: 3.141592653589793<br>
 Error: 0.09975303466038987</div>
 <div class="line-block">Número de términos:<br>
 <strong>100</strong><br>
 Valor aproximado: 3.1315929035585537<br>
-Valor original: 3.141592653589793<br>
+Valor real: 3.141592653589793<br>
 Error: 0.00999975003123943</div>
 <p><strong>Entrega:</strong> Escribe tu programa en un fichero denominado <code>leibniz.py</code>.</p>
 </section>
@@ -539,7 +539,7 @@ Derrotas: 32</div>
 </section>
 <section id="mano-fuerte-mano-débil-ii" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="mano-fuerte-mano-débil-ii"><span class="header-section-number">4</span> Mano fuerte, mano débil (II)</h2>
-<p><strong>Partiendo del ejercicio anterior</strong> (crea una copia del ejercicio una vez lo hayas acabado), <strong>extiende</strong> el funcionamiento del mismo añadiendo la represantación de la tabla de casos. En dicha tabla:</p>
+<p><strong>Partiendo del ejercicio anterior</strong> (crea una copia del ejercicio una vez lo hayas acabado), <strong>extiende</strong> el funcionamiento del mismo añadiendo la representación de la tabla de casos. En dicha tabla:</p>
 <ul>
 <li><code>o</code> indica que tu mano gana.</li>
 <li><code>x</code> indica que tu mano pierde.</li>
