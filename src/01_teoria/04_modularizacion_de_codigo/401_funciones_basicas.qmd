@@ -1,0 +1,443 @@
+---
+title: Teoría 401
+subtitle: Funciones I
+format: revealjs
+---
+
+## Modularización {.center}
+
+---
+
+### Atacando problemas complejos
+
+- Los ejercicios abordados hasta ahora han sido **específicamente diseñados** para ser **senillos** y **fáciles de entender**.
+- En la práctica, los programas suelen ser (_mucho_) **más complejos**.
+- Para abordar esta complejidad, debemos proveernos de **métodos y estrategias** que nos faciliten el trabajo.
+- En proyectos grandes, es **fundamental**:
+    - **Legibilidad**.
+    - **Mantenibilidad**.
+    - **Reutilización**.
+    - **Testabilidad**.
+
+---
+
+### Divide y vencerás
+
+- Una de las estrategias más efectivas para abordar la complejidad es la **modularización**.
+- Consiste en **dividir** el problema en **partes más pequeñas** y **manejables**.
+    - Cada parte se convierte en un **módulo** independiente.
+    - Cada módulo se encarga de una **tarea específica**.
+    - Los módulos se **comunican** o **coordinan** para resolver el problema global.
+
+---
+
+#### Ejemplo: Calculadora de números complejos
+
+- Escribe un Programa Python que implemente una **calculadora de números complejos** con las siguientes operaciones: suma, resta, multiplicación y división.
+- El programa debe:
+    - **Pedir al usuario** que introduzca dos números complejos.
+    - **Pedir al usuario** que introduzca la operación a realizar.
+    - **Calcular** el resultado de la operación.
+    - **Mostrar el resultado** con la forma: `{real} + {imag} i`.
+- **Se han impartido** todos los conocimientos mínimos para resolver este problema.
+    - Pero no para abordarlo de forma **modular**.
+
+---
+
+### Modularización del problema
+
+::: {.columns}
+::: {.column width="50%"}
+
+- Módulos del programa:
+    - **Entrada**: se encarga de pedir al usuario los números y la operación.
+        - **Entrada de números**: pide al usuario los números.
+        - **Entrada de operación**: pide al usuario la operación.
+    - **Cálculo**: se encarga de realizar la operación.
+    - **Salida**: se encarga de mostrar el resultado.
+
+:::
+::: {.column width="50%"}
+
+![](./img/modularizacion.png)
+
+:::
+:::
+
+---
+
+### Flujo de datos
+
+::: {.columns}
+::: {.column width="50%"}
+
+- Para coordinarse y funcionar adecuada, los módulos deben **comunicarse**.
+- La forma de comunicación entre módulos más común es: **compartir información** (_variables_).
+    - Una información será **producida** por un módulo,
+    - para luego ser **consumida** por otro(s) módulo(s).
+
+:::
+::: {.column width="50%"}
+
+![](./img/data-flow.png)
+
+:::
+:::
+
+
+---
+
+## Funciones {.center}
+
+---
+
+### Funciones
+
+::: {.columns}
+::: {.column width="50%"}
+
+- La forma de **modularizar** en Python es a través de **funciones**.
+- Las **funciones** son **bloques de código** que realizan una tarea específica.
+- Se componen de:
+    - **Nombre**: identificador único.
+    - **Argumentos**: valores de entrada.
+    - **Cuerpo**: código que realiza la tarea.
+    - **Valor de retorno** [opcional]: resultado de la tarea.
+- Se **definen** usando la palabra reservada `def`.
+
+:::
+::: {.column width="50%"}
+
+```python
+def nombre_funcion(argumentos):
+    # Cuerpo de la función
+```
+
+:::
+:::
+
+---
+
+#### Ejemplo: Definición de la función "saluda"
+
+```python
+def saluda():
+    print("¡Hola, mundo!")
+```
+
+- Esta función se encargaría de mostrar por pantalla el mensaje `¡Hola, mundo!`.
+- Recuerda la importancia de la **indentación**.
+- Ejecutar el código anterior **no mostrará nada por pantalla**.
+    - La hemos **definido**, pero no la hemos **ejecutado**.
+
+---
+
+### Invocación de una función
+
+- Para **ejecutar** una función, debemos **invocarla**.
+- Una función se invoca escribiendo su **nombre** seguido de sus **argumentos** entre **paréntesis**.
+    - Si no tiene argumentos, los **paréntesis se mantienen vacíos**.
+- Al igual que con las variables:
+    - Las funciónes deben ser **definidas** antes de ser **invocadas**.
+- Por ello el orden de un programa será: **definir funciones** y luego **programa principal**.
+
+```python
+def funcion1():
+    # Cuerpo de la función 1
+
+def funcion2():
+    # Cuerpo de la función 2
+
+# Cuerpo del programa principal
+```
+
+---
+
+#### Ejemplo: Invocación de la función "saluda"
+
+```python
+def saluda():
+    print("Hola, mundo!")
+
+saluda()
+```
+
+| Hola, mundo!
+
+- Al invocar la función `saluda`, se mostrará por pantalla el mensaje `¡Hola, mundo!`.
+- **Recuerda**: la función debe ser **definida** antes de ser **invocada**.
+
+---
+
+#### Ejemplo: Función "castigo"
+
+```python
+def castigo():
+    for i in range(0, 100):
+        print("No llevaré el movil encima el día del examen.")
+
+castigo()
+```
+
+| No llevaré el movil encima el día del examen.
+| No llevaré el movil encima el día del examen.
+| No llevaré el movil encima el día del examen.
+| . . .
+
+---
+
+### Orden de ejecución de una función
+
+- Sabemos que es **fundamental** saber **leer/predecir** el **orden de ejecución** de cualquier programa para poder entenderlo.
+    - Del mismo modo que hemos aprendido a _leer_ bucles y condicionales, debemos aprender a _leer_ funciones.
+
+---
+
+#### Ejercicio: Orden de ejecución
+
+Determina la **salida por pantalla** del siguiente código
+    
+```python
+def funcion1():
+    print("Función 1")
+
+def funcion2():
+    funcion1()
+    print("Función 2")
+
+print("Global 1")
+funcion1()
+print("Global 2")
+funcion2()
+print("Global 3")
+```
+
+<details>
+<summary>Solución</summary>
+
+| Global 1
+| Función 1
+| Global 2
+| Función 1
+| Función 2
+| Global 3
+
+</details>
+
+---
+
+### Scope
+
+- Uno de los principios clave de los módulos es la **independencia** (desacoplado) del programa principal.
+    - Un módulo que **no depende** de otros módulos es más **fácil de entender** y **mantener**.
+- Si los módulos comparten de **forma descontrolada** todas las **variables entre sí**:
+    - Corren el riesgo de **interferir** (propenso a errores).
+    - Se vuelve dificil **entender** y **mantener** el código.
+        - _¿De dónde viene el valor de esta variable?_
+
+---
+
+- Una variable definida **dentro de una función** se denomina **local** a esa función:
+    - **Solo** es **visible** y **accesible** dentro de la función.
+- Una variable definida en el **programa principal** se denomina **global**:
+    - Sólo debería **visible** ni **accesible** para el programa principal, y no para las funciones.
+    - Sin embargo, Python **permite acceder** a las **variables globales** desde las funciones.
+
+```python
+def mi_funcion():
+    variable_local = 42
+
+variable_global = 42
+```
+
+---
+
+::: {.columns}
+::: {.column width="50%"}
+
+Este código **fallará**:
+
+```python
+def funcion():
+    variable = 42 # Variable local
+    print(variable) # OK
+
+funcion()
+print(variable) # Error: variable no definida
+```
+
+:::
+::: {.column width="50%"}
+
+Pero este **no fallará**:
+
+```python
+def funcion():
+    print(variable) # OK
+
+variable = 42 # Variable global
+funcion()
+print(variable) # OK
+```
+:::
+:::
+
+Una forma de prevenir utilizar sin querer las variables del programa principal es **meter todo el programa principal en una funcion**:
+
+- Esta **no** es una práctica **obligatoria** (salvo que se indique así) pero es una **buena práctica preventiva**.
+
+```python
+def funcion():
+    print(variable) # Error: variable no definida
+
+def main():
+    funcion()
+    variable = 42 # Variable local
+    print(variable) 
+
+main() # Esta es la UNICA instrucción global
+```
+
+---
+
+### Argumentos
+
+- Hemos concluido que las funciones **no deben tener acceso descontrolado a todas las variables**,
+- Cuando necesitemos comunicar información a una función, utilizaremos **argumentos**.
+- Los argumentos son **variables** que se le pasan a la función para que ésta las use.
+- Al **definir la función**:
+    - Se definen entre los **paréntesis** de la función
+    - Toman **nombres** únicos dentro de la función.
+
+```python
+def funcion(argumento1, argumento2):
+    # Cuerpo de la función
+    # argumento1 y argumento2 sólo existen dentro de la función
+```
+
+---
+
+- Al **invocar la función**:
+    - Se pasan los **valores** que se quieren asignar a los argumentos.
+        1. Se **evaluan las expresiones**
+        2. Se invoca a la función
+        3. Se asigna a cada argumento el valor correspondiente (por orden)
+
+```python
+def funcion(argumento1, argumento2):
+    # Cuerpo de la función
+    # argumento1 y argumento2 sólo existen dentro de la función
+    # argumento1: valor1
+    # argumento2: valor2
+
+funcion(valor1, valor2)
+```
+
+---
+
+#### Ejemplo: Saluda con nombre
+
+Escribe una función `saluda()` que reciba un nombre (`str`) y le salude `Hola, {nombre}!`
+
+```python
+def saluda(nombre):
+    print(f"Hola, {nombre}!")
+
+saluda("Juan")
+saluda("María")
+```
+
+| Hola, Juan!
+| Hola, María!
+
+---
+
+
+#### Ejemplo: Potencia I
+
+Escribe una función `potencia()` que reciba dos números enteros y pinte por pantalla su suma.
+
+```python
+def potencia(a, b):
+    print(f"{a} ^ {b} = {a ** b}")
+
+# A partir de aquí no formaría parte del ejercicio
+# pero necesitamos probar la función
+a = 3
+b = 5
+potencia(b, a) # Atención al orden
+```
+
+---
+
+#### Ejemplo: Potencia II
+
+Escribe un programa que pida al usuario dos números enteros y muestre por pantalla su suma.
+
+```python
+def potencia(a, b):
+    print(f"{a} ^ {b} = {a ** b}")
+
+print("Introduce un número entero:")
+a = int(input())
+print("Introduce un número entero:")
+b = int(input())
+potencia(a, b)
+```
+
+- _Nota_: Cuando aprendamos a devolver valores, podremos modularizar aún más este programa.
+
+---
+
+### Filosofía de diseño modular
+
+- Como se ha manifesado de varias formas:
+    - La **clave** de la **modularización** es la **encapsulación**.
+    - Las funciones deben ser **independientes** y **reutilizables**.
+- Cuando **diseñemos** una función, debemos tener en cuenta:
+    - Su **objetivo específico**: una función = una tarea.
+    - **Desacoplamiento**: no condiciones el diseño de una función por el resto del programa.
+    - _Cuando estás programando una función, el resto del programa "no existe"_
+
+---
+
+#### Ejemplo de funciones acopladas y desacopladas
+
+Desarrolla un programa que pida al usuario la temperatura en grados Celsius del motor de su coche y muestre por pantalla la temperatura en grados Fahrenheit.
+
+
+::: {.columns}
+::: {.column width="50%"}
+
+**Función acopladada**
+
+```python
+def convertir_temperatura_motor(temperatura):
+    convertida = (temperatura * 9/5) + 32
+    print(f"{convertida}°F")
+
+print("Introduce la temperatura del motor:")
+temperatura = float(input())
+celsius_a_fahrenheit(temperatura)
+```
+
+:::
+::: {.column width="50%"}
+
+**Función independiente**
+
+```python
+def celsius_a_fahrenheit(celsius):
+    fahrenheit = (celsius * 9/5) + 32
+    print(f"{fahrenheit}°F")
+
+print("Introduce la temperatura del motor:")
+temperatura = float(input())
+celsius_a_fahrenheit(temperatura)
+```
+
+:::
+:::
+
+---
+

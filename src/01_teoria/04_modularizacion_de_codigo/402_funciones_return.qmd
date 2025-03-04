@@ -1,0 +1,41 @@
+---
+title: Teoría 402
+subtitle: Funciones II
+format: revealjs
+draft: true
+---
+
+## Chapter {.center}
+
+---
+
+### Return
+
+- Todos los ejemplos de código que hemos visto hasta ahora se han limitado a:
+    - **Recibir valores** y pintar **pintar por pantalla**.
+    - **No devuelven** ningún valor.
+- Del mismo modo que podemos necesitar **recibir valores** al ser invocados, también será necesario en ocasiones **comunicar resultados** a quien nos invocó.
+
+---
+
+#### Ejemplo: Potencia II
+
+Escribe un programa que pida al usuario dos números enteros y muestre por pantalla su suma.
+
+```python
+def potencia(a, b):
+    print(f"{a} ^ {b} = {a ** b}")
+
+print("Introduce un número entero:")
+a = int(input())
+print("Introduce un número entero:")
+a = int(input())
+potencia(b, a) # Atención al orden
+```
+
+- _Nota_: Cuando aprendamos a devolver valores, podremos modularizar aún más este programa.
+
+---
+
+#### Ejemplo: Calculadora de números complejos
+
