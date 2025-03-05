@@ -20,6 +20,7 @@ format:
     code-line-numbers: true
     toc: true
     toc-location: left
+    toc-expand: 3
     number-sections: true
     anchor-sections: true
     link-external-icon: true

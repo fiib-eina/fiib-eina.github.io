@@ -1,0 +1,321 @@
+---
+title: Problemas 6
+subtitle: Funciones I
+format: html
+---
+
+## Dibujo
+
+### Función repetir
+
+
+Escribe una función `repetir(n,c)` que imprima `n` veces el carácter `c`.
+
+```python
+repetir(5, '*')  # *****
+repetir(3, 'x')  # xxx
+```
+
+| *****xxx
+
+<details>
+<summary>Solución</summary>
+
+```python
+def repetir(n, c):
+    for i in range(0, n):
+        print(c, end="")
+```
+
+</details>
+
+### Función línea
+
+Escribe una función `pintar_linea(s,n,c)` que pinte:
+
+- `s` espacios
+- `n` caracteres `c`
+- Un salto de línea
+
+```python
+pintar_linea(0, 5, '*')  # *****
+pintar_linea(2, 3, 'x')  #   xxx
+```
+
+| *****
+|   xxx
+
+<details>
+<summary>Solución</summary>
+
+```python
+def pintar_linea(s,n, c):
+    repetir(s, ' ')
+    repetir(n, c)
+    print()
+```
+
+</details>
+
+### Triángulo
+
+Escribe una función `pintar_triangulo(n,c)` que pinte un triángulo de `n` filas con el carácter `c`.
+
+```python
+pintar_triangulo(3, 'x')
+```
+
+|   *
+|  ***
+| *****
+
+
+```python
+pintar_triangulo(3, 'x')
+```
+
+|     +
+|    +++
+|   +++++
+|  +++++++
+| +++++++++
+
+<details>
+<summary>Solución</summary>
+
+```python
+def pintar_triangulo(n, c):
+    espacios = n - 1
+    chars = 1
+    for _ in range(0, n):
+        pintar_linea(espacios, chars, c)
+        espacios -= 1
+        chars += 2
+```
+
+</details>
+
+<details>
+<summary>Solución (fórmula)</summary>
+
+```python
+def pintar_triangulo(n, c):
+    for i in range(0, n):
+        pintar_linea(n - i - 1, 2 * i + 1, c)
+```
+
+</details>
+
+### Pintar cuadrado
+
+Escribe una función `pintar_cuadrado(n, m,c)` que pinte un cuadrado de `nxm` con el carácter `c`.
+
+```python
+pintar_cuadrado(3, 3, 'x')
+```
+
+<pre class="line-block">
+xxx
+xxx
+xxx
+</pre>
+
+```python
+pintar_cuadrado(3, 5, '.')
+```
+
+<pre class="line-block">
+.....
+.....
+.....
+</pre>
+
+<details>
+<summary>Solución</summary>
+
+```python
+def pintar_cuadrado(n, m, c):
+    for _ in range(0, n):
+        pintar_linea(0, m, c)
+```
+
+## Funciones de apoyo al desarrollo
+
+### Debug
+
+Escribe una función `debug(nombre, valor)` que imprima: `-- DEBUG nombre: valor`.
+La utilidad de esta función es mostrar el valor de una variable en un punto concreto del programa.
+
+```python
+debug('x', 5)
+debug('y', 3)
+```
+
+| -- DEBUG x: 5
+| -- DEBUG y: 3
+
+<details>
+<summary>Solución</summary>
+
+```python
+def debug(nombre, valor):
+    print(f"-- DEBUG {nombre}: {valor}")
+```
+
+</details>
+
+### Check
+
+Escribe una función `check(condicion, error_msg)` que imprima `--ERROR: error_msg` si `condicion` es `False`.
+La utilidad de esta función es asegurar que un valor cumple una condición esperada.
+
+
+```python
+a = 0
+check(a != 0, "El resultado es 0")
+```
+
+| -- ERROR: El resultado es 0
+
+```python
+a = 5
+check(a > 0, "Debería ser positivo")
+check(a % 2 == 0, "Debería ser par")
+```
+
+| -- ERROR: Debería ser par
+
+```python
+for i in range(0, 5):
+    check(i % 2 == 0, f"El número {i} debería ser par")
+```
+
+| -- ERROR: El número 1 debería ser par
+| -- ERROR: El número 3 debería ser par
+
+
+<details>
+<summary>Solución</summary>
+
+```python
+def check(condicion, error_msg):
+    if not condicion:
+        print(f"-- ERROR: {error_msg}")
+```
+
+</details>
+
+## Calculadora
+
+### Función resultado
+
+Escribe una función `resultado(a,op,b,r)` que imprima: `a op b = r`.
+
+```python
+resultado(3,'+', 5, 8)
+resultado(2,'*', 2, 4)
+```
+
+| 3 + 5 = 8
+| 2 * 2 = 4
+
+<details>
+<summary>Solución</summary>
+
+```python
+def resultado(a, op, b, r):
+    print(f"{a} {op} {b} = {r}")
+```
+
+### Función suma
+
+Escribe una función `suma(a,b)` que imprima la suma de `a` y `b`.
+
+```python
+suma(3, 5)
+suma(2, 2)
+```
+
+| 3 + 5 = 8
+| 2 + 2 = 4
+
+<details>
+<summary>Solución</summary>
+
+```python
+def suma(a, b):
+    resultado(a, '+', b, a + b)
+```
+
+</details>
+
+### Función producto
+
+Escribe una función `producto(a,b)` que imprima el producto de `a` y `b`.
+
+```python
+producto(3, 5)
+producto(2, 2)
+```
+
+| 3 * 5 = 15
+| 2 * 2 = 4
+
+<details>
+<summary>Solución</summary>
+
+```python
+def producto(a, b):
+    resultado(a, '*', b, a * b)
+```
+
+</details>
+
+### Calculadora
+
+Escribe un programa Python que solicite al usuario una operación (`suma`, `producto`) y dos números enteros `a` y `b`. Si la operación no es válida, el programa mostrará `Operación no válida` (después de haber solicitado los números igualmente).
+
+| Introduce una operación (suma, producto):
+| **suma**
+| Introduce el primer número:
+| **3**
+| Introduce el segundo número:
+| **5**
+| 3 + 5 = 8
+
+| Introduce una operación (suma, producto):
+| **producto**
+| Introduce el primer número:
+| **3**
+| Introduce el segundo número:
+| **5**
+| 3 * 5 = 15
+
+| Introduce una operación (suma, producto):
+| **potencia**
+| Introduce el primer número:
+| **3**
+| Introduce el segundo número:
+| **5**
+| Operación no válida
+
+<details>
+<summary>Solución</summary>
+
+```python
+print("Introduce una operación (suma, producto):")
+operacion = input()
+print("Introduce el primer número:")
+a = int(input())
+print("Introduce el segundo número:")
+b = int(input())
+if operacion == 'suma':
+    suma(a, b)
+elif operacion == 'producto':
+    producto(a, b)
+else:
+    print("Operación no válida")
+```
+
+</details>
+
