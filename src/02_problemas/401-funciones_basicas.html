@@ -231,11 +231,11 @@ Solución
 </details>
 <details>
 <summary>
-Solución (fórmula)
+Solución alternativa (fórmula)
 </summary>
 <div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">def</span> pintar_triangulo(n, c):</span>
-<span id="cb8-2"><a href="#cb8-2"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, n):</span>
-<span id="cb8-3"><a href="#cb8-3"></a>        pintar_linea(n <span class="op">-</span> i <span class="op">-</span> <span class="dv">1</span>, <span class="dv">2</span> <span class="op">*</span> i <span class="op">+</span> <span class="dv">1</span>, c)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-2"><a href="#cb8-2"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb8-3"><a href="#cb8-3"></a>        pintar_linea(n <span class="op">-</span> i, i<span class="op">*</span><span class="dv">2</span><span class="op">-</span><span class="dv">1</span>, c)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </section>
 <section id="pintar-cuadrado" class="level3" data-number="1.4">
