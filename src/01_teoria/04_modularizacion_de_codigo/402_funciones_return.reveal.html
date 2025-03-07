@@ -200,40 +200,481 @@
 </div>
 
 </section>
-<section id="chapter" class="slide level2 center">
-<h2>Chapter</h2>
+<section id="return-statement" class="slide level2 center">
+<h2>Return Statement</h2>
 </section>
 <section class="slide level2">
 
-<h3 id="return">Return</h3>
+<h3 id="funciones-que-no-devuelven-valores">Funciones que no devuelven valores</h3>
 <ul>
 <li>Todos los ejemplos de código que hemos visto hasta ahora se han limitado a:
 <ul>
 <li><strong>Recibir valores</strong> y pintar <strong>pintar por pantalla</strong>.</li>
-<li><strong>No devuelven</strong> ningún valor.</li>
+<li><strong>No devuelven</strong> ningún valor.
+<ul>
+<li><em>El contexto que la invoca no tiene forma de conocer el resultado</em></li>
+</ul></li>
 </ul></li>
 <li>Del mismo modo que podemos necesitar <strong>recibir valores</strong> al ser invocados, también será necesario en ocasiones <strong>comunicar resultados</strong> a quien nos invocó.</li>
 </ul>
 </section>
 <section class="slide level2">
 
+<h4 id="ejemplo-absurdo-valor-absoluto-sin-return">Ejemplo absurdo: Valor absoluto sin return</h4>
+<ul>
+<li>En varios ejercicios hemos usado <code>abs(x)</code> para <strong>obtener</strong> (no pintar) el valor absoluto de un valor.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:65%;">
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>altura <span class="op">=</span> <span class="bu">abs</span>(<span class="dv">0</span><span class="op">-</span><span class="dv">10</span>) <span class="co"># abs(y1-y2)</span></span>
+<span id="cb1-2"><a></a>anchura <span class="op">=</span> <span class="bu">abs</span>(<span class="dv">0</span><span class="op">-</span><span class="dv">10</span>) <span class="co"># abs(x1-x2)</span></span>
+<span id="cb1-3"><a></a><span class="bu">print</span>(<span class="ss">f"El area es </span><span class="sc">{</span>altura <span class="op">*</span> anchura<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:35%;">
+<div class="line-block">El area es 100</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>Sabemos calcular el valor absoluto, pero <strong>no sabemos cómo replicar</strong> <code>abs()</code>.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:65%;">
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> mi_abs(x):</span>
+<span id="cb2-2"><a></a>    <span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb2-3"><a></a>        x <span class="op">=</span> <span class="op">-</span>x</span>
+<span id="cb2-4"><a></a>    <span class="bu">print</span>(x)  <span class="co"># Sólo vabemos pintar</span></span>
+<span id="cb2-5"><a></a></span>
+<span id="cb2-6"><a></a><span class="co"># abs(y1-y2), abs(x1-x2)</span></span>
+<span id="cb2-7"><a></a>altura <span class="op">=</span> mi_abs(<span class="dv">0</span><span class="op">-</span><span class="dv">10</span>)  <span class="co"># Imprime 10. Altura no recibe valor</span></span>
+<span id="cb2-8"><a></a>anchura <span class="op">=</span> mi_abs(<span class="dv">0</span><span class="op">-</span><span class="dv">10</span>) <span class="co"># Imprime 10. Anchura no recibe valor</span></span>
+<span id="cb2-9"><a></a><span class="bu">print</span>(<span class="ss">f"El area es </span><span class="sc">{</span>altura <span class="op">*</span> anchura<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:35%;">
+<div class="line-block">10<br>
+10<br>
+<em>Error</em></div>
+</div></div>
+<ul>
+<li>Necesitamos dar con la forma de que <code>mi_abs()</code> pueda <strong>“comunicarle”</strong> (devolver) el resultado a <code>altura</code> y <code>anchura</code>.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="return-statement-1">Return Statement</h3>
+<ul>
+<li>Para <strong>devolver un valor</strong> en Python, se usa la palabra clave <code>return</code>.</li>
+<li>En el momento en que se invoca <code>return</code>, la función <strong>termina su ejecución</strong> y <strong>devuelve</strong> el valor indicado.</li>
+<li>Este valor <strong>será usado como una expresión</strong> en el contexto que invocó la función.</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="kw">def</span> funcion():</span>
+<span id="cb3-2"><a></a>    <span class="co"># Cuerpo de la función</span></span>
+<span id="cb3-3"><a></a>    <span class="cf">return</span> resultado</span>
+<span id="cb3-4"><a></a></span>
+<span id="cb3-5"><a></a>a <span class="op">=</span> funcion() <span class="co"># a: resultado</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-valor-absoluto-con-return">Ejemplo: Valor absoluto con return</h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> mi_abs(x):</span>
+<span id="cb4-2"><a></a>    <span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb4-3"><a></a>        x <span class="op">=</span> <span class="op">-</span>x</span>
+<span id="cb4-4"><a></a>    <span class="cf">return</span> x</span>
+<span id="cb4-5"><a></a></span>
+<span id="cb4-6"><a></a>altura <span class="op">=</span> mi_abs(<span class="dv">0</span><span class="op">-</span><span class="dv">10</span>)  <span class="co"># Devuelve 10</span></span>
+<span id="cb4-7"><a></a>anchura <span class="op">=</span> mi_abs(<span class="dv">0</span><span class="op">-</span><span class="dv">10</span>) <span class="co"># Devuelve 10</span></span>
+<span id="cb4-8"><a></a><span class="bu">print</span>(<span class="ss">f"El area es </span><span class="sc">{</span>altura <span class="op">*</span> anchura<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="line-block">El area es 100</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-valores-fijos">Ejemplo: Valores fijos</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="kw">def</span> cuarenta_y_dos():</span>
+<span id="cb5-2"><a></a>    <span class="cf">return</span> <span class="dv">42</span></span>
+<span id="cb5-3"><a></a></span>
+<span id="cb5-4"><a></a><span class="kw">def</span> veintitres():</span>
+<span id="cb5-5"><a></a>    <span class="cf">return</span> <span class="dv">23</span></span>
+<span id="cb5-6"><a></a></span>
+<span id="cb5-7"><a></a>suma <span class="op">=</span> cuarenta_y_dos() <span class="op">+</span> veintitres()</span>
+<span id="cb5-8"><a></a>resta <span class="op">=</span> cuarenta_y_dos() <span class="op">-</span> veintitres()</span>
+<span id="cb5-9"><a></a></span>
+<span id="cb5-10"><a></a><span class="bu">print</span>(<span class="ss">f"La suma es </span><span class="sc">{</span>suma<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-11"><a></a><span class="bu">print</span>(<span class="ss">f"La resta es </span><span class="sc">{</span>resta<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>
+Salida
+</summary>
+<div class="line-block">La suma es 65<br>
+La resta es 19</div>
+</details>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-orden-de-ejecución-de-las-instrucciones">Ejemplo: Orden de ejecución de las instrucciones</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">def</span> mi_funcion(n):</span>
+<span id="cb6-2"><a></a>    <span class="bu">print</span>(<span class="ss">f"Invocada con </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb6-3"><a></a>    <span class="cf">return</span> n</span>
+<span id="cb6-4"><a></a></span>
+<span id="cb6-5"><a></a>a <span class="op">=</span> mi_funcion(<span class="dv">1</span>) <span class="op">+</span> mi_funcion(<span class="dv">2</span>)</span>
+<span id="cb6-6"><a></a><span class="bu">print</span>(a)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>
+Salida
+</summary>
+<div class="line-block">Invocada con 1<br>
+Invocada con 2<br>
+3</div>
+</details>
+</section>
+<section class="slide level2">
+
+<h3 id="modularización">Modularización</h3>
+<ul>
+<li>La <strong>modularización</strong> es más que <strong>una técnica de diseño</strong>.
+<ul>
+<li>No se limita a resolver <strong>problemas nuevos</strong>.</li>
+</ul></li>
+<li>También es una <strong>técnica de mejora</strong>.
+<ul>
+<li>Nos permite mejorar un programa <strong>ya existente</strong>.</li>
+</ul></li>
+</ul>
+<div class="callout callout-tip callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Cuando reescribimos un programa manteniendo su funcionalidad idéntica, lo llamamos <strong>refactorizar</strong>.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
 <h4 id="ejemplo-potencia-ii">Ejemplo: Potencia II</h4>
-<p>Escribe un programa que pida al usuario dos números enteros y muestre por pantalla su suma.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="kw">def</span> potencia(a, b):</span>
-<span id="cb1-2"><a></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> ^ </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> = </span><span class="sc">{</span>a <span class="op">**</span> b<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb1-3"><a></a></span>
-<span id="cb1-4"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número entero:"</span>)</span>
-<span id="cb1-5"><a></a>a <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
-<span id="cb1-6"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número entero:"</span>)</span>
-<span id="cb1-7"><a></a>a <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
-<span id="cb1-8"><a></a>potencia(b, a) <span class="co"># Atención al orden</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Vamos a modularizar aún más el código que hicimos la sesión anterior.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Modularizado</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="kw">def</span> potencia(a, b):</span>
+<span id="cb7-2"><a></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> ^ </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> = </span><span class="sc">{</span>a <span class="op">**</span> b<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb7-3"><a></a></span>
+<span id="cb7-4"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número entero:"</span>)</span>
+<span id="cb7-5"><a></a>a <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb7-6"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número entero:"</span>)</span>
+<span id="cb7-7"><a></a>b <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb7-8"><a></a></span>
+<span id="cb7-9"><a></a>potencia(a, b) <span class="co"># Atención al orden</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<p><strong>Más modularizado</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="kw">def</span> potencia(a, b):</span>
+<span id="cb8-2"><a></a>    <span class="cf">return</span> a <span class="op">**</span> b</span>
+<span id="cb8-3"><a></a></span>
+<span id="cb8-4"><a></a><span class="kw">def</span> pedir_entero():</span>
+<span id="cb8-5"><a></a>    <span class="bu">print</span>(<span class="st">"Introduce un número entero:"</span>)</span>
+<span id="cb8-6"><a></a>    <span class="cf">return</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb8-7"><a></a></span>
+<span id="cb8-8"><a></a>a <span class="op">=</span> pedir_entero()</span>
+<span id="cb8-9"><a></a>b <span class="op">=</span> pedir_entero()</span>
+<span id="cb8-10"><a></a></span>
+<span id="cb8-11"><a></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> ^ </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> = </span><span class="sc">{</span>potencia(a, b)<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
 <ul>
 <li><em>Nota</em>: Cuando aprendamos a devolver valores, podremos modularizar aún más este programa.</li>
 </ul>
 </section>
 <section class="slide level2">
 
-<h4 id="ejemplo-calculadora-de-números-complejos">Ejemplo: Calculadora de números complejos</h4>
+<h4 id="ejercicio-aproximación-de-coseno-por-serie-de-maclaurin-funcion">Ejercicio: Aproximación de coseno por serie de Maclaurin (funcion)</h4>
+<p>Vamos a modularizar el cálculo de la aproximación del coseno que hicimos en sesiones anteriores.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Original</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="im">import</span> math</span>
+<span id="cb9-2"><a></a></span>
+<span id="cb9-3"><a></a><span class="bu">print</span>(<span class="st">"Introduce el ángulo (en radianes):"</span>)</span>
+<span id="cb9-4"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
+<span id="cb9-5"><a></a><span class="bu">print</span>(<span class="st">"Introduce el número de términos:"</span>)</span>
+<span id="cb9-6"><a></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb9-7"><a></a></span>
+<span id="cb9-8"><a></a>cos_approx <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb9-9"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, n):</span>
+<span id="cb9-10"><a></a>    cos_approx <span class="op">+=</span> (((<span class="op">-</span><span class="dv">1</span>) <span class="op">**</span> i)</span>
+<span id="cb9-11"><a></a>        <span class="op">*</span> ((x <span class="op">**</span> (<span class="dv">2</span> <span class="op">*</span> i)) </span>
+<span id="cb9-12"><a></a>        <span class="op">/</span> math.factorial(<span class="dv">2</span> <span class="op">*</span> i)))</span>
+<span id="cb9-13"><a></a></span>
+<span id="cb9-14"><a></a><span class="bu">print</span>(cos_approx)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<p><strong>Modularizado</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="im">import</span> math</span>
+<span id="cb10-2"><a></a></span>
+<span id="cb10-3"><a></a><span class="kw">def</span> coseno(x, n):</span>
+<span id="cb10-4"><a></a>    cos_approx <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb10-5"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, n):</span>
+<span id="cb10-6"><a></a>        cos_approx <span class="op">+=</span> (((<span class="op">-</span><span class="dv">1</span>) <span class="op">**</span> i)</span>
+<span id="cb10-7"><a></a>            <span class="op">*</span> ((x <span class="op">**</span> (<span class="dv">2</span> <span class="op">*</span> i)) </span>
+<span id="cb10-8"><a></a>            <span class="op">/</span> math.factorial(<span class="dv">2</span> <span class="op">*</span> i)))</span>
+<span id="cb10-9"><a></a>    <span class="cf">return</span> cos_approx</span>
+<span id="cb10-10"><a></a></span>
+<span id="cb10-11"><a></a><span class="bu">print</span>(<span class="st">"Introduce el ángulo (en radianes):"</span>)</span>
+<span id="cb10-12"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
+<span id="cb10-13"><a></a><span class="bu">print</span>(<span class="st">"Introduce el número de términos:"</span>)</span>
+<span id="cb10-14"><a></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb10-15"><a></a></span>
+<span id="cb10-16"><a></a><span class="bu">print</span>(coseno(x, n))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h3 id="early-return">Early return</h3>
+<ul>
+<li>En ocasiones, <strong>no es necesario</strong> que una función <strong>termine su ejecución</strong> para devolver un valor.</li>
+<li>Ejecutar <code>return</code> en mitad de la función <strong>terminará la ejecución</strong> en ese punto y <strong>devolverá su valor inmediatamente</strong>.</li>
+<li>Esto se conoce como <strong>early return</strong>.</li>
+<li>Es un patrón que es común encontrar en <strong>código ajeno</strong>.</li>
+</ul>
+<div class="callout callout-warning callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Este es un patrón avanzado y se desaconseja abusar de él sin entender bien otros conceptos básicos primero.</p>
+<ul>
+<li>Salvo excepciones muy concretas, siempre trataremos de mantener <code>single exit-point</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-trivial">Ejemplo: Trivial</h4>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="kw">def</span> early_return():</span>
+<span id="cb11-2"><a></a>    <span class="bu">print</span>(<span class="st">"Antes del return"</span>)</span>
+<span id="cb11-3"><a></a>    <span class="cf">return</span> <span class="dv">42</span></span>
+<span id="cb11-4"><a></a>    <span class="bu">print</span>(<span class="st">"Después del return"</span>)</span>
+<span id="cb11-5"><a></a></span>
+<span id="cb11-6"><a></a>a <span class="op">=</span> early_return()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">Antes del return</div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-cálculo-de-precio-de-entrada">Ejemplo: Cálculo de precio de entrada</h4>
+<ul>
+<li>Vamos a calcular el precio de entrada a un parque de atracciones.
+<ul>
+<li>Los menos de 12 años no pagan.</li>
+<li>El precio es de 10€ por cada 10 años de edad.
+<ul>
+<li>Ejemplo: 24 años -&gt; 20€</li>
+</ul></li>
+<li>Familia numerosa aplica un descuento del 20%.</li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Early return</strong></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="kw">def</span> precio(edad, familia_numerosa):</span>
+<span id="cb12-2"><a></a>    <span class="cf">if</span> edad <span class="op">&lt;</span> <span class="dv">12</span>:</span>
+<span id="cb12-3"><a></a>        <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb12-4"><a></a>    precio <span class="op">=</span> edad <span class="op">//</span> <span class="dv">10</span> <span class="op">*</span> <span class="dv">10</span></span>
+<span id="cb12-5"><a></a>    <span class="cf">if</span> familia_numerosa:</span>
+<span id="cb12-6"><a></a>        <span class="cf">return</span> precio <span class="op">*</span> <span class="fl">0.8</span></span>
+<span id="cb12-7"><a></a>    <span class="cf">return</span> precio</span>
+<span id="cb12-8"><a></a><span class="bu">print</span>(precio(<span class="dv">24</span>, <span class="va">False</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<p><strong>Single exit-point</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="kw">def</span> precio(edad, familia_numerosa):</span>
+<span id="cb13-2"><a></a>    <span class="cf">if</span> edad <span class="op">&lt;</span> <span class="dv">12</span>:</span>
+<span id="cb13-3"><a></a>        precio <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb13-4"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb13-5"><a></a>        precio <span class="op">=</span> edad <span class="op">//</span> <span class="dv">10</span> <span class="op">*</span> <span class="dv">10</span></span>
+<span id="cb13-6"><a></a>        <span class="cf">if</span> familia_numerosa:</span>
+<span id="cb13-7"><a></a>            precio <span class="op">*=</span> <span class="fl">0.8</span></span>
+<span id="cb13-8"><a></a>    <span class="cf">return</span> precio</span>
+<span id="cb13-9"><a></a><span class="bu">print</span>(precio(<span class="dv">24</span>, <span class="va">False</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h3 id="early-return-en-un-bucle">Early return en un bucle</h3>
+<div class="callout callout-warning callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Las funciones sólo devuelven una vez. Meter un return dentro de un bucle no hará que devuelva varios valores.</p>
+</div>
+</div>
+</div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="kw">def</span> return_en_bucle():</span>
+<span id="cb14-2"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">10</span>):</span>
+<span id="cb14-3"><a></a>        <span class="cf">return</span> i</span>
+<span id="cb14-4"><a></a></span>
+<span id="cb14-5"><a></a>a <span class="op">=</span> return_en_bucle()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>La función <strong>devuelve 0</strong> y termina.
+<ul>
+<li><strong>NO</strong> devuelve <code>0, 1, 2, 3, 4, 5, 6, 7, 8, 9</code>.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="tipo-de-dato-devuelto">Tipo de dato devuelto</h3>
+<ul>
+<li>Aunque una función <strong>no está obligada</strong> a devolver siempre el mismo tipo de dato…</li>
+</ul>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="kw">def</span> funcion(cond): <span class="co"># MALA IDEA </span></span>
+<span id="cb15-2"><a></a>    <span class="cf">if</span> cond:</span>
+<span id="cb15-3"><a></a>        valor <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb15-4"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb15-5"><a></a>        valor <span class="op">=</span> <span class="st">"Hola"</span></span>
+<span id="cb15-6"><a></a>    <span class="cf">return</span> valor</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Del mismo modo que <strong>insistimos en ser disciplinados</strong> con los tipos de datos de cada variable
+<ul>
+<li>Es decir: <strong>no cambiar su tipo a lo largo del programa</strong>.</li>
+</ul></li>
+<li>Es importante <strong>ser coherente con el tipo de dato que devuelve una función</strong>.
+<ul>
+<li>Cuando invoquemos la función, <strong>esperaremos un tipo de dato concreto</strong>.</li>
+<li>Todos los valores que pueda devolver la función <strong>deberán ser del mismo tipo</strong>.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-tipos-de-datos-correctos">Ejemplo: Tipos de datos correctos</h4>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="kw">def</span> preguntar_edad():</span>
+<span id="cb16-2"><a></a>    <span class="bu">print</span>(<span class="st">"¿Cuántos años tienes?"</span>)</span>
+<span id="cb16-3"><a></a>    <span class="cf">return</span> <span class="bu">int</span>(<span class="bu">input</span>())  <span class="co"># Devuelve un entero</span></span>
+<span id="cb16-4"><a></a></span>
+<span id="cb16-5"><a></a><span class="kw">def</span> preguntar_familia_numerosa():</span>
+<span id="cb16-6"><a></a>    <span class="bu">print</span>(<span class="st">"¿Eres familia numerosa? (s/n)"</span>)</span>
+<span id="cb16-7"><a></a>    res <span class="op">=</span> <span class="bu">input</span>()</span>
+<span id="cb16-8"><a></a>    <span class="cf">return</span> res <span class="op">==</span> <span class="st">"s"</span> <span class="co"># Devuelve un booleano</span></span>
+<span id="cb16-9"><a></a></span>
+<span id="cb16-10"><a></a><span class="kw">def</span> es_infante(edad):</span>
+<span id="cb16-11"><a></a>    <span class="cf">return</span> edad <span class="op">&lt;</span> <span class="dv">12</span>  <span class="co"># Devuelve un booleano</span></span>
+<span id="cb16-12"><a></a></span>
+<span id="cb16-13"><a></a><span class="kw">def</span> precio_base(edad):</span>
+<span id="cb16-14"><a></a>    <span class="cf">return</span> edad <span class="op">//</span> <span class="dv">10</span> <span class="op">*</span> <span class="dv">10</span>  <span class="co"># Devuelve un entero</span></span>
+<span id="cb16-15"><a></a></span>
+<span id="cb16-16"><a></a><span class="kw">def</span> aplicar_descuento(precio, descuento):</span>
+<span id="cb16-17"><a></a>    <span class="cf">return</span> precio <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> descuento)  <span class="co"># Devuelve un float</span></span>
+<span id="cb16-18"><a></a></span>
+<span id="cb16-19"><a></a><span class="kw">def</span> precio(edad, familia_numerosa):</span>
+<span id="cb16-20"><a></a>    <span class="cf">if</span> es_infante(edad):</span>
+<span id="cb16-21"><a></a>        precio <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb16-22"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb16-23"><a></a>        precio <span class="op">=</span> precio_base(edad)</span>
+<span id="cb16-24"><a></a>        <span class="cf">if</span> familia_numerosa:</span>
+<span id="cb16-25"><a></a>            precio <span class="op">=</span> aplicar_descuento(precio, <span class="fl">0.2</span>)</span>
+<span id="cb16-26"><a></a>    <span class="cf">return</span> precio  <span class="co"># Devuelve un float</span></span>
+<span id="cb16-27"><a></a></span>
+<span id="cb16-28"><a></a>edad <span class="op">=</span> preguntar_edad()</span>
+<span id="cb16-29"><a></a>familia_numerosa <span class="op">=</span> preguntar_familia_numerosa()</span>
+<span id="cb16-30"><a></a><span class="bu">print</span>(precio(edad, familia_numerosa))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h3 id="composición-de-funciones-y-sus-valores-de-retorno">Composición de funciones y sus valores de retorno</h3>
+<ul>
+<li>Del mismo modo que <strong>componíamos invocaciones</strong> a funciones para reaprovechar su comportamiento</li>
+<li>También podemos <strong>componer los valores que devuelven</strong>.</li>
+</ul>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="kw">def</span> f(x):</span>
+<span id="cb17-2"><a></a>    <span class="cf">return</span> x</span>
+<span id="cb17-3"><a></a></span>
+<span id="cb17-4"><a></a><span class="kw">def</span> g(x):</span>
+<span id="cb17-5"><a></a>    <span class="cf">return</span> x</span>
+<span id="cb17-6"><a></a></span>
+<span id="cb17-7"><a></a><span class="kw">def</span> h(x):</span>
+<span id="cb17-8"><a></a>    <span class="cf">return</span> f(x) <span class="op">+</span> g(x)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-composición-suma">Ejemplo: Composición suma</h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="kw">def</span> suma(x):</span>
+<span id="cb18-2"><a></a>    <span class="cf">return</span> x <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb18-3"><a></a></span>
+<span id="cb18-4"><a></a><span class="kw">def</span> prod(x):</span>
+<span id="cb18-5"><a></a>    <span class="cf">return</span> x <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb18-6"><a></a></span>
+<span id="cb18-7"><a></a><span class="kw">def</span> compo(x):</span>
+<span id="cb18-8"><a></a>    <span class="co"># Componemos sus resultados</span></span>
+<span id="cb18-9"><a></a>    <span class="cf">return</span> suma(x) <span class="op">+</span> prod(x)</span>
+<span id="cb18-10"><a></a></span>
+<span id="cb18-11"><a></a><span class="bu">print</span>(compo(<span class="dv">3</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="line-block">11</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-composición-de-funciones">Ejemplo: Composición de funciones</h4>
+<ul>
+<li>El orden de ejecución es de <strong>dentro hacia fuera</strong>.
+<ul>
+<li>Primero se ejecuta <code>g(x)</code>.</li>
+<li>El resultado se usa como argumento de <code>f(x)</code></li>
+<li>El resultado lo devuelve <code>h(x)</code>.</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="kw">def</span> suma(x):</span>
+<span id="cb19-2"><a></a>    <span class="cf">return</span> x <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb19-3"><a></a></span>
+<span id="cb19-4"><a></a><span class="kw">def</span> prod(x):</span>
+<span id="cb19-5"><a></a>    <span class="cf">return</span> x <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb19-6"><a></a></span>
+<span id="cb19-7"><a></a><span class="kw">def</span> compo(x):</span>
+<span id="cb19-8"><a></a>    <span class="co"># Componemos las funciones</span></span>
+<span id="cb19-9"><a></a>    <span class="cf">return</span> suma(prod(x))</span>
+<span id="cb19-10"><a></a></span>
+<span id="cb19-11"><a></a><span class="bu">print</span>(compo(<span class="dv">3</span>))</span>
+<span id="cb19-12"><a></a><span class="bu">print</span>(<span class="ss">f"No es lo mismo </span><span class="sc">{</span>suma(prod(<span class="dv">3</span>))<span class="sc">}</span><span class="ss"> que </span><span class="sc">{</span>prod(suma(<span class="dv">3</span>))<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>
+Salida
+</summary>
+<div class="line-block">8<br>
+No es lo mismo 8 que 10</div>
+</details>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-composición-raíces">Ejemplo: Composición raíces</h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a><span class="kw">def</span> raiz_n(x, n):</span>
+<span id="cb20-2"><a></a>    <span class="co"># Raíz general</span></span>
+<span id="cb20-3"><a></a>    <span class="cf">return</span> x <span class="op">**</span> (<span class="dv">1</span><span class="op">/</span>n)</span>
+<span id="cb20-4"><a></a></span>
+<span id="cb20-5"><a></a><span class="kw">def</span> raiz_cuadrada(x):</span>
+<span id="cb20-6"><a></a>    <span class="co"># Fijamos n=2</span></span>
+<span id="cb20-7"><a></a>    <span class="cf">return</span> raiz_n(x, <span class="dv">2</span>)</span>
+<span id="cb20-8"><a></a></span>
+<span id="cb20-9"><a></a><span class="kw">def</span> raiz_cubica(x):</span>
+<span id="cb20-10"><a></a>    <span class="co"># Fijamos n=3</span></span>
+<span id="cb20-11"><a></a>    <span class="cf">return</span> raiz_n(x, <span class="dv">3</span>)</span>
+<span id="cb20-12"><a></a></span>
+<span id="cb20-13"><a></a><span class="bu">print</span>(raiz_cuadrada(<span class="dv">9</span>))</span>
+<span id="cb20-14"><a></a><span class="bu">print</span>(raiz_cubica(<span class="dv">27</span>))</span>
+<span id="cb20-15"><a></a><span class="bu">print</span>(raiz_n(<span class="dv">16</span>, <span class="dv">4</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="line-block">3.0<br>
+3.0<br>
+2.0</div>
+</div></div>
 
 
 </section>
