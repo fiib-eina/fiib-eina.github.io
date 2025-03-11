@@ -220,32 +220,301 @@
 </ul></li>
 </ul>
 </section>
+<section class="slide level2">
+
+<h3 id="diseño-top-down-y-bottom-up">Diseño top-down y bottom-up</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>En la descomposición de un problema, podemos seguir <strong>dos enfoques</strong>:
+<ul>
+<li><strong>Top-down</strong>: Partimos de un problema general y lo dividimos en problemas más pequeños.</li>
+<li><strong>Bottom-up</strong>: Partimos de problemas más pequeños y los combinamos para resolver un problema mayor.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="./img/modularizacion.png"></p>
+</div></div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>A veces un problema <strong>se revuelve más fácilmente</strong> con un enfoque u otro.
+<ul>
+<li>Problemas donde conocemos “lo que tenemos que hacer” pero no “cómo hacerlo” (top-down).</li>
+<li>Problemas donde conocemos “alguno de los pasos” pero no “el algoritmo general” (bottom-up).</li>
+</ul></li>
+<li>A veces <strong>uno mismo</strong> tiene preferencia por uno u otro.</li>
+</ul>
+<div class="callout callout-tip callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Existe un paralelismo con el <strong>dibujo</strong>. Hay quienes comienzan bocetando las proporciones y luego añaden los detalles y hay quienes comienzan con los detalles y van construyendo el resto del dibujo.</p>
+</div>
+</div>
+</div>
+</section>
 <section id="otros-usos-avanzados-de-funciones" class="slide level2 center">
 <h2>Otros usos avanzados de funciones</h2>
 </section>
 <section class="slide level2">
 
-<h3 id="f-strings">f-strings</h3>
+<h3 id="composición-de-funciones-y-sus-valores-de-retorno">Composición de funciones y sus valores de retorno</h3>
+<ul>
+<li>Del mismo modo que <strong>componíamos invocaciones</strong> a funciones para reaprovechar su comportamiento</li>
+<li>También podemos <strong>componer los valores que devuelven</strong>.</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="kw">def</span> f(x):</span>
+<span id="cb1-2"><a></a>    <span class="cf">return</span> x</span>
+<span id="cb1-3"><a></a></span>
+<span id="cb1-4"><a></a><span class="kw">def</span> g(x):</span>
+<span id="cb1-5"><a></a>    <span class="cf">return</span> x</span>
+<span id="cb1-6"><a></a></span>
+<span id="cb1-7"><a></a><span class="kw">def</span> h(x):</span>
+<span id="cb1-8"><a></a>    <span class="cf">return</span> f(x) <span class="op">+</span> g(x)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-composición-suma">Ejemplo: Composición suma</h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> suma(x):</span>
+<span id="cb2-2"><a></a>    <span class="cf">return</span> x <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb2-3"><a></a></span>
+<span id="cb2-4"><a></a><span class="kw">def</span> prod(x):</span>
+<span id="cb2-5"><a></a>    <span class="cf">return</span> x <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb2-6"><a></a></span>
+<span id="cb2-7"><a></a><span class="kw">def</span> compo(x):</span>
+<span id="cb2-8"><a></a>    <span class="co"># Componemos sus resultados</span></span>
+<span id="cb2-9"><a></a>    <span class="cf">return</span> suma(x) <span class="op">+</span> prod(x)</span>
+<span id="cb2-10"><a></a></span>
+<span id="cb2-11"><a></a><span class="bu">print</span>(compo(<span class="dv">3</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="line-block">11</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-encadenar-resultados">Ejemplo: Encadenar resultados</h4>
+<ul>
+<li>El orden de ejecución es de <strong>dentro hacia fuera</strong>.
+<ul>
+<li>Primero se ejecuta <code>g(x)</code>.</li>
+<li>El resultado se usa como argumento de <code>f(x)</code></li>
+<li>El resultado lo devuelve <code>h(x)</code>.</li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="kw">def</span> suma(x):</span>
+<span id="cb3-2"><a></a>    <span class="cf">return</span> x <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a><span class="kw">def</span> prod(x):</span>
+<span id="cb3-5"><a></a>    <span class="cf">return</span> x <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb3-6"><a></a></span>
+<span id="cb3-7"><a></a><span class="kw">def</span> compo(x):</span>
+<span id="cb3-8"><a></a>    <span class="co"># Componemos las funciones</span></span>
+<span id="cb3-9"><a></a>    <span class="cf">return</span> suma(prod(x))</span>
+<span id="cb3-10"><a></a></span>
+<span id="cb3-11"><a></a><span class="bu">print</span>(compo(<span class="dv">3</span>))</span>
+<span id="cb3-12"><a></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>suma(prod(<span class="dv">3</span>))<span class="sc">}</span><span class="ss"> =/= </span><span class="sc">{</span>prod(suma(<span class="dv">3</span>))<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> suma(x):</span>
+<span id="cb4-2"><a></a>    <span class="cf">return</span> x <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a><span class="kw">def</span> prod(x):</span>
+<span id="cb4-5"><a></a>    <span class="cf">return</span> x <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb4-6"><a></a></span>
+<span id="cb4-7"><a></a><span class="kw">def</span> compo(x):</span>
+<span id="cb4-8"><a></a>    <span class="co"># Equivalente</span></span>
+<span id="cb4-9"><a></a>    p <span class="op">=</span> prod(x)</span>
+<span id="cb4-10"><a></a>    <span class="cf">return</span> suma(p)</span>
+<span id="cb4-11"><a></a></span>
+<span id="cb4-12"><a></a><span class="bu">print</span>(compo(<span class="dv">3</span>))</span>
+<span id="cb4-13"><a></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>suma(prod(<span class="dv">3</span>))<span class="sc">}</span><span class="ss"> =/= </span><span class="sc">{</span>prod(suma(<span class="dv">3</span>))<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<details>
+<summary>
+Salida
+</summary>
+<div class="line-block">8<br>
+No es lo mismo 8 que 10</div>
+</details>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-composición-raíces">Ejemplo: Composición raíces</h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="kw">def</span> raiz_n(x, n):</span>
+<span id="cb5-2"><a></a>    <span class="co"># Raíz general</span></span>
+<span id="cb5-3"><a></a>    <span class="cf">return</span> x <span class="op">**</span> (<span class="dv">1</span><span class="op">/</span>n)</span>
+<span id="cb5-4"><a></a></span>
+<span id="cb5-5"><a></a><span class="kw">def</span> raiz_cuadrada(x):</span>
+<span id="cb5-6"><a></a>    <span class="co"># Fijamos n=2</span></span>
+<span id="cb5-7"><a></a>    <span class="cf">return</span> raiz_n(x, <span class="dv">2</span>)</span>
+<span id="cb5-8"><a></a></span>
+<span id="cb5-9"><a></a><span class="kw">def</span> raiz_cubica(x):</span>
+<span id="cb5-10"><a></a>    <span class="co"># Fijamos n=3</span></span>
+<span id="cb5-11"><a></a>    <span class="cf">return</span> raiz_n(x, <span class="dv">3</span>)</span>
+<span id="cb5-12"><a></a></span>
+<span id="cb5-13"><a></a><span class="bu">print</span>(raiz_cuadrada(<span class="dv">9</span>))</span>
+<span id="cb5-14"><a></a><span class="bu">print</span>(raiz_cubica(<span class="dv">27</span>))</span>
+<span id="cb5-15"><a></a><span class="bu">print</span>(raiz_n(<span class="dv">16</span>, <span class="dv">4</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="line-block">3.0<br>
+3.0<br>
+2.0</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h3 id="composición-de-f-strings">Composición de f-strings</h3>
 <ul>
 <li>Una de las ventajas de haber aprendido a utilizar las <code>f-strings</code> en los <code>print()</code> es que ahora podemos devolver <strong>cadenas de texto</strong> con el mismo formato.
 <ul>
 <li>Esto es útil cuando lo que buscamos <strong>no es imprimir</strong> el resultado, sino <strong>utilizarlo</strong> para otra cosa.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="kw">def</span> resultado(a, op, b, r):</span>
-<span id="cb1-2"><a></a>    <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>op<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> = </span><span class="sc">{</span>r<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb1-3"><a></a></span>
-<span id="cb1-4"><a></a><span class="kw">def</span> resultado_suma(a, b):</span>
-<span id="cb1-5"><a></a>    resultado(a, <span class="st">'+'</span>, b, a <span class="op">+</span> b)</span>
-<span id="cb1-6"><a></a></span>
-<span id="cb1-7"><a></a>resultado_suma(<span class="dv">3</span>, <span class="dv">5</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="creación-de-librerías" class="slide level2 center">
-<h2>Creación de librerías</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">def</span> resultado(a, op, b, r):</span>
+<span id="cb6-2"><a></a>    <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>op<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> = </span><span class="sc">{</span>r<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb6-3"><a></a></span>
+<span id="cb6-4"><a></a><span class="kw">def</span> resultado_suma(a, b):</span>
+<span id="cb6-5"><a></a>    resultado(a, <span class="st">'+'</span>, b, a <span class="op">+</span> b)</span>
+<span id="cb6-6"><a></a></span>
+<span id="cb6-7"><a></a>resultado_suma(<span class="dv">3</span>, <span class="dv">5</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
-<h3 id="creación-de-librerías-básicas">Creación de librerías básicas</h3>
+<h4 id="ejercicio-conjugar-correctamente">Ejercicio: Conjugar correctamente</h4>
+<ul>
+<li>Escribe una función <code>num_manzanas(n)</code> que devuelva una cadena de texto describiendo el número de manzanas.</li>
+<li>Escribe una función <code>num_barcos(n)</code> que devuelva una cadena de texto describiendo el número de barcos.</li>
+<li>Escribe el programa que consideres necesario para <strong>testear la función</strong>.</li>
+</ul>
+<div class="line-block">Introduce la cantiad de manzanas:<br>
+<strong>3</strong><br>
+Tienes 3 manzanas</div>
+<div class="line-block">Introduce la cantiad de manzanas:<br>
+<strong>1</strong><br>
+Tienes 1 manzana</div>
+</section>
+<section class="slide level2">
+
+<p><strong>Solución poco modular</strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="kw">def</span> num_manzanas(n):</span>
+<span id="cb7-2"><a></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb7-3"><a></a>        <span class="cf">return</span> <span class="ss">f"Tienes </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> manzana"</span></span>
+<span id="cb7-4"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb7-5"><a></a>        <span class="cf">return</span> <span class="ss">f"Tienes </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> manzanas"</span></span>
+<span id="cb7-6"><a></a></span>
+<span id="cb7-7"><a></a><span class="kw">def</span> num_barcos(n):</span>
+<span id="cb7-8"><a></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb7-9"><a></a>        <span class="cf">return</span> <span class="ss">f"Tienes </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> barco"</span></span>
+<span id="cb7-10"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb7-11"><a></a>        <span class="cf">return</span> <span class="ss">f"Tienes </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> barcos"</span></span>
+<span id="cb7-12"><a></a></span>
+<span id="cb7-13"><a></a><span class="bu">print</span>(num_manzanas(<span class="dv">1</span>))</span>
+<span id="cb7-14"><a></a><span class="bu">print</span>(num_manzanas(<span class="dv">5</span>))</span>
+<span id="cb7-15"><a></a><span class="bu">print</span>(num_manzanas(<span class="dv">10</span>))</span>
+<span id="cb7-16"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">1</span>))</span>
+<span id="cb7-17"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">5</span>))</span>
+<span id="cb7-18"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">10</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="line-block">tienes 1 manzana<br>
+tienes 5 manzanas<br>
+tienes 10 manzanas<br>
+tienes 1 barco<br>
+tienes 5 barcos<br>
+tienes 10 barcos</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<p><strong>Solución más modular</strong></p>
+<ul>
+<li>Extraemos la lógica de la <strong>conjugación</strong> de palabras a una función <code>conj()</code>.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="kw">def</span> conj(num, palabra):</span>
+<span id="cb8-2"><a></a>    nueva_palabra <span class="op">=</span> palabra</span>
+<span id="cb8-3"><a></a>    <span class="cf">if</span> num <span class="op">!=</span> <span class="dv">1</span>:</span>
+<span id="cb8-4"><a></a>        nueva_palabra <span class="op">+=</span> <span class="st">'s'</span></span>
+<span id="cb8-5"><a></a>    <span class="cf">return</span> nueva_palabra</span>
+<span id="cb8-6"><a></a></span>
+<span id="cb8-7"><a></a><span class="kw">def</span> num_manzanas(n):</span>
+<span id="cb8-8"><a></a>    <span class="cf">return</span> <span class="ss">f"Tienes </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>conj(n, <span class="st">'manzana'</span>)<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb8-9"><a></a></span>
+<span id="cb8-10"><a></a><span class="kw">def</span> num_barcos(n):</span>
+<span id="cb8-11"><a></a>    <span class="cf">return</span> <span class="ss">f"Tienes </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>conj(n, <span class="st">'barco'</span>)<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb8-12"><a></a></span>
+<span id="cb8-13"><a></a><span class="bu">print</span>(num_manzanas(<span class="dv">1</span>))</span>
+<span id="cb8-14"><a></a><span class="bu">print</span>(num_manzanas(<span class="dv">5</span>))</span>
+<span id="cb8-15"><a></a><span class="bu">print</span>(num_manzanas(<span class="dv">10</span>))</span>
+<span id="cb8-16"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">1</span>))</span>
+<span id="cb8-17"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">5</span>))</span>
+<span id="cb8-18"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">10</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="line-block">tienes 1 manzana<br>
+tienes 5 manzanas<br>
+tienes 10 manzanas<br>
+tienes 1 barco<br>
+tienes 5 barcos<br>
+tienes 10 barcos</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<p><strong>Solución AÚN más modular</strong></p>
+<ul>
+<li>Generalizamos la construcción de la <strong>frase</strong> a una función <code>num_algo()</code>.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="kw">def</span> conj(num, palabra):</span>
+<span id="cb9-2"><a></a>    nueva_palabra <span class="op">=</span> palabra</span>
+<span id="cb9-3"><a></a>    <span class="cf">if</span> num <span class="op">!=</span> <span class="dv">1</span>:</span>
+<span id="cb9-4"><a></a>        nueva_palabra <span class="op">=</span> palabra <span class="op">+</span> <span class="st">'s'</span></span>
+<span id="cb9-5"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb9-6"><a></a>        nueva_palabra <span class="op">=</span> palabra</span>
+<span id="cb9-7"><a></a>    <span class="cf">return</span> nueva_palabra</span>
+<span id="cb9-8"><a></a></span>
+<span id="cb9-9"><a></a><span class="kw">def</span> num_algo(n, algo):</span>
+<span id="cb9-10"><a></a>    <span class="cf">return</span> <span class="ss">f"Tienes </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>conj(n, algo)<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb9-11"><a></a></span>
+<span id="cb9-12"><a></a><span class="kw">def</span> num_manzanas(n):</span>
+<span id="cb9-13"><a></a>    <span class="cf">return</span> num_algo(n, <span class="st">'manzana'</span>)</span>
+<span id="cb9-14"><a></a></span>
+<span id="cb9-15"><a></a><span class="kw">def</span> num_barcos(n):</span>
+<span id="cb9-16"><a></a>    <span class="cf">return</span> num_algo(n, <span class="st">'barco'</span>)</span>
+<span id="cb9-17"><a></a></span>
+<span id="cb9-18"><a></a><span class="bu">print</span>(num_manzanas(<span class="dv">1</span>))</span>
+<span id="cb9-19"><a></a><span class="bu">print</span>(num_manzanas(<span class="dv">5</span>))</span>
+<span id="cb9-20"><a></a><span class="bu">print</span>(num_manzanas(<span class="dv">10</span>))</span>
+<span id="cb9-21"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">1</span>))</span>
+<span id="cb9-22"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">5</span>))</span>
+<span id="cb9-23"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">10</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="line-block">tienes 1 manzana<br>
+tienes 5 manzanas<br>
+tienes 10 manzanas<br>
+tienes 1 barco<br>
+tienes 5 barcos<br>
+tienes 10 barcos</div>
+</div></div>
+</section>
+<section id="creación-de-bibliotecas" class="slide level2 center">
+<h2>Creación de bibliotecas</h2>
+</section>
+<section class="slide level2">
+
+<h3 id="creación-de-bibliotecas-libraries-básicas">Creación de bibliotecas (libraries) básicas</h3>
 <ul>
 <li>Las <strong>funciones</strong> que hemos creado hasta ahora se han guardado en el mismo archivo.</li>
 <li>Esto es útil para <strong>pequeños programas</strong>, pero dificulta la <strong>reutilización</strong> de código.</li>
@@ -254,17 +523,102 @@
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong><code>operaciones.py</code></strong></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> suma(a, b):</span>
-<span id="cb2-2"><a></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="kw">def</span> suma(a, b):</span>
+<span id="cb10-2"><a></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <p><strong><code>main.py</code></strong></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">import</span> operaciones</span>
-<span id="cb3-2"><a></a></span>
-<span id="cb3-3"><a></a><span class="bu">print</span>(operaciones.suma(<span class="dv">3</span>, <span class="dv">5</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="im">import</span> operaciones</span>
+<span id="cb11-2"><a></a></span>
+<span id="cb11-3"><a></a><span class="bu">print</span>(operaciones.suma(<span class="dv">3</span>, <span class="dv">5</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 </section>
 <section class="slide level2">
 
+<ul>
+<li><strong>Pros</strong>:
+<ul>
+<li><strong>Organización</strong> del código: agrupar módulos relacionados.</li>
+<li><strong>Aislamiento</strong> de funciones: no se mezclan con el código principal.</li>
+</ul></li>
+<li><strong>Contras</strong>:
+<ul>
+<li>Mayor <strong>dificultad</strong> para encontrar funciones.</li>
+<li><strong>Dependencia</strong> de otros archivos.</li>
+</ul></li>
+</ul>
+<div class="callout callout-warning callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Si tu programa depende (importa) de una biblioteca que has creado, <strong>asegúrate de que ese archivo esté también disponible</strong>.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-verificación-testing-de-una-función">Ejemplo: Verificación (testing) de una función</h4>
+<ul>
+<li>Hemos desarrollado una práctica que nos pedía implementar una función <code>es_primo(n)</code> que devolviera <code>True</code> si <code>n</code> era primo y <code>False</code> en caso contrario.</li>
+<li>Vamos a <strong>verificar</strong> que nuestra función <strong>funciona correctamente</strong>.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:35%;">
+<p><strong><code>primo.py</code></strong></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="kw">def</span> es_primo(n):</span>
+<span id="cb12-2"><a></a>  primo <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb12-3"><a></a>  <span class="cf">if</span> n <span class="op">&lt;</span> <span class="dv">2</span>:</span>
+<span id="cb12-4"><a></a>    primo <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb12-5"><a></a>  <span class="cf">else</span>:</span>
+<span id="cb12-6"><a></a>    i <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb12-7"><a></a>    <span class="cf">while</span> primo <span class="kw">and</span> i <span class="op">&lt;</span> n:</span>
+<span id="cb12-8"><a></a>      <span class="cf">if</span> n <span class="op">%</span> i <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb12-9"><a></a>        primo <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb12-10"><a></a>  <span class="cf">return</span> <span class="va">True</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:35%;">
+<p><strong><code>test_primo.py</code></strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="im">import</span> primo</span>
+<span id="cb13-2"><a></a></span>
+<span id="cb13-3"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">1</span>))</span>
+<span id="cb13-4"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">2</span>))</span>
+<span id="cb13-5"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">3</span>))</span>
+<span id="cb13-6"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">4</span>))</span>
+<span id="cb13-7"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">5</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:30%;">
+<p><strong>Out: <code>test_primo.py</code></strong></p>
+<div class="line-block">True<br>
+True<br>
+True<br>
+False<br>
+True</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-verificación-testing-de-una-función-avanzado">Ejemplo: Verificación (testing) de una función (avanzado)</h4>
+<ul>
+<li>En lugar de pintar el resultado por pantalla, podemos <strong>comparar</strong> el resultado con el <strong>esperado</strong>.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong><code>test_primo.py</code></strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="im">import</span> primo</span>
+<span id="cb14-2"><a></a></span>
+<span id="cb14-3"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">1</span>) <span class="op">==</span> <span class="va">False</span>)</span>
+<span id="cb14-4"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">2</span>) <span class="op">==</span> <span class="va">True</span>)</span>
+<span id="cb14-5"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">3</span>) <span class="op">==</span> <span class="va">True</span>)</span>
+<span id="cb14-6"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">4</span>) <span class="op">==</span> <span class="va">False</span>)</span>
+<span id="cb14-7"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">5</span>) <span class="op">==</span> <span class="va">True</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<p><strong>Out: <code>test_primo.py</code></strong></p>
+<div class="line-block">True<br>
+True<br>
+True<br>
+True<br>
+True</div>
+</div></div>
 
 
 </section>
