@@ -1,8 +1,286 @@
 ---
-title: Problemas 5
+title: Problemas 7
 subtitle: Funciones II
 format: html
-draft: true
 ---
 
-## 
+## Composición agresiva
+
+Refactoriza los siguientes códigos para que sean más modulares y reutilizables.
+
+### Pintar un menú
+
+El objetivo es que si en un futuro quiero hacer alguno de estos cambios en el formato, **sólo tenga que modificar una línea de código**.
+
+- Cambiar `--` por `>>`:
+    - Antes: `-- Opción 1: Saludar`
+    - Desps: `>> Opción 1: Saludar`
+- Cambiar `Opción N: ` por `(N) `:
+    - Antes: `-- Opción 1: Saludar`
+    - Desps: `-- (1) Saludar`
+
+
+```python
+def pintar_menu():
+    print("-- Opción 1: Saludar")
+    print("-- Opción 2: Despedir")
+    print("-- Opción 3: Sumar")
+    print("-- Opción 4: Restar")
+    print("-- (Ctrl+C) Salir")
+
+pintar_menu()
+```
+
+<details>
+<summary>Solución</summary>
+
+```python
+def pintar_plantilla(texto):
+    print(f"-- {texto}")
+
+def pintar_opcion(num, opcion):
+    pintar_plantilla(f"Opción {num}: {opcion}")
+
+def pintar_menu():
+    pintar_opcion(1, "Saludar")
+    pintar_opcion(2, "Despedir")
+    pintar_opcion(3, "Sumar")
+    pintar_opcion(4, "Restar")
+    pintar_plantilla("Salir")
+
+pintar_menu()
+```
+
+### Calculadora
+
+El objetivo es **poder testear el funcionamiento individual de cada operación**.
+
+```python
+import math
+
+op = ""
+while op != "coseno" and op != "seno" and op != "tangente":
+    print("Introduce una operación (coseno, seno, tangente): ")
+    op = input()
+
+print("Introduce un número real: ")
+x = float(input())
+
+if op == "coseno":
+    cos_approx = 0
+    for i in range(0, 20):
+        cos_approx += ((-1) ** i) * ((x ** (2 * i)) / math.factorial(2 * i))
+    resultado = cos_approx
+elif op == "seno":
+    sin_approx = 0
+    for i in range(0, 20):
+        sin_approx += ((-1) ** i) * ((x ** (2 * i + 1)) / math.factorial(2 * i + 1))
+    resultado = sin_approx
+elif op == "tangente":
+    cos_approx = 0
+    sin_approx = 0
+    for i in range(0, 20):
+        cos_approx += ((-1) ** i) * ((x ** (2 * i)) / math.factorial(2 * i))
+        sin_approx += ((-1) ** i) * ((x ** (2 * i + 1)) / math.factorial(2 * i + 1))
+    tan_approx = sin_approx / cos_approx
+    resultado = tan_approx
+print(f"El resultado es: {resultado}")
+```
+
+<details>
+<summary>Solución</summary>
+
+```python
+import math
+
+def pedir_operacion():
+    op = ""
+    while op != "coseno" and op != "seno" and op != "tangente":
+        print("Introduce una operación (coseno, seno, tangente): ")
+        op = input()
+    return op
+
+def pedir_numero():
+    print("Introduce un número real: ")
+    return float(input())
+
+def coseno(x):
+    cos_approx = 0
+    for i in range(0, 20):
+        cos_approx += ((-1) ** i) * ((x ** (2 * i)) / math.factorial(2 * i))
+    return cos_approx
+
+def seno(x):
+    sin_approx = 0
+    for i in range(0, 20):
+        sin_approx += ((-1) ** i) * ((x ** (2 * i + 1)) / math.factorial(2 * i + 1))
+    return sin_approx
+
+def tangente(x):
+    return seno(x) / coseno(x)
+
+op = pedir_operacion()
+x = pedir_numero()
+
+if op == "coseno":
+    resultado = coseno(x)
+elif op == "seno":
+    resultado = seno(x)
+elif op == "tangente":
+    resultado = tangente(x)
+
+print(f"El resultado es: {resultado}")
+```
+
+## Funciones útiles
+
+En este bloque de ejercicios vamos a crear una colección de funciones genéricas que podrían ser de utilidad en futuros proyectos.
+Pon especial atención a la definición de las funciones, sus nombres, sus argumentos y sus valores de retorno.
+
+### Coeficiente binomial
+
+Escribe una función `coeficiente_binomial(n, k)` que calcule el coeficiente binomial de `n` y `k`.
+**No uses la biblioteca `math`**.
+Desarrolla todas las funciones _extra_ que necesites.
+
+$$
+\binom{n}{k} = \frac{n!}{k!(n-k)!}
+$$
+
+```python
+print(coeficiente_binomial(5, 2))
+```
+
+| 10
+
+<details>
+<summary>Solución</summary>
+
+```python
+def factorial(n):
+    fac = 1
+    for i in range(1, n + 1):
+        fac *= i
+    return fac
+
+def coeficiente_binomial(n, k):
+    return factorial(n) // (factorial(k) * factorial(n - k))
+
+print(coeficiente_binomial(5, 2))
+```
+
+### Pitágoras
+
+Escribe una función `pitagoras(a, b)` que calcule la hipotenusa de un triángulo rectángulo.
+**No uses la biblioteca `math`**.
+Desarrolla todas las funciones _extra_ que necesites.
+
+$$
+c = \sqrt{a^2 + b^2}
+$$
+
+```python
+print(pitagoras(3, 4))
+```
+
+| 5.0
+
+<details>
+<summary>Pista</summary>
+
+En python, se cumple la regla matemática de que:
+
+$$
+\sqrt{x} = x^{0.5}
+$$
+
+</details>
+
+<details>
+<summary>Solución</summary>
+
+```python
+import math
+
+def raiz_cuadrada(n):
+    return n ** 0.5
+
+def pitagoras(a, b):
+    return raiz_cuadrada(a ** 2 + b ** 2)
+
+print(pitagoras(3, 4))
+```
+
+</details>
+
+### Mayor de tres
+
+Escribe una función `mayor_de_tres(a, b, c)` que devuelva el mayor de tres números.
+**No uses la biblioteca `math`**.
+Desarrolla todas las funciones _extra_ que necesites.
+
+```python
+print(mayor_de_tres(3, 4, 5))
+```
+
+| 5
+
+```python
+print(mayor_de_tres(3, 5, 4))
+```
+
+| 5
+
+<details>
+<summary>Solución</summary>
+
+```python
+
+def mayor_de_tres(a, b, c):
+    if a >= b and a >= c:
+        max = a
+    elif b >= a and b >= c:
+        max = b
+    else:
+        max = c
+    return max
+```
+
+</details>
+
+### Mediana de tres
+
+Escribe una función `mediana_de_tres(a, b, c)` que devuelva la mediana de tres números.
+**No uses la biblioteca `math`**.
+Desarrolla todas las funciones _extra_ que necesites.
+
+```python
+print(mediana_de_tres(3, 4, 5))
+```
+
+| 4
+
+```python
+print(mediana_de_tres(3, 5, 4))
+```
+
+| 4
+
+<details>
+<summary>Solución</summary>
+
+```python
+def mediana_de_tres(a, b, c):
+    if b <= a and a <= c or c <= a and a <= b:
+        med = a
+    elif a <= b and b <= c or c <= b and b <= a:
+        med = b
+    else:
+        med = c
+    return med
+```
+
+</details>
+
+
+

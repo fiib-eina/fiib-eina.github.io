@@ -4,10 +4,10 @@ subtitle: Funciones I
 format: html
 ---
 
+
 ## Dibujo
 
 ### Función repetir
-
 
 Escribe una función `repetir(n,c)` que imprima `n` veces el carácter `c`.
 
@@ -52,7 +52,7 @@ pintar_linea(2, 3, 'x')  #   xxx
 def pintar_linea(s,n, c):
     repetir(s, ' ')
     repetir(n, c)
-    print()
+    print("")
 ```
 
 </details>
@@ -62,7 +62,7 @@ def pintar_linea(s,n, c):
 Escribe una función `pintar_triangulo(n,c)` que pinte un triángulo de `n` filas con el carácter `c`.
 
 ```python
-pintar_triangulo(3, 'x')
+pintar_triangulo(3, '*')
 ```
 
 |   *
@@ -71,7 +71,7 @@ pintar_triangulo(3, 'x')
 
 
 ```python
-pintar_triangulo(3, 'x')
+pintar_triangulo(5, '+')
 ```
 
 |     +
@@ -96,12 +96,12 @@ def pintar_triangulo(n, c):
 </details>
 
 <details>
-<summary>Solución (fórmula)</summary>
+<summary>Solución alternativa (fórmula)</summary>
 
 ```python
 def pintar_triangulo(n, c):
-    for i in range(0, n):
-        pintar_linea(n - i - 1, 2 * i + 1, c)
+    for i in range(1, n+1):
+        pintar_linea(n - i, i*2-1, c)
 ```
 
 </details>

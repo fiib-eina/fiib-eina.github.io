@@ -234,7 +234,7 @@ print("Hola, mundo!")  # La función se llama print, y recibe un argumento
 ```python
 import math  # importa la biblioteca math
 
-math.abs(-3)  # invoca la función abs de la biblioteca math
+a = math.sqrt(16)  # invoca la función abs de la biblioteca math
 ```
 
 ---

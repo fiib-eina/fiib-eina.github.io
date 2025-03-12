@@ -1,0 +1,501 @@
+---
+title: Teoría 403
+subtitle: Módulos
+format: revealjs
+---
+
+## Diseño de programas modulares {.center}
+
+---
+
+### Planificación y diseño
+
+- Llamamos **diseño** a la fase **previa a la codificación** en la que planificamos cómo vamos a estructurar nuestro programa.
+    - ¿**Qué partes** tiene mi problema?
+    - ¿**Qué datos** voy a necesitar?
+    - ¿**Qué funciones** pueden serme útiles?
+        - ¿Cómo **se van a llamar**?
+        - ¿**Qué argumentos** recibirán?
+        - ¿**Qué valores** devolverán?
+
+---
+
+### Diseño top-down y bottom-up
+
+::: {.columns}
+::: {.column width="50%"}
+
+- En la descomposición de un problema, podemos seguir **dos enfoques**:
+    - **Top-down**: Partimos de un problema general y lo dividimos en problemas más pequeños.
+    - **Bottom-up**: Partimos de problemas más pequeños y los combinamos para resolver un problema mayor.
+
+:::
+::: {.column width="50%"}
+
+![](./img/modularizacion.png)
+
+:::
+:::
+
+---
+
+- A veces un problema **se revuelve más fácilmente** con un enfoque u otro.
+    - Problemas donde conocemos "lo que tenemos que hacer" pero no "cómo hacerlo" (top-down).
+    - Problemas donde conocemos "alguno de los pasos" pero no "el algoritmo general" (bottom-up).
+- A veces **uno mismo** tiene preferencia por uno u otro.
+
+::: {.callout-tip}
+Existe un paralelismo con el **dibujo**. Hay quienes comienzan bocetando las proporciones y luego añaden los detalles y hay quienes comienzan con los detalles y van construyendo el resto del dibujo.
+:::
+
+---
+
+## Otros usos avanzados de funciones {.center}
+
+
+---
+
+### Composición de funciones y sus valores de retorno
+
+- Del mismo modo que **componíamos invocaciones** a funciones para reaprovechar su comportamiento
+- También podemos **componer los valores que devuelven**.
+
+```python
+def f(x):
+    return x
+
+def g(x):
+    return x
+
+def h(x):
+    return f(x) + g(x)
+```
+
+---
+
+#### Ejemplo: Composición suma
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+def suma(x):
+    return x + 2
+
+def prod(x):
+    return x * 2
+
+def compo(x):
+    # Componemos sus resultados
+    return suma(x) + prod(x)
+
+print(compo(3))
+```
+
+
+:::
+::: {.column width="50%"}
+
+| 11
+
+:::
+:::
+
+---
+
+#### Ejemplo: Encadenar resultados
+
+- El orden de ejecución es de **dentro hacia fuera**.
+    - Primero se ejecuta `g(x)`. 
+    - El resultado se usa como argumento de `f(x)`
+    - El resultado lo devuelve `h(x)`.
+
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+def suma(x):
+    return x + 2
+
+def prod(x):
+    return x * 2
+
+def compo(x):
+    # Componemos las funciones
+    return suma(prod(x))
+
+print(compo(3))
+print(f"{suma(prod(3))} =/= {prod(suma(3))}")
+```
+
+:::
+::: {.column width="50%"}
+
+```python
+def suma(x):
+    return x + 2
+
+def prod(x):
+    return x * 2
+
+def compo(x):
+    # Equivalente
+    p = prod(x)
+    return suma(p)
+
+print(compo(3))
+print(f"{suma(prod(3))} =/= {prod(suma(3))}")
+```
+
+:::
+:::
+
+<details>
+<summary>Salida</summary>
+
+| 8
+| No es lo mismo 8 que 10
+
+</details>
+
+---
+
+#### Ejemplo: Composición raíces
+
+::: {.columns}
+::: {.column width="50%"}
+
+
+```python
+def raiz_n(x, n):
+    # Raíz general
+    return x ** (1/n)
+
+def raiz_cuadrada(x):
+    # Fijamos n=2
+    return raiz_n(x, 2)
+
+def raiz_cubica(x):
+    # Fijamos n=3
+    return raiz_n(x, 3)
+
+print(raiz_cuadrada(9))
+print(raiz_cubica(27))
+print(raiz_n(16, 4))
+```
+
+:::
+::: {.column width="50%"}
+
+| 3.0
+| 3.0
+| 2.0
+
+:::
+:::
+
+---
+
+### Composición de f-strings
+
+- Una de las ventajas de haber aprendido a utilizar las `f-strings` en los `print()` es que ahora podemos devolver **cadenas de texto** con el mismo formato.
+    - Esto es útil cuando lo que buscamos **no es imprimir** el resultado, sino **utilizarlo** para otra cosa.
+
+```python
+def resultado(a, op, b, r):
+    return f"{a} {op} {b} = {r}"
+
+def resultado_suma(a, b):
+    resultado(a, '+', b, a + b)
+
+resultado_suma(3, 5))
+```
+
+---
+
+#### Ejercicio: Conjugar correctamente
+
+- Escribe una función `num_manzanas(n)` que devuelva una cadena de texto describiendo el número de manzanas.
+- Escribe una función `num_barcos(n)` que devuelva una cadena de texto describiendo el número de barcos.
+- Escribe el programa que consideres necesario para **testear la función**.
+
+| Introduce la cantiad de manzanas:
+| **3**
+| Tienes 3 manzanas
+
+| Introduce la cantiad de manzanas:
+| **1**
+| Tienes 1 manzana
+
+---
+
+**Solución poco modular**
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+def num_manzanas(n):
+    if n == 1:
+        return f"Tienes {n} manzana"
+    else:
+        return f"Tienes {n} manzanas"
+
+def num_barcos(n):
+    if n == 1:
+        return f"Tienes {n} barco"
+    else:
+        return f"Tienes {n} barcos"
+
+print(num_manzanas(1))
+print(num_manzanas(5))
+print(num_manzanas(10))
+print(num_barcos(1))
+print(num_barcos(5))
+print(num_barcos(10))
+```
+
+:::
+::: {.column width="50%"}
+
+| tienes 1 manzana
+| tienes 5 manzanas
+| tienes 10 manzanas
+| tienes 1 barco
+| tienes 5 barcos
+| tienes 10 barcos
+
+:::
+:::
+
+
+---
+
+**Solución más modular**
+
+- Extraemos la lógica de la **conjugación** de palabras a una función `conj()`.
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+def conj(num, palabra):
+    nueva_palabra = palabra
+    if num != 1:
+        nueva_palabra += 's'
+    return nueva_palabra
+
+def num_manzanas(n):
+    return f"Tienes {n} {conj(n, 'manzana')}"
+
+def num_barcos(n):
+    return f"Tienes {n} {conj(n, 'barco')}"
+
+print(num_manzanas(1))
+print(num_manzanas(5))
+print(num_manzanas(10))
+print(num_barcos(1))
+print(num_barcos(5))
+print(num_barcos(10))
+```
+
+:::
+::: {.column width="50%"}
+
+| tienes 1 manzana
+| tienes 5 manzanas
+| tienes 10 manzanas
+| tienes 1 barco
+| tienes 5 barcos
+| tienes 10 barcos
+
+:::
+:::
+
+---
+
+**Solución AÚN más modular**
+
+- Generalizamos la construcción de la **frase** a una función `num_algo()`.
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+def conj(num, palabra):
+    nueva_palabra = palabra
+    if num != 1:
+        nueva_palabra = palabra + 's'
+    else:
+        nueva_palabra = palabra
+    return nueva_palabra
+
+def num_algo(n, algo):
+    return f"Tienes {n} {conj(n, algo)}"
+
+def num_manzanas(n):
+    return num_algo(n, 'manzana')
+
+def num_barcos(n):
+    return num_algo(n, 'barco')
+
+print(num_manzanas(1))
+print(num_manzanas(5))
+print(num_manzanas(10))
+print(num_barcos(1))
+print(num_barcos(5))
+print(num_barcos(10))
+```
+
+:::
+::: {.column width="50%"}
+
+| tienes 1 manzana
+| tienes 5 manzanas
+| tienes 10 manzanas
+| tienes 1 barco
+| tienes 5 barcos
+| tienes 10 barcos
+
+:::
+:::
+
+---
+
+## Creación de bibliotecas {.center}
+
+---
+
+### Creación de bibliotecas (libraries) básicas
+
+- Las **funciones** que hemos creado hasta ahora se han guardado en el mismo archivo.
+- Esto es útil para **pequeños programas**, pero dificulta la **reutilización** de código.
+- En Python podemos **definir** funciones un archivo `.py` e **importarlas** en otro.
+
+::: {.columns}
+::: {.column width="50%"}
+
+**`operaciones.py`**
+
+```python
+def suma(a, b):
+    return a + b
+```
+
+:::
+::: {.column width="50%"}
+
+**`main.py`**
+
+```python
+import operaciones
+
+print(operaciones.suma(3, 5))
+```
+
+:::
+:::
+
+---
+
+- **Pros**:
+    - **Organización** del código: agrupar módulos relacionados.
+    - **Aislamiento** de funciones: no se mezclan con el código principal.
+- **Contras**:
+    - Mayor **dificultad** para encontrar funciones.
+    - **Dependencia** de otros archivos.
+
+::: {.callout-warning}
+Si tu programa depende (importa) de una biblioteca que has creado, **asegúrate de que ese archivo esté también disponible**.
+:::
+
+---
+
+#### Ejemplo: Verificación (testing) de una función
+
+- Hemos desarrollado una práctica que nos pedía implementar una función `es_primo(n)` que devolviera `True` si `n` era primo y `False` en caso contrario.
+- Vamos a **verificar** que nuestra función **funciona correctamente**.
+
+::: {.columns}
+::: {.column width="35%"}
+
+**`primo.py`**
+
+```python
+def es_primo(n):
+  primo = True
+  if n < 2:
+    primo = False
+  else:
+    i = 2
+    while primo and i < n:
+      if n % i == 0:
+        primo = False
+  return True
+```
+
+::: 
+::: {.column width="35%"}
+
+**`test_primo.py`**
+
+```python
+import primo
+
+print(primo.es_primo(1))
+print(primo.es_primo(2))
+print(primo.es_primo(3))
+print(primo.es_primo(4))
+print(primo.es_primo(5))
+```
+
+:::
+::: {.column width="30%"}
+
+**Out: `test_primo.py`**
+
+| True
+| True
+| True
+| False
+| True
+
+:::
+:::
+
+---
+
+#### Ejemplo: Verificación (testing) de una función (avanzado)
+
+- En lugar de pintar el resultado por pantalla, podemos **comparar** el resultado con el **esperado**.
+
+::: {.columns}
+::: {.column width="50%"}
+
+**`test_primo.py`**
+
+```python
+import primo
+
+print(primo.es_primo(1) == False)
+print(primo.es_primo(2) == True)
+print(primo.es_primo(3) == True)
+print(primo.es_primo(4) == False)
+print(primo.es_primo(5) == True)
+```
+
+:::
+::: {.column width="50%"}
+
+**Out: `test_primo.py`**
+
+| True
+| True
+| True
+| True
+| True
+
+:::
+:::
+

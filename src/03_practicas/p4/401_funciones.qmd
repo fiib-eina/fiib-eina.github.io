@@ -66,6 +66,35 @@ Escribe un programa Python que solicite al usuario un número entero positivo `n
 | 1 4 6 4 1
 | 1 5 10 10 5 1
 
+## Hora en lenguaje natural
+
+- Escribe una función `leer_(h,m)` que reciba dos números enteros `h` y `m` y devuelva una cadena de texto con la hora en lenguaje natural.
+- Los periodos del día son: madrugada, mañana, tarde y noche.
+    - **Madrugada:** de `01:00` a `05:59`.
+    - **Mañana:** de `06:00` a `11:59`.
+    - **Mediodía:** de `12:00` a `14:59`.
+    - **Tarde:** de `15:00` a `18:59`.
+    - **Noche:** de `19:00` a `24:59`.
+- Las horas irán de `1` a `24`.
+- Los minutos sólo serán dados en múltiplos de 15 (`0`, `15`, `30` y `45`).
+
+| Hora | Lenguaje natural |
+| --- | --- |
+| `leer_hora(1, 0)`  | "La una de la madrugada" |
+| `leer_hora(3, 0)`  | "Las tres de la madrugada" |
+| `leer_hora(3, 15)` | "Las tres y cuarto de la madrugada" |
+| `leer_hora(3, 30)` | "Las tres y media de la madrugada" |
+| `leer_hora(3, 45)` | "Las cuatro menos cuarto de la madrugada" |
+| `leer_hora(7, 0)`  | "Las siete de la mañana" |
+| `leer_hora(12, 0)` | "Las doce del mediodía" |
+| `leer_hora(13, 0)` | "La una del mediodía" |
+| `leer_hora(15, 0)` | "Las tres de la tarde" |
+| `leer_hora(19, 0)` | "Las siete de la noche" |
+
+- Sugerencias de funciones:
+    - `hora_en_palabras(h)` que devuelva la hora en palabras.
+    - `minutos_en_palabras(m)` que devuelva los minutos en palabras.
+    - `periodo_del_dia(h)` que devuelva el periodo del día en palabras.
 
 ## Códigos Perdidos (Exploración de combinaciones)
 

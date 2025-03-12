@@ -2,25 +2,187 @@
 title: Teoría 402
 subtitle: Funciones II
 format: revealjs
-draft: true
 ---
 
-## Chapter {.center}
+## Return Statement {.center}
 
 ---
 
-### Return
+### Funciones que no devuelven valores
 
 - Todos los ejemplos de código que hemos visto hasta ahora se han limitado a:
     - **Recibir valores** y pintar **pintar por pantalla**.
     - **No devuelven** ningún valor.
+        - _El contexto que la invoca no tiene forma de conocer el resultado_
 - Del mismo modo que podemos necesitar **recibir valores** al ser invocados, también será necesario en ocasiones **comunicar resultados** a quien nos invocó.
+
+---
+
+#### Ejemplo absurdo: Valor absoluto sin return
+
+- En varios ejercicios hemos usado `abs(x)` para **obtener** (no pintar) el valor absoluto de un valor.
+
+::: {.columns}
+::: {.column width="65%"}
+
+```python
+altura = abs(0-10) # abs(y1-y2)
+anchura = abs(0-10) # abs(x1-x2)
+print(f"El area es {altura * anchura}")
+```
+
+:::
+::: {.column width="35%"}
+
+| El area es 100
+
+:::
+:::
+
+---
+
+- Sabemos calcular el valor absoluto, pero **no sabemos cómo replicar** `abs()`.
+
+::: {.columns}
+::: {.column width="65%"}
+
+```python
+def mi_abs(x):
+    if x < 0:
+        x = -x
+    print(x)  # Sólo vabemos pintar
+
+# abs(y1-y2), abs(x1-x2)
+altura = mi_abs(0-10)  # Imprime 10. Altura no recibe valor
+anchura = mi_abs(0-10) # Imprime 10. Anchura no recibe valor
+print(f"El area es {altura * anchura}")
+```
+
+:::
+::: {.column width="35%"}
+
+| 10
+| 10
+| _Error_
+
+:::
+:::
+
+- Necesitamos dar con la forma de que `mi_abs()` pueda **"comunicarle"** (devolver) el resultado a `altura` y `anchura`.
+
+---
+
+### Return Statement
+
+- Para **devolver un valor** en Python, se usa la palabra clave `return`.
+- En el momento en que se invoca `return`, la función **termina su ejecución** y **devuelve** el valor indicado.
+- Este valor **será usado como una expresión** en el contexto que invocó la función.
+
+```python
+def funcion():
+    # Cuerpo de la función
+    return resultado
+
+a = funcion() # a: resultado
+```
+
+---
+
+#### Ejemplo: Valor absoluto con return
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+def mi_abs(x):
+    if x < 0:
+        x = -x
+    return x
+
+altura = mi_abs(0-10)  # Devuelve 10
+anchura = mi_abs(0-10) # Devuelve 10
+print(f"El area es {altura * anchura}")
+```
+
+:::
+::: {.column width="50%"}
+
+| El area es 100
+
+:::
+:::
+
+---
+
+#### Ejemplo: Valores fijos
+
+```python
+def cuarenta_y_dos():
+    return 42
+
+def veintitres():
+    return 23
+
+suma = cuarenta_y_dos() + veintitres()
+resta = cuarenta_y_dos() - veintitres()
+
+print(f"La suma es {suma}")
+print(f"La resta es {resta}")
+```
+
+<details>
+<summary>Salida</summary>
+
+| La suma es 65
+| La resta es 19
+
+</details>
+
+---
+
+#### Ejemplo: Orden de ejecución de las instrucciones
+
+```python
+def mi_funcion(n):
+    print(f"Invocada con {n}")
+    return n
+
+a = mi_funcion(1) + mi_funcion(2)
+print(a)
+```
+
+<details>
+<summary>Salida</summary>
+
+| Invocada con 1
+| Invocada con 2
+| 3
+
+</details>
+
+---
+
+### Modularización
+
+- La **modularización** es más que **una técnica de diseño**.
+    - No se limita a resolver **problemas nuevos**.
+- También es una **técnica de mejora**.
+    - Nos permite mejorar un programa **ya existente**.
+
+::: {.callout-tip}
+Cuando reescribimos un programa manteniendo su funcionalidad idéntica, lo llamamos **refactorizar**.
+:::
 
 ---
 
 #### Ejemplo: Potencia II
 
-Escribe un programa que pida al usuario dos números enteros y muestre por pantalla su suma.
+Vamos a modularizar aún más el código que hicimos la sesión anterior.
+
+::: {.columns}
+::: {.column width="50%"}
+
+**Modularizado**
 
 ```python
 def potencia(a, b):
@@ -29,13 +191,250 @@ def potencia(a, b):
 print("Introduce un número entero:")
 a = int(input())
 print("Introduce un número entero:")
-a = int(input())
-potencia(b, a) # Atención al orden
+b = int(input())
+
+potencia(a, b) # Atención al orden
 ```
+
+:::
+::: {.column width="50%"}
+
+**Más modularizado**
+
+```python
+def potencia(a, b):
+    return a ** b
+
+def pedir_entero():
+    print("Introduce un número entero:")
+    return int(input())
+
+a = pedir_entero()
+b = pedir_entero()
+
+print(f"{a} ^ {b} = {potencia(a, b)}")
+```
+
+:::
+:::
 
 - _Nota_: Cuando aprendamos a devolver valores, podremos modularizar aún más este programa.
 
 ---
 
-#### Ejemplo: Calculadora de números complejos
+#### Ejercicio: Aproximación de coseno por serie de Maclaurin (funcion)
 
+Vamos a modularizar el cálculo de la aproximación del coseno que hicimos en sesiones anteriores.
+
+::: {.columns}
+::: {.column width="50%"}
+
+**Original**
+
+```python
+import math
+
+print("Introduce el ángulo (en radianes):")
+x = float(input())
+print("Introduce el número de términos:")
+n = int(input())
+
+cos_approx = 0
+for i in range(0, n):
+    cos_approx += (((-1) ** i)
+        * ((x ** (2 * i)) 
+        / math.factorial(2 * i)))
+
+print(cos_approx)
+```
+
+:::
+::: {.column width="50%"}
+
+**Modularizado**
+
+```python
+import math
+
+def coseno(x, n):
+    cos_approx = 0
+    for i in range(0, n):
+        cos_approx += (((-1) ** i)
+            * ((x ** (2 * i)) 
+            / math.factorial(2 * i)))
+    return cos_approx
+
+print("Introduce el ángulo (en radianes):")
+x = float(input())
+print("Introduce el número de términos:")
+n = int(input())
+
+print(coseno(x, n))
+```
+
+:::
+:::
+
+---
+
+### Early return
+
+- En ocasiones, **no es necesario** que una función **termine su ejecución** para devolver un valor.
+- Ejecutar `return` en mitad de la función **terminará la ejecución** en ese punto y **devolverá su valor inmediatamente**.
+- Esto se conoce como **early return**.
+- Es un patrón que es común encontrar en **código ajeno**.
+
+::: {.callout-warning}
+Este es un patrón avanzado y se desaconseja abusar de él sin entender bien otros conceptos básicos primero.
+
+- Salvo excepciones muy concretas, siempre trataremos de mantener `single exit-point`.
+:::
+
+---
+
+#### Ejemplo: Trivial
+
+```python
+def early_return():
+    print("Antes del return")
+    return 42
+    print("Después del return")
+
+a = early_return()
+```
+
+| Antes del return
+
+---
+
+#### Ejemplo: Cálculo de precio de entrada
+
+- Vamos a calcular el precio de entrada a un parque de atracciones.
+    - Los menos de 12 años no pagan.
+    - El precio es de 10€ por cada 10 años de edad.
+        - Ejemplo: 24 años -> 20€
+    - Familia numerosa aplica un descuento del 20%.
+
+::: {.columns}
+::: {.column width="50%"}
+
+**Early return**
+
+```python
+def precio(edad, familia_numerosa):
+    if edad < 12:
+        return 0
+    precio = edad // 10 * 10
+    if familia_numerosa:
+        return precio * 0.8
+    return precio
+print(precio(24, False))
+```
+
+:::
+::: {.column width="50%"}
+
+**Single exit-point**
+
+```python
+def precio(edad, familia_numerosa):
+    if edad < 12:
+        precio = 0
+    else:
+        precio = edad // 10 * 10
+        if familia_numerosa:
+            precio *= 0.8
+    return precio
+print(precio(24, False))
+```
+
+:::
+:::
+
+---
+
+<!--
+### Return None
+
+ TODO: Desarrollar None
+
+---
+
+-->
+
+### Early return en un bucle
+
+::: {.callout-warning}
+Las funciones sólo devuelven una vez. Meter un return dentro de un bucle no hará que devuelva varios valores.
+:::
+
+```python
+def return_en_bucle():
+    for i in range(0, 10):
+        return i
+
+a = return_en_bucle()
+```
+
+- La función **devuelve 0** y termina.
+    - **NO** devuelve `0, 1, 2, 3, 4, 5, 6, 7, 8, 9`.
+
+---
+
+### Tipo de dato devuelto
+
+- Aunque una función **no está obligada** a devolver siempre el mismo tipo de dato...
+
+```python
+def funcion(cond): # MALA IDEA 
+    if cond:
+        valor = 1
+    else:
+        valor = "Hola"
+    return valor
+```
+
+- Del mismo modo que **insistimos en ser disciplinados** con los tipos de datos de cada variable
+    - Es decir: **no cambiar su tipo a lo largo del programa**.
+- Es importante **ser coherente con el tipo de dato que devuelve una función**.
+    - Cuando invoquemos la función, **esperaremos un tipo de dato concreto**.
+    - Todos los valores que pueda devolver la función **deberán ser del mismo tipo**.
+
+---
+
+#### Ejemplo: Cálculo de precio de entrada II
+
+- En este ejemplo se ha **exagerado** la modularización para ilustrar el concepto.
+
+```python
+def preguntar_edad():
+    print("¿Cuántos años tienes?")
+    return int(input())  # Devuelve un entero
+
+def preguntar_familia_numerosa():
+    print("¿Eres familia numerosa? (s/n)")
+    res = input()
+    return res == "s" # Devuelve un booleano
+
+def es_infante(edad):
+    return edad < 12  # Devuelve un booleano
+
+def precio_base(edad):
+    return edad // 10 * 10  # Devuelve un entero
+
+def aplicar_descuento(precio, descuento):
+    return precio * (1 - descuento)  # Devuelve un float
+
+def precio(edad, familia_numerosa):
+    if es_infante(edad):
+        precio = 0
+    else:
+        precio = precio_base(edad)
+        if familia_numerosa:
+            precio = aplicar_descuento(precio, 0.2)
+    return precio  # Devuelve un float
+
+edad = preguntar_edad()
+familia_numerosa = preguntar_familia_numerosa()
+print(precio(edad, familia_numerosa))
+```
