@@ -80,7 +80,8 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
-      
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-lang","listing-project","listing-format","listing-language","listing-website","listing-title","listing-subtitle","listing-path","listing-outputHref","listing-author","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
@@ -238,6 +239,9 @@ window.Quarto = {
 <a href="./src/02_problemas/401-funciones_basicas.html">02_problemas/ <b>Problemas 6</b> - Funciones I </a>
 </li>
 <li>
+<a href="./src/02_problemas/402-funciones_return.html">02_problemas/ <b>Problemas 5</b> - Funciones II </a>
+</li>
+<li>
 <a href="./src/03_practicas/p0/101_introductoria.html">03_practicas/p0/ <b>Práctica 0</b> - Introducción </a>
 </li>
 <li>
@@ -253,6 +257,9 @@ window.Quarto = {
 <div class="listing-no-matching d-none">
 No hay resultados
 </div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
