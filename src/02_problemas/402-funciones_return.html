@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Problemas 5 – Fundamentos de Informática</title>
+<title>Problemas 7 – Fundamentos de Informática</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -150,7 +150,13 @@ window.Quarto = {
   <li><a href="#pintar-un-menú" id="toc-pintar-un-menú" class="nav-link" data-scroll-target="#pintar-un-menú"><span class="header-section-number">1.1</span> Pintar un menú</a></li>
   <li><a href="#calculadora" id="toc-calculadora" class="nav-link" data-scroll-target="#calculadora"><span class="header-section-number">1.2</span> Calculadora</a></li>
   </ul></li>
-  <li><a href="#coeficiente-binomial" id="toc-coeficiente-binomial" class="nav-link" data-scroll-target="#coeficiente-binomial"><span class="header-section-number">2</span> Coeficiente binomial</a></li>
+  <li><a href="#funciones-útiles" id="toc-funciones-útiles" class="nav-link" data-scroll-target="#funciones-útiles"><span class="header-section-number">2</span> Funciones útiles</a>
+  <ul class="collapse">
+  <li><a href="#coeficiente-binomial" id="toc-coeficiente-binomial" class="nav-link" data-scroll-target="#coeficiente-binomial"><span class="header-section-number">2.1</span> Coeficiente binomial</a></li>
+  <li><a href="#pitágoras" id="toc-pitágoras" class="nav-link" data-scroll-target="#pitágoras"><span class="header-section-number">2.2</span> Pitágoras</a></li>
+  <li><a href="#mayor-de-tres" id="toc-mayor-de-tres" class="nav-link" data-scroll-target="#mayor-de-tres"><span class="header-section-number">2.3</span> Mayor de tres</a></li>
+  <li><a href="#mediana-de-tres" id="toc-mediana-de-tres" class="nav-link" data-scroll-target="#mediana-de-tres"><span class="header-section-number">2.4</span> Mediana de tres</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -163,7 +169,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Problemas 5</h1>
+<h1 class="title">Problemas 7</h1>
 <p class="subtitle lead">Funciones II</p>
 </div>
 
@@ -303,8 +309,11 @@ Solución
 <span id="cb4-39"><a href="#cb4-39"></a><span class="bu">print</span>(<span class="ss">f"El resultado es: </span><span class="sc">{</span>resultado<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details></section>
 </section>
-<section id="coeficiente-binomial" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="coeficiente-binomial"><span class="header-section-number">2</span> Coeficiente binomial</h2>
+<section id="funciones-útiles" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="funciones-útiles"><span class="header-section-number">2</span> Funciones útiles</h2>
+<p>En este bloque de ejercicios vamos a crear una colección de funciones genéricas que podrían ser de utilidad en futuros proyectos. Pon especial atención a la definición de las funciones, sus nombres, sus argumentos y sus valores de retorno.</p>
+<section id="coeficiente-binomial" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="coeficiente-binomial"><span class="header-section-number">2.1</span> Coeficiente binomial</h3>
 <p>Escribe una función <code>coeficiente_binomial(n, k)</code> que calcule el coeficiente binomial de <code>n</code> y <code>k</code>. <strong>No uses la biblioteca <code>math</code></strong>. Desarrolla todas las funciones <em>extra</em> que necesites.</p>
 <p><span class="math display">\[
 \binom{n}{k} = \frac{n!}{k!(n-k)!}
@@ -325,9 +334,85 @@ Solución
 <span id="cb6-8"><a href="#cb6-8"></a>    <span class="cf">return</span> factorial(n) <span class="op">//</span> (factorial(k) <span class="op">*</span> factorial(n <span class="op">-</span> k))</span>
 <span id="cb6-9"><a href="#cb6-9"></a></span>
 <span id="cb6-10"><a href="#cb6-10"></a><span class="bu">print</span>(coeficiente_binomial(<span class="dv">5</span>, <span class="dv">2</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-
 </details></section>
+<section id="pitágoras" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="pitágoras"><span class="header-section-number">2.2</span> Pitágoras</h3>
+<p>Escribe una función <code>pitagoras(a, b)</code> que calcule la hipotenusa de un triángulo rectángulo. <strong>No uses la biblioteca <code>math</code></strong>. Desarrolla todas las funciones <em>extra</em> que necesites.</p>
+<p><span class="math display">\[
+c = \sqrt{a^2 + b^2}
+\]</span></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="bu">print</span>(pitagoras(<span class="dv">3</span>, <span class="dv">4</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">5.0</div>
+<details>
+<summary>
+Pista
+</summary>
+<p>En python, se cumple la regla matemática de que:</p>
+<p><span class="math display">\[
+\sqrt{x} = x^{0.5}
+\]</span></p>
+</details>
+<details>
+<summary>
+Solución
+</summary>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">import</span> math</span>
+<span id="cb8-2"><a href="#cb8-2"></a></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="kw">def</span> raiz_cuadrada(n):</span>
+<span id="cb8-4"><a href="#cb8-4"></a>    <span class="cf">return</span> n <span class="op">**</span> <span class="fl">0.5</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a></span>
+<span id="cb8-6"><a href="#cb8-6"></a><span class="kw">def</span> pitagoras(a, b):</span>
+<span id="cb8-7"><a href="#cb8-7"></a>    <span class="cf">return</span> raiz_cuadrada(a <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> b <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb8-8"><a href="#cb8-8"></a></span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="bu">print</span>(pitagoras(<span class="dv">3</span>, <span class="dv">4</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</section>
+<section id="mayor-de-tres" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="mayor-de-tres"><span class="header-section-number">2.3</span> Mayor de tres</h3>
+<p>Escribe una función <code>mayor_de_tres(a, b, c)</code> que devuelva el mayor de tres números. <strong>No uses la biblioteca <code>math</code></strong>. Desarrolla todas las funciones <em>extra</em> que necesites.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="bu">print</span>(mayor_de_tres(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">5</div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="bu">print</span>(mayor_de_tres(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">4</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">5</div>
+<details>
+<summary>
+Solución
+</summary>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="kw">def</span> mayor_de_tres(a, b, c):</span>
+<span id="cb11-3"><a href="#cb11-3"></a>    <span class="cf">if</span> a <span class="op">&gt;=</span> b <span class="kw">and</span> a <span class="op">&gt;=</span> c:</span>
+<span id="cb11-4"><a href="#cb11-4"></a>        <span class="bu">max</span> <span class="op">=</span> a</span>
+<span id="cb11-5"><a href="#cb11-5"></a>    <span class="cf">elif</span> b <span class="op">&gt;=</span> a <span class="kw">and</span> b <span class="op">&gt;=</span> c:</span>
+<span id="cb11-6"><a href="#cb11-6"></a>        <span class="bu">max</span> <span class="op">=</span> b</span>
+<span id="cb11-7"><a href="#cb11-7"></a>    <span class="cf">else</span>:</span>
+<span id="cb11-8"><a href="#cb11-8"></a>        <span class="bu">max</span> <span class="op">=</span> c</span>
+<span id="cb11-9"><a href="#cb11-9"></a>    <span class="cf">return</span> <span class="bu">max</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</section>
+<section id="mediana-de-tres" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="mediana-de-tres"><span class="header-section-number">2.4</span> Mediana de tres</h3>
+<p>Escribe una función <code>mediana_de_tres(a, b, c)</code> que devuelva la mediana de tres números. <strong>No uses la biblioteca <code>math</code></strong>. Desarrolla todas las funciones <em>extra</em> que necesites.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="bu">print</span>(mediana_de_tres(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">4</div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="bu">print</span>(mediana_de_tres(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">4</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">4</div>
+<details>
+<summary>
+Solución
+</summary>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">def</span> mediana_de_tres(a, b, c):</span>
+<span id="cb14-2"><a href="#cb14-2"></a>    <span class="cf">if</span> b <span class="op">&lt;=</span> a <span class="kw">and</span> a <span class="op">&lt;=</span> c <span class="kw">or</span> c <span class="op">&lt;=</span> a <span class="kw">and</span> a <span class="op">&lt;=</span> b:</span>
+<span id="cb14-3"><a href="#cb14-3"></a>        med <span class="op">=</span> a</span>
+<span id="cb14-4"><a href="#cb14-4"></a>    <span class="cf">elif</span> a <span class="op">&lt;=</span> b <span class="kw">and</span> b <span class="op">&lt;=</span> c <span class="kw">or</span> c <span class="op">&lt;=</span> b <span class="kw">and</span> b <span class="op">&lt;=</span> a:</span>
+<span id="cb14-5"><a href="#cb14-5"></a>        med <span class="op">=</span> b</span>
+<span id="cb14-6"><a href="#cb14-6"></a>    <span class="cf">else</span>:</span>
+<span id="cb14-7"><a href="#cb14-7"></a>        med <span class="op">=</span> c</span>
+<span id="cb14-8"><a href="#cb14-8"></a>    <span class="cf">return</span> med</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
