@@ -7,7 +7,11 @@ draft: true
 
 ## Números amigos
 
-Dos números enteros positivos $a$ y $b$ son amigos si la suma de los divisores propios de $a$ es igual a $b$ y la suma de los divisores propios de $b$ es igual a $a$.
+Dos números enteros positivos $a$ y $b$ son _amigos_ si la suma de los divisores propios de $a$ es igual a $b$ y la suma de los divisores propios de $b$ es igual a $a$.
+Los _divisores propios_ de un número son sus divisores positivos excluyendo el propio número.
+
+Así, por ejemplo, los números 220 y 284 son amigos. Los divisores propios de 220 son 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 y 110, que suman en total 284.
+A su vez, los divisores propios de 284 son 1, 2, 4, 71 and 142, que suman 220. 
 
 Desarrolla:
 
@@ -17,7 +21,7 @@ Desarrolla:
 
 | Introduce un número entero positivo:
 | **10**
-| Los números amigos menores que 1000 son:
+| Los primeros 10 pares de números amigos son:
 | 220 y 284
 | 1184 y 1210
 | 2620 y 2924
@@ -31,23 +35,161 @@ Desarrolla:
 
 **Entrega:** Escribe tu programa en un fichero denominado `amigos.py`.
 
-## Algo con trigonometría y geografía
+**Pruebas:** Si ejecutas el código del fichero `test_amigos.py`, se harán pruebas de unidad de las funciones `suma_divisores_propios()` y `son_amigos()`. 
 
-<!--
-La idea es: usar pitágoras para calcular distancias entre pares de coordenadas (?) Por ejemplo, introduce tus coordenadas, luego introduce las coordenadas de varias ciudades y al final de programa te diré cual es la más cercana?
 
-Molaría igual complicarlo cambiando pitágoras por algún algoritmo geodésico o algo.
--->
+## Códigos perdidos (exploración de combinaciones)
+
+Queremos encontrar todos los pares de números de un determinado intervalo cuya suma de dígitos sea igual (como, por ejemplo, 14 y 32 o 516 y 1074).
+
+Escribe una función denominada `codigos_perdidos()` que, dados dos enteros positivos que representan, respectivamente, el límite inferior y superior de un intervalo, **escriba** en la pantalla los pares de números dentro de ese intervalo cuya suma de dígitos sea coincidente y **devuelva** el número de pares que ha escrito en la pantalla.
+Si se invoca a la función `codigos_perdidos()` con algún argumento negativo o con un intervalo en el que el límite inferior es mayor que el límite superior, tiene que devolver -1 y no escribir nada en la pantalla. 
+
+Apóyate en una función denominada `sumar_cifras()` que, dado un número positivo, devuelva el valor de la suma de los dígitos de ese número.
+
+En este ejercicio, no se pide la escritura de un programa completo, sino simplemente la de la función `codigos_perdidos()`.
+No obstante, para probar que `codigos_perdidos()` funciona correctamente, necesitarás escribir un programa que lo compruebe.
+
+**Entrega:** Escribe tu código en un fichero denominado `codigos_perdidos.py`.
+
+**Pruebas:** Si ejecutas el código del fichero `test_codigos_perdidos.py`, se harán pruebas de unidad de las funciones `sumar_cifras()` y `codigos_perdidos()`, aunque de esta última, solo se comprueba que el valor devuelto (número de pares) sea correcto. No comprueba si lo que se ha escrito en la pantalla era correcto o no.
+
 
 ## Triángulo de Tartaglia
 
-El triángulo de Tartaglia es un arreglo de números en forma de triángulo que se utiliza para mostrar los coeficientes binomiales. Los coeficientes binomiales son los números que aparecen en el desarrollo de un binomio elevado a una potencia entera. El triángulo de Tartaglia se construye de la siguiente forma:
+El _triángulo de Tartaglia_ es una representación de números en forma de triángulo que se utiliza para mostrar los coeficientes binomiales.
+Los _coeficientes binomiales_ son los números que aparecen en el desarrollo de un binomio elevado a una potencia entera.
+Las primeras líneas del triángulo de Tartaglia son:
 
-- La primera fila contiene un único número, el 1.
-- Cada número en cada fila se obtiene sumando los dos números de la fila anterior que están justo encima de él (a la izquierda y a la derecha).
-- Los números que no están en la primera fila ni en la diagonal principal se obtienen de la suma de los dos números de la fila anterior que están justo encima de él.
-- La diagonal principal contiene todos los números 1.
-- Cada fila tiene un número más que la anterior.
+<table>
+  <colgroup>
+    <col span="19" style="align: center; width: 5%">
+  </colgroup>
+    <tr>
+        <td/><td/><td/><td/><td/><td/><td/><td/><td/>
+        <td style="text-align:center">1</td>
+    </tr>
+    <tr>
+        <td/><td/><td/><td/><td/><td/><td/><td/>
+        <td style="text-align:center">1</td><td/>
+        <td style="text-align:center">1</td>
+    </tr>
+    <tr>
+        <td/><td/><td/><td/><td/><td/><td/>
+        <td style="text-align:center">1</td><td/>
+        <td style="text-align:center">2</td><td/>
+        <td style="text-align:center">1</td>
+    </tr>
+    <tr>
+        <td/><td/><td/><td/><td/><td/>
+        <td style="text-align:center">1</td><td/>
+        <td style="text-align:center">3</td><td/>
+        <td style="text-align:center">3</td><td/>
+        <td style="text-align:center">1</td>
+    </tr>
+    <tr>
+        <td/><td/><td/><td/><td/>
+        <td style="text-align:center">1</td><td/>
+        <td style="text-align:center">4</td><td/>
+        <td style="text-align:center">6</td><td/>
+        <td style="text-align:center">4</td><td/>
+        <td style="text-align:center">1</td>
+    </tr>
+    <tr>
+        <td/><td/><td/><td/>
+        <td style="text-align:center">1</td><td/>
+        <td style="text-align:center">5</td><td/>
+        <td style="text-align:center">10</td><td/>
+        <td style="text-align:center">10</td><td/>
+        <td style="text-align:center">5</td><td/>
+        <td style="text-align:center">1</td>
+    </tr>
+    <tr>
+        <td/><td/><td/>
+        <td style="text-align:center">1</td><td/>
+        <td style="text-align:center">6</td><td/>
+        <td style="text-align:center">15</td><td/>
+        <td style="text-align:center">20</td><td/>
+        <td style="text-align:center">15</td><td/>
+        <td style="text-align:center">6</td><td/>
+        <td style="text-align:center">1</td>
+    </tr>
+    <tr>
+        <td/><td/>
+        <td style="text-align:center">1</td><td/>
+        <td style="text-align:center">7</td><td/>
+        <td style="text-align:center">21</td><td/>
+        <td style="text-align:center">35</td><td/>
+        <td style="text-align:center">35</td><td/>
+        <td style="text-align:center">21</td><td/>
+        <td style="text-align:center">7</td><td/>
+        <td style="text-align:center">1</td>
+    </tr>
+    <tr>
+        <td/>
+        <td style="text-align:center">1</td><td/>
+        <td style="text-align:center">8</td><td/>
+        <td style="text-align:center">28</td><td/>
+        <td style="text-align:center">56</td><td/>
+        <td style="text-align:center">70</td><td/>
+        <td style="text-align:center">56</td><td/>
+        <td style="text-align:center">28</td><td/>
+        <td style="text-align:center">8</td><td/>
+        <td style="text-align:center">1</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">1</td><td/>
+        <td style="text-align:center">9</td><td/>
+        <td style="text-align:center">36</td><td/>
+        <td style="text-align:center">84</td><td/>
+        <td style="text-align:center">126</td><td/>
+        <td style="text-align:center">126</td><td/>
+        <td style="text-align:center">84</td><td/>
+        <td style="text-align:center">36</td><td/>
+        <td style="text-align:center">9</td><td/>
+        <td style="text-align:center">1</td>
+    </tr>
+</table>
+
+Pese a que, para calcular cada elemento de cada fila del triángulo de Tartaglia, basta con sumar los valores de los dos elementos de la fila superior, si quisiéramos escribir un programa que lo hiciera, no podríamos con lo que hemos visto de programación hasta el momento.
+
+En su lugar, vamos a calcular cada elemento del triángulo a través del coeficiente binomial que le corresponde.
+Al único elemento de la primera fila, le corresponde el coeficiente binomial $\binom{0}{0}$.
+Los dos elementos de la segunda fila son los coeficientes binomiales $\binom{1}{0}$ y $\binom{1}{1}$.
+Los tres elementos de la tercera fila son $\binom{2}{0}$, $\binom{2}{1}$ y $\binom{2}{2}$ y así sucesivamente:
+
+<table>
+    <tr>
+        <td/><td/><td/><td/><td/><td/><td/><td/><td/>
+        <td style="text-align:center">$\binom{0}{0}$</td>
+    </tr>
+    <tr>
+        <td/><td/><td/><td/><td/><td/><td/><td/>
+        <td style="text-align:center">$\binom{1}{0}$</td><td/>
+        <td style="text-align:center">$\binom{1}{1}$</td>
+    </tr>
+    <tr>
+        <td/><td/><td/><td/><td/><td/><td/>
+        <td style="text-align:center">$\binom{2}{0}$</td><td/>
+        <td style="text-align:center">$\binom{2}{1}$</td><td/>
+        <td style="text-align:center">$\binom{2}{2}$</td>
+    </tr>
+    <tr>
+        <td/><td/><td/><td/><td/><td/>
+        <td style="text-align:center">$\binom{3}{0}$</td><td/>
+        <td style="text-align:center">$\binom{3}{1}$</td><td/>
+        <td style="text-align:center">$\binom{3}{2}$</td><td/>
+        <td style="text-align:center">$\binom{3}{3}$</td>
+    </tr>
+    <tr>
+        <td/><td/><td/><td/><td/>
+        <td style="text-align:center">$\binom{4}{0}$</td><td/>
+        <td style="text-align:center">$\binom{4}{1}$</td><td/>
+        <td style="text-align:center">$\binom{4}{2}$</td><td/>
+        <td style="text-align:center">$\binom{4}{3}$</td><td/>
+        <td style="text-align:center">$\binom{4}{4}$</td>
+    </tr>
+</table>
 
 La fórmula para calcular un coeficiente binomial es:
 
@@ -58,7 +200,7 @@ $$
 Escribe un programa Python que solicite al usuario un número entero positivo `n` y muestre las primeras `n` filas del triángulo de Tartaglia.
 
 | Introduce el número de filas:
-| **5**
+| **6**
 | 1
 | 1 1
 | 1 2 1
@@ -66,17 +208,26 @@ Escribe un programa Python que solicite al usuario un número entero positivo `n
 | 1 4 6 4 1
 | 1 5 10 10 5 1
 
+Define para ello una función denominada `binomial()` que, dados dos enteros positivos `n` y `k`, calcule el valor del coeficiente binomial $\binom{n}{k}$.
+
+**Entrega:** Escribe tu programa en un fichero denominado `tartaglia.py`.
+
+**Pruebas:** Si ejecutas el código del fichero `test_tartaglia.py`, se harán pruebas de unidad de la función `binomial()`. 
+
+
 ## Hora en lenguaje natural
 
-- Escribe una función `leer_(h,m)` que reciba dos números enteros `h` y `m` y devuelva una cadena de texto con la hora en lenguaje natural.
-- Los periodos del día son: madrugada, mañana, tarde y noche.
-    - **Madrugada:** de `01:00` a `05:59`.
-    - **Mañana:** de `06:00` a `11:59`.
-    - **Mediodía:** de `12:00` a `14:59`.
-    - **Tarde:** de `15:00` a `18:59`.
-    - **Noche:** de `19:00` a `24:59`.
-- Las horas irán de `1` a `24`.
-- Los minutos sólo serán dados en múltiplos de 15 (`0`, `15`, `30` y `45`).
+Escribe una función `leer_hora(h, m)` que reciba dos números enteros `h` y `m` y devuelva una cadena de texto con la hora en lenguaje natural.
+
+Los periodos del día son: madrugada, mañana, tarde y noche.
+
+- **Madrugada:** de `01:00` a `05:59`.
+- **Mañana:** de `06:00` a `11:59`.
+- **Mediodía:** de `12:00` a `14:59`.
+- **Tarde:** de `15:00` a `18:59`.
+- **Noche:** de `19:00` a `24:59`.
+
+Las horas irán de `1` a `24` y los minutos solo serán dados en múltiplos de 15 (`0`, `15`, `30` y `45`).
 
 | Hora | Lenguaje natural |
 | --- | --- |
@@ -85,25 +236,30 @@ Escribe un programa Python que solicite al usuario un número entero positivo `n
 | `leer_hora(3, 15)` | "Las tres y cuarto de la madrugada" |
 | `leer_hora(3, 30)` | "Las tres y media de la madrugada" |
 | `leer_hora(3, 45)` | "Las cuatro menos cuarto de la madrugada" |
-| `leer_hora(7, 0)`  | "Las siete de la mañana" |
+| `leer_hora(5, 45)` | "Las seis menos cuarto de la madrugada" |
+| `leer_hora(6, 0)`  | "Las seis de la mañana" |
 | `leer_hora(12, 0)` | "Las doce del mediodía" |
 | `leer_hora(13, 0)` | "La una del mediodía" |
 | `leer_hora(15, 0)` | "Las tres de la tarde" |
 | `leer_hora(19, 0)` | "Las siete de la noche" |
+| `leer_hora(24, 0)` | "Las doce de la noche" |
 
-- Sugerencias de funciones:
-    - `hora_en_palabras(h)` que devuelva la hora en palabras.
-    - `minutos_en_palabras(m)` que devuelva los minutos en palabras.
-    - `periodo_del_dia(h)` que devuelva el periodo del día en palabras.
+Al escribir la función `leer_hora()`, apóyate en estas otras funciones:
 
-## Códigos Perdidos (Exploración de combinaciones)
+- `hora_en_palabras(h)`, que devuelve la hora en palabras.
+- `minutos_en_palabras(m)` que devuelve los minutos en palabras.
+- `periodo_del_dia(h)` que devuelve el periodo del día en palabras.
 
-<!--Igual para funciones?-->
+**Entrega:** Escribe tu código en un fichero denominado `horas.py`.
 
-Encuentra todos los pares de números entre 10 y 99 cuya suma de dígitos sea igual. Por ejemplo, 14 y 41.
+**Pruebas:** Si ejecutas el código del fichero `test_horas.py`, se harán pruebas de unidad de las funciones `leer_hora()`, `hora_en_palabras()`,  `minutos_en_palabras()` y `periodo_del_dia()`. 
+
 
 ## Entrega de la práctica
 
-**Antes del _ las __:__,** deberán haberse subido a Moodle los siguientes ficheros:
+**Antes del 29 de marzo a las 18:00,** deberán haberse subido a Moodle los siguientes ficheros:
 
 - [ ] `amigos.py`
+- [ ] `codigos_perdidos.py`
+- [ ] `tartaglia.py`
+- [ ] `horas.py`
