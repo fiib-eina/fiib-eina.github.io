@@ -1,0 +1,207 @@
+---
+title: Teoría 404
+subtitle: Funciones avanzadas
+format: revealjs
+---
+
+## Ejercicios avanzados con funciones {.center}
+
+---
+
+### Ejercicio: Desnivel positivo y acumulado
+
+Escribe un programa Python que facilite al usuario el cálculo del desnivel positivo y acumulado de una ruta de senderismo.
+
+- El programa solicitará al usuario una serie de alturas (en metros) que representan **una ruta de senderismo**.
+    - La secuencia termina cuando introduce el mismo valor **por segunda vez consecutiva**.
+    - Si una altura no es válida, el programa **debe mostrar un mensaje de error** y **solicitar una nueva altura**.
+    - Una altura válida es un entero positivo **menor que 8848**.
+- El desnivel acumulado se calcula como la **suma de los desniveles (absolutos)** de **cada tramo**.
+- El desnivel positivo se calcula como la **suma de los desniveles** de **los tramos ascendentes**.
+
+---
+
+**Ejemplo de ejecución:**
+
+| Checkpoint 1 - Altura: **1000**
+| Checkpoint 2 - Altura: **-200**
+| Altura no válida!
+| Checkpoint 2 - Altura: **2000**
+| Checkpoint 3 - Altura: **1000**
+| Checkpoint 4 - Altura: **3000**
+| Checkpoint 5 - Altura: **3000**
+| Desnivel positivo: **3000**
+| Desnivel acumulado: 
+
+---
+
+#### Planificación
+
+Podemos dividir el problema en las siguientes partes (que no fases):
+
+- Obtención de alturas (correctas).
+    - Validación de alturas.
+- Cálculo del desnivel entre dos puntos.
+- Cálcular y mostrar el desnivel positivo.
+- Cálcular y mostrar el desnivel acumulado.
+
+::: {.callout-warning}
+La modularización de código a veces choca con el rendimiento y la legibilidad del código. A veces dos tareas deben ejecutarse en una misma función porque compartir datos entre ellas sería más complicado.
+:::
+
+---
+
+#### Obtención de alturas
+
+- Responsabilidad de esta función
+    - ¿Obtenemos **todas** las alturas?
+    - ¿Obtenemos **una altura**?
+- Subproblemas
+    - Validación de alturas.
+
+---
+
+- Vamos a implementar:
+    - Una función `obtener_altura()` que solicite al usuario una altura y la devuelva.
+    - Una función `es_altura_valida(h)` que compruebe si una altura es válida.
+    - Una función `obtener_altura_valida()` que use `obtener_altura()` y si no es válida, muestre un mensaje de error y solicite una nueva altura.
+- Además observa en el ejemplo que **cada vez que se solicita una altura, se muestra el número de checkpoint**.
+
+**Test:**
+```python
+# Input: -20, 200
+# Expected: no valida, 200
+print(obtener_altura_valida(2))
+```
+
+---
+
+**Solución:**
+
+```python
+def obtener_altura(checkpoint_num):
+    print(f"Checkpoint {checkpoint_num} - Altura:", end=" ")
+    altura = int(input())
+    return altura
+
+def es_altura_valida(h):
+    return 0 < h < 8848
+
+def obtener_altura_valida(checkpoint_num):
+    altura = obtener_altura(checkpoint_num)
+    while not validar_altura(altura):
+        print("Altura no válida!")
+        altura = obtener_altura(checkpoint_num)
+    return altura
+
+# Test
+```
+
+---
+
+#### Cálculo de los desniveles entre dos puntos
+
+- Antes de calcular los deniveles totales, vamos a implementar dos funciones que nos faciliten el cálculo de los desniveles entre dos puntos.
+
+---
+
+- Vamos a implementar:
+    - Una función `desnivel_positivo(h1, h2)` que calcule la diferencia de alturas **si la segunda es mayor que la primera**.
+    - Una función `desnivel_absoluto(h1, h2)` que calcule la diferencia **absoluta** de alturas.
+
+**Test:**
+```python
+# Expected: 1000
+print(desnivel_positivo(1000, 2000))
+
+# Expected: 0
+print(desnivel_positivo(2000, 1000))
+
+# Expected: 1000
+print(desnivel_absoluto(1000, 2000))
+
+# Expected: 1000
+print(desnivel_absoluto(2000, 1000))
+```
+
+---
+
+**Solución:**
+
+```python
+def desnivel_positivo(h1, h2):
+    if h2 > h1:
+        desnivel = h2 - h1
+    else:
+        desnivel = 0
+    return desnivel
+
+def desnivel_absoluto(h1, h2):
+    return abs(h2 - h1)
+```
+
+---
+
+#### Cálculo de los desniveles totales
+
+- Para procesar cada una de las alturas que nos proporciona el usuario, necesitaremos **un bucle**.
+    - En cada iteración, calcularemos la diferencia de alturas usando las funcines anteriores.
+- Iteraremos mientras **la altura no sea la misma que la anterior**.
+
+---
+
+- Vamos a implementar:
+    - Una función `desniveles_totales()` que calcule el desnivel positivo y acumulado.
+        - Solicite las alturas al usuario usando `obtener_altura_valida()`
+        - y acumule el **desnivel positivo** usando `desnivel_positivo(h1, h2)`
+        - y acumule el **desnivel acumulado** usando `desnivel_absoluto(h1, h2)`.
+
+**Test:**
+```python
+# Input: 1000, 2000, 1000, 3000, 3000
+# Expected: positivo 3000, acumulado 4000
+desniveles_totales()
+```
+
+---
+
+**Solución:**
+
+```python
+def desniveles_totales():
+    # Obtener los dos primeros checkpoints
+    h1 = obtener_altura_valida(1)
+    h2 = obtener_altura_valida(2)
+
+    # Inicializar desnivel y checkpoint (a 3)
+    total_positivo = 0
+    total_acumulado = 0
+    checkpoint_num = 3
+    while h1 != h2:
+        total_positivo += desnivel_positivo(h1, h2)
+        total_acumulado += desnivel_absoluto(h1, h2)
+
+        # Actualizar checkpoint
+        checkpoint_num += 1
+        
+        # Actualizar alturas
+        h1 = h2
+        h2 = obtener_altura_valida(checkpoint_num + 1)
+    print(f"Desnivel positivo: {total_positivo}m")
+    print(f"Desnivel acumulado: {total_acumulado}m")
+```
+
+---
+
+#### Mostrar los resultados
+
+- Hemos tenido que recurrir a imprrimir los resultados **dentro de la función**.
+    - Esto es porque **obtenemos dos resultados a la vez** (`total_positivo` y `total_acumulado`).
+- Sería muy cómodo poder devolver **ambas variables**, **recojerlas** en la función principal e invocar a otra función específica que **imprimiera los resultados**.
+- Sin embargo, las funciones _sólo pueden devolver un valor_...
+    - ... o no?
+
+::: {.callout-tip}
+**Puedes consultar y descargar el código completo en [el siguiente enlace](./code/desnivel.py).**
+:::
+

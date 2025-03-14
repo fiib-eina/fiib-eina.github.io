@@ -10,6 +10,8 @@ Refactoriza los siguientes códigos para que sean más modulares y reutilizables
 
 ### Pintar un menú
 
+<!-- TODO: Mover esto a la sesión de teoría y meter aquí otro más práctico -->
+
 El objetivo es que si en un futuro quiero hacer alguno de estos cambios en el formato, **sólo tenga que modificar una línea de código**.
 
 - Cambiar `--` por `>>`:
