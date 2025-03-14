@@ -208,11 +208,11 @@ Escribe un programa Python que solicite al usuario un número entero positivo `n
 | 1 4 6 4 1
 | 1 5 10 10 5 1
 
-Define para ello una función denominada `binomial()` que, dados dos enteros positivos `n` y `k`, calcule el valor del coeficiente binomial $\binom{n}{k}$.
+Define para ello una función denominada `coeficiente_binomial()` que, dados dos enteros positivos `n` y `k`, calcule el valor del coeficiente binomial $\binom{n}{k}$.
 
 **Entrega:** Escribe tu programa en un fichero denominado `tartaglia.py`.
 
-**Pruebas:** Si ejecutas el código del fichero `test_tartaglia.py`, se harán pruebas de unidad de la función `binomial()`. 
+**Pruebas:** Si ejecutas el código del fichero `test_tartaglia.py`, se harán pruebas de unidad de la función `coeficiente_binomial()`. 
 
 
 ## Hora en lenguaje natural
