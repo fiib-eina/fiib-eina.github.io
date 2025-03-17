@@ -2,7 +2,6 @@
 title: Práctica 4
 subtitle: Funciones
 format: html
-draft: true
 ---
 
 ## Números amigos
@@ -35,7 +34,7 @@ Desarrolla:
 
 **Entrega:** Escribe tu programa en un fichero denominado `amigos.py`.
 
-**Pruebas:** Si ejecutas el código del fichero `test_amigos.py`, se harán pruebas de unidad de las funciones `suma_divisores_propios()` y `son_amigos()`. 
+**Pruebas:** Si ejecutas el código del fichero [`test_amigos.py`](./tests/test_amigos.py), se harán pruebas de unidad de las funciones `suma_divisores_propios()` y `son_amigos()`. 
 
 
 ## Códigos perdidos (exploración de combinaciones)
@@ -52,7 +51,7 @@ No obstante, para probar que `codigos_perdidos()` funciona correctamente, necesi
 
 **Entrega:** Escribe tu código en un fichero denominado `codigos_perdidos.py`.
 
-**Pruebas:** Si ejecutas el código del fichero `test_codigos_perdidos.py`, se harán pruebas de unidad de las funciones `sumar_cifras()` y `codigos_perdidos()`, aunque de esta última, solo se comprueba que el valor devuelto (número de pares) sea correcto. No comprueba si lo que se ha escrito en la pantalla era correcto o no.
+**Pruebas:** Si ejecutas el código del fichero [`test_codigos_perdidos.py`](./tests/test_codigos_perdidos.py), se harán pruebas de unidad de las funciones `sumar_cifras()` y `codigos_perdidos()`, aunque de esta última, solo se comprueba que el valor devuelto (número de pares) sea correcto. No comprueba si lo que se ha escrito en la pantalla era correcto o no.
 
 
 ## Triángulo de Tartaglia
@@ -212,7 +211,7 @@ Define para ello una función denominada `coeficiente_binomial()` que, dados dos
 
 **Entrega:** Escribe tu programa en un fichero denominado `tartaglia.py`.
 
-**Pruebas:** Si ejecutas el código del fichero `test_tartaglia.py`, se harán pruebas de unidad de la función `coeficiente_binomial()`. 
+**Pruebas:** Si ejecutas el código del fichero [`test_tartaglia.py`](./tests/test_tartaglia.py), se harán pruebas de unidad de la función `coeficiente_binomial()`. 
 
 
 ## Hora en lenguaje natural
@@ -252,7 +251,7 @@ Al escribir la función `leer_hora()`, apóyate en estas otras funciones:
 
 **Entrega:** Escribe tu código en un fichero denominado `horas.py`.
 
-**Pruebas:** Si ejecutas el código del fichero `test_horas.py`, se harán pruebas de unidad de las funciones `leer_hora()`, `hora_en_palabras()`,  `minutos_en_palabras()` y `periodo_del_dia()`. 
+**Pruebas:** Si ejecutas el código del fichero [`test_horas.py`](./tests/test_horas.py), se harán pruebas de unidad de las funciones `leer_hora()`, `hora_en_palabras()`,  `minutos_en_palabras()` y `periodo_del_dia()`. 
 
 
 ## Entrega de la práctica
