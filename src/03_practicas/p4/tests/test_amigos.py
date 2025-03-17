@@ -1,4 +1,15 @@
+from io import StringIO
+import sys
+
+stdin_backup = sys.stdin
+stdout_backup = sys.stdout
+sys.stdin = StringIO("1\n")
+sys.stdout = StringIO()
+
 import amigos
+
+sys.stdin = stdin_backup
+sys.stdout = stdout_backup
 
 
 errs = 0
@@ -40,6 +51,8 @@ check_suma_divisores_propios(220, 284)
 check_suma_divisores_propios(284, 220)
 check_suma_divisores_propios(1184, 1210)
 
+check_son_amigos(12, 16, False)
+check_son_amigos(40, 50, False)
 check_son_amigos(220, 284, True)
 check_son_amigos(284, 220, True)
 check_son_amigos(220, 285, False)
