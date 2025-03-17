@@ -1,4 +1,15 @@
+from io import StringIO
+import sys
+
+stdin_backup = sys.stdin
+stdout_backup = sys.stdout
+sys.stdin = StringIO("1\n")
+sys.stdout = StringIO()
+
 import amigos
+
+sys.stdin = stdin_backup
+sys.stdout = stdout_backup
 
 
 errs = 0
