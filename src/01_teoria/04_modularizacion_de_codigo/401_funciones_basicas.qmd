@@ -93,6 +93,8 @@ format: revealjs
 
 ### Funciones
 
+<!-- TODO: Distinción parámetros y argumentos -->
+
 ::: {.columns}
 ::: {.column width="50%"}
 
@@ -418,7 +420,7 @@ def convertir_temperatura_motor(temperatura):
 
 print("Introduce la temperatura del motor:")
 temperatura = float(input())
-celsius_a_fahrenheit(temperatura)
+convertir_temperatura_motor(temperatura)
 ```
 
 :::

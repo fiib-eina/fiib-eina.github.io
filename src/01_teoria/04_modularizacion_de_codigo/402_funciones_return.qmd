@@ -4,7 +4,7 @@ subtitle: Funciones II
 format: revealjs
 ---
 
-## Return Statement {.center}
+## Instrucción de retorno {.center}
 
 ---
 
@@ -72,7 +72,7 @@ print(f"El area es {altura * anchura}")
 
 ---
 
-### Return Statement
+### Instrucción de retorno
 
 - Para **devolver un valor** en Python, se usa la palabra clave `return`.
 - En el momento en que se invoca `return`, la función **termina su ejecución** y **devuelve** el valor indicado.
@@ -217,8 +217,6 @@ print(f"{a} ^ {b} = {potencia(a, b)}")
 
 :::
 :::
-
-- _Nota_: Cuando aprendamos a devolver valores, podremos modularizar aún más este programa.
 
 ---
 
