@@ -25,13 +25,13 @@ Escribe un programa Python que facilite al usuario el cálculo del desnivel posi
 
 | Checkpoint 1 - Altura: **1000**
 | Checkpoint 2 - Altura: **-200**
-| Altura no válida!
+| ¡Altura no válida!
 | Checkpoint 2 - Altura: **2000**
 | Checkpoint 3 - Altura: **1000**
 | Checkpoint 4 - Altura: **3000**
 | Checkpoint 5 - Altura: **3000**
-| Desnivel positivo: **3000**
-| Desnivel acumulado: 
+| Desnivel positivo: 3000m
+| Desnivel acumulado: 4000m
 
 ---
 
@@ -90,7 +90,7 @@ def es_altura_valida(h):
 def obtener_altura_valida(checkpoint_num):
     altura = obtener_altura(checkpoint_num)
     while not validar_altura(altura):
-        print("Altura no válida!")
+        print("¡Altura no válida!")
         altura = obtener_altura(checkpoint_num)
     return altura
 
