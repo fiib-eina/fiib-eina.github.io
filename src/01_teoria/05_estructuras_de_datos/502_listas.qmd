@@ -1,10 +1,12 @@
 ---
 title: Teoría 502
-subtitle: Strings y Tuplas
+subtitle: Listas
 format: revealjs
 draft: true
 ---
 
-## Chapter {.center}
+## Datos estructurados {.center}
 
+
+---
 

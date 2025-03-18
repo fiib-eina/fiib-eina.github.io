@@ -8,6 +8,7 @@ requires-python = ">=3.12"
 [tool.pyright]
 reportMissingTypeStubs = false
 reportAny = false
+reportUninitializedInstanceVariable = false
 reportUnusedCallResult = false
 reportUnknownArgumentType = false
 reportUnknownMemberType = false

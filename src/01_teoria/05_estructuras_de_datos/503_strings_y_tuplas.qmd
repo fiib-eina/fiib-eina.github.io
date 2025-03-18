@@ -1,6 +1,6 @@
 ---
 title: Teoría 503
-subtitle: Objetos
+subtitle: Strings y Tuplas
 format: revealjs
 draft: true
 ---

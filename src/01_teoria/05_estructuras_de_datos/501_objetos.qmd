@@ -1,0 +1,514 @@
+---
+title: Teoría 501
+subtitle: Objetos
+format: revealjs
+---
+
+## Tipos de datos estructurados {.center}
+
+---
+
+### Modelado de datos
+
+- En muchas disciplinas (física, matemáticas, biología, economía, etc.) se utilizan **modelos** para **representar** la realidad.
+    - _Asumamos una vaca esférica isodensa_
+- Un **modelo** es una **abstracción** de la realidad que **simplifica** los aspectos más complejos y **preserva** los elementos **necesarios para el problema**.
+    - Si modelo un coche para cinemática, me interesará su masa o su velocidad, pero no su color.
+- Decidir qué información **es relevante** y **cómo representarla** es una de las habilidades que distinguen a un buen programador.
+
+---
+
+### Necesidad de tipos estructurados
+
+- Hasta ahora, sólo hemos **modelado** con tipos de datos que **representaban un único valor**.
+    - Edad: `int`
+    - Nombre: `str`
+    - Altura: `float`
+    - Casado: `bool`
+- Sin embargo, a menudo **la naturaleza del problema** que queremos resolver **requiere** que trabajemos con **datos más complejos**.
+
+---
+
+#### Ejemplo: Modelado de las aulas de una facultad
+
+- Supongamos que queremos **modelar** las **aulas** de una **facultad/escuela**.
+- Cada aula tiene una serie de **características** que la definen:
+
+```python
+id = "A23"
+planta = 2
+superficie = 80.5
+capacidad = 60
+proyector = True
+```
+
+- Utilizamos **cinco variables independientes** para **representar** una **sola entidad**.
+
+---
+
+- Si queremos representar dos aulas, necesitamos **diez variables**.
+
+```python
+id_a23 = "A23"
+planta_a23 = 2
+superficie_a23 = 80.5
+capacidad_a23 = 60
+proyector_a23 = True
+
+id_a12 = "A12"
+planta_a12 = 1
+superficie_a12 = 50.5
+capacidad_a12 = 40
+proyector_a12 = False
+```
+
+---
+
+- Si queremos representar **todas las aulas** de la facultad, el problema se vuelve **inabarcarble**.
+
+_*Necesitamos una forma de agrupar variables que representen una misma entidad.*_
+
+---
+
+## Clases y Objetos {.center}
+
+---
+
+### Clases y Objetos
+
+- Los conceptos de **clase** y **objeto** provienen de un paradigma de programación llamado **programación orientada a objetos**.
+- Sus _definiciones formales_ incluyen conceptos avanzados que quedan fuera del alcance de este curso.
+- La definiciones que vamos a manejar son más **prácticas** que **conceptualmente correctas**.
+
+---
+
+::: {.columns}
+::: {.column width="50%"}
+
+| Alumno := {nombre,
+|   edad, nota}
+
+- Una **clase** es una **plantilla** que define la **estructura** de un **tipo de dato**.
+    - Define los **atributos** que tiene el tipo de dato.
+    - No tiene valores concretos, sólo la estructura.
+- **Definir** una clase es **crear un nuevo tipo de dato**
+
+
+:::
+::: {.column width="50%"}
+
+| alumno1 = {"Juan", 20, 7.5}
+| alumno2 = {"María", 21, 8.0}
+
+- Un **objeto** es una **instancia** de una **clase**.
+    - Podemos definir **varios objetos** de la **misma clase**.
+    - Cada objeto tiene **sus propios valores** para los atributos.
+- **Crear un objeto** es **crear una variable** del tipo de dato definido por la clase.
+
+
+:::
+:::
+
+---
+
+### Clases en Python
+
+- En Python, una **clase** se define con la palabra clave `class` seguida por el **nombre de la clase** y dos puntos `:`.
+    - Dentro (un nivel de indentación) de la clase se definen los **atributos** de la clase como: `nombre_atributo: tipo`.
+- Definiremos nuestras clases **al principio** de nuestros programas.
+    - **Antes** de **definir funciones** que las utilicen.
+    - **Después** de **importar módulos** que necesiten.
+
+```python
+class NombreClase:
+    atributo1: tipo1
+    atributo2: tipo2
+```
+
+::: {.callout-tip}
+En Python los nombres de las clases suelen seguir la convención `PascalCase`:
+
+- La primera letra de cada palabra en mayúsculas.
+
+Esto ayuda a distinguir las clases de las funciones y variables, que suelen seguir la convención `snake_case`.
+
+- Las palabras en minúsculas separadas por guiones bajos.
+:::
+
+---
+
+#### Ejemplos: Definiciones de clases
+
+**Números complejos**
+
+```python
+class NumeroComplejo:
+    real: float
+    imag: float
+```
+
+**Fecha**
+
+```python
+class Fecha:
+    dia: int
+    mes: int
+    anno: int
+```
+
+**Coordenadas**
+
+```python
+class Coordenada:
+    lat: float
+    lon: float
+```
+
+---
+
+### Objetos en Python
+
+- En Python, un **objeto** se crea invocando a la función llamada _"igual que la clase"_.
+    - La función invocada crea un **nuevo objeto** y lo devuelve.
+- Este objeto creado deberemos **asignarlo a una variable** para poder **trabajar con él**.
+
+```python
+class Fecha:
+    dia: int
+    mes: int
+    anno: int
+
+f = Fecha() 
+```
+
+- La variable `f` es un **objeto** de la **clase** `Fecha`.
+- El objeto `f` tiene **tres atributos**:
+    - `dia`, `mes` y `anno`.
+
+---
+
+#### Objetos: Atributos
+
+- Los atributos de un objeto se acceden con la **notación punto** (`.`).
+    - `nombre_objeto.nombre_atributo`
+
+```python
+f1 = Fecha()
+f2 = Fecha()
+
+f1.dia # El atributo dia del objeto f1
+f2.mes # El atributo mes del objeto f2
+```
+
+- Podemos usar esta notación para hacer **asignaciones** o para **leer** el valor de un atributo.
+
+```python
+f.dia = 1     # Asignación
+print(f.dia)  # Lectura
+f.dia += 1    # Lectura y asignación
+```
+
+::: {.callout-tip}
+A diferencia de las variables, que sólo existen en el ámbito en el que se definen, los nombres de los atributos son los mismos para todos los objetos de una clase a lo largo de un programa.
+
+- Por ello es imprescindible que los nombres de los atributos sean **claros** y **descriptivos**.
+:::
+
+---
+
+#### Objetos: Inicialización
+
+- Cuando se crea un **objeto nuevo**, sus atributos **no tienen valores asignados**.
+- Por ello, **debemos asignar valores** a los atributos del objeto para **inicializarlo**.
+
+```python
+f = Fecha()
+f.dia = 1
+f.mes = 2
+f.anno = 2020
+```
+
+---
+
+- Podemos **facilitar la inicialización** de un objeto definiendo una función:
+
+```python
+def nueva_fecha(dia, mes, anno):
+    f = Fecha()
+    f.dia = dia
+    f.mes = mes
+    f.anno = anno
+    return f
+
+f = nueva_fecha(1, 2, 2020)
+```
+
+- Estas funciones son tradicionalmente llamadas **constructores**.
+    - Reciben los valores iniciales de los atributos y devuelven un objeto inicializado.
+
+---
+
+#### Objetos: Representación
+
+- Las **clases** en Python, por defecto, no pueden ser representadas como cadenas de texto (por ejemplo, por `print`).
+
+```python
+print(f)
+```
+
+| `<__main__.Fecha object at 0x7f7e3c7b3b50>`
+
+- Si quieres ver el **contenido** de un objeto, puedes acceder a sus atributos.
+
+```python
+print(f"Fecha: {f.dia}/{f.mes}/{f.anno}")
+```
+
+| `Fecha: 1/2/2020`
+
+---
+
+- Podemos **personalizar y facilitar la representación de un objeto** definiendo una función:
+
+```python
+def str_fecha(f):
+    return f"{f.dia}/{f.mes}/{f.anno}"
+
+print(str_fecha(f))
+```
+
+---
+
+#### Ejemplo: Números complejos
+
+- Escribe un programa Python que defina una **clase** llamada `NumeroComplejo` que represente un número complejo.
+- La clase debe tener dos atributos:
+    - `real`: parte real del número complejo.
+    - `imag`: parte imaginaria del número complejo.
+- Crea una función `suma_complejos` que reciba dos números complejos y devuelva su suma.
+
+---
+
+```python
+class NumeroComplejo:
+    real: float
+    imag: float
+
+def suma_complejos(c1, c2):
+    c = NumeroComplejo()
+    c.real = c1.real + c2.real
+    c.imag = c1.imag + c2.imag
+    return c
+
+c1 = NumeroComplejo()
+c1.real = 1
+c1.imag = 2
+
+c2 = NumeroComplejo()
+c2.real = 3
+c2.imag = 4
+
+c = suma_complejos(c1, c2)
+print(f"{c.real}+{c.imag}i")
+```
+
+---
+
+## Dataclasses {.center}
+
+---
+
+- Seguramente habrás notado que **crear** una **clase** con **atributos** y **métodos** en Python es **repetitivo** y **tedioso**.
+
+```python
+class Aula:
+    id: str
+    planta: int
+    superficie: float
+    capacidad: int
+    proyector: bool
+
+a23 = Aula()
+a23.id = "A23"
+a23.planta = 2
+a23.superficie = 80.5
+a23.capacidad = 60
+a23.proyector = True
+```
+
+---
+
+### Dataclasses: Clases puras de datos
+
+- Python proporciona un módulo llamado `dataclasses` que nos permite crear clases de datos de forma sencilla.
+- Crear una clase como una **dataclass** genera automáticamente:
+    - **constructores**
+    - **representaciones**
+    - y más...
+
+---
+
+- Para marcar una **clase** como **dataclass**, simplemente hay que añadir el _decorador `@dataclasses.dataclass` antes de la definición de la clase.
+
+```python
+import dataclasses
+
+@dataclasses.dataclass
+class Punto:
+    x: int
+    y: int
+```
+
+- A partir de ahora, podemos **crear** y **representar** objetos de la clase `Punto` de la siguiente manera:
+
+```python
+p = Punto(1, 2)
+print(p)
+```
+
+---
+
+#### Ejemplo: Fecha
+
+::: {.columns}
+::: {.column width="50%"}
+
+**Sin dataclass**
+
+```python
+# Definición de la clase
+class Fecha:
+    dia: int
+    mes: int
+    anno: int
+
+# Creación de un objeto
+f = Fecha()
+f.dia = 1
+f.mes = 2
+f.anno = 2020
+
+# Imprimir atributos
+print(f.dia, f.mes, f.anno)
+```
+
+| 1 2 2020
+
+:::
+::: {.column width="50%"}
+
+**Con dataclass**
+
+```python
+import dataclasses
+
+# Definición de la clase
+@dataclasses.dataclass
+class Fecha:
+    dia: int
+    mes: int
+    anno: int
+
+# Creación de un objeto
+f = Fecha(1, 1, 2022)
+
+# Imprimir objeto
+print(f)
+```
+
+| Fecha(dia=1, mes=1, anno=2022)
+
+:::
+:::
+
+
+---
+
+#### Ejemplo: Aulas
+
+- Escribe un programa Python que defina una clase llamada `Aula` que represente una aula.
+- Define dos variables (objetos) de tipo `Aula` llamadas `a23` y `a24`.
+- Imprime sus valores.
+
+```python
+import dataclasses
+
+@dataclasses.dataclass
+class Aula:
+    id: str
+    planta: int
+    superficie: float
+    capacidad: int
+    proyector: bool
+
+a23 = Aula("A23", 2, 80.5, 60, True)
+a24 = Aula("A24", 2, 70.5, 50, False)
+print(a23)
+print(a24)
+```
+
+---
+
+- Añade la función `leer_aula` que pregunte al usuario los datos de un aula y devuelva un objeto de tipo `Aula`.
+
+::: {.columns}
+::: {.column width="50%"}
+
+**Sin dataclass**
+
+```python
+def leer_aula():
+    nueva_aula = Aula()
+    print("ID: ")
+    nueva_aula.id = input()
+    print("Planta: ")
+    nueva_aula.planta = int(input())
+    print("Superficie: ")
+    nueva_aula.superficie = float(input())
+    print("Capacidad: ")
+    nueva_aula.capacidad = int(input())
+    print("Proyector (s/n): ")
+    nueva_aula.proyector = input() == "s"
+    return nueva_aula
+```
+
+:::
+::: {.column width="50%"}
+
+**Con dataclass**
+
+```python
+def leer_aula():
+    print("ID: ")
+    id = input()
+    print("Planta: ")
+    planta = int(input())
+    print("Superficie: ")
+    superficie = float(input())
+    print("Capacidad: ")
+    capacidad = int(input())
+    print("Proyector (s/n): ")
+    proyector = input() == "s"
+    return Aula(id, planta, superficie,
+                capacidad, proyector)
+```
+
+
+:::
+:::
+
+---
+
+- Añade la función `aula_mas_grande` que reciba dos aulas y devuelva la que tenga mayor capacidad.
+
+```python
+def aula_mas_grande(a1, a2):
+    if a1.capacidad > a2.capacidad:
+        return a1
+    else:
+        return a2
+
+a = aula_mas_grande(a23, a24)
+print(a)
+```
+
