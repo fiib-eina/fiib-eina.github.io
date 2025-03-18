@@ -55,7 +55,7 @@ pintar_menu()
 
 ### Calculadora
 
-El objetivo es **poder testear el funcionamiento individual de cada operación**.
+El objetivo es **poder probar el funcionamiento individual de cada operación**.
 
 ```python
 import math
@@ -283,6 +283,3 @@ def mediana_de_tres(a, b, c):
 ```
 
 </details>
-
-
-

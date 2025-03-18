@@ -10,7 +10,7 @@ format: revealjs
 
 ### Atacando problemas complejos
 
-- Los ejercicios abordados hasta ahora han sido **específicamente diseñados** para ser **senillos** y **fáciles de entender**.
+- Los ejercicios abordados hasta ahora han sido **específicamente diseñados** para ser **sencillos** y **fáciles de entender**.
 - En la práctica, los programas suelen ser (_mucho_) **más complejos**.
 - Para abordar esta complejidad, debemos proveernos de **métodos y estrategias** que nos faciliten el trabajo.
 - En proyectos grandes, es **fundamental**:
@@ -140,7 +140,7 @@ def saluda():
 - Una función se invoca escribiendo su **nombre** seguido de sus **argumentos** entre **paréntesis**.
     - Si no tiene argumentos, los **paréntesis se mantienen vacíos**.
 - Al igual que con las variables:
-    - Las funciónes deben ser **definidas** antes de ser **invocadas**.
+    - Las funciones deben ser **definidas** antes de ser **invocadas**.
 - Por ello el orden de un programa será: **definir funciones** y luego **programa principal**.
 
 ```python
@@ -176,14 +176,14 @@ saluda()
 ```python
 def castigo():
     for i in range(0, 100):
-        print("No llevaré el movil encima el día del examen.")
+        print("No llevaré el móvil encima el día del examen.")
 
 castigo()
 ```
 
-| No llevaré el movil encima el día del examen.
-| No llevaré el movil encima el día del examen.
-| No llevaré el movil encima el día del examen.
+| No llevaré el móvil encima el día del examen.
+| No llevaré el móvil encima el día del examen.
+| No llevaré el móvil encima el día del examen.
 | . . .
 
 ---
@@ -234,7 +234,7 @@ print("Global 3")
     - Un módulo que **no depende** de otros módulos es más **fácil de entender** y **mantener**.
 - Si los módulos comparten de **forma descontrolada** todas las **variables entre sí**:
     - Corren el riesgo de **interferir** (propenso a errores).
-    - Se vuelve dificil **entender** y **mantener** el código.
+    - Se vuelve difícil **entender** y **mantener** el código.
         - _¿De dónde viene el valor de esta variable?_
 
 ---
@@ -297,7 +297,7 @@ def main():
     variable = 42 # Variable local
     print(variable) 
 
-main() # Esta es la UNICA instrucción global
+main() # Esta es la ÚNICA instrucción global
 ```
 
 ---
@@ -321,7 +321,7 @@ def funcion(argumento1, argumento2):
 
 - Al **invocar la función**:
     - Se pasan los **valores** que se quieren asignar a los argumentos.
-        1. Se **evaluan las expresiones**
+        1. Se **evalúan las expresiones**
         2. Se invoca a la función
         3. Se asigna a cada argumento el valor correspondiente (por orden)
 
@@ -393,7 +393,7 @@ potencia(a, b)
 
 ### Filosofía de diseño modular
 
-- Como se ha manifesado de varias formas:
+- Como se ha manifestado de varias formas:
     - La **clave** de la **modularización** es la **encapsulación**.
     - Las funciones deben ser **independientes** y **reutilizables**.
 - Cuando **diseñemos** una función, debemos tener en cuenta:
@@ -411,7 +411,7 @@ Desarrolla un programa que pida al usuario la temperatura en grados Celsius del 
 ::: {.columns}
 ::: {.column width="50%"}
 
-**Función acopladada**
+**Función acoplada**
 
 ```python
 def convertir_temperatura_motor(temperatura):

@@ -50,7 +50,7 @@ print(f"El area es {altura * anchura}")
 def mi_abs(x):
     if x < 0:
         x = -x
-    print(x)  # Sólo vabemos pintar
+    print(x)  # Sólo sabemos pintar
 
 # abs(y1-y2), abs(x1-x2)
 altura = mi_abs(0-10)  # Imprime 10. Altura no recibe valor
@@ -182,7 +182,7 @@ Vamos a modularizar aún más el código que hicimos la sesión anterior.
 ::: {.columns}
 ::: {.column width="50%"}
 
-**Modularizado**
+**Modular**
 
 ```python
 def potencia(a, b):
@@ -199,7 +199,7 @@ potencia(a, b) # Atención al orden
 :::
 ::: {.column width="50%"}
 
-**Más modularizado**
+**Más modular**
 
 ```python
 def potencia(a, b):
@@ -249,7 +249,7 @@ print(cos_approx)
 :::
 ::: {.column width="50%"}
 
-**Modularizado**
+**Modular**
 
 ```python
 import math

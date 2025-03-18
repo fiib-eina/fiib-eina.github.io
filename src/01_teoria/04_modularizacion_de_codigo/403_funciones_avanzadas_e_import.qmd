@@ -218,13 +218,13 @@ resultado_suma(3, 5)
 
 - Escribe una función `num_manzanas(n)` que devuelva una cadena de texto describiendo el número de manzanas.
 - Escribe una función `num_barcos(n)` que devuelva una cadena de texto describiendo el número de barcos.
-- Escribe el programa que consideres necesario para **testear la función**.
+- Escribe el programa que consideres necesario para **probar la función**.
 
-| Introduce la cantiad de manzanas:
+| Introduce la cantidad de manzanas:
 | **3**
 | Tienes 3 manzanas
 
-| Introduce la cantiad de manzanas:
+| Introduce la cantidad de manzanas:
 | **1**
 | Tienes 1 manzana
 

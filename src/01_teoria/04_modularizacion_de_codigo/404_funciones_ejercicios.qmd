@@ -39,11 +39,11 @@ Escribe un programa Python que facilite al usuario el cálculo del desnivel posi
 
 Podemos dividir el problema en las siguientes partes (que no fases):
 
-- Obtención de alturas (correctas).
-    - Validación de alturas.
-- Cálculo del desnivel entre dos puntos.
-- Cálcular y mostrar el desnivel positivo.
-- Cálcular y mostrar el desnivel acumulado.
+- Obtener alturas (correctas).
+    - Validar de alturas.
+- Calcular el desnivel entre dos puntos.
+- Calcular y mostrar el desnivel positivo.
+- Calcular y mostrar el desnivel acumulado.
 
 ::: {.callout-warning}
 La modularización de código a veces choca con el rendimiento y la legibilidad del código. A veces dos tareas deben ejecutarse en una misma función porque compartir datos entre ellas sería más complicado.
@@ -101,7 +101,7 @@ def obtener_altura_valida(checkpoint_num):
 
 #### Cálculo de los desniveles entre dos puntos
 
-- Antes de calcular los deniveles totales, vamos a implementar dos funciones que nos faciliten el cálculo de los desniveles entre dos puntos.
+- Antes de calcular los desniveles totales, vamos a implementar dos funciones que nos faciliten el cálculo de los desniveles entre dos puntos.
 
 ---
 
@@ -145,7 +145,7 @@ def desnivel_absoluto(h1, h2):
 #### Cálculo de los desniveles totales
 
 - Para procesar cada una de las alturas que nos proporciona el usuario, necesitaremos **un bucle**.
-    - En cada iteración, calcularemos la diferencia de alturas usando las funcines anteriores.
+    - En cada iteración, calcularemos la diferencia de alturas usando las funciones anteriores.
 - Iteraremos mientras **la altura no sea la misma que la anterior**.
 
 ---
@@ -195,9 +195,9 @@ def desniveles_totales():
 
 #### Mostrar los resultados
 
-- Hemos tenido que recurrir a imprrimir los resultados **dentro de la función**.
+- Hemos tenido que recurrir a imprimir los resultados **dentro de la función**.
     - Esto es porque **obtenemos dos resultados a la vez** (`total_positivo` y `total_acumulado`).
-- Sería muy cómodo poder devolver **ambas variables**, **recojerlas** en la función principal e invocar a otra función específica que **imprimiera los resultados**.
+- Sería muy cómodo poder devolver **ambas variables**, **recogerlas** en la función principal e invocar a otra función específica que **imprimiera los resultados**.
 - Sin embargo, las funciones _sólo pueden devolver un valor_...
     - ... o no?
 
