@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Teoría 501 – Fundamentos de Informática</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed20e031201a2f52d49632ac7658f477.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-315f621f901707706d3e135395544505.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-3a9bc45b6cb0139a6ebb837c83b4d0ce.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-2c1606788b907b2185966d5072fee3a6.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+
+</head>
+
+<body class="floating">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#tipos-de-datos-estructurados" id="toc-tipos-de-datos-estructurados" class="nav-link active" data-scroll-target="#tipos-de-datos-estructurados"><span class="header-section-number">1</span> Tipos de datos estructurados</a>
+  <ul class="collapse">
+  <li><a href="#modelado-de-datos" id="toc-modelado-de-datos" class="nav-link" data-scroll-target="#modelado-de-datos"><span class="header-section-number">1.1</span> Modelado de datos</a></li>
+  <li><a href="#necesidad-de-tipos-estructurados" id="toc-necesidad-de-tipos-estructurados" class="nav-link" data-scroll-target="#necesidad-de-tipos-estructurados"><span class="header-section-number">1.2</span> Necesidad de tipos estructurados</a></li>
+  </ul></li>
+  <li><a href="#clases-y-objetos" id="toc-clases-y-objetos" class="nav-link" data-scroll-target="#clases-y-objetos"><span class="header-section-number">2</span> Clases y Objetos</a>
+  <ul class="collapse">
+  <li><a href="#clases-y-objetos-1" id="toc-clases-y-objetos-1" class="nav-link" data-scroll-target="#clases-y-objetos-1"><span class="header-section-number">2.1</span> Clases y Objetos</a></li>
+  <li><a href="#clases-en-python" id="toc-clases-en-python" class="nav-link" data-scroll-target="#clases-en-python"><span class="header-section-number">2.2</span> Clases en Python</a></li>
+  <li><a href="#objetos-en-python" id="toc-objetos-en-python" class="nav-link" data-scroll-target="#objetos-en-python"><span class="header-section-number">2.3</span> Objetos en Python</a></li>
+  </ul></li>
+  <li><a href="#dataclasses" id="toc-dataclasses" class="nav-link" data-scroll-target="#dataclasses"><span class="header-section-number">3</span> Dataclasses</a>
+  <ul class="collapse">
+  <li><a href="#dataclasses-clases-puras-de-datos" id="toc-dataclasses-clases-puras-de-datos" class="nav-link" data-scroll-target="#dataclasses-clases-puras-de-datos"><span class="header-section-number">3.1</span> Dataclasses: Clases puras de datos</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="501_objetos.reveal.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Teoría 501</h1>
+<p class="subtitle lead">Objetos</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="tipos-de-datos-estructurados" class="level2 center" data-number="1">
+<h2 class="center anchored" data-number="1" data-anchor-id="tipos-de-datos-estructurados"><span class="header-section-number">1</span> Tipos de datos estructurados</h2>
+<hr>
+<section id="modelado-de-datos" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="modelado-de-datos"><span class="header-section-number">1.1</span> Modelado de datos</h3>
+<ul>
+<li>En muchas disciplinas (física, matemáticas, biología, economía, etc.) se utilizan <strong>modelos</strong> para <strong>representar</strong> la realidad.
+<ul>
+<li><em>Asumamos una vaca esférica isodensa</em></li>
+</ul></li>
+<li>Un <strong>modelo</strong> es una <strong>abstracción</strong> de la realidad que <strong>simplifica</strong> los aspectos más complejos y <strong>preserva</strong> los elementos <strong>necesarios para el problema</strong>.
+<ul>
+<li>Si modelo un coche para cinemática, me interesará su masa o su velocidad, pero no su color.</li>
+</ul></li>
+<li>Decidir qué información <strong>es relevante</strong> y <strong>cómo representarla</strong> es una de las habilidades que distinguen a un buen programador.</li>
+</ul>
+<hr>
+</section>
+<section id="necesidad-de-tipos-estructurados" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="necesidad-de-tipos-estructurados"><span class="header-section-number">1.2</span> Necesidad de tipos estructurados</h3>
+<ul>
+<li>Hasta ahora, sólo hemos <strong>modelado</strong> con tipos de datos que <strong>representaban un único valor</strong>.
+<ul>
+<li>Edad: <code>int</code></li>
+<li>Nombre: <code>str</code></li>
+<li>Altura: <code>float</code></li>
+<li>Casado: <code>bool</code></li>
+</ul></li>
+<li>Sin embargo, a menudo <strong>la naturaleza del problema</strong> que queremos resolver <strong>requiere</strong> que trabajemos con <strong>datos más complejos</strong>.</li>
+</ul>
+<hr>
+<section id="ejemplo-modelado-de-las-aulas-de-una-facultad" class="level4" data-number="1.2.1">
+<h4 data-number="1.2.1" class="anchored" data-anchor-id="ejemplo-modelado-de-las-aulas-de-una-facultad"><span class="header-section-number">1.2.1</span> Ejemplo: Modelado de las aulas de una facultad</h4>
+<ul>
+<li>Supongamos que queremos <strong>modelar</strong> las <strong>aulas</strong> de una <strong>facultad/escuela</strong>.</li>
+<li>Cada aula tiene una serie de <strong>características</strong> que la definen:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">id</span> <span class="op">=</span> <span class="st">"A23"</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>planta <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>superficie <span class="op">=</span> <span class="fl">80.5</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>capacidad <span class="op">=</span> <span class="dv">60</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>proyector <span class="op">=</span> <span class="va">True</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Utilizamos <strong>cinco variables independientes</strong> para <strong>representar</strong> una <strong>sola entidad</strong>.</li>
+</ul>
+<hr>
+<ul>
+<li>Si queremos representar dos aulas, necesitamos <strong>diez variables</strong>.</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>id_a23 <span class="op">=</span> <span class="st">"A23"</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>planta_a23 <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>superficie_a23 <span class="op">=</span> <span class="fl">80.5</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>capacidad_a23 <span class="op">=</span> <span class="dv">60</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>proyector_a23 <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a>id_a12 <span class="op">=</span> <span class="st">"A12"</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a>planta_a12 <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>superficie_a12 <span class="op">=</span> <span class="fl">50.5</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a>capacidad_a12 <span class="op">=</span> <span class="dv">40</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a>proyector_a12 <span class="op">=</span> <span class="va">False</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+<ul>
+<li>Si queremos representar <strong>todas las aulas</strong> de la facultad, el problema se vuelve <strong>inabarcarble</strong>.</li>
+</ul>
+<p><em><em>Necesitamos una forma de agrupar variables que representen una misma entidad.</em></em></p>
+<hr>
+</section>
+</section>
+</section>
+<section id="clases-y-objetos" class="level2 center" data-number="2">
+<h2 class="center anchored" data-number="2" data-anchor-id="clases-y-objetos"><span class="header-section-number">2</span> Clases y Objetos</h2>
+<hr>
+<section id="clases-y-objetos-1" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="clases-y-objetos-1"><span class="header-section-number">2.1</span> Clases y Objetos</h3>
+<ul>
+<li>Los conceptos de <strong>clase</strong> y <strong>objeto</strong> provienen de un paradigma de programación llamado <strong>programación orientada a objetos</strong>.</li>
+<li>Sus <em>definiciones formales</em> incluyen conceptos avanzados que quedan fuera del alcance de este curso.</li>
+<li>La definiciones que vamos a manejar son más <strong>prácticas</strong> que <strong>conceptualmente correctas</strong>.</li>
+</ul>
+<hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="line-block">Alumno := {nombre,<br>
+&nbsp;&nbsp;edad, nota}</div>
+<ul>
+<li>Una <strong>clase</strong> es una <strong>plantilla</strong> que define la <strong>estructura</strong> de un <strong>tipo de dato</strong>.
+<ul>
+<li>Define los <strong>atributos</strong> que tiene el tipo de dato.</li>
+<li>No tiene valores concretos, sólo la estructura.</li>
+</ul></li>
+<li><strong>Definir</strong> una clase es <strong>crear un nuevo tipo de dato</strong></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="line-block">alumno1 = {“Juan”, 20, 7.5}<br>
+alumno2 = {“María”, 21, 8.0}</div>
+<ul>
+<li>Un <strong>objeto</strong> es una <strong>instancia</strong> de una <strong>clase</strong>.
+<ul>
+<li>Podemos definir <strong>varios objetos</strong> de la <strong>misma clase</strong>.</li>
+<li>Cada objeto tiene <strong>sus propios valores</strong> para los atributos.</li>
+</ul></li>
+<li><strong>Crear un objeto</strong> es <strong>crear una variable</strong> del tipo de dato definido por la clase.</li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="clases-en-python" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="clases-en-python"><span class="header-section-number">2.2</span> Clases en Python</h3>
+<ul>
+<li>En Python, una <strong>clase</strong> se define con la palabra clave <code>class</code> seguida por el <strong>nombre de la clase</strong> y dos puntos <code>:</code>.
+<ul>
+<li>Dentro (un nivel de indentación) de la clase se definen los <strong>atributos</strong> de la clase como: <code>nombre_atributo: tipo</code>.</li>
+</ul></li>
+<li>Definiremos nuestras clases <strong>al principio</strong> de nuestros programas.
+<ul>
+<li><strong>Antes</strong> de <strong>definir funciones</strong> que las utilicen.</li>
+<li><strong>Después</strong> de <strong>importar módulos</strong> que necesiten.</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">class</span> NombreClase:</span>
+<span id="cb3-2"><a href="#cb3-2"></a>    atributo1: tipo1</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    atributo2: tipo2</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>En Python los nombres de las clases suelen seguir la convención <code>PascalCase</code>:</p>
+<ul>
+<li>La primera letra de cada palabra en mayúsculas.</li>
+</ul>
+<p>Esto ayuda a distinguir las clases de las funciones y variables, que suelen seguir la convención <code>snake_case</code>.</p>
+<ul>
+<li>Las palabras en minúsculas separadas por guiones bajos.</li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<section id="ejemplos-definiciones-de-clases" class="level4" data-number="2.2.1">
+<h4 data-number="2.2.1" class="anchored" data-anchor-id="ejemplos-definiciones-de-clases"><span class="header-section-number">2.2.1</span> Ejemplos: Definiciones de clases</h4>
+<p><strong>Números complejos</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">class</span> NumeroComplejo:</span>
+<span id="cb4-2"><a href="#cb4-2"></a>    real: <span class="bu">float</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>    imag: <span class="bu">float</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Fecha</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">class</span> Fecha:</span>
+<span id="cb5-2"><a href="#cb5-2"></a>    dia: <span class="bu">int</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>    mes: <span class="bu">int</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a>    anno: <span class="bu">int</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Coordenadas</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">class</span> Coordenada:</span>
+<span id="cb6-2"><a href="#cb6-2"></a>    lat: <span class="bu">float</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>    lon: <span class="bu">float</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="objetos-en-python" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="objetos-en-python"><span class="header-section-number">2.3</span> Objetos en Python</h3>
+<ul>
+<li>En Python, un <strong>objeto</strong> se crea invocando a la función llamada <em>“igual que la clase”</em>.
+<ul>
+<li>La función invocada crea un <strong>nuevo objeto</strong> y lo devuelve.</li>
+</ul></li>
+<li>Este objeto creado deberemos <strong>asignarlo a una variable</strong> para poder <strong>trabajar con él</strong>.</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">class</span> Fecha:</span>
+<span id="cb7-2"><a href="#cb7-2"></a>    dia: <span class="bu">int</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>    mes: <span class="bu">int</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>    anno: <span class="bu">int</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a></span>
+<span id="cb7-6"><a href="#cb7-6"></a>f <span class="op">=</span> Fecha() </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>La variable <code>f</code> es un <strong>objeto</strong> de la <strong>clase</strong> <code>Fecha</code>.</li>
+<li>El objeto <code>f</code> tiene <strong>tres atributos</strong>:
+<ul>
+<li><code>dia</code>, <code>mes</code> y <code>anno</code>.</li>
+</ul></li>
+</ul>
+<hr>
+<section id="objetos-atributos" class="level4" data-number="2.3.1">
+<h4 data-number="2.3.1" class="anchored" data-anchor-id="objetos-atributos"><span class="header-section-number">2.3.1</span> Objetos: Atributos</h4>
+<ul>
+<li>Los atributos de un objeto se acceden con la <strong>notación punto</strong> (<code>.</code>).
+<ul>
+<li><code>nombre_objeto.nombre_atributo</code></li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>f1 <span class="op">=</span> Fecha()</span>
+<span id="cb8-2"><a href="#cb8-2"></a>f2 <span class="op">=</span> Fecha()</span>
+<span id="cb8-3"><a href="#cb8-3"></a></span>
+<span id="cb8-4"><a href="#cb8-4"></a>f1.dia <span class="co"># El atributo dia del objeto f1</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a>f2.mes <span class="co"># El atributo mes del objeto f2</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Podemos usar esta notación para hacer <strong>asignaciones</strong> o para <strong>leer</strong> el valor de un atributo.</li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>f.dia <span class="op">=</span> <span class="dv">1</span>     <span class="co"># Asignación</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="bu">print</span>(f.dia)  <span class="co"># Lectura</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>f.dia <span class="op">+=</span> <span class="dv">1</span>    <span class="co"># Lectura y asignación</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>A diferencia de las variables, que sólo existen en el ámbito en el que se definen, los nombres de los atributos son los mismos para todos los objetos de una clase a lo largo de un programa.</p>
+<ul>
+<li>Por ello es imprescindible que los nombres de los atributos sean <strong>claros</strong> y <strong>descriptivos</strong>.</li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="objetos-inicialización" class="level4" data-number="2.3.2">
+<h4 data-number="2.3.2" class="anchored" data-anchor-id="objetos-inicialización"><span class="header-section-number">2.3.2</span> Objetos: Inicialización</h4>
+<ul>
+<li>Cuando se crea un <strong>objeto nuevo</strong>, sus atributos <strong>no tienen valores asignados</strong>.</li>
+<li>Por ello, <strong>debemos asignar valores</strong> a los atributos del objeto para <strong>inicializarlo</strong>.</li>
+</ul>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>f <span class="op">=</span> Fecha()</span>
+<span id="cb10-2"><a href="#cb10-2"></a>f.dia <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>f.mes <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>f.anno <span class="op">=</span> <span class="dv">2020</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+<ul>
+<li>Podemos <strong>facilitar la inicialización</strong> de un objeto definiendo una función:</li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">def</span> nueva_fecha(dia, mes, anno):</span>
+<span id="cb11-2"><a href="#cb11-2"></a>    f <span class="op">=</span> Fecha()</span>
+<span id="cb11-3"><a href="#cb11-3"></a>    f.dia <span class="op">=</span> dia</span>
+<span id="cb11-4"><a href="#cb11-4"></a>    f.mes <span class="op">=</span> mes</span>
+<span id="cb11-5"><a href="#cb11-5"></a>    f.anno <span class="op">=</span> anno</span>
+<span id="cb11-6"><a href="#cb11-6"></a>    <span class="cf">return</span> f</span>
+<span id="cb11-7"><a href="#cb11-7"></a></span>
+<span id="cb11-8"><a href="#cb11-8"></a>f <span class="op">=</span> nueva_fecha(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2020</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Estas funciones son tradicionalmente llamadas <strong>constructores</strong>.
+<ul>
+<li>Reciben los valores iniciales de los atributos y devuelven un objeto inicializado.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="objetos-representación" class="level4" data-number="2.3.3">
+<h4 data-number="2.3.3" class="anchored" data-anchor-id="objetos-representación"><span class="header-section-number">2.3.3</span> Objetos: Representación</h4>
+<ul>
+<li>Las <strong>clases</strong> en Python, por defecto, no pueden ser representadas como cadenas de texto (por ejemplo, por <code>print</code>).</li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="bu">print</span>(f)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block"><code>&lt;__main__.Fecha object at 0x7f7e3c7b3b50&gt;</code></div>
+<ul>
+<li>Si quieres ver el <strong>contenido</strong> de un objeto, puedes acceder a sus atributos.</li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="bu">print</span>(<span class="ss">f"Fecha: </span><span class="sc">{</span>f<span class="sc">.</span>dia<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>f<span class="sc">.</span>mes<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>f<span class="sc">.</span>anno<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block"><code>Fecha: 1/2/2020</code></div>
+<hr>
+<ul>
+<li>Podemos <strong>personalizar y facilitar la representación de un objeto</strong> definiendo una función:</li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">def</span> str_fecha(f):</span>
+<span id="cb14-2"><a href="#cb14-2"></a>    <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span>f<span class="sc">.</span>dia<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>f<span class="sc">.</span>mes<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>f<span class="sc">.</span>anno<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="bu">print</span>(str_fecha(f))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="ejemplo-números-complejos" class="level4" data-number="2.3.4">
+<h4 data-number="2.3.4" class="anchored" data-anchor-id="ejemplo-números-complejos"><span class="header-section-number">2.3.4</span> Ejemplo: Números complejos</h4>
+<ul>
+<li>Escribe un programa Python que defina una <strong>clase</strong> llamada <code>NumeroComplejo</code> que represente un número complejo.</li>
+<li>La clase debe tener dos atributos:
+<ul>
+<li><code>real</code>: parte real del número complejo.</li>
+<li><code>imag</code>: parte imaginaria del número complejo.</li>
+</ul></li>
+<li>Crea una función <code>suma_complejos</code> que reciba dos números complejos y devuelva su suma.</li>
+</ul>
+<hr>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">class</span> NumeroComplejo:</span>
+<span id="cb15-2"><a href="#cb15-2"></a>    real: <span class="bu">float</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a>    imag: <span class="bu">float</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a></span>
+<span id="cb15-5"><a href="#cb15-5"></a><span class="kw">def</span> suma_complejos(c1, c2):</span>
+<span id="cb15-6"><a href="#cb15-6"></a>    c <span class="op">=</span> NumeroComplejo()</span>
+<span id="cb15-7"><a href="#cb15-7"></a>    c.real <span class="op">=</span> c1.real <span class="op">+</span> c2.real</span>
+<span id="cb15-8"><a href="#cb15-8"></a>    c.imag <span class="op">=</span> c1.imag <span class="op">+</span> c2.imag</span>
+<span id="cb15-9"><a href="#cb15-9"></a>    <span class="cf">return</span> c</span>
+<span id="cb15-10"><a href="#cb15-10"></a></span>
+<span id="cb15-11"><a href="#cb15-11"></a>c1 <span class="op">=</span> NumeroComplejo()</span>
+<span id="cb15-12"><a href="#cb15-12"></a>c1.real <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb15-13"><a href="#cb15-13"></a>c1.imag <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb15-14"><a href="#cb15-14"></a></span>
+<span id="cb15-15"><a href="#cb15-15"></a>c2 <span class="op">=</span> NumeroComplejo()</span>
+<span id="cb15-16"><a href="#cb15-16"></a>c2.real <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb15-17"><a href="#cb15-17"></a>c2.imag <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb15-18"><a href="#cb15-18"></a></span>
+<span id="cb15-19"><a href="#cb15-19"></a>c <span class="op">=</span> suma_complejos(c1, c2)</span>
+<span id="cb15-20"><a href="#cb15-20"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>c<span class="sc">.</span>real<span class="sc">}</span><span class="ss">+</span><span class="sc">{</span>c<span class="sc">.</span>imag<span class="sc">}</span><span class="ss">i"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+</section>
+<section id="dataclasses" class="level2 center" data-number="3">
+<h2 class="center anchored" data-number="3" data-anchor-id="dataclasses"><span class="header-section-number">3</span> Dataclasses</h2>
+<hr>
+<ul>
+<li>Seguramente habrás notado que <strong>crear</strong> una <strong>clase</strong> con <strong>atributos</strong> y <strong>métodos</strong> en Python es <strong>repetitivo</strong> y <strong>tedioso</strong>.</li>
+</ul>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">class</span> Aula:</span>
+<span id="cb16-2"><a href="#cb16-2"></a>    <span class="bu">id</span>: <span class="bu">str</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>    planta: <span class="bu">int</span></span>
+<span id="cb16-4"><a href="#cb16-4"></a>    superficie: <span class="bu">float</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a>    capacidad: <span class="bu">int</span></span>
+<span id="cb16-6"><a href="#cb16-6"></a>    proyector: <span class="bu">bool</span></span>
+<span id="cb16-7"><a href="#cb16-7"></a></span>
+<span id="cb16-8"><a href="#cb16-8"></a>a23 <span class="op">=</span> Aula()</span>
+<span id="cb16-9"><a href="#cb16-9"></a>a23.<span class="bu">id</span> <span class="op">=</span> <span class="st">"A23"</span></span>
+<span id="cb16-10"><a href="#cb16-10"></a>a23.planta <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb16-11"><a href="#cb16-11"></a>a23.superficie <span class="op">=</span> <span class="fl">80.5</span></span>
+<span id="cb16-12"><a href="#cb16-12"></a>a23.capacidad <span class="op">=</span> <span class="dv">60</span></span>
+<span id="cb16-13"><a href="#cb16-13"></a>a23.proyector <span class="op">=</span> <span class="va">True</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+<section id="dataclasses-clases-puras-de-datos" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="dataclasses-clases-puras-de-datos"><span class="header-section-number">3.1</span> Dataclasses: Clases puras de datos</h3>
+<ul>
+<li>Python proporciona un módulo llamado <code>dataclasses</code> que nos permite crear clases de datos de forma sencilla.</li>
+<li>Crear una clase como una <strong>dataclass</strong> genera automáticamente:
+<ul>
+<li><strong>constructores</strong></li>
+<li><strong>representaciones</strong></li>
+<li>y más…</li>
+</ul></li>
+</ul>
+<hr>
+<ul>
+<li>Para marcar una <strong>clase</strong> como <strong>dataclass</strong>, simplemente hay que añadir el _decorador <code>@dataclasses.dataclass</code> antes de la definición de la clase.</li>
+</ul>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="im">import</span> dataclasses</span>
+<span id="cb17-2"><a href="#cb17-2"></a></span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="at">@dataclasses.dataclass</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a><span class="kw">class</span> Punto:</span>
+<span id="cb17-5"><a href="#cb17-5"></a>    x: <span class="bu">int</span></span>
+<span id="cb17-6"><a href="#cb17-6"></a>    y: <span class="bu">int</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>A partir de ahora, podemos <strong>crear</strong> y <strong>representar</strong> objetos de la clase <code>Punto</code> de la siguiente manera:</li>
+</ul>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>p <span class="op">=</span> Punto(<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="bu">print</span>(p)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+<section id="ejemplo-fecha" class="level4" data-number="3.1.1">
+<h4 data-number="3.1.1" class="anchored" data-anchor-id="ejemplo-fecha"><span class="header-section-number">3.1.1</span> Ejemplo: Fecha</h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Sin dataclass</strong></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># Definición de la clase</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="kw">class</span> Fecha:</span>
+<span id="cb19-3"><a href="#cb19-3"></a>    dia: <span class="bu">int</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a>    mes: <span class="bu">int</span></span>
+<span id="cb19-5"><a href="#cb19-5"></a>    anno: <span class="bu">int</span></span>
+<span id="cb19-6"><a href="#cb19-6"></a></span>
+<span id="cb19-7"><a href="#cb19-7"></a><span class="co"># Creación de un objeto</span></span>
+<span id="cb19-8"><a href="#cb19-8"></a>f <span class="op">=</span> Fecha()</span>
+<span id="cb19-9"><a href="#cb19-9"></a>f.dia <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb19-10"><a href="#cb19-10"></a>f.mes <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb19-11"><a href="#cb19-11"></a>f.anno <span class="op">=</span> <span class="dv">2020</span></span>
+<span id="cb19-12"><a href="#cb19-12"></a></span>
+<span id="cb19-13"><a href="#cb19-13"></a><span class="co"># Imprimir atributos</span></span>
+<span id="cb19-14"><a href="#cb19-14"></a><span class="bu">print</span>(f.dia, f.mes, f.anno)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">1 2 2020</div>
+</div><div class="column" style="width:50%;">
+<p><strong>Con dataclass</strong></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="im">import</span> dataclasses</span>
+<span id="cb20-2"><a href="#cb20-2"></a></span>
+<span id="cb20-3"><a href="#cb20-3"></a><span class="co"># Definición de la clase</span></span>
+<span id="cb20-4"><a href="#cb20-4"></a><span class="at">@dataclasses.dataclass</span></span>
+<span id="cb20-5"><a href="#cb20-5"></a><span class="kw">class</span> Fecha:</span>
+<span id="cb20-6"><a href="#cb20-6"></a>    dia: <span class="bu">int</span></span>
+<span id="cb20-7"><a href="#cb20-7"></a>    mes: <span class="bu">int</span></span>
+<span id="cb20-8"><a href="#cb20-8"></a>    anno: <span class="bu">int</span></span>
+<span id="cb20-9"><a href="#cb20-9"></a></span>
+<span id="cb20-10"><a href="#cb20-10"></a><span class="co"># Creación de un objeto</span></span>
+<span id="cb20-11"><a href="#cb20-11"></a>f <span class="op">=</span> Fecha(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2022</span>)</span>
+<span id="cb20-12"><a href="#cb20-12"></a></span>
+<span id="cb20-13"><a href="#cb20-13"></a><span class="co"># Imprimir objeto</span></span>
+<span id="cb20-14"><a href="#cb20-14"></a><span class="bu">print</span>(f)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">Fecha(dia=1, mes=1, anno=2022)</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="ejemplo-aulas" class="level4" data-number="3.1.2">
+<h4 data-number="3.1.2" class="anchored" data-anchor-id="ejemplo-aulas"><span class="header-section-number">3.1.2</span> Ejemplo: Aulas</h4>
+<ul>
+<li>Escribe un programa Python que defina una clase llamada <code>Aula</code> que represente una aula.</li>
+<li>Define dos variables (objetos) de tipo <code>Aula</code> llamadas <code>a23</code> y <code>a24</code>.</li>
+<li>Imprime sus valores.</li>
+</ul>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="im">import</span> dataclasses</span>
+<span id="cb21-2"><a href="#cb21-2"></a></span>
+<span id="cb21-3"><a href="#cb21-3"></a><span class="at">@dataclasses.dataclass</span></span>
+<span id="cb21-4"><a href="#cb21-4"></a><span class="kw">class</span> Aula:</span>
+<span id="cb21-5"><a href="#cb21-5"></a>    <span class="bu">id</span>: <span class="bu">str</span></span>
+<span id="cb21-6"><a href="#cb21-6"></a>    planta: <span class="bu">int</span></span>
+<span id="cb21-7"><a href="#cb21-7"></a>    superficie: <span class="bu">float</span></span>
+<span id="cb21-8"><a href="#cb21-8"></a>    capacidad: <span class="bu">int</span></span>
+<span id="cb21-9"><a href="#cb21-9"></a>    proyector: <span class="bu">bool</span></span>
+<span id="cb21-10"><a href="#cb21-10"></a></span>
+<span id="cb21-11"><a href="#cb21-11"></a>a23 <span class="op">=</span> Aula(<span class="st">"A23"</span>, <span class="dv">2</span>, <span class="fl">80.5</span>, <span class="dv">60</span>, <span class="va">True</span>)</span>
+<span id="cb21-12"><a href="#cb21-12"></a>a24 <span class="op">=</span> Aula(<span class="st">"A24"</span>, <span class="dv">2</span>, <span class="fl">70.5</span>, <span class="dv">50</span>, <span class="va">False</span>)</span>
+<span id="cb21-13"><a href="#cb21-13"></a><span class="bu">print</span>(a23)</span>
+<span id="cb21-14"><a href="#cb21-14"></a><span class="bu">print</span>(a24)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+<ul>
+<li>Añade la función <code>leer_aula</code> que pregunte al usuario los datos de un aula y devuelva un objeto de tipo <code>Aula</code>.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Sin dataclass</strong></p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a><span class="kw">def</span> leer_aula():</span>
+<span id="cb22-2"><a href="#cb22-2"></a>    nueva_aula <span class="op">=</span> Aula()</span>
+<span id="cb22-3"><a href="#cb22-3"></a>    <span class="bu">print</span>(<span class="st">"ID: "</span>)</span>
+<span id="cb22-4"><a href="#cb22-4"></a>    nueva_aula.<span class="bu">id</span> <span class="op">=</span> <span class="bu">input</span>()</span>
+<span id="cb22-5"><a href="#cb22-5"></a>    <span class="bu">print</span>(<span class="st">"Planta: "</span>)</span>
+<span id="cb22-6"><a href="#cb22-6"></a>    nueva_aula.planta <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb22-7"><a href="#cb22-7"></a>    <span class="bu">print</span>(<span class="st">"Superficie: "</span>)</span>
+<span id="cb22-8"><a href="#cb22-8"></a>    nueva_aula.superficie <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
+<span id="cb22-9"><a href="#cb22-9"></a>    <span class="bu">print</span>(<span class="st">"Capacidad: "</span>)</span>
+<span id="cb22-10"><a href="#cb22-10"></a>    nueva_aula.capacidad <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb22-11"><a href="#cb22-11"></a>    <span class="bu">print</span>(<span class="st">"Proyector (s/n): "</span>)</span>
+<span id="cb22-12"><a href="#cb22-12"></a>    nueva_aula.proyector <span class="op">=</span> <span class="bu">input</span>() <span class="op">==</span> <span class="st">"s"</span></span>
+<span id="cb22-13"><a href="#cb22-13"></a>    <span class="cf">return</span> nueva_aula</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<p><strong>Con dataclass</strong></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a><span class="kw">def</span> leer_aula():</span>
+<span id="cb23-2"><a href="#cb23-2"></a>    <span class="bu">print</span>(<span class="st">"ID: "</span>)</span>
+<span id="cb23-3"><a href="#cb23-3"></a>    <span class="bu">id</span> <span class="op">=</span> <span class="bu">input</span>()</span>
+<span id="cb23-4"><a href="#cb23-4"></a>    <span class="bu">print</span>(<span class="st">"Planta: "</span>)</span>
+<span id="cb23-5"><a href="#cb23-5"></a>    planta <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb23-6"><a href="#cb23-6"></a>    <span class="bu">print</span>(<span class="st">"Superficie: "</span>)</span>
+<span id="cb23-7"><a href="#cb23-7"></a>    superficie <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
+<span id="cb23-8"><a href="#cb23-8"></a>    <span class="bu">print</span>(<span class="st">"Capacidad: "</span>)</span>
+<span id="cb23-9"><a href="#cb23-9"></a>    capacidad <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb23-10"><a href="#cb23-10"></a>    <span class="bu">print</span>(<span class="st">"Proyector (s/n): "</span>)</span>
+<span id="cb23-11"><a href="#cb23-11"></a>    proyector <span class="op">=</span> <span class="bu">input</span>() <span class="op">==</span> <span class="st">"s"</span></span>
+<span id="cb23-12"><a href="#cb23-12"></a>    <span class="cf">return</span> Aula(<span class="bu">id</span>, planta, superficie,</span>
+<span id="cb23-13"><a href="#cb23-13"></a>                capacidad, proyector)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<hr>
+<ul>
+<li>Añade la función <code>aula_mas_grande</code> que reciba dos aulas y devuelva la que tenga mayor capacidad.</li>
+</ul>
+<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a><span class="kw">def</span> aula_mas_grande(a1, a2):</span>
+<span id="cb24-2"><a href="#cb24-2"></a>    <span class="cf">if</span> a1.capacidad <span class="op">&gt;</span> a2.capacidad:</span>
+<span id="cb24-3"><a href="#cb24-3"></a>        <span class="cf">return</span> a1</span>
+<span id="cb24-4"><a href="#cb24-4"></a>    <span class="cf">else</span>:</span>
+<span id="cb24-5"><a href="#cb24-5"></a>        <span class="cf">return</span> a2</span>
+<span id="cb24-6"><a href="#cb24-6"></a></span>
+<span id="cb24-7"><a href="#cb24-7"></a>a <span class="op">=</span> aula_mas_grande(a23, a24)</span>
+<span id="cb24-8"><a href="#cb24-8"></a><span class="bu">print</span>(a)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // default icon
+          link.classList.add("external");
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
