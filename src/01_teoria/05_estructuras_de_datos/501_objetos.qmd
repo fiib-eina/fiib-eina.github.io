@@ -64,7 +64,7 @@ proyector_a12 = False
 
 ---
 
-- Si queremos representar **todas las aulas** de la facultad, el problema se vuelve **inabarcarble**.
+- Si queremos representar **todas las aulas** de la facultad, el problema se vuelve **inabarcable**.
 
 _*Necesitamos una forma de agrupar variables que representen una misma entidad.*_
 
@@ -348,7 +348,7 @@ a23.proyector = True
 
 ---
 
-- Para marcar una **clase** como **dataclass**, simplemente hay que añadir el _decorador `@dataclasses.dataclass` antes de la definición de la clase.
+- Para marcar una **clase** como **dataclass**, simplemente hay que añadir el _decorador_ `@dataclasses.dataclass` antes de la definición de la clase.
 
 ```python
 import dataclasses
