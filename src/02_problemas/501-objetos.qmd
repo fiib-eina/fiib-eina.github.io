@@ -2,9 +2,249 @@
 title: Problemas 8
 subtitle: Objetos
 format: html
-draft: true
 ---
 
+## Definición de clases
+
+### Alumno
+
+Define una clase Python que represente los datos de un alumno con su nombre, sus dos apellidos, su NIP y su edad.
+
+<details>
+<summary>Solución</summary>
+
+```python
+class Alumno:
+    nombre: str
+    apellido1: str
+    apellido2: str
+    nip: int
+    edad: int
+```
+
+</details>
+
+### Punto 3D
+
+Define una clase Python que represente un punto en el espacio tridimensional con sus coordenadas x, y, z.
+
+<details>
+<summary>Solución</summary>
+
+```python
+class Punto:
+    x: float
+    y: float
+    z: float
+```
+
+</details>
+
+### Triángulo 3D
+
+Define una clase Python que represente un triángulo en el espacio tridimensional con sus tres vértices.
+
+<details>
+<summary>Solución</summary>
+
+```python
+class Triangulo:
+    v1: Punto
+    v2: Punto
+    v3: Punto
+```
+
+</details>
+
+## Reloj
+
+### Clase hora
+
+Define una clase Python que represente una hora con sus atributos: horas, minutos y segundos.
+_Puedes usar `dataclasses` para simplificar la definición de la clase._
+
+<details>
+<summary>Solución</summary>
+
+```python
+import dataclasses
+
+@dataclasses.dataclass
+class Hora:
+    horas: int
+    minutos: int
+    segundos: int
+```
+
+</details>
+
+### Siguiente segundo
+
+Define una función `siguiente_segundo()` Python que reciba un objeto de la clase `Hora` y devuelva **uno nuevo** con un segundo más.
+
+```python
+print(siguiente_segundo(Hora(12, 30, 59)))
+```
+
+| Hora(12, 31, 0)
+
+```print
+print(siguiente_segundo(Hora(12, 59, 59)))
+```
+| Hora(13, 0, 0)
+
+<details>
+<summary>Pista 1</summary>
+
+- Como el objetivo es devolver un nuevo objeto, crea una copia del mismo al principio de la función.
+- Piensa que el mecanismo es similar a las "las sumas con llevadas".
+
+</details>
+
+<details>
+<summary>Pista 2</summary>
+De forma similar a las sumas con llevadas:
+
+- Añade 1 al atributo `segundos`.
+- Si uno de los "dígitos" llega a su límite, vuelve a 0 y añade 1 al siguiente.
+
+</details>
+
+<details>
+<summary>Solución</summary>
+
+```python
+def siguiente_segundo(hora):
+    nueva_hora = Hora(hora.horas, hora.minutos, hora.segundos + 1)
+
+    if nueva_hora.segundos == 60:
+        nueva_hora.segundos = 0
+        nueva_hora.minutos += 1
+
+    if nueva_hora.minutos == 60:
+        nueva_hora.minutos = 0
+        nueva_hora.horas += 1
+
+    if nueva_hora.horas == 24:
+        nueva_hora.horas = 0
+
+    return nueva_hora
+
+```
+
+</details>
+
+### De segundos a horas
+
+Define una función `segundos_a_horas()` Python que reciba un número de segundos y devuelva un objeto de la clase `Hora` con la conversión.
+
+```python
+print(segundos_a_horas(70))
+```
+
+| Hora(0, 1, 10)
+
+```python
+print(segundos_a_horas(3600))
+```
+
+| Hora(1, 0, 0)
+
+<details>
+<summary>Solución</summary>
+
+```python
+def segundos_a_horas(segundos):
+    horas = segundos // 3600
+    minutos = (segundos % 3600) // 60
+    segundos = (segundos % 3600) % 60
+    return Hora(horas, minutos, segundos)
+```
+
+</details>
+
+### De horas a segundos
+
+Define una función `horas_a_segundos()` Python que reciba un objeto de la clase `Hora` y devuelva el número de segundos correspondiente.
+
+```python
+print(horas_a_segundos(Hora(0, 1, 10)))
+```
+
+| 70
+
+```python
+print(horas_a_segundos(Hora(1, 0, 0)))
+```
+
+| 3600
+
+<details>
+<summary>Solución</summary>
+
+```python
+def horas_a_segundos(hora):
+    return hora.horas * 3600 + hora.minutos * 60 + hora.segundos
+```
+
+</details>
+
+### Restar horas
+
+Define una función `restar_horas()` Python que reciba dos objetos de la clase `Hora` y devuelva un nuevo objeto `Hora` con la resta del segundo al primero.
+
+```python
+print(restar_horas(Hora(12, 30, 0), Hora(0, 30, 0)))
+```
+
+| Hora(12, 0, 0)
+
+```python
+print(restar_horas(Hora(12, 30, 0), Hora(0, 40, 0)))
+```
+
+| Hora(11, 50, 0)
+
+<details>
+<summary>Solución</summary>
+
+```python
+def restar_horas(h1, h2):
+    segundos_h1 = h1.horas * 3600 + h1.minutos * 60 + h1.segundos
+    segundos_h2 = h2.horas * 3600 + h2.minutos * 60 + h2.segundos
+    segundos = segundos_h1 - segundos_h2
+    return segundos_a_horas(segundos)
+```
+
+</details>
+
+<details>
+<summary>Solución Alternativa</summary>
+
+```python
+def restar_horas(h1, h2):
+    segundos = horas_a_segundos(h1) - horas_a_segundos(h2)
+    return segundos_a_horas(segundos)
+```
+
+</details>
+
+### Siguiente segundo (II)
+
+Con lo desarrollado hasta ahora, ¿cómo podrías mejorar la función `siguiente_segundo()` para que reutilice al máximo tu código?
+
+<details>
+<summary>Solución</summary>
+
+```python
+def siguiente_segundo(hora):
+    segundos = horas_a_segundos(hora) + 1
+    return segundos_a_horas(segundos)
+```
+
+</details>
+
+<!-- TODO: Mover a otra sección
 ## Calculadora de números complejos
 
 - Escribe un programa Python que implemente una **calculadora de números complejos** con las siguientes operaciones: suma y resta.
@@ -103,4 +343,5 @@ print(f"{resultado.real} + {resultado.imag}i")
 ```
 
 </details>
+-->
 
