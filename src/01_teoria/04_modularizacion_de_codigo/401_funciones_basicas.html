@@ -168,7 +168,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="atacando-problemas-complejos" class="level3" data-number="1.1">
 <h3 data-number="1.1" class="anchored" data-anchor-id="atacando-problemas-complejos"><span class="header-section-number">1.1</span> Atacando problemas complejos</h3>
 <ul>
-<li>Los ejercicios abordados hasta ahora han sido <strong>específicamente diseñados</strong> para ser <strong>senillos</strong> y <strong>fáciles de entender</strong>.</li>
+<li>Los ejercicios abordados hasta ahora han sido <strong>específicamente diseñados</strong> para ser <strong>sencillos</strong> y <strong>fáciles de entender</strong>.</li>
 <li>En la práctica, los programas suelen ser (<em>mucho</em>) <strong>más complejos</strong>.</li>
 <li>Para abordar esta complejidad, debemos proveernos de <strong>métodos y estrategias</strong> que nos faciliten el trabajo.</li>
 <li>En proyectos grandes, es <strong>fundamental</strong>:
@@ -258,6 +258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 <section id="funciones-1" class="level3" data-number="2.1">
 <h3 data-number="2.1" class="anchored" data-anchor-id="funciones-1"><span class="header-section-number">2.1</span> Funciones</h3>
+<!-- TODO: Distinción parámetros y argumentos -->
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -303,7 +304,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 <li>Al igual que con las variables:
 <ul>
-<li>Las funciónes deben ser <strong>definidas</strong> antes de ser <strong>invocadas</strong>.</li>
+<li>Las funciones deben ser <strong>definidas</strong> antes de ser <strong>invocadas</strong>.</li>
 </ul></li>
 <li>Por ello el orden de un programa será: <strong>definir funciones</strong> y luego <strong>programa principal</strong>.</li>
 </ul>
@@ -332,12 +333,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h4 data-number="2.2.2" class="anchored" data-anchor-id="ejemplo-función-castigo"><span class="header-section-number">2.2.2</span> Ejemplo: Función “castigo”</h4>
 <div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> castigo():</span>
 <span id="cb5-2"><a href="#cb5-2"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">100</span>):</span>
-<span id="cb5-3"><a href="#cb5-3"></a>        <span class="bu">print</span>(<span class="st">"No llevaré el movil encima el día del examen."</span>)</span>
+<span id="cb5-3"><a href="#cb5-3"></a>        <span class="bu">print</span>(<span class="st">"No llevaré el móvil encima el día del examen."</span>)</span>
 <span id="cb5-4"><a href="#cb5-4"></a></span>
 <span id="cb5-5"><a href="#cb5-5"></a>castigo()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="line-block">No llevaré el movil encima el día del examen.<br>
-No llevaré el movil encima el día del examen.<br>
-No llevaré el movil encima el día del examen.<br>
+<div class="line-block">No llevaré el móvil encima el día del examen.<br>
+No llevaré el móvil encima el día del examen.<br>
+No llevaré el móvil encima el día del examen.<br>
 . . .</div>
 <hr>
 </section>
@@ -390,7 +391,7 @@ Global 3</div>
 <li>Si los módulos comparten de <strong>forma descontrolada</strong> todas las <strong>variables entre sí</strong>:
 <ul>
 <li>Corren el riesgo de <strong>interferir</strong> (propenso a errores).</li>
-<li>Se vuelve dificil <strong>entender</strong> y <strong>mantener</strong> el código.
+<li>Se vuelve difícil <strong>entender</strong> y <strong>mantener</strong> el código.
 <ul>
 <li><em>¿De dónde viene el valor de esta variable?</em></li>
 </ul></li>
@@ -444,7 +445,7 @@ Global 3</div>
 <span id="cb10-6"><a href="#cb10-6"></a>    variable <span class="op">=</span> <span class="dv">42</span> <span class="co"># Variable local</span></span>
 <span id="cb10-7"><a href="#cb10-7"></a>    <span class="bu">print</span>(variable) </span>
 <span id="cb10-8"><a href="#cb10-8"></a></span>
-<span id="cb10-9"><a href="#cb10-9"></a>main() <span class="co"># Esta es la UNICA instrucción global</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-9"><a href="#cb10-9"></a>main() <span class="co"># Esta es la ÚNICA instrucción global</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <hr>
 </section>
 <section id="argumentos" class="level3" data-number="2.5">
@@ -468,7 +469,7 @@ Global 3</div>
 <ul>
 <li>Se pasan los <strong>valores</strong> que se quieren asignar a los argumentos.
 <ol type="1">
-<li>Se <strong>evaluan las expresiones</strong></li>
+<li>Se <strong>evalúan las expresiones</strong></li>
 <li>Se invoca a la función</li>
 <li>Se asigna a cada argumento el valor correspondiente (por orden)</li>
 </ol></li>
@@ -527,7 +528,7 @@ Hola, María!</div>
 <section id="filosofía-de-diseño-modular" class="level3" data-number="2.6">
 <h3 data-number="2.6" class="anchored" data-anchor-id="filosofía-de-diseño-modular"><span class="header-section-number">2.6</span> Filosofía de diseño modular</h3>
 <ul>
-<li>Como se ha manifesado de varias formas:
+<li>Como se ha manifestado de varias formas:
 <ul>
 <li>La <strong>clave</strong> de la <strong>modularización</strong> es la <strong>encapsulación</strong>.</li>
 <li>Las funciones deben ser <strong>independientes</strong> y <strong>reutilizables</strong>.</li>
@@ -545,14 +546,14 @@ Hola, María!</div>
 <p>Desarrolla un programa que pida al usuario la temperatura en grados Celsius del motor de su coche y muestre por pantalla la temperatura en grados Fahrenheit.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><strong>Función acopladada</strong></p>
+<p><strong>Función acoplada</strong></p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">def</span> convertir_temperatura_motor(temperatura):</span>
 <span id="cb16-2"><a href="#cb16-2"></a>    convertida <span class="op">=</span> (temperatura <span class="op">*</span> <span class="dv">9</span><span class="op">/</span><span class="dv">5</span>) <span class="op">+</span> <span class="dv">32</span></span>
 <span id="cb16-3"><a href="#cb16-3"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>convertida<span class="sc">}</span><span class="ss">°F"</span>)</span>
 <span id="cb16-4"><a href="#cb16-4"></a></span>
 <span id="cb16-5"><a href="#cb16-5"></a><span class="bu">print</span>(<span class="st">"Introduce la temperatura del motor:"</span>)</span>
 <span id="cb16-6"><a href="#cb16-6"></a>temperatura <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
-<span id="cb16-7"><a href="#cb16-7"></a>celsius_a_fahrenheit(temperatura)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-7"><a href="#cb16-7"></a>convertir_temperatura_motor(temperatura)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <p><strong>Función independiente</strong></p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="kw">def</span> celsius_a_fahrenheit(celsius):</span>

@@ -11,7 +11,7 @@ def es_altura_valida(h):
 def obtener_altura_valida(checkpoint_num):
     altura = obtener_altura(checkpoint_num)
     while not es_altura_valida(altura):
-        print("Altura no válida!")
+        print("¡Altura no válida!")
         altura = obtener_altura(checkpoint_num)
     return altura
 

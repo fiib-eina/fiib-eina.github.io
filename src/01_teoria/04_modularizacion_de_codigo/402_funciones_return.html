@@ -116,10 +116,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">En esta página</h2>
    
   <ul>
-  <li><a href="#return-statement" id="toc-return-statement" class="nav-link active" data-scroll-target="#return-statement"><span class="header-section-number">1</span> Return Statement</a>
+  <li><a href="#instrucción-de-retorno" id="toc-instrucción-de-retorno" class="nav-link active" data-scroll-target="#instrucción-de-retorno"><span class="header-section-number">1</span> Instrucción de retorno</a>
   <ul class="collapse">
   <li><a href="#funciones-que-no-devuelven-valores" id="toc-funciones-que-no-devuelven-valores" class="nav-link" data-scroll-target="#funciones-que-no-devuelven-valores"><span class="header-section-number">1.1</span> Funciones que no devuelven valores</a></li>
-  <li><a href="#return-statement-1" id="toc-return-statement-1" class="nav-link" data-scroll-target="#return-statement-1"><span class="header-section-number">1.2</span> Return Statement</a></li>
+  <li><a href="#instrucción-de-retorno-1" id="toc-instrucción-de-retorno-1" class="nav-link" data-scroll-target="#instrucción-de-retorno-1"><span class="header-section-number">1.2</span> Instrucción de retorno</a></li>
   <li><a href="#modularización" id="toc-modularización" class="nav-link" data-scroll-target="#modularización"><span class="header-section-number">1.3</span> Modularización</a></li>
   <li><a href="#early-return" id="toc-early-return" class="nav-link" data-scroll-target="#early-return"><span class="header-section-number">1.4</span> Early return</a></li>
   <li><a href="#early-return-en-un-bucle" id="toc-early-return-en-un-bucle" class="nav-link" data-scroll-target="#early-return-en-un-bucle"><span class="header-section-number">1.5</span> Early return en un bucle</a></li>
@@ -155,8 +155,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="return-statement" class="level2 center" data-number="1">
-<h2 class="center anchored" data-number="1" data-anchor-id="return-statement"><span class="header-section-number">1</span> Return Statement</h2>
+<section id="instrucción-de-retorno" class="level2 center" data-number="1">
+<h2 class="center anchored" data-number="1" data-anchor-id="instrucción-de-retorno"><span class="header-section-number">1</span> Instrucción de retorno</h2>
 <hr>
 <section id="funciones-que-no-devuelven-valores" class="level3" data-number="1.1">
 <h3 data-number="1.1" class="anchored" data-anchor-id="funciones-que-no-devuelven-valores"><span class="header-section-number">1.1</span> Funciones que no devuelven valores</h3>
@@ -195,7 +195,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">def</span> mi_abs(x):</span>
 <span id="cb2-2"><a href="#cb2-2"></a>    <span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">0</span>:</span>
 <span id="cb2-3"><a href="#cb2-3"></a>        x <span class="op">=</span> <span class="op">-</span>x</span>
-<span id="cb2-4"><a href="#cb2-4"></a>    <span class="bu">print</span>(x)  <span class="co"># Sólo vabemos pintar</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="bu">print</span>(x)  <span class="co"># Sólo sabemos pintar</span></span>
 <span id="cb2-5"><a href="#cb2-5"></a></span>
 <span id="cb2-6"><a href="#cb2-6"></a><span class="co"># abs(y1-y2), abs(x1-x2)</span></span>
 <span id="cb2-7"><a href="#cb2-7"></a>altura <span class="op">=</span> mi_abs(<span class="dv">0</span><span class="op">-</span><span class="dv">10</span>)  <span class="co"># Imprime 10. Altura no recibe valor</span></span>
@@ -213,8 +213,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="return-statement-1" class="level3" data-number="1.2">
-<h3 data-number="1.2" class="anchored" data-anchor-id="return-statement-1"><span class="header-section-number">1.2</span> Return Statement</h3>
+<section id="instrucción-de-retorno-1" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="instrucción-de-retorno-1"><span class="header-section-number">1.2</span> Instrucción de retorno</h3>
 <ul>
 <li>Para <strong>devolver un valor</strong> en Python, se usa la palabra clave <code>return</code>.</li>
 <li>En el momento en que se invoca <code>return</code>, la función <strong>termina su ejecución</strong> y <strong>devuelve</strong> el valor indicado.</li>
@@ -313,7 +313,7 @@ Invocada con 2<br>
 <p>Vamos a modularizar aún más el código que hicimos la sesión anterior.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><strong>Modularizado</strong></p>
+<p><strong>Modular</strong></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">def</span> potencia(a, b):</span>
 <span id="cb7-2"><a href="#cb7-2"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> ^ </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> = </span><span class="sc">{</span>a <span class="op">**</span> b<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb7-3"><a href="#cb7-3"></a></span>
@@ -324,7 +324,7 @@ Invocada con 2<br>
 <span id="cb7-8"><a href="#cb7-8"></a></span>
 <span id="cb7-9"><a href="#cb7-9"></a>potencia(a, b) <span class="co"># Atención al orden</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
-<p><strong>Más modularizado</strong></p>
+<p><strong>Más modular</strong></p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">def</span> potencia(a, b):</span>
 <span id="cb8-2"><a href="#cb8-2"></a>    <span class="cf">return</span> a <span class="op">**</span> b</span>
 <span id="cb8-3"><a href="#cb8-3"></a></span>
@@ -338,9 +338,6 @@ Invocada con 2<br>
 <span id="cb8-11"><a href="#cb8-11"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> ^ </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> = </span><span class="sc">{</span>potencia(a, b)<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<ul>
-<li><em>Nota</em>: Cuando aprendamos a devolver valores, podremos modularizar aún más este programa.</li>
-</ul>
 <hr>
 </section>
 <section id="ejercicio-aproximación-de-coseno-por-serie-de-maclaurin-funcion" class="level4" data-number="1.3.2">
@@ -364,7 +361,7 @@ Invocada con 2<br>
 <span id="cb9-13"><a href="#cb9-13"></a></span>
 <span id="cb9-14"><a href="#cb9-14"></a><span class="bu">print</span>(cos_approx)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
-<p><strong>Modularizado</strong></p>
+<p><strong>Modular</strong></p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="im">import</span> math</span>
 <span id="cb10-2"><a href="#cb10-2"></a></span>
 <span id="cb10-3"><a href="#cb10-3"></a><span class="kw">def</span> coseno(x, n):</span>

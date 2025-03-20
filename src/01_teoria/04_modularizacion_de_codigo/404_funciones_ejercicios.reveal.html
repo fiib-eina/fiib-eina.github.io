@@ -223,26 +223,26 @@
 <p><strong>Ejemplo de ejecución:</strong></p>
 <div class="line-block">Checkpoint 1 - Altura: <strong>1000</strong><br>
 Checkpoint 2 - Altura: <strong>-200</strong><br>
-Altura no válida!<br>
+¡Altura no válida!<br>
 Checkpoint 2 - Altura: <strong>2000</strong><br>
 Checkpoint 3 - Altura: <strong>1000</strong><br>
 Checkpoint 4 - Altura: <strong>3000</strong><br>
 Checkpoint 5 - Altura: <strong>3000</strong><br>
-Desnivel positivo: <strong>3000</strong><br>
-Desnivel acumulado:</div>
+Desnivel positivo: 3000m<br>
+Desnivel acumulado: 4000m</div>
 </section>
 <section class="slide level2">
 
 <h4 id="planificación">Planificación</h4>
 <p>Podemos dividir el problema en las siguientes partes (que no fases):</p>
 <ul>
-<li>Obtención de alturas (correctas).
+<li>Obtener alturas (correctas).
 <ul>
-<li>Validación de alturas.</li>
+<li>Validar de alturas.</li>
 </ul></li>
-<li>Cálculo del desnivel entre dos puntos.</li>
-<li>Cálcular y mostrar el desnivel positivo.</li>
-<li>Cálcular y mostrar el desnivel acumulado.</li>
+<li>Calcular el desnivel entre dos puntos.</li>
+<li>Calcular y mostrar el desnivel positivo.</li>
+<li>Calcular y mostrar el desnivel acumulado.</li>
 </ul>
 <div class="callout callout-warning callout-style-simple">
 <div class="callout-body">
@@ -300,7 +300,7 @@ Desnivel acumulado:</div>
 <span id="cb2-9"><a></a><span class="kw">def</span> obtener_altura_valida(checkpoint_num):</span>
 <span id="cb2-10"><a></a>    altura <span class="op">=</span> obtener_altura(checkpoint_num)</span>
 <span id="cb2-11"><a></a>    <span class="cf">while</span> <span class="kw">not</span> validar_altura(altura):</span>
-<span id="cb2-12"><a></a>        <span class="bu">print</span>(<span class="st">"Altura no válida!"</span>)</span>
+<span id="cb2-12"><a></a>        <span class="bu">print</span>(<span class="st">"¡Altura no válida!"</span>)</span>
 <span id="cb2-13"><a></a>        altura <span class="op">=</span> obtener_altura(checkpoint_num)</span>
 <span id="cb2-14"><a></a>    <span class="cf">return</span> altura</span>
 <span id="cb2-15"><a></a></span>
@@ -310,7 +310,7 @@ Desnivel acumulado:</div>
 
 <h4 id="cálculo-de-los-desniveles-entre-dos-puntos">Cálculo de los desniveles entre dos puntos</h4>
 <ul>
-<li>Antes de calcular los deniveles totales, vamos a implementar dos funciones que nos faciliten el cálculo de los desniveles entre dos puntos.</li>
+<li>Antes de calcular los desniveles totales, vamos a implementar dos funciones que nos faciliten el cálculo de los desniveles entre dos puntos.</li>
 </ul>
 </section>
 <section class="slide level2">
@@ -354,7 +354,7 @@ Desnivel acumulado:</div>
 <ul>
 <li>Para procesar cada una de las alturas que nos proporciona el usuario, necesitaremos <strong>un bucle</strong>.
 <ul>
-<li>En cada iteración, calcularemos la diferencia de alturas usando las funcines anteriores.</li>
+<li>En cada iteración, calcularemos la diferencia de alturas usando las funciones anteriores.</li>
 </ul></li>
 <li>Iteraremos mientras <strong>la altura no sea la misma que la anterior</strong>.</li>
 </ul>
@@ -406,11 +406,11 @@ Desnivel acumulado:</div>
 
 <h4 id="mostrar-los-resultados">Mostrar los resultados</h4>
 <ul>
-<li>Hemos tenido que recurrir a imprrimir los resultados <strong>dentro de la función</strong>.
+<li>Hemos tenido que recurrir a imprimir los resultados <strong>dentro de la función</strong>.
 <ul>
 <li>Esto es porque <strong>obtenemos dos resultados a la vez</strong> (<code>total_positivo</code> y <code>total_acumulado</code>).</li>
 </ul></li>
-<li>Sería muy cómodo poder devolver <strong>ambas variables</strong>, <strong>recojerlas</strong> en la función principal e invocar a otra función específica que <strong>imprimiera los resultados</strong>.</li>
+<li>Sería muy cómodo poder devolver <strong>ambas variables</strong>, <strong>recogerlas</strong> en la función principal e invocar a otra función específica que <strong>imprimiera los resultados</strong>.</li>
 <li>Sin embargo, las funciones <em>sólo pueden devolver un valor</em>…
 <ul>
 <li>… o no?</li>

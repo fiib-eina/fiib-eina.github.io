@@ -200,8 +200,8 @@
 </div>
 
 </section>
-<section id="return-statement" class="slide level2 center">
-<h2>Return Statement</h2>
+<section id="instrucción-de-retorno" class="slide level2 center">
+<h2>Instrucción de retorno</h2>
 </section>
 <section class="slide level2">
 
@@ -243,7 +243,7 @@
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> mi_abs(x):</span>
 <span id="cb2-2"><a></a>    <span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">0</span>:</span>
 <span id="cb2-3"><a></a>        x <span class="op">=</span> <span class="op">-</span>x</span>
-<span id="cb2-4"><a></a>    <span class="bu">print</span>(x)  <span class="co"># Sólo vabemos pintar</span></span>
+<span id="cb2-4"><a></a>    <span class="bu">print</span>(x)  <span class="co"># Sólo sabemos pintar</span></span>
 <span id="cb2-5"><a></a></span>
 <span id="cb2-6"><a></a><span class="co"># abs(y1-y2), abs(x1-x2)</span></span>
 <span id="cb2-7"><a></a>altura <span class="op">=</span> mi_abs(<span class="dv">0</span><span class="op">-</span><span class="dv">10</span>)  <span class="co"># Imprime 10. Altura no recibe valor</span></span>
@@ -260,7 +260,7 @@
 </section>
 <section class="slide level2">
 
-<h3 id="return-statement-1">Return Statement</h3>
+<h3 id="instrucción-de-retorno-1">Instrucción de retorno</h3>
 <ul>
 <li>Para <strong>devolver un valor</strong> en Python, se usa la palabra clave <code>return</code>.</li>
 <li>En el momento en que se invoca <code>return</code>, la función <strong>termina su ejecución</strong> y <strong>devuelve</strong> el valor indicado.</li>
@@ -359,7 +359,7 @@ Invocada con 2<br>
 <p>Vamos a modularizar aún más el código que hicimos la sesión anterior.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><strong>Modularizado</strong></p>
+<p><strong>Modular</strong></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="kw">def</span> potencia(a, b):</span>
 <span id="cb7-2"><a></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> ^ </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> = </span><span class="sc">{</span>a <span class="op">**</span> b<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb7-3"><a></a></span>
@@ -370,7 +370,7 @@ Invocada con 2<br>
 <span id="cb7-8"><a></a></span>
 <span id="cb7-9"><a></a>potencia(a, b) <span class="co"># Atención al orden</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
-<p><strong>Más modularizado</strong></p>
+<p><strong>Más modular</strong></p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="kw">def</span> potencia(a, b):</span>
 <span id="cb8-2"><a></a>    <span class="cf">return</span> a <span class="op">**</span> b</span>
 <span id="cb8-3"><a></a></span>
@@ -383,9 +383,6 @@ Invocada con 2<br>
 <span id="cb8-10"><a></a></span>
 <span id="cb8-11"><a></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> ^ </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> = </span><span class="sc">{</span>potencia(a, b)<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
-<ul>
-<li><em>Nota</em>: Cuando aprendamos a devolver valores, podremos modularizar aún más este programa.</li>
-</ul>
 </section>
 <section class="slide level2">
 
@@ -409,7 +406,7 @@ Invocada con 2<br>
 <span id="cb9-13"><a></a></span>
 <span id="cb9-14"><a></a><span class="bu">print</span>(cos_approx)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
-<p><strong>Modularizado</strong></p>
+<p><strong>Modular</strong></p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="im">import</span> math</span>
 <span id="cb10-2"><a></a></span>
 <span id="cb10-3"><a></a><span class="kw">def</span> coseno(x, n):</span>
