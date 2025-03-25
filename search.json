@@ -259,11 +259,18 @@
     "text": "Chapter"
   },
   {
-    "objectID": "src/01_teoria/05_estructuras_de_datos/503_strings_y_tuplas.reveal.html#chapter",
-    "href": "src/01_teoria/05_estructuras_de_datos/503_strings_y_tuplas.reveal.html#chapter",
+    "objectID": "src/01_teoria/05_estructuras_de_datos/503_strings_y_tuplas.reveal.html#listas-dinámicas",
+    "href": "src/01_teoria/05_estructuras_de_datos/503_strings_y_tuplas.reveal.html#listas-dinámicas",
     "title": "Teoría 503",
-    "section": "Chapter",
-    "text": "Chapter"
+    "section": "Listas dinámicas",
+    "text": "Listas dinámicas\n\nA diferencia de otros lenguajes más rígidos, en Python todas las listas son dinámicas:\n\nSu tamaño no es fijo.\nPueden crecer o reducirse según necesitemos."
+  },
+  {
+    "objectID": "src/01_teoria/05_estructuras_de_datos/503_strings_y_tuplas.reveal.html#uso-avanzado-de-listas",
+    "href": "src/01_teoria/05_estructuras_de_datos/503_strings_y_tuplas.reveal.html#uso-avanzado-de-listas",
+    "title": "Teoría 503",
+    "section": "Uso avanzado de listas",
+    "text": "Uso avanzado de listas"
   },
   {
     "objectID": "src/01_teoria/05_estructuras_de_datos/501_objetos.reveal.html#tipos-de-datos-estructurados",
@@ -711,7 +718,7 @@
     "href": "index.html",
     "title": "Fundamentos de informática",
     "section": "",
-    "text": "01_teoria/00_presentacion/ Presentación de la Asignatura - Información general \n\n\n01_teoria/01_conceptos_basicos/ Teoría 101 - Computadores y Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 102 - Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 103 - Python \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 201 - Tipos Numerales \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 202 - Texto y Booleanos \n\n\n01_teoria/03_composicion/ Teoría 301 - Composición condicional \n\n\n01_teoria/03_composicion/ Teoría 302 - Composición Iterativa I \n\n\n01_teoria/03_composicion/ Teoría 303 - Composición Iterativa II \n\n\n01_teoria/03_composicion/ Teoría 304 - Composición Iterativa III \n\n\n01_teoria/03_composicion/ Teoría 305 - Composición Iterativa IV \n\n\n01_teoria/03_composicion/ Teoría 306 - Composición Iterativa V \n\n\n01_teoria/04_modularizacion_de_codigo/ Teoría 401 - Funciones I \n\n\n01_teoria/04_modularizacion_de_codigo/ Teoría 402 - Funciones II \n\n\n01_teoria/04_modularizacion_de_codigo/ Teoría 403 - Módulos \n\n\n01_teoria/04_modularizacion_de_codigo/ Teoría 404 - Funciones avanzadas \n\n\n01_teoria/05_estructuras_de_datos/ Teoría 501 - Objetos \n\n\n02_problemas/ Problemas 1 - Fundamentos \n\n\n02_problemas/ Problemas 2 - Tipos Numéricos \n\n\n02_problemas/ Problemas 3 - Composición condicional \n\n\n02_problemas/ Problemas 4 - Composición iterativa: while \n\n\n02_problemas/ Problemas 5 - Composición iterativa: for y while \n\n\n02_problemas/ Problemas 6 - Funciones I \n\n\n02_problemas/ Problemas 7 - Funciones II \n\n\n02_problemas/ Problemas 8 - Objetos \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n03_practicas/p1/ Práctica 1 - Tipos Primitivos \n\n\n03_practicas/p2/ Práctica 2 - Composición condicional \n\n\n03_practicas/p3/ Práctica 3 - Composición iterativa \n\n\n03_practicas/p4/ Práctica 4 - Funciones \n\n\n\nNo hay resultados"
+    "text": "01_teoria/00_presentacion/ Presentación de la Asignatura - Información general \n\n\n01_teoria/01_conceptos_basicos/ Teoría 101 - Computadores y Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 102 - Lenguajes \n\n\n01_teoria/01_conceptos_basicos/ Teoría 103 - Python \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 201 - Tipos Numerales \n\n\n01_teoria/02_tipos_de_datos_basicos/ Teoría 202 - Texto y Booleanos \n\n\n01_teoria/03_composicion/ Teoría 301 - Composición condicional \n\n\n01_teoria/03_composicion/ Teoría 302 - Composición Iterativa I \n\n\n01_teoria/03_composicion/ Teoría 303 - Composición Iterativa II \n\n\n01_teoria/03_composicion/ Teoría 304 - Composición Iterativa III \n\n\n01_teoria/03_composicion/ Teoría 305 - Composición Iterativa IV \n\n\n01_teoria/03_composicion/ Teoría 306 - Composición Iterativa V \n\n\n01_teoria/04_modularizacion_de_codigo/ Teoría 401 - Funciones I \n\n\n01_teoria/04_modularizacion_de_codigo/ Teoría 402 - Funciones II \n\n\n01_teoria/04_modularizacion_de_codigo/ Teoría 403 - Módulos \n\n\n01_teoria/04_modularizacion_de_codigo/ Teoría 404 - Funciones avanzadas \n\n\n01_teoria/05_estructuras_de_datos/ Teoría 501 - Objetos \n\n\n01_teoria/05_estructuras_de_datos/ Teoría 502 - Listas \n\n\n02_problemas/ Problemas 1 - Fundamentos \n\n\n02_problemas/ Problemas 2 - Tipos Numéricos \n\n\n02_problemas/ Problemas 3 - Composición condicional \n\n\n02_problemas/ Problemas 4 - Composición iterativa: while \n\n\n02_problemas/ Problemas 5 - Composición iterativa: for y while \n\n\n02_problemas/ Problemas 6 - Funciones I \n\n\n02_problemas/ Problemas 7 - Funciones II \n\n\n02_problemas/ Problemas 8 - Objetos \n\n\n03_practicas/p0/ Práctica 0 - Introducción \n\n\n03_practicas/p1/ Práctica 1 - Tipos Primitivos \n\n\n03_practicas/p2/ Práctica 2 - Composición condicional \n\n\n03_practicas/p3/ Práctica 3 - Composición iterativa \n\n\n03_practicas/p4/ Práctica 4 - Funciones \n\n\n\nNo hay resultados"
   },
   {
     "objectID": "src/01_teoria/01_conceptos_basicos/101_introducción.html",
@@ -1078,18 +1085,46 @@
     "text": "Ejercicios avanzados con funciones"
   },
   {
-    "objectID": "src/01_teoria/05_estructuras_de_datos/502_listas.reveal.html#datos-estructurados",
-    "href": "src/01_teoria/05_estructuras_de_datos/502_listas.reveal.html#datos-estructurados",
+    "objectID": "src/01_teoria/05_estructuras_de_datos/502_listas.html",
+    "href": "src/01_teoria/05_estructuras_de_datos/502_listas.html",
     "title": "Teoría 502",
-    "section": "Datos estructurados",
-    "text": "Datos estructurados"
+    "section": "",
+    "text": "Desarrolla un programa Python que lea una secuencia de números dada por el usuario (terminada en 0) y muestre la suma de los números leídos.\n\nprint(\"Introduce una secuencia de números (termina en 0):\")\nn = int(input())\nsuma = 0\n\nwhile n != 0:\n    suma += n\n    n = int(input())\n\nprint(f\"La suma de los números es: {suma}\")\n\nSólo necesitamos almacenar un número n a la vez."
   },
   {
-    "objectID": "src/01_teoria/05_estructuras_de_datos/504_estructuras_complejas.reveal.html#chapter",
-    "href": "src/01_teoria/05_estructuras_de_datos/504_estructuras_complejas.reveal.html#chapter",
+    "objectID": "src/01_teoria/05_estructuras_de_datos/502_listas.html#listas",
+    "href": "src/01_teoria/05_estructuras_de_datos/502_listas.html#listas",
+    "title": "Teoría 502",
+    "section": "1 Listas",
+    "text": "1 Listas\n\n\n1.1 Listas en programación\n\nEn programación, una lista (o array) es una:\n\nColección de elementos: Contiene cero, uno o más elementos.\nOrdenada: Los elementos tienen un orden específico.\nHomogénea: Todos los elementos son del mismo tipo.\n\nLas listas reciben un identificador único (igual que los objetos).\nSus elementos se identifican mediante su posición (índice) dentro de la lista.\n\n\n\nLa siguiente lista:\n\nTiene un identificador mi_lista.\nContiene elementos de tipo entero.\nTiene un tamaño de 5 enteros.\nEl entero en la posición 1 tiene el valor 8.\n\n\n\n\n\n\n1.2 Definición de listas en Python\n\nEn Python, las listas se definen como\n\nla secuencia de valores que la conforman,\nseparados por comas\ny envueltros en corchetes [].\n\n\nmi_lista = [5, 8, 2, 0, 3]               # Lista de 5 enteros\ncondiciones = [True, False, True, True]  # Lista de 4 booleanos\ntemperaturas = [25.5, 27.3, 26.0, 24.8]  # Lista de 4 floats\nvacía = []                               # Lista vacía\n\n\n\n1.3 Acceso a los elementos de una lista\n\nUn elemento de una lista se identifica mediante su posición (índice) dentro de la lista.\nPara acceder a dicho elemento, se utiliza:\n\nEl identificador de la lista,\nel índice del elemento deseado.\nenvueltro en corchetes [].\n\nLa primera posición de una lista es la 0.\n\nNO la 1.\n\n\nmi_lista = [5, 8, 2, 0, 3]\nprint(mi_lista[1]) \n8\n\n\n1.3.1 Ejemplo: Imprime los elementos de una lista y sus posiciones\nmi_lista = [5, 8, 2, 0, 3]  # Tamaño 5\n\nfor i in range(5):\n    print(f\"Elemento {i}: {mi_lista[i]}\")\nElemento 0: 5\nElemento 1: 8\nElemento 2: 2\nElemento 3: 0\nElemento 4: 3\n\n\n\n\n\n\nA diferencia de los objetos, las listas si tienen una representación textual nativa.\nprint(mi_lista)\n[5, 8, 2, 0, 3]\nRecuerda que sólo los objetos de clases definidas como @dataclasses.dataclass podían imprimirse directamente.\n\n\n\n\n\n\n1.3.2 Ejemplo: Imprime los valores impares de una lista y sus posiciones\nmi_lista = [5, 8, 2, 0, 3]  # Tamaño 5\n\nfor i in range(5):\n    el = mi_lista[i]\n    if el % 2 != 0:\n        print(f\"Elemento {i}: {el}\")\nElemento 0: 5\nElemento 4: 3\n\n\n\n1.3.3 Ejemplo: Imprime en orden inverso los elementos de una lista y sus posiciones\nmi_lista = [5, 8, 2, 0, 3]  # Tamaño 5\n\nfor i in range(4, -1, -1):\n    print(f\"Elemento {i}: {mi_lista[i]}\")\nElemento 4: 3\nElemento 3: 0\nElemento 2: 2\nElemento 1: 8\nElemento 0: 5\n\n\n\n\n1.4 Acceso out-of-bounds\n\n¿Qué ocurre si intentamos acceder a una posición que no existe?\n\nmi_lista = [5, 8, 2, 0, 3]\nprint(mi_lista[5])\nIndexError: list index out of range\n\n¡Cuidado!\n\nDeberemos asegurarnos de acceder a posiciones dentro del rango.\n\n\n\n\n1.4.1 Ejemplo: Leer una lista de 5 números y pintarla en orden inverso\n\n\nmi_lista = [0, 0, 0, 0, 0]\n\nfor i in range(5):\n    print(f\"Introduce {i}º número: \", end=\"\")\n    mi_lista[i] = int(input())\n\nfor i in range(4, -1, -1):\n    print(mi_lista[i])\n\nIntroduce 0º número: 4\nIntroduce 1º número: 3\nIntroduce 2º número: 7\nIntroduce 3º número: 9\nIntroduce 4º número: 4\n4\n9\n7\n3\n4\n\n\n\n¿No existe otra forma de crear una lista de n elementos?\n\n10 elementos: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\n¿10_000 elementos?\n¿n elementos, siendo n un número introducido por el usuario?\n\n\n\n\nPodemos inicializar una lista con n elementos utilizando la multiplicación de listas:\n\nEn Python, multiplicar una lista por un número n crea una lista con n copias de la lista original.\n\n\nmi_lista = [0] * 5  # [0, 0, 0, 0, 0]\nlista_grande = [0] * 10_000\n\n\n\n\n\n\nSí, es un poco raro, pero funciona. Más adelante aprenderemos otras técnicas más elegantes.\n\n\n\n\n\n\n\n1.5 Listas como argumentos de funciones\n\nLos argumentos de una función pueden ser de cualquier tipo, incluidas las listas.\nRecuerda que uno de los objetivos principales de las funciones es que sean independientes y reutilizables.\n\nUna función que sólo funciona con listas de un tamaño concreto no es muy reutilizable.\n\n\n\n\nAcomplada a 5\ndef suma_acomplada(l):\n    suma = 0\n    for i in range(5):\n        suma += l[i]\n    return suma\n\nParametrizada\ndef suma_mejor(l, n):\n    suma = 0\n    for i in range(n):\n        suma += l[i]\n    return suma\n\nGenérica\ndef suma(l):\n    suma = 0\n    for i in range(len(l)):\n        suma += l[i]\n    return suma\n\n\n\nLa función len() devuelve el número de elementos de una lista.\n\n\n\n1.5.1 Ejercicio: Leer una lista de teclado\n\nDesarrolla una función que lea una lista de n números enteros introducidos por el usuario y devuelva la lista.\n\ndef leer_lista(n):\n    # ???\n\n# TEST\nleer_lista(5)\n\ndef leer_lista(n):\n    l = [0] * n\n    for i in range(n):\n        print(f\"Introduce {i}º número: \", end=\"\")\n        l[i] = int(input())\n    return l\n\n\n\n1.5.2 Ejercicio: Contar los elementos por encima de la media\n\nDesarrolla una función que reciba una lista de números y devuelva cuántos elementos son mayores que la media.\n\ndef contar_por_encima_de_media(l):\n    # ???\n\n# TEST\ncontar_por_encima_de_media([4, 3, 7, 0])\n# Debería devolver 2\n\ndef obtener_media(l):\n    suma = 0\n    for i in range(len(l)):\n        suma += l[i]\n    return suma / len(l)\n\ndef contar_por_encima_de_media(l):\n    media = obtener_media(l)\n\n    cuenta = 0\n    for i in range(len(l)):\n        if l[i] &gt; m:\n            cuenta += 1\n    return cuenta\n\nPrograma completo\ndef leer_lista(n):\n    l = [0] * n\n    for i in range(n):\n        print(f\"Introduce {i}º número: \", end=\"\")\n        l[i] = int(input())\n    return l\n\ndef obtener_media(l):\n    suma = 0\n    for i in range(len(l)):\n        suma += l[i]\n    return suma / len(l)\n\ndef contar_por_encima_de_media(l):\n    media = obtener_media(l)\n\n    cuenta = 0\n    for i in range(len(l)):\n        if l[i] &gt; media:\n            cuenta += 1\n    return cuenta\n\n# TEST\nl = leer_lista(4)\nprint(contar_por_encima_de_media(l))"
+  },
+  {
+    "objectID": "src/01_teoria/05_estructuras_de_datos/502_listas.html#strings-listas",
+    "href": "src/01_teoria/05_estructuras_de_datos/502_listas.html#strings-listas",
+    "title": "Teoría 502",
+    "section": "2 Strings… ¿listas?",
+    "text": "2 Strings… ¿listas?\n\n\nSi tomamos la definición de lista como una colección de elementos ordenada y homogénea…\n\n¿Encajan los strings en esta definición?\n\nDesde que aprendimos el tipo de datos str, hemos tratado los strings como unidades indivisibles.\n\nPero en realidad, un string es una secuencia de caracteres.\n\n\ns = \"Hola\"\nprint(s[0])  # H\n\nEn Python no existe el tipo de datos char como en otros lenguajes.\n\nUn carácter es un string de longitud 1.\n\n\n\n\n2.0.1 Ejercicio: Contiene la I\n\nDesarrolla una función que reciba un string texto y una letra letra y devuelva un valor booleano que represente si s contiene l.\n\ndef contiene(texto, letra):\n    # ???\n\n# TEST\nprint(contiene(\"Hola\", \"a\"))  # True\nprint(contiene(\"Hola\", \"j\"))  # False\n\ndef contiene(texto, letra):\n    encontrada = False\n    for i in range(len(texto)):\n        if texto[i] == letra:\n            encontrada = True\n    return encontrada\n\n# TEST\nprint(contiene(\"Hola\", \"a\"))\nprint(contiene(\"Hola\", \"j\"))\nTrue\nFalse"
+  },
+  {
+    "objectID": "src/01_teoria/05_estructuras_de_datos/502_listas.reveal.html#listas",
+    "href": "src/01_teoria/05_estructuras_de_datos/502_listas.reveal.html#listas",
+    "title": "Teoría 502",
+    "section": "Listas",
+    "text": "Listas"
+  },
+  {
+    "objectID": "src/01_teoria/05_estructuras_de_datos/502_listas.reveal.html#strings-listas",
+    "href": "src/01_teoria/05_estructuras_de_datos/502_listas.reveal.html#strings-listas",
+    "title": "Teoría 502",
+    "section": "Strings… ¿listas?",
+    "text": "Strings… ¿listas?"
+  },
+  {
+    "objectID": "src/01_teoria/05_estructuras_de_datos/504_estructuras_complejas.reveal.html#paso-por-valor-y-paso-por-referencia",
+    "href": "src/01_teoria/05_estructuras_de_datos/504_estructuras_complejas.reveal.html#paso-por-valor-y-paso-por-referencia",
     "title": "Teoría 504",
-    "section": "Chapter",
-    "text": "Chapter\nEjercicio: Carrito de la Compra\nDesarrolla un programa Python que gestione un carro de la compra.\n\nEl programa mostrará un menú con las siguientes opciones:\n\nAñadir producto: solicitará al usuario el nombre y el precio del producto a añadir al carro.\nEliminar producto: solicitará al usuario el nombre del producto a eliminar del carro.\nMostrar carro: mostrará el contenido del carro.\nSalir: finalizará el programa."
+    "section": "Paso por valor y paso por referencia",
+    "text": "Paso por valor y paso por referencia"
   },
   {
     "objectID": "src/01_teoria/07_otros/701_beyond_python.reveal.html#chapter",

@@ -27,6 +27,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #767676;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #767676;  padding-left: 4px; }
+    div.sourceCode
+      { color: #545454; background-color: #fefefe; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #545454; } /* Normal */
+    code span.al { color: #7928a1; } /* Alert */
+    code span.an { color: #696969; } /* Annotation */
+    code span.at { color: #a55a00; } /* Attribute */
+    code span.bn { color: #7928a1; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #d91e18; } /* ControlFlow */
+    code span.ch { color: #008000; } /* Char */
+    code span.cn { color: #d91e18; } /* Constant */
+    code span.co { color: #696969; } /* Comment */
+    code span.cv { color: #696969; font-style: italic; } /* CommentVar */
+    code span.do { color: #696969; font-style: italic; } /* Documentation */
+    code span.dt { color: #7928a1; } /* DataType */
+    code span.dv { color: #7928a1; } /* DecVal */
+    code span.er { color: #7928a1; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #a55a00; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #696969; } /* Information */
+    code span.kw { color: #d91e18; } /* Keyword */
+    code span.op { color: #00769e; } /* Operator */
+    code span.ot { color: #d91e18; } /* Other */
+    code span.pp { color: #7928a1; } /* Preprocessor */
+    code span.sc { color: #00769e; } /* SpecialChar */
+    code span.ss { color: #008000; } /* SpecialString */
+    code span.st { color: #008000; } /* String */
+    code span.va { color: #a55a00; } /* Variable */
+    code span.vs { color: #008000; } /* VerbatimString */
+    code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-7f2f78f0473ef2d03f49b07730205bc7.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -135,8 +200,60 @@
 </div>
 
 </section>
-<section id="chapter" class="slide level2 center">
-<h2>Chapter</h2>
+<section id="listas-dinámicas" class="slide level2 center">
+<h2>Listas dinámicas</h2>
+<ul>
+<li>A diferencia de otros lenguajes más rígidos, en Python <strong>todas las listas son dinámicas</strong>:
+<ul>
+<li>Su tamaño <strong>no es fijo</strong>.</li>
+<li>Pueden <strong>crecer</strong> o <strong>reducirse</strong> según necesitemos.</li>
+</ul></li>
+</ul>
+</section>
+<section id="uso-avanzado-de-listas" class="slide level2 center">
+<h2>Uso avanzado de listas</h2>
+</section>
+<section class="slide level2">
+
+<h3 id="listas-vs-objetos">Listas vs Objetos</h3>
+</section>
+<section class="slide level2">
+
+<h3 id="listas-de-objetos-y-objetos-con-listas">Listas de objetos y objetos con listas</h3>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-leer-una-secuencia-de-números-terminada-en-0-y-con-un-máximo-de-10000-elementos">Ejemplo: Leer una secuencia de números (terminada en 0 y con un máximo de 10,000 elementos)</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>SIZE <span class="op">=</span> <span class="dv">10_000</span>  <span class="co"># BUENAS PRÁCTICAS: Definir el tamaño máximo en una constante</span></span>
+<span id="cb1-2"><a></a>mi_lista <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> SIZE</span>
+<span id="cb1-3"><a></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-4"><a></a></span>
+<span id="cb1-5"><a></a><span class="bu">print</span>(<span class="st">"Introduce una secuencia de números (termina en 0):"</span>)</span>
+<span id="cb1-6"><a></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb1-7"><a></a></span>
+<span id="cb1-8"><a></a><span class="cf">while</span> n <span class="op">!=</span> <span class="dv">0</span> <span class="kw">and</span> i <span class="op">&lt;</span> SIZE:</span>
+<span id="cb1-9"><a></a>    mi_lista[i] <span class="op">=</span> n</span>
+<span id="cb1-10"><a></a>    i <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb1-11"><a></a>    n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb1-12"><a></a></span>
+<span id="cb1-13"><a></a><span class="bu">print</span>(<span class="ss">f"Se han leído </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss"> números."</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">Introduce una secuencia de números (termina en 0):<br>
+<strong>4</strong><br>
+<strong>3</strong><br>
+<strong>7</strong><br>
+<strong>0</strong><br>
+Se han leído 3 números.</div>
+</section>
+<section class="slide level2">
+
+<h3 id="listas-heterogéneas">Listas heterogéneas</h3>
+<ul>
+<li>A diferencia de otros lenguajes, en Python las listas <strong>pueden</strong> contener elementos de <strong>distintos tipos</strong>.</li>
+<li>Una vez más, se trata de otro caso de:
+<ul>
+<li><strong>QUE PUEDAS NO SIGNIFICA QUE DEBAS</strong>.</li>
+</ul></li>
+</ul>
 
 
 </section>
