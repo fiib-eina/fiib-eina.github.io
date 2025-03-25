@@ -83,13 +83,17 @@ class Hora:
 Define una función `siguiente_segundo()` Python que reciba un objeto de la clase `Hora` y devuelva **uno nuevo** con un segundo más.
 
 ```python
-print(siguiente_segundo(Hora(12, 30, 59)))
+h1 = Hora(12, 30, 59)
+h2 = siguiente_segundo(h1)
+print(h2)
 ```
 
 | Hora(12, 31, 0)
 
 ```print
-print(siguiente_segundo(Hora(12, 59, 59)))
+h1 = Hora(12, 59, 59)
+h2 = siguiente_segundo(h1)
+print(h2)
 ```
 | Hora(13, 0, 0)
 
@@ -114,21 +118,21 @@ De forma similar a las sumas con llevadas:
 <summary>Solución</summary>
 
 ```python
-def siguiente_segundo(hora):
-    nueva_hora = Hora(hora.horas, hora.minutos, hora.segundos + 1)
+def siguiente_segundo(anterior):
+    siguiente = Hora(anterior.horas, anterior.minutos, anterior.segundos + 1)
 
-    if nueva_hora.segundos == 60:
-        nueva_hora.segundos = 0
-        nueva_hora.minutos += 1
+    if siguiente.segundos == 60:
+        siguiente.segundos = 0
+        siguiente.minutos += 1
 
-    if nueva_hora.minutos == 60:
-        nueva_hora.minutos = 0
-        nueva_hora.horas += 1
+    if siguiente.minutos == 60:
+        siguiente.minutos = 0
+        siguiente.horas += 1
 
-    if nueva_hora.horas == 24:
-        nueva_hora.horas = 0
+    if siguiente.horas == 24:
+        siguiente.horas = 0
 
-    return nueva_hora
+    return siguiente
 
 ```
 
@@ -139,13 +143,15 @@ def siguiente_segundo(hora):
 Define una función `segundos_a_horas()` Python que reciba un número de segundos y devuelva un objeto de la clase `Hora` con la conversión.
 
 ```python
-print(segundos_a_horas(70))
+h = segundos_a_horas(70)
+print(h)
 ```
 
 | Hora(0, 1, 10)
 
 ```python
-print(segundos_a_horas(3600))
+h = segundos_a_horas(3600)
+print(h)
 ```
 
 | Hora(1, 0, 0)
@@ -168,13 +174,15 @@ def segundos_a_horas(segundos):
 Define una función `horas_a_segundos()` Python que reciba un objeto de la clase `Hora` y devuelva el número de segundos correspondiente.
 
 ```python
-print(horas_a_segundos(Hora(0, 1, 10)))
+s = horas_a_segundos(Hora(0, 1, 10))
+print(s)
 ```
 
 | 70
 
 ```python
-print(horas_a_segundos(Hora(1, 0, 0)))
+s = horas_a_segundos(Hora(1, 0, 0))
+print(s)
 ```
 
 | 3600
@@ -194,13 +202,19 @@ def horas_a_segundos(hora):
 Define una función `restar_horas()` Python que reciba dos objetos de la clase `Hora` y devuelva un nuevo objeto `Hora` con la resta del segundo al primero.
 
 ```python
-print(restar_horas(Hora(12, 30, 0), Hora(0, 30, 0)))
+h1 = Hora(12, 30, 0)
+h2 = Hora(0, 30, 0)
+h3 = restar_horas(h1, h2)
+print(h3)
 ```
 
 | Hora(12, 0, 0)
 
 ```python
-print(restar_horas(Hora(12, 30, 0), Hora(0, 40, 0)))
+h1 = Hora(12, 30, 0)
+h2 = Hora(0, 40, 0)
+h3 = restar_horas(h1, h2)
+print(h3)
 ```
 
 | Hora(11, 50, 0)

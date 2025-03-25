@@ -5,6 +5,56 @@ format: revealjs
 draft: true
 ---
 
-## Chapter {.center}
+## Listas dinámicas {.center}
 
+- A diferencia de otros lenguajes más rígidos, en Python **todas las listas son dinámicas**:
+    - Su tamaño **no es fijo**.
+    - Pueden **crecer** o **reducirse** según necesitemos.
+
+---
+
+## Uso avanzado de listas {.center}
+
+---
+
+### Listas vs Objetos
+
+---
+
+### Listas de objetos y objetos con listas
+
+---
+ 
+#### Ejemplo: Leer una secuencia de números (terminada en 0 y con un máximo de 10,000 elementos)
+
+```python
+SIZE = 10_000  # BUENAS PRÁCTICAS: Definir el tamaño máximo en una constante
+mi_lista = [0] * SIZE
+i = 0
+
+print("Introduce una secuencia de números (termina en 0):")
+n = int(input())
+
+while n != 0 and i < SIZE:
+    mi_lista[i] = n
+    i += 1
+    n = int(input())
+
+print(f"Se han leído {i} números.")
+```
+
+| Introduce una secuencia de números (termina en 0):
+| **4**
+| **3**
+| **7**
+| **0**
+| Se han leído 3 números.
+
+---
+
+### Listas heterogéneas
+
+- A diferencia de otros lenguajes, en Python las listas **pueden** contener elementos de **distintos tipos**.
+- Una vez más, se trata de otro caso de:
+    - **QUE PUEDAS NO SIGNIFICA QUE DEBAS**.
 

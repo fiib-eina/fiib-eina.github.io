@@ -2,11 +2,465 @@
 title: Teoría 502
 subtitle: Listas
 format: revealjs
-draft: true
 ---
 
-## Datos estructurados {.center}
+#### ¿Puedes resolver este ejercicio?
+
+- Desarrolla un programa Python que lea una secuencia de números dada por el usuario (terminada en 0) y **muestre la suma de los números leídos**.
+
+```python
+print("Introduce una secuencia de números (termina en 0):")
+n = int(input())
+suma = 0
+
+while n != 0:
+    suma += n
+    n = int(input())
+
+print(f"La suma de los números es: {suma}")
+```
+
+- Sólo necesitamos almacenar un número `n` a la vez.
+
+---
+
+#### ¿Puedes resolver este ejercicio?
+
+- Desarrolla un programa Python que lea una secuencia de números dada por el usuario (terminada en 0) y a continuación **los muestre en orden inverso**.
+
+```python
+print("Introduce una secuencia de números (termina en 0):")
+n = int(input())
+
+while n != 0:
+    # ???
+    n = int(input())
+
+# ???
+```
+
+---
+
+#### ¿Puedes resolver este ejercicio?
+
+- Desarrolla un programa Python que lea una secuencia de números dada por el usuario (terminada en 0) y cuente cuántos números hay por encima de la media.
+
+```python
+print("Introduce una secuencia de números (termina en 0):")
+n = int(input())
+
+cuenta = 0
+while n != 0:
+    # ¿Cómo calculamos la media sin conocer aún todos los números?
+    if n > media: # !!!!
+        cuenta += 1
+    n = int(input())
+
+print(f"Hay {cuenta} números por encima de la media.")
+```
+
+---
+
+### Limitaciones
+
+- ¿Qué tienen en común los dos últimos programas?
+    - Requieren almacenar todos los números introducidos por el usuario.
+- ¿Cómo podemos hacerlo?
+    - ~~Usando muchas variables~~.
+    - ~~Usando un **objeto** con muchos atributos~~.
+    - Usando **listas**.
+
+---
+
+## Listas {.center}
+
+---
+
+### Listas en programación
+
+- En programación, una **lista** (o _array_) es una:
+    - **Colección** de elementos: Contiene cero, uno o más elementos.
+    - **Ordenada**: Los elementos tienen un orden específico.
+    - **Homogénea**: Todos los elementos son del mismo tipo.
+- Las listas reciben un identificador único (igual que los objetos).
+- Sus elementos se identifican mediante **su posición** (índice) dentro de la lista.
+
+---
+
+- La siguiente lista:
+    - Tiene un **identificador** `mi_lista`.
+    - Contiene elementos **de tipo** entero.
+    - Tiene un **tamaño** de `5` enteros.
+    - El entero en la **posición** `1` tiene el **valor** `8`.
+
+![](./img/lista.png)
+
+---
+
+### Definición de listas en Python
+
+- En Python, las listas se  **definen** como
+    - la **secuencia de valores** que la conforman,
+    - separados por comas
+    - y envueltros en corchetes `[]`.
+
+```python
+mi_lista = [5, 8, 2, 0, 3]               # Lista de 5 enteros
+condiciones = [True, False, True, True]  # Lista de 4 booleanos
+temperaturas = [25.5, 27.3, 26.0, 24.8]  # Lista de 4 floats
+vacía = []                               # Lista vacía
+```
+
+---
+
+### Acceso a los elementos de una lista
+
+- Un elemento de una lista se **identifica** mediante su **posición** (índice) dentro de la lista.
+- Para **acceder** a dicho elemento, se **utiliza**:
+    - El **identificador** de la lista,
+    - el **índice** del elemento deseado.
+    - envueltro en **corchetes** `[]`.
+- **La primera posición** de una lista es la `0`.
+    - NO la `1`.
+
+```python
+mi_lista = [5, 8, 2, 0, 3]
+print(mi_lista[1]) 
+```
+
+| 8
+
+---
+
+#### Ejemplo: Imprime los elementos de una lista y sus posiciones
+
+```python
+mi_lista = [5, 8, 2, 0, 3]  # Tamaño 5
+
+for i in range(5):
+    print(f"Elemento {i}: {mi_lista[i]}")
+```
+
+| Elemento 0: 5
+| Elemento 1: 8
+| Elemento 2: 2
+| Elemento 3: 0
+| Elemento 4: 3
+
+::: {.callout-tip}
+
+A diferencia de los objetos, las listas **si tienen una representación textual nativa**.
+
+```python
+print(mi_lista)
+```
+
+| [5, 8, 2, 0, 3]
+
+Recuerda que sólo los objetos de clases definidas como `@dataclasses.dataclass` podían imprimirse directamente.
+
+:::
+
+---
+
+#### Ejemplo: Imprime los valores impares de una lista y sus posiciones
+
+```python
+mi_lista = [5, 8, 2, 0, 3]  # Tamaño 5
+
+for i in range(5):
+    el = mi_lista[i]
+    if el % 2 != 0:
+        print(f"Elemento {i}: {el}")
+```
+
+| Elemento 0: 5
+| Elemento 4: 3
+
+---
+
+#### Ejemplo: Imprime en orden inverso los elementos de una lista y sus posiciones
+
+```python
+mi_lista = [5, 8, 2, 0, 3]  # Tamaño 5
+
+for i in range(4, -1, -1):
+    print(f"Elemento {i}: {mi_lista[i]}")
+```
+
+| Elemento 4: 3
+| Elemento 3: 0
+| Elemento 2: 2
+| Elemento 1: 8
+| Elemento 0: 5
+
+---
+
+### Acceso out-of-bounds
+
+- ¿Qué ocurre si intentamos acceder a una posición que no existe?
+
+```python
+mi_lista = [5, 8, 2, 0, 3]
+print(mi_lista[5])
+```
+
+| IndexError: list index out of range
+
+- **¡Cuidado!** 
+    - Deberemos asegurarnos de acceder a posiciones dentro del rango.
+
+---
+
+#### Ejemplo: Leer una lista de 5 números y pintarla en orden inverso
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+mi_lista = [0, 0, 0, 0, 0]
+
+for i in range(5):
+    print(f"Introduce {i}º número: ", end="")
+    mi_lista[i] = int(input())
+
+for i in range(4, -1, -1):
+    print(mi_lista[i])
+```
+
+:::
+::: {.column width="50%"}
+
+| Introduce 0º número: **4**
+| Introduce 1º número: **3**
+| Introduce 2º número: **7**
+| Introduce 3º número: **9**
+| Introduce 4º número: **4**
+| 4
+| 9
+| 7
+| 3
+| 4
+
+:::
+:::
+
+- ¿No existe **otra forma** de crear una lista de `n` elementos?
+    - `10` elementos: `[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]`
+    - ¿`10_000` elementos?
+    - ¿`n` elementos, siendo `n` un número introducido por el usuario?
+
+---
+
+- Podemos **inicializar** una lista con `n` elementos utilizando la **multiplicación** de listas:
+    - En Python, **multiplicar** una lista por un número `n` **crea** una lista con `n` **copias** de la lista original.
+
+```python
+mi_lista = [0] * 5  # [0, 0, 0, 0, 0]
+lista_grande = [0] * 10_000
+```
+
+::: {.callout-tip}
+
+Sí, es un poco raro, pero funciona. Más adelante aprenderemos otras técnicas más elegantes.
+
+:::
+
+---
+
+### Listas como argumentos de funciones
+
+- Los argumentos de una función pueden ser **de cualquier tipo**, incluidas las listas.
+- Recuerda que uno de los objetivos principales de las funciones es que sean **independientes** y **reutilizables**.
+    - Una función que **sólo funciona** con listas de **un tamaño concreto** no es muy reutilizable.
+
+::: {.columns}
+::: {.column width="30%"}
+
+**Acomplada a 5**
+
+```python
+def suma_acomplada(l):
+    suma = 0
+    for i in range(5):
+        suma += l[i]
+    return suma
+```
+
+:::
+::: {.column width="30%"}
+
+**Parametrizada**
+
+```python
+def suma_mejor(l, n):
+    suma = 0
+    for i in range(n):
+        suma += l[i]
+    return suma
+```
+
+:::
+::: {.column width="40%"}
+
+**Genérica**
+
+```python
+def suma(l):
+    suma = 0
+    for i in range(len(l)):
+        suma += l[i]
+    return suma
+```
+
+:::
+:::
+
+
+- La función `len()` devuelve el **número de elementos** de una lista.
+
+---
+
+#### Ejercicio: Leer una lista de teclado
+
+- Desarrolla una función que lea una lista de `n` números enteros introducidos por el usuario y devuelva la lista.
+
+
+```python
+def leer_lista(n):
+    # ???
+
+# TEST
+leer_lista(5)
+```
+
+---
+
+```python
+def leer_lista(n):
+    l = [0] * n
+    for i in range(n):
+        print(f"Introduce {i}º número: ", end="")
+        l[i] = int(input())
+    return l
+```
+
+---
+
+#### Ejercicio: Contar los elementos por encima de la media
+
+- Desarrolla una función que reciba una lista de números y devuelva cuántos elementos son mayores que la media.
+
+```python
+def contar_por_encima_de_media(l):
+    # ???
+
+# TEST
+contar_por_encima_de_media([4, 3, 7, 0])
+# Debería devolver 2
+```
+
+---
+
+```python
+def obtener_media(l):
+    suma = 0
+    for i in range(len(l)):
+        suma += l[i]
+    return suma / len(l)
+
+def contar_por_encima_de_media(l):
+    media = obtener_media(l)
+
+    cuenta = 0
+    for i in range(len(l)):
+        if l[i] > m:
+            cuenta += 1
+    return cuenta
+```
+
+---
+
+**Programa completo**
+
+```python
+def leer_lista(n):
+    l = [0] * n
+    for i in range(n):
+        print(f"Introduce {i}º número: ", end="")
+        l[i] = int(input())
+    return l
+
+def obtener_media(l):
+    suma = 0
+    for i in range(len(l)):
+        suma += l[i]
+    return suma / len(l)
+
+def contar_por_encima_de_media(l):
+    media = obtener_media(l)
+
+    cuenta = 0
+    for i in range(len(l)):
+        if l[i] > media:
+            cuenta += 1
+    return cuenta
+
+# TEST
+l = leer_lista(4)
+print(contar_por_encima_de_media(l))
+```
+
+---
+
+## Strings... ¿listas? {.center}
+
+---
+
+- Si tomamos la definición de lista como una colección de elementos ordenada y homogénea...
+    - ¿Encajan los **strings** en esta definición?
+- Desde que aprendimos el tipo de datos `str`, hemos tratado los strings como **unidades indivisibles**.
+    - Pero en realidad, un string es una **secuencia de caracteres**.
+
+```python
+s = "Hola"
+print(s[0])  # H
+```
+
+- En Python no existe el tipo de datos `char` como en otros lenguajes.
+    - Un carácter es un string de longitud `1`.
 
 
 ---
+
+#### Ejercicio: Contiene la I
+
+- Desarrolla una función que reciba un string `texto` y una letra `letra` y devuelva un valor booleano que represente si `s` contiene `l`.
+
+```python
+def contiene(texto, letra):
+    # ???
+
+# TEST
+print(contiene("Hola", "a"))  # True
+print(contiene("Hola", "j"))  # False
+```
+
+---
+
+```python
+def contiene(texto, letra):
+    encontrada = False
+    for i in range(len(texto)):
+        if texto[i] == letra:
+            encontrada = True
+    return encontrada
+
+# TEST
+print(contiene("Hola", "a"))
+print(contiene("Hola", "j"))
+```
+
+| True
+| False
 
