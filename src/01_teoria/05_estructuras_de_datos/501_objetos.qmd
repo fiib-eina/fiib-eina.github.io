@@ -4,7 +4,7 @@ subtitle: Objetos
 format: revealjs
 ---
 
-<!-- TODO: Revisar este inicio. Se queda muy alrgo y desconectan. Ha coindido con parciales -->
+<!-- TODO: Revisar este inicio. Se queda muy largo y desconectan. Ha coincido con parciales -->
 
 ## Tipos de datos estructurados {.center}
 
