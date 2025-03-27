@@ -336,7 +336,7 @@ def resta(c1, c2):
 
 ### Programa principal
 
-Desallora el programa principal:
+Desarrolla el programa principal:
 
 <details>
 <summary>Solución</summary>
