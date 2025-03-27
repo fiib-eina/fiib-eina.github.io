@@ -1,13 +1,15 @@
 ---
-title: Práctica 3
-subtitle: Tipos Primitivos
+title: Práctica 5
+subtitle: Objetos y listas
 format: html
 draft: true
 ---
 
-## DNI checksum
+## Letra del DNI
 
-El último dígito de un DNI español se calcula a partir de los 8 primeros dígitos. Para ello, se divide la cifra entre 23 y se toma el resto. A continuación, se busca el carácter correspondiente en la siguiente tabla:
+La letra de un DNI español se calcula a partir de los 8 primeros dígitos de ese DNI.
+Para ello, se divide la cifra entre 23 y se toma el resto.
+A continuación, se busca el carácter correspondiente en la siguiente tabla:
 
 | RESTO |	0 |	1 |	2 |	3 |	4 |	5 |	6 |	7 |	8 |	9 |	10 |	11 |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -28,8 +30,119 @@ Escribe un programa Python que solicite al usuario los 8 primeros dígitos de un
 | **12345678A**
 | El DNI no es correcto
 
+
+## Calculadora de números complejos
+
+Escribe un programa Python que implemente una **calculadora de números complejos** con las siguientes operaciones: suma y resta.
+El programa debe:
+
+  - **Pedir al usuario** que introduzca dos números complejos.
+  - **Pedir al usuario** que introduzca la operación a realizar.
+  - **Calcular** el resultado de la operación.
+  - **Mostrar el resultado** con la representación binomial: ($a+bi$), donde $a$ es la parte real y $b$ es la parte imaginaria del número complejo.
+
+Para ello, vas a escribir el código en dos ficheros distintos: un módulo denominado ``complejos.py`` y un programa denominado ``calculadora.py``.
+
+En el módulo ``complejos.py``, debes definir un tipo de dato denominado `Complejo`; una función denominada `pedir_numero_complejo()` que solicite al usuario la parte real y la parte imaginaria de un número complejo y devuelva un dato de tipo ``Complejo``; una función denominada ``escribir_numero_complejo()`` que, dado un dato de tipo ``Complejo``, lo escriba en la pantalla en forma binomial **sin acabar la línea**; una función denominada `sumar` que, dados dos número complejos, devuelva otro que represente su suma y otra función denominada `restar` que, dados dos número complejos, devuelva otro que represente su diferencia. 
+
+En el fichero ``calculadora.py``, debes importar el contenido del módulo ``complejos.py``, definir una función denominada `pedir_operacion()`, que pida al usuario una operación representada como ``"+"`` o ``"-"`` y escribir el código del programa solicitado. 
+
+El comportamiento del programa debe ser como el siguiente:
+
+| Escribe un número complejo:
+| Parte real: **8.3**
+| Parte imaginaria: **3**
+| Escribe otro número complejo:
+| Parte real: **1**
+| Parte imaginaria: **2**
+| Introduce la operación: **+**
+| 9.3+5.0i
+
+Otro ejemplo de ejecución (observa en este caso cómo se escribe la parte imaginaria del resultado):
+
+| Parte real: **3**
+| Parte imaginaria: **3**
+| Escribe otro número complejo:
+| Parte real: **3**
+| Parte imaginaria: **5**
+| Introduce la operación: **-**
+| 0.0-2.0i
+
+Un último ejemplo de ejecución:
+
+| Escribe un número complejo:
+| Parte real: **3.14**
+| Parte imaginaria: **-4.4**
+| Escribe otro número complejo:
+| Parte real: **16.3**
+| Parte imaginaria: **0.33**
+| Introduce la operación: *
+| Operación no válida
+
+
+## Listas de números complejos
+
+Escribe un programa, en un fichero denominado ``lista_complejos.py``, que genere una lista de $n$ números complejos, con sus partes real e imaginaria elegidas en un intervalo $(x, y)$ de manera aleatoria.
+El programa debe, en primer lugar, solicitar al usuario el número $n$ de números complejos con el que desea trabajar y, a continuación, pedir los límites del intervalo $(x, y)$ al usuario, garantizando que los valores introducidos cumplen que $x < y$.
+Después, mostrará al usuario todos los números complejos generados.
+Posteriormente, mostrará al usuario el número complejo de mayor módulo de la lista y la suma de todos los complejos generados.
+El programa terminará escribiendo en la pantalla la lista de los números complejos generados que pertenecen al primer cuadrante (aquellos en los que la parte real y la parte imaginaria son estrictamente positivas).
+
+Para escribir este programa, deberás apoyarte de nuevo en el contenido de tu módulo ``complejos.py``.
+En el fichero ``lista_complejos.py``, añade funciones para, al menos, lo siguiente:
+
+ - Generar un número complejo con partes real e imaginaria en un determinado intervalo. 
+ - Escribir una lista de números complejos en la pantalla.
+ - Calcular el módulo de un número complejo.
+ - Calcular el número complejo de menor módulo de una lista de complejos
+ - Sumar todos los complejos de una lista.
+ - Generar, a partir de una lista de complejos, otra con los que pertenecen al primer cuadrante. 
+
+Ejemplo de ejecución:
+
+| Introduce el número de complejos a generar: **-8**
+| Introduce el número de complejos a generar: **0**
+| Introduce el número de complejos a generar: **4**
+| Introduce el límite inferior: **8**
+| Introduce el límite superior: **1**
+| Introduce el límite inferior: **-2**
+| Introduce el límite superior: **2**
+| 
+| Lista de números complejos generada:
+| -1.9240824097904436-0.07643196996330426i, 0.40592527711422255-0.8575736795521234i, 1.654243012001508+1.5047247783698334i, 0.5075083505954767-1.8506542890331574i
+| 
+| Número complejo de menor módulo:
+| 0.40592527711422255-0.8575736795521234i
+| 
+| Suma de los números complejos:
+| 0.6435942299207635-1.2799351601787516i
+| 
+| Números complejos del primer cuadrante:
+| 1.654243012001508+1.5047247783698334i
+
+
+Otro ejemplo de ejecución:
+
+| Introduce el número de complejos a generar: **6**
+| Introduce el límite inferior: **-0.1**
+| Introduce el límite superior: **0**    
+| 
+| Lista de números complejos generada:
+| -0.009337364175544996-0.0072794709419673476i, -0.014085180306424236-0.09777682704634409i, -0.002428597407685501-0.018586686045509254i, -0.011638417285609243-0.0719935288055123i, -0.09112798035726183-0.06967794282571749i, -0.009342509047787426-0.04806089121769208i
+| 
+| Número complejo de menor módulo:
+| -0.009337364175544996-0.0072794709419673476i
+| 
+| Suma de los números complejos:
+| -0.13796004858031324-0.31337534688274254i
+| 
+| Números complejos del primer cuadrante:
+
+
 ## Entrega de la práctica
 
-**Antes del _ _ de _ a las __:__,** deberán haberse subido a Moodle los siguientes ficheros:
+**Antes del 26 de abril a las 18:00,** deberán haberse subido a Moodle los siguientes ficheros:
 
-- [ ] `.py`
+- [ ] `complejos.py`
+- [ ] `calculadora.py`
+- [ ] `lista_complejos.py`
