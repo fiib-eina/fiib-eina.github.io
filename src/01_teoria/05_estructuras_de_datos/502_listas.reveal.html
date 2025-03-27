@@ -596,34 +596,6 @@ Introduce 4º número: <strong>4</strong><br>
 <li>Un carácter es un string de longitud <code>1</code>.</li>
 </ul></li>
 </ul>
-</section>
-<section class="slide level2">
-
-<h4 id="ejercicio-contiene-la-i">Ejercicio: Contiene la I</h4>
-<ul>
-<li>Desarrolla una función que reciba un string <code>texto</code> y una letra <code>letra</code> y devuelva un valor booleano que represente si <code>s</code> contiene <code>l</code>.</li>
-</ul>
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a><span class="kw">def</span> contiene(texto, letra):</span>
-<span id="cb22-2"><a></a>    <span class="co"># ???</span></span>
-<span id="cb22-3"><a></a></span>
-<span id="cb22-4"><a></a><span class="co"># </span><span class="al">TEST</span></span>
-<span id="cb22-5"><a></a><span class="bu">print</span>(contiene(<span class="st">"Hola"</span>, <span class="st">"a"</span>))  <span class="co"># True</span></span>
-<span id="cb22-6"><a></a><span class="bu">print</span>(contiene(<span class="st">"Hola"</span>, <span class="st">"j"</span>))  <span class="co"># False</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2">
-
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a><span class="kw">def</span> contiene(texto, letra):</span>
-<span id="cb23-2"><a></a>    encontrada <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb23-3"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(texto)):</span>
-<span id="cb23-4"><a></a>        <span class="cf">if</span> texto[i] <span class="op">==</span> letra:</span>
-<span id="cb23-5"><a></a>            encontrada <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb23-6"><a></a>    <span class="cf">return</span> encontrada</span>
-<span id="cb23-7"><a></a></span>
-<span id="cb23-8"><a></a><span class="co"># </span><span class="al">TEST</span></span>
-<span id="cb23-9"><a></a><span class="bu">print</span>(contiene(<span class="st">"Hola"</span>, <span class="st">"a"</span>))</span>
-<span id="cb23-10"><a></a><span class="bu">print</span>(contiene(<span class="st">"Hola"</span>, <span class="st">"j"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="line-block">True<br>
-False</div>
 
 
 </section>

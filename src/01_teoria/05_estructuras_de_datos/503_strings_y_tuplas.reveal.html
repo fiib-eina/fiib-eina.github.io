@@ -194,55 +194,300 @@
 
 <section id="title-slide" data-background-color="#223d71" data-background-image="../../../src/_style/logos/unizar-black.svg" data-background-opacity="0.30" data-background-size="auto 600px" class="quarto-title-block center">
   <h1 class="title">Teoría 503</h1>
-  <p class="subtitle">Strings y Tuplas</p>
+  <p class="subtitle">Listas II</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="listas-dinámicas" class="slide level2 center">
-<h2>Listas dinámicas</h2>
+<section id="secuencias" class="slide level2 center">
+<h2>Secuencias</h2>
+</section>
+<section class="slide level2">
+
 <ul>
-<li>A diferencia de otros lenguajes más rígidos, en Python <strong>todas las listas son dinámicas</strong>:
+<li><p>Escribe un programa Python que lea una secuencia de números dada por el usuario (terminada en 0) y la guarde en una lista.</p></li>
+<li><p>¿Cómo sabemos <strong>cuántos números</strong> vamos a leer?</p>
 <ul>
-<li>Su tamaño <strong>no es fijo</strong>.</li>
-<li>Pueden <strong>crecer</strong> o <strong>reducirse</strong> según necesitemos.</li>
+<li>El enunciado no lo especifica.</li>
+<li>¿Asumimos un <strong>máximo razonable</strong>?
+<ul>
+<li>100? 1000? 10,000?</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>mi_lista <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> <span class="dv">1000</span></span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a><span class="bu">print</span>(<span class="st">"Introduce una secuencia de números (termina en 0):"</span>)</span>
+<span id="cb1-4"><a></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb1-5"><a></a>cantidad <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-6"><a></a></span>
+<span id="cb1-7"><a></a><span class="cf">while</span> n <span class="op">!=</span> <span class="dv">0</span>:</span>
+<span id="cb1-8"><a></a>    mi_lista[cantidad] <span class="op">=</span> n</span>
+<span id="cb1-9"><a></a>    cantidad <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb1-10"><a></a>    n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>Escribe una función <code>lee_lista()</code> que lea una secuencia de números enteros dada por el usuario (terminada en 0) y devuelva una lista con los números leídos.</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> lee_lista():</span>
+<span id="cb2-2"><a></a>    mi_lista <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> <span class="dv">1000</span></span>
+<span id="cb2-3"><a></a></span>
+<span id="cb2-4"><a></a>    <span class="bu">print</span>(<span class="st">"Introduce una secuencia de números (termina en 0):"</span>)</span>
+<span id="cb2-5"><a></a>    n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb2-6"><a></a>    cantidad <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-7"><a></a></span>
+<span id="cb2-8"><a></a>    <span class="cf">while</span> n <span class="op">!=</span> <span class="dv">0</span>:</span>
+<span id="cb2-9"><a></a>        mi_lista[cantidad] <span class="op">=</span> n</span>
+<span id="cb2-10"><a></a>        cantidad <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb2-11"><a></a>        n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb2-12"><a></a>    <span class="cf">return</span> mi_lista</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Utiliza la función <code>lee_lista()</code> para leer una lista de números, recorrerla y muestra los valores leídos.</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>lista <span class="op">=</span> lee_lista()</span>
+<span id="cb3-2"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lista)):</span>
+<span id="cb3-3"><a></a>    <span class="bu">print</span>(lista[i])</span>
+<span id="cb3-4"><a></a><span class="co"># !!!! PINTA MIL CEROS !!!!</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>¿Cómo puedo saber cuántos elementos de <code>lista</code> son válidos?</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="secuencias-1">Secuencias</h3>
+<ul>
+<li>A veces trabajaremos con <strong>secuencias de números</strong> cuyo tamaño <strong>no conoceremos de antemano</strong>.</li>
+<li>Esto nos dificulta usar un <strong>tamaño fijo</strong> para la lista.
+<ul>
+<li>Tengo que crear una lista con un tamaño <strong>suficientemente grande</strong> y <strong>dejar vacíos</strong> los espacios que no use.</li>
+</ul></li>
+<li>Esto introduce un segundo problema:
+<ul>
+<li>¿Cómo <strong>saber cuántos elementos</strong> de la lista son válidos?</li>
 </ul></li>
 </ul>
 </section>
+<section class="slide level2">
+
+<h4 id="técticas-de-codificación-de-una-secuencia">Técticas de codificación de una secuencia</h4>
+<ul>
+<li><strong>Opión 1:</strong> Cambiar el <code>for</code> por un <code>while</code> que recorra la lista hasta encontrar un <strong>valor especial</strong> que indique el final de la secuencia.
+<ul>
+<li>En este caso, puede ser el valor <code>0</code>.</li>
+<li>No siempre es posible usar un valor especial.</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>lista <span class="op">=</span> lee_lista()</span>
+<span id="cb4-2"><a></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb4-3"><a></a><span class="cf">while</span> lista[i] <span class="op">!=</span> <span class="dv">0</span>:</span>
+<span id="cb4-4"><a></a>    <span class="bu">print</span>(lista[i])</span>
+<span id="cb4-5"><a></a>    i <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><strong>Opión 2:</strong> Guardar en otra variable el <strong>número de elementos válidos</strong> de la lista.
+<ul>
+<li>En este caso, <code>cantidad</code>.</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>lista <span class="op">=</span> lee_lista()</span>
+<span id="cb5-2"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(cantidad):  <span class="co"># Pero cantidad no está definida aquí</span></span>
+<span id="cb5-3"><a></a>    <span class="bu">print</span>(lista[i])</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li><strong>Opión 3:</strong> Devolver tanto la lista como el número de elementos válidos mediante un objeto.
+<ul>
+<li>Creamos una clase <code>Secuencia</code> que contenga ambos valores.</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="im">import</span> dataclasses</span>
+<span id="cb6-2"><a></a></span>
+<span id="cb6-3"><a></a><span class="at">@dataclasses.dataclass</span></span>
+<span id="cb6-4"><a></a><span class="kw">class</span> Secuencia:</span>
+<span id="cb6-5"><a></a>    lista: <span class="bu">list</span>[<span class="bu">int</span>]</span>
+<span id="cb6-6"><a></a>    cantidad: <span class="bu">int</span></span>
+<span id="cb6-7"><a></a></span>
+<span id="cb6-8"><a></a><span class="kw">def</span> lee_lista():</span>
+<span id="cb6-9"><a></a>    mi_lista <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> <span class="dv">1000</span></span>
+<span id="cb6-10"><a></a>    cantidad <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb6-11"><a></a></span>
+<span id="cb6-12"><a></a>    <span class="bu">print</span>(<span class="st">"Introduce una secuencia de números (termina en 0):"</span>)</span>
+<span id="cb6-13"><a></a>    n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb6-14"><a></a></span>
+<span id="cb6-15"><a></a>    <span class="cf">while</span> n <span class="op">!=</span> <span class="dv">0</span>:</span>
+<span id="cb6-16"><a></a>        mi_lista[cantidad] <span class="op">=</span> n</span>
+<span id="cb6-17"><a></a>        cantidad <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb6-18"><a></a>        n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb6-19"><a></a>    <span class="cf">return</span> Secuencia(mi_lista, cantidad)</span>
+<span id="cb6-20"><a></a></span>
+<span id="cb6-21"><a></a>secuencia <span class="op">=</span> lee_lista()</span>
+<span id="cb6-22"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(secuencia.cantidad):</span>
+<span id="cb6-23"><a></a>    <span class="bu">print</span>(secuencia.lista[i])</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li><strong>Opción 4:</strong> Usar <strong>listas dinámicas</strong>.
+<ul>
+<li>…</li>
+</ul></li>
+</ul>
+</section>
+<section id="listas-dinámicas" class="slide level2 center">
+<h2>Listas dinámicas</h2>
+</section>
+<section class="slide level2">
+
+<h3 id="listas-dinámicas-1">Listas dinámicas</h3>
+<ul>
+<li>En programación, una <strong>lista dinámica</strong> es una estructura de datos que puede cambiar de tamaño (crecer o reducirse) durante la ejecución del programa.</li>
+<li>La mayoría de los lenguajes de programación modernos proporcionan implementaciones de listas dinámicas.</li>
+<li>En teoría, una lista dinámica <strong>puede crecer</strong> hasta el <strong>tamaño de la memoria disponible en el sistema</strong>.</li>
+<li>Se trata de un arma de doble filo:
+<ul>
+<li><strong>Flexibilidad</strong> para trabajar con colecciones de elementos de tamaño variable.</li>
+<li><strong>Coste</strong> en términos de <strong>rendimiento</strong>.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="listas-dinámicas-en-python">Listas dinámicas en Python</h3>
+<ul>
+<li>En el caso de Python <strong>todas las listas son dinámicas</strong>:
+<ul>
+<li>Su tamaño <strong>nunca es fijo</strong>.</li>
+<li>Podemos hacer <strong>crecer</strong> o <strong>menguar</strong> el tamaño de cualquier lista.</li>
+</ul></li>
+<li>Esto nos permite usar listas <strong>sin definir su tamaño</strong> de antemano.
+<ul>
+<li>Sin embargo, <strong>cambiar</strong> el tamaño de una lista <strong>tiene un coste</strong>.</li>
+<li>Procuraremos recurir a esto <strong>sólo cuando sea necesario</strong>.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="operaciones-con-listas">Operaciones con listas</h3>
+<ul>
+<li><strong>Mutaciones</strong>: Modifican la lista originales
+<ul>
+<li><code>mi_lista.append(elemento)</code>
+<ul>
+<li><strong>Añade</strong> un elemento al final de la lista.</li>
+<li>Actualiza el tamaño de la lista.</li>
+</ul></li>
+</ul></li>
+<li><strong>Funcionales</strong>: Devuelven listas nuevas
+<ul>
+<li><code>mi_lista1 + mi_lista2</code>
+<ul>
+<li><strong>Concatena</strong> dos listas.</li>
+<li>Devuelve una <strong>nueva lista</strong>.</li>
+<li><strong>NO</strong> modifica las listas originales.</li>
+</ul></li>
+</ul></li>
+<li><em>Existen <strong>muchas</strong> más, pero estas son las más básicas.</em></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplos-append-y-concatenación">Ejemplos: Append y concatenación</h4>
+<p><strong>Ejemplo de <code>append</code></strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>mi_lista <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb7-2"><a></a><span class="bu">print</span>(mi_lista)       <span class="co"># [1, 2, 3]</span></span>
+<span id="cb7-3"><a></a><span class="bu">print</span>(<span class="bu">len</span>(mi_lista))  <span class="co"># 3</span></span>
+<span id="cb7-4"><a></a></span>
+<span id="cb7-5"><a></a>mi_lista.append(<span class="dv">4</span>)</span>
+<span id="cb7-6"><a></a><span class="bu">print</span>(mi_lista)      <span class="co"># [1, 2, 3, 4]</span></span>
+<span id="cb7-7"><a></a><span class="bu">print</span>(<span class="bu">len</span>(mi_lista)) <span class="co"># 4</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Ejemplo de concatenación</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>mi_lista1 <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb8-2"><a></a>mi_lista2 <span class="op">=</span> [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb8-3"><a></a>mi_lista3 <span class="op">=</span> mi_lista1 <span class="op">+</span> mi_lista2</span>
+<span id="cb8-4"><a></a><span class="bu">print</span>(mi_lista3)  <span class="co"># [1, 2, 3, 4, 5, 6]</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-warning callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Solo se pueden concatenar listas con listas. No se puede:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>lista <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>] <span class="op">+</span> <span class="dv">4</span>  <span class="co"># ERROR</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>La forma correcta sería:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>lista <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>] <span class="op">+</span> [<span class="dv">4</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-leer-una-secuencia-de-números-terminada-en-0">Ejemplo: Leer una secuencia de números (terminada en 0)</h4>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="kw">def</span> lee_lista():</span>
+<span id="cb11-2"><a></a>    mi_lista <span class="op">=</span> []</span>
+<span id="cb11-3"><a></a></span>
+<span id="cb11-4"><a></a>    <span class="bu">print</span>(<span class="st">"Introduce una secuencia de números (termina en 0):"</span>)</span>
+<span id="cb11-5"><a></a>    n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb11-6"><a></a></span>
+<span id="cb11-7"><a></a>    <span class="cf">while</span> n <span class="op">!=</span> <span class="dv">0</span>:</span>
+<span id="cb11-8"><a></a>        mi_lista.append(n)</span>
+<span id="cb11-9"><a></a>        n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb11-10"><a></a>    <span class="cf">return</span> mi_lista</span>
+<span id="cb11-11"><a></a></span>
+<span id="cb11-12"><a></a>lista <span class="op">=</span> lee_lista()</span>
+<span id="cb11-13"><a></a><span class="bu">print</span>(lista)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejercicio-leer-nombres-de-alumnos">Ejercicio: Leer nombres de alumnos</h4>
+<ul>
+<li>Escribe una función <code>lee_nombres()</code> que lea una secuencia de nombres de alumnos dada por el usuario (terminada en blanco: pulsar enter sin escribir nada más) y devuelva una lista con los nombres leídos.</li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="kw">def</span> lee_nombres():</span>
+<span id="cb12-2"><a></a>    <span class="co"># ???</span></span>
+<span id="cb12-3"><a></a></span>
+<span id="cb12-4"><a></a><span class="co"># </span><span class="al">TEST</span></span>
+<span id="cb12-5"><a></a><span class="bu">print</span>(lee_nombres())  <span class="co"># Mostrará los nombres escritos</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="kw">def</span> lee_nombres():</span>
+<span id="cb13-2"><a></a>    nombres <span class="op">=</span> []</span>
+<span id="cb13-3"><a></a></span>
+<span id="cb13-4"><a></a>    <span class="bu">print</span>(<span class="st">"Introduce los nombres de los alumnos (termina en blanco):"</span>)</span>
+<span id="cb13-5"><a></a>    nombre <span class="op">=</span> <span class="bu">input</span>()</span>
+<span id="cb13-6"><a></a></span>
+<span id="cb13-7"><a></a>    <span class="cf">while</span> nombre <span class="op">!=</span> <span class="st">""</span>:</span>
+<span id="cb13-8"><a></a>        nombres.append(nombre)</span>
+<span id="cb13-9"><a></a>        nombre <span class="op">=</span> <span class="bu">input</span>()</span>
+<span id="cb13-10"><a></a>    <span class="cf">return</span> nombres</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-encontrar-al-primer-alumno-por-orden-alfabético">Ejemplo: Encontrar al primer alumno (por orden alfabético)</h4>
+<ul>
+<li>Escribe una función <code>encuentra_primero(nombres)</code> que reciba una lista de nombres de alumnos y devuelva el nombre del primer alumno (por orden alfabético).</li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="kw">def</span> encuentra_primero(nombres):</span>
+<span id="cb14-2"><a></a>    <span class="co"># ???</span></span>
+<span id="cb14-3"><a></a></span>
+<span id="cb14-4"><a></a><span class="co"># </span><span class="al">TEST</span></span>
+<span id="cb14-5"><a></a><span class="bu">print</span>(encuentra_primero([<span class="st">"Sergio"</span>, <span class="st">"Miguel"</span>, <span class="st">"Messi"</span>]))  <span class="co"># Debería mostrar "Messi"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="kw">def</span> encuentra_primero(nombres):</span>
+<span id="cb15-2"><a></a>    primero <span class="op">=</span> nombres[<span class="dv">0</span>]</span>
+<span id="cb15-3"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(nombres)):</span>
+<span id="cb15-4"><a></a>        <span class="cf">if</span> nombres[i] <span class="op">&lt;</span> primero:</span>
+<span id="cb15-5"><a></a>            primero <span class="op">=</span> nombres[i]</span>
+<span id="cb15-6"><a></a>    <span class="cf">return</span> primero</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 <section id="uso-avanzado-de-listas" class="slide level2 center">
 <h2>Uso avanzado de listas</h2>
-</section>
-<section class="slide level2">
-
-<h3 id="listas-vs-objetos">Listas vs Objetos</h3>
-</section>
-<section class="slide level2">
-
-<h3 id="listas-de-objetos-y-objetos-con-listas">Listas de objetos y objetos con listas</h3>
-</section>
-<section class="slide level2">
-
-<h4 id="ejemplo-leer-una-secuencia-de-números-terminada-en-0-y-con-un-máximo-de-10000-elementos">Ejemplo: Leer una secuencia de números (terminada en 0 y con un máximo de 10,000 elementos)</h4>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>SIZE <span class="op">=</span> <span class="dv">10_000</span>  <span class="co"># BUENAS PRÁCTICAS: Definir el tamaño máximo en una constante</span></span>
-<span id="cb1-2"><a></a>mi_lista <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> SIZE</span>
-<span id="cb1-3"><a></a>i <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb1-4"><a></a></span>
-<span id="cb1-5"><a></a><span class="bu">print</span>(<span class="st">"Introduce una secuencia de números (termina en 0):"</span>)</span>
-<span id="cb1-6"><a></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
-<span id="cb1-7"><a></a></span>
-<span id="cb1-8"><a></a><span class="cf">while</span> n <span class="op">!=</span> <span class="dv">0</span> <span class="kw">and</span> i <span class="op">&lt;</span> SIZE:</span>
-<span id="cb1-9"><a></a>    mi_lista[i] <span class="op">=</span> n</span>
-<span id="cb1-10"><a></a>    i <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb1-11"><a></a>    n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
-<span id="cb1-12"><a></a></span>
-<span id="cb1-13"><a></a><span class="bu">print</span>(<span class="ss">f"Se han leído </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss"> números."</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="line-block">Introduce una secuencia de números (termina en 0):<br>
-<strong>4</strong><br>
-<strong>3</strong><br>
-<strong>7</strong><br>
-<strong>0</strong><br>
-Se han leído 3 números.</div>
 </section>
 <section class="slide level2">
 
@@ -254,6 +499,112 @@ Se han leído 3 números.</div>
 <li><strong>QUE PUEDAS NO SIGNIFICA QUE DEBAS</strong>.</li>
 </ul></li>
 </ul>
+</section>
+<section class="slide level2">
+
+<h3 id="listas-de-objetos">Listas de objetos</h3>
+<ul>
+<li>Una lista <strong>debe</strong> contener elementos del mismo tipo.</li>
+<li>Pero ese tipo <strong>no tiene por qué ser un tipo básico</strong>.</li>
+<li>Una lista puede albergar:
+<ul>
+<li><strong>Objetos</strong> de una clase.</li>
+<li>Otras <strong>listas</strong>.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="ejercicio-lista-de-alumnos">Ejercicio: Lista de alumnos</h4>
+<p>Vamos a desarrollar una colección de clases y funciones que faciliten la gestión de una lista de alumnos.</p>
+<ul>
+<li>Una clase <code>Alumno</code> con los atributos <code>nombre</code>, <code>nacimiento</code> y <code>NIP</code>.</li>
+<li>Una función <code>lee_alumno()</code> que solicite al usuario los datos de un alumno y devuelva un objeto de la clase <code>Alumno</code>.</li>
+<li>Una función <code>lee_alumnos()</code> que lea una secuencia de alumnos dada por el usuario (terminada en blanco) y devuelva una lista con los alumnos leídos.</li>
+<li>Una función <code>buscar_por_nip(alumnos, nip)</code> que reciba una lista de alumnos y un NIP y devuelva el alumno con ese NIP.</li>
+<li>Una función <code>filtrar_por_nacimiento(alumnos, nacimiento)</code> que reciba una lista de alumnos y un año de nacimiento y devuelva una lista <strong>nueva</strong> que contenga sólo los alumnos nacidos en un año anterior o igual al año indicado.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h5 id="clase-alumno">Clase <code>Alumno</code></h5>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="at">@dataclasses.dataclass</span></span>
+<span id="cb16-2"><a></a><span class="kw">class</span> Alumno:</span>
+<span id="cb16-3"><a></a>    nombre: <span class="bu">str</span></span>
+<span id="cb16-4"><a></a>    nacimiento: <span class="bu">int</span></span>
+<span id="cb16-5"><a></a>    nip: <span class="bu">int</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h5 id="función-lee_alumno">Función <code>lee_alumno()</code></h5>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="kw">def</span> lee_alumno():</span>
+<span id="cb17-2"><a></a>    <span class="bu">print</span>(<span class="st">"Nombre: "</span>, end<span class="op">=</span><span class="st">""</span>)</span>
+<span id="cb17-3"><a></a>    nombre <span class="op">=</span> <span class="bu">input</span>()</span>
+<span id="cb17-4"><a></a>    <span class="bu">print</span>(<span class="st">"Año de nacimiento: "</span>, end<span class="op">=</span><span class="st">""</span>)</span>
+<span id="cb17-5"><a></a>    nacimiento <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb17-6"><a></a>    <span class="bu">print</span>(<span class="st">"NIP: "</span>, end<span class="op">=</span><span class="st">""</span>)</span>
+<span id="cb17-7"><a></a>    nip <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb17-8"><a></a></span>
+<span id="cb17-9"><a></a>    <span class="cf">return</span> Alumno(nombre, nacimiento, nip)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h5 id="función-lee_alumnos">Función <code>lee_alumnos()</code></h5>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="kw">def</span> lee_alumnos():</span>
+<span id="cb18-2"><a></a>    alumnos <span class="op">=</span> []</span>
+<span id="cb18-3"><a></a></span>
+<span id="cb18-4"><a></a>    <span class="bu">print</span>(<span class="st">"Introduce los datos de los alumnos (termina en blanco):"</span>)</span>
+<span id="cb18-5"><a></a>    alumno <span class="op">=</span> lee_alumno()</span>
+<span id="cb18-6"><a></a></span>
+<span id="cb18-7"><a></a>    <span class="cf">while</span> alumno.nombre <span class="op">!=</span> <span class="st">""</span>:</span>
+<span id="cb18-8"><a></a>        alumnos.append(alumno)</span>
+<span id="cb18-9"><a></a>        alumno <span class="op">=</span> lee_alumno()</span>
+<span id="cb18-10"><a></a>    <span class="cf">return</span> alumnos</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h5 id="función-buscar_por_nipalumnos-nip-sin-early-return">Función <code>buscar_por_nip(alumnos, nip)</code> (sin early return)</h5>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="kw">def</span> buscar_por_nip(alumnos, nip):</span>
+<span id="cb19-2"><a></a>    alumno <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb19-3"><a></a>    <span class="cf">while</span> i <span class="op">&lt;</span> <span class="bu">len</span>(alumnos) <span class="kw">and</span> alumno <span class="op">==</span> <span class="va">None</span>:</span>
+<span id="cb19-4"><a></a>        <span class="cf">if</span> alumnos[i].nip <span class="op">==</span> nip:</span>
+<span id="cb19-5"><a></a>            alumno <span class="op">=</span> alumnos[i]</span>
+<span id="cb19-6"><a></a>        i <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb19-7"><a></a>    <span class="cf">return</span> alumno</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-tip callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<ul>
+<li><code>None</code> es un valor especial que se usa en Python para indicar la ausencia de un valor.</li>
+<li>Es válido para cualquier tipo de dato. (Devolver <code>None</code> no se considera <em>violar</em> el tipo de retorno de la función).</li>
+<li>El tipo <code>None</code> es tan importante en programación como el <code>0</code> en matemáticas.</li>
+<li>Esto es sólo la punta del iceberg de la <em>“gestión de errores y excepciones”</em>.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h5 id="función-buscar_por_nipalumnos-nip-con-early-return">Función <code>buscar_por_nip(alumnos, nip)</code> (con early return)</h5>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a><span class="kw">def</span> buscar_por_nip(alumnos, nip):</span>
+<span id="cb20-2"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(alumnos)):</span>
+<span id="cb20-3"><a></a>        <span class="cf">if</span> alumno[i].nip <span class="op">==</span> nip:</span>
+<span id="cb20-4"><a></a>            <span class="cf">return</span> alumno[i]</span>
+<span id="cb20-5"><a></a>    <span class="cf">return</span> <span class="va">None</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h5 id="función-filtrar_por_nacimientoalumnos-nacimiento">Función <code>filtrar_por_nacimiento(alumnos, nacimiento)</code></h5>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a><span class="kw">def</span> filtrar_por_nacimiento(alumnos, nacimiento):</span>
+<span id="cb21-2"><a></a>    filtrados <span class="op">=</span> []</span>
+<span id="cb21-3"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(alumnos)):</span>
+<span id="cb21-4"><a></a>        <span class="cf">if</span> alumnos[i].nacimiento <span class="op">&lt;=</span> nacimiento:</span>
+<span id="cb21-5"><a></a>            filtrados.append(alumnos[i])</span>
+<span id="cb21-6"><a></a>    <span class="cf">return</span> filtrados</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
