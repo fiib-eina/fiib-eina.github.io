@@ -20,7 +20,7 @@ while n != 0:
 print(f"La suma de los números es: {suma}")
 ```
 
-- Sólo necesitamos almacenar un número `n` a la vez.
+- Solo necesitamos almacenar un número `n` a la vez.
 
 ---
 
@@ -102,7 +102,7 @@ print(f"Hay {cuenta} números por encima de la media.")
 - En Python, las listas se  **definen** como
     - la **secuencia de valores** que la conforman,
     - separados por comas
-    - y envueltros en corchetes `[]`.
+    - y envueltos en corchetes `[]`.
 
 ```python
 mi_lista = [5, 8, 2, 0, 3]               # Lista de 5 enteros
@@ -119,7 +119,7 @@ vacía = []                               # Lista vacía
 - Para **acceder** a dicho elemento, se **utiliza**:
     - El **identificador** de la lista,
     - el **índice** del elemento deseado.
-    - envueltro en **corchetes** `[]`.
+    - envuelto en **corchetes** `[]`.
 - **La primera posición** de una lista es la `0`.
     - NO la `1`.
 
@@ -157,7 +157,7 @@ print(mi_lista)
 
 | [5, 8, 2, 0, 3]
 
-Recuerda que sólo los objetos de clases definidas como `@dataclasses.dataclass` podían imprimirse directamente.
+Recuerda que solo los objetos de clases definidas como `@dataclasses.dataclass` pueden imprimirse directamente.
 
 :::
 
@@ -272,15 +272,15 @@ Sí, es un poco raro, pero funciona. Más adelante aprenderemos otras técnicas 
 
 - Los argumentos de una función pueden ser **de cualquier tipo**, incluidas las listas.
 - Recuerda que uno de los objetivos principales de las funciones es que sean **independientes** y **reutilizables**.
-    - Una función que **sólo funciona** con listas de **un tamaño concreto** no es muy reutilizable.
+    - Una función que **solo funciona** con listas de **un tamaño concreto** no es muy reutilizable.
 
 ::: {.columns}
 ::: {.column width="30%"}
 
-**Acomplada a 5**
+**Acoplada a 5**
 
 ```python
-def suma_acomplada(l):
+def suma_acoplada(l):
     suma = 0
     for i in range(5):
         suma += l[i]
