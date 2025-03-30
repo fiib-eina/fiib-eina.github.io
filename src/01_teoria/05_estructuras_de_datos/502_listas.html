@@ -171,7 +171,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-8"><a href="#cb1-8"></a></span>
 <span id="cb1-9"><a href="#cb1-9"></a><span class="bu">print</span>(<span class="ss">f"La suma de los números es: </span><span class="sc">{</span>suma<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li>Sólo necesitamos almacenar un número <code>n</code> a la vez.</li>
+<li>Solo necesitamos almacenar un número <code>n</code> a la vez.</li>
 </ul>
 <hr>
 </section>
@@ -259,7 +259,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>la <strong>secuencia de valores</strong> que la conforman,</li>
 <li>separados por comas</li>
-<li>y envueltros en corchetes <code>[]</code>.</li>
+<li>y envueltos en corchetes <code>[]</code>.</li>
 </ul></li>
 </ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>mi_lista <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">3</span>]               <span class="co"># Lista de 5 enteros</span></span>
@@ -276,7 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>El <strong>identificador</strong> de la lista,</li>
 <li>el <strong>índice</strong> del elemento deseado.</li>
-<li>envueltro en <strong>corchetes</strong> <code>[]</code>.</li>
+<li>envuelto en <strong>corchetes</strong> <code>[]</code>.</li>
 </ul></li>
 <li><strong>La primera posición</strong> de una lista es la <code>0</code>.
 <ul>
@@ -307,7 +307,7 @@ Elemento 4: 3</div>
 <p>A diferencia de los objetos, las listas <strong>si tienen una representación textual nativa</strong>.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="bu">print</span>(mi_lista)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="line-block">[5, 8, 2, 0, 3]</div>
-<p>Recuerda que sólo los objetos de clases definidas como <code>@dataclasses.dataclass</code> podían imprimirse directamente.</p>
+<p>Recuerda que solo los objetos de clases definidas como <code>@dataclasses.dataclass</code> pueden imprimirse directamente.</p>
 </div>
 </div>
 </div>
@@ -415,13 +415,13 @@ Introduce 4º número: <strong>4</strong><br>
 <li>Los argumentos de una función pueden ser <strong>de cualquier tipo</strong>, incluidas las listas.</li>
 <li>Recuerda que uno de los objetivos principales de las funciones es que sean <strong>independientes</strong> y <strong>reutilizables</strong>.
 <ul>
-<li>Una función que <strong>sólo funciona</strong> con listas de <strong>un tamaño concreto</strong> no es muy reutilizable.</li>
+<li>Una función que <strong>solo funciona</strong> con listas de <strong>un tamaño concreto</strong> no es muy reutilizable.</li>
 </ul></li>
 </ul>
 <div class="columns">
 <div class="column" style="width:30%;">
-<p><strong>Acomplada a 5</strong></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">def</span> suma_acomplada(l):</span>
+<p><strong>Acoplada a 5</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">def</span> suma_acoplada(l):</span>
 <span id="cb13-2"><a href="#cb13-2"></a>    suma <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb13-3"><a href="#cb13-3"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
 <span id="cb13-4"><a href="#cb13-4"></a>        suma <span class="op">+=</span> l[i]</span>
