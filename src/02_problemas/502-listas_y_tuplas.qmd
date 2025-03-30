@@ -50,6 +50,75 @@ def ordena_lista(lista):
 
 </details>
 
+## Cuenta palabras
 
+Escribe una función que reciba un string `texto` y devuelva el número de palabras que contiene.
+
+- Asumiremos que:
+    - Mínimo habrá una palabra
+    - El texto está bien formateado
+    - Sin signos de puntuación 
+    - Sin caracteres especiales 
+    - Con un espacio entre cada palabra.
+
+```python
+cuenta_palabras("Nice")           # 1
+cuenta_palabras("Hola mundo")     # 2
+cuenta_palabras("Qué tal estás")  # 3
+```
+
+<details>
+<summary>Pista</summary>
+
+- Puedes serte útil contar los espacios en el texto.
+
+</details>
+
+<details>
+<summary>Solución</summary>
+
+```python
+def cuenta_palabras(texto):
+    cuenta = 1
+    for i in range(len(texto)):
+        if texto[i] == " ":
+            cuenta += 1
+    return cuenta
+```
+
+</details>
+
+## Contiene la I
+
+- Desarrolla una función que reciba un string `texto` y una letra `letra` y devuelva un valor booleano que represente si `texto` contiene `letra`.
+
+```python
+def contiene(texto, letra):
+    # ???
+
+# TEST
+print(contiene("Hola", "a"))  # True
+print(contiene("Hola", "j"))  # False
+```
+
+---
+
+```python
+def contiene(texto, letra):
+    encontrada = False
+    i = 0
+    while i < len(texto) and not encontrada:
+        if texto[i] == letra:
+            encontrada = True
+        i += 1
+    return encontrada
+
+# TEST
+print(contiene("Hola", "a"))
+print(contiene("Hola", "j"))
+```
+
+| True
+| False
 
 

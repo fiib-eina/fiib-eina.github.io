@@ -5,10 +5,17 @@ format: revealjs
 draft: true
 ---
 
-## Paso por valor y paso por referencia {.center}
+## Matrices {.center}
 
 ---
 
+## Listas de objetos y objetos con listas {.center}
+
+---
+
+## Paso por valor y paso por referencia {.center}
+
+---
 
 
 ---

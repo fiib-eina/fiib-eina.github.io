@@ -1,54 +1,292 @@
 ---
 title: Teoría 503
-subtitle: Strings y Tuplas
+subtitle: Listas II
 format: revealjs
-draft: true
+---
+
+## Secuencias {.center}
+
+---
+
+- Escribe un programa Python que lea una secuencia de números dada por el usuario (terminada en 0) y la guarde en una lista.
+
+- ¿Cómo sabemos **cuántos números** vamos a leer?
+    - El enunciado no lo especifica.
+    - ¿Asumimos un **máximo razonable**?
+        - 100? 1000? 10,000?
+
+```python
+mi_lista = [0] * 1000
+
+print("Introduce una secuencia de números (termina en 0):")
+n = int(input())
+cantidad = 0
+
+while n != 0:
+    mi_lista[cantidad] = n
+    cantidad += 1
+    n = int(input())
+```
+
+---
+
+- Escribe una función `lee_lista()` que lea una secuencia de números enteros dada por el usuario (terminada en 0) y devuelva una lista con los números leídos.
+
+```python
+def lee_lista():
+    mi_lista = [0] * 1000
+
+    print("Introduce una secuencia de números (termina en 0):")
+    n = int(input())
+    cantidad = 0
+
+    while n != 0:
+        mi_lista[cantidad] = n
+        cantidad += 1
+        n = int(input())
+    return mi_lista
+```
+
+- Utiliza la función `lee_lista()` para leer una lista de números, recorrerla y muestra los valores leídos.
+
+```python
+lista = lee_lista()
+for i in range(len(lista)):
+    print(lista[i])
+# !!!! PINTA MIL CEROS !!!!
+```
+
+- ¿Cómo puedo saber cuántos elementos de `lista` son válidos?
+
+---
+
+### Secuencias
+
+- A veces trabajaremos con **secuencias de números** cuyo tamaño **no conoceremos de antemano**.
+- Esto nos dificulta usar un **tamaño fijo** para la lista.
+    - Tengo que crear una lista con un tamaño **suficientemente grande** y **dejar vacíos** los espacios que no use.
+- Esto introduce un segundo problema:
+    - ¿Cómo **saber cuántos elementos** de la lista son válidos?
+
+---
+
+#### Técticas de codificación de una secuencia
+
+- **Opión 1:** Cambiar el `for` por un `while` que recorra la lista hasta encontrar un **valor especial** que indique el final de la secuencia.
+    - En este caso, puede ser el valor `0`.
+    - No siempre es posible usar un valor especial.
+
+```python
+lista = lee_lista()
+i = 0
+while lista[i] != 0:
+    print(lista[i])
+    i += 1
+```
+
+- **Opión 2:** Guardar en otra variable el **número de elementos válidos** de la lista.
+    - En este caso, `cantidad`.
+
+```python
+lista = lee_lista()
+for i in range(cantidad):  # Pero cantidad no está definida aquí
+    print(lista[i])
+```
+
+---
+
+- **Opión 3:** Devolver tanto la lista como el número de elementos válidos mediante un objeto.
+    - Creamos una clase `Secuencia` que contenga ambos valores.
+
+```python
+import dataclasses
+
+@dataclasses.dataclass
+class Secuencia:
+    lista: list[int]
+    cantidad: int
+
+def lee_lista():
+    mi_lista = [0] * 1000
+    cantidad = 0
+
+    print("Introduce una secuencia de números (termina en 0):")
+    n = int(input())
+
+    while n != 0:
+        mi_lista[cantidad] = n
+        cantidad += 1
+        n = int(input())
+    return Secuencia(mi_lista, cantidad)
+
+secuencia = lee_lista()
+for i in range(secuencia.cantidad):
+    print(secuencia.lista[i])
+```
+    
+---
+
+- **Opción 4:** Usar **listas dinámicas**. 
+    - ...
+
 ---
 
 ## Listas dinámicas {.center}
 
-- A diferencia de otros lenguajes más rígidos, en Python **todas las listas son dinámicas**:
-    - Su tamaño **no es fijo**.
-    - Pueden **crecer** o **reducirse** según necesitemos.
+---
+
+### Listas dinámicas
+
+- En programación, una **lista dinámica** es una estructura de datos que puede cambiar de tamaño (crecer o reducirse) durante la ejecución del programa.
+- La mayoría de los lenguajes de programación modernos proporcionan implementaciones de listas dinámicas.
+- En teoría, una lista dinámica **puede crecer** hasta el **tamaño de la memoria disponible en el sistema**.
+- Se trata de un arma de doble filo:
+    - **Flexibilidad** para trabajar con colecciones de elementos de tamaño variable.
+    - **Coste** en términos de **rendimiento**.
+
+---
+
+### Listas dinámicas en Python
+
+- En el caso de Python **todas las listas son dinámicas**:
+    - Su tamaño **nunca es fijo**.
+    - Podemos hacer **crecer** o **menguar** el tamaño de cualquier lista.
+- Esto nos permite usar listas **sin definir su tamaño** de antemano.
+    - Sin embargo, **cambiar** el tamaño de una lista **tiene un coste**.
+    - Procuraremos recurir a esto **sólo cuando sea necesario**.
+
+---
+
+### Operaciones con listas
+
+- **Mutaciones**: Modifican la lista originales
+    - `mi_lista.append(elemento)`
+        - **Añade** un elemento al final de la lista.
+        - Actualiza el tamaño de la lista.
+- **Funcionales**: Devuelven listas nuevas
+    - `mi_lista1 + mi_lista2`
+        - **Concatena** dos listas.
+        - Devuelve una **nueva lista**.
+        - **NO** modifica las listas originales.
+- _Existen **muchas** más, pero estas son las más básicas._
+
+---
+
+#### Ejemplos: Append y concatenación
+
+**Ejemplo de `append`**
+
+```python
+mi_lista = [1, 2, 3]
+print(mi_lista)       # [1, 2, 3]
+print(len(mi_lista))  # 3
+
+mi_lista.append(4)
+print(mi_lista)      # [1, 2, 3, 4]
+print(len(mi_lista)) # 4
+```
+
+**Ejemplo de concatenación**
+
+```python
+mi_lista1 = [1, 2, 3]
+mi_lista2 = [4, 5, 6]
+mi_lista3 = mi_lista1 + mi_lista2
+print(mi_lista3)  # [1, 2, 3, 4, 5, 6]
+```
+
+::: {.callout-warning}
+Solo se pueden concatenar listas con listas. No se puede:
+
+```python
+lista = [1, 2, 3] + 4  # ERROR
+```
+
+La forma correcta sería:
+
+```python
+lista = [1, 2, 3] + [4]
+```
+
+:::
+
+---
+
+#### Ejemplo: Leer una secuencia de números (terminada en 0)
+
+```python
+def lee_lista():
+    mi_lista = []
+
+    print("Introduce una secuencia de números (termina en 0):")
+    n = int(input())
+
+    while n != 0:
+        mi_lista.append(n)
+        n = int(input())
+    return mi_lista
+
+lista = lee_lista()
+print(lista)
+```
+
+---
+
+#### Ejercicio: Leer nombres de alumnos
+
+- Escribe una función `lee_nombres()` que lea una secuencia de nombres de alumnos dada por el usuario (terminada en blanco: pulsar enter sin escribir nada más) y devuelva una lista con los nombres leídos.
+
+```python
+def lee_nombres():
+    # ???
+
+# TEST
+print(lee_nombres())  # Mostrará los nombres escritos
+```
+
+---
+
+```python
+def lee_nombres():
+    nombres = []
+
+    print("Introduce los nombres de los alumnos (termina en blanco):")
+    nombre = input()
+
+    while nombre != "":
+        nombres.append(nombre)
+        nombre = input()
+    return nombres
+```
+
+---
+
+#### Ejemplo: Encontrar al primer alumno (por orden alfabético)
+
+- Escribe una función `encuentra_primero(nombres)` que reciba una lista de nombres de alumnos y devuelva el nombre del primer alumno (por orden alfabético).
+
+```python
+def encuentra_primero(nombres):
+    # ???
+
+# TEST
+print(encuentra_primero(["Sergio", "Miguel", "Messi"]))  # Debería mostrar "Messi"
+```
+
+---
+
+```python
+def encuentra_primero(nombres):
+    primero = nombres[0]
+    for i in range(1, len(nombres)):
+        if nombres[i] < primero:
+            primero = nombres[i]
+    return primero
+```
 
 ---
 
 ## Uso avanzado de listas {.center}
-
----
-
-### Listas vs Objetos
-
----
-
-### Listas de objetos y objetos con listas
-
----
- 
-#### Ejemplo: Leer una secuencia de números (terminada en 0 y con un máximo de 10,000 elementos)
-
-```python
-SIZE = 10_000  # BUENAS PRÁCTICAS: Definir el tamaño máximo en una constante
-mi_lista = [0] * SIZE
-i = 0
-
-print("Introduce una secuencia de números (termina en 0):")
-n = int(input())
-
-while n != 0 and i < SIZE:
-    mi_lista[i] = n
-    i += 1
-    n = int(input())
-
-print(f"Se han leído {i} números.")
-```
-
-| Introduce una secuencia de números (termina en 0):
-| **4**
-| **3**
-| **7**
-| **0**
-| Se han leído 3 números.
 
 ---
 
@@ -58,3 +296,115 @@ print(f"Se han leído {i} números.")
 - Una vez más, se trata de otro caso de:
     - **QUE PUEDAS NO SIGNIFICA QUE DEBAS**.
 
+---
+
+### Listas de objetos
+
+- Una lista **debe** contener elementos del mismo tipo.
+- Pero ese tipo **no tiene por qué ser un tipo básico**.
+- Una lista puede albergar:
+    - **Objetos** de una clase.
+    - Otras **listas**.
+        
+---
+
+#### Ejercicio: Lista de alumnos
+
+Vamos a desarrollar una colección de clases y funciones que faciliten la gestión de una lista de alumnos.
+
+- Una clase `Alumno` con los atributos `nombre`, `nacimiento` y `NIP`.
+- Una función `lee_alumno()` que solicite al usuario los datos de un alumno y devuelva un objeto de la clase `Alumno`.
+- Una función `lee_alumnos()` que lea una secuencia de alumnos dada por el usuario (terminada en blanco) y devuelva una lista con los alumnos leídos.
+- Una función `buscar_por_nip(alumnos, nip)` que reciba una lista de alumnos y un NIP y devuelva el alumno con ese NIP.
+- Una función `filtrar_por_nacimiento(alumnos, nacimiento)` que reciba una lista de alumnos y un año de nacimiento y devuelva una lista **nueva** que contenga sólo los alumnos nacidos en un año anterior o igual al año indicado.
+
+---
+
+##### Clase `Alumno`
+
+```python
+@dataclasses.dataclass
+class Alumno:
+    nombre: str
+    nacimiento: int
+    nip: int
+```
+
+---
+
+##### Función `lee_alumno()`
+
+```python
+def lee_alumno():
+    print("Nombre: ", end="")
+    nombre = input()
+    print("Año de nacimiento: ", end="")
+    nacimiento = int(input())
+    print("NIP: ", end="")
+    nip = int(input())
+
+    return Alumno(nombre, nacimiento, nip)
+```
+
+---
+
+##### Función `lee_alumnos()`
+
+```python
+def lee_alumnos():
+    alumnos = []
+
+    print("Introduce los datos de los alumnos (termina en blanco):")
+    alumno = lee_alumno()
+
+    while alumno.nombre != "":
+        alumnos.append(alumno)
+        alumno = lee_alumno()
+    return alumnos
+```
+
+---
+
+##### Función `buscar_por_nip(alumnos, nip)` (sin early return)
+
+```python
+def buscar_por_nip(alumnos, nip):
+    alumno = None
+    while i < len(alumnos) and alumno == None:
+        if alumnos[i].nip == nip:
+            alumno = alumnos[i]
+        i += 1
+    return alumno
+```
+
+::: {.callout-tip}
+- `None` es un valor especial que se usa en Python para indicar la ausencia de un valor.
+- Es válido para cualquier tipo de dato. (Devolver `None` no se considera _violar_ el tipo de retorno de la función).
+- El tipo `None` es tan importante en programación como el `0` en matemáticas.
+- Esto es sólo la punta del iceberg de la _"gestión de errores y excepciones"_.
+:::
+
+---
+
+##### Función `buscar_por_nip(alumnos, nip)` (con early return)
+
+```python
+def buscar_por_nip(alumnos, nip):
+    for i in range(len(alumnos)):
+        if alumno[i].nip == nip:
+            return alumno[i]
+    return None
+```
+
+---
+
+##### Función `filtrar_por_nacimiento(alumnos, nacimiento)`
+
+```python
+def filtrar_por_nacimiento(alumnos, nacimiento):
+    filtrados = []
+    for i in range(len(alumnos)):
+        if alumnos[i].nacimiento <= nacimiento:
+            filtrados.append(alumnos[i])
+    return filtrados
+```
