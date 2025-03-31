@@ -5,4 +5,76 @@ format: html
 draft: true
 ---
 
-## 
+## Murcielago
+
+La palabra `murciélago` es una palabra que contiene todas las vocales (`a`, `e`, `i`, `o`, `u`). Escribe una función `contiene_vocales` que reciba un string `palabra` y devuelva un valor booleano que indique si la palabra contiene todas las vocales. _No consideres las tildes_.
+
+```python
+def contiene_vocales(palabra):
+    # ???
+
+# TEST
+print(contiene_vocales("murcielago"))  # True
+print(contiene_vocales("espantapajaros"))  # False
+```
+
+<details>
+<summary>Pista 1</summary>
+
+- Recorre la palabra letra a letra y "marca" qué vocales has encontrado.
+- Al final, comprueba si has encontrado todas las vocales.
+
+</details>
+
+<details>
+<summary>Solución</summary>
+
+```python
+def contiene_vocales(palabra):
+    tiene_a = False
+    tiene_e = False
+    tiene_i = False
+    tiene_o = False
+    tiene_u = False
+
+    for i in range(len(palabra)):
+        letra = palabra[i]
+        if letra == "a":
+            tiene_a = True
+        elif letra == "e":
+            tiene_e = True
+        elif letra == "i":
+            tiene_i = True
+        elif letra == "o":
+            tiene_o = True
+        elif letra == "u":
+            tiene_u = True
+
+    return tiene_a and tiene_e and tiene_i and tiene_o and tiene_u
+```
+
+</details>
+
+<details>
+<summary>Solución alternativa</summary>
+
+```python
+def contiene_vocales(palabra):
+    letras = ["a", "e", "i", "o", "u"]
+    tiene = [False, False, False, False, False]
+
+    for i in range(len(palabra)):
+        letra = palabra[i]
+        for j in range(len(letras)):
+            if letra == letras[j]:
+                tiene[j] = True
+
+    tiene_todas = True
+    for i in range(len(tiene)):
+        if not tiene[i]:
+            tiene_todas = False
+
+    return tiene_todas
+```
+
+</details> 

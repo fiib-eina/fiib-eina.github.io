@@ -108,6 +108,7 @@ for i in range(0, 5):
     - `random.seed()` establece **la semilla**.
     - `random.randint(a, b)` genera un **número entero** aleatorio entre `a` y `b`.
     - `random.random()` genera un **número real** aleatorio entre 0 y 1.
+    - `random.uniform(a, b)` genera un **número real** aleatorio entre `a` y `b`.
 
 ::: {.columns}
 ::: {.column width="50%"}
