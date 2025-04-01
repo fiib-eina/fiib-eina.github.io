@@ -1,0 +1,109 @@
+---
+title: Teoría 801
+subtitle: Repaso
+format: revealjs
+draft: true
+---
+
+### Ejercicio: Carrito de la Compra
+
+Desarrolla un programa Python que gestione un carro de la compra.
+
+- El programa mostrará un menú con las siguientes opciones:
+    - **Añadir producto**: solicitará al usuario el nombre y el precio del producto a añadir al carro.
+    - **Eliminar producto**: solicitará al usuario el nombre del producto a eliminar del carro.
+    - **Mostrar carro**: mostrará el contenido del carro.
+    - **Salir**: finalizará el programa.
+
+---
+
+### Ejercicio: Ruta senderismo
+
+Escribe un programa Python que solicite al usuario una serie de coordenadas (`lat`, `lon`) que representan una ruta de senderismo. El programa debe calcular la distancia total recorrida por el senderista.
+
+- Si una coordenada no es válida, el programa debe mostrar un mensaje de error y solicitar una nueva coordenada.
+- Unas coordenadas válidas son:
+    - `lat`: un número real entre `-90` y `90`.
+    - `lon`: un número real entre `-180` y `180`.
+- La secuencia termina cuando ambas coordenadas son (0, 0).
+- La distancia se calcula como la suma de las distancias entre cada par de puntos consecutivos.
+- Para rutas cortas puedes calcular la distancia en línea recta sobre las coordenadas proyectadas.
+
+---
+
+#### Planificación
+
+Podemos dividir el problema en las siguientes partes (que no fases):
+
+- Obtención de coordenadas (correctas).
+- Cálculo de la distancia entre dos puntos.
+- Cálculo de la distancia total.
+- Mostrar la distancia total.
+
+---
+
+#### Obtención de coordenadas
+
+- Responsabilidad de esta función
+    - ¿Obtenemos **todas** las coordenadas?
+    - ¿Obtenemos **un par** de coordenadas?
+- Subproblemas
+    - Validación de `lat`.
+    - Validación de `lon`.
+
+---
+
+```python
+
+import math
+
+def lat_es_valida(lat):
+    return -90 <= lat <= 90
+
+def lon_es_valida(lon):
+    return -180 <= lon <= 180
+
+def get_lat(i):
+    print(f"Coord {i} - Lat: ", end="")
+    lat = float(input())
+    while not lat_es_valida(lat):
+        print("Latitud incorrecta. Intente de nuevo.")
+        print(f"Coord {i} - Lat: ", end="")
+        lat = float(input())
+    return lat
+
+def get_lon(i):
+    print(f"Coord {i} - Lon: ", end="")
+    lat = float(input())
+    while not lon_es_valida(lat):
+        print("Latitud incorrecta. Intente de nuevo.")
+        print(f"Coord {i} - Lon: ", end="")
+        lat = float(input())
+    return lat
+
+def distancia(lat1, lon1, lat2, lon2):
+    # Pitagoras
+    return math.sqrt((lat1 - lat2)**2 + (lon1 - lon2)**2)
+
+def main():
+    lat = get_lat(1)
+    lon = get_lon(1)
+    lat_anterior = lat
+    lon_anterior = lon
+    distancia_total = 0
+    counter = 2
+    while lat != 0 and lon != 0:
+        lat = get_lat(counter)
+        lon = get_lon(counter)
+        distancia_total += distancia(lat, lon, lat_anterior, lon_anterior)
+        lat_anterior = lat
+        lon_anterior = lon
+        counter += 1
+    print(f"Distancia total: {distancia_total}")
+# main()
+```
+
+
+---
+
+

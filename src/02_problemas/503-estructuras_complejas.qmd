@@ -5,6 +5,27 @@ format: html
 draft: true
 ---
 
+## Hundir la flota
+
+El juego **Hundir la flota** consiste en adivinar la posición de los barcos en un tablero. Cada barco ocupa una serie de celdas contiguas en horizontal o vertical. El objetivo es hundir todos los barcos.
+
+### `nuevo_tablero`
+
+Escribe una función `nuevo_tablero` que reciba un número entero `n` y devuelva un tablero (matriz de booleanos) de `n` filas y `n` columnas con todas las celdas a `False`.
+
+<details>
+<summary>Solución</summary>
+
+```python
+def nuevo_tablero(n):
+    tablero = [None] * n
+    for i in range(n):
+        tablero[i] = [False] * n
+    return tablero
+```
+
+</details>
+
 ## Murcielago
 
 La palabra `murciélago` es una palabra que contiene todas las vocales (`a`, `e`, `i`, `o`, `u`). Escribe una función `contiene_vocales` que reciba un string `palabra` y devuelva un valor booleano que indique si la palabra contiene todas las vocales. _No consideres las tildes_.

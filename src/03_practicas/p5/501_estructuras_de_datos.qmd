@@ -11,7 +11,7 @@ Para ello, vamos a definir un módulo denominado `complejos.py` que contendrá u
 
 En el módulo `complejos.py` debes definir:
 
-- Una clase (_dataclass_) denominada `Complejo`
+- Una clase (_dataclass_) denominada `Complejo`, que represente un número complejo con dos atributos: `real` e `imag`.
 - Una función denominada `str_complejo()` que, dado un dato de tipo `Complejo` devuelva un string con la representación del número en forma binomial ($a+bi$) con 4 decimales máximos para cada componente.
 - Una función denominada `sumar()` que, dados dos número complejos, devuelva otro que represente su suma.
 - Una función denominada `restar()` que, dados dos número complejos, devuelva otro que represente su diferencia. 
@@ -110,7 +110,7 @@ Un último ejemplo de ejecución:
 
 ## Listas de números complejos
 
-Escribe un programa, en un fichero denominado `lista_complejos.py`, que genere una lista de $n$ números complejos, con sus partes real e imaginaria elegidas en un intervalo $(x, y)$ de manera aleatoria.
+Escribe un programa, en un fichero denominado `lista_complejos.py`, que genere una lista de $n$ números complejos, con sus partes real e imaginaria elegidas en un intervalo $(x, y)$ de manera aleatoria (recuerda el tema de [generación de números aleatorios](../../01_teoria/03_composicion/306_composicion_iterativa_avanzada.qmd#n%C3%BAmeros-pseudo-aleatorios-en-python).
 El programa debe, en primer lugar, solicitar al usuario el número $n$ de números complejos con el que desea trabajar y, a continuación, pedir los límites del intervalo $(x, y)$ al usuario, garantizando que los valores introducidos cumplen que $x < y$.
 Después, mostrará al usuario todos los números complejos generados.
 Posteriormente, mostrará al usuario el número complejo de mayor módulo de la lista y la suma de todos los complejos generados.

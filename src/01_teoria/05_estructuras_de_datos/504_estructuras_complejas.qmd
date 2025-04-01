@@ -2,123 +2,418 @@
 title: Teoría 504
 subtitle: Estructuras complejas
 format: revealjs
-draft: true
+---
+
+- Saber **representar** (modelar) adecuadamente los datos de un problema es fundamental.
+- A veces una estructura **mono-dimensional** (una lista) no es suficiente.
+- Ejemplos:
+    - **Tablero** de ajedrez.
+    - **Cuadrícula** de píxeles de una imagen.
+    - **Habtaciones** de un hotel.
+- En esta sesión vamos a ver cómo representar estructuras de datos más complejas usando `listas` y `objetos`.
+
 ---
 
 ## Matrices {.center}
 
 ---
 
-## Listas de objetos y objetos con listas {.center}
+### Matrices
+
+- Una **matriz** es una estructura de datos bidimensional.
+- Tiene un número fijo de **filas** y **columnas** (dimensiones).
+- Cualquiera de sus elementos se puede identificar mediante dos índices: `fila` y `columna`.
+
+| | 0 | 1 | 2 |
+|---|---|---|---|
+| 0 | 10 | 20 | 30 |
+| 1 | 40 | 50 | 60 |
+| 2 | 70 | 80 | 90 |
+
+_El elemento de la fila 1 y columna 2 es 60._
 
 ---
 
-## Paso por valor y paso por referencia {.center}
+### Matrices en Python
 
----
+- En Python, una matriz se puede representar como una **lista de listas**.
+- La primera lista tendrá un tamaño igual al **número de filas**.
+- Cada una de las celdas de esa lista contendrá **otra lista nueva** con un tamaño igual al **número de columnas**.
 
-
----
-
-### Ejercicio: Carrito de la Compra
-
-Desarrolla un programa Python que gestione un carro de la compra.
-
-- El programa mostrará un menú con las siguientes opciones:
-    - **Añadir producto**: solicitará al usuario el nombre y el precio del producto a añadir al carro.
-    - **Eliminar producto**: solicitará al usuario el nombre del producto a eliminar del carro.
-    - **Mostrar carro**: mostrará el contenido del carro.
-    - **Salir**: finalizará el programa.
-
----
-
-### Ejercicio: Ruta senderismo
-
-Escribe un programa Python que solicite al usuario una serie de coordenadas (`lat`, `lon`) que representan una ruta de senderismo. El programa debe calcular la distancia total recorrida por el senderista.
-
-- Si una coordenada no es válida, el programa debe mostrar un mensaje de error y solicitar una nueva coordenada.
-- Unas coordenadas válidas son:
-    - `lat`: un número real entre `-90` y `90`.
-    - `lon`: un número real entre `-180` y `180`.
-- La secuencia termina cuando ambas coordenadas son (0, 0).
-- La distancia se calcula como la suma de las distancias entre cada par de puntos consecutivos.
-- Para rutas cortas puedes calcular la distancia en línea recta sobre las coordenadas proyectadas.
-
----
-
-#### Planificación
-
-Podemos dividir el problema en las siguientes partes (que no fases):
-
-- Obtención de coordenadas (correctas).
-- Cálculo de la distancia entre dos puntos.
-- Cálculo de la distancia total.
-- Mostrar la distancia total.
-
----
-
-#### Obtención de coordenadas
-
-- Responsabilidad de esta función
-    - ¿Obtenemos **todas** las coordenadas?
-    - ¿Obtenemos **un par** de coordenadas?
-- Subproblemas
-    - Validación de `lat`.
-    - Validación de `lon`.
-
----
+::: {.columns}
+::: {.column width="40%"}
 
 ```python
-
-import math
-
-def lat_es_valida(lat):
-    return -90 <= lat <= 90
-
-def lon_es_valida(lon):
-    return -180 <= lon <= 180
-
-def get_lat(i):
-    print(f"Coord {i} - Lat: ", end="")
-    lat = float(input())
-    while not lat_es_valida(lat):
-        print("Latitud incorrecta. Intente de nuevo.")
-        print(f"Coord {i} - Lat: ", end="")
-        lat = float(input())
-    return lat
-
-def get_lon(i):
-    print(f"Coord {i} - Lon: ", end="")
-    lat = float(input())
-    while not lon_es_valida(lat):
-        print("Latitud incorrecta. Intente de nuevo.")
-        print(f"Coord {i} - Lon: ", end="")
-        lat = float(input())
-    return lat
-
-def distancia(lat1, lon1, lat2, lon2):
-    # Pitagoras
-    return math.sqrt((lat1 - lat2)**2 + (lon1 - lon2)**2)
-
-def main():
-    lat = get_lat(1)
-    lon = get_lon(1)
-    lat_anterior = lat
-    lon_anterior = lon
-    distancia_total = 0
-    counter = 2
-    while lat != 0 and lon != 0:
-        lat = get_lat(counter)
-        lon = get_lon(counter)
-        distancia_total += distancia(lat, lon, lat_anterior, lon_anterior)
-        lat_anterior = lat
-        lon_anterior = lon
-        counter += 1
-    print(f"Distancia total: {distancia_total}")
-# main()
+mi_matriz = [
+    [10, 20, 30],
+    [40, 50, 60],
+    [70, 80, 90]
+]
 ```
+
+```python
+fila1 = [10, 20, 30]
+fila2 = [40, 50, 60]
+fila3 = [70, 80, 90]
+mi_matriz = [fila1, fila2, fila3]
+```
+
+:::
+::: {.column width="50%"}
+
+![](./img/matriz.png)
+
+:::
+:::
+
+---
+
+#### Inicialización de matrices
+
+- Podemos inicializar una matriz de varias formas:
+    - **Estática**: con listas de tamaño fijo desde el principio.
+    - **Dinámica**: utilizando la operación `append()`.
+
+::: {.columns}
+::: {.column width="50%"}
+
+```python
+mi_matriz = [0] * n_filas
+for i in range(n_filas):
+    mi_matriz[i] = [0] * n_columnas
+```
+
+:::
+::: {.column width="50%"}
+
+```python
+mi_matriz = []
+for i in range(n_filas):
+    mi_matriz.append([0] * n_columnas)
+```
+
+:::
+:::
 
 
 ---
 
+#### Como NO inicializar una matriz
+
+::: {.callout-warning}
+Ten mucho cuidado de NO inicializar una matriz de la siguiente forma.
+
+- Cada fila ha de ser una lista nueva.
+:::
+
+```python
+mi_matriz = [[0] * n_columnas] * n_filas
+```
+```python
+fila_compartida = [0] * n_columnas
+mi_matriz = [fila_compartida] * n_filas
+```
+
+_Más adelante veremos por qué esto no funciona._
+
+---
+
+### Acceso a elementos de una matriz
+
+- Para acceder a un elemento de una matriz, se utilizan dos índices: `fila` y `columna`.
+    - Es importante no confundir el orden de los índices.
+    - Por eso se aconseja **consistencia** en el uso de primero `fila` y luego `columna`.
+- Es imporante tener en mente el tipo de dato de cada expresión:
+    - `mi_matriz` es una lista de listas de números.
+    - `mi_matriz[1]` es una lista de números.
+    - `mi_matriz[1][2]` es un número.
+- Por lo tanto, las dimensiones de una matriz serán:
+    - **Filas**: `len(mi_matriz)`.
+    - **Columnas**: `len(mi_matriz[0])`.
+
+---
+
+#### Ejemplo: Leer una matriz de 3x3 de teclado (listas estáticas)
+
+```python
+def leer_matriz(filas, columnas):
+    matriz = [None] * filas  # Creamos la lista de listas
+    for i in range(filas):
+        matriz[i] = [None] * columnas # Creamos la fila i
+        for j in range(columnas):
+            print(f"Introduce el valor de la fila {i} y columna {j}: ", end="")
+            matriz[i][j] = int(input())
+    return matriz
+```
+
+::: {.callout-tip}
+Recuerda crear una lista nueva para cada fila.
+:::
+
+---
+
+#### Ejemplo: Leer una matriz de 3x3 (listas dinámicas)
+
+```python
+def leer_matriz(filas, columnas):
+    matriz = []
+    for i in range(filas):
+        fila = []
+        for j in range(columnas):
+            print(f"Introduce el valor de la fila {i} y columna {j}: ", end="")
+            fila.append(int(input()))
+        matriz.append(fila)
+    return matriz
+```
+
+---
+
+#### Ejemplo: Matriz por escalar (listas dinámicas)
+
+```python
+def matriz_por_escalar(matriz, escalar):
+    resultado = [None] * len(matriz)
+    for i in range(len(matriz)):
+        resultado[i] = [None] * len(matriz[i])
+        for j in range(len(matriz[i])):
+            resultado[i][j] = matriz[i][j] * escalar
+    return resultado
+```
+
+```python
+def matriz_por_escalar(matriz, escalar):
+    # Preparo nueva matriz
+    resultado = [None] * len(matriz)
+    for i in range(len(matriz)):
+        resultado[i] = [None] * len(matriz[i])
+
+    # Calculo
+    for i in range(len(matriz)):
+        for j in range(len(matriz[i])):
+            resultado[i][j] = matriz[i][j] * escalar
+    return resultado
+```
+
+---
+
+#### Ejemplo: Matriz por escalar (listas dinámicas)
+
+```python
+def matriz_por_escalar(matriz, escalar):
+    resultado = []
+    for i in range(len(matriz)):
+        nueva_fila = []
+        for j in range(len(matriz[i])):
+            nueva_fila.append(matriz[i][j] * escalar)
+        resultado.append(nueva_fila)
+    return resultado
+```
+
+---
+
+## Listas de objetos, objetos con listas {.center}
+
+---
+
+- Llegados a este punto deberías entender que:
+    - números (`int`, `float`),
+    - listas y cadenas (`str`, `list`),
+    - y objetos de cualquier clase (`Alumno`, `Coordenadas`, etc.) 
+- son todos **tipos de datos**.
+- Una **lista** puede contener valores de **cualquier tipo**.
+- Un **objeto** puede contener atributos de **cualquier tipo**.
+
+---
+
+#### Ejemplo: Datos
+
+- Vamos a modelar a los alumnos de una carrera y sus redes sociales.
+    - Una carrera tiene `4` cursos
+    - Cada curso tiene `2` grupos
+    - Cada grupo tiene `30` alumnos
+    - Cada alumno tiene un `nombre`, `nacimiento`, `nip` y `redes`.
+    - Una red social tiene `plataforma` y `nick`.
+
+---
+
+- Definimos las clases `CuentaSocial` y `Alumno`.
+
+```python
+import dataclasses
+
+@dataclasses.dataclass
+class CuentaSocial:
+    plataforma: str
+    nick: str
+
+@dataclasses.dataclass
+class Alumno:
+    nombre: str
+    nacimiento: int
+    nip: int
+    redes: list[CuentaSocial]
+```
+
+---
+
+- Creamos un alumno de ejemplo con dos cuentas sociales.
+
+```python
+redes_de_pepe = [
+    CuentaSocial("Twitter", "@pepe"),
+    CuentaSocial("Instagram", "@pepe")
+]
+pepe = Alumno("Pepe", 2000, 1234, redes_de_pepe)
+```
+
+---
+
+- Poblamos los dos primeros cursos con alumnos.
+    - Faltaría completar tercero y cuarto.
+
+```python
+primero = [
+    pepe, 
+    Alumno("Juan", 2001, 1235, [CuentaSocial("Twitter", "@juan")]),
+    Alumno("Ana", 2000, 1236, [CuentaSocial("Instagram", "@ana")]),
+]
+segundo = [
+    Alumno("Luis", 2000, 1237, [CuentaSocial("Twitter", "@luis")]),
+    Alumno("Eva", 2001, 1238, [CuentaSocial("Instagram", "@eva")]),
+    Alumno("Sara", 2000, 1239, [CuentaSocial("Twitter", "@sara")]),
+]
+
+cursos = [primero, segundo]
+```
+
+---
+
+- Ahora podríamos acceder a la información utilizando los operadores `[]` (para las listas) y `.` (para los objetos).
+
+```python
+print(cursos[0][0].nombre)  # Pepe
+print(cursos[0][0].redes[0].plataforma)  # Twitter
+print(cursos[0][0].redes[0].nick)  # @pepe
+```
+
+- Recuerda prestar atención a los tipos de datos de cada expresión.
+    - `cursos` es una lista de listas de `Alumno` (carrera).
+    - `cursos[0]` es una lista de `Alumno` (curso).
+    - `cursos[0][0]` es un `Alumno`.
+    - `cursos[0][0].nombre` es un `str`.
+    - `cursos[0][0].redes` es una lista de `CuentaSocial`.
+    - `cursos[0][0].redes[0]` es una `CuentaSocial`.
+    - `cursos[0][0].redes[0].plataforma` es un `str`.
+
+---
+
+## Valores y referencias {.center}
+
+---
+
+- ¿Recuerdas que no debes inicializar una matriz de la siguiente forma?
+
+```python
+mi_matriz = [[0] * 3] * 3
+print(mi_matriz)
+```
+
+- Observa qué ocurre si intentamos modificar un elemento de la matriz.
+
+```python
+mi_matriz = [[0] * 3] * 3
+
+mi_matriz[0][0] = 1
+print(mi_matriz)
+```
+
+**¿Por qué han cambiado TODOS los primeros elementos de cada fila?**
+- Porque son el mismo elemento
+
+---
+
+- En programación existen los **valores** y las **referencias**.
+    - Un **valor** es un dato que se almacena en una posición de memoria.
+    - Una **referencia** es un **enlace** a un valor almacenado en memoria.
+- En Python, las variables de tipos básicos (`int`, `float`, `str`) almacenan **valores**.
+    - Es decir, cuando se asignan a otra variable, se **copia** el valor.
+- En Python, las variables de tipos compuestos (`list`, `dict`, `set`, `object`) almacenan **referencias**.
+    - Es decir, cuando se asignan a otra variable, lo que se copia es la **referencia**.
+
+---
+
+::: {.columns}
+::: {.column width="50%"}
+
+**Los enteros son valores**
+
+```python
+a = 3
+b = a # Se copia el VALOR
+a = 4
+print(b)
+```
+
+| 3
+
+:::
+::: {.column width="50%"}
+
+**Las listas son referencias**
+
+```python
+a = [1, 2, 3]
+b = a # Se copia la REFERENCIA
+# Tanto a como b apuntan al mismo objeto
+a[0] = 4
+print(b)
+```
+
+| [4, 2, 3]
+
+:::
+:::
+
+---
+
+### Implicaciones del uso de referencias
+
+- Hasta ahora, se ha tratado de minimizar el uso de referencias.
+    - Siempre os hemos pedido que vuestras funciones devuelvan **estructuras nuevas** en lugar de **modificar las existentes**.
+    - Se ha insistido en crear una **nueva lista** para cada fila de una matriz.
+- No obstante, es un detalle que **tenéis que conocer**.
+
+---
+
+#### Ejemplo: Función que modifica datos del exterior
+
+- Ahora que sabemos que las asignaciones de estructuras de datos compuestas son referencias, podríamos implementar una función que **modifique** valores de una lista.
+
+```python
+def modificar_lista(lista):
+    lista[0] = 100
+
+mi_lista = [1, 2, 3]
+modificar_lista(mi_lista)
+print(mi_lista)
+```
+
+- La invocación a `modificar_lista(mi_lista)` **modifica** la lista original porque `modificar_lista` recibe una **referencia** a esa lista.
+
+---
+
+### Opinión sobre las funciones que modifican datos
+
+- En programación, existen dos enfoques para las funciones:
+    - **Funciones puras**: no modifican los datos de entrada.
+    - **Funciones con efectos secundarios**: modifican los datos de entrada.
+- Las **funciones puras** son más fáciles de entender y de depurar.
+- Las **funciones con efectos secundarios**, en ocasiones, son más eficientes y sencillas de implementar.
+- En **ESTE CURSO**, vamos a primar el uso de **funciones puras** y así se verá reflejado en los ejercicios y problemas.
+
+::: {.callout-tip}
+- Si quieres profundizar en este tema y aprender más sobre **funciones con efectos secundarios** en Python, puedes investigar sobre los **métodos de clase**.
+    - Son una forma de implementar funciones que modifican el estado de un objeto.
+    - Su sintaxis no es _apta para principiantes_.
+:::
 
