@@ -1,2 +1,1151 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"></html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Teoría 504 – Fundamentos de Informática</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed20e031201a2f52d49632ac7658f477.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-315f621f901707706d3e135395544505.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-3a9bc45b6cb0139a6ebb837c83b4d0ce.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-2c1606788b907b2185966d5072fee3a6.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+
+</head>
+
+<body class="floating">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#matrices" id="toc-matrices" class="nav-link active" data-scroll-target="#matrices"><span class="header-section-number">1</span> Matrices</a>
+  <ul class="collapse">
+  <li><a href="#matrices-1" id="toc-matrices-1" class="nav-link" data-scroll-target="#matrices-1"><span class="header-section-number">1.1</span> Matrices</a></li>
+  <li><a href="#matrices-en-python" id="toc-matrices-en-python" class="nav-link" data-scroll-target="#matrices-en-python"><span class="header-section-number">1.2</span> Matrices en Python</a></li>
+  <li><a href="#acceso-a-elementos-de-una-matriz" id="toc-acceso-a-elementos-de-una-matriz" class="nav-link" data-scroll-target="#acceso-a-elementos-de-una-matriz"><span class="header-section-number">1.3</span> Acceso a elementos de una matriz</a></li>
+  </ul></li>
+  <li><a href="#listas-de-objetos-objetos-con-listas" id="toc-listas-de-objetos-objetos-con-listas" class="nav-link" data-scroll-target="#listas-de-objetos-objetos-con-listas"><span class="header-section-number">2</span> Listas de objetos, objetos con listas</a></li>
+  <li><a href="#valores-y-referencias" id="toc-valores-y-referencias" class="nav-link" data-scroll-target="#valores-y-referencias"><span class="header-section-number">3</span> Valores y referencias</a>
+  <ul class="collapse">
+  <li><a href="#implicaciones-del-uso-de-referencias" id="toc-implicaciones-del-uso-de-referencias" class="nav-link" data-scroll-target="#implicaciones-del-uso-de-referencias"><span class="header-section-number">3.1</span> Implicaciones del uso de referencias</a></li>
+  <li><a href="#opinión-sobre-las-funciones-que-modifican-datos" id="toc-opinión-sobre-las-funciones-que-modifican-datos" class="nav-link" data-scroll-target="#opinión-sobre-las-funciones-que-modifican-datos"><span class="header-section-number">3.2</span> Opinión sobre las funciones que modifican datos</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="504_estructuras_complejas.reveal.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Teoría 504</h1>
+<p class="subtitle lead">Estructuras complejas</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<ul>
+<li>Saber <strong>representar</strong> (modelar) adecuadamente los datos de un problema es fundamental.</li>
+<li>A veces una estructura <strong>mono-dimensional</strong> (una lista) no es suficiente.</li>
+<li>Ejemplos:
+<ul>
+<li><strong>Tablero</strong> de ajedrez.</li>
+<li><strong>Cuadrícula</strong> de píxeles de una imagen.</li>
+<li><strong>Habtaciones</strong> de un hotel.</li>
+</ul></li>
+<li>En esta sesión vamos a ver cómo representar estructuras de datos más complejas usando <code>listas</code> y <code>objetos</code>.</li>
+</ul>
+<hr>
+<section id="matrices" class="level2 center" data-number="1">
+<h2 class="center anchored" data-number="1" data-anchor-id="matrices"><span class="header-section-number">1</span> Matrices</h2>
+<hr>
+<section id="matrices-1" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="matrices-1"><span class="header-section-number">1.1</span> Matrices</h3>
+<ul>
+<li>Una <strong>matriz</strong> es una estructura de datos bidimensional.</li>
+<li>Tiene un número fijo de <strong>filas</strong> y <strong>columnas</strong> (dimensiones).</li>
+<li>Cualquiera de sus elementos se puede identificar mediante dos índices: <code>fila</code> y <code>columna</code>.</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>10</td>
+<td>20</td>
+<td>30</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>40</td>
+<td>50</td>
+<td>60</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>70</td>
+<td>80</td>
+<td>90</td>
+</tr>
+</tbody>
+</table>
+<p><em>El elemento de la fila 1 y columna 2 es 60.</em></p>
+<hr>
+</section>
+<section id="matrices-en-python" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="matrices-en-python"><span class="header-section-number">1.2</span> Matrices en Python</h3>
+<ul>
+<li>En Python, una matriz se puede representar como una <strong>lista de listas</strong>.</li>
+<li>La primera lista tendrá un tamaño igual al <strong>número de filas</strong>.</li>
+<li>Cada una de las celdas de esa lista contendrá <strong>otra lista nueva</strong> con un tamaño igual al <strong>número de columnas</strong>.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>mi_matriz <span class="op">=</span> [</span>
+<span id="cb1-2"><a href="#cb1-2"></a>    [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>],</span>
+<span id="cb1-3"><a href="#cb1-3"></a>    [<span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">60</span>],</span>
+<span id="cb1-4"><a href="#cb1-4"></a>    [<span class="dv">70</span>, <span class="dv">80</span>, <span class="dv">90</span>]</span>
+<span id="cb1-5"><a href="#cb1-5"></a>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>fila1 <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>]</span>
+<span id="cb2-2"><a href="#cb2-2"></a>fila2 <span class="op">=</span> [<span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">60</span>]</span>
+<span id="cb2-3"><a href="#cb2-3"></a>fila3 <span class="op">=</span> [<span class="dv">70</span>, <span class="dv">80</span>, <span class="dv">90</span>]</span>
+<span id="cb2-4"><a href="#cb2-4"></a>mi_matriz <span class="op">=</span> [fila1, fila2, fila3]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<p><img src="./img/matriz.png" class="img-fluid"></p>
+</div>
+</div>
+<hr>
+<section id="inicialización-de-matrices" class="level4" data-number="1.2.1">
+<h4 data-number="1.2.1" class="anchored" data-anchor-id="inicialización-de-matrices"><span class="header-section-number">1.2.1</span> Inicialización de matrices</h4>
+<ul>
+<li>Podemos inicializar una matriz de varias formas:
+<ul>
+<li><strong>Estática</strong>: con listas de tamaño fijo desde el principio.</li>
+<li><strong>Dinámica</strong>: utilizando la operación <code>append()</code>.</li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>mi_matriz <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> n_filas</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_filas):</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    mi_matriz[i] <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> n_columnas</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>mi_matriz <span class="op">=</span> []</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_filas):</span>
+<span id="cb4-3"><a href="#cb4-3"></a>    mi_matriz.append([<span class="dv">0</span>] <span class="op">*</span> n_columnas)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<hr>
+</section>
+<section id="como-no-inicializar-una-matriz" class="level4" data-number="1.2.2">
+<h4 data-number="1.2.2" class="anchored" data-anchor-id="como-no-inicializar-una-matriz"><span class="header-section-number">1.2.2</span> Como NO inicializar una matriz</h4>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Ten mucho cuidado de NO inicializar una matriz de la siguiente forma.</p>
+<ul>
+<li>Cada fila ha de ser una lista nueva.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>mi_matriz <span class="op">=</span> [[<span class="dv">0</span>] <span class="op">*</span> n_columnas] <span class="op">*</span> n_filas</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>fila_compartida <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> n_columnas</span>
+<span id="cb6-2"><a href="#cb6-2"></a>mi_matriz <span class="op">=</span> [fila_compartida] <span class="op">*</span> n_filas</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Más adelante veremos por qué esto no funciona.</em></p>
+<hr>
+</section>
+</section>
+<section id="acceso-a-elementos-de-una-matriz" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="acceso-a-elementos-de-una-matriz"><span class="header-section-number">1.3</span> Acceso a elementos de una matriz</h3>
+<ul>
+<li>Para acceder a un elemento de una matriz, se utilizan dos índices: <code>fila</code> y <code>columna</code>.
+<ul>
+<li>Es importante no confundir el orden de los índices.</li>
+<li>Por eso se aconseja <strong>consistencia</strong> en el uso de primero <code>fila</code> y luego <code>columna</code>.</li>
+</ul></li>
+<li>Es imporante tener en mente el tipo de dato de cada expresión:
+<ul>
+<li><code>mi_matriz</code> es una lista de listas de números.</li>
+<li><code>mi_matriz[1]</code> es una lista de números.</li>
+<li><code>mi_matriz[1][2]</code> es un número.</li>
+</ul></li>
+<li>Por lo tanto, las dimensiones de una matriz serán:
+<ul>
+<li><strong>Filas</strong>: <code>len(mi_matriz)</code>.</li>
+<li><strong>Columnas</strong>: <code>len(mi_matriz[0])</code>.</li>
+</ul></li>
+</ul>
+<hr>
+<section id="ejemplo-leer-una-matriz-de-3x3-de-teclado-listas-estáticas" class="level4" data-number="1.3.1">
+<h4 data-number="1.3.1" class="anchored" data-anchor-id="ejemplo-leer-una-matriz-de-3x3-de-teclado-listas-estáticas"><span class="header-section-number">1.3.1</span> Ejemplo: Leer una matriz de 3x3 de teclado (listas estáticas)</h4>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">def</span> leer_matriz(filas, columnas):</span>
+<span id="cb7-2"><a href="#cb7-2"></a>    matriz <span class="op">=</span> [<span class="va">None</span>] <span class="op">*</span> filas  <span class="co"># Creamos la lista de listas</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(filas):</span>
+<span id="cb7-4"><a href="#cb7-4"></a>        matriz[i] <span class="op">=</span> [<span class="va">None</span>] <span class="op">*</span> columnas <span class="co"># Creamos la fila i</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(columnas):</span>
+<span id="cb7-6"><a href="#cb7-6"></a>            <span class="bu">print</span>(<span class="ss">f"Introduce el valor de la fila </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss"> y columna </span><span class="sc">{</span>j<span class="sc">}</span><span class="ss">: "</span>, end<span class="op">=</span><span class="st">""</span>)</span>
+<span id="cb7-7"><a href="#cb7-7"></a>            matriz[i][j] <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb7-8"><a href="#cb7-8"></a>    <span class="cf">return</span> matriz</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Recuerda crear una lista nueva para cada fila.</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="ejemplo-leer-una-matriz-de-3x3-listas-dinámicas" class="level4" data-number="1.3.2">
+<h4 data-number="1.3.2" class="anchored" data-anchor-id="ejemplo-leer-una-matriz-de-3x3-listas-dinámicas"><span class="header-section-number">1.3.2</span> Ejemplo: Leer una matriz de 3x3 (listas dinámicas)</h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">def</span> leer_matriz(filas, columnas):</span>
+<span id="cb8-2"><a href="#cb8-2"></a>    matriz <span class="op">=</span> []</span>
+<span id="cb8-3"><a href="#cb8-3"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(filas):</span>
+<span id="cb8-4"><a href="#cb8-4"></a>        fila <span class="op">=</span> []</span>
+<span id="cb8-5"><a href="#cb8-5"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(columnas):</span>
+<span id="cb8-6"><a href="#cb8-6"></a>            <span class="bu">print</span>(<span class="ss">f"Introduce el valor de la fila </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss"> y columna </span><span class="sc">{</span>j<span class="sc">}</span><span class="ss">: "</span>, end<span class="op">=</span><span class="st">""</span>)</span>
+<span id="cb8-7"><a href="#cb8-7"></a>            fila.append(<span class="bu">int</span>(<span class="bu">input</span>()))</span>
+<span id="cb8-8"><a href="#cb8-8"></a>        matriz.append(fila)</span>
+<span id="cb8-9"><a href="#cb8-9"></a>    <span class="cf">return</span> matriz</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="ejemplo-matriz-por-escalar-listas-dinámicas" class="level4" data-number="1.3.3">
+<h4 data-number="1.3.3" class="anchored" data-anchor-id="ejemplo-matriz-por-escalar-listas-dinámicas"><span class="header-section-number">1.3.3</span> Ejemplo: Matriz por escalar (listas dinámicas)</h4>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> matriz_por_escalar(matriz, escalar):</span>
+<span id="cb9-2"><a href="#cb9-2"></a>    resultado <span class="op">=</span> [<span class="va">None</span>] <span class="op">*</span> <span class="bu">len</span>(matriz)</span>
+<span id="cb9-3"><a href="#cb9-3"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(matriz)):</span>
+<span id="cb9-4"><a href="#cb9-4"></a>        resultado[i] <span class="op">=</span> [<span class="va">None</span>] <span class="op">*</span> <span class="bu">len</span>(matriz[i])</span>
+<span id="cb9-5"><a href="#cb9-5"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(matriz[i])):</span>
+<span id="cb9-6"><a href="#cb9-6"></a>            resultado[i][j] <span class="op">=</span> matriz[i][j] <span class="op">*</span> escalar</span>
+<span id="cb9-7"><a href="#cb9-7"></a>    <span class="cf">return</span> resultado</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">def</span> matriz_por_escalar(matriz, escalar):</span>
+<span id="cb10-2"><a href="#cb10-2"></a>    <span class="co"># Preparo nueva matriz</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>    resultado <span class="op">=</span> [<span class="va">None</span>] <span class="op">*</span> <span class="bu">len</span>(matriz)</span>
+<span id="cb10-4"><a href="#cb10-4"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(matriz)):</span>
+<span id="cb10-5"><a href="#cb10-5"></a>        resultado[i] <span class="op">=</span> [<span class="va">None</span>] <span class="op">*</span> <span class="bu">len</span>(matriz[i])</span>
+<span id="cb10-6"><a href="#cb10-6"></a></span>
+<span id="cb10-7"><a href="#cb10-7"></a>    <span class="co"># Calculo</span></span>
+<span id="cb10-8"><a href="#cb10-8"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(matriz)):</span>
+<span id="cb10-9"><a href="#cb10-9"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(matriz[i])):</span>
+<span id="cb10-10"><a href="#cb10-10"></a>            resultado[i][j] <span class="op">=</span> matriz[i][j] <span class="op">*</span> escalar</span>
+<span id="cb10-11"><a href="#cb10-11"></a>    <span class="cf">return</span> resultado</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="ejemplo-matriz-por-escalar-listas-dinámicas-1" class="level4" data-number="1.3.4">
+<h4 data-number="1.3.4" class="anchored" data-anchor-id="ejemplo-matriz-por-escalar-listas-dinámicas-1"><span class="header-section-number">1.3.4</span> Ejemplo: Matriz por escalar (listas dinámicas)</h4>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">def</span> matriz_por_escalar(matriz, escalar):</span>
+<span id="cb11-2"><a href="#cb11-2"></a>    resultado <span class="op">=</span> []</span>
+<span id="cb11-3"><a href="#cb11-3"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(matriz)):</span>
+<span id="cb11-4"><a href="#cb11-4"></a>        nueva_fila <span class="op">=</span> []</span>
+<span id="cb11-5"><a href="#cb11-5"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(matriz[i])):</span>
+<span id="cb11-6"><a href="#cb11-6"></a>            nueva_fila.append(matriz[i][j] <span class="op">*</span> escalar)</span>
+<span id="cb11-7"><a href="#cb11-7"></a>        resultado.append(nueva_fila)</span>
+<span id="cb11-8"><a href="#cb11-8"></a>    <span class="cf">return</span> resultado</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+</section>
+<section id="listas-de-objetos-objetos-con-listas" class="level2 center" data-number="2">
+<h2 class="center anchored" data-number="2" data-anchor-id="listas-de-objetos-objetos-con-listas"><span class="header-section-number">2</span> Listas de objetos, objetos con listas</h2>
+<hr>
+<ul>
+<li>Llegados a este punto deberías entender que:
+<ul>
+<li>números (<code>int</code>, <code>float</code>),</li>
+<li>listas y cadenas (<code>str</code>, <code>list</code>),</li>
+<li>y objetos de cualquier clase (<code>Alumno</code>, <code>Coordenadas</code>, etc.)</li>
+</ul></li>
+<li>son todos <strong>tipos de datos</strong>.</li>
+<li>Una <strong>lista</strong> puede contener valores de <strong>cualquier tipo</strong>.</li>
+<li>Un <strong>objeto</strong> puede contener atributos de <strong>cualquier tipo</strong>.</li>
+</ul>
+<hr>
+<section id="ejemplo-datos" class="level4" data-number="2.0.1">
+<h4 data-number="2.0.1" class="anchored" data-anchor-id="ejemplo-datos"><span class="header-section-number">2.0.1</span> Ejemplo: Datos</h4>
+<ul>
+<li>Vamos a modelar a los alumnos de una carrera y sus redes sociales.
+<ul>
+<li>Una carrera tiene <code>4</code> cursos</li>
+<li>Cada curso tiene <code>2</code> grupos</li>
+<li>Cada grupo tiene <code>30</code> alumnos</li>
+<li>Cada alumno tiene un <code>nombre</code>, <code>nacimiento</code>, <code>nip</code> y <code>redes</code>.</li>
+<li>Una red social tiene <code>plataforma</code> y <code>nick</code>.</li>
+</ul></li>
+</ul>
+<hr>
+<ul>
+<li>Definimos las clases <code>CuentaSocial</code> y <code>Alumno</code>.</li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="im">import</span> dataclasses</span>
+<span id="cb12-2"><a href="#cb12-2"></a></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="at">@dataclasses.dataclass</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="kw">class</span> CuentaSocial:</span>
+<span id="cb12-5"><a href="#cb12-5"></a>    plataforma: <span class="bu">str</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a>    nick: <span class="bu">str</span></span>
+<span id="cb12-7"><a href="#cb12-7"></a></span>
+<span id="cb12-8"><a href="#cb12-8"></a><span class="at">@dataclasses.dataclass</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a><span class="kw">class</span> Alumno:</span>
+<span id="cb12-10"><a href="#cb12-10"></a>    nombre: <span class="bu">str</span></span>
+<span id="cb12-11"><a href="#cb12-11"></a>    nacimiento: <span class="bu">int</span></span>
+<span id="cb12-12"><a href="#cb12-12"></a>    nip: <span class="bu">int</span></span>
+<span id="cb12-13"><a href="#cb12-13"></a>    redes: <span class="bu">list</span>[CuentaSocial]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+<ul>
+<li>Creamos un alumno de ejemplo con dos cuentas sociales.</li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>redes_de_pepe <span class="op">=</span> [</span>
+<span id="cb13-2"><a href="#cb13-2"></a>    CuentaSocial(<span class="st">"Twitter"</span>, <span class="st">"@pepe"</span>),</span>
+<span id="cb13-3"><a href="#cb13-3"></a>    CuentaSocial(<span class="st">"Instagram"</span>, <span class="st">"@pepe"</span>)</span>
+<span id="cb13-4"><a href="#cb13-4"></a>]</span>
+<span id="cb13-5"><a href="#cb13-5"></a>pepe <span class="op">=</span> Alumno(<span class="st">"Pepe"</span>, <span class="dv">2000</span>, <span class="dv">1234</span>, redes_de_pepe)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+<ul>
+<li>Poblamos los dos primeros cursos con alumnos.
+<ul>
+<li>Faltaría completar tercero y cuarto.</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>primero <span class="op">=</span> [</span>
+<span id="cb14-2"><a href="#cb14-2"></a>    pepe, </span>
+<span id="cb14-3"><a href="#cb14-3"></a>    Alumno(<span class="st">"Juan"</span>, <span class="dv">2001</span>, <span class="dv">1235</span>, [CuentaSocial(<span class="st">"Twitter"</span>, <span class="st">"@juan"</span>)]),</span>
+<span id="cb14-4"><a href="#cb14-4"></a>    Alumno(<span class="st">"Ana"</span>, <span class="dv">2000</span>, <span class="dv">1236</span>, [CuentaSocial(<span class="st">"Instagram"</span>, <span class="st">"@ana"</span>)]),</span>
+<span id="cb14-5"><a href="#cb14-5"></a>]</span>
+<span id="cb14-6"><a href="#cb14-6"></a>segundo <span class="op">=</span> [</span>
+<span id="cb14-7"><a href="#cb14-7"></a>    Alumno(<span class="st">"Luis"</span>, <span class="dv">2000</span>, <span class="dv">1237</span>, [CuentaSocial(<span class="st">"Twitter"</span>, <span class="st">"@luis"</span>)]),</span>
+<span id="cb14-8"><a href="#cb14-8"></a>    Alumno(<span class="st">"Eva"</span>, <span class="dv">2001</span>, <span class="dv">1238</span>, [CuentaSocial(<span class="st">"Instagram"</span>, <span class="st">"@eva"</span>)]),</span>
+<span id="cb14-9"><a href="#cb14-9"></a>    Alumno(<span class="st">"Sara"</span>, <span class="dv">2000</span>, <span class="dv">1239</span>, [CuentaSocial(<span class="st">"Twitter"</span>, <span class="st">"@sara"</span>)]),</span>
+<span id="cb14-10"><a href="#cb14-10"></a>]</span>
+<span id="cb14-11"><a href="#cb14-11"></a></span>
+<span id="cb14-12"><a href="#cb14-12"></a>cursos <span class="op">=</span> [primero, segundo]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+<ul>
+<li>Ahora podríamos acceder a la información utilizando los operadores <code>[]</code> (para las listas) y <code>.</code> (para los objetos).</li>
+</ul>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="bu">print</span>(cursos[<span class="dv">0</span>][<span class="dv">0</span>].nombre)  <span class="co"># Pepe</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="bu">print</span>(cursos[<span class="dv">0</span>][<span class="dv">0</span>].redes[<span class="dv">0</span>].plataforma)  <span class="co"># Twitter</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="bu">print</span>(cursos[<span class="dv">0</span>][<span class="dv">0</span>].redes[<span class="dv">0</span>].nick)  <span class="co"># @pepe</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Recuerda prestar atención a los tipos de datos de cada expresión.
+<ul>
+<li><code>cursos</code> es una lista de listas de <code>Alumno</code> (carrera).</li>
+<li><code>cursos[0]</code> es una lista de <code>Alumno</code> (curso).</li>
+<li><code>cursos[0][0]</code> es un <code>Alumno</code>.</li>
+<li><code>cursos[0][0].nombre</code> es un <code>str</code>.</li>
+<li><code>cursos[0][0].redes</code> es una lista de <code>CuentaSocial</code>.</li>
+<li><code>cursos[0][0].redes[0]</code> es una <code>CuentaSocial</code>.</li>
+<li><code>cursos[0][0].redes[0].plataforma</code> es un <code>str</code>.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="valores-y-referencias" class="level2 center" data-number="3">
+<h2 class="center anchored" data-number="3" data-anchor-id="valores-y-referencias"><span class="header-section-number">3</span> Valores y referencias</h2>
+<hr>
+<ul>
+<li>¿Recuerdas que no debes inicializar una matriz de la siguiente forma?</li>
+</ul>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>mi_matriz <span class="op">=</span> [[<span class="dv">0</span>] <span class="op">*</span> <span class="dv">3</span>] <span class="op">*</span> <span class="dv">3</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="bu">print</span>(mi_matriz)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Observa qué ocurre si intentamos modificar un elemento de la matriz.</li>
+</ul>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a>mi_matriz <span class="op">=</span> [[<span class="dv">0</span>] <span class="op">*</span> <span class="dv">3</span>] <span class="op">*</span> <span class="dv">3</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a></span>
+<span id="cb17-3"><a href="#cb17-3"></a>mi_matriz[<span class="dv">0</span>][<span class="dv">0</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a><span class="bu">print</span>(mi_matriz)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>¿Por qué han cambiado TODOS los primeros elementos de cada fila?</strong> - Porque son el mismo elemento</p>
+<hr>
+<ul>
+<li>En programación existen los <strong>valores</strong> y las <strong>referencias</strong>.
+<ul>
+<li>Un <strong>valor</strong> es un dato que se almacena en una posición de memoria.</li>
+<li>Una <strong>referencia</strong> es un <strong>enlace</strong> a un valor almacenado en memoria.</li>
+</ul></li>
+<li>En Python, las variables de tipos básicos (<code>int</code>, <code>float</code>, <code>str</code>) almacenan <strong>valores</strong>.
+<ul>
+<li>Es decir, cuando se asignan a otra variable, se <strong>copia</strong> el valor.</li>
+</ul></li>
+<li>En Python, las variables de tipos compuestos (<code>list</code>, <code>dict</code>, <code>set</code>, <code>object</code>) almacenan <strong>referencias</strong>.
+<ul>
+<li>Es decir, cuando se asignan a otra variable, lo que se copia es la <strong>referencia</strong>.</li>
+</ul></li>
+</ul>
+<hr>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Los enteros son valores</strong></p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a>b <span class="op">=</span> a <span class="co"># Se copia el VALOR</span></span>
+<span id="cb18-3"><a href="#cb18-3"></a>a <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb18-4"><a href="#cb18-4"></a><span class="bu">print</span>(b)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">3</div>
+</div><div class="column" style="width:50%;">
+<p><strong>Las listas son referencias</strong></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb19-2"><a href="#cb19-2"></a>b <span class="op">=</span> a <span class="co"># Se copia la REFERENCIA</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="co"># Tanto a como b apuntan al mismo objeto</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a>a[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb19-5"><a href="#cb19-5"></a><span class="bu">print</span>(b)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">[4, 2, 3]</div>
+</div>
+</div>
+<hr>
+<section id="implicaciones-del-uso-de-referencias" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="implicaciones-del-uso-de-referencias"><span class="header-section-number">3.1</span> Implicaciones del uso de referencias</h3>
+<ul>
+<li>Hasta ahora, se ha tratado de minimizar el uso de referencias.
+<ul>
+<li>Siempre os hemos pedido que vuestras funciones devuelvan <strong>estructuras nuevas</strong> en lugar de <strong>modificar las existentes</strong>.</li>
+<li>Se ha insistido en crear una <strong>nueva lista</strong> para cada fila de una matriz.</li>
+</ul></li>
+<li>No obstante, es un detalle que <strong>tenéis que conocer</strong>.</li>
+</ul>
+<hr>
+<section id="ejemplo-función-que-modifica-datos-del-exterior" class="level4" data-number="3.1.1">
+<h4 data-number="3.1.1" class="anchored" data-anchor-id="ejemplo-función-que-modifica-datos-del-exterior"><span class="header-section-number">3.1.1</span> Ejemplo: Función que modifica datos del exterior</h4>
+<ul>
+<li>Ahora que sabemos que las asignaciones de estructuras de datos compuestas son referencias, podríamos implementar una función que <strong>modifique</strong> valores de una lista.</li>
+</ul>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="kw">def</span> modificar_lista(lista):</span>
+<span id="cb20-2"><a href="#cb20-2"></a>    lista[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb20-3"><a href="#cb20-3"></a></span>
+<span id="cb20-4"><a href="#cb20-4"></a>mi_lista <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb20-5"><a href="#cb20-5"></a>modificar_lista(mi_lista)</span>
+<span id="cb20-6"><a href="#cb20-6"></a><span class="bu">print</span>(mi_lista)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>La invocación a <code>modificar_lista(mi_lista)</code> <strong>modifica</strong> la lista original porque <code>modificar_lista</code> recibe una <strong>referencia</strong> a esa lista.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="opinión-sobre-las-funciones-que-modifican-datos" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="opinión-sobre-las-funciones-que-modifican-datos"><span class="header-section-number">3.2</span> Opinión sobre las funciones que modifican datos</h3>
+<ul>
+<li>En programación, existen dos enfoques para las funciones:
+<ul>
+<li><strong>Funciones puras</strong>: no modifican los datos de entrada.</li>
+<li><strong>Funciones con efectos secundarios</strong>: modifican los datos de entrada.</li>
+</ul></li>
+<li>Las <strong>funciones puras</strong> son más fáciles de entender y de depurar.</li>
+<li>Las <strong>funciones con efectos secundarios</strong>, en ocasiones, son más eficientes y sencillas de implementar.</li>
+<li>En <strong>ESTE CURSO</strong>, vamos a primar el uso de <strong>funciones puras</strong> y así se verá reflejado en los ejercicios y problemas.</li>
+</ul>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<ul>
+<li>Si quieres profundizar en este tema y aprender más sobre <strong>funciones con efectos secundarios</strong> en Python, puedes investigar sobre los <strong>métodos de clase</strong>.
+<ul>
+<li>Son una forma de implementar funciones que modifican el estado de un objeto.</li>
+<li>Su sintaxis no es <em>apta para principiantes</em>.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // default icon
+          link.classList.add("external");
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
