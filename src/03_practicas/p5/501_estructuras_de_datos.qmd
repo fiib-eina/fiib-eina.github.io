@@ -68,7 +68,7 @@ El programa debe:
 - Mostrar el resultado con la representación binomial: ($a+bi$), donde $a$ es la parte real y $b$ es la parte imaginaria del número complejo.
 
 
-<!-- NOTE: Quito esta parte especificamente para ver si se les ocurre reutilizar. Al ser i/o no le voy a hacer un unittest o sea que da igual -->
+<!-- NOTE: Quito esta parte específicamente para ver si se les ocurre reutilizar. Al ser i/o no le voy a hacer un unittest o sea que da igual -->
 <!-- En el fichero `calculadora.py` debes importar el contenido del módulo `complejos.py` y -->
 <!-- - Una función denominada `pedir_numero_complejo()` que solicite al usuario la parte real y la parte imaginaria de un número complejo y devuelva un dato de tipo `Complejo` -->
 <!-- - Una función denominada `pedir_operacion()`, que pida al usuario una operación representada como `"+"` o `"-"` y escribir el código del programa solicitado.  -->
