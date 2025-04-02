@@ -70,9 +70,9 @@ for i in range(len(lista)):
 
 ---
 
-#### Técticas de codificación de una secuencia
+#### Técnicas de codificación de una secuencia
 
-- **Opión 1:** Cambiar el `for` por un `while` que recorra la lista hasta encontrar un **valor especial** que indique el final de la secuencia.
+- **Opción 1:** Cambiar el `for` por un `while` que recorra la lista hasta encontrar un **valor especial** que indique el final de la secuencia.
     - En este caso, puede ser el valor `0`.
     - No siempre es posible usar un valor especial.
 
@@ -84,7 +84,7 @@ while lista[i] != 0:
     i += 1
 ```
 
-- **Opión 2:** Guardar en otra variable el **número de elementos válidos** de la lista.
+- **Opción 2:** Guardar en otra variable el **número de elementos válidos** de la lista.
     - En este caso, `cantidad`.
 
 ```python
@@ -95,7 +95,7 @@ for i in range(cantidad):  # Pero cantidad no está definida aquí
 
 ---
 
-- **Opión 3:** Devolver tanto la lista como el número de elementos válidos mediante un objeto.
+- **Opción 3:** Devolver tanto la lista como el número de elementos válidos mediante un objeto.
     - Creamos una clase `Secuencia` que contenga ambos valores.
 
 ```python
@@ -153,7 +153,7 @@ for i in range(secuencia.cantidad):
     - Podemos hacer **crecer** o **menguar** el tamaño de cualquier lista.
 - Esto nos permite usar listas **sin definir su tamaño** de antemano.
     - Sin embargo, **cambiar** el tamaño de una lista **tiene un coste**.
-    - Procuraremos recurir a esto **sólo cuando sea necesario**.
+    - Procuraremos recurrir a esto **solo cuando sea necesario**.
 
 ---
 
@@ -316,7 +316,7 @@ Vamos a desarrollar una colección de clases y funciones que faciliten la gesti�
 - Una función `lee_alumno()` que solicite al usuario los datos de un alumno y devuelva un objeto de la clase `Alumno`.
 - Una función `lee_alumnos()` que lea una secuencia de alumnos dada por el usuario (terminada en blanco) y devuelva una lista con los alumnos leídos.
 - Una función `buscar_por_nip(alumnos, nip)` que reciba una lista de alumnos y un NIP y devuelva el alumno con ese NIP.
-- Una función `filtrar_por_nacimiento(alumnos, nacimiento)` que reciba una lista de alumnos y un año de nacimiento y devuelva una lista **nueva** que contenga sólo los alumnos nacidos en un año anterior o igual al año indicado.
+- Una función `filtrar_por_nacimiento(alumnos, nacimiento)` que reciba una lista de alumnos y un año de nacimiento y devuelva una lista **nueva** que contenga solo los alumnos nacidos en un año anterior o igual al año indicado.
 
 ---
 
@@ -381,7 +381,7 @@ def buscar_por_nip(alumnos, nip):
 - `None` es un valor especial que se usa en Python para indicar la ausencia de un valor.
 - Es válido para cualquier tipo de dato. (Devolver `None` no se considera _violar_ el tipo de retorno de la función).
 - El tipo `None` es tan importante en programación como el `0` en matemáticas.
-- Esto es sólo la punta del iceberg de la _"gestión de errores y excepciones"_.
+- Esto es solo la punta del iceberg de la _"gestión de errores y excepciones"_.
 :::
 
 ---
