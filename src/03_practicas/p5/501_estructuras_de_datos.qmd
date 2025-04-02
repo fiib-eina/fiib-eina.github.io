@@ -193,7 +193,7 @@ Ejemplo de ejecución:
 
 **Entrega:** Escribe tu programa en un fichero denominado `lista_complejos.py`.
 
-**Pruebas:** Si ejecutas el código del fichero [`test_lista_complejos.py`](./tests/test_lisa_complejos.py), se harán pruebas de unidad de ese módulo.
+**Pruebas:** Si ejecutas el código del fichero [`test_lista_complejos.py`](./tests/test_lista_complejos.py), se harán pruebas de unidad de ese módulo.
 
 ## Entrega de la práctica
 

@@ -1,4 +1,4 @@
-"""Programa de pruebas de las funciones del módulo `horas.py`."""
+"""Programa de pruebas de las funciones de `lista_complejos.py`."""
 
 from io import StringIO
 import sys
@@ -72,12 +72,14 @@ def check_str_lista_complejos(lista, esperado):
         f"str_lista_complejos({lista}): Esperado {quote(esperado)}, obtenido {quote(res)}",
     )
 
+
 def check_minimo_lista_complejos(lista, esperado):
     res = lista_complejos.minimo_lista_complejos(lista)
     check(
         res == esperado,
         f"minimo_lista_complejos({lista}): Esperado {quote(esperado)}, obtenido {quote(res)}",
     )
+
 
 def check_suma_lista_complejos(lista, real, imag):
     res = lista_complejos.suma_lista_complejos(lista)
@@ -86,6 +88,7 @@ def check_suma_lista_complejos(lista, real, imag):
         f"suma_lista_complejos({lista}): Esperado [{real}, {imag}], obtenido [{res.real}, {res.imag}]",
     )
 
+
 def check_filtrar_primer_cuadrante(lista, esperado):
     res = lista_complejos.filtrar_primer_cuadrante(lista)
     check(len(res) == len(esperado), f"filtrar_primer_cuadrante({lista}): Longitud esperada {len(esperado)}, obtenida {len(res)}")
@@ -93,6 +96,7 @@ def check_filtrar_primer_cuadrante(lista, esperado):
         res == esperado,
         f"filtrar_primer_cuadrante({lista}): Esperado {quote(esperado)}, obtenido {quote(res)}",
     )
+
 
 for _ in range(10):
     check_generar_complejo_aleatorio(0, 1)
