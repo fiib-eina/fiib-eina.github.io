@@ -275,6 +275,10 @@ print(encuentra_primero(["Sergio", "Miguel", "Messi"]))  # Debería mostrar "Mes
 
 ---
 
+<!-- TODO: [Latre] Añadir if len(lista) == 0: return None
+Se podría presentar primero esta solución y preguntar qué pasaría si se pasa
+una lista vacía. -->
+
 ```python
 def encuentra_primero(nombres):
     primero = nombres[0]
@@ -369,6 +373,7 @@ def lee_alumnos():
 
 ```python
 def buscar_por_nip(alumnos, nip):
+    i = 0
     alumno = None
     while i < len(alumnos) and alumno == None:
         if alumnos[i].nip == nip:

@@ -80,7 +80,7 @@ class Hora:
 
 ### Siguiente segundo
 
-Define una función `siguiente_segundo()` Python que reciba un objeto de la clase `Hora` y devuelva **uno nuevo** con un segundo más.
+Define una función `siguiente_segundo()` que reciba un objeto de la clase `Hora` y devuelva **uno nuevo** con un segundo más.
 
 ```python
 h1 = Hora(12, 30, 59)
@@ -136,11 +136,13 @@ def siguiente_segundo(anterior):
 
 ```
 
+<!--TODO: [Latre] Considerar cambiar el último if por siguiente.horas = siguiente.horas % 24 -->
+
 </details>
 
 ### De segundos a horas
 
-Define una función `segundos_a_horas()` Python que reciba un número de segundos y devuelva un objeto de la clase `Hora` con la conversión.
+Define una función `segundos_a_horas()` que reciba un número de segundos y devuelva un objeto de la clase `Hora` con la conversión.
 
 ```python
 h = segundos_a_horas(70)
@@ -167,11 +169,20 @@ def segundos_a_horas(segundos):
     return Hora(horas, minutos, segundos)
 ```
 
+<!--TODO: [Latre] Considerar esta otra solución:
+def segundos_a_horas(segundos):
+    horas = segundos // 3600
+    minutos = (segundos % 3600) // 60
+    segundos = segundos % 60
+    return Hora(horas, minutos, segundos)
+
+-->
+
 </details>
 
 ### De horas a segundos
 
-Define una función `horas_a_segundos()` Python que reciba un objeto de la clase `Hora` y devuelva el número de segundos correspondiente.
+Define una función `horas_a_segundos()` que reciba un objeto de la clase `Hora` y devuelva el número de segundos correspondiente.
 
 ```python
 s = horas_a_segundos(Hora(0, 1, 10))
@@ -199,7 +210,7 @@ def horas_a_segundos(hora):
 
 ### Restar horas
 
-Define una función `restar_horas()` Python que reciba dos objetos de la clase `Hora` y devuelva un nuevo objeto `Hora` con la resta del segundo al primero.
+Define una función `restar_horas()` que reciba dos objetos de la clase `Hora` y devuelva un nuevo objeto `Hora` con la resta del segundo al primero.
 
 ```python
 h1 = Hora(12, 30, 0)

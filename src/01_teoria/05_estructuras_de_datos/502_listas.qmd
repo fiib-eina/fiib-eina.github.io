@@ -86,12 +86,16 @@ print(f"Hay {cuenta} números por encima de la media.")
 - Sus elementos se identifican mediante **su posición** (índice) dentro de la lista.
 
 ---
+<!-- TODO: [Latre] No utilizar indistintamente posición e índice. En mi opinión
+las posiciones son ordinales a partir de 1º, mientras que los índices
+"etiquetan" correlativamente elementos y empiezan en 0 -->
 
 - La siguiente lista:
     - Tiene un **identificador** `mi_lista`.
     - Contiene elementos **de tipo** entero.
     - Tiene un **tamaño** de `5` enteros.
     - El entero en la **posición** `1` tiene el **valor** `8`.
+    <!-- TODO: - El entero de la **posición** de índice `1` tiene el **valor** `8`. 
 
 ![](./img/lista.png)
 
@@ -196,6 +200,7 @@ for i in range(4, -1, -1):
 
 ---
 
+<!-- TODO: ¿Mejor "fuera de rango"? (aunque pongas también el término en inglés) -->
 ### Acceso out-of-bounds
 
 - ¿Qué ocurre si intentamos acceder a una posición que no existe?
@@ -278,6 +283,8 @@ Sí, es un poco raro, pero funciona. Más adelante aprenderemos otras técnicas 
 ::: {.column width="30%"}
 
 **Acoplada a 5**
+
+<!-- TODO: cambiar el identificador _l_ por otro más legible: ¿lst, lista? -->
 
 ```python
 def suma_acoplada(l):
