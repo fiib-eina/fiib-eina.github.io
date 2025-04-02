@@ -22,7 +22,7 @@ format: revealjs
 
 ### Números pseudo-aleatorios
 
-- La forma de obtener _"aleatoriedad"_ en un ordenador determinista es mediante los **algortimos de generación de números pseudo-aleatorios**.
+- La forma de obtener _"aleatoriedad"_ en un ordenador determinista es mediante los **algoritmos de generación de números pseudo-aleatorios**.
 - Estos algoritmos generan una **secuencia de números** que **estadísticamente** se comportan como si fueran aleatorios.
     - El algoritmo genera un nuevo número a partir del anterior: $x_n = f(x_{n-1})$.
     - Necesita un valor $x_0$ para empezar.
