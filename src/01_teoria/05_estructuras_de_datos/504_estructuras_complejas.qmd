@@ -9,7 +9,7 @@ format: revealjs
 - Ejemplos:
     - **Tablero** de ajedrez.
     - **Cuadrícula** de píxeles de una imagen.
-    - **Habtaciones** de un hotel.
+    - **Habitaciones** de un hotel.
 - En esta sesión vamos a ver cómo representar estructuras de datos más complejas usando `listas` y `objetos`.
 
 ---
@@ -123,7 +123,7 @@ _Más adelante veremos por qué esto no funciona._
 - Para acceder a un elemento de una matriz, se utilizan dos índices: `fila` y `columna`.
     - Es importante no confundir el orden de los índices.
     - Por eso se aconseja **consistencia** en el uso de primero `fila` y luego `columna`.
-- Es imporante tener en mente el tipo de dato de cada expresión:
+- Es importante tener en mente el tipo de dato de cada expresión:
     - `mi_matriz` es una lista de listas de números.
     - `mi_matriz[1]` es una lista de números.
     - `mi_matriz[1][2]` es un número.
