@@ -1,5 +1,5 @@
 ---
-title: Teoría 601
+title: Teoría 602
 subtitle: Ficheros y ficheros de lectura
 format: revealjs
 ---
