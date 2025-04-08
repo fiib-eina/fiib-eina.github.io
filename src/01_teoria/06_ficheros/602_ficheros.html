@@ -1,2 +1,1159 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"></html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Teoría 601 – Fundamentos de Informática</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed20e031201a2f52d49632ac7658f477.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-315f621f901707706d3e135395544505.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-3a9bc45b6cb0139a6ebb837c83b4d0ce.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-2c1606788b907b2185966d5072fee3a6.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+
+</head>
+
+<body class="floating">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#motivación" id="toc-motivación" class="nav-link active" data-scroll-target="#motivación"><span class="header-section-number">1</span> Motivación</a>
+  <ul class="collapse">
+  <li><a href="#persistencia-de-la-información" id="toc-persistencia-de-la-información" class="nav-link" data-scroll-target="#persistencia-de-la-información"><span class="header-section-number">1.1</span> Persistencia de la información</a></li>
+  </ul></li>
+  <li><a href="#ficheros" id="toc-ficheros" class="nav-link" data-scroll-target="#ficheros"><span class="header-section-number">2</span> Ficheros</a>
+  <ul class="collapse">
+  <li><a href="#dispositivos-de-almacenamiento" id="toc-dispositivos-de-almacenamiento" class="nav-link" data-scroll-target="#dispositivos-de-almacenamiento"><span class="header-section-number">2.1</span> Dispositivos de almacenamiento</a></li>
+  <li><a href="#ficheros-y-sistemas-de-ficheros" id="toc-ficheros-y-sistemas-de-ficheros" class="nav-link" data-scroll-target="#ficheros-y-sistemas-de-ficheros"><span class="header-section-number">2.2</span> Ficheros y sistemas de ficheros</a></li>
+  <li><a href="#ficheros-en-programación" id="toc-ficheros-en-programación" class="nav-link" data-scroll-target="#ficheros-en-programación"><span class="header-section-number">2.3</span> Ficheros en programación</a></li>
+  <li><a href="#ficheros-en-python" id="toc-ficheros-en-python" class="nav-link" data-scroll-target="#ficheros-en-python"><span class="header-section-number">2.4</span> Ficheros en Python</a></li>
+  <li><a href="#abrir-un-fichero" id="toc-abrir-un-fichero" class="nav-link" data-scroll-target="#abrir-un-fichero"><span class="header-section-number">2.5</span> Abrir un fichero</a></li>
+  <li><a href="#cerrar-un-fichero" id="toc-cerrar-un-fichero" class="nav-link" data-scroll-target="#cerrar-un-fichero"><span class="header-section-number">2.6</span> Cerrar un fichero</a></li>
+  <li><a href="#ejemplo-de-organización-de-ficheros" id="toc-ejemplo-de-organización-de-ficheros" class="nav-link" data-scroll-target="#ejemplo-de-organización-de-ficheros"><span class="header-section-number">2.7</span> Ejemplo de organización de ficheros</a></li>
+  </ul></li>
+  <li><a href="#ficheros-de-lectura" id="toc-ficheros-de-lectura" class="nav-link" data-scroll-target="#ficheros-de-lectura"><span class="header-section-number">3</span> Ficheros de lectura</a>
+  <ul class="collapse">
+  <li><a href="#paradigna-de-lectura-secuencial" id="toc-paradigna-de-lectura-secuencial" class="nav-link" data-scroll-target="#paradigna-de-lectura-secuencial"><span class="header-section-number">3.1</span> Paradigna de lectura secuencial</a></li>
+  <li><a href="#operaciones-de-lectura" id="toc-operaciones-de-lectura" class="nav-link" data-scroll-target="#operaciones-de-lectura"><span class="header-section-number">3.2</span> Operaciones de lectura</a></li>
+  <li><a href="#read" id="toc-read" class="nav-link" data-scroll-target="#read"><span class="header-section-number">3.3</span> <code>read()</code></a></li>
+  <li><a href="#readline" id="toc-readline" class="nav-link" data-scroll-target="#readline"><span class="header-section-number">3.4</span> <code>readline()</code></a></li>
+  </ul></li>
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos"><span class="header-section-number">4</span> Ejemplos</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="602_ficheros.reveal.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Teoría 601</h1>
+<p class="subtitle lead">Ficheros y ficheros de lectura</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="motivación" class="level2 center" data-number="1">
+<h2 class="center anchored" data-number="1" data-anchor-id="motivación"><span class="header-section-number">1</span> Motivación</h2>
+<hr>
+<ul>
+<li>Desarrolla un programa que cuente cuántas vocales tiene una frase introducida por teclado (acabada en salto de línea)</li>
+</ul>
+<p><strong>¿Sabrías implementarlo?</strong></p>
+<ul>
+<li>Sí. Leyendo de teclado la frase letra a letra y contando las vocales.</li>
+</ul>
+<hr>
+<ul>
+<li>Desarrolla un programa que cuente cuántas vocales tiene el libro “El Quijote”</li>
+</ul>
+<p><strong>¿Sabrías implementarlo?</strong></p>
+<ul>
+<li>“Sí”. Leyendo de teclado el libro y contando las vocales.
+<ul>
+<li>Alguien tiene que teclear el libro.</li>
+</ul></li>
+</ul>
+<hr>
+<ul>
+<li>Desarrolla un programa que cuente cuántas vocales tienen todos los libros de La Biblioteca Nacional de España</li>
+</ul>
+<p><strong>¿Sabrías implementarlo?</strong></p>
+<ul>
+<li>“Sí”. Leyendo de teclado los libros y contando las vocales.
+<ul>
+<li>Alguien tiene que teclear todos los libros.</li>
+</ul></li>
+<li>¿Puedo parar el programa y seguir tecleando después?
+<ul>
+<li>No.&nbsp;Si el programa se cierra, tienes que volver a empezar.</li>
+</ul></li>
+</ul>
+<hr>
+<ul>
+<li>Y después de teclear eso… <strong>qué hacemos con el resultado?</strong>
+<ul>
+<li>¿Re-tecleamos El Quijote cada vez que queramos recordar cuántas vocales tenía?</li>
+</ul></li>
+</ul>
+<p><strong>Tiene que haber un método mejor para almacenar y recuperar información.</strong></p>
+<hr>
+<ul>
+<li><strong>Otros ejemplos</strong>:
+<ul>
+<li>Trabajo con hojas de cálculo</li>
+<li>Aplicar un filtro a una imagen o a una pista de audio</li>
+<li>Almacenar datos de alumnos, empleados, inventario, etc.</li>
+<li>Reproducir un vídeo o una canción</li>
+</ul></li>
+</ul>
+<hr>
+<section id="persistencia-de-la-información" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="persistencia-de-la-información"><span class="header-section-number">1.1</span> Persistencia de la información</h3>
+<ul>
+<li>Un programa Python consta de <strong>datos e instrucciones</strong>.</li>
+<li>Hasta ahora:
+<ul>
+<li>Obteníamos datos de teclado</li>
+<li>Los almacenábamos en variables (memoria RAM)</li>
+<li>Realizábamos operaciones con ellos</li>
+<li>Mostrábamos el resultado por pantalla</li>
+<li>Al finalizar el programa, los datos <strong>se perdían</strong>.</li>
+</ul></li>
+</ul>
+<p><strong>Las variables y sus valores desaparecen al finalizar el programa.</strong></p>
+<p><em>Necesitamos un método para almacenar los datos de forma persistente.</em></p>
+<hr>
+</section>
+</section>
+<section id="ficheros" class="level2 center" data-number="2">
+<h2 class="center anchored" data-number="2" data-anchor-id="ficheros"><span class="header-section-number">2</span> Ficheros</h2>
+<hr>
+<section id="dispositivos-de-almacenamiento" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="dispositivos-de-almacenamiento"><span class="header-section-number">2.1</span> Dispositivos de almacenamiento</h3>
+<ul>
+<li><strong>Memoria</strong>: RAM
+<ul>
+<li>Volátil</li>
+<li>Almacena datos temporales</li>
+<li>Se pierde al finalizar el programa</li>
+</ul></li>
+<li><strong>Almacenamiento persistente</strong>: discos duros, pendrives, CD/DVD
+<ul>
+<li>No volátil</li>
+<li>Almacena datos de forma persistente</li>
+<li>Se conserva al finalizar el programa</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="ficheros-y-sistemas-de-ficheros" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="ficheros-y-sistemas-de-ficheros"><span class="header-section-number">2.2</span> Ficheros y sistemas de ficheros</h3>
+<ul>
+<li><strong>Fichero</strong>: Recurso de un computador que permite almacenar información de forma descreta en un dispositivo de almacenamiento.
+<ul>
+<li>Son <strong>abstracciones</strong> que nos permiten manejar datos de forma análoga a ficheros físicos.
+<ul>
+<li>Mover, copiar, renombrar, eliminar, etc.</li>
+</ul></li>
+<li><em>Son una serie de bytes que almacenan información.</em></li>
+</ul></li>
+<li><strong>Sistema de ficheros</strong>: Componente del sistema operativo gestiona los ficheros y directorios.
+<ul>
+<li>Proporciona una interfaz para crear, eliminar, mover, copiar y renombrar ficheros.</li>
+<li>Organiza los ficheros en directorios (carpetas).</li>
+<li>Controla el acceso a los ficheros y la seguridad de los datos.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="ficheros-en-programación" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="ficheros-en-programación"><span class="header-section-number">2.3</span> Ficheros en programación</h3>
+<ul>
+<li>Un fichero en un sistema de ficheros tiene:
+<ul>
+<li>Nombre: <code>fichero.txt</code></li>
+<li>Ubicación: <code>/home/usuario/fichero.txt</code></li>
+<li>Contenido: <code>Hola, soy un fichero de texto.</code></li>
+</ul></li>
+<li>En función su contenido, un fichero tendrá un tamaño diferente.
+<ul>
+<li>Libro de texto: ~1 KB</li>
+<li>Imagen JPEG: ~1 MB</li>
+<li>Película: ~2 GB</li>
+</ul></li>
+</ul>
+<hr>
+<ul>
+<li>Solemos distinguir entre:
+<ul>
+<li><strong>Ficheros de texto</strong>:
+<ul>
+<li>Contienen caracteres como:
+<ul>
+<li>letras (<code>a</code>, <code>A</code>)</li>
+<li>números (<code>1</code>, <code>2</code>)</li>
+<li>símbolos (<code>!</code>, <code>@</code>)</li>
+<li>caracteres de control (<code>\n</code>, <code>\t</code>)</li>
+</ul></li>
+<li>Formatos: <code>txt</code>, <code>csv</code>, <code>py</code>, etc.</li>
+</ul></li>
+<li><strong>Ficheros binarios</strong>:
+<ul>
+<li>Contienen cualquier valor: <code>int</code>, <code>float</code>, <code>byte</code>, etc.</li>
+<li>Ejemplo: <code>fichero.jpg</code>, <code>fichero.mp3</code>, <code>fichero.exe</code></li>
+</ul></li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="ficheros-en-python" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="ficheros-en-python"><span class="header-section-number">2.4</span> Ficheros en Python</h3>
+<ul>
+<li>En la mayoría de lenguajes de programación, existe <strong>un tipo de dato</strong> (clase) que <strong>representa un fichero</strong> y permite operar con él.</li>
+<li>Debemos tener claro:
+<ul>
+<li>La variable <strong>no es</strong> el fichero</li>
+<li>La variable <strong>es un intermediario</strong> (<em>handler</em>) entre el fichero real, el sistema operativo y nuestro programa.</li>
+</ul></li>
+</ul>
+<hr>
+<ul>
+<li>Para que una variable represente un fichero, debemos:
+<ul>
+<li><strong>Abrir</strong> (open)
+<ul>
+<li>Indicarle <strong>qué fichero</strong> (de nuestro sistema de ficheros persistente) debe representar</li>
+<li>Indicarle <strong>en qué modo</strong> queremos abrirlo
+<ul>
+<li>Lectura (read)</li>
+<li>Escritura (write)</li>
+<li>Añadir (append)</li>
+</ul></li>
+</ul></li>
+<li><strong>Operar</strong>
+<ul>
+<li><strong>Leer</strong> datos del fichero (<strong>entrada</strong>)</li>
+<li><strong>Escribir</strong> datos en el fichero (<strong>salida</strong>)</li>
+</ul></li>
+<li><strong>Cerrar</strong>
+<ul>
+<li>Una vez terminadas las operaciones, debemos librerar los recursos</li>
+</ul></li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="abrir-un-fichero" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="abrir-un-fichero"><span class="header-section-number">2.5</span> Abrir un fichero</h3>
+<ul>
+<li><code>open(ruta_fichero, modo)</code>: Abre el fichero en <code>ruta_fichero</code> y devuelve un objeto que lo representa.
+<ul>
+<li><code>ruta_fichero</code>: Ruta (o nombre) del fichero a abrir.</li>
+<li><code>modo</code>: String que indica el modo de apertura del fichero.
+<ul>
+<li><code>r</code>: Modo lectura (read)</li>
+<li><code>w</code>: Modo escritura (write)</li>
+<li><code>a</code>: Modo añadir (append)</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'fichero.txt'</span>, <span class="st">'r'</span>) </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+<section id="ruta-de-un-fichero" class="level4" data-number="2.5.1">
+<h4 data-number="2.5.1" class="anchored" data-anchor-id="ruta-de-un-fichero"><span class="header-section-number">2.5.1</span> Ruta de un fichero</h4>
+<ul>
+<li>Dos ficheros pueden llamarse igual <strong>mientras estén en directorios diferentes</strong>.</li>
+<li>Es decir: Para identificar unívocamente un fichero, debemos conocer su:
+<ul>
+<li>Nombre</li>
+<li>Ubicación (ruta de directorios donde se encuentra)</li>
+</ul></li>
+<li>Ejemplo de ruta:
+<ul>
+<li><code>C:\Users\Usuario\Documents\fichero.txt</code></li>
+</ul></li>
+<li><code>open()</code> puede recibir un nombre de fichero o una ruta completa:
+<ul>
+<li>Si sólo recibe un <strong>nombre</strong> asumirá que debe buscarlo en el <strong>directorio actual</strong>.
+<ul>
+<li>En la mayoría de casos, el directorio actual es el mismo donde se encuentra el script <code>.py</code>.</li>
+</ul></li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="cerrar-un-fichero" class="level3" data-number="2.6">
+<h3 data-number="2.6" class="anchored" data-anchor-id="cerrar-un-fichero"><span class="header-section-number">2.6</span> Cerrar un fichero</h3>
+<ul>
+<li><code>f.close()</code>: Cierra el fichero.</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'fichero.txt'</span>, <span class="st">'r'</span>) </span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="co"># ...Realizar operaciones con el fichero</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>¿Por qué no es necesario indicar el nombre del fichero al cerrarlo?</em></p>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Es importante cerrar el fichero después de usarlo para liberar los recursos del sistema. Si no lo hacemos, podemos tener problemas de memoria o de acceso a los ficheros.</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="ejemplo-de-organización-de-ficheros" class="level3" data-number="2.7">
+<h3 data-number="2.7" class="anchored" data-anchor-id="ejemplo-de-organización-de-ficheros"><span class="header-section-number">2.7</span> Ejemplo de organización de ficheros</h3>
+<ul>
+<li>Considera la siguiente estructura de directorios:</li>
+</ul>
+<div class="line-block">directorio_actual<br>
+├── subdirectorio/<br>
+│&nbsp;&nbsp; └── fichero.txt<br>
+├── programa.py<br>
+└── fichero.txt</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'fichero.txt'</span>, <span class="st">'r'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2"></a>f.close() </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>El programa abrirá el fichero <code>fichero.txt</code> que se encuentra en el directorio actual</li>
+<li><strong>No</strong> abrirá el fichero <code>fichero.txt</code> que se encuentra en el subdirectorio.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="ficheros-de-lectura" class="level2 center" data-number="3">
+<h2 class="center anchored" data-number="3" data-anchor-id="ficheros-de-lectura"><span class="header-section-number">3</span> Ficheros de lectura</h2>
+<hr>
+<section id="paradigna-de-lectura-secuencial" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="paradigna-de-lectura-secuencial"><span class="header-section-number">3.1</span> Paradigna de lectura secuencial</h3>
+<ul>
+<li>De las muchas formas en las que podemos leer un fichero, en esta asignatura nos vamos a limitar a la más sencilla de todas:
+<ul>
+<li><strong>Lectura secuencial</strong>.</li>
+</ul></li>
+<li>En este paradigma, leemos el fichero:
+<ul>
+<li>En orden.</li>
+<li>De principio a fin.</li>
+</ul></li>
+<li>El funcionamiento es análogo al de <strong>un tocadiscos</strong>:
+<ul>
+<li>Colocamos la aguja en el principio del disco.</li>
+<li>La aguja avanza a medida que el disco gira, leyendo el surco de forma secuencial.</li>
+<li>Cuando llega al final, se detiene.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="operaciones-de-lectura" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="operaciones-de-lectura"><span class="header-section-number">3.2</span> Operaciones de lectura</h3>
+<ul>
+<li>Abrir un fichero en <strong>modo lectura</strong> (<code>r</code>) significa que los utilizaremos como una <strong>fuente de datos</strong> (input).
+<ul>
+<li><code>f.open('fichero.txt', 'r')</code>: Abre el fichero <code>fichero.txt</code> en modo lectura.</li>
+</ul></li>
+<li>Si el fichero <strong>no existe</strong>, se producirá <strong>un error</strong>.
+<ul>
+<li><code>FileNotFoundError</code></li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="read" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="read"><span class="header-section-number">3.3</span> <code>read()</code></h3>
+<ul>
+<li><code>f.read()</code>: lee todo el contenido del fichero y lo devuelve como una cadena de texto.</li>
+<li><strong>Argumentos</strong>:
+<ul>
+<li>Ninguno</li>
+</ul></li>
+<li><strong>Devuelve</strong>:
+<ul>
+<li><code>string</code>: un string con todo el contenido del fichero.
+<ul>
+<li>Si el fichero estaba vacío, devuelve una cadena vacía.</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>texto <span class="op">=</span> f.read()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+<section id="ejemplo-lectura-de-todo-el-fichero-en-una-variable-string" class="level4" data-number="3.3.1">
+<h4 data-number="3.3.1" class="anchored" data-anchor-id="ejemplo-lectura-de-todo-el-fichero-en-una-variable-string"><span class="header-section-number">3.3.1</span> Ejemplo: Lectura de todo el fichero en una variable string</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'fichero.txt'</span>, <span class="st">'r'</span>)</span>
+<span id="cb5-2"><a href="#cb5-2"></a>contenido <span class="op">=</span> f.read()</span>
+<span id="cb5-3"><a href="#cb5-3"></a>f.close()</span>
+<span id="cb5-4"><a href="#cb5-4"></a></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="bu">print</span>(contenido)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Cuidado leyendo ficheros muy grandes. Desbordarás la memoria RAM.</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="readline" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="readline"><span class="header-section-number">3.4</span> <code>readline()</code></h3>
+<ul>
+<li><code>f.readline()</code>: lee una línea del fichero y la devuelve como una cadena de texto.</li>
+<li><strong>Argumentos</strong>:
+<ul>
+<li>Ninguno</li>
+</ul></li>
+<li><strong>Devuelve</strong>:
+<ul>
+<li><code>string</code>: un string con el contenido de la línea leída.
+<ul>
+<li>Si se ha llegado al final del fichero, devuelve una cadena vacía.</li>
+</ul></li>
+</ul></li>
+<li>Útil cuando <strong>no podemos permitirnos cargar todo el fichero en memoria</strong>.</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>linea <span class="op">=</span> f.readline()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+<section id="ejemplo-lectura-de-una-línea-del-fichero" class="level4" data-number="3.4.1">
+<h4 data-number="3.4.1" class="anchored" data-anchor-id="ejemplo-lectura-de-una-línea-del-fichero"><span class="header-section-number">3.4.1</span> Ejemplo: Lectura de una línea del fichero</h4>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'fichero.txt'</span>, <span class="st">'r'</span>)</span>
+<span id="cb7-2"><a href="#cb7-2"></a>linea <span class="op">=</span> f.readline()</span>
+<span id="cb7-3"><a href="#cb7-3"></a>f.close()</span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="bu">print</span>(linea)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="ejemplo-lectura-de-varias-líneas-del-fichero" class="level4" data-number="3.4.2">
+<h4 data-number="3.4.2" class="anchored" data-anchor-id="ejemplo-lectura-de-varias-líneas-del-fichero"><span class="header-section-number">3.4.2</span> Ejemplo: Lectura de varias líneas del fichero</h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'fichero.txt'</span>, <span class="st">'r'</span>)</span>
+<span id="cb8-2"><a href="#cb8-2"></a>linea <span class="op">=</span> f.readline()</span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="cf">while</span> linea <span class="op">!=</span> <span class="st">''</span>:</span>
+<span id="cb8-4"><a href="#cb8-4"></a>    <span class="bu">print</span>(linea)</span>
+<span id="cb8-5"><a href="#cb8-5"></a>    linea <span class="op">=</span> f.readline()</span>
+<span id="cb8-6"><a href="#cb8-6"></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+</section>
+<section id="ejemplos" class="level2 center" data-number="4">
+<h2 class="center anchored" data-number="4" data-anchor-id="ejemplos"><span class="header-section-number">4</span> Ejemplos</h2>
+<hr>
+<section id="ejercicio-contar-vocales-en-un-fichero" class="level4" data-number="4.0.1">
+<h4 data-number="4.0.1" class="anchored" data-anchor-id="ejercicio-contar-vocales-en-un-fichero"><span class="header-section-number">4.0.1</span> Ejercicio: Contar vocales en un fichero</h4>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> es_vocal(caracter):</span>
+<span id="cb9-2"><a href="#cb9-2"></a>    minuscula <span class="op">=</span> caracter.lower()</span>
+<span id="cb9-3"><a href="#cb9-3"></a>    <span class="cf">return</span> (</span>
+<span id="cb9-4"><a href="#cb9-4"></a>        minuscula <span class="op">==</span> <span class="st">"a"</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>        <span class="kw">or</span> minuscula <span class="op">==</span> <span class="st">"e"</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a>        <span class="kw">or</span> minuscula <span class="op">==</span> <span class="st">"i"</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a>        <span class="kw">or</span> minuscula <span class="op">==</span> <span class="st">"o"</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a>        <span class="kw">or</span> minuscula <span class="op">==</span> <span class="st">"u"</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a>    )</span>
+<span id="cb9-10"><a href="#cb9-10"></a></span>
+<span id="cb9-11"><a href="#cb9-11"></a></span>
+<span id="cb9-12"><a href="#cb9-12"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"fichero.txt"</span>, <span class="st">"r"</span>)</span>
+<span id="cb9-13"><a href="#cb9-13"></a>contenido <span class="op">=</span> f.read()</span>
+<span id="cb9-14"><a href="#cb9-14"></a>f.close()</span>
+<span id="cb9-15"><a href="#cb9-15"></a></span>
+<span id="cb9-16"><a href="#cb9-16"></a>contador <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb9-17"><a href="#cb9-17"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(contenido)):</span>
+<span id="cb9-18"><a href="#cb9-18"></a>    <span class="cf">if</span> es_vocal(contenido[i]):</span>
+<span id="cb9-19"><a href="#cb9-19"></a>        contador <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb9-20"><a href="#cb9-20"></a></span>
+<span id="cb9-21"><a href="#cb9-21"></a><span class="bu">print</span>(<span class="ss">f"El fichero tiene </span><span class="sc">{</span>contador<span class="sc">}</span><span class="ss"> vocales."</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // default icon
+          link.classList.add("external");
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
