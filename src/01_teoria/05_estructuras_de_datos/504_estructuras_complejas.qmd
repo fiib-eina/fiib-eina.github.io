@@ -139,7 +139,7 @@ _Más adelante veremos por qué esto no funciona._
 def leer_matriz(filas, columnas):
     matriz = [None] * filas  # Creamos la lista de listas
     for i in range(filas):
-        matriz[i] = [None] * columnas # Creamos la fila i
+        matriz[i] = [None] * columnas  # Creamos la fila i
         for j in range(columnas):
             print(f"Introduce el valor de la fila {i} y columna {j}: ", end="")
             matriz[i][j] = int(input())
@@ -168,7 +168,7 @@ def leer_matriz(filas, columnas):
 
 ---
 
-#### Ejemplo: Matriz por escalar (listas dinámicas)
+#### Ejemplo: Matriz por escalar (listas estáticas)
 
 ```python
 def matriz_por_escalar(matriz, escalar):
