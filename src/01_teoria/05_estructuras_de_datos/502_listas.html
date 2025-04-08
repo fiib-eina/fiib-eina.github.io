@@ -240,13 +240,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Sus elementos se identifican mediante <strong>su posición</strong> (índice) dentro de la lista.</li>
 </ul>
 <hr>
+<!-- TODO: [Latre] No utilizar indistintamente posición e índice. En mi opinión
+las posiciones son ordinales a partir de 1º, mientras que los índices
+"etiquetan" correlativamente elementos y empiezan en 0 -->
 <ul>
 <li>La siguiente lista:
 <ul>
 <li>Tiene un <strong>identificador</strong> <code>mi_lista</code>.</li>
 <li>Contiene elementos <strong>de tipo</strong> entero.</li>
 <li>Tiene un <strong>tamaño</strong> de <code>5</code> enteros.</li>
-<li>El entero en la <strong>posición</strong> <code>1</code> tiene el <strong>valor</strong> <code>8</code>.</li>
+<li>El entero en la <strong>posición</strong> <code>1</code> tiene el <strong>valor</strong> <code>8</code>. <!-- TODO: - El entero de la **posición** de índice `1` tiene el **valor** `8`. --></li>
 </ul></li>
 </ul>
 <p><img src="./img/lista.png" class="img-fluid"></p>
@@ -337,6 +340,7 @@ Elemento 2: 2<br>
 Elemento 1: 8<br>
 Elemento 0: 5</div>
 <hr>
+<!-- TODO: ¿Mejor "fuera de rango"? (aunque pongas también el término en inglés) -->
 </section>
 </section>
 <section id="acceso-out-of-bounds" class="level3" data-number="1.4">
@@ -421,6 +425,7 @@ Introduce 4º número: <strong>4</strong><br>
 <div class="columns">
 <div class="column" style="width:30%;">
 <p><strong>Acoplada a 5</strong></p>
+<!-- TODO: cambiar el identificador _l_ por otro más legible: ¿lst, lista? -->
 <div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">def</span> suma_acoplada(l):</span>
 <span id="cb13-2"><a href="#cb13-2"></a>    suma <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb13-3"><a href="#cb13-3"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>

@@ -272,9 +272,9 @@
 </section>
 <section class="slide level2">
 
-<h4 id="técticas-de-codificación-de-una-secuencia">Técticas de codificación de una secuencia</h4>
+<h4 id="técnicas-de-codificación-de-una-secuencia">Técnicas de codificación de una secuencia</h4>
 <ul>
-<li><strong>Opión 1:</strong> Cambiar el <code>for</code> por un <code>while</code> que recorra la lista hasta encontrar un <strong>valor especial</strong> que indique el final de la secuencia.
+<li><strong>Opción 1:</strong> Cambiar el <code>for</code> por un <code>while</code> que recorra la lista hasta encontrar un <strong>valor especial</strong> que indique el final de la secuencia.
 <ul>
 <li>En este caso, puede ser el valor <code>0</code>.</li>
 <li>No siempre es posible usar un valor especial.</li>
@@ -286,7 +286,7 @@
 <span id="cb4-4"><a></a>    <span class="bu">print</span>(lista[i])</span>
 <span id="cb4-5"><a></a>    i <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li><strong>Opión 2:</strong> Guardar en otra variable el <strong>número de elementos válidos</strong> de la lista.
+<li><strong>Opción 2:</strong> Guardar en otra variable el <strong>número de elementos válidos</strong> de la lista.
 <ul>
 <li>En este caso, <code>cantidad</code>.</li>
 </ul></li>
@@ -298,7 +298,7 @@
 <section class="slide level2">
 
 <ul>
-<li><strong>Opión 3:</strong> Devolver tanto la lista como el número de elementos válidos mediante un objeto.
+<li><strong>Opción 3:</strong> Devolver tanto la lista como el número de elementos válidos mediante un objeto.
 <ul>
 <li>Creamos una clase <code>Secuencia</code> que contenga ambos valores.</li>
 </ul></li>
@@ -365,7 +365,7 @@
 <li>Esto nos permite usar listas <strong>sin definir su tamaño</strong> de antemano.
 <ul>
 <li>Sin embargo, <strong>cambiar</strong> el tamaño de una lista <strong>tiene un coste</strong>.</li>
-<li>Procuraremos recurir a esto <strong>sólo cuando sea necesario</strong>.</li>
+<li>Procuraremos recurrir a esto <strong>solo cuando sea necesario</strong>.</li>
 </ul></li>
 </ul>
 </section>
@@ -479,6 +479,9 @@
 </section>
 <section class="slide level2">
 
+<!-- TODO: [Latre] Añadir if len(lista) == 0: return None
+Se podría presentar primero esta solución y preguntar qué pasaría si se pasa
+una lista vacía. -->
 <div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="kw">def</span> encuentra_primero(nombres):</span>
 <span id="cb15-2"><a></a>    primero <span class="op">=</span> nombres[<span class="dv">0</span>]</span>
 <span id="cb15-3"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(nombres)):</span>
@@ -522,7 +525,7 @@
 <li>Una función <code>lee_alumno()</code> que solicite al usuario los datos de un alumno y devuelva un objeto de la clase <code>Alumno</code>.</li>
 <li>Una función <code>lee_alumnos()</code> que lea una secuencia de alumnos dada por el usuario (terminada en blanco) y devuelva una lista con los alumnos leídos.</li>
 <li>Una función <code>buscar_por_nip(alumnos, nip)</code> que reciba una lista de alumnos y un NIP y devuelva el alumno con ese NIP.</li>
-<li>Una función <code>filtrar_por_nacimiento(alumnos, nacimiento)</code> que reciba una lista de alumnos y un año de nacimiento y devuelva una lista <strong>nueva</strong> que contenga sólo los alumnos nacidos en un año anterior o igual al año indicado.</li>
+<li>Una función <code>filtrar_por_nacimiento(alumnos, nacimiento)</code> que reciba una lista de alumnos y un año de nacimiento y devuelva una lista <strong>nueva</strong> que contenga solo los alumnos nacidos en un año anterior o igual al año indicado.</li>
 </ul>
 </section>
 <section class="slide level2">
@@ -565,12 +568,13 @@
 
 <h5 id="función-buscar_por_nipalumnos-nip-sin-early-return">Función <code>buscar_por_nip(alumnos, nip)</code> (sin early return)</h5>
 <div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="kw">def</span> buscar_por_nip(alumnos, nip):</span>
-<span id="cb19-2"><a></a>    alumno <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb19-3"><a></a>    <span class="cf">while</span> i <span class="op">&lt;</span> <span class="bu">len</span>(alumnos) <span class="kw">and</span> alumno <span class="op">==</span> <span class="va">None</span>:</span>
-<span id="cb19-4"><a></a>        <span class="cf">if</span> alumnos[i].nip <span class="op">==</span> nip:</span>
-<span id="cb19-5"><a></a>            alumno <span class="op">=</span> alumnos[i]</span>
-<span id="cb19-6"><a></a>        i <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb19-7"><a></a>    <span class="cf">return</span> alumno</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-2"><a></a>    i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb19-3"><a></a>    alumno <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb19-4"><a></a>    <span class="cf">while</span> i <span class="op">&lt;</span> <span class="bu">len</span>(alumnos) <span class="kw">and</span> alumno <span class="op">==</span> <span class="va">None</span>:</span>
+<span id="cb19-5"><a></a>        <span class="cf">if</span> alumnos[i].nip <span class="op">==</span> nip:</span>
+<span id="cb19-6"><a></a>            alumno <span class="op">=</span> alumnos[i]</span>
+<span id="cb19-7"><a></a>        i <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb19-8"><a></a>    <span class="cf">return</span> alumno</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-tip callout-style-simple">
 <div class="callout-body">
 <div class="callout-icon-container">
@@ -581,7 +585,7 @@
 <li><code>None</code> es un valor especial que se usa en Python para indicar la ausencia de un valor.</li>
 <li>Es válido para cualquier tipo de dato. (Devolver <code>None</code> no se considera <em>violar</em> el tipo de retorno de la función).</li>
 <li>El tipo <code>None</code> es tan importante en programación como el <code>0</code> en matemáticas.</li>
-<li>Esto es sólo la punta del iceberg de la <em>“gestión de errores y excepciones”</em>.</li>
+<li>Esto es solo la punta del iceberg de la <em>“gestión de errores y excepciones”</em>.</li>
 </ul>
 </div>
 </div>

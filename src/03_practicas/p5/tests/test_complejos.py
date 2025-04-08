@@ -1,4 +1,4 @@
-"""Programa de pruebas de las funciones del módulo `horas.py`."""
+"""Programa de pruebas de las funciones del módulo `complejos.py`."""
 
 import complejos
 
