@@ -1,0 +1,488 @@
+---
+title: Teoría 601
+subtitle: Manejo avanzado de texto
+format: revealjs
+---
+
+## Manejo de texto básico {.center}
+
+---
+
+### Manejo de texto hasta ahora
+
+- En lo relativo al manejo de texto:
+    - Hemos compuesto textos complejos con `f-strings`.
+    - Hemos compuesto textos complejos con **funciones propias**.
+    - Hemos utilizado `print(n, end="")` para escribir formatos complejos.
+- Sin embargo, cuando haciendo un uso muy básico de los textos que leemos:
+    - Cuando leemos de teclado, introducimos un valor por cada línea.
+
+---
+
+#### Ejercicio: Leer una fila de números enteros
+
+- Escribe una función que lea una secuencia de números enteros (terminada en un salto de línea) y los almacene en una lista.
+
+```python
+print(leer_lista())
+```
+
+| Introduzca una secuencia de números:
+| **1 2 34 5 6 12 8 9**
+| [1, 2, 34, 5, 6, 12, 8, 9]
+
+::: {.callot-warning}
+Es la primera vez que queremos leer más de un valor por línea.
+
+- ¿Sabríamos hacer eso?
+:::
+
+---
+
+### Fundamentos de la entrada/salida de consola
+
+- Todos los programas que hemos escrito **leen del teclado** e **imprimen en la consola**.
+- **Para imprimir**:
+    - `print(string)`: Escribe el contenido del string y añade un salto de línea.
+    - `print(string, end="")`: Escribe el contenido del string y no añade un salto de línea.
+- **Para leer**:
+    - `input()`: Lee **una línea de texto** y la devuelve como un string.
+
+::: {.callout-warning}
+`input()` siempre devuelve un string, y contiene la línea entera
+:::
+
+---
+
+#### Ejemplo: Leer dos numeros (mal)
+
+```python
+print("Introduzca dos números:")
+a = input()
+b = input()
+print("La suma es:", a + b)
+```
+
+| Introduzca dos números:
+| **1 2**
+| _el programa se cuelga esperando el segundo input_
+
+- El programa anterior se quedará esperando en `b = input()` a que escribamos una segunda línea de texto en el teclado.
+- Eso es porque `a = input()` ya leyó la línea completa.
+    - La variable `a` contiene el texto `"1 2"`.
+
+---
+
+### Modelo de entrada/salida de Python vs otros lenguajes
+
+- Python fue originalmente creado para ser un **lenguaje de scripting**.
+- Esto implicó muchas decisiones de diseño que lo distanciaron de otros lenguajes comunes.
+- Lenguajes como C++, tratan la entrada/salida como un **flujo de bytes**.
+- Python gira en torno a **líneas de texto**. Su filosofía es:
+    - **Lee** la línea completa, y después **procésala**.
+    - **Procesa** la línea completa, y después **imprímela**.
+
+---
+
+## Manejo avanzado de texto {.center}
+
+---
+
+### Manejo avanzado de texto
+
+- En esta sesión cubriremos todas las funciones necesarias para procesar textos (strings) con comodidad.
+- Las funciones serán:
+    - `split()`
+    - `join()`
+    - `strip()`
+    - `replace()`
+    - `find()`
+    - `upper()` y `lower()`
+
+---
+
+- Todas las funcionen que veremos tienen que común que:
+    - Se invocan:
+        - `nombre_del_string.nombre_de_la_funcion()`
+    - Devuelven valores nuevos (no mutan el string original).
+
+**Ejemplo usando `upper()` sobre la variable `s`**:
+
+```python
+s = "Hola mundo"
+s2 = s.upper()
+```
+
+**Ejemplo usando `upper()` sobre un literal**:
+
+```python
+s2 = "Hola mundo".upper()
+```
+
+---
+
+### `split()`
+
+- `s.split(c)`: permite dividir un string en partes.
+- **Argumentos**:
+    - `c`: indica el separador que se usará.
+- **Devuelve**:
+    - `list[str]`: una lista con las partes del string original
+
+```python
+print("Hola mundo".split(" ")) 
+```
+
+| ['Hola', 'mundo']
+
+---
+
+#### Ejemplo: Trocear una IP
+
+- Todas las IPv4 tienen la forma `a.b.c.d`, donde `a`, `b`, `c` y `d` son números enteros entre 0 y 255.
+
+```python
+ip = "192.168.1.2"
+partes = ip.split(".")
+if len(partes) != 4:
+    print("La IP no es válida")
+else:
+    print(partes[0])
+    print(partes[1])
+    print(partes[2])
+    print(partes[3])
+```
+
+| 192
+| 168
+| 1
+| 2
+
+---
+
+#### Ejemplo: Trocear un número
+
+```python
+partes = "2.345.543,23".split(",")
+print(f"Parte entera: {partes[0]}, Parte decimal: {partes[1]}")
+```
+
+| Parte entera: 2.345.543, Parte decimal: 23
+
+---
+
+### `join()`
+
+- `s.join(list)`: permite unir una lista de strings en un solo string utilizando el string base como separador.
+- **Argumentos**:
+    - `list`: lista de strings a unir.
+- **Devuelve**:
+    - `string`: un string con los elementos de la lista unidos por el string base.
+
+```python
+print(",".join(["a", "b", "c"]))
+```
+
+| a,b,c
+
+---
+
+#### Ejemplo: Mostrar una lista de nombres separados por comas
+
+```python
+nombres = ["Juan", "Pedro", "María"]
+print(", ".join(nombres))
+```
+
+| Juan, Pedro, María
+
+::: {.callout-tip}
+Observa que el separador es **una coma y un espacio**.
+:::
+
+---
+
+#### Ejemplo: Unir una IP
+
+
+```python
+print(".".join(["192", "168", "1", "2"]))
+```
+
+| 192.168.1.2
+
+::: {.callout-warning}
+Cuidado! La lista debe contener strings
+
+- Si intentas unir una lista de enteros, obtendrás un error.
+
+```python
+print(".".join([192, 168, 1, 2]))
+```
+
+| TypeError: sequence item 0: expected str instance, int found
+
+```python
+print(".".join([str(192), str(168), str(1), str(2)]))
+```
+
+| 192.168.1.2
+
+:::
+
+---
+
+#### Ejemplo: Trocear y unir un número
+
+```python
+numero_troceado = "2.345.543,23".split(",")
+parte_entera = numero_troceado[0]
+parte_decimal = numero_troceado[1]
+
+parte_entera_troceada = parte_entera.split(".")
+parte_entera_sin_puntos = "".join(parte_entera_troceada)
+
+print(f"Parte entera: {parte_entera_sin_puntos}, Parte decimal: {parte_decimal}")
+```
+
+| Parte entera: 2345543, Parte decimal: 23
+
+::: {.callout-warning}
+Recuerda en ningún momento ha habido en el programa un sólo `int` o `float`.
+Todas las operaciones se han hecho con strings.
+:::
+
+---
+
+### `strip()`
+
+- `s.strip()`: elimina los espacios en blanco al principio y al final de un string.
+- **Argumentos**:
+    - No tiene argumentos.
+- **Devuelve**:
+    - `string`: un string sin espacios en blanco al principio y al final.
+
+```python
+print("   Hola mundo   ".strip())
+```
+
+| Hola mundo
+
+---
+
+### `replace()`
+
+- `s.replace(a, b)`: permite reemplazar todas las ocurrencias de un string por otro.
+- **Argumentos**:
+    - `a`: string a reemplazar.
+    - `b`: string que reemplaza a `a`.
+- **Devuelve**:
+    - `string`: un string con todas las ocurrencias de `a` reemplazadas por `b`.
+
+```python
+print("Tres tristres tigres tragan trigo en un trigal".replace("t", "d"))
+```
+
+| Dres drisdres digris dragan drigo en un drigal
+
+---
+
+#### Ejemplo: Reemplazar palabras completas
+
+```python
+print("Hola mundo".replace("mundo", "Python"))
+```
+
+| Hola Python
+
+---
+
+#### Ejemplo: Varios reemplazos encadenados
+
+```python
+s = "Quiero hablar con el encargado"
+s = s.replace("a", "i")
+s = s.replace("e", "i")
+s = s.replace("o", "i")
+s = s.replace("u", "i")
+print(s)
+```
+
+| Quiri hiblir cin il minigir
+
+**Opción alternativa (encadenando)**:
+
+```python
+s = "Quiero hablar con el encargado"
+s = s.replace("a", "i").replace("e", "i").replace("o", "i").replace("u", "i")
+print(s)
+```
+
+---
+
+### `find()`
+
+- `s.find(a)`: permite buscar un string dentro de otro.
+- **Argumentos**:
+    - `a`: string a buscar.
+- **Devuelve**:
+    - `int`: representa
+        - `-1`: si no se encuentra el string.
+        - `n`: la posición de la primera ocurrencia de `a` en `s`.
+
+```python
+print("Hola mundo".find(" "))
+```
+
+| 4
+
+::: {.callout-tip}
+
+- Recuerda que las posiciones empiezan en 0
+    - `4` es la quinta letra del string.
+
+:::
+
+---
+
+#### Ejemplo: Buscar un string entero
+
+```python
+print("Hola mundo".find("mundo"))
+```
+
+| 5
+
+```python
+print("Hola mundo".find("Python"))
+```
+
+| -1
+
+```python
+print("Hola mundo".find("Mundo"))
+```
+
+| -1
+
+---
+
+### `upper()` y `lower()`
+
+- `s.upper()` y `s.lower()` son funciones que permiten convertir un string a mayúsculas o minúsculas.
+- **Argumentos**:
+    - No tienen argumentos.
+- **Devuelven**:
+    - `string`: un string convertido a mayúsculas o minúsculas.
+
+```python
+print("Hola mundo".upper())
+print("Hola mundo".lower())
+```
+
+| HOLA MUNDO
+| hola mundo
+
+---
+
+### Concatenación de strings
+
+- En el tema anterior se comentó que se podía acceder a los caracteres de un string como si fuera una lista
+- Sin embargo, `str` **no soporta append**.
+- Para combinar strings o construit uno nuevo _parte a parte_ deberás hacerlo con `f-strings` o `+`.
+
+```python
+s = "Hola! Que tal amigo?"
+s = s.append(" Como estas?")
+print(s)
+```
+| AttributeError: 'str' object has no attribute 'append'
+
+
+```python
+s = "Hola! Que tal amigo?"
+s = s + " Como estas?"
+print(s)
+```
+| Hola! Que tal amigo? Como estas?
+
+---
+
+## Ejercicios {.center}
+
+---
+
+#### Ejercicio: Leer una fila de números enteros (solución)
+
+- Escribe una función que lea una secuencia de números enteros (terminada en un salto de línea) y los almacene en una lista.
+
+```python
+print(leer_lista())
+```
+
+| Introduzca una secuencia de números:
+| **1 2 34 5 6 12 8 9**
+| [1, 2, 34, 5, 6, 12, 8, 9]
+
+---
+
+```python
+def leer_lista():
+    print("Introduzca una secuencia de números:")
+    linea = input()
+
+    textos_separados = linea.split()
+    numeros = []
+    for i in range(len(textos_separados)):
+        # Recuerda que era texto
+        texto = int(textos_separados[i])
+        numeros.append(texto)
+
+    return numeros
+```
+
+---
+
+#### Ejercicio: Find case insensitive
+
+- Escribe una función que emule `find()` pero que no funcione aún cuando las cadenas se distinguen por mayúsculas y minúsculas (_case insensitive_).
+
+```python
+print(find_case_insensitive("Hola mundo", "Mundo"))
+```
+| 5
+
+---
+
+```python
+def find_case_insensitive(s, a):
+    s = s.lower()
+    a = a.lower()
+    return s.find(a)
+```
+
+---
+
+#### Ejercicio: Escritura tuenti
+
+- Escribe una función que reciba un texto y lo convierta a **escritura tuenti**.
+    - Durante la década de los 2000, en la red social Tuenti, se popularizó un tipo de escritura que alternaba mayúsculas y minúsculas.
+
+```python
+print(tuenti("Hola mundo"))
+```
+
+| HoLa MuNdO
+
+---
+
+```python
+def tuenti(s):
+    resultado = ""
+    for i in range(len(s)):
+        if i % 2 == 0:
+            resultado += s[i].upper()
+        else:
+            resultado += s[i].lower()
+    return resultado
+```

@@ -1,0 +1,352 @@
+---
+title: Teoría 601
+subtitle: Ficheros y ficheros de lectura
+format: revealjs
+---
+
+## Motivación {.center}
+
+---
+
+- Desarrolla un programa que cuente cuántas vocales tiene una frase introducida por teclado (acabada en salto de línea)
+
+**¿Sabrías implementarlo?**
+
+- Sí. Leyendo de teclado la frase letra a letra y contando las vocales.
+
+---
+
+- Desarrolla un programa que cuente cuántas vocales tiene el libro "El Quijote"
+
+**¿Sabrías implementarlo?**
+
+- "Sí". Leyendo de teclado el libro y contando las vocales.
+    - Alguien tiene que teclear el libro.
+
+---
+
+- Desarrolla un programa que cuente cuántas vocales tienen todos los libros de La Biblioteca Nacional de España
+
+**¿Sabrías implementarlo?**
+
+- "Sí". Leyendo de teclado los libros y contando las vocales.
+    - Alguien tiene que teclear todos los libros.
+- ¿Puedo parar el programa y seguir tecleando después?
+    - No. Si el programa se cierra, tienes que volver a empezar.
+
+---
+
+- Y después de teclear eso... **qué hacemos con el resultado?**
+    - ¿Re-tecleamos El Quijote cada vez que queramos recordar cuántas vocales tenía?
+
+**Tiene que haber un método mejor para almacenar y recuperar información.**
+
+---
+
+- **Otros ejemplos**:
+    - Trabajo con hojas de cálculo
+    - Aplicar un filtro a una imagen o a una pista de audio
+    - Almacenar datos de alumnos, empleados, inventario, etc.
+    - Reproducir un vídeo o una canción
+
+---
+
+### Persistencia de la información
+
+- Un programa Python consta de **datos e instrucciones**.
+- Hasta ahora:
+    - Obteníamos datos de teclado
+    - Los almacenábamos en variables (memoria RAM)
+    - Realizábamos operaciones con ellos
+    - Mostrábamos el resultado por pantalla
+    - Al finalizar el programa, los datos **se perdían**.
+
+**Las variables y sus valores desaparecen al finalizar el programa.**
+
+_Necesitamos un método para almacenar los datos de forma persistente._
+
+---
+
+## Ficheros {.center}
+
+---
+
+### Dispositivos de almacenamiento
+
+- **Memoria**: RAM
+    - Volátil
+    - Almacena datos temporales
+    - Se pierde al finalizar el programa
+- **Almacenamiento persistente**: discos duros, pendrives, CD/DVD
+    - No volátil
+    - Almacena datos de forma persistente
+    - Se conserva al finalizar el programa
+
+---
+
+### Ficheros y sistemas de ficheros
+
+- **Fichero**: Recurso de un computador que permite almacenar información de forma descreta en un dispositivo de almacenamiento.
+    - Son **abstracciones** que nos permiten manejar datos de forma análoga a ficheros físicos.
+        - Mover, copiar, renombrar, eliminar, etc.
+    - _Son una serie de bytes que almacenan información._
+    
+- **Sistema de ficheros**: Componente del sistema operativo gestiona los ficheros y directorios.
+    - Proporciona una interfaz para crear, eliminar, mover, copiar y renombrar ficheros.
+    - Organiza los ficheros en directorios (carpetas).
+    - Controla el acceso a los ficheros y la seguridad de los datos.
+
+---
+
+### Ficheros en programación
+
+- Un fichero en un sistema de ficheros tiene:
+    - Nombre: `fichero.txt`
+    - Ubicación: `/home/usuario/fichero.txt`
+    - Contenido: `Hola, soy un fichero de texto.`
+- En función su contenido, un fichero tendrá un tamaño diferente.
+    - Libro de texto: ~1 KB
+    - Imagen JPEG: ~1 MB
+    - Película: ~2 GB
+
+---
+
+- Solemos distinguir entre:
+    - **Ficheros de texto**:
+        - Contienen caracteres como:
+            - letras (`a`, `A`)
+            - números (`1`, `2`)
+            - símbolos (`!`, `@`)
+            - caracteres de control (`\n`, `\t`)
+        - Formatos: `txt`, `csv`, `py`, etc.
+    - **Ficheros binarios**:
+        - Contienen cualquier valor: `int`, `float`, `byte`, etc.
+        - Ejemplo: `fichero.jpg`, `fichero.mp3`, `fichero.exe`
+
+    
+---
+
+### Ficheros en Python
+
+- En la mayoría de lenguajes de programación, existe **un tipo de dato** (clase) que **representa un fichero** y permite operar con él.
+- Debemos tener claro:
+    - La variable **no es** el fichero
+    - La variable **es un intermediario** (_handler_) entre el fichero real, el sistema operativo y nuestro programa.
+
+---
+
+- Para que una variable represente un fichero, debemos:
+    - **Abrir** (open)
+        - Indicarle **qué fichero** (de nuestro sistema de ficheros persistente) debe representar
+        - Indicarle **en qué modo** queremos abrirlo
+            - Lectura (read)
+            - Escritura (write)
+            - Añadir (append)
+    - **Operar**
+        - **Leer** datos del fichero (**entrada**)
+        - **Escribir** datos en el fichero (**salida**)
+    - **Cerrar**
+        - Una vez terminadas las operaciones, debemos librerar los recursos
+
+---
+
+### Abrir un fichero
+
+- `open(ruta_fichero, modo)`: Abre el fichero en `ruta_fichero` y devuelve un objeto que lo representa.
+    - `ruta_fichero`: Ruta (o nombre) del fichero a abrir.
+    - `modo`: String que indica el modo de apertura del fichero.
+        - `r`: Modo lectura (read)
+        - `w`: Modo escritura (write)
+        - `a`: Modo añadir (append)
+
+```python
+f = open('fichero.txt', 'r') 
+```
+
+---
+
+#### Ruta de un fichero
+
+- Dos ficheros pueden llamarse igual **mientras estén en directorios diferentes**.
+- Es decir: Para identificar unívocamente un fichero, debemos conocer su:
+    - Nombre
+    - Ubicación (ruta de directorios donde se encuentra)
+- Ejemplo de ruta:
+    - `C:\Users\Usuario\Documents\fichero.txt`
+- `open()` puede recibir un nombre de fichero o una ruta completa:
+    - Si sólo recibe un **nombre** asumirá que debe buscarlo en el **directorio actual**.
+        - En la mayoría de casos, el directorio actual es el mismo donde se encuentra el script `.py`.
+
+---
+
+### Cerrar un fichero
+
+- `f.close()`: Cierra el fichero.
+
+```python
+f = open('fichero.txt', 'r') 
+
+# ...Realizar operaciones con el fichero
+
+f.close()
+```
+
+_¿Por qué no es necesario indicar el nombre del fichero al cerrarlo?_
+
+
+::: {.callout-warning}
+Es importante cerrar el fichero después de usarlo para liberar los recursos del sistema.
+Si no lo hacemos, podemos tener problemas de memoria o de acceso a los ficheros.
+:::
+
+---
+
+### Ejemplo de organización de ficheros
+
+- Considera la siguiente estructura de directorios:
+
+| directorio_actual
+| ├── subdirectorio/
+| │   └── fichero.txt
+| ├── programa.py
+| └── fichero.txt
+
+```python
+f = open('fichero.txt', 'r')
+f.close() 
+```
+
+- El programa abrirá el fichero `fichero.txt` que se encuentra en el directorio actual
+- **No** abrirá el fichero `fichero.txt` que se encuentra en el subdirectorio.
+
+---
+
+## Ficheros de lectura {.center}
+
+---
+
+### Paradigna de lectura secuencial
+
+- De las muchas formas en las que podemos leer un fichero, en esta asignatura nos vamos a limitar a la más sencilla de todas:
+    - **Lectura secuencial**.
+- En este paradigma, leemos el fichero:
+    - En orden.
+    - De principio a fin.
+- El funcionamiento es análogo al de **un tocadiscos**:
+    - Colocamos la aguja en el principio del disco.
+    - La aguja avanza a medida que el disco gira, leyendo el surco de forma secuencial.
+    - Cuando llega al final, se detiene.
+
+---
+
+### Operaciones de lectura
+
+- Abrir un fichero en **modo lectura** (`r`) significa que los utilizaremos como una **fuente de datos** (input).
+    - `f.open('fichero.txt', 'r')`: Abre el fichero `fichero.txt` en modo lectura.
+- Si el fichero **no existe**, se producirá **un error**.
+    - `FileNotFoundError`
+    
+---
+
+### `read()`
+
+- `f.read()`: lee todo el contenido del fichero y lo devuelve como una cadena de texto.
+- **Argumentos**:
+    - Ninguno
+- **Devuelve**:
+    - `string`: un string con todo el contenido del fichero.
+        - Si el fichero estaba vacío, devuelve una cadena vacía.
+
+```python
+texto = f.read()
+```
+
+---
+
+#### Ejemplo: Lectura de todo el fichero en una variable string
+
+```python
+f = open('fichero.txt', 'r')
+contenido = f.read()
+f.close()
+
+print(contenido)
+```
+
+::: {.callout-warning}
+Cuidado leyendo ficheros muy grandes. Desbordarás la memoria RAM.
+:::
+
+---
+
+### `readline()`
+
+- `f.readline()`: lee una línea del fichero y la devuelve como una cadena de texto.
+- **Argumentos**:
+    - Ninguno
+- **Devuelve**:
+    - `string`: un string con el contenido de la línea leída.
+        - Si se ha llegado al final del fichero, devuelve una cadena vacía.
+- Útil cuando **no podemos permitirnos cargar todo el fichero en memoria**.
+
+```python
+linea = f.readline()
+```
+
+---
+
+#### Ejemplo: Lectura de una línea del fichero
+
+```python
+f = open('fichero.txt', 'r')
+linea = f.readline()
+f.close()
+print(linea)
+```
+
+---
+
+#### Ejemplo: Lectura de varias líneas del fichero
+
+```python
+f = open('fichero.txt', 'r')
+linea = f.readline()
+while linea != '':
+    print(linea)
+    linea = f.readline()
+f.close()
+```
+
+---
+
+## Ejemplos {.center}
+
+---
+
+#### Ejercicio: Contar vocales en un fichero
+
+```python
+def es_vocal(caracter):
+    minuscula = caracter.lower()
+    return (
+        minuscula == "a"
+        or minuscula == "e"
+        or minuscula == "i"
+        or minuscula == "o"
+        or minuscula == "u"
+    )
+
+
+f = open("fichero.txt", "r")
+contenido = f.read()
+f.close()
+
+contador = 0
+for i in range(len(contenido)):
+    if es_vocal(contenido[i]):
+        contador += 1
+
+print(f"El fichero tiene {contador} vocales.")
+```
+
+

@@ -1,0 +1,346 @@
+---
+title: Problemas 9
+subtitle: Listas
+format: html
+---
+
+## Leer lista de N elementos
+
+- Escribe una función `lee_lista()` que reciba un número entero `n` y devuelva una lista de `n` elementos leídos por teclado.
+- No es necesario validar la entrada.
+- No es necesario mostrar ningún mensaje al usuario.
+    - De este modo, la función puede ser reutilizada en otros programas.
+
+```python
+def lee_lista(n):
+    # ???
+
+# TEST
+print(lee_lista(3))
+```
+
+| **1**
+| **2**
+| **3**
+| [1, 2, 3]
+
+<details>
+<summary>Solución</summary>
+
+```python
+def lee_lista(n):
+    lista = [None] * n
+    for i in range(n):
+        lista[i] = int(input())
+    return lista
+```
+
+</details>
+
+<details>
+<summary>Solución alternativa</summary>
+
+```python
+def lee_lista(n):
+    lista = []
+    for i in range(n):
+        lista.append(int(input()))
+    return lista
+```
+
+</details>
+
+## Lee secuencia de números
+
+- Escribe una función `lee_secuencia()` que lea una secuencia de números enteros introducidos por el usuario (terminada en 0 o en un número negativo) y devuelva una lista con los números leídos.
+
+```python
+def lee_secuencia():
+    # ???
+
+# TEST
+print(lee_secuencia())
+```
+
+| **3**
+| **1**
+| **4**
+| **5**
+| **0**
+| [3, 1, 4, 5]
+
+
+<details>
+<summary>Solución</summary>
+
+- **Observa** 
+    - En este caso **no podemos pre-generar la lista**, ya que **no sabemos cuántos elementos tendrá**.
+    - Tampoco podemos usar un bucle `for` ya que no sabemos cuántas veces se repetirá.
+
+```python
+def lee_secuencia():
+    lista = []
+    # Leemos el primero
+    num = int(input())
+    # Sólo si el primero es positivo continuamos
+    while num > 0:
+        # El append se hace inmediateamente
+        # después de comprobar que es positivo
+        lista.append(num)
+        # Este número podría ser cero
+        # por lo que no lo guardamos
+        # hasta la siguiente iteración
+        num = int(input())
+    return lista
+```
+
+</details>
+
+## Contiene la I
+
+- Escribe una función `contiene()` que reciba un string `texto` y una letra `letra` y devuelva un valor booleano que represente si `texto` contiene `letra`.
+
+_Recuerda que en python los textos funcionan como listas._
+
+```python
+def contiene(texto, letra):
+    # ???
+
+# TEST
+print(contiene("Hola", "a"))  # True
+print(contiene("Hola", "j"))  # False
+```
+
+| True
+| False
+
+<details>
+<summary>Solución</summary>
+
+- **Observa** 
+    - No podemos usar un bucle `for` porque **no sabemos si habrá que recorrer toda la lista**.
+    - Iteraremos con un bucle `while` **hasta el final de la lista o hasta que encontremos la letra**.
+
+```python
+def contiene(texto, letra):
+    encontrada = False
+    i = 0
+    while i < len(texto) and not encontrada:
+        if texto[i] == letra:
+            encontrada = True
+        i += 1
+    return encontrada
+
+# TEST
+print(contiene("Hola", "a"))
+print(contiene("Hola", "j"))
+```
+
+</details>
+
+## Nueva lista aleatoria
+
+- Escribe una función `nueva_lista_aleatoria()` que reciba tres números enteros `n`, `min` y `max` y devuelva una lista de `n` elementos aleatorios en el rango `[min, max]`.
+
+```python
+def nueva_lista_aleatoria(n, min, max):
+    # ???
+
+# TEST
+print(nueva_lista_aleatoria(5, 1, 10))
+```
+
+| [5, 3, 7, 2, 9]
+
+<details>
+
+<summary>Pista</summary>
+
+- Puedes usar la función `randint(min, max)` del módulo `random`.
+
+</details>
+
+<details>
+<summary>Solución</summary>
+
+```python
+import random
+
+def nueva_lista_aleatoria(n, min, max):
+    lista = [None] * n
+    for i in range(n):
+        lista[i] = random.randint(min, max)
+    return lista
+```
+
+</details>
+
+<details>
+<summary>Solución alternativa</summary>
+
+```python
+import random
+
+def nueva_lista_aleatoria(n, min, max):
+    lista = []
+    for i in range(n):
+        lista.append(random.randint(min, max))
+    return lista
+```
+
+</details>
+
+## Cuenta palabras
+
+Escribe una función que reciba un string `texto` y devuelva el número de palabras que contiene.
+
+- Asumiremos que:
+    - Mínimo habrá una palabra
+    - El texto está bien formateado
+    - Sin signos de puntuación 
+    - Sin caracteres especiales 
+    - Con un espacio entre cada palabra.
+
+```python
+cuenta_palabras("Nice")           # 1
+cuenta_palabras("Hola mundo")     # 2
+cuenta_palabras("Qué tal estás")  # 3
+```
+
+<details>
+<summary>Pista</summary>
+
+- Puedes serte útil contar los espacios en el texto.
+
+</details>
+
+<details>
+<summary>Solución</summary>
+
+```python
+def cuenta_palabras(texto):
+    cuenta = 1
+    for i in range(len(texto)):
+        if texto[i] == " ":
+            cuenta += 1
+    return cuenta
+```
+
+</details>
+
+## Imprimir de números
+
+- Escribe una función `imprime_lista()` que reciba una lista de números y los imprima uno a uno.
+    - Los números deben imprimirse en una sola línea y separados por comas.
+    - En algunas posiciones de la lista, habrá números negativos o `None`.
+        - En esos casos, deber imprimir un guion `-` en lugar del número.
+    - Si la lista está vacía, imprimirá un mensaje `Lista vacía`.
+
+```python
+def imprime_lista(lista):
+    # ???
+
+# TEST
+imprime_lista([])
+imprime_lista([1, 2, 3, 4, 5])
+imprime_lista([1, -2, 3, None, 5])
+```
+
+| Lista vacía
+| 1, 2, 3, 4, 5
+| 1, -, 3, -, 5
+
+<details>
+<summary>Solución</summary>
+
+```python
+def imprime_celda(celda):
+    if celda == None or celda < 0:
+        print("-", end="")
+    else:
+        print(celda, end="")
+
+def imprime_lista(lista):
+    if len(lista) == 0:
+        print("Lista vacía")
+    else:
+        # Imprimimos el primer elemento
+        imprime_celda(lista[0])
+        for i in range(1, len(lista)):
+            # Para el resto de elementos,
+            # imprimimos una coma primero
+            print(", ", end="")
+            imprime_celda(lista[i])
+        print()
+```
+
+</details>
+
+<details>
+<summary>Solución alternativa</summary>
+
+```python
+def imprime_lista(lista):
+    if len(lista) == 0:
+        print("Lista vacía")
+    else:
+        for i in range(len(lista)):
+            if lista[i] == None or lista[i] < 0:
+                print("-", end="")
+            else:
+                print(lista[i], end="")
+            
+            if i < (len(lista) - 1):
+                # Imprimimos comas salvo
+                # en la última posición
+                print(", ", end="")
+        print()
+```
+
+</details>
+
+## Ordena una lista de 2 elementos
+
+Escribe una función que reciba una lista de 2 elementos (no es necesario que verifique el tamaño, se asume que serán 2), y devuelva una nueva lista con los elementos ordenados de menos a mayor.
+
+```python
+ordena_lista([3, 1])  # Debería devolver [1, 3]
+ordena_lista([1, 3])  # Debería devolver [1, 3]
+```
+
+<details>
+<summary>Solución</summary>
+
+```python
+def ordena_lista(lista):
+    nueva_lista = [0, 0]
+    # nueva_lista = [0] * 2
+
+    if lista[0] > lista[1]:
+        nueva_lista[0] = lista[1]
+        nueva_lista[1] = lista[0]
+    else:
+        nueva_lista[0] = lista[0]
+        nueva_lista[1] = lista[1]
+    return nueva_lista
+```
+
+</details>
+
+<details>
+<summary>Solución alternativa</summary>
+
+- **Recuerda**
+    - Usar el _early return_ **con cuidado** y **no abusar de él**
+
+```python
+def ordena_lista(lista):
+    a = lista[0]
+    b = lista[1]
+    if a > b:
+        return [b, a]
+    else:
+        return [a, b]
+```
+
+</details>

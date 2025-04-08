@@ -1,6 +1,6 @@
 ---
 title: Problemas 10
-subtitle: Composición iterativa
+subtitle: Estructuras de datos complejas
 format: html
 draft: true
 ---
