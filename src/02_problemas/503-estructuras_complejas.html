@@ -1,2 +1,930 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"></html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Problemas 10 – Fundamentos de Informática</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed20e031201a2f52d49632ac7658f477.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-315f621f901707706d3e135395544505.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-3a9bc45b6cb0139a6ebb837c83b4d0ce.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-2c1606788b907b2185966d5072fee3a6.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+
+</head>
+
+<body class="floating">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#hundir-la-flota" id="toc-hundir-la-flota" class="nav-link active" data-scroll-target="#hundir-la-flota"><span class="header-section-number">1</span> Hundir la flota</a>
+  <ul class="collapse">
+  <li><a href="#nuevo_tablero" id="toc-nuevo_tablero" class="nav-link" data-scroll-target="#nuevo_tablero"><span class="header-section-number">1.1</span> <code>nuevo_tablero</code></a></li>
+  <li><a href="#inicializa_tablero" id="toc-inicializa_tablero" class="nav-link" data-scroll-target="#inicializa_tablero"><span class="header-section-number">1.2</span> <code>inicializa_tablero</code></a></li>
+  <li><a href="#comprobar_posicion" id="toc-comprobar_posicion" class="nav-link" data-scroll-target="#comprobar_posicion"><span class="header-section-number">1.3</span> <code>comprobar_posicion</code></a></li>
+  </ul></li>
+  <li><a href="#rpg" id="toc-rpg" class="nav-link" data-scroll-target="#rpg"><span class="header-section-number">2</span> RPG</a>
+  <ul class="collapse">
+  <li><a href="#enemigo" id="toc-enemigo" class="nav-link" data-scroll-target="#enemigo"><span class="header-section-number">2.1</span> <code>Enemigo</code></a></li>
+  <li><a href="#calcular_dano_oleada" id="toc-calcular_dano_oleada" class="nav-link" data-scroll-target="#calcular_dano_oleada"><span class="header-section-number">2.2</span> <code>calcular_dano_oleada</code></a></li>
+  <li><a href="#calcular_dano_oleada-2" id="toc-calcular_dano_oleada-2" class="nav-link" data-scroll-target="#calcular_dano_oleada-2"><span class="header-section-number">2.3</span> <code>calcular_dano_oleada</code> 2</a></li>
+  </ul></li>
+  <li><a href="#murcielago" id="toc-murcielago" class="nav-link" data-scroll-target="#murcielago"><span class="header-section-number">3</span> Murcielago</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Problemas 10</h1>
+<p class="subtitle lead">Estructuras de datos complejas</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="hundir-la-flota" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="hundir-la-flota"><span class="header-section-number">1</span> Hundir la flota</h2>
+<p>El juego <strong>Hundir la flota</strong> consiste en adivinar la posición de los barcos en un tablero. Cada barco ocupa una serie de celdas contiguas en horizontal o vertical. El objetivo es hundir todos los barcos.</p>
+<section id="nuevo_tablero" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="nuevo_tablero"><span class="header-section-number">1.1</span> <code>nuevo_tablero</code></h3>
+<p>Escribe una función <code>nuevo_tablero</code> que reciba un número entero <code>n</code> y devuelva un tablero (matriz de booleanos) de <code>n</code> filas y <code>n</code> columnas con todas las celdas a <code>False</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">def</span> nuevo_tablero(n):</span>
+<span id="cb1-2"><a href="#cb1-2"></a>    <span class="co"># ???</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>    <span class="cf">return</span> tablero</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>
+Solución
+</summary>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">def</span> nuevo_tablero(n):</span>
+<span id="cb2-2"><a href="#cb2-2"></a>    tablero <span class="op">=</span> [<span class="va">None</span>] <span class="op">*</span> n</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb2-4"><a href="#cb2-4"></a>        tablero[i] <span class="op">=</span> [<span class="va">False</span>] <span class="op">*</span> n</span>
+<span id="cb2-5"><a href="#cb2-5"></a>    <span class="cf">return</span> tablero</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</section>
+<section id="inicializa_tablero" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="inicializa_tablero"><span class="header-section-number">1.2</span> <code>inicializa_tablero</code></h3>
+<p>Escribe una función <code>inicializa_tablero</code> que genere un tablero de <code>n</code> filas y <code>n</code> columnas, haga <code>num_barcos</code> colocaciones aleatorias de barcos y devuelva el tablero resultando.</p>
+<ul>
+<li>Los barcos serán de tamaño <code>1</code> (un barco ocupa una celda).</li>
+<li>El número de colocaciones (<code>num_barcos</code>) será fija.
+<ul>
+<li>Si una colocación elige una celda ocupada, <strong>no</strong> se busca otra celda.</li>
+</ul></li>
+<li>No hay reglas de adyacencia.</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">def</span> inicializa_tablero(n, num_barcos):</span>
+<span id="cb3-2"><a href="#cb3-2"></a>    <span class="co"># ???</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="cf">return</span> tablero</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>
+Solución
+</summary>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> random</span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="kw">def</span> inicializa_tablero(n, num_barcos):</span>
+<span id="cb4-4"><a href="#cb4-4"></a>    tablero <span class="op">=</span> nuevo_tablero(n)</span>
+<span id="cb4-5"><a href="#cb4-5"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(num_barcos):</span>
+<span id="cb4-6"><a href="#cb4-6"></a>        fila <span class="op">=</span> random.randint(<span class="dv">0</span>, n <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb4-7"><a href="#cb4-7"></a>        columna <span class="op">=</span> random.randint(<span class="dv">0</span>, n <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb4-8"><a href="#cb4-8"></a>        tablero[fila][columna] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a>    <span class="cf">return</span> tablero</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</section>
+<section id="comprobar_posicion" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="comprobar_posicion"><span class="header-section-number">1.3</span> <code>comprobar_posicion</code></h3>
+<p>Escribe una función <code>comprobar_posicion</code> que reciba un tablero y una posición <code>x, y</code> devuelva <code>True</code> si la posición está ocupada por un barco o <code>False</code> en caso contrario.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> comprobar_posicion(tablero, x, y):</span>
+<span id="cb5-2"><a href="#cb5-2"></a>    <span class="co"># ???</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>
+Solución
+</summary>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> comprobar_posicion(tablero, x, y):</span>
+<span id="cb6-2"><a href="#cb6-2"></a>    <span class="cf">return</span> tablero[x][y]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</section>
+</section>
+<section id="rpg" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="rpg"><span class="header-section-number">2</span> RPG</h2>
+<p>Vamos a modelar el sistema de enemigos de un juego de rol.</p>
+<section id="enemigo" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="enemigo"><span class="header-section-number">2.1</span> <code>Enemigo</code></h3>
+<p>Escribe una clase <code>Enemigo</code> que tenga los siguientes atributos (los valores numericos son enteros):</p>
+<ul>
+<li><code>nombre</code>: nombre del enemigo.</li>
+<li><code>nivel</code>: nivel del enemigo.</li>
+<li><code>salud</code>: puntos de vida del enemigo.</li>
+<li><code>ataque</code>: puntos de ataque del enemigo.</li>
+<li><code>escudo</code>: puntos de defensa del enemigo.</li>
+<li><code>inhabilitado</code>: si el enemigo está inhabilitado o no.</li>
+<li><code>recompensa</code>: cantidad de oro que suelta al morir.</li>
+</ul>
+<details>
+<summary>
+Solución
+</summary>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="at">@dataclasses.dataclass</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="kw">class</span> Enemigo:</span>
+<span id="cb7-3"><a href="#cb7-3"></a>    nombre: <span class="bu">str</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>    nivel: <span class="bu">int</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>    salud: <span class="bu">int</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>    ataque: <span class="bu">int</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a>    escudo: <span class="bu">int</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a>    inhabilitado: <span class="bu">bool</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a>    recompensa: <span class="bu">int</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</section>
+<section id="calcular_dano_oleada" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="calcular_dano_oleada"><span class="header-section-number">2.2</span> <code>calcular_dano_oleada</code></h3>
+<p>Los enemigos en este juego van por oleadas. Cada oleada tiene un número de enemigos y cada enemigo tiene sus propios atributos.</p>
+<p>Escribe una función <code>calcular_dano_oleada</code> que reciba una lista de enemigos y devuelva el daño total que hacen todos los enemigos de la oleada en ese turno.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">def</span> calcular_dano_oleada(oleada):</span>
+<span id="cb8-2"><a href="#cb8-2"></a>    <span class="co"># ???</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>    <span class="cf">return</span> dano_total</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>
+Solución
+</summary>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> calcular_dano_oleada(oleada):</span>
+<span id="cb9-2"><a href="#cb9-2"></a>    dano_total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(oleada)):</span>
+<span id="cb9-4"><a href="#cb9-4"></a>        dano_total <span class="op">+=</span> oleada[i].ataque</span>
+<span id="cb9-5"><a href="#cb9-5"></a>    <span class="cf">return</span> dano_total</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</section>
+<section id="calcular_dano_oleada-2" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="calcular_dano_oleada-2"><span class="header-section-number">2.3</span> <code>calcular_dano_oleada</code> 2</h3>
+<p>Actualiza la función <code>calcular_dano_oleada</code> para que tenga en cuenta que los enemigos inhabilitados no pueden atacar ese turno.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">def</span> calcular_dano_oleada(oleada):</span>
+<span id="cb10-2"><a href="#cb10-2"></a>    <span class="co"># ???</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>    <span class="cf">return</span> dano_total</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>
+Solución
+</summary>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">def</span> calcular_dano_oleada(oleada):</span>
+<span id="cb11-2"><a href="#cb11-2"></a>    dano_total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(oleada)):</span>
+<span id="cb11-4"><a href="#cb11-4"></a>        <span class="cf">if</span> <span class="kw">not</span> oleada[i].inhabilitado:</span>
+<span id="cb11-5"><a href="#cb11-5"></a>            dano_total <span class="op">+=</span> oleada[i].ataque</span>
+<span id="cb11-6"><a href="#cb11-6"></a>    <span class="cf">return</span> dano_total</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</section>
+</section>
+<section id="murcielago" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="murcielago"><span class="header-section-number">3</span> Murcielago</h2>
+<p>La palabra <code>murciélago</code> es una palabra que contiene todas las vocales (<code>a</code>, <code>e</code>, <code>i</code>, <code>o</code>, <code>u</code>). Escribe una función <code>contiene_vocales</code> que reciba un string <code>palabra</code> y devuelva un valor booleano que indique si la palabra contiene todas las vocales. <em>No consideres las tildes</em>.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">def</span> contiene_vocales(palabra):</span>
+<span id="cb12-2"><a href="#cb12-2"></a>    <span class="co"># ???</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="co"># </span><span class="al">TEST</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="bu">print</span>(contiene_vocales(<span class="st">"murcielago"</span>))  <span class="co"># True</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a><span class="bu">print</span>(contiene_vocales(<span class="st">"espantapajaros"</span>))  <span class="co"># False</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>
+Pista 1
+</summary>
+<ul>
+<li>Recorre la palabra letra a letra y “marca” qué vocales has encontrado.</li>
+<li>Al final, comprueba si has encontrado todas las vocales.</li>
+</ul>
+</details>
+<details>
+<summary>
+Solución
+</summary>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">def</span> contiene_vocales(palabra):</span>
+<span id="cb13-2"><a href="#cb13-2"></a>    tiene_a <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a>    tiene_e <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a>    tiene_i <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb13-5"><a href="#cb13-5"></a>    tiene_o <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a>    tiene_u <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb13-7"><a href="#cb13-7"></a></span>
+<span id="cb13-8"><a href="#cb13-8"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(palabra)):</span>
+<span id="cb13-9"><a href="#cb13-9"></a>        letra <span class="op">=</span> palabra[i]</span>
+<span id="cb13-10"><a href="#cb13-10"></a>        <span class="cf">if</span> letra <span class="op">==</span> <span class="st">"a"</span>:</span>
+<span id="cb13-11"><a href="#cb13-11"></a>            tiene_a <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb13-12"><a href="#cb13-12"></a>        <span class="cf">elif</span> letra <span class="op">==</span> <span class="st">"e"</span>:</span>
+<span id="cb13-13"><a href="#cb13-13"></a>            tiene_e <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb13-14"><a href="#cb13-14"></a>        <span class="cf">elif</span> letra <span class="op">==</span> <span class="st">"i"</span>:</span>
+<span id="cb13-15"><a href="#cb13-15"></a>            tiene_i <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb13-16"><a href="#cb13-16"></a>        <span class="cf">elif</span> letra <span class="op">==</span> <span class="st">"o"</span>:</span>
+<span id="cb13-17"><a href="#cb13-17"></a>            tiene_o <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb13-18"><a href="#cb13-18"></a>        <span class="cf">elif</span> letra <span class="op">==</span> <span class="st">"u"</span>:</span>
+<span id="cb13-19"><a href="#cb13-19"></a>            tiene_u <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb13-20"><a href="#cb13-20"></a></span>
+<span id="cb13-21"><a href="#cb13-21"></a>    <span class="cf">return</span> tiene_a <span class="kw">and</span> tiene_e <span class="kw">and</span> tiene_i <span class="kw">and</span> tiene_o <span class="kw">and</span> tiene_u</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<details>
+<summary>
+Solución alternativa
+</summary>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">def</span> contiene_vocales(palabra):</span>
+<span id="cb14-2"><a href="#cb14-2"></a>    letras <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"e"</span>, <span class="st">"i"</span>, <span class="st">"o"</span>, <span class="st">"u"</span>]</span>
+<span id="cb14-3"><a href="#cb14-3"></a>    tiene <span class="op">=</span> [<span class="va">False</span>, <span class="va">False</span>, <span class="va">False</span>, <span class="va">False</span>, <span class="va">False</span>]</span>
+<span id="cb14-4"><a href="#cb14-4"></a></span>
+<span id="cb14-5"><a href="#cb14-5"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(palabra)):</span>
+<span id="cb14-6"><a href="#cb14-6"></a>        letra <span class="op">=</span> palabra[i]</span>
+<span id="cb14-7"><a href="#cb14-7"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(letras)):</span>
+<span id="cb14-8"><a href="#cb14-8"></a>            <span class="cf">if</span> letra <span class="op">==</span> letras[j]:</span>
+<span id="cb14-9"><a href="#cb14-9"></a>                tiene[j] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb14-10"><a href="#cb14-10"></a></span>
+<span id="cb14-11"><a href="#cb14-11"></a>    tiene_todas <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb14-12"><a href="#cb14-12"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(tiene)):</span>
+<span id="cb14-13"><a href="#cb14-13"></a>        <span class="cf">if</span> <span class="kw">not</span> tiene[i]:</span>
+<span id="cb14-14"><a href="#cb14-14"></a>            tiene_todas <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb14-15"><a href="#cb14-15"></a></span>
+<span id="cb14-16"><a href="#cb14-16"></a>    <span class="cf">return</span> tiene_todas</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // default icon
+          link.classList.add("external");
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
