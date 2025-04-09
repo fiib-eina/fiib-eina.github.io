@@ -2,7 +2,6 @@
 title: Problemas 10
 subtitle: Estructuras de datos complejas
 format: html
-draft: true
 ---
 
 ## Hundir la flota
@@ -12,6 +11,12 @@ El juego **Hundir la flota** consiste en adivinar la posición de los barcos en 
 ### `nuevo_tablero`
 
 Escribe una función `nuevo_tablero` que reciba un número entero `n` y devuelva un tablero (matriz de booleanos) de `n` filas y `n` columnas con todas las celdas a `False`.
+
+```python
+def nuevo_tablero(n):
+    # ???
+    return tablero
+```
 
 <details>
 <summary>Solución</summary>
@@ -25,6 +30,143 @@ def nuevo_tablero(n):
 ```
 
 </details>
+
+### `inicializa_tablero`
+
+Escribe una función `inicializa_tablero` que genere un tablero de `n` filas y `n` columnas, haga `num_barcos` colocaciones aleatorias de barcos y devuelva el tablero resultando.
+
+- Los barcos serán de tamaño `1` (un barco ocupa una celda).
+- El número de colocaciones (`num_barcos`) será fija.
+    - Si una colocación elige una celda ocupada, **no** se busca otra celda.
+- No hay reglas de adyacencia.
+
+
+```python
+def inicializa_tablero(n, num_barcos):
+    # ???
+    return tablero
+```
+
+<details>
+<summary>Solución</summary>
+
+```python
+import random
+
+def inicializa_tablero(n, num_barcos):
+    tablero = nuevo_tablero(n)
+    for i in range(num_barcos):
+        fila = random.randint(0, n - 1)
+        columna = random.randint(0, n - 1)
+        tablero[fila][columna] = True
+    return tablero
+```
+    
+</details>
+
+
+### `comprobar_posicion`
+
+Escribe una función `comprobar_posicion` que reciba un tablero y una posición `x, y` devuelva `True` si la posición está ocupada por un barco o `False` en caso contrario.
+
+```python
+def comprobar_posicion(tablero, x, y):
+    # ???
+```
+
+<details>
+<summary>Solución</summary>
+
+```python
+def comprobar_posicion(tablero, x, y):
+    return tablero[x][y]
+```
+
+</details>
+
+## RPG
+
+Vamos a modelar el sistema de enemigos de un juego de rol.
+
+### `Enemigo`
+
+Escribe una clase `Enemigo` que tenga los siguientes atributos (los valores numericos son enteros):
+
+- `nombre`: nombre del enemigo.
+- `nivel`: nivel del enemigo.
+- `salud`: puntos de vida del enemigo.
+- `ataque`: puntos de ataque del enemigo.
+- `escudo`: puntos de defensa del enemigo.
+- `inhabilitado`: si el enemigo está inhabilitado o no.
+- `recompensa`: cantidad de oro que suelta al morir.
+
+<details>
+<summary>Solución</summary>
+
+```python
+@dataclasses.dataclass
+class Enemigo:
+    nombre: str
+    nivel: int
+    salud: int
+    ataque: int
+    escudo: int
+    inhabilitado: bool
+    recompensa: int
+```
+
+</details>
+
+### `calcular_dano_oleada`
+
+Los enemigos en este juego van por oleadas.
+Cada oleada tiene un número de enemigos y cada enemigo tiene sus propios atributos.
+
+Escribe una función `calcular_dano_oleada` que reciba una lista de enemigos y devuelva el daño total que hacen todos los enemigos de la oleada en ese turno.
+
+```python
+def calcular_dano_oleada(oleada):
+    # ???
+    return dano_total
+```
+
+<details>
+<summary>Solución</summary>
+
+```python
+def calcular_dano_oleada(oleada):
+    dano_total = 0
+    for i in range(len(oleada)):
+        dano_total += oleada[i].ataque
+    return dano_total
+```
+
+</details>
+
+### `calcular_dano_oleada` 2
+
+Actualiza la función `calcular_dano_oleada` para que tenga en cuenta que los enemigos inhabilitados no pueden atacar ese turno.
+
+```python
+def calcular_dano_oleada(oleada):
+    # ???
+    return dano_total
+```
+
+<details>
+<summary>Solución</summary>
+
+```python
+def calcular_dano_oleada(oleada):
+    dano_total = 0
+    for i in range(len(oleada)):
+        if not oleada[i].inhabilitado:
+            dano_total += oleada[i].ataque
+    return dano_total
+```
+
+</details>
+
 
 ## Murcielago
 
