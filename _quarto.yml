@@ -11,6 +11,21 @@ project:
   resources:
     - 'src/**/*.pdf'
   output-dir: _output
+
+website:
+  sidebar:
+    collapse-level: 1
+    contents:
+      - section: Teoría
+        contents: src/01_teoria/**
+      - section: Problemas
+        contents: src/02_problemas/**
+      - section: Prácticas
+        contents: src/03_practicas/**
+  search:
+    location: sidebar
+    type: overlay
+
 format:
   html:
     theme: 
@@ -19,7 +34,7 @@ format:
     code-copy: true
     code-line-numbers: true
     toc: true
-    toc-location: left
+    toc-location: right
     toc-expand: 3
     number-sections: true
     anchor-sections: true
