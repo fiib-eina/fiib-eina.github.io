@@ -1,0 +1,293 @@
+---
+title: Teoría 603
+subtitle: Ficheros de escritura  
+format: revealjs
+---
+
+## Ficheros de escritura {.center}
+
+---
+
+### Paradigma de escritura secuencial
+
+- Del mismo modo que en la sesión anterior, utilizaremos el paradigma:
+    - **Escritura secuencial**.
+- En este paradigma, escribimos en el fichero:
+    - En orden.
+    - De principio a fin.
+- Es similar a **una grabadora de casete**:
+    - Colocamos la cinta al principio.
+    - A medida que grabamos, avanza y sobreescribe.
+
+---
+
+### Operaciones de escritura
+
+- Abrir un fichero en **modo escritura** (`w`) significa que lo utilizaremos como **destino de datos** (output).
+    - `f = open('salida.txt', 'w')`: abre el fichero `salida.txt` en modo escritura.
+- Si el fichero **no existe**, se crea.
+- Si el fichero **ya existe**, su contenido **se borra**.
+
+---
+
+### `write()`
+
+- `f.write(cadena)`: escribe una cadena de texto en el fichero.
+- **Argumentos**:
+    - `cadena (string)`: texto que se quiere escribir.
+- **Devuelve**:
+    - Número de caracteres escritos.
+
+```python
+f.write("Hola mundo\n")
+```
+
+---
+
+#### Ejemplo: Escribir una frase en un fichero
+
+```python
+f = open('salida.txt', 'w')
+f.write("Hola mundo\n")
+f.close()
+```
+
+---
+
+#### Ejemplo: Escribir varias líneas
+
+```python
+f = open('salida.txt', 'w')
+f.write("Primera línea\n")
+f.write("Segunda línea\n")
+f.close()
+```
+
+```python
+f = open('salida.txt', 'w')
+f.write("Primera línea\nSegunda línea\n")
+f.close()
+```
+
+---
+
+#### Ejemplo: Escribir con bucles
+
+```python
+f = open('salida.txt', 'w')
+for i in range(5):
+    f.write(f"Línea número {i}\n")
+f.close()
+```
+
+---
+
+### `print()` vs `f.write()`
+
+- Tanto `print()` y `f.write()` sirven para escribir, pero **tienen diferencias**.
+- `print()`
+    - Convierte automáticamente lo que le pasamos a texto.
+        - Puede imprimir números, booleanos, listas, etc.
+    - Añade un salto de línea al final.
+- `write()`
+    - **solo acepta strings**.
+        - Si le pasas otra cosa, hay que convertirlo con `str()` o con `f-string`.
+    - No añade un salto de línea al final.
+
+```python
+print(123)         # ✅
+f.write(str(123))  # ✅
+f.write(f"{123}")  # ✅
+f.write(123)       # ❌ Error
+```
+
+---
+
+| Característica         | `print()`                              | `write()`                          |
+|------------------------|----------------------------------------|------------------------------------|
+| Tipos permitidos       | Cualquiera                             | Solo `str`                         |
+| Conversión automática  | Sí                                     | No                                 |
+| Salto de línea         | Lo añade automáticamente               | No lo añade                        |
+| Uso típico             | Mostrar en pantalla                    | Escribir en ficheros               |
+| Ejemplo                | `print(123)`                           | `f.write(f"{123}")`                |
+
+---
+
+#### Ejemplo: escribir cuadrados del 1 al 5
+
+::: {.columns}
+::: {.column width="50%"}
+
+**`print()`**:
+
+```python
+for i in range(1, 6):
+    print(i * i)
+```
+
+:::
+::: {.column width="50%"}
+
+**`write()` con `str()`**:
+
+```python
+f = open("cuadrados.txt", "w")
+for i in range(1, 6):
+    f.write(str(i * i) + "\n")
+f.close()
+```
+
+**`write()` con `f-string`**:
+
+```python
+f = open("cuadrados.txt", "w")
+for i in range(1, 6):
+    f.write(f"{i * i}\n")
+f.close()
+```
+
+:::
+:::
+
+
+---
+
+### Añadir al final del fichero
+
+- Habrá ocasiones en las que no queramos **sobreescribir** el contenido de un fichero.
+- Para ello existe el **modo `a` (append)**.
+    - `f = open('salida.txt', 'a')`
+- Si no existe, se crea.
+- Si existe, el texto se escribe **al final del fichero**.
+
+::: {.callout-tip}
+_Append_ significa **añadir al final**. Recuerda que ya utilizamos este término en la sección de listas.
+:::
+
+---
+
+#### Ejemplo: Diario
+
+```python
+f = open('diario.txt', 'a')
+print("Fecha: ")
+fecha = input()
+f.write(f"\n## {fecha}\n")
+
+print("Texto: ")
+texto = input()
+while texto != "":
+    f.write(f"{texto}\n")
+    texto = input()
+```
+
+---
+
+## Lectura y escritura {.center}
+
+---
+
+### Leer y escribir simultáneamente
+
+- Un escenario común es:
+    - **Leer datos de un fichero**.
+    - **Escribir el resultado en otro**.
+- Para ello, abrimos **dos ficheros a la vez**:
+    - Uno en modo **lectura** (`r`).
+    - Otro en modo **escritura** (`w` o `a`).
+
+```python
+f_entrada = open("entrada.txt", "r")
+f_salida = open("salida.txt", "w")
+# leer y escribir aquí
+f_entrada.close()
+f_salida.close()
+```
+
+::: {.callout-warning}
+Recuerda que no puedes leer y escribir en **el mismo fichero** al mismo tiempo.
+:::
+
+---
+
+#### Ejemplo: Leer y escribir en ficheros
+
+**Leyendo el fichero de una**
+
+```python
+f_entrada = open("entrada.txt", "r")
+f_salida = open("mayusculas.txt", "w")
+
+contenido = f_entrada.read()
+f_entrada.close()
+
+f_salida.write(contenido.upper())
+f_salida.close()
+```
+
+**Leyendo línea a línea**
+
+```python
+f_entrada = open("entrada.txt", "r")
+f_salida = open("mayusculas.txt", "w")
+linea = f_entrada.readline()
+while linea != "":
+    f_salida.write(linea.upper())
+    linea = f_entrada.readline()
+f_entrada.close()
+f_salida.close()
+```
+
+
+---
+
+## Ejemplos {.center}
+
+---
+
+### Ejercicio: Separar números positivos y negativos
+
+```python
+f = open("numeros.txt", "r")
+positivos = open("positivos.txt", "w")
+negativos = open("negativos.txt", "w")
+
+linea = f.readline()
+while linea != "":
+    numero = int(linea)
+    if numero >= 0:
+        positivos.write(linea)
+    else:
+        negativos.write(linea)
+    linea = f.readline()
+
+f.close()
+positivos.close()
+negativos.close()
+```
+
+---
+
+### Ejercicio: Eliminar líneas vacías
+
+```python
+f_entrada = open("entrada.txt", "r")
+f_salida = open("sin_vacias.txt", "w")
+
+linea = f_entrada.readline()
+while linea != "":
+    if linea.strip() != "":
+        f_salida.write(linea)
+    linea = f_entrada.readline()
+
+f_entrada.close()
+f_salida.close()
+```
+
+::: {.callout-tip}
+Observa cómo utilizamos `strip()` para eliminar espacios en blanco y saltos de línea.
+
+- Si no fuera por ese `strip()`, las líneas vacías al menos contendrían `\n`.
+:::
+
+
