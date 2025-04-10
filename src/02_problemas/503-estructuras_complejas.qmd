@@ -33,7 +33,8 @@ def nuevo_tablero(n):
 
 ### `inicializa_tablero`
 
-Escribe una función `inicializa_tablero` que genere un tablero de `n` filas y `n` columnas, haga `num_barcos` colocaciones aleatorias de barcos y devuelva el tablero resultando.
+Escribe una función `inicializa_tablero` que genere un tablero de `n` filas y `n` columnas, haga `num_barcos` colocaciones [aleatorias](../01_teoria/03_composicion/306_composicion_iterativa_avanzada.qmd#n%C3%BAmeros-pseudo-aleatorios-en-python) de barcos y devuelva el tablero resultando.
+
 
 - Los barcos serán de tamaño `1` (un barco ocupa una celda).
 - El número de colocaciones (`num_barcos`) será fija.
