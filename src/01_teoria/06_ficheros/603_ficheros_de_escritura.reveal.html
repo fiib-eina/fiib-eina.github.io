@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dece3bd051e391dd7205a6b15f93dc59.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.40">
+
+  <title>Fundamentos de Informática – Teoría 603</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #767676;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #767676;  padding-left: 4px; }
+    div.sourceCode
+      { color: #545454; background-color: #fefefe; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #545454; } /* Normal */
+    code span.al { color: #7928a1; } /* Alert */
+    code span.an { color: #696969; } /* Annotation */
+    code span.at { color: #a55a00; } /* Attribute */
+    code span.bn { color: #7928a1; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #d91e18; } /* ControlFlow */
+    code span.ch { color: #008000; } /* Char */
+    code span.cn { color: #d91e18; } /* Constant */
+    code span.co { color: #696969; } /* Comment */
+    code span.cv { color: #696969; font-style: italic; } /* CommentVar */
+    code span.do { color: #696969; font-style: italic; } /* Documentation */
+    code span.dt { color: #7928a1; } /* DataType */
+    code span.dv { color: #7928a1; } /* DecVal */
+    code span.er { color: #7928a1; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #a55a00; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #696969; } /* Information */
+    code span.kw { color: #d91e18; } /* Keyword */
+    code span.op { color: #00769e; } /* Operator */
+    code span.ot { color: #d91e18; } /* Other */
+    code span.pp { color: #7928a1; } /* Preprocessor */
+    code span.sc { color: #00769e; } /* SpecialChar */
+    code span.ss { color: #008000; } /* SpecialString */
+    code span.st { color: #008000; } /* String */
+    code span.va { color: #a55a00; } /* Variable */
+    code span.vs { color: #008000; } /* VerbatimString */
+    code span.wa { color: #696969; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-7f2f78f0473ef2d03f49b07730205bc7.css">
+  <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-tldraw/index.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style>html{ scroll-behavior: smooth; }</style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-color="#223d71" data-background-image="../../../src/_style/logos/unizar-black.svg" data-background-opacity="0.30" data-background-size="auto 600px" class="quarto-title-block center">
+  <h1 class="title">Teoría 603</h1>
+  <p class="subtitle">Ficheros de escritura</p>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="ficheros-de-escritura" class="slide level2 center">
+<h2>Ficheros de escritura</h2>
+</section>
+<section class="slide level2">
+
+<h3 id="paradigma-de-escritura-secuencial">Paradigma de escritura secuencial</h3>
+<ul>
+<li>Del mismo modo que en la sesión anterior, utilizaremos el paradigma:
+<ul>
+<li><strong>Escritura secuencial</strong>.</li>
+</ul></li>
+<li>En este paradigma, escribimos en el fichero:
+<ul>
+<li>En orden.</li>
+<li>De principio a fin.</li>
+</ul></li>
+<li>Es similar a <strong>una grabadora de casete</strong>:
+<ul>
+<li>Colocamos la cinta al principio.</li>
+<li>A medida que grabamos, avanza y sobreescribe.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="operaciones-de-escritura">Operaciones de escritura</h3>
+<ul>
+<li>Abrir un fichero en <strong>modo escritura</strong> (<code>w</code>) significa que lo utilizaremos como <strong>destino de datos</strong> (output).
+<ul>
+<li><code>f = open('salida.txt', 'w')</code>: abre el fichero <code>salida.txt</code> en modo escritura.</li>
+</ul></li>
+<li>Si el fichero <strong>no existe</strong>, se crea.</li>
+<li>Si el fichero <strong>ya existe</strong>, su contenido <strong>se borra</strong>.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="write"><code>write()</code></h3>
+<ul>
+<li><code>f.write(cadena)</code>: escribe una cadena de texto en el fichero.</li>
+<li><strong>Argumentos</strong>:
+<ul>
+<li><code>cadena (string)</code>: texto que se quiere escribir.</li>
+</ul></li>
+<li><strong>Devuelve</strong>:
+<ul>
+<li>Número de caracteres escritos.</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>f.write(<span class="st">"Hola mundo</span><span class="ch">\n</span><span class="st">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-escribir-una-frase-en-un-fichero">Ejemplo: Escribir una frase en un fichero</h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'salida.txt'</span>, <span class="st">'w'</span>)</span>
+<span id="cb2-2"><a></a>f.write(<span class="st">"Hola mundo</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb2-3"><a></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-escribir-varias-líneas">Ejemplo: Escribir varias líneas</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'salida.txt'</span>, <span class="st">'w'</span>)</span>
+<span id="cb3-2"><a></a>f.write(<span class="st">"Primera línea</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb3-3"><a></a>f.write(<span class="st">"Segunda línea</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb3-4"><a></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'salida.txt'</span>, <span class="st">'w'</span>)</span>
+<span id="cb4-2"><a></a>f.write(<span class="st">"Primera línea</span><span class="ch">\n</span><span class="st">Segunda línea</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb4-3"><a></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-escribir-con-bucles">Ejemplo: Escribir con bucles</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'salida.txt'</span>, <span class="st">'w'</span>)</span>
+<span id="cb5-2"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb5-3"><a></a>    f.write(<span class="ss">f"Línea número </span><span class="sc">{</span>i<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span>
+<span id="cb5-4"><a></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h3 id="print-vs-f.write"><code>print()</code> vs <code>f.write()</code></h3>
+<ul>
+<li>Tanto <code>print()</code> y <code>f.write()</code> sirven para escribir, pero <strong>tienen diferencias</strong>.</li>
+<li><code>print()</code>
+<ul>
+<li>Convierte automáticamente lo que le pasamos a texto.
+<ul>
+<li>Puede imprimir números, booleanos, listas, etc.</li>
+</ul></li>
+<li>Añade un salto de línea al final.</li>
+</ul></li>
+<li><code>write()</code>
+<ul>
+<li><strong>solo acepta strings</strong>.
+<ul>
+<li>Si le pasas otra cosa, hay que convertirlo con <code>str()</code> o con <code>f-string</code>.</li>
+</ul></li>
+<li>No añade un salto de línea al final.</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="bu">print</span>(<span class="dv">123</span>)         <span class="co"># ✅</span></span>
+<span id="cb6-2"><a></a>f.write(<span class="bu">str</span>(<span class="dv">123</span>))  <span class="co"># ✅</span></span>
+<span id="cb6-3"><a></a>f.write(<span class="ss">f"</span><span class="sc">{</span><span class="dv">123</span><span class="sc">}</span><span class="ss">"</span>)  <span class="co"># ✅</span></span>
+<span id="cb6-4"><a></a>f.write(<span class="dv">123</span>)       <span class="co"># ❌ Error</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<table class="caption-top">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 40%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Característica</th>
+<th><code>print()</code></th>
+<th><code>write()</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tipos permitidos</td>
+<td>Cualquiera</td>
+<td>Solo <code>str</code></td>
+</tr>
+<tr class="even">
+<td>Conversión automática</td>
+<td>Sí</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>Salto de línea</td>
+<td>Lo añade automáticamente</td>
+<td>No lo añade</td>
+</tr>
+<tr class="even">
+<td>Uso típico</td>
+<td>Mostrar en pantalla</td>
+<td>Escribir en ficheros</td>
+</tr>
+<tr class="odd">
+<td>Ejemplo</td>
+<td><code>print(123)</code></td>
+<td><code>f.write(f"{123}")</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-escribir-cuadrados-del-1-al-5">Ejemplo: escribir cuadrados del 1 al 5</h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong><code>print()</code></strong>:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">6</span>):</span>
+<span id="cb7-2"><a></a>    <span class="bu">print</span>(i <span class="op">*</span> i)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<p><strong><code>write()</code> con <code>str()</code></strong>:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"cuadrados.txt"</span>, <span class="st">"w"</span>)</span>
+<span id="cb8-2"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">6</span>):</span>
+<span id="cb8-3"><a></a>    f.write(<span class="bu">str</span>(i <span class="op">*</span> i) <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb8-4"><a></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong><code>write()</code> con <code>f-string</code></strong>:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"cuadrados.txt"</span>, <span class="st">"w"</span>)</span>
+<span id="cb9-2"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">6</span>):</span>
+<span id="cb9-3"><a></a>    f.write(<span class="ss">f"</span><span class="sc">{</span>i <span class="op">*</span> i<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span>
+<span id="cb9-4"><a></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<h3 id="añadir-al-final-del-fichero">Añadir al final del fichero</h3>
+<ul>
+<li>Habrá ocasiones en las que no queramos <strong>sobreescribir</strong> el contenido de un fichero.</li>
+<li>Para ello existe el <strong>modo <code>a</code> (append)</strong>.
+<ul>
+<li><code>f = open('salida.txt', 'a')</code></li>
+</ul></li>
+<li>Si no existe, se crea.</li>
+<li>Si existe, el texto se escribe <strong>al final del fichero</strong>.</li>
+</ul>
+<div class="callout callout-tip callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p><em>Append</em> significa <strong>añadir al final</strong>. Recuerda que ya utilizamos este término en la sección de listas.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-diario">Ejemplo: Diario</h4>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'diario.txt'</span>, <span class="st">'a'</span>)</span>
+<span id="cb10-2"><a></a><span class="bu">print</span>(<span class="st">"Fecha: "</span>)</span>
+<span id="cb10-3"><a></a>fecha <span class="op">=</span> <span class="bu">input</span>()</span>
+<span id="cb10-4"><a></a>f.write(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">## </span><span class="sc">{</span>fecha<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span>
+<span id="cb10-5"><a></a></span>
+<span id="cb10-6"><a></a><span class="bu">print</span>(<span class="st">"Texto: "</span>)</span>
+<span id="cb10-7"><a></a>texto <span class="op">=</span> <span class="bu">input</span>()</span>
+<span id="cb10-8"><a></a><span class="cf">while</span> texto <span class="op">!=</span> <span class="st">""</span>:</span>
+<span id="cb10-9"><a></a>    f.write(<span class="ss">f"</span><span class="sc">{</span>texto<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span>
+<span id="cb10-10"><a></a>    texto <span class="op">=</span> <span class="bu">input</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="lectura-y-escritura" class="slide level2 center">
+<h2>Lectura y escritura</h2>
+</section>
+<section class="slide level2">
+
+<h3 id="leer-y-escribir-simultáneamente">Leer y escribir simultáneamente</h3>
+<ul>
+<li>Un escenario común es:
+<ul>
+<li><strong>Leer datos de un fichero</strong>.</li>
+<li><strong>Escribir el resultado en otro</strong>.</li>
+</ul></li>
+<li>Para ello, abrimos <strong>dos ficheros a la vez</strong>:
+<ul>
+<li>Uno en modo <strong>lectura</strong> (<code>r</code>).</li>
+<li>Otro en modo <strong>escritura</strong> (<code>w</code> o <code>a</code>).</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>f_entrada <span class="op">=</span> <span class="bu">open</span>(<span class="st">"entrada.txt"</span>, <span class="st">"r"</span>)</span>
+<span id="cb11-2"><a></a>f_salida <span class="op">=</span> <span class="bu">open</span>(<span class="st">"salida.txt"</span>, <span class="st">"w"</span>)</span>
+<span id="cb11-3"><a></a><span class="co"># leer y escribir aquí</span></span>
+<span id="cb11-4"><a></a>f_entrada.close()</span>
+<span id="cb11-5"><a></a>f_salida.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-warning callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Recuerda que no puedes leer y escribir en <strong>el mismo fichero</strong> al mismo tiempo.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-leer-y-escribir-en-ficheros">Ejemplo: Leer y escribir en ficheros</h4>
+<p><strong>Leyendo el fichero de una</strong></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>f_entrada <span class="op">=</span> <span class="bu">open</span>(<span class="st">"entrada.txt"</span>, <span class="st">"r"</span>)</span>
+<span id="cb12-2"><a></a>f_salida <span class="op">=</span> <span class="bu">open</span>(<span class="st">"mayusculas.txt"</span>, <span class="st">"w"</span>)</span>
+<span id="cb12-3"><a></a></span>
+<span id="cb12-4"><a></a>contenido <span class="op">=</span> f_entrada.read()</span>
+<span id="cb12-5"><a></a>f_entrada.close()</span>
+<span id="cb12-6"><a></a></span>
+<span id="cb12-7"><a></a>f_salida.write(contenido.upper())</span>
+<span id="cb12-8"><a></a>f_salida.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Leyendo línea a línea</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>f_entrada <span class="op">=</span> <span class="bu">open</span>(<span class="st">"entrada.txt"</span>, <span class="st">"r"</span>)</span>
+<span id="cb13-2"><a></a>f_salida <span class="op">=</span> <span class="bu">open</span>(<span class="st">"mayusculas.txt"</span>, <span class="st">"w"</span>)</span>
+<span id="cb13-3"><a></a>linea <span class="op">=</span> f_entrada.readline()</span>
+<span id="cb13-4"><a></a><span class="cf">while</span> linea <span class="op">!=</span> <span class="st">""</span>:</span>
+<span id="cb13-5"><a></a>    f_salida.write(linea.upper())</span>
+<span id="cb13-6"><a></a>    linea <span class="op">=</span> f_entrada.readline()</span>
+<span id="cb13-7"><a></a>f_entrada.close()</span>
+<span id="cb13-8"><a></a>f_salida.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="ejemplos" class="slide level2 center">
+<h2>Ejemplos</h2>
+</section>
+<section class="slide level2">
+
+<h3 id="ejercicio-separar-números-positivos-y-negativos">Ejercicio: Separar números positivos y negativos</h3>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"numeros.txt"</span>, <span class="st">"r"</span>)</span>
+<span id="cb14-2"><a></a>positivos <span class="op">=</span> <span class="bu">open</span>(<span class="st">"positivos.txt"</span>, <span class="st">"w"</span>)</span>
+<span id="cb14-3"><a></a>negativos <span class="op">=</span> <span class="bu">open</span>(<span class="st">"negativos.txt"</span>, <span class="st">"w"</span>)</span>
+<span id="cb14-4"><a></a></span>
+<span id="cb14-5"><a></a>linea <span class="op">=</span> f.readline()</span>
+<span id="cb14-6"><a></a><span class="cf">while</span> linea <span class="op">!=</span> <span class="st">""</span>:</span>
+<span id="cb14-7"><a></a>    numero <span class="op">=</span> <span class="bu">int</span>(linea)</span>
+<span id="cb14-8"><a></a>    <span class="cf">if</span> numero <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
+<span id="cb14-9"><a></a>        positivos.write(linea)</span>
+<span id="cb14-10"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb14-11"><a></a>        negativos.write(linea)</span>
+<span id="cb14-12"><a></a>    linea <span class="op">=</span> f.readline()</span>
+<span id="cb14-13"><a></a></span>
+<span id="cb14-14"><a></a>f.close()</span>
+<span id="cb14-15"><a></a>positivos.close()</span>
+<span id="cb14-16"><a></a>negativos.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<h3 id="ejercicio-eliminar-líneas-vacías">Ejercicio: Eliminar líneas vacías</h3>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>f_entrada <span class="op">=</span> <span class="bu">open</span>(<span class="st">"entrada.txt"</span>, <span class="st">"r"</span>)</span>
+<span id="cb15-2"><a></a>f_salida <span class="op">=</span> <span class="bu">open</span>(<span class="st">"sin_vacias.txt"</span>, <span class="st">"w"</span>)</span>
+<span id="cb15-3"><a></a></span>
+<span id="cb15-4"><a></a>linea <span class="op">=</span> f_entrada.readline()</span>
+<span id="cb15-5"><a></a><span class="cf">while</span> linea <span class="op">!=</span> <span class="st">""</span>:</span>
+<span id="cb15-6"><a></a>    <span class="cf">if</span> linea.strip() <span class="op">!=</span> <span class="st">""</span>:</span>
+<span id="cb15-7"><a></a>        f_salida.write(linea)</span>
+<span id="cb15-8"><a></a>    linea <span class="op">=</span> f_entrada.readline()</span>
+<span id="cb15-9"><a></a></span>
+<span id="cb15-10"><a></a>f_entrada.close()</span>
+<span id="cb15-11"><a></a>f_salida.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-tip callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Observa cómo utilizamos <code>strip()</code> para eliminar espacios en blanco y saltos de línea.</p>
+<ul>
+<li>Si no fuera por ese <code>strip()</code>, las líneas vacías al menos contendrían <code>\n</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>Fundamentos de Informática</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-tldraw/index.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-tldraw/bind-func.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': true,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealTldraw, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copiado");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copiado");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+              // target, if specified
+              link.setAttribute("target", "_blank");
+              if (link.getAttribute("rel") === null) {
+                link.setAttribute("rel", "noopener");
+              }
+              // default icon
+              link.classList.add("external");
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
