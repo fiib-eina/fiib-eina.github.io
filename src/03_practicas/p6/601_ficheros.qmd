@@ -1,12 +1,351 @@
 ---
-title: Práctica 3
-subtitle: Tipos Primitivos
+title: Práctica 6
+subtitle: Ficheros
 format: html
-draft: true
 ---
+
+Los siguientes ejercicios están diseñados para poner a prueba **todos los conocimientos adquiridos durante el curso**.
+Deberás hacer uso de todo lo aprendido hasta ahora: tipos de datos, estructuras de control, funciones y ficheros.
+
+Recuerda que para afrontar un problema, debes:
+
+- Leer el enunciado con atención.
+- Entender **bien** lo que se pide.
+    - Estado inicial -> Estado final.
+- Analizar y descomponer el problema en subproblemas.
+- Implementar la solución.
+    - Subproblemas (Funciones) -> Problema principal.
+- Probar la solución.
+    - Pruebas proporcionadas.
+    - Pruebas manuales.
+
+## Media Velocidades
+
+Tenemos un fichero `velocidades.txt` con datos de la velocidad del viendo en un anemómetro de Zaragoza (**un número real por cada fila**).
+El anemómetro no es muy peciso, y genera lecturas con un gran margen de error.
+Para "suavizar" los resultados, queremos aplicar un **filtro de media móvil** de 3 valores.
+
+El **filtro de media móvil** consiste en calcular la media de un número determinado de valores (en este caso 3) y sustituir el valor central por la media de los tres. Es decir, para cada valor $X_i$, calculamos $X_{i-1}$, $X_i$ y $X_{i+1}$ y sustituimos $X_i$ por la media de los tres.
+
+$$
+X_i = \frac{X_{i-1} + X_i + X_{i+1}}{3}
+$$
+
+Por ejemplo, si tenemos los siguientes valores:
+
+| [1, 1, 2, 1, 5]
+
+El resultado del filtro de media móvil tendrá siempre **dos elementos menos**:
+
+| [1.3333, 1.3333, 2.6666]
+
+Porque:
+
+| 1.3333 = (**1 + 1 + 2**) / 3
+| 1.3333 = (**1 + 2 + 1**) / 3
+| 2.6666 = (**2 + 1 + 5**) / 3
+
+### Media móvil
+
+Implementa una función `media_movil(velocidades) -> list[float]` que reciba una lista de velocidades (`list[float]`) y devuelva **una nueva lista** con el resultado de (`list[float]`).
+
+```python
+def media_movil(velocidades):
+    # ???
+    return medias
+print(media_movil([1, 1, 2, 1, 5]))
+print(media_movil([1,2,3,4,5]))
+print(media_movil([1,2,3]))
+```
+
+| [1.3333333333333333, 1.3333333333333333, 2.6666666666666665]
+| [2.0, 3.0, 4.0]
+| [2.0]
+
+### Programa final
+
+Implementa el programa `filtrar_velocidades.py` que realice el proceso completo:
+
+- Abrir el fichero `velocidades.txt` en modo lectura.
+- Leer el contenido del fichero y guardarlo en una lista.
+- Aplicar el filtro de media móvil a la lista.
+- Escribir el resultado en un nuevo fichero `velocidades_filtradas.txt`.
+- Imprimir por pantalla al final del programa: `OK`
+- Tanto el fichero de entrada como de salida tendrán el mismo formato:
+    - Un número real por línea.
+
+_velocidades.txt_
+
+| 1
+| 1
+| 2
+| 1
+| 5
+
+**Ejemplo de ejecución:**
+
+| OK
+
+_velocidades_filtradas.txt_
+
+| 1.3333333333333333
+| 1.3333333333333333
+| 2.6666666666666665
+
+## Contar letras
+
+Escribe un programa que lea un fichero de texto dado por el usuario y escriba por pantalla recuento de letras de cada letra del alfabeto inglés. 
+
+**Los ficheros:**
+
+- Sólo contendran:
+    - Letras las **26 letras válidas del alfabeto** `A`-`Z` y `a`-`z`,
+    - Signos de puntuación y caracteres especiales: `!`, `?`, `,`, `.`, `;`, `:`, etc.
+    - Espacios en blanco: `" "`
+    - Saltos de línea: `\n`
+- No contendrán:
+    - Caracteres no ingleses: `ñ`, `ç`, `á`, etc.
+
+**El programa deberá:**
+
+- Pedir el **nombre del fichero** al usuario.
+- Abrir **el fichero** en **modo lectura**.
+- Definir la <!--ASK: Decimos que debe ser una lista?-->**estructura de datos adecuada** para llevar el recuento de cada letra por separado.
+- Leer **cada caracter** del fichero y actualizar el recuento de letras.
+    - Comprobar que sea una letra.
+        - Si no es una letra, **no** se cuenta (ignorar).
+    - Obtener **el índice** de la letra
+        - `A` -> `0`, `a` -> `0`, `Z` -> `25`, `z` -> `25`
+    - Actualizar el recuento **de esa letra**.
+- Mostrar por pantalla el recuento de letras.
+
+::: {.callout-tip}
+
+**Tip 1**
+
+- Puedes obtener el valor numérico de un carácter utilizando la función `ord()` (ordinal).
+    - `ord('A')` devuelve `65` y `ord('a')` devuelve `97`.
+- Si le restas `ord('A')` al ordinal cualquier letra, obtendrás su posición en el alfabeto (empezando por cero).
+
+```python
+letra = "z"
+indice = ord(letra) - ord("a")
+print(indice) # 25
+```
+
+:::
+
+::: {.callout-tip}
+
+**Tip 2**
+
+- Puedes averiguar si un carácter es una letra utilizando la función `isalpha()`.
+
+```python
+print("z".isalpha()) # True
+print("1".isalpha()) # False
+print(" ".isalpha()) # False
+```
+:::
+
+### Obtener índice y letra
+
+Implementa dos funciones:
+
+- `obtener_indice(letra) -> int`
+    - Recibe un carácter (`str`) y devuelve su índice (`int`) en el alfabeto.
+    - Si no es una letra, devuelve `-1`.
+- `obtener_letra(indice) -> str`
+    - Recibe un índice (`int`) y devuelve el carácter (`str`) minúscula correspondiente.
+    - **No** hace falta programar qué pasa si el índice no es válido. Asumimos que siempre será válido.
+
+```python
+def obtener_indice(letra):
+    # ???
+
+print(obtener_indice("a"))
+print(obtener_indice("A"))
+print(obtener_indice("b"))
+print(obtener_indice("Z"))
+```
+
+| 0
+| 0
+| 1
+| 25
+
+```python
+def obtener_letra(indice):
+    # ???
+print(obtener_letra(0))
+print(obtener_letra(1))
+print(obtener_letra(25))
+```
+
+| a
+| b
+| z
+
+### Cuenta letras
+
+Implementa una función `contar_letras(contenido) -> list[int]` que reciba un texto (`str`) y devuelva una lista (`list[int]`) con el recuento de letras.
+
+```python
+def contar_letras(contenido):
+    # ???
+    return recuento
+
+print(contar_letras("Hola Mundo"))
+```
+
+| [1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+
+### Programa final
+
+Implementa el programa `cuenta_letras.py` que realice el proceso completo:
+
+_poker_face.txt_
+
+| I wanna hold 'em like they do in Texas, please
+| Fold 'em, let 'em hit me, raise it, baby, stay with me (I love it)
+| LoveGame intuition, play the cards with spades to start
+| And after he's been hooked, I'll play the one that's on his heart
+
+
+**Ejemplo de ejecución:**
+
+| Introduce el nombre del fichero: **poker_face.txt**
+| Recuento de letras:
+| a: 17
+| b: 3
+| c: 1
+| d: 7
+| e: 25
+| f: 2
+| g: 1
+| h: 12
+| i: 15
+| j: 0
+| k: 2
+| l: 11
+| m: 6
+| n: 9
+| o: 11
+| p: 4
+| q: 0
+| r: 5
+| s: 11
+| t: 20
+| u: 1
+| v: 2
+| w: 3
+| x: 1
+| y: 5
+| z: 0
+
+## Control de accesos
+
+<!--
+Recuerda, no puedes utilizar: 
+- foreach: usa for i in range()
+- break
+- list comprehension (usa [] y .append())
+-->
+
+Vamos a implementar un sistema que simule un control de accesos.
+El sistema contendrá una lista de usuarios registrados `usuarios.txt` y sus contraseñas.
+Escribiremos dos programas y un módulo:
+
+- `usuarios.py`: módulo que contiene las funciones necesarias para gestionar los usuarios.
+- `agregar_usuario.py`: añade un usuario y contraseña nuevos.
+- `control_acceso.py`: pide un usuario y contraseña y comprueba si son válidos.
+
+El formato del fichero `usuarios.txt` será el siguiente:
+
+| usuario1:contraseña1
+| usuario2:contraseña2
+| usuario3:contraseña3
+
+<!-- TODO: Add lin -->
+Se provee un fichero `usuarios.txt` de ejemplo.
+
+### `usuarios.py`
+
+Implementa el módulo `usuarios.py` que contenga las siguientes funciones:
+
+- `class Usuario()`: clase que representa un usuario.
+    - `nombre`: nombre del usuario.
+    - `contrasena`: contraseña del usuario.
+- `leer_usuarios()`: lee el fichero `usuarios.txt` y devuelve una lista de objetos `Usuario`.
+- `guardar_usuarios(usuarios)`: guarda la lista de usuarios (`list[Usuario]`) en el fichero `usuarios.txt`.
+- `buscar_usuario(nombre, usuarios)`: busca un nombre (`str`) en la lista de usuarios (`list[Usuario]`).
+    - Si existe: devuelve el objeto `Usuario`.
+    - Si no existe: devuelve `None`.
+
+### `agregar_usuario.py`
+
+Implementa el programa `agregar_usuario.py` que realice lo siguiente:
+
+- Abrir el fichero `usuarios.txt` en modo **lectura**.
+- Leer el contenido del fichero y guardarlo en una lista de objetos `Usuario`.
+- Pedir al usuario que introduzca un nuevo usuario y contraseña.
+- Comprobar si el usuario ya existe.
+    - Si no existe, crear uno nuevo y añadirlo al final de la lista.
+    - Si existe, mostrar un mensaje de error.
+- Abrir el fichero `usuarios.txt` en modo **escritura**.
+- Guardar la lista de usuarios en el fichero `usuarios.txt`.
+
+_usuarios.txt_
+
+| maria:12345678
+| hector:secreto
+
+**Ejemplo de ejecución:**
+
+| Introduce el nombre de usuario: **pepe**
+| Introduce la contraseña: **1234**
+| Usuario pepe añadido correctamente
+
+| Introduce el nombre de usuario: **maria**
+| Introduce la contraseña: **pass**
+| El usuario maria ya existe
+
+_usuarios.txt_ (después de añadir pepe)
+
+| maria:12345678
+| hector:secreto
+| pepe:1234
+
+### `control_acceso.py`
+
+Implementa el programa `control_acceso.py` que realice lo siguiente:
+
+- Abrir el fichero `usuarios.txt` en modo **lectura**.
+- Leer el contenido del fichero y guardarlo en una lista de objetos `Usuario`.
+- Pedir al usuario que introduzca un usuario y contraseña.
+- Comprobar si el usuario y contraseña son válidos.
+    - Si son válidos, mostrar un mensaje de bienvenida.
+    - Si no son válidos, mostrar un mensaje de error.
+    - Si el usuario no existe, mostrar un mensaje de error.
+
+| Introduce el nombre de usuario: **pepe**
+| Introduce la contraseña: **1234**
+| Bienvenido pepe
+
+| Introduce el nombre de usuario: **pepe**
+| Introduce la contraseña: **12345**
+| Contraseña incorrecta
+
+| Introduce el nombre de usuario: **juan**
+| Introduce la contraseña: **1234**
+| Usuario no existe
 
 ## Entrega de la práctica
 
 **Antes del _ _ de _ a las __:__,** deberán haberse subido a Moodle los siguientes ficheros:
 
-- [ ] `.py`
+- [ ] `filtrar_velocidades.py`
+- [ ] `cuenta_letras.py`
+- [ ] `usuarios.py`
+- [ ] `agregar_usuario.py`
+- [ ] `control_acceso.py`
