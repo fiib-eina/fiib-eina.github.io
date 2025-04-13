@@ -17,14 +17,14 @@ format: revealjs
     - De principio a fin.
 - Es similar a **una grabadora de casete**:
     - Colocamos la cinta al principio.
-    - A medida que grabamos, avanza y sobreescribe.
+    - A medida que grabamos, avanza y sobrescribe.
 
 ---
 
 ### Operaciones de escritura
 
 - Abrir un fichero en **modo escritura** (`w`) significa que lo utilizaremos como **destino de datos** (output).
-    - `f = open('salida.txt', 'w')`: abre el fichero `salida.txt` en modo escritura.
+    - `f = open("salida.txt", "w")`: abre el fichero `salida.txt` en modo escritura.
 - Si el fichero **no existe**, se crea.
 - Si el fichero **ya existe**, su contenido **se borra**.
 
@@ -47,7 +47,7 @@ f.write("Hola mundo\n")
 #### Ejemplo: Escribir una frase en un fichero
 
 ```python
-f = open('salida.txt', 'w')
+f = open("salida.txt", "w")
 f.write("Hola mundo\n")
 f.close()
 ```
@@ -57,24 +57,24 @@ f.close()
 #### Ejemplo: Escribir varias líneas
 
 ```python
-f = open('salida.txt', 'w')
+f = open("salida.txt", "w")
 f.write("Primera línea\n")
 f.write("Segunda línea\n")
 f.close()
 ```
 
 ```python
-f = open('salida.txt', 'w')
+f = open("salida.txt", "w")
 f.write("Primera línea\nSegunda línea\n")
 f.close()
 ```
-
+<!-- TODO: cuidado con el encoding. En Windows, Python me está escribiendo el contenido en CP-1252 (el mal llamado ANSI de Windows), incluso con el código fuente en UTF-8 -->
 ---
 
 #### Ejemplo: Escribir con bucles
 
 ```python
-f = open('salida.txt', 'w')
+f = open("salida.txt", "w")
 for i in range(5):
     f.write(f"Línea número {i}\n")
 f.close()
@@ -154,9 +154,9 @@ f.close()
 
 ### Añadir al final del fichero
 
-- Habrá ocasiones en las que no queramos **sobreescribir** el contenido de un fichero.
+- Habrá ocasiones en las que no queramos **sobrescribir** el contenido de un fichero.
 - Para ello existe el **modo `a` (append)**.
-    - `f = open('salida.txt', 'a')`
+    - `f = open("salida.txt", "a")`
 - Si no existe, se crea.
 - Si existe, el texto se escribe **al final del fichero**.
 
@@ -169,7 +169,7 @@ _Append_ significa **añadir al final**. Recuerda que ya utilizamos este términ
 #### Ejemplo: Diario
 
 ```python
-f = open('diario.txt', 'a')
+f = open("diario.txt", "a")
 print("Fecha: ")
 fecha = input()
 f.write(f"\n## {fecha}\n")
