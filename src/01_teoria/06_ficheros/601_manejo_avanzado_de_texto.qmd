@@ -54,7 +54,7 @@ Es la primera vez que queremos leer más de un valor por línea.
 
 ---
 
-#### Ejemplo: Leer dos numeros (mal)
+#### Ejemplo: Leer dos números (mal)
 
 ```python
 print("Introduzca dos números:")
@@ -280,10 +280,10 @@ print("   Hola mundo   ".strip())
     - `string`: un string con todas las ocurrencias de `a` reemplazadas por `b`.
 
 ```python
-print("Tres tristres tigres tragan trigo en un trigal".replace("t", "d"))
+print("Tres tristes tigres tragan trigo en un trigal".replace("t", "d"))
 ```
 
-| Dres drisdres digris dragan drigo en un drigal
+| Tres drisdes digres dragan drigo en un drigal
 
 ---
 
@@ -308,7 +308,7 @@ s = s.replace("u", "i")
 print(s)
 ```
 
-| Quiri hiblir cin il minigir
+| Qiiiri hiblir cin il incirgidi
 
 **Opción alternativa (encadenando)**:
 
@@ -339,7 +339,7 @@ print("Hola mundo".find(" "))
 ::: {.callout-tip}
 
 - Recuerda que las posiciones empiezan en 0
-    - `4` es la quinta letra del string.
+    - `4` es el quinto carácter del string.
 
 :::
 
@@ -389,22 +389,22 @@ print("Hola mundo".lower())
 
 - En el tema anterior se comentó que se podía acceder a los caracteres de un string como si fuera una lista
 - Sin embargo, `str` **no soporta append**.
-- Para combinar strings o construit uno nuevo _parte a parte_ deberás hacerlo con `f-strings` o `+`.
+- Para combinar strings o construir uno nuevo _parte a parte_ deberás hacerlo con `f-strings` o `+`.
 
 ```python
-s = "Hola! Que tal amigo?"
-s = s.append(" Como estas?")
+s = "¡Hola! ¿Qué tal amigo?"
+s = s.append(" ¿Cómo estás?")
 print(s)
 ```
 | AttributeError: 'str' object has no attribute 'append'
 
 
 ```python
-s = "Hola! Que tal amigo?"
-s = s + " Como estas?"
+s = "¡Hola! ¿Qué tal amigo?"
+s = s + " ¿Cómo estás?"
 print(s)
 ```
-| Hola! Que tal amigo? Como estas?
+| ¡Hola! ¿Qué tal amigo? ¿Cómo estás?
 
 ---
 
@@ -445,7 +445,7 @@ def leer_lista():
 
 #### Ejercicio: Find case insensitive
 
-- Escribe una función que emule `find()` pero que no funcione aún cuando las cadenas se distinguen por mayúsculas y minúsculas (_case insensitive_).
+- Escribe una función que emule `find()` pero que funcione aún cuando las cadenas se distinguen por mayúsculas y minúsculas (_case insensitive_).
 
 ```python
 print(find_case_insensitive("Hola mundo", "Mundo"))
@@ -463,16 +463,16 @@ def find_case_insensitive(s, a):
 
 ---
 
-#### Ejercicio: Escritura tuenti
+#### Ejercicio: Escritura Tuenti
 
-- Escribe una función que reciba un texto y lo convierta a **escritura tuenti**.
+- Escribe una función que reciba un texto y lo convierta a **escritura Tuenti**.
     - Durante la década de los 2000, en la red social Tuenti, se popularizó un tipo de escritura que alternaba mayúsculas y minúsculas.
 
 ```python
 print(tuenti("Hola mundo"))
 ```
 
-| HoLa MuNdO
+| HoLa mUnDo
 
 ---
 
