@@ -86,7 +86,7 @@ _Necesitamos un método para almacenar los datos de forma persistente._
 
 ### Ficheros y sistemas de ficheros
 
-- **Fichero**: Recurso de un computador que permite almacenar información de forma descreta en un dispositivo de almacenamiento.
+- **Fichero**: Recurso de un computador que permite almacenar información de forma discreta en un dispositivo de almacenamiento.
     - Son **abstracciones** que nos permiten manejar datos de forma análoga a ficheros físicos.
         - Mover, copiar, renombrar, eliminar, etc.
     - _Son una serie de bytes que almacenan información._
@@ -146,7 +146,7 @@ _Necesitamos un método para almacenar los datos de forma persistente._
         - **Leer** datos del fichero (**entrada**)
         - **Escribir** datos en el fichero (**salida**)
     - **Cerrar**
-        - Una vez terminadas las operaciones, debemos librerar los recursos
+        - Una vez terminadas las operaciones, debemos liberar los recursos
 
 ---
 
@@ -160,7 +160,7 @@ _Necesitamos un método para almacenar los datos de forma persistente._
         - `a`: Modo añadir (append)
 
 ```python
-f = open('fichero.txt', 'r') 
+f = open("fichero.txt", "r") 
 ```
 
 ---
@@ -174,7 +174,7 @@ f = open('fichero.txt', 'r')
 - Ejemplo de ruta:
     - `C:\Users\Usuario\Documents\fichero.txt`
 - `open()` puede recibir un nombre de fichero o una ruta completa:
-    - Si sólo recibe un **nombre** asumirá que debe buscarlo en el **directorio actual**.
+    - Si solo recibe un **nombre** asumirá que debe buscarlo en el **directorio actual**.
         - En la mayoría de casos, el directorio actual es el mismo donde se encuentra el script `.py`.
 
 ---
@@ -184,7 +184,7 @@ f = open('fichero.txt', 'r')
 - `f.close()`: Cierra el fichero.
 
 ```python
-f = open('fichero.txt', 'r') 
+f = open("fichero.txt", "r") 
 
 # ...Realizar operaciones con el fichero
 
@@ -212,7 +212,7 @@ Si no lo hacemos, podemos tener problemas de memoria o de acceso a los ficheros.
 | └── fichero.txt
 
 ```python
-f = open('fichero.txt', 'r')
+f = open("fichero.txt", "r")
 f.close() 
 ```
 
@@ -225,7 +225,7 @@ f.close()
 
 ---
 
-### Paradigna de lectura secuencial
+### Paradigma de lectura secuencial
 
 - De las muchas formas en las que podemos leer un fichero, en esta asignatura nos vamos a limitar a la más sencilla de todas:
     - **Lectura secuencial**.
@@ -242,7 +242,7 @@ f.close()
 ### Operaciones de lectura
 
 - Abrir un fichero en **modo lectura** (`r`) significa que los utilizaremos como una **fuente de datos** (input).
-    - `f.open('fichero.txt', 'r')`: Abre el fichero `fichero.txt` en modo lectura.
+    - `f.open("fichero.txt", "r")`: Abre el fichero `fichero.txt` en modo lectura.
 - Si el fichero **no existe**, se producirá **un error**.
     - `FileNotFoundError`
     
@@ -266,7 +266,7 @@ texto = f.read()
 #### Ejemplo: Lectura de todo el fichero en una variable string
 
 ```python
-f = open('fichero.txt', 'r')
+f = open("fichero.txt", "r")
 contenido = f.read()
 f.close()
 
@@ -298,7 +298,7 @@ linea = f.readline()
 #### Ejemplo: Lectura de una línea del fichero
 
 ```python
-f = open('fichero.txt', 'r')
+f = open("fichero.txt", "r")
 linea = f.readline()
 f.close()
 print(linea)
@@ -309,13 +309,15 @@ print(linea)
 #### Ejemplo: Lectura de varias líneas del fichero
 
 ```python
-f = open('fichero.txt', 'r')
+f = open("fichero.txt", "r")
 linea = f.readline()
-while linea != '':
+while linea != "":
     print(linea)
     linea = f.readline()
 f.close()
 ```
+<!-- TODO: ¿poner print(linea, end="") para evitar que aparezca una línea en blanco entre cada par de líneas del fichero? -->
+
 
 ---
 
