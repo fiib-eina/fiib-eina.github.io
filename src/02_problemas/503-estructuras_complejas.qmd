@@ -91,7 +91,7 @@ Vamos a modelar el sistema de enemigos de un juego de rol.
 
 ### `Enemigo`
 
-Escribe una clase `Enemigo` que tenga los siguientes atributos (los valores numericos son enteros):
+Escribe una clase `Enemigo` que tenga los siguientes atributos (los valores numéricos son enteros):
 
 - `nombre`: nombre del enemigo.
 - `nivel`: nivel del enemigo.
@@ -169,7 +169,7 @@ def calcular_dano_oleada(oleada):
 </details>
 
 
-## Murcielago
+## Murciélago
 
 La palabra `murciélago` es una palabra que contiene todas las vocales (`a`, `e`, `i`, `o`, `u`). Escribe una función `contiene_vocales` que reciba un string `palabra` y devuelva un valor booleano que indique si la palabra contiene todas las vocales. _No consideres las tildes_.
 
