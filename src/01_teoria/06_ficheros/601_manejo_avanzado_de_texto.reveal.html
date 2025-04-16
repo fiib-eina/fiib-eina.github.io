@@ -264,7 +264,7 @@
 </section>
 <section class="slide level2">
 
-<h4 id="ejemplo-leer-dos-numeros-mal">Ejemplo: Leer dos numeros (mal)</h4>
+<h4 id="ejemplo-leer-dos-números-mal">Ejemplo: Leer dos números (mal)</h4>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="bu">print</span>(<span class="st">"Introduzca dos números:"</span>)</span>
 <span id="cb2-2"><a></a>a <span class="op">=</span> <span class="bu">input</span>()</span>
 <span id="cb2-3"><a></a>b <span class="op">=</span> <span class="bu">input</span>()</span>
@@ -487,8 +487,8 @@
 <li><code>string</code>: un string con todas las ocurrencias de <code>a</code> reemplazadas por <code>b</code>.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="bu">print</span>(<span class="st">"Tres tristres tigres tragan trigo en un trigal"</span>.replace(<span class="st">"t"</span>, <span class="st">"d"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="line-block">Dres drisdres digris dragan drigo en un drigal</div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="bu">print</span>(<span class="st">"Tres tristes tigres tragan trigo en un trigal"</span>.replace(<span class="st">"t"</span>, <span class="st">"d"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">Tres drisdes digres dragan drigo en un drigal</div>
 </section>
 <section class="slide level2">
 
@@ -505,7 +505,7 @@
 <span id="cb17-4"><a></a>s <span class="op">=</span> s.replace(<span class="st">"o"</span>, <span class="st">"i"</span>)</span>
 <span id="cb17-5"><a></a>s <span class="op">=</span> s.replace(<span class="st">"u"</span>, <span class="st">"i"</span>)</span>
 <span id="cb17-6"><a></a><span class="bu">print</span>(s)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="line-block">Quiri hiblir cin il minigir</div>
+<div class="line-block">Qiiiri hiblir cin il incirgidi</div>
 <p><strong>Opción alternativa (encadenando)</strong>:</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>s <span class="op">=</span> <span class="st">"Quiero hablar con el encargado"</span></span>
 <span id="cb18-2"><a></a>s <span class="op">=</span> s.replace(<span class="st">"a"</span>, <span class="st">"i"</span>).replace(<span class="st">"e"</span>, <span class="st">"i"</span>).replace(<span class="st">"o"</span>, <span class="st">"i"</span>).replace(<span class="st">"u"</span>, <span class="st">"i"</span>)</span>
@@ -540,7 +540,7 @@
 <ul>
 <li>Recuerda que las posiciones empiezan en 0
 <ul>
-<li><code>4</code> es la quinta letra del string.</li>
+<li><code>4</code> es el quinto carácter del string.</li>
 </ul></li>
 </ul>
 </div>
@@ -582,16 +582,16 @@ hola mundo</div>
 <ul>
 <li>En el tema anterior se comentó que se podía acceder a los caracteres de un string como si fuera una lista</li>
 <li>Sin embargo, <code>str</code> <strong>no soporta append</strong>.</li>
-<li>Para combinar strings o construit uno nuevo <em>parte a parte</em> deberás hacerlo con <code>f-strings</code> o <code>+</code>.</li>
+<li>Para combinar strings o construir uno nuevo <em>parte a parte</em> deberás hacerlo con <code>f-strings</code> o <code>+</code>.</li>
 </ul>
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a></a>s <span class="op">=</span> <span class="st">"Hola! Que tal amigo?"</span></span>
-<span id="cb24-2"><a></a>s <span class="op">=</span> s.append(<span class="st">" Como estas?"</span>)</span>
+<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a></a>s <span class="op">=</span> <span class="st">"¡Hola! ¿Qué tal amigo?"</span></span>
+<span id="cb24-2"><a></a>s <span class="op">=</span> s.append(<span class="st">" ¿Cómo estás?"</span>)</span>
 <span id="cb24-3"><a></a><span class="bu">print</span>(s)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="line-block">AttributeError: ‘str’ object has no attribute ‘append’</div>
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a>s <span class="op">=</span> <span class="st">"Hola! Que tal amigo?"</span></span>
-<span id="cb25-2"><a></a>s <span class="op">=</span> s <span class="op">+</span> <span class="st">" Como estas?"</span></span>
+<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a>s <span class="op">=</span> <span class="st">"¡Hola! ¿Qué tal amigo?"</span></span>
+<span id="cb25-2"><a></a>s <span class="op">=</span> s <span class="op">+</span> <span class="st">" ¿Cómo estás?"</span></span>
 <span id="cb25-3"><a></a><span class="bu">print</span>(s)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="line-block">Hola! Que tal amigo? Como estas?</div>
+<div class="line-block">¡Hola! ¿Qué tal amigo? ¿Cómo estás?</div>
 </section>
 <section id="ejercicios" class="slide level2 center">
 <h2>Ejercicios</h2>
@@ -626,7 +626,7 @@ hola mundo</div>
 
 <h4 id="ejercicio-find-case-insensitive">Ejercicio: Find case insensitive</h4>
 <ul>
-<li>Escribe una función que emule <code>find()</code> pero que no funcione aún cuando las cadenas se distinguen por mayúsculas y minúsculas (<em>case insensitive</em>).</li>
+<li>Escribe una función que emule <code>find()</code> pero que funcione aún cuando las cadenas se distinguen por mayúsculas y minúsculas (<em>case insensitive</em>).</li>
 </ul>
 <div class="sourceCode" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a></a><span class="bu">print</span>(find_case_insensitive(<span class="st">"Hola mundo"</span>, <span class="st">"Mundo"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="line-block">5</div>
@@ -640,15 +640,15 @@ hola mundo</div>
 </section>
 <section class="slide level2">
 
-<h4 id="ejercicio-escritura-tuenti">Ejercicio: Escritura tuenti</h4>
+<h4 id="ejercicio-escritura-tuenti">Ejercicio: Escritura Tuenti</h4>
 <ul>
-<li>Escribe una función que reciba un texto y lo convierta a <strong>escritura tuenti</strong>.
+<li>Escribe una función que reciba un texto y lo convierta a <strong>escritura Tuenti</strong>.
 <ul>
 <li>Durante la década de los 2000, en la red social Tuenti, se popularizó un tipo de escritura que alternaba mayúsculas y minúsculas.</li>
 </ul></li>
 </ul>
 <div class="sourceCode" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a></a><span class="bu">print</span>(tuenti(<span class="st">"Hola mundo"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="line-block">HoLa MuNdO</div>
+<div class="line-block">HoLa mUnDo</div>
 </section>
 <section class="slide level2">
 

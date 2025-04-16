@@ -566,6 +566,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </a> 
       </div>
       <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../src/03_practicas/p6/601_ficheros.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Práctica 6</span></a>
+  </div>
+</li>
       </ul>
   </li>
       </ul>
@@ -641,7 +647,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Es similar a <strong>una grabadora de casete</strong>:
 <ul>
 <li>Colocamos la cinta al principio.</li>
-<li>A medida que grabamos, avanza y sobreescribe.</li>
+<li>A medida que grabamos, avanza y sobrescribe.</li>
 </ul></li>
 </ul>
 <hr>
@@ -651,7 +657,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Abrir un fichero en <strong>modo escritura</strong> (<code>w</code>) significa que lo utilizaremos como <strong>destino de datos</strong> (output).
 <ul>
-<li><code>f = open('salida.txt', 'w')</code>: abre el fichero <code>salida.txt</code> en modo escritura.</li>
+<li><code>f = open("salida.txt", "w")</code>: abre el fichero <code>salida.txt</code> en modo escritura.</li>
 </ul></li>
 <li>Si el fichero <strong>no existe</strong>, se crea.</li>
 <li>Si el fichero <strong>ya existe</strong>, su contenido <strong>se borra</strong>.</li>
@@ -675,25 +681,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 <section id="ejemplo-escribir-una-frase-en-un-fichero" class="level4" data-number="1.3.1">
 <h4 data-number="1.3.1" class="anchored" data-anchor-id="ejemplo-escribir-una-frase-en-un-fichero"><span class="header-section-number">1.3.1</span> Ejemplo: Escribir una frase en un fichero</h4>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'salida.txt'</span>, <span class="st">'w'</span>)</span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"salida.txt"</span>, <span class="st">"w"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2"></a>f.write(<span class="st">"Hola mundo</span><span class="ch">\n</span><span class="st">"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3"></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <hr>
 </section>
 <section id="ejemplo-escribir-varias-líneas" class="level4" data-number="1.3.2">
 <h4 data-number="1.3.2" class="anchored" data-anchor-id="ejemplo-escribir-varias-líneas"><span class="header-section-number">1.3.2</span> Ejemplo: Escribir varias líneas</h4>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'salida.txt'</span>, <span class="st">'w'</span>)</span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"salida.txt"</span>, <span class="st">"w"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2"></a>f.write(<span class="st">"Primera línea</span><span class="ch">\n</span><span class="st">"</span>)</span>
 <span id="cb3-3"><a href="#cb3-3"></a>f.write(<span class="st">"Segunda línea</span><span class="ch">\n</span><span class="st">"</span>)</span>
 <span id="cb3-4"><a href="#cb3-4"></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'salida.txt'</span>, <span class="st">'w'</span>)</span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"salida.txt"</span>, <span class="st">"w"</span>)</span>
 <span id="cb4-2"><a href="#cb4-2"></a>f.write(<span class="st">"Primera línea</span><span class="ch">\n</span><span class="st">Segunda línea</span><span class="ch">\n</span><span class="st">"</span>)</span>
 <span id="cb4-3"><a href="#cb4-3"></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<!-- TODO: cuidado con el encoding. En Windows, Python me está escribiendo el contenido en CP-1252 (el mal llamado ANSI de Windows), incluso con el código fuente en UTF-8 -->
 <hr>
 </section>
 <section id="ejemplo-escribir-con-bucles" class="level4" data-number="1.3.3">
 <h4 data-number="1.3.3" class="anchored" data-anchor-id="ejemplo-escribir-con-bucles"><span class="header-section-number">1.3.3</span> Ejemplo: Escribir con bucles</h4>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'salida.txt'</span>, <span class="st">'w'</span>)</span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"salida.txt"</span>, <span class="st">"w"</span>)</span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
 <span id="cb5-3"><a href="#cb5-3"></a>    f.write(<span class="ss">f"Línea número </span><span class="sc">{</span>i<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span>
 <span id="cb5-4"><a href="#cb5-4"></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -794,10 +801,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="añadir-al-final-del-fichero" class="level3" data-number="1.5">
 <h3 data-number="1.5" class="anchored" data-anchor-id="añadir-al-final-del-fichero"><span class="header-section-number">1.5</span> Añadir al final del fichero</h3>
 <ul>
-<li>Habrá ocasiones en las que no queramos <strong>sobreescribir</strong> el contenido de un fichero.</li>
+<li>Habrá ocasiones en las que no queramos <strong>sobrescribir</strong> el contenido de un fichero.</li>
 <li>Para ello existe el <strong>modo <code>a</code> (append)</strong>.
 <ul>
-<li><code>f = open('salida.txt', 'a')</code></li>
+<li><code>f = open("salida.txt", "a")</code></li>
 </ul></li>
 <li>Si no existe, se crea.</li>
 <li>Si existe, el texto se escribe <strong>al final del fichero</strong>.</li>
@@ -815,7 +822,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 <section id="ejemplo-diario" class="level4" data-number="1.5.1">
 <h4 data-number="1.5.1" class="anchored" data-anchor-id="ejemplo-diario"><span class="header-section-number">1.5.1</span> Ejemplo: Diario</h4>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'diario.txt'</span>, <span class="st">'a'</span>)</span>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"diario.txt"</span>, <span class="st">"a"</span>)</span>
 <span id="cb10-2"><a href="#cb10-2"></a><span class="bu">print</span>(<span class="st">"Fecha: "</span>)</span>
 <span id="cb10-3"><a href="#cb10-3"></a>fecha <span class="op">=</span> <span class="bu">input</span>()</span>
 <span id="cb10-4"><a href="#cb10-4"></a>f.write(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">## </span><span class="sc">{</span>fecha<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span>

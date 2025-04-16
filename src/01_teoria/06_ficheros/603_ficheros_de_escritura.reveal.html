@@ -219,7 +219,7 @@
 <li>Es similar a <strong>una grabadora de casete</strong>:
 <ul>
 <li>Colocamos la cinta al principio.</li>
-<li>A medida que grabamos, avanza y sobreescribe.</li>
+<li>A medida que grabamos, avanza y sobrescribe.</li>
 </ul></li>
 </ul>
 </section>
@@ -229,7 +229,7 @@
 <ul>
 <li>Abrir un fichero en <strong>modo escritura</strong> (<code>w</code>) significa que lo utilizaremos como <strong>destino de datos</strong> (output).
 <ul>
-<li><code>f = open('salida.txt', 'w')</code>: abre el fichero <code>salida.txt</code> en modo escritura.</li>
+<li><code>f = open("salida.txt", "w")</code>: abre el fichero <code>salida.txt</code> en modo escritura.</li>
 </ul></li>
 <li>Si el fichero <strong>no existe</strong>, se crea.</li>
 <li>Si el fichero <strong>ya existe</strong>, su contenido <strong>se borra</strong>.</li>
@@ -254,25 +254,26 @@
 <section class="slide level2">
 
 <h4 id="ejemplo-escribir-una-frase-en-un-fichero">Ejemplo: Escribir una frase en un fichero</h4>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'salida.txt'</span>, <span class="st">'w'</span>)</span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"salida.txt"</span>, <span class="st">"w"</span>)</span>
 <span id="cb2-2"><a></a>f.write(<span class="st">"Hola mundo</span><span class="ch">\n</span><span class="st">"</span>)</span>
 <span id="cb2-3"><a></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
 <h4 id="ejemplo-escribir-varias-líneas">Ejemplo: Escribir varias líneas</h4>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'salida.txt'</span>, <span class="st">'w'</span>)</span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"salida.txt"</span>, <span class="st">"w"</span>)</span>
 <span id="cb3-2"><a></a>f.write(<span class="st">"Primera línea</span><span class="ch">\n</span><span class="st">"</span>)</span>
 <span id="cb3-3"><a></a>f.write(<span class="st">"Segunda línea</span><span class="ch">\n</span><span class="st">"</span>)</span>
 <span id="cb3-4"><a></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'salida.txt'</span>, <span class="st">'w'</span>)</span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"salida.txt"</span>, <span class="st">"w"</span>)</span>
 <span id="cb4-2"><a></a>f.write(<span class="st">"Primera línea</span><span class="ch">\n</span><span class="st">Segunda línea</span><span class="ch">\n</span><span class="st">"</span>)</span>
 <span id="cb4-3"><a></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<!-- TODO: cuidado con el encoding. En Windows, Python me está escribiendo el contenido en CP-1252 (el mal llamado ANSI de Windows), incluso con el código fuente en UTF-8 -->
 </section>
 <section class="slide level2">
 
 <h4 id="ejemplo-escribir-con-bucles">Ejemplo: Escribir con bucles</h4>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'salida.txt'</span>, <span class="st">'w'</span>)</span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"salida.txt"</span>, <span class="st">"w"</span>)</span>
 <span id="cb5-2"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
 <span id="cb5-3"><a></a>    f.write(<span class="ss">f"Línea número </span><span class="sc">{</span>i<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span>
 <span id="cb5-4"><a></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -373,10 +374,10 @@
 
 <h3 id="añadir-al-final-del-fichero">Añadir al final del fichero</h3>
 <ul>
-<li>Habrá ocasiones en las que no queramos <strong>sobreescribir</strong> el contenido de un fichero.</li>
+<li>Habrá ocasiones en las que no queramos <strong>sobrescribir</strong> el contenido de un fichero.</li>
 <li>Para ello existe el <strong>modo <code>a</code> (append)</strong>.
 <ul>
-<li><code>f = open('salida.txt', 'a')</code></li>
+<li><code>f = open("salida.txt", "a")</code></li>
 </ul></li>
 <li>Si no existe, se crea.</li>
 <li>Si existe, el texto se escribe <strong>al final del fichero</strong>.</li>
@@ -395,7 +396,7 @@
 <section class="slide level2">
 
 <h4 id="ejemplo-diario">Ejemplo: Diario</h4>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'diario.txt'</span>, <span class="st">'a'</span>)</span>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"diario.txt"</span>, <span class="st">"a"</span>)</span>
 <span id="cb10-2"><a></a><span class="bu">print</span>(<span class="st">"Fecha: "</span>)</span>
 <span id="cb10-3"><a></a>fecha <span class="op">=</span> <span class="bu">input</span>()</span>
 <span id="cb10-4"><a></a>f.write(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">## </span><span class="sc">{</span>fecha<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span>

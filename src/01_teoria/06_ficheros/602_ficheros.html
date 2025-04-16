@@ -566,6 +566,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </a> 
       </div>
       <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../src/03_practicas/p6/601_ficheros.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Práctica 6</span></a>
+  </div>
+</li>
       </ul>
   </li>
       </ul>
@@ -596,7 +602,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#ficheros-de-lectura" id="toc-ficheros-de-lectura" class="nav-link" data-scroll-target="#ficheros-de-lectura"><span class="header-section-number">3</span> Ficheros de lectura</a>
   <ul class="collapse">
-  <li><a href="#paradigna-de-lectura-secuencial" id="toc-paradigna-de-lectura-secuencial" class="nav-link" data-scroll-target="#paradigna-de-lectura-secuencial"><span class="header-section-number">3.1</span> Paradigna de lectura secuencial</a></li>
+  <li><a href="#paradigma-de-lectura-secuencial" id="toc-paradigma-de-lectura-secuencial" class="nav-link" data-scroll-target="#paradigma-de-lectura-secuencial"><span class="header-section-number">3.1</span> Paradigma de lectura secuencial</a></li>
   <li><a href="#operaciones-de-lectura" id="toc-operaciones-de-lectura" class="nav-link" data-scroll-target="#operaciones-de-lectura"><span class="header-section-number">3.2</span> Operaciones de lectura</a></li>
   <li><a href="#read" id="toc-read" class="nav-link" data-scroll-target="#read"><span class="header-section-number">3.3</span> <code>read()</code></a></li>
   <li><a href="#readline" id="toc-readline" class="nav-link" data-scroll-target="#readline"><span class="header-section-number">3.4</span> <code>readline()</code></a></li>
@@ -725,7 +731,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="ficheros-y-sistemas-de-ficheros" class="level3" data-number="2.2">
 <h3 data-number="2.2" class="anchored" data-anchor-id="ficheros-y-sistemas-de-ficheros"><span class="header-section-number">2.2</span> Ficheros y sistemas de ficheros</h3>
 <ul>
-<li><strong>Fichero</strong>: Recurso de un computador que permite almacenar información de forma descreta en un dispositivo de almacenamiento.
+<li><strong>Fichero</strong>: Recurso de un computador que permite almacenar información de forma discreta en un dispositivo de almacenamiento.
 <ul>
 <li>Son <strong>abstracciones</strong> que nos permiten manejar datos de forma análoga a ficheros físicos.
 <ul>
@@ -813,7 +819,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 <li><strong>Cerrar</strong>
 <ul>
-<li>Una vez terminadas las operaciones, debemos librerar los recursos</li>
+<li>Una vez terminadas las operaciones, debemos liberar los recursos</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -833,7 +839,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'fichero.txt'</span>, <span class="st">'r'</span>) </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"fichero.txt"</span>, <span class="st">"r"</span>) </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <hr>
 <section id="ruta-de-un-fichero" class="level4" data-number="2.5.1">
 <h4 data-number="2.5.1" class="anchored" data-anchor-id="ruta-de-un-fichero"><span class="header-section-number">2.5.1</span> Ruta de un fichero</h4>
@@ -850,7 +856,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 <li><code>open()</code> puede recibir un nombre de fichero o una ruta completa:
 <ul>
-<li>Si sólo recibe un <strong>nombre</strong> asumirá que debe buscarlo en el <strong>directorio actual</strong>.
+<li>Si solo recibe un <strong>nombre</strong> asumirá que debe buscarlo en el <strong>directorio actual</strong>.
 <ul>
 <li>En la mayoría de casos, el directorio actual es el mismo donde se encuentra el script <code>.py</code>.</li>
 </ul></li>
@@ -864,7 +870,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><code>f.close()</code>: Cierra el fichero.</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'fichero.txt'</span>, <span class="st">'r'</span>) </span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"fichero.txt"</span>, <span class="st">"r"</span>) </span>
 <span id="cb2-2"><a href="#cb2-2"></a></span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="co"># ...Realizar operaciones con el fichero</span></span>
 <span id="cb2-4"><a href="#cb2-4"></a></span>
@@ -892,7 +898,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 │&nbsp;&nbsp; └── fichero.txt<br>
 ├── programa.py<br>
 └── fichero.txt</div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'fichero.txt'</span>, <span class="st">'r'</span>)</span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"fichero.txt"</span>, <span class="st">"r"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2"></a>f.close() </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>El programa abrirá el fichero <code>fichero.txt</code> que se encuentra en el directorio actual</li>
@@ -904,8 +910,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="ficheros-de-lectura" class="level2 center" data-number="3">
 <h2 class="center anchored" data-number="3" data-anchor-id="ficheros-de-lectura"><span class="header-section-number">3</span> Ficheros de lectura</h2>
 <hr>
-<section id="paradigna-de-lectura-secuencial" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="paradigna-de-lectura-secuencial"><span class="header-section-number">3.1</span> Paradigna de lectura secuencial</h3>
+<section id="paradigma-de-lectura-secuencial" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="paradigma-de-lectura-secuencial"><span class="header-section-number">3.1</span> Paradigma de lectura secuencial</h3>
 <ul>
 <li>De las muchas formas en las que podemos leer un fichero, en esta asignatura nos vamos a limitar a la más sencilla de todas:
 <ul>
@@ -930,7 +936,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Abrir un fichero en <strong>modo lectura</strong> (<code>r</code>) significa que los utilizaremos como una <strong>fuente de datos</strong> (input).
 <ul>
-<li><code>f.open('fichero.txt', 'r')</code>: Abre el fichero <code>fichero.txt</code> en modo lectura.</li>
+<li><code>f.open("fichero.txt", "r")</code>: Abre el fichero <code>fichero.txt</code> en modo lectura.</li>
 </ul></li>
 <li>Si el fichero <strong>no existe</strong>, se producirá <strong>un error</strong>.
 <ul>
@@ -959,7 +965,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 <section id="ejemplo-lectura-de-todo-el-fichero-en-una-variable-string" class="level4" data-number="3.3.1">
 <h4 data-number="3.3.1" class="anchored" data-anchor-id="ejemplo-lectura-de-todo-el-fichero-en-una-variable-string"><span class="header-section-number">3.3.1</span> Ejemplo: Lectura de todo el fichero en una variable string</h4>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'fichero.txt'</span>, <span class="st">'r'</span>)</span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"fichero.txt"</span>, <span class="st">"r"</span>)</span>
 <span id="cb5-2"><a href="#cb5-2"></a>contenido <span class="op">=</span> f.read()</span>
 <span id="cb5-3"><a href="#cb5-3"></a>f.close()</span>
 <span id="cb5-4"><a href="#cb5-4"></a></span>
@@ -998,7 +1004,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 <section id="ejemplo-lectura-de-una-línea-del-fichero" class="level4" data-number="3.4.1">
 <h4 data-number="3.4.1" class="anchored" data-anchor-id="ejemplo-lectura-de-una-línea-del-fichero"><span class="header-section-number">3.4.1</span> Ejemplo: Lectura de una línea del fichero</h4>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'fichero.txt'</span>, <span class="st">'r'</span>)</span>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"fichero.txt"</span>, <span class="st">"r"</span>)</span>
 <span id="cb7-2"><a href="#cb7-2"></a>linea <span class="op">=</span> f.readline()</span>
 <span id="cb7-3"><a href="#cb7-3"></a>f.close()</span>
 <span id="cb7-4"><a href="#cb7-4"></a><span class="bu">print</span>(linea)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1006,12 +1012,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="ejemplo-lectura-de-varias-líneas-del-fichero" class="level4" data-number="3.4.2">
 <h4 data-number="3.4.2" class="anchored" data-anchor-id="ejemplo-lectura-de-varias-líneas-del-fichero"><span class="header-section-number">3.4.2</span> Ejemplo: Lectura de varias líneas del fichero</h4>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'fichero.txt'</span>, <span class="st">'r'</span>)</span>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"fichero.txt"</span>, <span class="st">"r"</span>)</span>
 <span id="cb8-2"><a href="#cb8-2"></a>linea <span class="op">=</span> f.readline()</span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="cf">while</span> linea <span class="op">!=</span> <span class="st">''</span>:</span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="cf">while</span> linea <span class="op">!=</span> <span class="st">""</span>:</span>
 <span id="cb8-4"><a href="#cb8-4"></a>    <span class="bu">print</span>(linea)</span>
 <span id="cb8-5"><a href="#cb8-5"></a>    linea <span class="op">=</span> f.readline()</span>
 <span id="cb8-6"><a href="#cb8-6"></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<!-- TODO: ¿poner print(linea, end="") para evitar que aparezca una línea en blanco entre cada par de líneas del fichero? -->
 <hr>
 </section>
 </section>

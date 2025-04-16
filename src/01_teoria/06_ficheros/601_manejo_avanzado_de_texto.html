@@ -566,6 +566,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </a> 
       </div>
       <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../src/03_practicas/p6/601_ficheros.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Práctica 6</span></a>
+  </div>
+</li>
       </ul>
   </li>
       </ul>
@@ -685,8 +691,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <hr>
-<section id="ejemplo-leer-dos-numeros-mal" class="level4" data-number="1.2.1">
-<h4 data-number="1.2.1" class="anchored" data-anchor-id="ejemplo-leer-dos-numeros-mal"><span class="header-section-number">1.2.1</span> Ejemplo: Leer dos numeros (mal)</h4>
+<section id="ejemplo-leer-dos-números-mal" class="level4" data-number="1.2.1">
+<h4 data-number="1.2.1" class="anchored" data-anchor-id="ejemplo-leer-dos-números-mal"><span class="header-section-number">1.2.1</span> Ejemplo: Leer dos números (mal)</h4>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="bu">print</span>(<span class="st">"Introduzca dos números:"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2"></a>a <span class="op">=</span> <span class="bu">input</span>()</span>
 <span id="cb2-3"><a href="#cb2-3"></a>b <span class="op">=</span> <span class="bu">input</span>()</span>
@@ -909,8 +915,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>string</code>: un string con todas las ocurrencias de <code>a</code> reemplazadas por <code>b</code>.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="bu">print</span>(<span class="st">"Tres tristres tigres tragan trigo en un trigal"</span>.replace(<span class="st">"t"</span>, <span class="st">"d"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="line-block">Dres drisdres digris dragan drigo en un drigal</div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="bu">print</span>(<span class="st">"Tres tristes tigres tragan trigo en un trigal"</span>.replace(<span class="st">"t"</span>, <span class="st">"d"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">Tres drisdes digres dragan drigo en un drigal</div>
 <hr>
 <section id="ejemplo-reemplazar-palabras-completas" class="level4" data-number="2.5.1">
 <h4 data-number="2.5.1" class="anchored" data-anchor-id="ejemplo-reemplazar-palabras-completas"><span class="header-section-number">2.5.1</span> Ejemplo: Reemplazar palabras completas</h4>
@@ -926,7 +932,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb17-4"><a href="#cb17-4"></a>s <span class="op">=</span> s.replace(<span class="st">"o"</span>, <span class="st">"i"</span>)</span>
 <span id="cb17-5"><a href="#cb17-5"></a>s <span class="op">=</span> s.replace(<span class="st">"u"</span>, <span class="st">"i"</span>)</span>
 <span id="cb17-6"><a href="#cb17-6"></a><span class="bu">print</span>(s)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="line-block">Quiri hiblir cin il minigir</div>
+<div class="line-block">Qiiiri hiblir cin il incirgidi</div>
 <p><strong>Opción alternativa (encadenando)</strong>:</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>s <span class="op">=</span> <span class="st">"Quiero hablar con el encargado"</span></span>
 <span id="cb18-2"><a href="#cb18-2"></a>s <span class="op">=</span> s.replace(<span class="st">"a"</span>, <span class="st">"i"</span>).replace(<span class="st">"e"</span>, <span class="st">"i"</span>).replace(<span class="st">"o"</span>, <span class="st">"i"</span>).replace(<span class="st">"u"</span>, <span class="st">"i"</span>)</span>
@@ -962,7 +968,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Recuerda que las posiciones empiezan en 0
 <ul>
-<li><code>4</code> es la quinta letra del string.</li>
+<li><code>4</code> es el quinto carácter del string.</li>
 </ul></li>
 </ul>
 </div>
@@ -1004,16 +1010,16 @@ hola mundo</div>
 <ul>
 <li>En el tema anterior se comentó que se podía acceder a los caracteres de un string como si fuera una lista</li>
 <li>Sin embargo, <code>str</code> <strong>no soporta append</strong>.</li>
-<li>Para combinar strings o construit uno nuevo <em>parte a parte</em> deberás hacerlo con <code>f-strings</code> o <code>+</code>.</li>
+<li>Para combinar strings o construir uno nuevo <em>parte a parte</em> deberás hacerlo con <code>f-strings</code> o <code>+</code>.</li>
 </ul>
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a>s <span class="op">=</span> <span class="st">"Hola! Que tal amigo?"</span></span>
-<span id="cb24-2"><a href="#cb24-2"></a>s <span class="op">=</span> s.append(<span class="st">" Como estas?"</span>)</span>
+<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a>s <span class="op">=</span> <span class="st">"¡Hola! ¿Qué tal amigo?"</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a>s <span class="op">=</span> s.append(<span class="st">" ¿Cómo estás?"</span>)</span>
 <span id="cb24-3"><a href="#cb24-3"></a><span class="bu">print</span>(s)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="line-block">AttributeError: ‘str’ object has no attribute ‘append’</div>
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a>s <span class="op">=</span> <span class="st">"Hola! Que tal amigo?"</span></span>
-<span id="cb25-2"><a href="#cb25-2"></a>s <span class="op">=</span> s <span class="op">+</span> <span class="st">" Como estas?"</span></span>
+<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a>s <span class="op">=</span> <span class="st">"¡Hola! ¿Qué tal amigo?"</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a>s <span class="op">=</span> s <span class="op">+</span> <span class="st">" ¿Cómo estás?"</span></span>
 <span id="cb25-3"><a href="#cb25-3"></a><span class="bu">print</span>(s)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="line-block">Hola! Que tal amigo? Como estas?</div>
+<div class="line-block">¡Hola! ¿Qué tal amigo? ¿Cómo estás?</div>
 <hr>
 </section>
 </section>
@@ -1047,7 +1053,7 @@ hola mundo</div>
 <section id="ejercicio-find-case-insensitive" class="level4" data-number="3.0.2">
 <h4 data-number="3.0.2" class="anchored" data-anchor-id="ejercicio-find-case-insensitive"><span class="header-section-number">3.0.2</span> Ejercicio: Find case insensitive</h4>
 <ul>
-<li>Escribe una función que emule <code>find()</code> pero que no funcione aún cuando las cadenas se distinguen por mayúsculas y minúsculas (<em>case insensitive</em>).</li>
+<li>Escribe una función que emule <code>find()</code> pero que funcione aún cuando las cadenas se distinguen por mayúsculas y minúsculas (<em>case insensitive</em>).</li>
 </ul>
 <div class="sourceCode" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a><span class="bu">print</span>(find_case_insensitive(<span class="st">"Hola mundo"</span>, <span class="st">"Mundo"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="line-block">5</div>
@@ -1059,15 +1065,15 @@ hola mundo</div>
 <hr>
 </section>
 <section id="ejercicio-escritura-tuenti" class="level4" data-number="3.0.3">
-<h4 data-number="3.0.3" class="anchored" data-anchor-id="ejercicio-escritura-tuenti"><span class="header-section-number">3.0.3</span> Ejercicio: Escritura tuenti</h4>
+<h4 data-number="3.0.3" class="anchored" data-anchor-id="ejercicio-escritura-tuenti"><span class="header-section-number">3.0.3</span> Ejercicio: Escritura Tuenti</h4>
 <ul>
-<li>Escribe una función que reciba un texto y lo convierta a <strong>escritura tuenti</strong>.
+<li>Escribe una función que reciba un texto y lo convierta a <strong>escritura Tuenti</strong>.
 <ul>
 <li>Durante la década de los 2000, en la red social Tuenti, se popularizó un tipo de escritura que alternaba mayúsculas y minúsculas.</li>
 </ul></li>
 </ul>
 <div class="sourceCode" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a><span class="bu">print</span>(tuenti(<span class="st">"Hola mundo"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="line-block">HoLa MuNdO</div>
+<div class="line-block">HoLa mUnDo</div>
 <hr>
 <div class="sourceCode" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1"></a><span class="kw">def</span> tuenti(s):</span>
 <span id="cb31-2"><a href="#cb31-2"></a>    resultado <span class="op">=</span> <span class="st">""</span></span>
