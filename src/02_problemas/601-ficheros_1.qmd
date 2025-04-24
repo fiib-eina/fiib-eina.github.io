@@ -201,8 +201,8 @@ import dataclasses
 class Alumno:
     nombre_completo: str
     nip: int
-    clase: str
-    curso: str
+    clase: int
+    curso: int
 ```
 
 </details>
