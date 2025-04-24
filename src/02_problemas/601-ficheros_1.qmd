@@ -1,8 +1,354 @@
 ---
 title: Problemas 11
-subtitle: Composición iterativa
+subtitle: Ficheros
 format: html
-draft: true
 ---
 
-## 
+## Procesado sencillo de ficheros
+
+### Eliminar vocales
+
+Escribe un programa que leea un fichero soliticitado por el usuario (`nombre_fichero`) y genere uno nuevo llamado `copia_{nombre_fichero}`.
+El nuevo fichero contendrá el mismo contenido que el original, pero sin las vocales.
+
+**hamlet.txt**
+
+| On the guards’ platform at Elsinore, Horatio waits with Barnardo and Marcellus to question a ghost that has twice before appeared.
+| The Ghost, in the form of the late King Hamlet of Denmark, appears but will not speak. Horatio decides to tell his fellow student, Prince Hamlet, about the Ghost’s appearance.
+
+
+**Ejemplo de entrada**
+
+| Introduce el nombre del fichero: hamlet.txt
+
+**copia_hamlet.txt**
+
+| n th grds’ pltfrm t lsnr, Hrt wts wth Brnrd nd Mrclls t qstn  ghst tht hs twc bfr pprd.
+| Th Ghst, n th frm f th lt Kng Hmlt f Dnmrk, pprs bt wll nt spk. Hrt dcds t tll hs fllw stdnt, Prnc Hmlt, bt th Ghst’s pprnc.
+
+<details>
+<summary>Solución</summary>
+
+```python
+print("Introduce el nombre del fichero:")
+nombre_fichero = input()
+f = open(nombre_fichero, "r")
+f2 = open("copia_" + nombre_fichero, "w")
+
+linea = f.readline()
+while linea != "":
+    for i in range(len(linea)):
+        letra = linea[i].lower()
+        if letra != "a" and letra != "e" and letra != "i" and letra != "o" and letra != "u":
+            f2.write(linea[i])
+    linea = f.readline()
+f.close()
+f2.close()
+```
+
+</details>
+
+<details>
+<summary>Solución alternativa</summary>
+
+```python
+print("Introduce el nombre del fichero:")
+nombre_fichero = input()
+f = open(nombre_fichero, "r")
+f2 = open("copia_" + nombre_fichero, "w")
+
+texto = f.read()
+texto = texto.replace("a", "").replace("A", "")
+texto = texto.replace("e", "").replace("E", "")
+texto = texto.replace("i", "").replace("I", "")
+texto = texto.replace("o", "").replace("O", "")
+texto = texto.replace("u", "").replace("U", "")
+f2.write(texto)
+
+f.close()
+f2.close()
+```
+
+</details>
+
+
+
+## Cálculo de gastos
+
+Tienes un fichero de texto `gastos.txt` con los gastos de un mes. Cada línea del fichero contiene el nombre del gasto y su cantidad. Por ejemplo:
+    
+Desarrolla un programa Python que lea el fichero y calcule el total de gastos. El programa debe mostrar:
+
+- El número total de transacciones
+- El total de gastos
+- El total de ingresos
+- El valor neto de todas las transacciones
+
+**gastos.txt**
+
+| tapas; -20.0
+| gasolina; -50.0
+| bizum tapas; 10.0
+
+**Ejemplo de salida**
+
+| Transacciones: 3
+| Gastos: -70.0
+| Ingresos: 10.0
+| Valor neto: -60.0
+
+<details>
+<summary>Solución</summary>
+
+```python
+transacciones = 0
+gastos = 0
+ingresos = 0
+
+f = open("gastos.txt", "r")
+
+linea = f.readline()
+
+while linea != "":
+    transaccion = linea.split(";")
+    valor = float(transaccion[1])
+    transacciones += 1
+    if valor > 0:
+        ingresos += valor
+    else:
+        gastos += valor
+
+    linea = f.readline()
+
+print(f"Transacciones: {transacciones}")
+print(f"Gastos: {gastos}")
+print(f"Ingresos: {ingresos}")
+print(f"Valor neto: {gastos + ingresos}")
+```
+
+### Filtrar transacciones
+
+Extiende el funcionamiento del programa para que solicite al usuario un texto. El programa sólo computará las transacciones cuya descripción sea idéntica al texto introducido por el usuario.
+Por ejemplo, si el fichero contiene:
+
+| tapas; -20.0
+| gasolina; -50.0
+| bizum tapas; 10.0
+| tapas; -10.0
+
+Si el usuario introduce `tapas`, el programa sólo computará las transacciones de tapas. El resultado será:
+
+| Transacciones: 2
+| Gastos: -30.0
+| Ingresos: 0.0
+| Valor neto: -30.0
+
+<details>
+<summary>Solución</summary>
+
+```python
+transacciones = 0
+gastos = 0
+ingresos = 0
+
+f = open("gastos.txt", "r")
+print("Introduce el texto a filtrar:")
+filtro = input()
+
+linea = f.readline()
+while linea != "":
+    transaccion = linea.split(";")
+    nombre = transaccion[0].strip()
+    valor = float(transaccion[1])
+    if nombre == filtro:
+        transacciones += 1
+        if valor > 0:
+            ingresos += valor
+        else:
+            gastos += valor
+
+    linea = f.readline()
+
+print(f"Transacciones: {transacciones}")
+print(f"Gastos: {gastos}")
+print(f"Ingresos: {ingresos}")
+print(f"Valor neto: {gastos + ingresos}")
+```
+
+</details>
+
+
+## Ficheros y objetos
+
+Vamos a trabajar el concepto de cargar datos complejos desde un fichero.
+
+### `Alumnos`
+
+Escribe una clase `Alumno` que contenga los siguientes atributos:
+
+- `nombre_completo`: nombre completo del alumno. (texto)
+- `nip`: número de identificación del alumno. (entero)
+- `clase`: clase del alumno. (entero)
+- `curso`: curso del alumno. (entero)
+
+<details>
+<summary>Solución</summary>
+
+```python
+import dataclasses
+
+@dataclasses.dataclass
+class Alumno:
+    nombre_completo: str
+    nip: int
+    clase: str
+    curso: str
+```
+
+</details>
+
+### Fichero `alumnos.txt`
+
+
+Escribe una función `leer_alumnos` que lea el fichero `alumnos.txt` y devuelva una lista de objetos `Alumno`. 
+
+**alumnos.txt**
+
+| Juan Pérez;111111;1;816
+| María López;111112;1;816
+| Pedro García;110001;2;827
+| Ana Fernández;110002;2;827
+
+**Ejemplo de salida**
+
+```python
+alumnos = leer_alumnos("alumnos.txt")
+print(len(alumnos)) 
+print(alumnos[0])
+```
+
+| 4
+| Alumno(nombre_completo='Juan Pérez', nip=111111, curso=1, clase=816)
+
+<details>
+<summary>Solución</summary>
+
+```python
+def leer_alumnos(fichero):
+    f = open(fichero, "r")
+    alumnos = []
+    linea = f.readline()
+    while linea != "":
+        alumno = linea.split(";")
+        nombre_completo = alumno[0]
+        nip = int(alumno[1])
+        curso = int(alumno[2])
+        clase = int(alumno[3])
+        alumnos.append(Alumno(nombre_completo, nip, curso, clase))
+        linea = f.readline()
+    f.close()
+    return alumnos
+```
+
+</details>
+
+### Fichero `curso_x_clase_y.txt`
+
+Por cuestiones burocráticas (habituales), el formato de los ficheros de otro organismo de la Universidad es distinto al usado anteriormente.
+
+En ese formato, cada clase se guarda en un fichero de texto distinto.
+El nombre del fichero es `curso_x_clase_y.txt`, donde `x` es el número de curso y `y` es el número de clase.
+El contenido del fichero es el similar al del fichero `alumnos.txt`, pero sin los datos de clase y grupo en la fila (ya que están implícitos en el nombre del fichero).
+
+Escribe una función `leer_por_clases(curso, clase)` que lea el fichero `curso_x_clase_y.txt` y devuelva una lista de objetos `Alumno`.
+
+
+**curso_3_clase_836.txt**
+
+| Julio González;110101
+| Mery Lopez;110102
+
+**curso_3_clase_837.txt**
+
+| Hector Cortés;110103
+| Luis Gracia;110104
+
+
+**Ejemplo de salida**
+
+```python
+alumnos = leer_por_clases(3, 836)
+print(len(alumnos))
+print(alumnos[0])
+```
+
+| 2
+| Alumno(nombre_completo='Julio González', nip=110101, clase=3, curso=836)
+
+<details>
+<summary>Solución</summary>
+
+```python
+def leer_por_clases(curso, clase):
+    f = open(f"curso_{curso}_clase_{clase}.txt", "r")
+    alumnos = []
+    linea = f.readline()
+    while linea != "":
+        alumno = linea.split(";")
+        nombre_completo = alumno[0]
+        nip = int(alumno[1])
+        alumnos.append(Alumno(nombre_completo, nip, curso, clase))
+        linea = f.readline()
+    f.close()
+    return alumnos
+```
+
+</details>
+
+### Juntar fuentes
+
+Escribe un programa Python que use las funciones anteriores para leer los ficheros:
+
+- `alumnos.txt`
+- `curso_3_clase_816.txt`
+- `curso_3_clase_827.txt`
+
+Y guarde en una misma lista a todos los alumnos (en un ejercicio posterior utilizaríamos esta lista para algo concreto).
+
+```python
+alumnos = ???
+
+for i in range(len(alumnos)):
+    print(alumnos[i])
+```
+
+| Alumno(nombre_completo='Juan Pérez', nip=111111, clase=1, curso=816)
+| Alumno(nombre_completo='María López', nip=111112, clase=1, curso=816)
+| Alumno(nombre_completo='Pedro García', nip=110001, clase=2, curso=827)
+| Alumno(nombre_completo='Ana Fernández', nip=110002, clase=2, curso=827)
+| Alumno(nombre_completo='Julio González', nip=110101, clase=3, curso=836)
+| Alumno(nombre_completo='Mery Lopez', nip=110102, clase=3, curso=836)
+| Alumno(nombre_completo='Hector Cortés', nip=110103, clase=3, curso=837)
+| Alumno(nombre_completo='Luis Gracia', nip=110104, clase=3, curso=837)
+
+<details>
+<summary>Solución</summary>
+
+```python
+alumnos = leer_alumnos("alumnos.txt")
+alumnos += leer_por_clases(3, 816)
+alumnos += leer_por_clases(3, 827)
+```
+
+</details>
+
+<details>
+<summary>Solución alternativa</summary>
+
+```python
+alumnos = leer_alumnos("alumnos.txt") + leer_por_clases(3, 816) + leer_por_clases(3, 827)
+```
+
+</details>
+
+
