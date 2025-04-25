@@ -9,7 +9,7 @@
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dece3bd051e391dd7205a6b15f93dc59.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <title>Fundamentos de Informática – Práctica 0</title>
+  <title>Fundamentos de Informática – Teoría 604</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -193,337 +193,428 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="#223d71" data-background-image="../../../src/_style/logos/unizar-black.svg" data-background-opacity="0.30" data-background-size="auto 600px" class="quarto-title-block center">
-  <h1 class="title">Práctica 0</h1>
-  <p class="subtitle">Introducción</p>
+  <h1 class="title">Teoría 604</h1>
+  <p class="subtitle">Ficheros estructurados</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="objetivos" class="slide level2">
-<h2>Objetivos</h2>
+<section id="ficheros-estructurados" class="slide level2 center">
+<h2>Ficheros estructurados</h2>
+</section>
+<section class="slide level2">
+
 <ul>
-<li>Instalar el entorno de trabajo</li>
-<li>Familiarizarse con el entorno de trabajo
+<li>Hasta ahora, hemos utilizado los ficheros como <strong>secuencias de caracteres sin una estructura demasiado compleja</strong>.
 <ul>
-<li>Editor de texto</li>
-<li>Terminal</li>
+<li>Libros, letras de canciones, secuencias de números (uno por línea), etc.</li>
 </ul></li>
-<li>Aprender a ejecutar (no escribir) código Python</li>
-<li>Intuyendo Python</li>
-<li>Entregar</li>
-</ul>
-</section>
-<section id="instalación-del-entorno-de-trabajo" class="slide level2">
-<h2>Instalación del entorno de trabajo</h2>
-<p>Para desarrollar en <code>python</code> necesitamos:</p>
+<li>A menudo, recurriremos a ficheros para cargar/guardar datos con <strong>estructuras más complejas</strong>.
 <ul>
-<li>Intérprete de Python: <a href="https://www.python.org/downloads/">Python</a></li>
-<li>Entorno de desarrollo: <a href="https://code.visualstudio.com/download">Visual Studio Code</a></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="instalación-de-python">Instalación de Python</h3>
-<ul>
-<li>Descarga el instalador de Python desde la <a href="https://www.python.org/downloads/">página oficial</a>.</li>
-<li>Configura la instalación de Python en tu sistema.</li>
-<li>Verifica la instalación.</li>
-</ul>
-</section>
-<section class="slide level2">
-
-
-<img data-src="img/01-descarga-python.png" class="r-stretch quarto-figure-center"><p class="caption">descarga-python</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/02-instalacion-python-conf-lab.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-python-conf-lab</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/03-instalacion-python-progreso.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-python-progreso</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/04-instalacion-python-fin.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-python-fin</p></section>
-<section class="slide level2">
-
-<h3 id="instalación-de-vscode">Instalación de VSCode</h3>
-<ul>
-<li>Descarga el instalador de Visual Studio Code desde la <a href="https://code.visualstudio.com/download">página oficial</a>.</li>
-<li>Configura la instalación de Visual Studio Code y acepta los términos de licencia.
-<ul>
-<li>Asegúrate de seleccionar las opciones de integración con el sistema.</li>
+<li>Listas, objetos, listas de objetos, etc.</li>
 </ul></li>
-<li>Configura el tema y las extensiones de Visual Studio Code.</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>alumnos <span class="op">=</span> [</span>
+<span id="cb1-2"><a></a>    Alumno(<span class="st">"Julio González"</span>, <span class="dv">110101</span>, <span class="dv">3</span>, <span class="dv">836</span>),</span>
+<span id="cb1-3"><a></a>    Alumno(<span class="st">"Mery Lopez"</span>, <span class="dv">110102</span>, <span class="dv">3</span>, <span class="dv">836</span>),</span>
+<span id="cb1-4"><a></a>    Alumno(<span class="st">"Hector Cortés"</span>, <span class="dv">110103</span>, <span class="dv">3</span>, <span class="dv">837</span>),</span>
+<span id="cb1-5"><a></a>    Alumno(<span class="st">"Luis Gracia"</span>, <span class="dv">110104</span>, <span class="dv">3</span>, <span class="dv">837</span>)</span>
+<span id="cb1-6"><a></a>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>¿Cómo <strong>guardamos</strong> esta lista de alumnos en un fichero?</li>
+<li>¿Cómo la <strong>leemos</strong> después?</li>
 </ul>
 </section>
 <section class="slide level2">
 
-
-<img data-src="img/05-descarga-vsc.png" class="r-stretch quarto-figure-center"><p class="caption">descarga-vsc</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/06-instalacion-vsc-licencia.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-licencia</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/07-instalacion-vsc-dir.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-dir</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/08-instalacion-vsc-menu.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-menu</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/09-instalacion-vsc-extra.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-extra</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/10-instalacion-vsc-ini.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-ini</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/11-instalacion-vsc-progreso.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-progreso</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/12-instalacion-vsc-fin.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-fin</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/13-conf-vsc-tema.png" class="r-stretch quarto-figure-center"><p class="caption">conf-vsc-tema</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/14-conf-vsc-extensiones.png" class="r-stretch quarto-figure-center"><p class="caption">conf-vsc-extensiones</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/15-conf-vsc-ext-python.png" class="r-stretch quarto-figure-center"><p class="caption">conf-vsc-ext-python</p></section>
-<section id="familiarizarse-con-el-entorno-de-trabajo" class="slide level2">
-<h2>Familiarizarse con el entorno de trabajo</h2>
-<p>Durante el proceso de desarrollo, siempre tendremos en cuenta:</p>
+<h3 id="ficheros-estructurados-1">Ficheros estructurados</h3>
 <ul>
-<li><strong>Sistema ficheros:</strong> Localización de los programas</li>
-<li><strong>Código fuente:</strong> Contenido de los programas</li>
-<li><strong>Terminal:</strong> Ejecución de programas python</li>
-</ul>
-<p>Estos tres elementos pueden ser controlados desde <code>Visual Studio Code</code>.</p>
-</section>
-<section class="slide level2">
-
-<h3 id="sistema-de-ficheros">Sistema de ficheros</h3>
-<p>Se recomienda seguir la siguiente estructura para tener todos los programas organizados. Agruparemos el código de cada práctica en su propio directorio (carpeta).</p>
-<pre><code>./
-├── p0
-│&nbsp;&nbsp; ├── hello.py
-│&nbsp;&nbsp; ├── ej1.py
-│&nbsp;&nbsp; └── ej2.py
-├── p1
-├── ...
-└── p6</code></pre>
-</section>
-<section class="slide level2">
-
-<p><strong>Tarea:</strong> Crea la estructura de directorios en tu sistema de ficheros utilizando el <code>Explorador de Windows</code>.</p>
-<ol type="1">
-<li><code>Clic derecho</code> &gt; <code>Nueva</code> &gt; <code>Carpeta</code> &gt; <code>p0</code></li>
-<li>Accede a la carpeta <code>p0</code></li>
-<li><code>Clic derecho</code> &gt; <code>Nuevo</code> &gt; <code>Documento de texto</code> &gt; <code>saludo.py</code>
-<ol type="1">
-<li>Asegúrate de que la extensión del fichero es <code>.py</code></li>
-</ol></li>
-</ol>
-<p><em>Nota:</em> Algunas versiones de Windows ocultan por defecto las extensiones de los ficheros. Puedes mostrarlas en <code>Vista</code> &gt; <code>Mostrar u ocultar</code> &gt; <code>Extensiones de nombre de archivo</code>.</p>
-</section>
-<section class="slide level2">
-
-<h3 id="visual-studio-code">Visual Studio Code</h3>
-<p><strong>Tarea:</strong> Abrid <code>Visual Studio Code</code>:</p>
+<li>Un <strong>fichero estructurado</strong> es un fichero de <strong>texto</strong> cuyo contenido sigue una <strong>estructura</strong> predefinida y bien conocida.</li>
+<li>Los ficheros de secuencias de números que hemos visto son un ejemplo <strong>sencillo</strong> de ficheros estructurados.
 <ul>
-<li>Forma 1:
-<ol type="1">
-<li>En el explorador &gt; Acede a la carpeta <code>p0</code></li>
-<li><code>Clic derecho</code> &gt; <code>Abrir directorio en VSCode</code></li>
-<li>Confirma que confías en el directorio</li>
-</ol></li>
-<li>Forma 2:
-<ol type="1">
-<li>Abre <code>Visual Studio Code</code></li>
-<li><code>Abrir carpeta...</code> &gt; Selecciona la carpeta <code>p0</code></li>
-<li>Confirma que confías en el directorio</li>
-</ol></li>
-</ul>
-</section>
-<section class="slide level2">
-
-
-<img data-src="img/16-trabajo-vsc-abrir-carpeta.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-abrir-carpeta</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/17-trabajo-vsc-sel-dir.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-sel-dir</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/18-trabajo-vsc-trust.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-trust</p></section>
-<section class="slide level2">
-
-<h3 id="vscode-árbol-de-ficheros">VSCode: Árbol de ficheros</h3>
-<p>El árbol de ficheros muestra la estructura de directorios y ficheros del proyecto.</p>
-<p><strong>Tarea:</strong> Crea un nuevo fichero <code>hello.py</code> en la carpeta <code>p0</code>.</p>
-<ol type="1">
-<li><code>Nuevo fichero</code> (Icono del fichero con el signo +)</li>
-<li>Escribe el nombre</li>
-</ol>
-</section>
-<section class="slide level2">
-
-
-<img data-src="img/19-trabajo-vsc-entorno.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-entorno</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/20-trabajo-vsc-crear-fichero.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-crear-fichero</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/21-trabajo-vsc-nombrar-fichero.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-nombrar-fichero</p></section>
-<section class="slide level2">
-
-<h3 id="vscode-editor-de-texto">VSCode: Editor de texto</h3>
-<p>El editor de texto es donde escribiremos el código fuente de los programas.</p>
-<p><strong>Tarea:</strong> Escribe tu primer programa Python.</p>
-<ol type="1">
-<li>Abre el fichero <code>hello.py</code> desde el árbol de ficheros</li>
-<li>Escribe el siguiente código:</li>
-<li>Guarda los cambios (Ctrl+S)</li>
-</ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="bu">print</span>(<span class="st">"Hello, World!"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2">
-
-
-<img data-src="img/22-trabajo-vsc-escribir-codigo.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-escribir-codigo</p></section>
-<section class="slide level2">
-
-
-<img data-src="img/23-trabajo-vsc-guardar.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-guardar</p></section>
-<section class="slide level2">
-
-<h3 id="vscode-terminal">VSCode: Terminal</h3>
-<p>La terminal es donde ejecutaremos los programas.</p>
-<p><strong>Tarea:</strong> Ejecuta el programa <code>hello.py</code> desde la terminal de VSCode.</p>
-<ol type="1">
-<li>Abre la terminal de VSCode (<code>Terminal</code> &gt; <code>Nueva terminal</code>)</li>
-<li>Ejecuta el programa <code>hello.py</code> con el siguiente comando:</li>
-</ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="ex">py</span> hello.py</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2">
-
-<p>Otra forma más rápida de ejecutar el programa es pulsando el botón de <code>Run</code> que aparece en la parte superior derecha del editor.</p>
-
-<img data-src="img/24-trabajo-vsc-ejecutar.png" class="r-stretch quarto-figure-center"><p class="caption">trabajo-vsc-ejecutar</p></section>
-<section id="programa-interactivo" class="slide level2">
-<h2>Programa interactivo</h2>
-<ul>
-<li>Más adelante en el curso aprenderás a hacer programas que requieran de la <strong>interacción</strong> del usuario.</li>
-<li>Dicha interacción se realiza también en la propia <strong>terminal</strong>.</li>
-<li>Para familiarizarte ahora con este comportamiento, vamos a escribir y ejecutar un programa interactivo.</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<p><strong>Tarea:</strong> Crea y ejecuta un programa interactivo.</p>
-<ol type="1">
-<li>Utiliza el árbol de ficheros para crear el fichero <code>saluda.py</code></li>
-<li>Escribe el <a href="saluda.py">código</a> en <code>saluda.py</code>.</li>
-<li>Ejecuta el programa <code>saluda.py</code> desde la terminal de VSCode o pulsando el botón de <code>Run</code>.</li>
-</ol>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="co">""" Sergio Martín Segura - 622612</span></span>
-<span id="cb4-2"><a></a><span class="co">El programa pide un nombre al usuario.</span></span>
-<span id="cb4-3"><a></a><span class="co">Luego escribe en la pantalla "Hola, NOMBRE".</span></span>
-<span id="cb4-4"><a></a><span class="co">"""</span></span>
-<span id="cb4-5"><a></a></span>
-<span id="cb4-6"><a></a><span class="co"># Pide al usuario que escriba su nombre, lo lee de teclado y lo guarda en «nombre»</span></span>
-<span id="cb4-7"><a></a><span class="bu">print</span>(<span class="st">"¿Cómo te llamas? "</span>)</span>
-<span id="cb4-8"><a></a>nombre <span class="op">=</span> <span class="bu">input</span>()</span>
-<span id="cb4-9"><a></a></span>
-<span id="cb4-10"><a></a><span class="co"># Saluda al usuario escribiendo un mensaje personalizado en la pantalla </span></span>
-<span id="cb4-11"><a></a><span class="bu">print</span>(<span class="st">"Hola,"</span>, nombre)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2">
-
-<h3 id="comentarios-de-código-y-docstring">Comentarios de código y docstring</h3>
-<p>Observa cómo en la primera línea del programa <code>saluda.py</code> se describe el funcionamiento del programa.</p>
-<p>En un fichero python podemos escribir tres “tipos de texto” distintos:</p>
-<ul>
-<li><strong>Código:</strong> Líneas de código que se ejecutan
-<ul>
-<li>Sigue la sintaxis de Python</li>
-</ul></li>
-<li><strong>Docstring:</strong> Texto que sirve para documentar el código
-<ul>
-<li>Se escribe entre tres comillas-dobles <code>""" ... """</code></li>
-</ul></li>
-<li><strong>Comentarios:</strong> Cualquier otro texto que no se ejecuta ni se interpreta
-<ul>
-<li>Se escribe tras el símbolo <code>#</code></li>
+<li>Cada línea contiene un número.</li>
 </ul></li>
 </ul>
 </section>
-<section id="intuyendo-python" class="slide level2">
-<h2>Intuyendo Python</h2>
-<p>A continuación evaluaremos nuestra capacidad de intuir y entender el funcionamiento de código <code>python</code>.</p>
-<p><strong>Tarea:</strong> Documenta los siguientes programas en un <em>docstring</em>.</p>
-<ol type="1">
-<li>Descarga o copia los ficheros en la carpeta <code>p0</code>.</li>
-<li>Ábrelos con el editor de texto y lee su contenido.</li>
-<li>Ejecuta los programas desde la terminal de VSCode.</li>
-<li>Añade un <em>docstring</em> al principio de cada fichero incluyendo tu nombre y explicando qué hace el programa.</li>
-</ol>
-<p><em>Nota:</em> Puedes hacer <code>Clic derecho</code> &gt; <code>Guardar enlace como...</code> en los nombres de cada fichero para descargarlos o hacer clic en el <code>icono del portapapeles</code> para copiar todo el contenido.</p>
+<section class="slide level2">
+
+<h4 id="ejemplo-wav-text">Ejemplo: WAV-Text</h4>
+<ul>
+<li>El sonido analogico es una onda continua (vibraciones del aire).</li>
+<li>La digitalización de una onda continua consiste en tomar muestras de la onda (de su amplitud) a intervalos regulares.</li>
+<li>La codificación WAV es un formato de fichero que almacena una onda digitalizada.</li>
+<li>Podemos <em>inventar</em> un formato equivalente en texto plano, que almacene la misma información como una secuencia de números enteros en un rango concreto.
+<ul>
+<li>Rango 16 bits: <code>[-32768, 32767]</code></li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>waveform.txt</strong></p>
+<div class="line-block">0 55147 59592 9248 -49598 -62844 -18312 43056 64839 27009 -35653 -65535 -35165 27536 64920 42617 -18868 -63006 -49217 9822</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="./img/waveform.png"></p>
+</div></div>
 </section>
 <section class="slide level2">
 
-<p><strong><a href="ej1.py">ej1.py</a></strong></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número: "</span>)</span>
-<span id="cb5-2"><a></a>a <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
-<span id="cb5-3"><a></a><span class="bu">print</span>(<span class="st">"Introduce otro número: "</span>)</span>
-<span id="cb5-4"><a></a>b <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
-<span id="cb5-5"><a></a></span>
-<span id="cb5-6"><a></a><span class="bu">print</span>(a <span class="op">+</span> b)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong><a href="ej2.py">ej2.py</a></strong></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>pi <span class="op">=</span> <span class="fl">3.14159265358979323846</span></span>
-<span id="cb6-2"><a></a><span class="bu">print</span>(<span class="st">"Escribe un número real: "</span>)</span>
-<span id="cb6-3"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
-<span id="cb6-4"><a></a></span>
-<span id="cb6-5"><a></a><span class="bu">print</span>(pi <span class="op">*</span> (x <span class="op">**</span> <span class="dv">2</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong><a href="ej3.py">ej3.py</a></strong></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número: "</span>)</span>
-<span id="cb7-2"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
-<span id="cb7-3"><a></a></span>
-<span id="cb7-4"><a></a><span class="cf">if</span> x <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
-<span id="cb7-5"><a></a>    <span class="bu">print</span>(x)</span>
-<span id="cb7-6"><a></a><span class="cf">else</span>:</span>
-<span id="cb7-7"><a></a>    <span class="bu">print</span>(<span class="op">-</span>x)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="entrega-de-la-práctica" class="slide level2">
-<h2>Entrega de la práctica</h2>
-<p>Todas las prácticas se entregarán a través de <strong>Moodle</strong>. Esta <code>Práctica 0</code> no es evaluable, pero sí se deberá entregar para familiarizarse con el proceso.</p>
-<p><strong>Tarea:</strong> Entrega el código de la práctica.</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Verifica que has nombrado correctamente los ficheros. Un fichero mal nombrado no será evaluado.</label></li>
-<li><label><input type="checkbox">Verifica que has añadido un <em>docstring</em> a cada fichero con tu nombre y NIP.</label></li>
-<li><label><input type="checkbox">Verifica que el funcionamiento de los programas es correcto.</label></li>
-<li><label><input type="checkbox">Accede a la entrega en Moodle y lee si hay instrucciones extra.</label></li>
-<li><label><input type="checkbox">Sube los ficheros <code>*.py</code> individualmente (sin comprimir y sin crear carpetas adicionales).</label></li>
+<ul>
+<li>Para leer dicho fichero y cargarlo en un vector de enteros:</li>
 </ul>
-<p><em>Nota:</em> No se aceptarán entregas fuera de plazo. En el caso de que se acerque la fecha límite de entrega, se recomienda al menos subir los ejercicios que se hayan terminado. <strong>Se podrán resubir</strong> tantas veces como se desee antes de la fecha límite de entrega.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"waveform.txt"</span>, <span class="st">"r"</span>)</span>
+<span id="cb2-2"><a></a>texto <span class="op">=</span> f.read()</span>
+<span id="cb2-3"><a></a>f.close()</span>
+<span id="cb2-4"><a></a></span>
+<span id="cb2-5"><a></a>lista_texto <span class="op">=</span> texto.split(<span class="st">" "</span>)</span>
+<span id="cb2-6"><a></a>lista <span class="op">=</span> []</span>
+<span id="cb2-7"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lista_texto)):</span>
+<span id="cb2-8"><a></a>    numero <span class="op">=</span> <span class="bu">int</span>(lista_texto[i])</span>
+<span id="cb2-9"><a></a>    lista.append(numero)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-tip callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Recuerda que leer todo el fichero de una vez es <strong>tiene un coste mayor en memoria</strong>.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="otros-formatos-más-complejos">Otros formatos más complejos</h3>
+<ul>
+<li>La estructura <strong>secuencia de datos del mismo tipo</strong> es una de las más sencilla que encontraremos.</li>
+<li>No obstante, a menudo necesitaremos trabajar con estructuras <strong>más complejas</strong>.</li>
+<li>Para ello recurriremos <em>principalmente</em> a:
+<ul>
+<li>Estructuras <strong>tabulares</strong></li>
+<li>Estructuras <strong>ad-hoc</strong></li>
+</ul></li>
+</ul>
+</section>
+<section id="estructuras-tabulares" class="slide level2 center">
+<h2>Estructuras tabulares</h2>
+</section>
+<section class="slide level2">
+
+<h3 id="tablas">Tablas</h3>
+<ul>
+<li>Las estructuras tabulares son un tipo de fichero estructurado que almacena datos en forma de <strong>filas y columnas</strong>.
+<ul>
+<li>Cada fila de la tabla representa un <strong>registro</strong></li>
+<li>Cada columna representa un <strong>campo</strong>.</li>
+</ul></li>
+<li>Es posible que hayas trabajado con datos tabulares si has usado:
+<ul>
+<li><strong>Hojas de cálculo</strong> (Excel, Google Sheets, LibreOffice Calc, etc.)</li>
+<li><strong>Bases de datos</strong> (MySQL, PostgreSQL, SQLite, etc.)</li>
+</ul></li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Nombre</th>
+<th style="text-align: center;">NIP</th>
+<th style="text-align: center;">Clase</th>
+<th style="text-align: center;">Curso</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Julio González</td>
+<td style="text-align: center;">110101</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">836</td>
+</tr>
+<tr class="even">
+<td>Mery Lopez</td>
+<td style="text-align: center;">110102</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">836</td>
+</tr>
+<tr class="odd">
+<td>Hector Cortés</td>
+<td style="text-align: center;">110103</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">837</td>
+</tr>
+<tr class="even">
+<td>Luis Gracia</td>
+<td style="text-align: center;">110104</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">837</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h3 id="dsv-delimiter-separated-values">DSV (Delimiter Separated Values)</h3>
+<ul>
+<li>Un formato común para almacenar datos tabulares es el <strong>DSV</strong> (Delimiter Separated Values).</li>
+<li>Los ficheros DSV son ficheros de texto plano donde:
+<ul>
+<li>Los <strong>registros</strong> están separados por <strong>saltos de línea</strong>.</li>
+<li>Los <strong>campos</strong> de cada fila están separados por un <strong>carácter delimitador</strong>.</li>
+</ul></li>
+<li>DSV es un término genérico que se refiere a cualquier formato de este tipo.
+<ul>
+<li>En función del delimitador, pueden llamarse:
+<ul>
+<li><strong>CSV</strong> (Comma Separated Values): usa <code>,</code> como delimitador.</li>
+<li><strong>TSV</strong> (Tab Separated Values): usa <code>\t</code> como delimitador.</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="callout callout-tip callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Encontrarás que a menudo se utiliza el término <strong>CSV</strong> para referirse a cualquier fichero DSV, aunque no use <code>,</code> como delimitador.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="estructura-de-un-fichero-csv">Estructura de un fichero CSV</h3>
+<p><strong>alumnos.csv</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>Nombre,NIP,Clase,Curso</span>
+<span id="cb3-2"><a></a>Julio González,110101,3,836</span>
+<span id="cb3-3"><a></a>Mery Lopez,110102,3,836</span>
+<span id="cb3-4"><a></a>Hector Cortés,110103,3,837</span>
+<span id="cb3-5"><a></a>Luis Gracia,110104,3,837</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Como puedes observar, a menudo los ficheros CSV incluyen una <strong>cabecera</strong> con el nombre de los campos.
+<ul>
+<li>Es importante que, si el fichero tiene cabecera, la primera línea <strong>no</strong> se procese como un registro.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-leer-un-csv">Ejemplo: Leer un CSV</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"alumnos.csv"</span>, <span class="st">"r"</span>)</span>
+<span id="cb4-2"><a></a>cabecera <span class="op">=</span> f.readline()</span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a>alumnos <span class="op">=</span> []</span>
+<span id="cb4-5"><a></a>linea <span class="op">=</span> f.readline()</span>
+<span id="cb4-6"><a></a><span class="cf">while</span> linea <span class="op">!=</span> <span class="st">""</span>:</span>
+<span id="cb4-7"><a></a>    datos <span class="op">=</span> linea.split(<span class="st">","</span>)</span>
+<span id="cb4-8"><a></a>    <span class="co">#               Nombre            NIP            Clase          Curso</span></span>
+<span id="cb4-9"><a></a>    alumno <span class="op">=</span> Alumno(datos[<span class="dv">0</span>].strip(), <span class="bu">int</span>(datos[<span class="dv">1</span>]), <span class="bu">int</span>(datos[<span class="dv">2</span>]), <span class="bu">int</span>(datos[<span class="dv">3</span>]))</span>
+<span id="cb4-10"><a></a>    alumnos.append(alumno)</span>
+<span id="cb4-11"><a></a>    linea <span class="op">=</span> f.readline()</span>
+<span id="cb4-12"><a></a></span>
+<span id="cb4-13"><a></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Esta es una estructrua que <strong>repetiremos</strong> a menudo.</li>
+<li>Las partes que variarán serán:
+<ul>
+<li>La forma de <strong>crear el objeto</strong> en base a los datos.</li>
+<li>La <strong>validación</strong> de los datos (si fuera necesaria).</li>
+</ul></li>
+</ul>
+<div class="callout callout-tip callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<ul>
+<li>Observa que utilizamos <code>strip()</code> en los campos de texto para eliminar los saltos de línea y espacios en blanco (<em>limpiar el string</em>).</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="popularidad-del-formato-csv">Popularidad del formato CSV</h3>
+<ul>
+<li>La <strong>sencillez</strong> y <strong>portabilidad</strong> del formato CSV lo han convertido en uno de los formatos más populares para el intercambio de datos.
+<ul>
+<li>Es un formato <strong>ligero</strong> y <strong>fácil de leer</strong>.</li>
+<li>Es <strong>muy fácil</strong> implementar su soporte en cualquier aplicación.</li>
+</ul></li>
+<li>Podemos encontrar ejemplos de ficheros CSV en:
+<ul>
+<li>Portales de datos abiertos: <a href="https://datos.gob.es/es/catalogo">https://datos.gob.es/es/catalogo</a></li>
+<li>Exports de aplicaciones web: Moodle (export alumnos), Google Analytics (exportar informes), etc.</li>
+</ul></li>
+<li>Podemos cargar y procesar ficheros CSV:
+<ul>
+<li>Con programas propios escritos en Python</li>
+<li>Con programas de terceros (Excel, Google Sheets, LibreOffice Calc, etc.)</li>
+<li>Con programas específicos para esos ficheros</li>
+</ul></li>
+</ul>
+</section>
+<section id="estructuras-ad-hoc" class="slide level2 center">
+<h2>Estructuras ad-hoc</h2>
+</section>
+<section class="slide level2">
+
+<h3 id="estructuras-ad-hoc-1">Estructuras ad-hoc</h3>
+<ul>
+<li>En otras ocasiones (por el motivo que sea) los formatos con los que trabajaremos <strong>no ofrecerán</strong> la comodidad de un formato tabular.</li>
+<li>En estos casos, deberemos adaptar nuestro código de forma precisa a la estructura del fichero.</li>
+<li>Ejemplos:
+<ul>
+<li>Fichas de datos donde cada <strong>fichero es un registro</strong>.</li>
+<li>Ficheros de configuración.</li>
+<li>Formatos específicos basados en texto: (STL, OBJ, etc.)</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="ejemplo-fichas-de-datos">Ejemplo: Fichas de datos</h4>
+<ul>
+<li>Vamos a representar una ficha de personaje de rol.</li>
+<li>Contendrá:
+<ul>
+<li>nombre</li>
+<li>raza y clase</li>
+<li>nivel, fuerza, destreza, inteligencia</li>
+<li>una lista de ataques o hechizos.</li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>sam.txt</strong></p>
+<div class="line-block">Samsagaz Gamgee<br>
+Hobbit Escudero<br>
+7 15 10 8<br>
+Sartenazo 5<br>
+Daga 15</div>
+</div><div class="column" style="width:50%;">
+<p><strong>gandalf.txt</strong></p>
+<div class="line-block">Gandalf el Blanco<br>
+Maia Mago<br>
+20 20 20 20<br>
+BrilliBrilli 30<br>
+NoPuedesPasar 80</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>Primero vamos a definir las estructuras de datos que utilizaremos para representar la ficha de personaje.</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="im">import</span> dataclasses</span>
+<span id="cb5-2"><a></a></span>
+<span id="cb5-3"><a></a><span class="at">@dataclasses.dataclass</span></span>
+<span id="cb5-4"><a></a><span class="kw">class</span> Ataque:</span>
+<span id="cb5-5"><a></a>    nombre: <span class="bu">str</span></span>
+<span id="cb5-6"><a></a>    dano: <span class="bu">int</span></span>
+<span id="cb5-7"><a></a></span>
+<span id="cb5-8"><a></a><span class="at">@dataclasses.dataclass</span></span>
+<span id="cb5-9"><a></a><span class="kw">class</span> Personaje:</span>
+<span id="cb5-10"><a></a>    nombre: <span class="bu">str</span></span>
+<span id="cb5-11"><a></a>    raza: <span class="bu">str</span></span>
+<span id="cb5-12"><a></a>    clase: <span class="bu">str</span></span>
+<span id="cb5-13"><a></a>    nivel: <span class="bu">int</span></span>
+<span id="cb5-14"><a></a>    fuerza: <span class="bu">int</span></span>
+<span id="cb5-15"><a></a>    destreza: <span class="bu">int</span></span>
+<span id="cb5-16"><a></a>    inteligencia: <span class="bu">int</span></span>
+<span id="cb5-17"><a></a>    ataques: <span class="bu">list</span>[Ataque]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>A continuación, leeremos el fichero y lo cargaremos en un objeto <code>Personaje</code>.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="line-block">Samsagaz Gamgee<br>
+Hobbit Escudero<br>
+7 15 10 8<br>
+Sartenazo 5<br>
+Daga 15</div>
+</div><div class="column" style="width:70%;">
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="co"># PASO 1: Cargamos primero los datos fijos del personaje</span></span>
+<span id="cb6-2"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"sam.txt"</span>, <span class="st">"r"</span>)</span>
+<span id="cb6-3"><a></a>l1 <span class="op">=</span> f.readline()</span>
+<span id="cb6-4"><a></a>l2 <span class="op">=</span> f.readline().split(<span class="st">" "</span>)</span>
+<span id="cb6-5"><a></a>l3 <span class="op">=</span> f.readline().split(<span class="st">" "</span>)</span>
+<span id="cb6-6"><a></a></span>
+<span id="cb6-7"><a></a>personaje <span class="op">=</span> Personaje(</span>
+<span id="cb6-8"><a></a>    l1.strip(), <span class="co"># Nombre</span></span>
+<span id="cb6-9"><a></a>    l2[<span class="dv">0</span>].strip(), <span class="co"># Raza</span></span>
+<span id="cb6-10"><a></a>    l2[<span class="dv">1</span>].strip(), <span class="co"># Clase</span></span>
+<span id="cb6-11"><a></a>    <span class="bu">int</span>(l3[<span class="dv">0</span>]), <span class="co"># Nivel</span></span>
+<span id="cb6-12"><a></a>    <span class="bu">int</span>(l3[<span class="dv">1</span>]), <span class="co"># Fuerza</span></span>
+<span id="cb6-13"><a></a>    <span class="bu">int</span>(l3[<span class="dv">2</span>]), <span class="co"># Destreza</span></span>
+<span id="cb6-14"><a></a>    <span class="bu">int</span>(l3[<span class="dv">3</span>]), <span class="co"># Inteligencia</span></span>
+<span id="cb6-15"><a></a>    [] <span class="co"># Ataques (vacío por ahora)</span></span>
+<span id="cb6-16"><a></a>)</span>
+<span id="cb6-17"><a></a><span class="co"># PASO 2: Ahora leermos iterativamente todos sus ataques</span></span>
+<span id="cb6-18"><a></a>linea_ataque <span class="op">=</span> f.readline()</span>
+<span id="cb6-19"><a></a><span class="cf">while</span> linea_ataque <span class="op">!=</span> <span class="st">""</span>:</span>
+<span id="cb6-20"><a></a>    datos <span class="op">=</span> linea_ataque.split(<span class="st">" "</span>)</span>
+<span id="cb6-21"><a></a>    ataque <span class="op">=</span> Ataque(datos[<span class="dv">0</span>].strip(), <span class="bu">int</span>(datos[<span class="dv">1</span>]))</span>
+<span id="cb6-22"><a></a>    personaje.ataques.append(ataque)</span>
+<span id="cb6-23"><a></a>    linea_ataque <span class="op">=</span> f.readline()</span>
+<span id="cb6-24"><a></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</section>
+<section id="json" class="slide level2 center">
+<h2>JSON</h2>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-warning callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Esta sección sólo está incluida por completitud.</p>
+<p><strong>No es parte del contenido de la asignatura</strong> y no se evaluará.</p>
+</div>
+</div>
+</div>
+<ul>
+<li>JSON es un formato de intercambio de datos basado en texto que hace uso de una sintaxis <strong>avanzada</strong> para representar <strong>estructuras de datos</strong>.</li>
+<li>Es un formato <strong>MUY</strong> popular y es posible que lo encuentres como formato de intercambio de datos.</li>
+<li>Python tiene soporte nativo para JSON a través del módulo <code>json</code>.</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="im">import</span> json</span>
+<span id="cb7-2"><a></a></span>
+<span id="cb7-3"><a></a><span class="co"># Cargar un fichero JSON</span></span>
+<span id="cb7-4"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"datos.json"</span>, <span class="st">"r"</span>)</span>
+<span id="cb7-5"><a></a><span class="co"># Necesitarás aprender manejo de dicts</span></span>
+<span id="cb7-6"><a></a>datos <span class="op">=</span> json.load(f) </span>
+<span id="cb7-7"><a></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section class="slide level2">
+
+<p><strong>gandalf.json</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb8-1"><a></a><span class="fu">{</span></span>
+<span id="cb8-2"><a></a>  <span class="dt">"nombre"</span><span class="fu">:</span> <span class="st">"Gandalf el Blanco"</span><span class="fu">,</span></span>
+<span id="cb8-3"><a></a>  <span class="dt">"raza"</span><span class="fu">:</span> <span class="st">"Maia"</span><span class="fu">,</span></span>
+<span id="cb8-4"><a></a>  <span class="dt">"clase"</span><span class="fu">:</span> <span class="st">"Mago"</span><span class="fu">,</span></span>
+<span id="cb8-5"><a></a>  <span class="dt">"nivel"</span><span class="fu">:</span> <span class="dv">20</span><span class="fu">,</span></span>
+<span id="cb8-6"><a></a>  <span class="dt">"fuerza"</span><span class="fu">:</span> <span class="dv">20</span><span class="fu">,</span></span>
+<span id="cb8-7"><a></a>  <span class="dt">"destreza"</span><span class="fu">:</span> <span class="dv">20</span><span class="fu">,</span></span>
+<span id="cb8-8"><a></a>  <span class="dt">"inteligencia"</span><span class="fu">:</span> <span class="dv">20</span><span class="fu">,</span></span>
+<span id="cb8-9"><a></a>  <span class="dt">"ataques"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb8-10"><a></a>    <span class="fu">{</span></span>
+<span id="cb8-11"><a></a>      <span class="dt">"nombre"</span><span class="fu">:</span> <span class="st">"BrilliBrilli"</span><span class="fu">,</span></span>
+<span id="cb8-12"><a></a>      <span class="dt">"dano"</span><span class="fu">:</span> <span class="dv">30</span></span>
+<span id="cb8-13"><a></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb8-14"><a></a>    <span class="fu">{</span></span>
+<span id="cb8-15"><a></a>      <span class="dt">"nombre"</span><span class="fu">:</span> <span class="st">"NoPuedesPasar"</span><span class="fu">,</span></span>
+<span id="cb8-16"><a></a>      <span class="dt">"dano"</span><span class="fu">:</span> <span class="dv">80</span></span>
+<span id="cb8-17"><a></a>    <span class="fu">}</span></span>
+<span id="cb8-18"><a></a>  <span class="ot">]</span></span>
+<span id="cb8-19"><a></a><span class="fu">}</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
