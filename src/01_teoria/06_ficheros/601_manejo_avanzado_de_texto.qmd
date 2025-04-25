@@ -14,7 +14,7 @@ format: revealjs
     - Hemos compuesto textos complejos con `f-strings`.
     - Hemos compuesto textos complejos con **funciones propias**.
     - Hemos utilizado `print(n, end="")` para escribir formatos complejos.
-- Sin embargo, cuando haciendo un uso muy básico de los textos que leemos:
+- Sin embargo, estamos haciendo un uso muy básico de los textos que leemos:
     - Cuando leemos de teclado, introducimos un valor por cada línea.
 
 ---
@@ -73,9 +73,9 @@ print("La suma es:", a + b)
 
 ---
 
-### Modelo de entrada/salida de Python vs otros lenguajes
+### Modelo de entrada/salida de Python vs. otros lenguajes
 
-- Python fue originalmente creado para ser un **lenguaje de scripting**.
+- Python fue originalmente creado para ser un **lenguaje de _scripting_**.
 - Esto implicó muchas decisiones de diseño que lo distanciaron de otros lenguajes comunes.
 - Lenguajes como C++, tratan la entrada/salida como un **flujo de bytes**.
 - Python gira en torno a **líneas de texto**. Su filosofía es:
@@ -248,7 +248,7 @@ print(f"Parte entera: {parte_entera_sin_puntos}, Parte decimal: {parte_decimal}"
 | Parte entera: 2345543, Parte decimal: 23
 
 ::: {.callout-warning}
-Recuerda en ningún momento ha habido en el programa un sólo `int` o `float`.
+Recuerda en ningún momento ha habido en el programa un solo `int` o `float`.
 Todas las operaciones se han hecho con strings.
 :::
 
