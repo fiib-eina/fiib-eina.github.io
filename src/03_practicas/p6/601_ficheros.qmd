@@ -95,6 +95,7 @@ _velocidades_filtradas.txt_
 | 1.3333333333333333
 | 1.3333333333333333
 | 2.6666666666666665
+|
 
 ## Contar letras
 
