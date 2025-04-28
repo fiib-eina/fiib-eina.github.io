@@ -692,7 +692,7 @@ window.Quarto = {
 </ul>
 <section id="media-velocidades" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="media-velocidades"><span class="header-section-number">1</span> Media Velocidades</h2>
-<p>Tenemos un fichero <code>velocidades.txt</code> con datos de la velocidad del viendo en un anemómetro de Zaragoza (<strong>un número real por cada fila</strong>). El anemómetro no es muy preciso, y genera lecturas con un gran margen de error. Para “suavizar” los resultados, queremos aplicar un <strong>filtro de media móvil</strong> de 3 valores.</p>
+<p>Tenemos un fichero <code>velocidades.txt</code> (<a href="./tests/velocidades.txt">link de descarga</a>) con datos de la velocidad del viendo en un anemómetro de Zaragoza (<strong>un número real por cada fila</strong>). El anemómetro no es muy preciso, y genera lecturas con un gran margen de error. Para “suavizar” los resultados, queremos aplicar un <strong>filtro de media móvil</strong> de 3 valores.</p>
 <p>El <strong>filtro de media móvil</strong> consiste en calcular la media de un número determinado de valores (en este caso 3) y sustituir el valor central por la media de los tres. Es decir, para cada valor <span class="math inline">\(X_i\)</span>, calculamos <span class="math inline">\(X_{i-1}\)</span>, <span class="math inline">\(X_i\)</span> y <span class="math inline">\(X_{i+1}\)</span> y sustituimos <span class="math inline">\(X_i\)</span> por la media de los tres <span class="math inline">\(Y_i\)</span>.</p>
 <p><span class="math display">\[
 Y_i = \frac{X_{i-1} + X_i + X_{i+1}}{3}
@@ -736,7 +736,7 @@ Y_i = \frac{X_{i-1} + X_i + X_{i+1}}{3}
 <li>Un número real por línea.</li>
 </ul></li>
 </ul>
-<p><em>velocidades.txt</em></p>
+<p><em>velocidades.txt</em> (<a href="./tests/velocidades.txt">link de descarga</a>)</p>
 <div class="line-block">1<br>
 1<br>
 2<br>
@@ -747,7 +747,8 @@ Y_i = \frac{X_{i-1} + X_i + X_{i+1}}{3}
 <p><em>velocidades_filtradas.txt</em></p>
 <div class="line-block">1.3333333333333333<br>
 1.3333333333333333<br>
-2.6666666666666665</div>
+2.6666666666666665<br>
+</div>
 </section>
 </section>
 <section id="contar-letras" class="level2" data-number="2">
@@ -879,7 +880,7 @@ z</div>
 <section id="programa-final-1" class="level3" data-number="2.3">
 <h3 data-number="2.3" class="anchored" data-anchor-id="programa-final-1"><span class="header-section-number">2.3</span> Programa final</h3>
 <p>Implementa el programa <code>cuenta_letras.py</code> que realice el proceso completo:</p>
-<p><em>poker_face.txt</em></p>
+<p><em>poker_face.txt</em> (<a href="./tests/poker_face.txt">link de descarga</a>)</p>
 <div class="line-block">I wanna hold ’em like they do in Texas, please<br>
 Fold ’em, let ’em hit me, raise it, baby, stay with me (I love it)<br>
 LoveGame intuition, play the cards with spades to start<br>
@@ -968,7 +969,7 @@ usuario3:contraseña3</div>
 <li>Abrir el fichero <code>usuarios.txt</code> en modo <strong>escritura</strong>.</li>
 <li>Guardar la lista de usuarios en el fichero <code>usuarios.txt</code>.</li>
 </ul>
-<p><em>usuarios.txt</em></p>
+<p><em>usuarios.txt</em> (<a href="./tests/usuarios.txt">link de descarga</a>)</p>
 <div class="line-block">maria:12345678<br>
 hector:secreto</div>
 <p><strong>Ejemplo de ejecución:</strong></p>
