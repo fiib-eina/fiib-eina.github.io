@@ -344,7 +344,7 @@ Implementa el programa `control_acceso.py` que realice lo siguiente:
 
 | Introduce el nombre de usuario: **pepe**
 | Introduce la contraseña: **1234**
-| Bienvenido pepe
+| Bienvenida/o, pepe
 
 | Introduce el nombre de usuario: **pepe**
 | Introduce la contraseña: **12345**
