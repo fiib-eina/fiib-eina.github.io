@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Problemas 11 – Fundamentos de Informática</title>
+<title>Problemas 12 – Fundamentos de Informática</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -114,7 +114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/02_problemas/100-fundamentos.html">Problemas</a></li><li class="breadcrumb-item"><a href="../../src/02_problemas/601-ficheros_1.html">Problemas 11</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/02_problemas/100-fundamentos.html">Problemas</a></li><li class="breadcrumb-item"><a href="../../src/02_problemas/701-ficheros_estructurados.html">Problemas 12</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -452,8 +452,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/02_problemas/601-ficheros_1.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../src/02_problemas/601-ficheros_de_texto.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problemas 11</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/02_problemas/701-ficheros_estructurados.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Problemas 12</span></a>
   </div>
 </li>
       </ul>
@@ -598,20 +604,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">En esta página</h2>
    
   <ul>
-  <li><a href="#procesado-sencillo-de-ficheros" id="toc-procesado-sencillo-de-ficheros" class="nav-link active" data-scroll-target="#procesado-sencillo-de-ficheros"><span class="header-section-number">1</span> Procesado sencillo de ficheros</a>
+  <li><a href="#ficheros-con-estructura-ad-hoc" id="toc-ficheros-con-estructura-ad-hoc" class="nav-link active" data-scroll-target="#ficheros-con-estructura-ad-hoc"><span class="header-section-number">1</span> Ficheros con estructura ad-hoc</a>
   <ul class="collapse">
-  <li><a href="#eliminar-vocales" id="toc-eliminar-vocales" class="nav-link" data-scroll-target="#eliminar-vocales"><span class="header-section-number">1.1</span> Eliminar vocales</a></li>
-  </ul></li>
-  <li><a href="#cálculo-de-gastos" id="toc-cálculo-de-gastos" class="nav-link" data-scroll-target="#cálculo-de-gastos"><span class="header-section-number">2</span> Cálculo de gastos</a>
-  <ul class="collapse">
-  <li><a href="#filtrar-transacciones" id="toc-filtrar-transacciones" class="nav-link" data-scroll-target="#filtrar-transacciones"><span class="header-section-number">2.1</span> Filtrar transacciones</a></li>
-  </ul></li>
-  <li><a href="#ficheros-y-objetos" id="toc-ficheros-y-objetos" class="nav-link" data-scroll-target="#ficheros-y-objetos"><span class="header-section-number">3</span> Ficheros y objetos</a>
-  <ul class="collapse">
-  <li><a href="#alumnos" id="toc-alumnos" class="nav-link" data-scroll-target="#alumnos"><span class="header-section-number">3.1</span> <code>Alumnos</code></a></li>
-  <li><a href="#fichero-alumnos.txt" id="toc-fichero-alumnos.txt" class="nav-link" data-scroll-target="#fichero-alumnos.txt"><span class="header-section-number">3.2</span> Fichero <code>alumnos.txt</code></a></li>
-  <li><a href="#fichero-curso_x_clase_y.txt" id="toc-fichero-curso_x_clase_y.txt" class="nav-link" data-scroll-target="#fichero-curso_x_clase_y.txt"><span class="header-section-number">3.3</span> Fichero <code>curso_x_clase_y.txt</code></a></li>
-  <li><a href="#juntar-fuentes" id="toc-juntar-fuentes" class="nav-link" data-scroll-target="#juntar-fuentes"><span class="header-section-number">3.4</span> Juntar fuentes</a></li>
+  <li><a href="#ficheros-valores_nutricionales" id="toc-ficheros-valores_nutricionales" class="nav-link" data-scroll-target="#ficheros-valores_nutricionales"><span class="header-section-number">1.1</span> Ficheros <code>valores_nutricionales</code></a></li>
+  <li><a href="#ficheros-ajedrez" id="toc-ficheros-ajedrez" class="nav-link" data-scroll-target="#ficheros-ajedrez"><span class="header-section-number">1.2</span> Ficheros <code>ajedrez</code></a></li>
+  <li><a href="#ficheros-coche.txt" id="toc-ficheros-coche.txt" class="nav-link" data-scroll-target="#ficheros-coche.txt"><span class="header-section-number">1.3</span> Ficheros <code>coche.txt</code></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -619,10 +616,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/02_problemas/100-fundamentos.html">Problemas</a></li><li class="breadcrumb-item"><a href="../../src/02_problemas/601-ficheros_1.html">Problemas 11</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/02_problemas/100-fundamentos.html">Problemas</a></li><li class="breadcrumb-item"><a href="../../src/02_problemas/701-ficheros_estructurados.html">Problemas 12</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Problemas 11</h1>
-<p class="subtitle lead">Ficheros</p>
+<h1 class="title">Problemas 12</h1>
+<p class="subtitle lead">Ficheros Estructurados</p>
 </div>
 
 
@@ -639,283 +636,365 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="procesado-sencillo-de-ficheros" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="procesado-sencillo-de-ficheros"><span class="header-section-number">1</span> Procesado sencillo de ficheros</h2>
-<section id="eliminar-vocales" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="eliminar-vocales"><span class="header-section-number">1.1</span> Eliminar vocales</h3>
-<p>Escribe un programa que leea un fichero soliticitado por el usuario (<code>nombre_fichero</code>) y genere uno nuevo llamado <code>copia_{nombre_fichero}</code>. El nuevo fichero contendrá el mismo contenido que el original, pero sin las vocales.</p>
-<p><strong>hamlet.txt</strong></p>
-<div class="line-block">On the guards’ platform at Elsinore, Horatio waits with Barnardo and Marcellus to question a ghost that has twice before appeared.<br>
-The Ghost, in the form of the late King Hamlet of Denmark, appears but will not speak. Horatio decides to tell his fellow student, Prince Hamlet, about the Ghost’s appearance.</div>
-<p><strong>Ejemplo de entrada</strong></p>
-<div class="line-block">Introduce el nombre del fichero: hamlet.txt</div>
-<p><strong>copia_hamlet.txt</strong></p>
-<div class="line-block">n th grds’ pltfrm t lsnr, Hrt wts wth Brnrd nd Mrclls t qstn ghst tht hs twc bfr pprd.<br>
-Th Ghst, n th frm f th lt Kng Hmlt f Dnmrk, pprs bt wll nt spk. Hrt dcds t tll hs fllw stdnt, Prnc Hmlt, bt th Ghst’s pprnc.</div>
-<details>
-<summary>
-Solución
-</summary>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">print</span>(<span class="st">"Introduce el nombre del fichero:"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2"></a>nombre_fichero <span class="op">=</span> <span class="bu">input</span>()</span>
-<span id="cb1-3"><a href="#cb1-3"></a>f <span class="op">=</span> <span class="bu">open</span>(nombre_fichero, <span class="st">"r"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4"></a>f2 <span class="op">=</span> <span class="bu">open</span>(<span class="st">"copia_"</span> <span class="op">+</span> nombre_fichero, <span class="st">"w"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5"></a></span>
-<span id="cb1-6"><a href="#cb1-6"></a>linea <span class="op">=</span> f.readline()</span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="cf">while</span> linea <span class="op">!=</span> <span class="st">""</span>:</span>
-<span id="cb1-8"><a href="#cb1-8"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(linea)):</span>
-<span id="cb1-9"><a href="#cb1-9"></a>        letra <span class="op">=</span> linea[i].lower()</span>
-<span id="cb1-10"><a href="#cb1-10"></a>        <span class="cf">if</span> letra <span class="op">!=</span> <span class="st">"a"</span> <span class="kw">and</span> letra <span class="op">!=</span> <span class="st">"e"</span> <span class="kw">and</span> letra <span class="op">!=</span> <span class="st">"i"</span> <span class="kw">and</span> letra <span class="op">!=</span> <span class="st">"o"</span> <span class="kw">and</span> letra <span class="op">!=</span> <span class="st">"u"</span>:</span>
-<span id="cb1-11"><a href="#cb1-11"></a>            f2.write(linea[i])</span>
-<span id="cb1-12"><a href="#cb1-12"></a>    linea <span class="op">=</span> f.readline()</span>
-<span id="cb1-13"><a href="#cb1-13"></a>f.close()</span>
-<span id="cb1-14"><a href="#cb1-14"></a>f2.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<details>
-<summary>
-Solución alternativa
-</summary>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="bu">print</span>(<span class="st">"Introduce el nombre del fichero:"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2"></a>nombre_fichero <span class="op">=</span> <span class="bu">input</span>()</span>
-<span id="cb2-3"><a href="#cb2-3"></a>f <span class="op">=</span> <span class="bu">open</span>(nombre_fichero, <span class="st">"r"</span>)</span>
-<span id="cb2-4"><a href="#cb2-4"></a>f2 <span class="op">=</span> <span class="bu">open</span>(<span class="st">"copia_"</span> <span class="op">+</span> nombre_fichero, <span class="st">"w"</span>)</span>
-<span id="cb2-5"><a href="#cb2-5"></a></span>
-<span id="cb2-6"><a href="#cb2-6"></a>texto <span class="op">=</span> f.read()</span>
-<span id="cb2-7"><a href="#cb2-7"></a>texto <span class="op">=</span> texto.replace(<span class="st">"a"</span>, <span class="st">""</span>).replace(<span class="st">"A"</span>, <span class="st">""</span>)</span>
-<span id="cb2-8"><a href="#cb2-8"></a>texto <span class="op">=</span> texto.replace(<span class="st">"e"</span>, <span class="st">""</span>).replace(<span class="st">"E"</span>, <span class="st">""</span>)</span>
-<span id="cb2-9"><a href="#cb2-9"></a>texto <span class="op">=</span> texto.replace(<span class="st">"i"</span>, <span class="st">""</span>).replace(<span class="st">"I"</span>, <span class="st">""</span>)</span>
-<span id="cb2-10"><a href="#cb2-10"></a>texto <span class="op">=</span> texto.replace(<span class="st">"o"</span>, <span class="st">""</span>).replace(<span class="st">"O"</span>, <span class="st">""</span>)</span>
-<span id="cb2-11"><a href="#cb2-11"></a>texto <span class="op">=</span> texto.replace(<span class="st">"u"</span>, <span class="st">""</span>).replace(<span class="st">"U"</span>, <span class="st">""</span>)</span>
-<span id="cb2-12"><a href="#cb2-12"></a>f2.write(texto)</span>
-<span id="cb2-13"><a href="#cb2-13"></a></span>
-<span id="cb2-14"><a href="#cb2-14"></a>f.close()</span>
-<span id="cb2-15"><a href="#cb2-15"></a>f2.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</section>
-</section>
-<section id="cálculo-de-gastos" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="cálculo-de-gastos"><span class="header-section-number">2</span> Cálculo de gastos</h2>
-<p>Tienes un fichero de texto <code>gastos.txt</code> con los gastos de un mes. Cada línea del fichero contiene el nombre del gasto y su cantidad. Por ejemplo:</p>
-<p>Desarrolla un programa Python que lea el fichero y calcule el total de gastos. El programa debe mostrar:</p>
+<section id="ficheros-con-estructura-ad-hoc" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="ficheros-con-estructura-ad-hoc"><span class="header-section-number">1</span> Ficheros con estructura ad-hoc</h2>
+<p>A continuación se presentan varios ficheros con estructura ad-hoc diferentes. Tu trabajo será definir la estructura de datos que represente la información contenida en el fichero y escribir una función que lea el fichero y devuelva una entidad de esa estructura. La estructura será descrita utilizando una sintaxis similar a la de los <em>f-strings</em> junto a un ejemplo.</p>
+<p><strong>Ejemplo de fichero</strong></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Ejemplo</strong></pre>
+</div>
+<div class="sourceCode" id="cb1" data-filename="Ejemplo"><pre class="sourceCode numberSource jsx number-lines code-with-copy"><code class="sourceCode javascriptreact"><span id="cb1-1"><a href="#cb1-1"></a>{nombre_completo}</span>
+<span id="cb1-2"><a href="#cb1-2"></a>{raza} {clase}</span>
+<span id="cb1-3"><a href="#cb1-3"></a>{atk} {def} {dex} {int}</span>
+<span id="cb1-4"><a href="#cb1-4"></a>{ataque[<span class="dv">0</span>]<span class="op">.</span><span class="at">nombre</span>} {ataque[<span class="dv">0</span>]<span class="op">.</span><span class="at">puntos</span>}</span>
+<span id="cb1-5"><a href="#cb1-5"></a>{ataque[<span class="dv">1</span>]<span class="op">.</span><span class="at">nombre</span>} {ataque[<span class="dv">1</span>]<span class="op">.</span><span class="at">puntos</span>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>sam.txt</strong></pre>
+</div>
+<div class="sourceCode" id="cb2" data-filename="sam.txt"><pre class="sourceCode numberSource plaintext number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>Samsagaz Gamgee</span>
+<span id="cb2-2"><a href="#cb2-2"></a>Hobbit Escudero</span>
+<span id="cb2-3"><a href="#cb2-3"></a>7 15 10 8</span>
+<span id="cb2-4"><a href="#cb2-4"></a>Sartenazo 5</span>
+<span id="cb2-5"><a href="#cb2-5"></a>Daga 15</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 <ul>
-<li>El número total de transacciones</li>
-<li>El total de gastos</li>
-<li>El total de ingresos</li>
-<li>El valor neto de todas las transacciones</li>
+<li>Nombre completo puede contener espacios.</li>
+<li>Todos los atributos numericos son enteros.</li>
+<li>La lista de ataques tiene un tamaño indeterminado.</li>
 </ul>
-<p><strong>gastos.txt</strong></p>
-<div class="line-block">tapas; -20.0<br>
-gasolina; -50.0<br>
-bizum tapas; 10.0</div>
-<p><strong>Ejemplo de salida</strong></p>
-<div class="line-block">Transacciones: 3<br>
-Gastos: -70.0<br>
-Ingresos: 10.0<br>
-Valor neto: -60.0</div>
-<details>
-<summary>
-Solución
-</summary>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>transacciones <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>gastos <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>ingresos <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a></span>
-<span id="cb3-5"><a href="#cb3-5"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"gastos.txt"</span>, <span class="st">"r"</span>)</span>
-<span id="cb3-6"><a href="#cb3-6"></a></span>
-<span id="cb3-7"><a href="#cb3-7"></a>linea <span class="op">=</span> f.readline()</span>
-<span id="cb3-8"><a href="#cb3-8"></a></span>
-<span id="cb3-9"><a href="#cb3-9"></a><span class="cf">while</span> linea <span class="op">!=</span> <span class="st">""</span>:</span>
-<span id="cb3-10"><a href="#cb3-10"></a>    transaccion <span class="op">=</span> linea.split(<span class="st">";"</span>)</span>
-<span id="cb3-11"><a href="#cb3-11"></a>    valor <span class="op">=</span> <span class="bu">float</span>(transaccion[<span class="dv">1</span>])</span>
-<span id="cb3-12"><a href="#cb3-12"></a>    transacciones <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb3-13"><a href="#cb3-13"></a>    <span class="cf">if</span> valor <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb3-14"><a href="#cb3-14"></a>        ingresos <span class="op">+=</span> valor</span>
-<span id="cb3-15"><a href="#cb3-15"></a>    <span class="cf">else</span>:</span>
-<span id="cb3-16"><a href="#cb3-16"></a>        gastos <span class="op">+=</span> valor</span>
-<span id="cb3-17"><a href="#cb3-17"></a></span>
-<span id="cb3-18"><a href="#cb3-18"></a>    linea <span class="op">=</span> f.readline()</span>
-<span id="cb3-19"><a href="#cb3-19"></a></span>
-<span id="cb3-20"><a href="#cb3-20"></a><span class="bu">print</span>(<span class="ss">f"Transacciones: </span><span class="sc">{</span>transacciones<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb3-21"><a href="#cb3-21"></a><span class="bu">print</span>(<span class="ss">f"Gastos: </span><span class="sc">{</span>gastos<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb3-22"><a href="#cb3-22"></a><span class="bu">print</span>(<span class="ss">f"Ingresos: </span><span class="sc">{</span>ingresos<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb3-23"><a href="#cb3-23"></a><span class="bu">print</span>(<span class="ss">f"Valor neto: </span><span class="sc">{</span>gastos <span class="op">+</span> ingresos<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="filtrar-transacciones" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="filtrar-transacciones"><span class="header-section-number">2.1</span> Filtrar transacciones</h3>
-<p>Extiende el funcionamiento del programa para que solicite al usuario un texto. El programa sólo computará las transacciones cuya descripción sea idéntica al texto introducido por el usuario. Por ejemplo, si el fichero contiene:</p>
-<div class="line-block">tapas; -20.0<br>
-gasolina; -50.0<br>
-bizum tapas; 10.0<br>
-tapas; -10.0</div>
-<p>Si el usuario introduce <code>tapas</code>, el programa sólo computará las transacciones de tapas. El resultado será:</p>
-<div class="line-block">Transacciones: 2<br>
-Gastos: -30.0<br>
-Ingresos: 0.0<br>
-Valor neto: -30.0</div>
-<details>
-<summary>
-Solución
-</summary>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>transacciones <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>gastos <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>ingresos <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a></span>
-<span id="cb4-5"><a href="#cb4-5"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"gastos.txt"</span>, <span class="st">"r"</span>)</span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="bu">print</span>(<span class="st">"Introduce el texto a filtrar:"</span>)</span>
-<span id="cb4-7"><a href="#cb4-7"></a>filtro <span class="op">=</span> <span class="bu">input</span>()</span>
-<span id="cb4-8"><a href="#cb4-8"></a></span>
-<span id="cb4-9"><a href="#cb4-9"></a>linea <span class="op">=</span> f.readline()</span>
-<span id="cb4-10"><a href="#cb4-10"></a><span class="cf">while</span> linea <span class="op">!=</span> <span class="st">""</span>:</span>
-<span id="cb4-11"><a href="#cb4-11"></a>    transaccion <span class="op">=</span> linea.split(<span class="st">";"</span>)</span>
-<span id="cb4-12"><a href="#cb4-12"></a>    nombre <span class="op">=</span> transaccion[<span class="dv">0</span>].strip()</span>
-<span id="cb4-13"><a href="#cb4-13"></a>    valor <span class="op">=</span> <span class="bu">float</span>(transaccion[<span class="dv">1</span>])</span>
-<span id="cb4-14"><a href="#cb4-14"></a>    <span class="cf">if</span> nombre <span class="op">==</span> filtro:</span>
-<span id="cb4-15"><a href="#cb4-15"></a>        transacciones <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb4-16"><a href="#cb4-16"></a>        <span class="cf">if</span> valor <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb4-17"><a href="#cb4-17"></a>            ingresos <span class="op">+=</span> valor</span>
-<span id="cb4-18"><a href="#cb4-18"></a>        <span class="cf">else</span>:</span>
-<span id="cb4-19"><a href="#cb4-19"></a>            gastos <span class="op">+=</span> valor</span>
-<span id="cb4-20"><a href="#cb4-20"></a></span>
-<span id="cb4-21"><a href="#cb4-21"></a>    linea <span class="op">=</span> f.readline()</span>
-<span id="cb4-22"><a href="#cb4-22"></a></span>
-<span id="cb4-23"><a href="#cb4-23"></a><span class="bu">print</span>(<span class="ss">f"Transacciones: </span><span class="sc">{</span>transacciones<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb4-24"><a href="#cb4-24"></a><span class="bu">print</span>(<span class="ss">f"Gastos: </span><span class="sc">{</span>gastos<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb4-25"><a href="#cb4-25"></a><span class="bu">print</span>(<span class="ss">f"Ingresos: </span><span class="sc">{</span>ingresos<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb4-26"><a href="#cb4-26"></a><span class="bu">print</span>(<span class="ss">f"Valor neto: </span><span class="sc">{</span>gastos <span class="op">+</span> ingresos<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</section>
-</details></section>
-<section id="ficheros-y-objetos" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="ficheros-y-objetos"><span class="header-section-number">3</span> Ficheros y objetos</h2>
-<p>Vamos a trabajar el concepto de cargar datos complejos desde un fichero.</p>
-<section id="alumnos" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="alumnos"><span class="header-section-number">3.1</span> <code>Alumnos</code></h3>
-<p>Escribe una clase <code>Alumno</code> que contenga los siguientes atributos:</p>
+<section id="ficheros-valores_nutricionales" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="ficheros-valores_nutricionales"><span class="header-section-number">1.1</span> Ficheros <code>valores_nutricionales</code></h3>
+<p>El fichero contiene información sobre un alimento con la siguiente estructura:</p>
+<p><strong>Estructura del fichero</strong></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Ejemplo</strong></pre>
+</div>
+<div class="sourceCode" id="cb3" data-filename="Ejemplo"><pre class="sourceCode numberSource jsx number-lines code-with-copy"><code class="sourceCode javascriptreact"><span id="cb3-1"><a href="#cb3-1"></a>{nombre_fabricante}<span class="op">:</span>{nombre_distribuidor}<span class="op">:</span>{nombre_producto}</span>
+<span id="cb3-2"><a href="#cb3-2"></a>{calorias} {proteinas} {carbohidratos} {grasas}</span>
+<span id="cb3-3"><a href="#cb3-3"></a>{azucares} {sal} {fibra}</span>
+<span id="cb3-4"><a href="#cb3-4"></a>{alergenos[<span class="dv">0</span>]}</span>
+<span id="cb3-5"><a href="#cb3-5"></a>{alergenos[<span class="dv">1</span>]}</span>
+<span id="cb3-6"><a href="#cb3-6"></a>{alergenos[<span class="dv">2</span>]}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>nukacola.txt</strong></pre>
+</div>
+<div class="sourceCode" id="cb4" data-filename="nukacola.txt"><pre class="sourceCode numberSource plaintext number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href="#cb4-1"></a>Nuka-Cola Corporation:Vault-Tec:Nuka-Cola Quantum</span>
+<span id="cb4-2"><a href="#cb4-2"></a>150 0 39 0</span>
+<span id="cb4-3"><a href="#cb4-3"></a>39 0 0</span>
+<span id="cb4-4"><a href="#cb4-4"></a>Radiación</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <ul>
-<li><code>nombre_completo</code>: nombre completo del alumno. (texto)</li>
-<li><code>nip</code>: número de identificación del alumno. (entero)</li>
-<li><code>clase</code>: clase del alumno. (entero)</li>
-<li><code>curso</code>: curso del alumno. (entero)</li>
+<li>Nombre completo puede contener espacios.</li>
+<li>Todos los atributos numericos son reales.</li>
+<li>Los alergenos son opcionales.</li>
+</ul>
+<section id="estructura-de-datos" class="level4" data-number="1.1.1">
+<h4 data-number="1.1.1" class="anchored" data-anchor-id="estructura-de-datos"><span class="header-section-number">1.1.1</span> Estructura de datos</h4>
+<ul>
+<li><strong>Define la estructura (o clase)</strong> que represente la información contenida en el fichero.
+<ul>
+<li>nombre, fabricante, distribuidor, producto, calorias, proteinas, carbohidratos, grasas, azucares, sal, fibra.</li>
+</ul></li>
 </ul>
 <details>
 <summary>
-Solución
+Estructura de datos
 </summary>
 <div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> dataclasses</span>
 <span id="cb5-2"><a href="#cb5-2"></a></span>
 <span id="cb5-3"><a href="#cb5-3"></a><span class="at">@dataclasses.dataclass</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="kw">class</span> Alumno:</span>
-<span id="cb5-5"><a href="#cb5-5"></a>    nombre_completo: <span class="bu">str</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a>    nip: <span class="bu">int</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a>    clase: <span class="bu">int</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a>    curso: <span class="bu">int</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</section>
-<section id="fichero-alumnos.txt" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="fichero-alumnos.txt"><span class="header-section-number">3.2</span> Fichero <code>alumnos.txt</code></h3>
-<p>Escribe una función <code>leer_alumnos</code> que lea el fichero <code>alumnos.txt</code> y devuelva una lista de objetos <code>Alumno</code>.</p>
-<p><strong>alumnos.txt</strong></p>
-<div class="line-block">Juan Pérez;111111;1;816<br>
-María López;111112;1;816<br>
-Pedro García;110001;2;827<br>
-Ana Fernández;110002;2;827</div>
-<p><strong>Ejemplo de salida</strong></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>alumnos <span class="op">=</span> leer_alumnos(<span class="st">"alumnos.txt"</span>)</span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="bu">print</span>(<span class="bu">len</span>(alumnos)) </span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="bu">print</span>(alumnos[<span class="dv">0</span>])</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="line-block">4<br>
-Alumno(nombre_completo=‘Juan Pérez’, nip=111111, curso=1, clase=816)</div>
-<details>
-<summary>
-Solución
-</summary>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">def</span> leer_alumnos(fichero):</span>
-<span id="cb7-2"><a href="#cb7-2"></a>    f <span class="op">=</span> <span class="bu">open</span>(fichero, <span class="st">"r"</span>)</span>
-<span id="cb7-3"><a href="#cb7-3"></a>    alumnos <span class="op">=</span> []</span>
-<span id="cb7-4"><a href="#cb7-4"></a>    linea <span class="op">=</span> f.readline()</span>
-<span id="cb7-5"><a href="#cb7-5"></a>    <span class="cf">while</span> linea <span class="op">!=</span> <span class="st">""</span>:</span>
-<span id="cb7-6"><a href="#cb7-6"></a>        alumno <span class="op">=</span> linea.split(<span class="st">";"</span>)</span>
-<span id="cb7-7"><a href="#cb7-7"></a>        nombre_completo <span class="op">=</span> alumno[<span class="dv">0</span>]</span>
-<span id="cb7-8"><a href="#cb7-8"></a>        nip <span class="op">=</span> <span class="bu">int</span>(alumno[<span class="dv">1</span>])</span>
-<span id="cb7-9"><a href="#cb7-9"></a>        curso <span class="op">=</span> <span class="bu">int</span>(alumno[<span class="dv">2</span>])</span>
-<span id="cb7-10"><a href="#cb7-10"></a>        clase <span class="op">=</span> <span class="bu">int</span>(alumno[<span class="dv">3</span>])</span>
-<span id="cb7-11"><a href="#cb7-11"></a>        alumnos.append(Alumno(nombre_completo, nip, curso, clase))</span>
-<span id="cb7-12"><a href="#cb7-12"></a>        linea <span class="op">=</span> f.readline()</span>
-<span id="cb7-13"><a href="#cb7-13"></a>    f.close()</span>
-<span id="cb7-14"><a href="#cb7-14"></a>    <span class="cf">return</span> alumnos</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</section>
-<section id="fichero-curso_x_clase_y.txt" class="level3" data-number="3.3">
-<h3 data-number="3.3" class="anchored" data-anchor-id="fichero-curso_x_clase_y.txt"><span class="header-section-number">3.3</span> Fichero <code>curso_x_clase_y.txt</code></h3>
-<p>Por cuestiones burocráticas (habituales), el formato de los ficheros de otro organismo de la Universidad es distinto al usado anteriormente.</p>
-<p>En ese formato, cada clase se guarda en un fichero de texto distinto. El nombre del fichero es <code>curso_x_clase_y.txt</code>, donde <code>x</code> es el número de curso y <code>y</code> es el número de clase. El contenido del fichero es el similar al del fichero <code>alumnos.txt</code>, pero sin los datos de clase y grupo en la fila (ya que están implícitos en el nombre del fichero).</p>
-<p>Escribe una función <code>leer_por_clases(curso, clase)</code> que lea el fichero <code>curso_x_clase_y.txt</code> y devuelva una lista de objetos <code>Alumno</code>.</p>
-<p><strong>curso_3_clase_836.txt</strong></p>
-<div class="line-block">Julio González;110101<br>
-Mery Lopez;110102</div>
-<p><strong>curso_3_clase_837.txt</strong></p>
-<div class="line-block">Hector Cortés;110103<br>
-Luis Gracia;110104</div>
-<p><strong>Ejemplo de salida</strong></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>alumnos <span class="op">=</span> leer_por_clases(<span class="dv">3</span>, <span class="dv">836</span>)</span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="bu">print</span>(<span class="bu">len</span>(alumnos))</span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="bu">print</span>(alumnos[<span class="dv">0</span>])</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="line-block">2<br>
-Alumno(nombre_completo=‘Julio González’, nip=110101, clase=3, curso=836)</div>
-<details>
-<summary>
-Solución
-</summary>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> leer_por_clases(curso, clase):</span>
-<span id="cb9-2"><a href="#cb9-2"></a>    f <span class="op">=</span> <span class="bu">open</span>(<span class="ss">f"curso_</span><span class="sc">{</span>curso<span class="sc">}</span><span class="ss">_clase_</span><span class="sc">{</span>clase<span class="sc">}</span><span class="ss">.txt"</span>, <span class="st">"r"</span>)</span>
-<span id="cb9-3"><a href="#cb9-3"></a>    alumnos <span class="op">=</span> []</span>
-<span id="cb9-4"><a href="#cb9-4"></a>    linea <span class="op">=</span> f.readline()</span>
-<span id="cb9-5"><a href="#cb9-5"></a>    <span class="cf">while</span> linea <span class="op">!=</span> <span class="st">""</span>:</span>
-<span id="cb9-6"><a href="#cb9-6"></a>        alumno <span class="op">=</span> linea.split(<span class="st">";"</span>)</span>
-<span id="cb9-7"><a href="#cb9-7"></a>        nombre_completo <span class="op">=</span> alumno[<span class="dv">0</span>]</span>
-<span id="cb9-8"><a href="#cb9-8"></a>        nip <span class="op">=</span> <span class="bu">int</span>(alumno[<span class="dv">1</span>])</span>
-<span id="cb9-9"><a href="#cb9-9"></a>        alumnos.append(Alumno(nombre_completo, nip, curso, clase))</span>
-<span id="cb9-10"><a href="#cb9-10"></a>        linea <span class="op">=</span> f.readline()</span>
-<span id="cb9-11"><a href="#cb9-11"></a>    f.close()</span>
-<span id="cb9-12"><a href="#cb9-12"></a>    <span class="cf">return</span> alumnos</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</section>
-<section id="juntar-fuentes" class="level3" data-number="3.4">
-<h3 data-number="3.4" class="anchored" data-anchor-id="juntar-fuentes"><span class="header-section-number">3.4</span> Juntar fuentes</h3>
-<p>Escribe un programa Python que use las funciones anteriores para leer los ficheros:</p>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="kw">class</span> Alimento:</span>
+<span id="cb5-5"><a href="#cb5-5"></a>    nombre_fabricante: <span class="bu">str</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a>    nombre_distribuidor: <span class="bu">str</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a>    nombre_producto: <span class="bu">str</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a>    calorias: <span class="bu">float</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a>    proteinas: <span class="bu">float</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a>    carbohidratos: <span class="bu">float</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a>    grasas: <span class="bu">float</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a>    azucares: <span class="bu">float</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a>    sal: <span class="bu">float</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a>    fibra: <span class="bu">float</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a>    alergenos: <span class="bu">list</span>[<span class="bu">str</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details></section>
+<section id="funciones" class="level4" data-number="1.1.2">
+<h4 data-number="1.1.2" class="anchored" data-anchor-id="funciones"><span class="header-section-number">1.1.2</span> Funciones</h4>
 <ul>
-<li><code>alumnos.txt</code></li>
-<li><code>curso_3_clase_816.txt</code></li>
-<li><code>curso_3_clase_827.txt</code></li>
+<li><strong>Escribe una función</strong> que lea el fichero y devuelva una entidad de esa estructura.</li>
 </ul>
-<p>Y guarde en una misma lista a todos los alumnos (en un ejercicio posterior utilizaríamos esta lista para algo concreto).</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>alumnos <span class="op">=</span> ???</span>
-<span id="cb10-2"><a href="#cb10-2"></a></span>
-<span id="cb10-3"><a href="#cb10-3"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(alumnos)):</span>
-<span id="cb10-4"><a href="#cb10-4"></a>    <span class="bu">print</span>(alumnos[i])</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="line-block">Alumno(nombre_completo=‘Juan Pérez’, nip=111111, clase=1, curso=816)<br>
-Alumno(nombre_completo=‘María López’, nip=111112, clase=1, curso=816)<br>
-Alumno(nombre_completo=‘Pedro García’, nip=110001, clase=2, curso=827)<br>
-Alumno(nombre_completo=‘Ana Fernández’, nip=110002, clase=2, curso=827)<br>
-Alumno(nombre_completo=‘Julio González’, nip=110101, clase=3, curso=836)<br>
-Alumno(nombre_completo=‘Mery Lopez’, nip=110102, clase=3, curso=836)<br>
-Alumno(nombre_completo=‘Hector Cortés’, nip=110103, clase=3, curso=837)<br>
-Alumno(nombre_completo=‘Luis Gracia’, nip=110104, clase=3, curso=837)</div>
 <details>
 <summary>
 Solución
 </summary>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>alumnos <span class="op">=</span> leer_alumnos(<span class="st">"alumnos.txt"</span>)</span>
-<span id="cb11-2"><a href="#cb11-2"></a>alumnos <span class="op">+=</span> leer_por_clases(<span class="dv">3</span>, <span class="dv">816</span>)</span>
-<span id="cb11-3"><a href="#cb11-3"></a>alumnos <span class="op">+=</span> leer_por_clases(<span class="dv">3</span>, <span class="dv">827</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> leer_fichero(fichero):</span>
+<span id="cb6-2"><a href="#cb6-2"></a>    f <span class="op">=</span> <span class="bu">open</span>(fichero, <span class="st">"r"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3"></a>    linea <span class="op">=</span> f.readline()</span>
+<span id="cb6-4"><a href="#cb6-4"></a>    datos <span class="op">=</span> linea.split(<span class="st">":"</span>)</span>
+<span id="cb6-5"><a href="#cb6-5"></a>    nombre_fabricante <span class="op">=</span> datos[<span class="dv">0</span>].strip()</span>
+<span id="cb6-6"><a href="#cb6-6"></a>    nombre_distribuidor <span class="op">=</span> datos[<span class="dv">1</span>].strip()</span>
+<span id="cb6-7"><a href="#cb6-7"></a>    nombre_producto <span class="op">=</span> datos[<span class="dv">2</span>].strip()</span>
+<span id="cb6-8"><a href="#cb6-8"></a></span>
+<span id="cb6-9"><a href="#cb6-9"></a>    linea <span class="op">=</span> f.readline()</span>
+<span id="cb6-10"><a href="#cb6-10"></a>    datos <span class="op">=</span> linea.split(<span class="st">" "</span>)</span>
+<span id="cb6-11"><a href="#cb6-11"></a>    calorias <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">0</span>])</span>
+<span id="cb6-12"><a href="#cb6-12"></a>    proteinas <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">1</span>])</span>
+<span id="cb6-13"><a href="#cb6-13"></a>    carbohidratos <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">2</span>])</span>
+<span id="cb6-14"><a href="#cb6-14"></a>    grasas <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">3</span>])</span>
+<span id="cb6-15"><a href="#cb6-15"></a></span>
+<span id="cb6-16"><a href="#cb6-16"></a>    linea <span class="op">=</span> f.readline()</span>
+<span id="cb6-17"><a href="#cb6-17"></a>    datos <span class="op">=</span> linea.split(<span class="st">" "</span>)</span>
+<span id="cb6-18"><a href="#cb6-18"></a>    azucares <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">0</span>])</span>
+<span id="cb6-19"><a href="#cb6-19"></a>    sal <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">1</span>])</span>
+<span id="cb6-20"><a href="#cb6-20"></a>    fibra <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">2</span>])</span>
+<span id="cb6-21"><a href="#cb6-21"></a></span>
+<span id="cb6-22"><a href="#cb6-22"></a>    alergenos <span class="op">=</span> []</span>
+<span id="cb6-23"><a href="#cb6-23"></a>    linea <span class="op">=</span> f.readline()</span>
+<span id="cb6-24"><a href="#cb6-24"></a>    <span class="cf">while</span> linea <span class="op">!=</span> <span class="st">""</span>:</span>
+<span id="cb6-25"><a href="#cb6-25"></a>        alergenos.append(linea.strip())</span>
+<span id="cb6-26"><a href="#cb6-26"></a>        linea <span class="op">=</span> f.readline()</span>
+<span id="cb6-27"><a href="#cb6-27"></a></span>
+<span id="cb6-28"><a href="#cb6-28"></a>    f.close()</span>
+<span id="cb6-29"><a href="#cb6-29"></a></span>
+<span id="cb6-30"><a href="#cb6-30"></a>    <span class="cf">return</span> Alimento(nombre_fabricante, nombre_distribuidor, nombre_producto, calorias, proteinas, carbohidratos, grasas, azucares, sal, fibra, alergenos)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</section>
+</section>
+<section id="ficheros-ajedrez" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="ficheros-ajedrez"><span class="header-section-number">1.2</span> Ficheros <code>ajedrez</code></h3>
+<p>El fichero contiene información sobre un coche con la siguiente estructura:</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>La estrutura del fichero es una matriz de letras de 8x8 conde:</p>
+<ul>
+<li>Cada letra representa una pieza de ajedrez.
+<ul>
+<li>Mayúscula = pieza blanca, minúscula = pieza negra.</li>
+<li><code>p</code>, <code>t</code>, <code>c</code>, <code>a</code>, <code>d</code>, <code>r</code> = peón, torre, caballo, alfil, dama, rey.</li>
+</ul></li>
+<li>Los espacios están representados por puntos (<code>.</code>).</li>
+<li>Las blancas están arriba, la negras están abajo.</li>
+<li>La primera fila representa la fila 1. La primera columna representa la columna a.
+<ul>
+<li>Esto significa que el tablero está <em>en espejo</em> horizontalmente.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>tablero.txt</strong></pre>
+</div>
+<div class="sourceCode" id="cb7" data-filename="tablero.txt"><pre class="sourceCode numberSource plaintext number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href="#cb7-1"></a>t c a d r a c t</span>
+<span id="cb7-2"><a href="#cb7-2"></a>p p p p p p p p</span>
+<span id="cb7-3"><a href="#cb7-3"></a>. . . . . . . .</span>
+<span id="cb7-4"><a href="#cb7-4"></a>. . . . . . . .</span>
+<span id="cb7-5"><a href="#cb7-5"></a>. . . . . . . .</span>
+<span id="cb7-6"><a href="#cb7-6"></a>. . . . . . . .</span>
+<span id="cb7-7"><a href="#cb7-7"></a>P P P P P P P P</span>
+<span id="cb7-8"><a href="#cb7-8"></a>T C A D R A C T</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<section id="estructura-de-datos-1" class="level4" data-number="1.2.1">
+<h4 data-number="1.2.1" class="anchored" data-anchor-id="estructura-de-datos-1"><span class="header-section-number">1.2.1</span> Estructura de datos</h4>
+<ul>
+<li><strong>Define la estructura (o clase)</strong> que represente la información contenida en el fichero.</li>
+</ul>
+<details>
+<summary>
+Estructura de datos
+</summary>
+<ul>
+<li>La estructura de datos adecuada para este ejercicio es una matriz de 8x8 caracteres.</li>
+</ul>
+</details>
+</section>
+<section id="funciones-1" class="level4" data-number="1.2.2">
+<h4 data-number="1.2.2" class="anchored" data-anchor-id="funciones-1"><span class="header-section-number">1.2.2</span> Funciones</h4>
+<ul>
+<li><strong>Escribe una función</strong> que lea el fichero y devuelva una entidad de esa estructura.</li>
+</ul>
+<details>
+<summary>
+Solución
+</summary>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="kw">def</span> leer_fichero(fichero):</span>
+<span id="cb8-3"><a href="#cb8-3"></a>    f <span class="op">=</span> <span class="bu">open</span>(fichero, <span class="st">"r"</span>)</span>
+<span id="cb8-4"><a href="#cb8-4"></a>    tablero <span class="op">=</span> []</span>
+<span id="cb8-5"><a href="#cb8-5"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">8</span>):</span>
+<span id="cb8-6"><a href="#cb8-6"></a>        fila <span class="op">=</span> f.readline().strip().split(<span class="st">" "</span>)</span>
+<span id="cb8-7"><a href="#cb8-7"></a>        tablero.append(fila)</span>
+<span id="cb8-8"><a href="#cb8-8"></a>    f.close()</span>
+<span id="cb8-9"><a href="#cb8-9"></a>    <span class="cf">return</span> tablero</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</section>
+</section>
+<section id="ficheros-coche.txt" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="ficheros-coche.txt"><span class="header-section-number">1.3</span> Ficheros <code>coche.txt</code></h3>
+<p>El fichero contiene información sobre un coche con la siguiente estructura:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Ejemplo Metrico</strong></pre>
+</div>
+<div class="sourceCode" id="cb9" data-filename="Ejemplo Metrico"><pre class="sourceCode numberSource jsx number-lines code-with-copy"><code class="sourceCode javascriptreact"><span id="cb9-1"><a href="#cb9-1"></a>{modelo}<span class="op">,</span>{fabricante}</span>
+<span id="cb9-2"><a href="#cb9-2"></a>{potencia}cv</span>
+<span id="cb9-3"><a href="#cb9-3"></a>{peso}kg</span>
+<span id="cb9-4"><a href="#cb9-4"></a>{consumo}L<span class="op">/</span><span class="dv">100</span><span class="er">km</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>{velocidad_maxima}km<span class="op">/</span>h</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>papamovil.txt</strong></pre>
+</div>
+<div class="sourceCode" id="cb10" data-filename="papamovil.txt"><pre class="sourceCode numberSource plaintext number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a href="#cb10-1"></a>Papamovil,Mercedes-Benz</span>
+<span id="cb10-2"><a href="#cb10-2"></a>300cv</span>
+<span id="cb10-3"><a href="#cb10-3"></a>2000kg</span>
+<span id="cb10-4"><a href="#cb10-4"></a>170km/h</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p>o</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Ejemplo Imperial</strong></pre>
+</div>
+<div class="sourceCode" id="cb11" data-filename="Ejemplo Imperial"><pre class="sourceCode numberSource jsx number-lines code-with-copy"><code class="sourceCode javascriptreact"><span id="cb11-1"><a href="#cb11-1"></a>{modelo}<span class="op">,</span>{fabricante}</span>
+<span id="cb11-2"><a href="#cb11-2"></a>{potencia}cv</span>
+<span id="cb11-3"><a href="#cb11-3"></a>{peso}kg</span>
+<span id="cb11-4"><a href="#cb11-4"></a>{consumo}mpg</span>
+<span id="cb11-5"><a href="#cb11-5"></a>{velocidad_maxima}mph</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>tumbler.txt</strong></pre>
+</div>
+<div class="sourceCode" id="cb12" data-filename="tumbler.txt"><pre class="sourceCode numberSource plaintext number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a href="#cb12-1"></a>Tumbler,Wayne Enterprises</span>
+<span id="cb12-2"><a href="#cb12-2"></a>900hp</span>
+<span id="cb12-3"><a href="#cb12-3"></a>100lbs</span>
+<span id="cb12-4"><a href="#cb12-4"></a>120mph</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<ul>
+<li>Nombre completo puede contener espacios.</li>
+<li>Todos los atributos numericos son reales.</li>
+<li>Las unidades de velocidad y distancia pueden estar en métrico o imperial.
+<ul>
+<li>Debes guardar los valores en el sistema métrico.</li>
+<li>Para ello, puedes usar las siguientes conversiones:
+<ul>
+<li>1 cv = 0.7457 hp</li>
+<li>1 kg = 2.2046 lbs</li>
+<li>1 mph = 1.609 km/h</li>
+</ul></li>
+</ul></li>
+</ul>
+<section id="estructura-de-datos-2" class="level4" data-number="1.3.1">
+<h4 data-number="1.3.1" class="anchored" data-anchor-id="estructura-de-datos-2"><span class="header-section-number">1.3.1</span> Estructura de datos</h4>
+<ul>
+<li><strong>Define la estructura (o clase)</strong> que represente la información contenida en el fichero.
+<ul>
+<li>nombre, fabricante, potencia, peso, velocidad máxima.</li>
+</ul></li>
+</ul>
+<details>
+<summary>
+Estructura de datos
+</summary>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="im">import</span> dataclasses</span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="at">@dataclasses.dataclass</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="kw">class</span> Coche:</span>
+<span id="cb13-5"><a href="#cb13-5"></a>    modelo: <span class="bu">str</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a>    fabricante: <span class="bu">str</span></span>
+<span id="cb13-7"><a href="#cb13-7"></a>    potencia: <span class="bu">float</span></span>
+<span id="cb13-8"><a href="#cb13-8"></a>    peso: <span class="bu">float</span></span>
+<span id="cb13-9"><a href="#cb13-9"></a>    velocidad_maxima: <span class="bu">float</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</section>
+<section id="funciones-2" class="level4" data-number="1.3.2">
+<h4 data-number="1.3.2" class="anchored" data-anchor-id="funciones-2"><span class="header-section-number">1.3.2</span> Funciones</h4>
+<ul>
+<li><strong>Escribe una función</strong> que lea el fichero y devuelva una entidad de esa estructura.</li>
+</ul>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Busca la forma de averiguar cual de los dos sistemas de unidades se está utilizando. Una vez lo sepas, puedes usar un <code>if</code> para controlar el resto del flujo del programa.</p>
+</div>
+</div>
+</div>
+<p><strong>Ejemplo de ejecución</strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="bu">print</span>(leer_fichero(<span class="st">"papamovil.txt"</span>))</span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="bu">print</span>(leer_fichero(<span class="st">"tumbler.txt"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">Coche(modelo=‘Papamovil’, fabricante=‘Mercedes-Benz’, potencia=300.0, peso=2000.0, velocidad_maxima=170.0)<br>
+Coche(modelo=‘Tumbler’, fabricante=‘Wayne Enterprises’, potencia=671.13, peso=3968.28, velocidad_maxima=193.07999999999998)</div>
+<details>
+<summary>
+Pista
+</summary>
+<ul>
+<li>En la segunda línea del fichero, el valor de potencia puede ser seguido por <code>cv</code> o <code>hp</code>.</li>
+<li>Si hacemos split de la cadena por <code>c</code>, la lista resultante puede tener:
+<ul>
+<li><strong>Dos elementos</strong>: entonces es <code>cv</code>.</li>
+<li><strong>Un elemento</strong>: entonces es <code>hp</code>.</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="co">"300cv"</span>.split(<span class="st">"c"</span>)  <span class="co"># ["300", "v"]</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="co">"900hp"</span>.split(<span class="st">"c"</span>)  <span class="co"># ["900hp"]</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Este “truco” busca exprimir vuestro conocimiento de cadenas y listas así como vuestro pensamiento lateral. <strong>No es una técnica que vaya necesitarse en el examen</strong>.</p>
 </details>
 <details>
 <summary>
-Solución alternativa
+Solución
 </summary>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>alumnos <span class="op">=</span> leer_alumnos(<span class="st">"alumnos.txt"</span>) <span class="op">+</span> leer_por_clases(<span class="dv">3</span>, <span class="dv">816</span>) <span class="op">+</span> leer_por_clases(<span class="dv">3</span>, <span class="dv">827</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a></span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="kw">def</span> leer_fichero(fichero):</span>
+<span id="cb16-3"><a href="#cb16-3"></a>    f <span class="op">=</span> <span class="bu">open</span>(fichero, <span class="st">"r"</span>)</span>
+<span id="cb16-4"><a href="#cb16-4"></a>    linea <span class="op">=</span> f.readline()</span>
+<span id="cb16-5"><a href="#cb16-5"></a>    datos <span class="op">=</span> linea.split(<span class="st">","</span>)</span>
+<span id="cb16-6"><a href="#cb16-6"></a>    modelo <span class="op">=</span> datos[<span class="dv">0</span>].strip()</span>
+<span id="cb16-7"><a href="#cb16-7"></a>    fabricante <span class="op">=</span> datos[<span class="dv">1</span>].strip()</span>
+<span id="cb16-8"><a href="#cb16-8"></a></span>
+<span id="cb16-9"><a href="#cb16-9"></a>    linea <span class="op">=</span> f.readline()</span>
+<span id="cb16-10"><a href="#cb16-10"></a>    datos <span class="op">=</span> linea.split(<span class="st">"c"</span>)</span>
+<span id="cb16-11"><a href="#cb16-11"></a>    <span class="cf">if</span> <span class="bu">len</span>(datos) <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb16-12"><a href="#cb16-12"></a>        <span class="co"># Sistema métrico</span></span>
+<span id="cb16-13"><a href="#cb16-13"></a>        potencia <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">0</span>])</span>
+<span id="cb16-14"><a href="#cb16-14"></a>        peso <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"kg"</span>)[<span class="dv">0</span>])</span>
+<span id="cb16-15"><a href="#cb16-15"></a>        velocidad_maxima <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"km/h"</span>)[<span class="dv">0</span>])</span>
+<span id="cb16-16"><a href="#cb16-16"></a>    <span class="cf">else</span>:</span>
+<span id="cb16-17"><a href="#cb16-17"></a>        <span class="co"># Sistema imperial</span></span>
+<span id="cb16-18"><a href="#cb16-18"></a>        potencia <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">0</span>].split(<span class="st">"hp"</span>)[<span class="dv">0</span>]) <span class="op">*</span> <span class="fl">0.7457</span></span>
+<span id="cb16-19"><a href="#cb16-19"></a>        peso <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"lbs"</span>)[<span class="dv">0</span>]) <span class="op">*</span> <span class="fl">2.2046</span></span>
+<span id="cb16-20"><a href="#cb16-20"></a>        velocidad_maxima <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"mph"</span>)[<span class="dv">0</span>]) <span class="op">*</span> <span class="fl">1.609</span></span>
+<span id="cb16-21"><a href="#cb16-21"></a>    f.close()</span>
+<span id="cb16-22"><a href="#cb16-22"></a></span>
+<span id="cb16-23"><a href="#cb16-23"></a>    <span class="cf">return</span> Coche(modelo, fabricante, potencia, peso, velocidad_maxima)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 
+</section>
 </section>
 </section>
 
