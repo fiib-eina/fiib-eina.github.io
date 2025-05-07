@@ -1,0 +1,362 @@
+---
+title: Problemas 12
+subtitle: Ficheros Estructurados
+format: html
+---
+
+## Ficheros con estructura ad-hoc
+
+A continuación se presentan varios ficheros con estructura ad-hoc diferentes.
+Tu trabajo será definir la estructura de datos que represente la información contenida en el fichero y escribir una función que lea el fichero y devuelva una entidad de esa estructura.
+La estructura será descrita utilizando una sintaxis similar a la de los _f-strings_ junto a un ejemplo.
+
+**Ejemplo de fichero**
+
+::: {.columns}
+::: {.column width="60%"}
+
+```{.jsx filename="Ejemplo"}
+{nombre_completo}
+{raza} {clase}
+{atk} {def} {dex} {int}
+{ataque[0].nombre} {ataque[0].puntos}
+{ataque[1].nombre} {ataque[1].puntos}
+```
+
+:::
+::: {.column width="40%"}
+
+```{.plaintext filename="sam.txt"}
+Samsagaz Gamgee
+Hobbit Escudero
+7 15 10 8
+Sartenazo 5
+Daga 15
+```
+
+:::
+:::
+
+- Nombre completo puede contener espacios.
+- Todos los atributos numericos son enteros.
+- La lista de ataques tiene un tamaño indeterminado.
+
+### Ficheros `valores_nutricionales`
+
+El fichero contiene información sobre un alimento con la siguiente estructura:
+
+**Estructura del fichero**
+
+```{.jsx filename="Ejemplo"}
+{nombre_fabricante}:{nombre_distribuidor}:{nombre_producto}
+{calorias} {proteinas} {carbohidratos} {grasas}
+{azucares} {sal} {fibra}
+{alergenos[0]}
+{alergenos[1]}
+{alergenos[2]}
+```
+
+```{.plaintext filename="nukacola.txt"}
+Nuka-Cola Corporation:Vault-Tec:Nuka-Cola Quantum
+150 0 39 0
+39 0 0
+Radiación
+```
+
+- Nombre completo puede contener espacios.
+- Todos los atributos numericos son reales.
+- Los alergenos son opcionales.
+
+#### Estructura de datos
+
+- **Define la estructura (o clase)** que represente la información contenida en el fichero.
+    - nombre, fabricante, distribuidor, producto, calorias, proteinas, carbohidratos, grasas, azucares, sal, fibra.
+
+<details>
+<summary>Estructura de datos</summary>
+
+```python
+import dataclasses
+
+@dataclasses.dataclass
+class Alimento:
+    nombre_fabricante: str
+    nombre_distribuidor: str
+    nombre_producto: str
+    calorias: float
+    proteinas: float
+    carbohidratos: float
+    grasas: float
+    azucares: float
+    sal: float
+    fibra: float
+    alergenos: list[str]
+```
+
+#### Funciones
+
+- **Escribe una función** que lea el fichero y devuelva una entidad de esa estructura.
+
+<details>
+<summary>Solución</summary>
+
+```python
+def leer_fichero(fichero):
+    f = open(fichero, "r")
+    linea = f.readline()
+    datos = linea.split(":")
+    nombre_fabricante = datos[0].strip()
+    nombre_distribuidor = datos[1].strip()
+    nombre_producto = datos[2].strip()
+
+    linea = f.readline()
+    datos = linea.split(" ")
+    calorias = float(datos[0])
+    proteinas = float(datos[1])
+    carbohidratos = float(datos[2])
+    grasas = float(datos[3])
+
+    linea = f.readline()
+    datos = linea.split(" ")
+    azucares = float(datos[0])
+    sal = float(datos[1])
+    fibra = float(datos[2])
+
+    alergenos = []
+    linea = f.readline()
+    while linea != "":
+        alergenos.append(linea.strip())
+        linea = f.readline()
+
+    f.close()
+
+    return Alimento(nombre_fabricante, nombre_distribuidor, nombre_producto, calorias, proteinas, carbohidratos, grasas, azucares, sal, fibra, alergenos)
+```
+
+</details>
+
+### Ficheros `ajedrez`
+
+El fichero contiene información sobre un coche con la siguiente estructura:
+
+::: {.columns}
+::: {.column width="60%"}
+
+La estrutura del fichero es una matriz de letras de 8x8 conde:
+
+- Cada letra representa una pieza de ajedrez.
+    - Mayúscula = pieza blanca, minúscula = pieza negra.
+    - `p`, `t`, `c`, `a`, `d`, `r` = peón, torre, caballo, alfil, dama, rey.
+- Los espacios están representados por puntos (`.`).
+- Las blancas están arriba, la negras están abajo.
+- La primera fila representa la fila 1. La primera columna representa la columna a.
+    - Esto significa que el tablero está _en espejo_ horizontalmente.
+
+:::
+::: {.column width="40%"}
+
+```{.plaintext filename="tablero.txt"}
+t c a d r a c t
+p p p p p p p p
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+P P P P P P P P
+T C A D R A C T
+```
+
+:::
+:::
+
+#### Estructura de datos
+
+- **Define la estructura (o clase)** que represente la información contenida en el fichero.
+
+<details>
+<summary>Estructura de datos</summary>
+
+- La estructura de datos adecuada para este ejercicio es una matriz de 8x8 caracteres.
+
+</details>
+
+#### Funciones
+
+- **Escribe una función** que lea el fichero y devuelva una entidad de esa estructura.
+
+<details>
+<summary>Solución</summary>
+
+```python
+
+def leer_fichero(fichero):
+    f = open(fichero, "r")
+    tablero = []
+    for i in range(8):
+        fila = f.readline().strip().split(" ")
+        tablero.append(fila)
+    f.close()
+    return tablero
+```
+</details>
+        
+
+
+### Ficheros `coche.txt`
+
+El fichero contiene información sobre un coche con la siguiente estructura:
+
+::: {.columns}
+::: {.column width="50%"}
+
+```{.jsx filename="Ejemplo Metrico"}
+{modelo},{fabricante}
+{potencia}cv
+{peso}kg
+{consumo}L/100km
+{velocidad_maxima}km/h
+```
+
+:::
+::: {.column width="50%"}
+
+```{.plaintext filename="papamovil.txt"}
+Papamovil,Mercedes-Benz
+300cv
+2000kg
+170km/h
+```
+
+:::
+:::
+
+o
+
+::: {.columns}
+::: {.column width="50%"}
+
+```{.jsx filename="Ejemplo Imperial"}
+{modelo},{fabricante}
+{potencia}cv
+{peso}kg
+{consumo}mpg
+{velocidad_maxima}mph
+```
+
+
+:::
+::: {.column width="50%"}
+
+```{.plaintext filename="tumbler.txt"}
+Tumbler,Wayne Enterprises
+900hp
+100lbs
+120mph
+```
+
+:::
+:::
+
+
+- Nombre completo puede contener espacios.
+- Todos los atributos numericos son reales.
+- Las unidades de velocidad y distancia pueden estar en métrico o imperial.
+    - Debes guardar los valores en el sistema métrico.
+    - Para ello, puedes usar las siguientes conversiones:
+        - 1 cv = 0.7457 hp
+        - 1 kg = 2.2046 lbs
+        - 1 mph = 1.609 km/h
+
+#### Estructura de datos
+
+- **Define la estructura (o clase)** que represente la información contenida en el fichero.
+    - nombre, fabricante, potencia, peso, velocidad máxima.
+
+<details>
+<summary>Estructura de datos</summary>
+
+```python
+import dataclasses
+
+@dataclasses.dataclass
+class Coche:
+    modelo: str
+    fabricante: str
+    potencia: float
+    peso: float
+    velocidad_maxima: float
+```
+
+</details>
+
+#### Funciones
+
+- **Escribe una función** que lea el fichero y devuelva una entidad de esa estructura.
+
+::: {.callout-tip}
+Busca la forma de averiguar cual de los dos sistemas de unidades se está utilizando.
+Una vez lo sepas, puedes usar un `if` para controlar el resto del flujo del programa.
+:::
+
+**Ejemplo de ejecución**
+
+```python
+print(leer_fichero("papamovil.txt"))
+print(leer_fichero("tumbler.txt"))
+```
+
+| Coche(modelo='Papamovil', fabricante='Mercedes-Benz', potencia=300.0, peso=2000.0, velocidad_maxima=170.0)
+| Coche(modelo='Tumbler', fabricante='Wayne Enterprises', potencia=671.13, peso=3968.28, velocidad_maxima=193.07999999999998)
+
+<details>
+<summary>Pista</summary>
+
+- En la segunda línea del fichero, el valor de potencia puede ser seguido por `cv` o `hp`.
+- Si hacemos split de la cadena por `c`, la lista resultante puede tener:
+    - **Dos elementos**: entonces es `cv`.
+    - **Un elemento**: entonces es `hp`.
+
+```python
+"300cv".split("c")  # ["300", "v"]
+"900hp".split("c")  # ["900hp"]
+```
+
+Este "truco" busca exprimir vuestro conocimiento de cadenas y listas así como vuestro pensamiento lateral.
+**No es una técnica que vaya necesitarse en el examen**.
+
+</details>
+
+<details>
+<summary>Solución</summary>
+
+
+```python
+
+def leer_fichero(fichero):
+    f = open(fichero, "r")
+    linea = f.readline()
+    datos = linea.split(",")
+    modelo = datos[0].strip()
+    fabricante = datos[1].strip()
+
+    linea = f.readline()
+    datos = linea.split("c")
+    if len(datos) == 2:
+        # Sistema métrico
+        potencia = float(datos[0])
+        peso = float(f.readline().split("kg")[0])
+        velocidad_maxima = float(f.readline().split("km/h")[0])
+    else:
+        # Sistema imperial
+        potencia = float(datos[0].split("hp")[0]) * 0.7457
+        peso = float(f.readline().split("lbs")[0]) * 2.2046
+        velocidad_maxima = float(f.readline().split("mph")[0]) * 1.609
+    f.close()
+
+    return Coche(modelo, fabricante, potencia, peso, velocidad_maxima)
+
+```
+
+</details>
+
+

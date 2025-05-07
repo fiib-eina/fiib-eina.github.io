@@ -1,8 +1,0 @@
----
-title: Problemas 12
-subtitle: Composición iterativa
-format: html
-draft: true
----
-
-## 

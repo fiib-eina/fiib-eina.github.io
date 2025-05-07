@@ -5,19 +5,113 @@ format: revealjs
 draft: true
 ---
 
-### Ejercicio: Carrito de la Compra
+## Ejercicio: Sudoku
 
-Desarrolla un programa Python que gestione un carro de la compra.
+Tienes un fichero `sudoku.txt` que contiene un Sudoku 9×9, donde los ceros representan casillas vacías.
+Cada línea del fichero representa una fila, con los 9 números separados por espacios.
 
-- El programa mostrará un menú con las siguientes opciones:
-    - **Añadir producto**: solicitará al usuario el nombre y el precio del producto a añadir al carro.
-    - **Eliminar producto**: solicitará al usuario el nombre del producto a eliminar del carro.
-    - **Mostrar carro**: mostrará el contenido del carro.
-    - **Salir**: finalizará el programa.
+
+**sudoku.txt**
+
+| 5 3 0 0 7 0 0 0 0
+| 6 0 0 1 9 5 0 0 0
+| 0 9 8 0 0 0 0 6 0
+| 8 0 0 0 6 0 0 0 3
+| 4 0 0 8 0 3 0 0 1
+| 7 0 0 0 2 0 0 0 6
+| 0 6 0 0 0 0 2 8 0
+| 0 0 0 4 1 9 0 0 5
+| 0 0 0 0 8 0 0 7 9
+
+#### `leer_tablero(nombre_fichero)`
+
+Desarrolla una función llamana `leer_tablero(nombre_fichero)` que reciba el nombre de un fichero y devuelva una lista de listas con los números del Sudoku.
 
 ---
 
-### Ejercicio: Ruta senderismo
+
+```python
+def leer_tablero(nombre_fichero):
+    tablero = []
+    with open(nombre_fichero, "r") as f:
+        lineas = f.readlines()
+    for i in range(len(lineas)):
+        numeros = lineas[i].strip().split()
+        fila = []
+        for j in range(len(numeros)):
+            fila.append(int(numeros[j]))
+        tablero.append(fila)
+    return tablero
+```
+
+
+---
+
+**Solución final**
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class Placement:
+    fila: int
+    columna: int
+    valor: int
+
+def leer_tablero(nombre_fichero: str) -> list[list[int]]:
+    tablero = []
+    with open(nombre_fichero, "r") as f:
+        lineas = f.readlines()
+    for i in range(len(lineas)):
+        numeros = lineas[i].strip().split()
+        fila = []
+        for j in range(len(numeros)):
+            fila.append(int(numeros[j]))
+        tablero.append(fila)
+    return tablero
+
+def escribir_tablero(nombre_fichero: str, tablero: list[list[int]]) -> None:
+    with open(nombre_fichero, "w") as f:
+        for i in range(9):
+            for j in range(9):
+                f.write(str(tablero[i][j]))
+                if j < 8:
+                    f.write(" ")
+            f.write("\n")
+
+def es_valido(tablero: list[list[int]], p: Placement) -> bool:
+    for j in range(9):
+        if tablero[p.fila][j] == p.valor:
+            return False
+    for i in range(9):
+        if tablero[i][p.columna] == p.valor:
+            return False
+    return True
+
+def colocar(tablero: list[list[int]], p: Placement) -> None:
+    tablero[p.fila][p.columna] = p.valor
+
+def pedir_placement() -> Placement:
+    fila = int(input("Introduce la fila (0-8): "))
+    columna = int(input("Introduce la columna (0-8): "))
+    valor = int(input("Introduce el valor (1-9): "))
+    return Placement(fila, columna, valor)
+
+tablero = leer_tablero("sudoku.txt")
+p = pedir_placement()
+if es_valido(tablero, p):
+    colocar(tablero, p)
+    escribir_tablero("sudoku.txt", tablero)
+    print("Valor colocado correctamente.")
+else:
+    print("No se puede colocar ese valor aquí.")
+
+```
+
+
+---
+
+## Ejercicio: Ruta senderismo
 
 Escribe un programa Python que solicite al usuario una serie de coordenadas (`lat`, `lon`) que representan una ruta de senderismo. El programa debe calcular la distancia total recorrida por el senderista.
 
@@ -106,4 +200,14 @@ def main():
 
 ---
 
+## Ejercicio: Carrito de la Compra
 
+Desarrolla un programa Python que gestione un carro de la compra.
+
+- El programa mostrará un menú con las siguientes opciones:
+    - **Añadir producto**: solicitará al usuario el nombre y el precio del producto a añadir al carro.
+    - **Eliminar producto**: solicitará al usuario el nombre del producto a eliminar del carro.
+    - **Mostrar carro**: mostrará el contenido del carro.
+    - **Salir**: finalizará el programa.
+
+---

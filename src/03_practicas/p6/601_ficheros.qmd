@@ -21,7 +21,7 @@ Recuerda que para afrontar un problema, debes:
 
 ## Media Velocidades
 
-Tenemos un fichero `velocidades.txt` con datos de la velocidad del viendo en un anemómetro de Zaragoza (**un número real por cada fila**).
+Tenemos un fichero `velocidades.txt` ([link de descarga](./tests/velocidades.txt)) con datos de la velocidad del viendo en un anemómetro de Zaragoza (**un número real por cada fila**).
 El anemómetro no es muy preciso, y genera lecturas con un gran margen de error.
 Para "suavizar" los resultados, queremos aplicar un **filtro de media móvil** de 3 valores.
 
@@ -78,7 +78,7 @@ Implementa el programa `filtrar_velocidades.py` que realice el proceso completo:
 - Tanto el fichero de entrada como de salida tendrán el mismo formato:
     - Un número real por línea.
 
-_velocidades.txt_
+_velocidades.txt_ ([link de descarga](./tests/velocidades.txt))
 
 | 1
 | 1
@@ -218,7 +218,7 @@ print(contar_letras("Hola Mundo"))
 
 Implementa el programa `cuenta_letras.py` que realice el proceso completo:
 
-_poker_face.txt_
+_poker_face.txt_ ([link de descarga](./tests/poker_face.txt))
 
 | I wanna hold 'em like they do in Texas, please
 | Fold 'em, let 'em hit me, raise it, baby, stay with me (I love it)
@@ -309,7 +309,7 @@ Implementa el programa `agregar_usuario.py` que realice lo siguiente:
 - Abrir el fichero `usuarios.txt` en modo **escritura**.
 - Guardar la lista de usuarios en el fichero `usuarios.txt`.
 
-_usuarios.txt_
+_usuarios.txt_ ([link de descarga](./tests/usuarios.txt))
 
 | maria:12345678
 | hector:secreto
