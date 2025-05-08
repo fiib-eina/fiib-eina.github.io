@@ -732,40 +732,43 @@ Estructura de datos
 <ul>
 <li><strong>Escribe una función</strong> que lea el fichero y devuelva una entidad de esa estructura.</li>
 </ul>
+<p><strong>Ejemplo de ejecución</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="bu">print</span>(cargar_valores_nutricionales(<span class="st">"nukacola.txt"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">Alumento(nombre_fabricante=‘Nuka-Cola Corporation’, nombre_distribuidor=‘Vault-Tec’, nombre_producto=‘Nuka-Cola Quantum’, calorias=150.0, proteinas=0.0, carbohidratos=39.0, grasas=0.0, azucares=39.0, sal=0.0, fibra=0.0, alergenos=[‘Radiación’])</div>
 <details>
 <summary>
 Solución
 </summary>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> leer_fichero(fichero):</span>
-<span id="cb6-2"><a href="#cb6-2"></a>    f <span class="op">=</span> <span class="bu">open</span>(fichero, <span class="st">"r"</span>)</span>
-<span id="cb6-3"><a href="#cb6-3"></a>    linea <span class="op">=</span> f.readline()</span>
-<span id="cb6-4"><a href="#cb6-4"></a>    datos <span class="op">=</span> linea.split(<span class="st">":"</span>)</span>
-<span id="cb6-5"><a href="#cb6-5"></a>    nombre_fabricante <span class="op">=</span> datos[<span class="dv">0</span>].strip()</span>
-<span id="cb6-6"><a href="#cb6-6"></a>    nombre_distribuidor <span class="op">=</span> datos[<span class="dv">1</span>].strip()</span>
-<span id="cb6-7"><a href="#cb6-7"></a>    nombre_producto <span class="op">=</span> datos[<span class="dv">2</span>].strip()</span>
-<span id="cb6-8"><a href="#cb6-8"></a></span>
-<span id="cb6-9"><a href="#cb6-9"></a>    linea <span class="op">=</span> f.readline()</span>
-<span id="cb6-10"><a href="#cb6-10"></a>    datos <span class="op">=</span> linea.split(<span class="st">" "</span>)</span>
-<span id="cb6-11"><a href="#cb6-11"></a>    calorias <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">0</span>])</span>
-<span id="cb6-12"><a href="#cb6-12"></a>    proteinas <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">1</span>])</span>
-<span id="cb6-13"><a href="#cb6-13"></a>    carbohidratos <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">2</span>])</span>
-<span id="cb6-14"><a href="#cb6-14"></a>    grasas <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">3</span>])</span>
-<span id="cb6-15"><a href="#cb6-15"></a></span>
-<span id="cb6-16"><a href="#cb6-16"></a>    linea <span class="op">=</span> f.readline()</span>
-<span id="cb6-17"><a href="#cb6-17"></a>    datos <span class="op">=</span> linea.split(<span class="st">" "</span>)</span>
-<span id="cb6-18"><a href="#cb6-18"></a>    azucares <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">0</span>])</span>
-<span id="cb6-19"><a href="#cb6-19"></a>    sal <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">1</span>])</span>
-<span id="cb6-20"><a href="#cb6-20"></a>    fibra <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">2</span>])</span>
-<span id="cb6-21"><a href="#cb6-21"></a></span>
-<span id="cb6-22"><a href="#cb6-22"></a>    alergenos <span class="op">=</span> []</span>
-<span id="cb6-23"><a href="#cb6-23"></a>    linea <span class="op">=</span> f.readline()</span>
-<span id="cb6-24"><a href="#cb6-24"></a>    <span class="cf">while</span> linea <span class="op">!=</span> <span class="st">""</span>:</span>
-<span id="cb6-25"><a href="#cb6-25"></a>        alergenos.append(linea.strip())</span>
-<span id="cb6-26"><a href="#cb6-26"></a>        linea <span class="op">=</span> f.readline()</span>
-<span id="cb6-27"><a href="#cb6-27"></a></span>
-<span id="cb6-28"><a href="#cb6-28"></a>    f.close()</span>
-<span id="cb6-29"><a href="#cb6-29"></a></span>
-<span id="cb6-30"><a href="#cb6-30"></a>    <span class="cf">return</span> Alimento(nombre_fabricante, nombre_distribuidor, nombre_producto, calorias, proteinas, carbohidratos, grasas, azucares, sal, fibra, alergenos)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">def</span> cargar_valores_nutricionales(fichero):</span>
+<span id="cb7-2"><a href="#cb7-2"></a>    f <span class="op">=</span> <span class="bu">open</span>(fichero, <span class="st">"r"</span>)</span>
+<span id="cb7-3"><a href="#cb7-3"></a>    linea <span class="op">=</span> f.readline()</span>
+<span id="cb7-4"><a href="#cb7-4"></a>    datos <span class="op">=</span> linea.split(<span class="st">":"</span>)</span>
+<span id="cb7-5"><a href="#cb7-5"></a>    nombre_fabricante <span class="op">=</span> datos[<span class="dv">0</span>].strip()</span>
+<span id="cb7-6"><a href="#cb7-6"></a>    nombre_distribuidor <span class="op">=</span> datos[<span class="dv">1</span>].strip()</span>
+<span id="cb7-7"><a href="#cb7-7"></a>    nombre_producto <span class="op">=</span> datos[<span class="dv">2</span>].strip()</span>
+<span id="cb7-8"><a href="#cb7-8"></a></span>
+<span id="cb7-9"><a href="#cb7-9"></a>    linea <span class="op">=</span> f.readline()</span>
+<span id="cb7-10"><a href="#cb7-10"></a>    datos <span class="op">=</span> linea.split(<span class="st">" "</span>)</span>
+<span id="cb7-11"><a href="#cb7-11"></a>    calorias <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">0</span>])</span>
+<span id="cb7-12"><a href="#cb7-12"></a>    proteinas <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">1</span>])</span>
+<span id="cb7-13"><a href="#cb7-13"></a>    carbohidratos <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">2</span>])</span>
+<span id="cb7-14"><a href="#cb7-14"></a>    grasas <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">3</span>])</span>
+<span id="cb7-15"><a href="#cb7-15"></a></span>
+<span id="cb7-16"><a href="#cb7-16"></a>    linea <span class="op">=</span> f.readline()</span>
+<span id="cb7-17"><a href="#cb7-17"></a>    datos <span class="op">=</span> linea.split(<span class="st">" "</span>)</span>
+<span id="cb7-18"><a href="#cb7-18"></a>    azucares <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">0</span>])</span>
+<span id="cb7-19"><a href="#cb7-19"></a>    sal <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">1</span>])</span>
+<span id="cb7-20"><a href="#cb7-20"></a>    fibra <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">2</span>])</span>
+<span id="cb7-21"><a href="#cb7-21"></a></span>
+<span id="cb7-22"><a href="#cb7-22"></a>    alergenos <span class="op">=</span> []</span>
+<span id="cb7-23"><a href="#cb7-23"></a>    linea <span class="op">=</span> f.readline()</span>
+<span id="cb7-24"><a href="#cb7-24"></a>    <span class="cf">while</span> linea <span class="op">!=</span> <span class="st">""</span>:</span>
+<span id="cb7-25"><a href="#cb7-25"></a>        alergenos.append(linea.strip())</span>
+<span id="cb7-26"><a href="#cb7-26"></a>        linea <span class="op">=</span> f.readline()</span>
+<span id="cb7-27"><a href="#cb7-27"></a></span>
+<span id="cb7-28"><a href="#cb7-28"></a>    f.close()</span>
+<span id="cb7-29"><a href="#cb7-29"></a></span>
+<span id="cb7-30"><a href="#cb7-30"></a>    <span class="cf">return</span> Alimento(nombre_fabricante, nombre_distribuidor, nombre_producto, calorias, proteinas, carbohidratos, grasas, azucares, sal, fibra, alergenos)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </section>
 </section>
@@ -793,14 +796,14 @@ Solución
 <div class="code-with-filename-file">
 <pre><strong>tablero.txt</strong></pre>
 </div>
-<div class="sourceCode" id="cb7" data-filename="tablero.txt"><pre class="sourceCode numberSource plaintext number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href="#cb7-1"></a>t c a d r a c t</span>
-<span id="cb7-2"><a href="#cb7-2"></a>p p p p p p p p</span>
-<span id="cb7-3"><a href="#cb7-3"></a>. . . . . . . .</span>
-<span id="cb7-4"><a href="#cb7-4"></a>. . . . . . . .</span>
-<span id="cb7-5"><a href="#cb7-5"></a>. . . . . . . .</span>
-<span id="cb7-6"><a href="#cb7-6"></a>. . . . . . . .</span>
-<span id="cb7-7"><a href="#cb7-7"></a>P P P P P P P P</span>
-<span id="cb7-8"><a href="#cb7-8"></a>T C A D R A C T</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8" data-filename="tablero.txt"><pre class="sourceCode numberSource plaintext number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a href="#cb8-1"></a>t c a d r a c t</span>
+<span id="cb8-2"><a href="#cb8-2"></a>p p p p p p p p</span>
+<span id="cb8-3"><a href="#cb8-3"></a>. . . . . . . .</span>
+<span id="cb8-4"><a href="#cb8-4"></a>. . . . . . . .</span>
+<span id="cb8-5"><a href="#cb8-5"></a>. . . . . . . .</span>
+<span id="cb8-6"><a href="#cb8-6"></a>. . . . . . . .</span>
+<span id="cb8-7"><a href="#cb8-7"></a>P P P P P P P P</span>
+<span id="cb8-8"><a href="#cb8-8"></a>T C A D R A C T</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -821,21 +824,23 @@ Estructura de datos
 <section id="funciones-1" class="level4" data-number="1.2.2">
 <h4 data-number="1.2.2" class="anchored" data-anchor-id="funciones-1"><span class="header-section-number">1.2.2</span> Funciones</h4>
 <ul>
-<li><strong>Escribe una función</strong> que lea el fichero y devuelva una entidad de esa estructura.</li>
+<li><strong>Escribe una función</strong> <code>cargar_tablero(nombre_fichero)</code> que lea el fichero y devuelva una entidad de esa estructura.</li>
 </ul>
+<p><strong>Ejemplo de ejecución</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="bu">print</span>(cargar_tablero(<span class="st">"tablero.txt"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">[[‘t’, ‘c’, ‘a’, ‘d’, ‘r’, ‘a’, ‘c’, ‘t’], [‘.’, ‘.’, ‘.’, ‘.’, ‘.’, ‘.’, ‘.’, ‘.’], [‘.’, ‘.’, ‘.’, ‘.’, ‘.’, ‘.’, ‘.’, ‘.’], [‘.’, ‘.’, ‘.’, ‘.’, ‘.’, ‘.’, ‘.’, ‘.’], [‘.’, ‘.’, ‘.’, ‘.’, ‘.’, ‘.’, ‘.’, ‘.’], [‘T’, ‘C’, ‘A’, ‘D’, ‘R’, ‘A’, ‘C’, ‘T’]]</div>
 <details>
 <summary>
 Solución
 </summary>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="kw">def</span> leer_fichero(fichero):</span>
-<span id="cb8-3"><a href="#cb8-3"></a>    f <span class="op">=</span> <span class="bu">open</span>(fichero, <span class="st">"r"</span>)</span>
-<span id="cb8-4"><a href="#cb8-4"></a>    tablero <span class="op">=</span> []</span>
-<span id="cb8-5"><a href="#cb8-5"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">8</span>):</span>
-<span id="cb8-6"><a href="#cb8-6"></a>        fila <span class="op">=</span> f.readline().strip().split(<span class="st">" "</span>)</span>
-<span id="cb8-7"><a href="#cb8-7"></a>        tablero.append(fila)</span>
-<span id="cb8-8"><a href="#cb8-8"></a>    f.close()</span>
-<span id="cb8-9"><a href="#cb8-9"></a>    <span class="cf">return</span> tablero</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">def</span> cargar_tablero(fichero):</span>
+<span id="cb10-2"><a href="#cb10-2"></a>    f <span class="op">=</span> <span class="bu">open</span>(fichero, <span class="st">"r"</span>)</span>
+<span id="cb10-3"><a href="#cb10-3"></a>    tablero <span class="op">=</span> []</span>
+<span id="cb10-4"><a href="#cb10-4"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">8</span>):</span>
+<span id="cb10-5"><a href="#cb10-5"></a>        fila <span class="op">=</span> f.readline().strip().split(<span class="st">" "</span>)</span>
+<span id="cb10-6"><a href="#cb10-6"></a>        tablero.append(fila)</span>
+<span id="cb10-7"><a href="#cb10-7"></a>    f.close()</span>
+<span id="cb10-8"><a href="#cb10-8"></a>    <span class="cf">return</span> tablero</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </section>
 </section>
@@ -848,21 +853,21 @@ Solución
 <div class="code-with-filename-file">
 <pre><strong>Ejemplo Metrico</strong></pre>
 </div>
-<div class="sourceCode" id="cb9" data-filename="Ejemplo Metrico"><pre class="sourceCode numberSource jsx number-lines code-with-copy"><code class="sourceCode javascriptreact"><span id="cb9-1"><a href="#cb9-1"></a>{modelo}<span class="op">,</span>{fabricante}</span>
-<span id="cb9-2"><a href="#cb9-2"></a>{potencia}cv</span>
-<span id="cb9-3"><a href="#cb9-3"></a>{peso}kg</span>
-<span id="cb9-4"><a href="#cb9-4"></a>{consumo}L<span class="op">/</span><span class="dv">100</span><span class="er">km</span></span>
-<span id="cb9-5"><a href="#cb9-5"></a>{velocidad_maxima}km<span class="op">/</span>h</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11" data-filename="Ejemplo Metrico"><pre class="sourceCode numberSource jsx number-lines code-with-copy"><code class="sourceCode javascriptreact"><span id="cb11-1"><a href="#cb11-1"></a>{modelo}<span class="op">,</span>{fabricante}</span>
+<span id="cb11-2"><a href="#cb11-2"></a>{potencia}cv</span>
+<span id="cb11-3"><a href="#cb11-3"></a>{peso}kg</span>
+<span id="cb11-4"><a href="#cb11-4"></a>{consumo}L<span class="op">/</span><span class="dv">100</span><span class="er">km</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a>{velocidad_maxima}km<span class="op">/</span>h</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>papamovil.txt</strong></pre>
 </div>
-<div class="sourceCode" id="cb10" data-filename="papamovil.txt"><pre class="sourceCode numberSource plaintext number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a href="#cb10-1"></a>Papamovil,Mercedes-Benz</span>
-<span id="cb10-2"><a href="#cb10-2"></a>300cv</span>
-<span id="cb10-3"><a href="#cb10-3"></a>2000kg</span>
-<span id="cb10-4"><a href="#cb10-4"></a>170km/h</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12" data-filename="papamovil.txt"><pre class="sourceCode numberSource plaintext number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a href="#cb12-1"></a>Papamovil,Mercedes-Benz</span>
+<span id="cb12-2"><a href="#cb12-2"></a>300cv</span>
+<span id="cb12-3"><a href="#cb12-3"></a>2000kg</span>
+<span id="cb12-4"><a href="#cb12-4"></a>170km/h</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -873,21 +878,21 @@ Solución
 <div class="code-with-filename-file">
 <pre><strong>Ejemplo Imperial</strong></pre>
 </div>
-<div class="sourceCode" id="cb11" data-filename="Ejemplo Imperial"><pre class="sourceCode numberSource jsx number-lines code-with-copy"><code class="sourceCode javascriptreact"><span id="cb11-1"><a href="#cb11-1"></a>{modelo}<span class="op">,</span>{fabricante}</span>
-<span id="cb11-2"><a href="#cb11-2"></a>{potencia}cv</span>
-<span id="cb11-3"><a href="#cb11-3"></a>{peso}kg</span>
-<span id="cb11-4"><a href="#cb11-4"></a>{consumo}mpg</span>
-<span id="cb11-5"><a href="#cb11-5"></a>{velocidad_maxima}mph</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13" data-filename="Ejemplo Imperial"><pre class="sourceCode numberSource jsx number-lines code-with-copy"><code class="sourceCode javascriptreact"><span id="cb13-1"><a href="#cb13-1"></a>{modelo}<span class="op">,</span>{fabricante}</span>
+<span id="cb13-2"><a href="#cb13-2"></a>{potencia}cv</span>
+<span id="cb13-3"><a href="#cb13-3"></a>{peso}kg</span>
+<span id="cb13-4"><a href="#cb13-4"></a>{consumo}mpg</span>
+<span id="cb13-5"><a href="#cb13-5"></a>{velocidad_maxima}mph</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>tumbler.txt</strong></pre>
 </div>
-<div class="sourceCode" id="cb12" data-filename="tumbler.txt"><pre class="sourceCode numberSource plaintext number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a href="#cb12-1"></a>Tumbler,Wayne Enterprises</span>
-<span id="cb12-2"><a href="#cb12-2"></a>900hp</span>
-<span id="cb12-3"><a href="#cb12-3"></a>100lbs</span>
-<span id="cb12-4"><a href="#cb12-4"></a>120mph</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14" data-filename="tumbler.txt"><pre class="sourceCode numberSource plaintext number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a href="#cb14-1"></a>Tumbler,Wayne Enterprises</span>
+<span id="cb14-2"><a href="#cb14-2"></a>900hp</span>
+<span id="cb14-3"><a href="#cb14-3"></a>100lbs</span>
+<span id="cb14-4"><a href="#cb14-4"></a>120mph</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -917,21 +922,21 @@ Solución
 <summary>
 Estructura de datos
 </summary>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="im">import</span> dataclasses</span>
-<span id="cb13-2"><a href="#cb13-2"></a></span>
-<span id="cb13-3"><a href="#cb13-3"></a><span class="at">@dataclasses.dataclass</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a><span class="kw">class</span> Coche:</span>
-<span id="cb13-5"><a href="#cb13-5"></a>    modelo: <span class="bu">str</span></span>
-<span id="cb13-6"><a href="#cb13-6"></a>    fabricante: <span class="bu">str</span></span>
-<span id="cb13-7"><a href="#cb13-7"></a>    potencia: <span class="bu">float</span></span>
-<span id="cb13-8"><a href="#cb13-8"></a>    peso: <span class="bu">float</span></span>
-<span id="cb13-9"><a href="#cb13-9"></a>    velocidad_maxima: <span class="bu">float</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="im">import</span> dataclasses</span>
+<span id="cb15-2"><a href="#cb15-2"></a></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="at">@dataclasses.dataclass</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="kw">class</span> Coche:</span>
+<span id="cb15-5"><a href="#cb15-5"></a>    modelo: <span class="bu">str</span></span>
+<span id="cb15-6"><a href="#cb15-6"></a>    fabricante: <span class="bu">str</span></span>
+<span id="cb15-7"><a href="#cb15-7"></a>    potencia: <span class="bu">float</span></span>
+<span id="cb15-8"><a href="#cb15-8"></a>    peso: <span class="bu">float</span></span>
+<span id="cb15-9"><a href="#cb15-9"></a>    velocidad_maxima: <span class="bu">float</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </section>
 <section id="funciones-2" class="level4" data-number="1.3.2">
 <h4 data-number="1.3.2" class="anchored" data-anchor-id="funciones-2"><span class="header-section-number">1.3.2</span> Funciones</h4>
 <ul>
-<li><strong>Escribe una función</strong> que lea el fichero y devuelva una entidad de esa estructura.</li>
+<li><strong>Escribe una función</strong> <code>cargar_coche(nombre_fichero)</code> que lea el fichero y devuelva una entidad de esa estructura.</li>
 </ul>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
@@ -944,8 +949,8 @@ Estructura de datos
 </div>
 </div>
 <p><strong>Ejemplo de ejecución</strong></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="bu">print</span>(leer_fichero(<span class="st">"papamovil.txt"</span>))</span>
-<span id="cb14-2"><a href="#cb14-2"></a><span class="bu">print</span>(leer_fichero(<span class="st">"tumbler.txt"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="bu">print</span>(cargar_coche(<span class="st">"papamovil.txt"</span>))</span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="bu">print</span>(cargar_coche(<span class="st">"tumbler.txt"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="line-block">Coche(modelo=‘Papamovil’, fabricante=‘Mercedes-Benz’, potencia=300.0, peso=2000.0, velocidad_maxima=170.0)<br>
 Coche(modelo=‘Tumbler’, fabricante=‘Wayne Enterprises’, potencia=671.13, peso=3968.28, velocidad_maxima=193.07999999999998)</div>
 <details>
@@ -960,37 +965,36 @@ Pista
 <li><strong>Un elemento</strong>: entonces es <code>hp</code>.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="co">"300cv"</span>.split(<span class="st">"c"</span>)  <span class="co"># ["300", "v"]</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="co">"900hp"</span>.split(<span class="st">"c"</span>)  <span class="co"># ["900hp"]</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="co">"300cv"</span>.split(<span class="st">"c"</span>)  <span class="co"># ["300", "v"]</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="co">"900hp"</span>.split(<span class="st">"c"</span>)  <span class="co"># ["900hp"]</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Este “truco” busca exprimir vuestro conocimiento de cadenas y listas así como vuestro pensamiento lateral. <strong>No es una técnica que vaya necesitarse en el examen</strong>.</p>
 </details>
 <details>
 <summary>
 Solución
 </summary>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a></span>
-<span id="cb16-2"><a href="#cb16-2"></a><span class="kw">def</span> leer_fichero(fichero):</span>
-<span id="cb16-3"><a href="#cb16-3"></a>    f <span class="op">=</span> <span class="bu">open</span>(fichero, <span class="st">"r"</span>)</span>
-<span id="cb16-4"><a href="#cb16-4"></a>    linea <span class="op">=</span> f.readline()</span>
-<span id="cb16-5"><a href="#cb16-5"></a>    datos <span class="op">=</span> linea.split(<span class="st">","</span>)</span>
-<span id="cb16-6"><a href="#cb16-6"></a>    modelo <span class="op">=</span> datos[<span class="dv">0</span>].strip()</span>
-<span id="cb16-7"><a href="#cb16-7"></a>    fabricante <span class="op">=</span> datos[<span class="dv">1</span>].strip()</span>
-<span id="cb16-8"><a href="#cb16-8"></a></span>
-<span id="cb16-9"><a href="#cb16-9"></a>    linea <span class="op">=</span> f.readline()</span>
-<span id="cb16-10"><a href="#cb16-10"></a>    datos <span class="op">=</span> linea.split(<span class="st">"c"</span>)</span>
-<span id="cb16-11"><a href="#cb16-11"></a>    <span class="cf">if</span> <span class="bu">len</span>(datos) <span class="op">==</span> <span class="dv">2</span>:</span>
-<span id="cb16-12"><a href="#cb16-12"></a>        <span class="co"># Sistema métrico</span></span>
-<span id="cb16-13"><a href="#cb16-13"></a>        potencia <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">0</span>])</span>
-<span id="cb16-14"><a href="#cb16-14"></a>        peso <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"kg"</span>)[<span class="dv">0</span>])</span>
-<span id="cb16-15"><a href="#cb16-15"></a>        velocidad_maxima <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"km/h"</span>)[<span class="dv">0</span>])</span>
-<span id="cb16-16"><a href="#cb16-16"></a>    <span class="cf">else</span>:</span>
-<span id="cb16-17"><a href="#cb16-17"></a>        <span class="co"># Sistema imperial</span></span>
-<span id="cb16-18"><a href="#cb16-18"></a>        potencia <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">0</span>].split(<span class="st">"hp"</span>)[<span class="dv">0</span>]) <span class="op">*</span> <span class="fl">0.7457</span></span>
-<span id="cb16-19"><a href="#cb16-19"></a>        peso <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"lbs"</span>)[<span class="dv">0</span>]) <span class="op">*</span> <span class="fl">2.2046</span></span>
-<span id="cb16-20"><a href="#cb16-20"></a>        velocidad_maxima <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"mph"</span>)[<span class="dv">0</span>]) <span class="op">*</span> <span class="fl">1.609</span></span>
-<span id="cb16-21"><a href="#cb16-21"></a>    f.close()</span>
-<span id="cb16-22"><a href="#cb16-22"></a></span>
-<span id="cb16-23"><a href="#cb16-23"></a>    <span class="cf">return</span> Coche(modelo, fabricante, potencia, peso, velocidad_maxima)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="kw">def</span> cargar_coche(fichero):</span>
+<span id="cb18-2"><a href="#cb18-2"></a>    f <span class="op">=</span> <span class="bu">open</span>(fichero, <span class="st">"r"</span>)</span>
+<span id="cb18-3"><a href="#cb18-3"></a>    linea <span class="op">=</span> f.readline()</span>
+<span id="cb18-4"><a href="#cb18-4"></a>    datos <span class="op">=</span> linea.split(<span class="st">","</span>)</span>
+<span id="cb18-5"><a href="#cb18-5"></a>    modelo <span class="op">=</span> datos[<span class="dv">0</span>].strip()</span>
+<span id="cb18-6"><a href="#cb18-6"></a>    fabricante <span class="op">=</span> datos[<span class="dv">1</span>].strip()</span>
+<span id="cb18-7"><a href="#cb18-7"></a></span>
+<span id="cb18-8"><a href="#cb18-8"></a>    linea <span class="op">=</span> f.readline()</span>
+<span id="cb18-9"><a href="#cb18-9"></a>    datos <span class="op">=</span> linea.split(<span class="st">"c"</span>)</span>
+<span id="cb18-10"><a href="#cb18-10"></a>    <span class="cf">if</span> <span class="bu">len</span>(datos) <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb18-11"><a href="#cb18-11"></a>        <span class="co"># Sistema métrico</span></span>
+<span id="cb18-12"><a href="#cb18-12"></a>        potencia <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">0</span>])</span>
+<span id="cb18-13"><a href="#cb18-13"></a>        peso <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"kg"</span>)[<span class="dv">0</span>])</span>
+<span id="cb18-14"><a href="#cb18-14"></a>        velocidad_maxima <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"km/h"</span>)[<span class="dv">0</span>])</span>
+<span id="cb18-15"><a href="#cb18-15"></a>    <span class="cf">else</span>:</span>
+<span id="cb18-16"><a href="#cb18-16"></a>        <span class="co"># Sistema imperial</span></span>
+<span id="cb18-17"><a href="#cb18-17"></a>        potencia <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">0</span>].split(<span class="st">"hp"</span>)[<span class="dv">0</span>]) <span class="op">*</span> <span class="fl">0.7457</span></span>
+<span id="cb18-18"><a href="#cb18-18"></a>        peso <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"lbs"</span>)[<span class="dv">0</span>]) <span class="op">*</span> <span class="fl">2.2046</span></span>
+<span id="cb18-19"><a href="#cb18-19"></a>        velocidad_maxima <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"mph"</span>)[<span class="dv">0</span>]) <span class="op">*</span> <span class="fl">1.609</span></span>
+<span id="cb18-20"><a href="#cb18-20"></a>    f.close()</span>
+<span id="cb18-21"><a href="#cb18-21"></a></span>
+<span id="cb18-22"><a href="#cb18-22"></a>    <span class="cf">return</span> Coche(modelo, fabricante, potencia, peso, velocidad_maxima)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 
