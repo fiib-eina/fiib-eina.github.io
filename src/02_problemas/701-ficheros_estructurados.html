@@ -957,44 +957,33 @@ Coche(modelo=‘Tumbler’, fabricante=‘Wayne Enterprises’, potencia=671.13,
 <summary>
 Pista
 </summary>
-<ul>
-<li>En la segunda línea del fichero, el valor de potencia puede ser seguido por <code>cv</code> o <code>hp</code>.</li>
-<li>Si hacemos split de la cadena por <code>c</code>, la lista resultante puede tener:
-<ul>
-<li><strong>Dos elementos</strong>: entonces es <code>cv</code>.</li>
-<li><strong>Un elemento</strong>: entonces es <code>hp</code>.</li>
-</ul></li>
-</ul>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="co">"300cv"</span>.split(<span class="st">"c"</span>)  <span class="co"># ["300", "v"]</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="co">"900hp"</span>.split(<span class="st">"c"</span>)  <span class="co"># ["900hp"]</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Este “truco” busca exprimir vuestro conocimiento de cadenas y listas así como vuestro pensamiento lateral. <strong>No es una técnica que vaya necesitarse en el examen</strong>.</p>
+<p>Recuerda que existe la función <code>find</code> del tema de <a href="../../src/01_teoria/06_ficheros/601_manejo_avanzado_de_texto.html#find">Manejo Avanzado de Texto</a> para buscar una subcadena dentro de una cadena.</p>
 </details>
 <details>
 <summary>
 Solución
 </summary>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="kw">def</span> cargar_coche(fichero):</span>
-<span id="cb18-2"><a href="#cb18-2"></a>    f <span class="op">=</span> <span class="bu">open</span>(fichero, <span class="st">"r"</span>)</span>
-<span id="cb18-3"><a href="#cb18-3"></a>    linea <span class="op">=</span> f.readline()</span>
-<span id="cb18-4"><a href="#cb18-4"></a>    datos <span class="op">=</span> linea.split(<span class="st">","</span>)</span>
-<span id="cb18-5"><a href="#cb18-5"></a>    modelo <span class="op">=</span> datos[<span class="dv">0</span>].strip()</span>
-<span id="cb18-6"><a href="#cb18-6"></a>    fabricante <span class="op">=</span> datos[<span class="dv">1</span>].strip()</span>
-<span id="cb18-7"><a href="#cb18-7"></a></span>
-<span id="cb18-8"><a href="#cb18-8"></a>    linea <span class="op">=</span> f.readline()</span>
-<span id="cb18-9"><a href="#cb18-9"></a>    datos <span class="op">=</span> linea.split(<span class="st">"c"</span>)</span>
-<span id="cb18-10"><a href="#cb18-10"></a>    <span class="cf">if</span> <span class="bu">len</span>(datos) <span class="op">==</span> <span class="dv">2</span>:</span>
-<span id="cb18-11"><a href="#cb18-11"></a>        <span class="co"># Sistema métrico</span></span>
-<span id="cb18-12"><a href="#cb18-12"></a>        potencia <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">0</span>])</span>
-<span id="cb18-13"><a href="#cb18-13"></a>        peso <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"kg"</span>)[<span class="dv">0</span>])</span>
-<span id="cb18-14"><a href="#cb18-14"></a>        velocidad_maxima <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"km/h"</span>)[<span class="dv">0</span>])</span>
-<span id="cb18-15"><a href="#cb18-15"></a>    <span class="cf">else</span>:</span>
-<span id="cb18-16"><a href="#cb18-16"></a>        <span class="co"># Sistema imperial</span></span>
-<span id="cb18-17"><a href="#cb18-17"></a>        potencia <span class="op">=</span> <span class="bu">float</span>(datos[<span class="dv">0</span>].split(<span class="st">"hp"</span>)[<span class="dv">0</span>]) <span class="op">*</span> <span class="fl">0.7457</span></span>
-<span id="cb18-18"><a href="#cb18-18"></a>        peso <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"lbs"</span>)[<span class="dv">0</span>]) <span class="op">*</span> <span class="fl">2.2046</span></span>
-<span id="cb18-19"><a href="#cb18-19"></a>        velocidad_maxima <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"mph"</span>)[<span class="dv">0</span>]) <span class="op">*</span> <span class="fl">1.609</span></span>
-<span id="cb18-20"><a href="#cb18-20"></a>    f.close()</span>
-<span id="cb18-21"><a href="#cb18-21"></a></span>
-<span id="cb18-22"><a href="#cb18-22"></a>    <span class="cf">return</span> Coche(modelo, fabricante, potencia, peso, velocidad_maxima)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="kw">def</span> cargar_coche(fichero):</span>
+<span id="cb17-2"><a href="#cb17-2"></a>    f <span class="op">=</span> <span class="bu">open</span>(fichero, <span class="st">"r"</span>)</span>
+<span id="cb17-3"><a href="#cb17-3"></a>    linea <span class="op">=</span> f.readline()</span>
+<span id="cb17-4"><a href="#cb17-4"></a>    datos <span class="op">=</span> linea.split(<span class="st">","</span>)</span>
+<span id="cb17-5"><a href="#cb17-5"></a>    modelo <span class="op">=</span> datos[<span class="dv">0</span>].strip()</span>
+<span id="cb17-6"><a href="#cb17-6"></a>    fabricante <span class="op">=</span> datos[<span class="dv">1</span>].strip()</span>
+<span id="cb17-7"><a href="#cb17-7"></a></span>
+<span id="cb17-8"><a href="#cb17-8"></a>    linea <span class="op">=</span> f.readline()</span>
+<span id="cb17-9"><a href="#cb17-9"></a>    <span class="cf">if</span> linea.find(<span class="st">"cv"</span>) <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb17-10"><a href="#cb17-10"></a>        <span class="co"># Sistema métrico</span></span>
+<span id="cb17-11"><a href="#cb17-11"></a>        potencia <span class="op">=</span> <span class="bu">float</span>(linea.split(<span class="st">"cv"</span>)[<span class="dv">0</span>])</span>
+<span id="cb17-12"><a href="#cb17-12"></a>        peso <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"kg"</span>)[<span class="dv">0</span>])</span>
+<span id="cb17-13"><a href="#cb17-13"></a>        velocidad_maxima <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"km/h"</span>)[<span class="dv">0</span>])</span>
+<span id="cb17-14"><a href="#cb17-14"></a>    <span class="cf">else</span>:</span>
+<span id="cb17-15"><a href="#cb17-15"></a>        <span class="co"># Sistema imperial</span></span>
+<span id="cb17-16"><a href="#cb17-16"></a>        potencia <span class="op">=</span> <span class="bu">float</span>(linea.split(<span class="st">"hp"</span>)[<span class="dv">0</span>]) <span class="op">*</span> <span class="fl">0.7457</span></span>
+<span id="cb17-17"><a href="#cb17-17"></a>        peso <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"lbs"</span>)[<span class="dv">0</span>]) <span class="op">*</span> <span class="fl">2.2046</span></span>
+<span id="cb17-18"><a href="#cb17-18"></a>        velocidad_maxima <span class="op">=</span> <span class="bu">float</span>(f.readline().split(<span class="st">"mph"</span>)[<span class="dv">0</span>]) <span class="op">*</span> <span class="fl">1.609</span></span>
+<span id="cb17-19"><a href="#cb17-19"></a>    f.close()</span>
+<span id="cb17-20"><a href="#cb17-20"></a></span>
+<span id="cb17-21"><a href="#cb17-21"></a>    <span class="cf">return</span> Coche(modelo, fabricante, potencia, peso, velocidad_maxima)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 
