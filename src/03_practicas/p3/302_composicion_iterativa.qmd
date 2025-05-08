@@ -4,41 +4,6 @@ subtitle: Composición iterativa
 format: html
 ---
 
-<!--
-## Ideas de problemas
-
-- Programa dirigido por menú, estilo <https://github.com/prog1-eina/tema-07-desarrollo-modular/blob/master/calculadora-main.cpp>
-- ~Determinar si un número es primo~ 
-- Números repitunos, <https://github.com/prog1-eina/problemas-t05-enteros/blob/main/3-repituno.cpp> 
-- Eliminar cifras, <https://github.com/prog1-eina/problemas-t05-enteros/blob/main/4-quitar-cifra.cpp>  
-- Números amigos
-- Números perfectos, <https://github.com/prog1-eina/problemas-t04-instruccion-iterativa/blob/master/3-perfecto.cpp>
-- Suma de cuadrados vs. cuadrado de la suma ([Problema 6 de Project Euler](https://projecteuler.net/problem=6))
-- Otros problemas de Project Euler:
-- Problema 2: Números de Fibonacci pares
-- Problema 5: Menor múltiplo
-- Problema 7: Diezmilésimo primer número primo
-- Problema 12: Números triangulares altamente divisibles
-- De problemas de FIM
-- Desarrolla un programa que solicite un número natural $n \geq 1$ al usuario y que calcule y muestre en la pantalla el valor de la suma $\displaystyle\sum_{i=1}^n \dfrac{1}{i^2}$. El programa ha de solicitar el número natural de forma reiterada al usuario mientras que el número introducido no sea válido.
-- Desarrolla un programa que solicite un número natural $n > 0$ al usuario, calcule y muestre por pantalla el valor de la siguiente suma: $\displaystyle\sum_{i=1}^n \sum_{j=1}^i j$. El programa ha de solicitar el número natural de forma reiterada al usuario mientras que el número introducido no sea válido.
-- Desarrolla un programa que solicite al usuario de manera iterativa una secuencia de números reales no negativos y que termine en un número negativo (que no formará parte de la secuencia), y después calcule y muestre por pantalla la suma, media, el máximo y el mínimo de la secuencia de números introducidos por el usuario.
-- Números triangulares
-- De prácticas de FIM
-- Doble factorial de números impares
-El doble factorial es una función matemática que aparece en teoría de números y estadística. Para un número $n$ impar, su doble factorial se define como:
-
-$$
-\displaystyle n!!=\prod _{k=1}^{\frac {n+1}{2}}(2k-1)=1\cdot 3\cdots (n-4)(n-2)n
-$$
-
-Por ejemplo, $9!!=1\cdot 3\cdot 5\cdot 7\cdot 9=945$.
-
-Desarrolla un programa que calcule el doble factorial de un número $n$ impar dado por el usuario. Si el número introducido por el usuario es menor que cero o par, deberá volverse a pedir el número al usuario tantas veces como sea necesario hasta que se introduzca un número correcto (positivo e impar).
-- Generación de números seudoaleatorios
-
--->
-
 ## La caja fuerte del West Bank
 
 Las cajas fuertes de dial (o de combinación) son un tipo de caja fuerte que se abre mediante la introducción de una secuencia de números. La caja fuerte del _West Bank_ se abre introduciendo tres números secretos (`8, 23, 42`).

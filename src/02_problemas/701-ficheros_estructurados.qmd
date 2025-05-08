@@ -97,11 +97,19 @@ class Alimento:
 
 - **Escribe una función** que lea el fichero y devuelva una entidad de esa estructura.
 
+**Ejemplo de ejecución**
+
+```python
+print(cargar_valores_nutricionales("nukacola.txt"))
+```
+
+| Alumento(nombre_fabricante='Nuka-Cola Corporation', nombre_distribuidor='Vault-Tec', nombre_producto='Nuka-Cola Quantum', calorias=150.0, proteinas=0.0, carbohidratos=39.0, grasas=0.0, azucares=39.0, sal=0.0, fibra=0.0, alergenos=['Radiación'])
+
 <details>
 <summary>Solución</summary>
 
 ```python
-def leer_fichero(fichero):
+def cargar_valores_nutricionales(fichero):
     f = open(fichero, "r")
     linea = f.readline()
     datos = linea.split(":")
@@ -182,14 +190,21 @@ T C A D R A C T
 
 #### Funciones
 
-- **Escribe una función** que lea el fichero y devuelva una entidad de esa estructura.
+- **Escribe una función** `cargar_tablero(nombre_fichero)` que lea el fichero y devuelva una entidad de esa estructura.
+
+**Ejemplo de ejecución**
+
+```python
+print(cargar_tablero("tablero.txt"))
+```
+
+| [['t', 'c', 'a', 'd', 'r', 'a', 'c', 't'], ['.', '.', '.', '.', '.', '.', '.', '.'], ['.', '.', '.', '.', '.', '.', '.', '.'], ['.', '.', '.', '.', '.', '.', '.', '.'], ['.', '.', '.', '.', '.', '.', '.', '.'], ['T', 'C', 'A', 'D', 'R', 'A', 'C', 'T']]
 
 <details>
 <summary>Solución</summary>
 
 ```python
-
-def leer_fichero(fichero):
+def cargar_tablero(fichero):
     f = open(fichero, "r")
     tablero = []
     for i in range(8):
@@ -291,7 +306,7 @@ class Coche:
 
 #### Funciones
 
-- **Escribe una función** que lea el fichero y devuelva una entidad de esa estructura.
+- **Escribe una función** `cargar_coche(nombre_fichero)` que lea el fichero y devuelva una entidad de esa estructura.
 
 ::: {.callout-tip}
 Busca la forma de averiguar cual de los dos sistemas de unidades se está utilizando.
@@ -301,8 +316,8 @@ Una vez lo sepas, puedes usar un `if` para controlar el resto del flujo del prog
 **Ejemplo de ejecución**
 
 ```python
-print(leer_fichero("papamovil.txt"))
-print(leer_fichero("tumbler.txt"))
+print(cargar_coche("papamovil.txt"))
+print(cargar_coche("tumbler.txt"))
 ```
 
 | Coche(modelo='Papamovil', fabricante='Mercedes-Benz', potencia=300.0, peso=2000.0, velocidad_maxima=170.0)
@@ -331,8 +346,7 @@ Este "truco" busca exprimir vuestro conocimiento de cadenas y listas así como v
 
 
 ```python
-
-def leer_fichero(fichero):
+def cargar_coche(fichero):
     f = open(fichero, "r")
     linea = f.readline()
     datos = linea.split(",")
@@ -354,7 +368,6 @@ def leer_fichero(fichero):
     f.close()
 
     return Coche(modelo, fabricante, potencia, peso, velocidad_maxima)
-
 ```
 
 </details>
