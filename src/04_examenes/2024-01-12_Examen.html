@@ -635,13 +635,13 @@ window.Quarto = {
     <h2 id="toc-title">En esta página</h2>
    
   <ul>
-  <li><a href="#ejercicio-3" id="toc-ejercicio-3" class="nav-link active" data-scroll-target="#ejercicio-3"><span class="header-section-number">1</span> Ejercicio 3</a>
+  <li><a href="#evolución-de-criptomonedas" id="toc-evolución-de-criptomonedas" class="nav-link active" data-scroll-target="#evolución-de-criptomonedas"><span class="header-section-number">1</span> Evolución de criptomonedas</a>
   <ul class="collapse">
   <li><a href="#volatilidad" id="toc-volatilidad" class="nav-link" data-scroll-target="#volatilidad"><span class="header-section-number">1.1</span> Volatilidad</a></li>
   <li><a href="#variación-relativa-interanual" id="toc-variación-relativa-interanual" class="nav-link" data-scroll-target="#variación-relativa-interanual"><span class="header-section-number">1.2</span> Variación relativa interanual</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="2024-01-12_Examen.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -649,7 +649,6 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Examen 2024-01-12</h1>
-<p class="subtitle lead">Examen teórico</p>
 </div>
 
 
@@ -666,13 +665,17 @@ window.Quarto = {
 </header>
 
 
-<section id="ejercicio-3" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="ejercicio-3"><span class="header-section-number">1</span> Ejercicio 3</h2>
+<section id="evolución-de-criptomonedas" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="evolución-de-criptomonedas"><span class="header-section-number">1</span> Evolución de criptomonedas</h2>
 <p>Se quiere hacer un somero análisis de la evolución y fluctuación de dos de las criptomonedas más populares, Bitcoin (BTC) y Ethereum (ETH), en el año 2023. Dicho análisis supone calcular unas estadísticas simples sobre el histórico del valor de cotización de dichas criptomonedas respecto al dólar estadounidense (USD). La cotización de una moneda frente al dólar es el tipo de cambio, esto es, a cuántos dólares equivale un BTC o un ETH.</p>
 <p>Se dispone para ello de un <strong>fichero de texto</strong>, de nombre <code>cotizaciones.txt</code> que contiene la cotización diaria de cada una de las criptomonedas para cada día del año. El formato de dicho fichero es tal que cada línea del fichero contiene tres datos separados por espacios en blanco, en este orden (ver también Fig. 2): el valor de cotización, tres caracteres indicando la criptomoneda (BTC o ETH), y la fecha en formato <code>dd-mm-aaaa</code>.</p>
 <p>En el fichero, las cotizaciones están ordenadas cronológicamente. Sin embargo, para cada día del año, no se sabe a priori cuál de las dos monedas está escrita antes en el fichero (en el ejemplo de la Fig. 2 se ve que para ciertos días está antes BTC, y para otros está antes ETH). El fichero sólo almacena cotizaciones de esas dos criptomonedas, y todos los días del año tienen valor de cotización para ambas monedas.</p>
 <p><strong>Ejemplo de fichero <code>cotizaciones.txt</code> (se muestra sólo un fragmento del fichero)</strong></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource plaintext number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>17438.70 BTC 01-01-2023</span>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>cotizaciones.txt</strong></pre>
+</div>
+<div class="sourceCode" id="cb1" data-filename="cotizaciones.txt"><pre class="sourceCode numberSource plaintext number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>17438.70 BTC 01-01-2023</span>
 <span id="cb1-2"><a href="#cb1-2"></a>1335.55 ETH 01-01-2023</span>
 <span id="cb1-3"><a href="#cb1-3"></a>1388.37 ETH 02-01-2023</span>
 <span id="cb1-4"><a href="#cb1-4"></a>17936.70 BTC 02-01-2023</span>
@@ -682,6 +685,7 @@ window.Quarto = {
 <span id="cb1-8"><a href="#cb1-8"></a>1451.22 ETH 04-01-2023</span>
 <span id="cb1-9"><a href="#cb1-9"></a>1551.71 ETH 05-01-2023</span>
 <span id="cb1-10"><a href="#cb1-10"></a>20979.70 BTC 05-01-2023</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <section id="volatilidad" class="level3" data-number="1.1">
 <h3 data-number="1.1" class="anchored" data-anchor-id="volatilidad"><span class="header-section-number">1.1</span> Volatilidad</h3>
 <p>Calcular y mostrar por pantalla la volatilidad <span class="math inline">\(V\)</span> de cada una de las dos criptomonedas a lo largo de 2023.</p>
@@ -707,7 +711,7 @@ V = \frac{1}{N} \sum_{t=1}^{t=N} abs(G(t))
 </section>
 <section id="variación-relativa-interanual" class="level3" data-number="1.2">
 <h3 data-number="1.2" class="anchored" data-anchor-id="variación-relativa-interanual"><span class="header-section-number">1.2</span> Variación relativa interanual</h3>
-<p>Calcular y mostrar por pantalla la de cada criptomoneda en 2023. Esto no es más que la variación relativa entre el primer y último día del año:</p>
+<p>Calcular y mostrar por pantalla la <em>variación relativa interanual</em> de cada criptomoneda en 2023. Esto no es más que la variación relativa entre el primer y último día del año:</p>
 <p><span class="math display">\[
 G_{IA} = \frac{Z(365) – Z(1)}{Z(1)}
 \]</span></p>
@@ -723,83 +727,6 @@ G_{IA} = \frac{Z(365) – Z(1)}{Z(1)}
 <span id="cb2-2"><a href="#cb2-2"></a>Volatilidad ETH: 0.045</span>
 <span id="cb2-3"><a href="#cb2-3"></a>Interanual BTC: 0.203</span>
 <span id="cb2-4"><a href="#cb2-4"></a>Interanual ETH: 0.162</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<!-- SOLUCION ORIGINAL EN PASCAL
-
-program criptomonedas_conVec;
-
-const
-   DIASANIO = 365;
-
-type
-   tpVecReales = array[1..DIASANIO] of real;
-   
-function variacionRelativa(cSig, cAnt: real): real;
-begin
-   variacionRelativa := (cSig - cAnt) / cAnt;
-end;
-
-function volatilidadAnual(v: tpVecReales): real;
-var
-   vol: real; i: integer;
-begin
-   vol := 0.0;   
-   for i:=1 to (DIASANIO-1) do
-   begin
-      vol := vol + abs(variacionRelativa(v[i+1], v[i]));
-   end;
-   vol := vol + variacionRelativa(v[DIASANIO], v[DIASANIO-1]);
-   vol := vol / DIASANIO;
-   volatilidadAnual := vol;
-end;
-
-var
-   vETH, vBTC: tpVecReales;
-   f: text;
-   volETH, volBTC: real;
-   interanualETH, interanualBTC: real;
-   i: integer;
-   mon1, mon2, c: char;
-   cot1, cot2: real;
-begin
-   // 0. Leer de fichero y almacenar en vectores correspondientes }
-   assign(f, 'cotizaciones.txt');
-   reset(f);
-   i := 1;
-   while not eof(f) do 
-   begin
-      readln(f, cot1, c, mon1); 
-      readln(f, cot2, c, mon2);
-      { Se asume que mon1 siempre sera B o E, si no, con else-if }
-      if (mon1 = 'B') then 
-      begin
-         vBTC[i] := cot1;
-         vETH[i] := cot2;
-      end
-      else // if (mon1 = 'E') then 
-      begin
-         vBTC[i] := cot2;
-         vETH[i] := cot1;
-      end;
-      i := i + 1;
-   end;
-   close(f);
-   
-   // 1. Volatilidad
-   volETH := volatilidadAnual(vETH);
-   volBTC := volatilidadAnual(vBTC);
-   
-   // 2. Variacion interanual
-   interanualETH := variacionRelativa(vETH[DIASANIO], vETH[1]);
-   interanualBTC := variacionRelativa(vBTC[DIASANIO], vBTC[1]);
-   
-   writeln('Volatilidad BTC: ', volBTC:1:3);
-   writeln('Volatilidad ETH: ', volETH:1:3);
-
-   writeln('Interanual BTC: ', interanualBTC:1:3);
-   writeln('Interanual ETH: ', interanualETH:1:3);
- end.
-
--->
 <details>
 <summary>
 Solución
