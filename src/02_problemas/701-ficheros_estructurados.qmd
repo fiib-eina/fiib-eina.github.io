@@ -95,7 +95,7 @@ class Alimento:
 
 #### Funciones
 
-- **Escribe una función** que lea el fichero y devuelva una entidad de esa estructura.
+- **Escribe una función** `cargar_valores_nutricionales(nombre_fichero)` que lea el fichero y devuelva una entidad de esa estructura.
 
 **Ejemplo de ejecución**
 
@@ -326,18 +326,7 @@ print(cargar_coche("tumbler.txt"))
 <details>
 <summary>Pista</summary>
 
-- En la segunda línea del fichero, el valor de potencia puede ser seguido por `cv` o `hp`.
-- Si hacemos split de la cadena por `c`, la lista resultante puede tener:
-    - **Dos elementos**: entonces es `cv`.
-    - **Un elemento**: entonces es `hp`.
-
-```python
-"300cv".split("c")  # ["300", "v"]
-"900hp".split("c")  # ["900hp"]
-```
-
-Este "truco" busca exprimir vuestro conocimiento de cadenas y listas así como vuestro pensamiento lateral.
-**No es una técnica que vaya necesitarse en el examen**.
+Recuerda que existe la función `find` del tema de [Manejo Avanzado de Texto](../01_teoria/06_ficheros/601_manejo_avanzado_de_texto.qmd#find) para buscar una subcadena dentro de una cadena.
 
 </details>
 
@@ -354,15 +343,14 @@ def cargar_coche(fichero):
     fabricante = datos[1].strip()
 
     linea = f.readline()
-    datos = linea.split("c")
-    if len(datos) == 2:
+    if linea.find("cv") > 0:
         # Sistema métrico
-        potencia = float(datos[0])
+        potencia = float(linea.split("cv")[0])
         peso = float(f.readline().split("kg")[0])
         velocidad_maxima = float(f.readline().split("km/h")[0])
     else:
         # Sistema imperial
-        potencia = float(datos[0].split("hp")[0]) * 0.7457
+        potencia = float(linea.split("hp")[0]) * 0.7457
         peso = float(f.readline().split("lbs")[0]) * 2.2046
         velocidad_maxima = float(f.readline().split("mph")[0]) * 1.609
     f.close()
