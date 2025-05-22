@@ -1,7 +1,6 @@
 ---
 title: Ejercicios Extra I
 format: html
-draft: true
 ---
 
 ## Invierte una lista
@@ -31,6 +30,290 @@ def invertir_lista(lista):
     return lista_invertida
 ```
 </details>
+
+<details>
+<summary>Solución alternativa</summary>
+
+```python
+def invertir_lista(lista):
+    lista_invertida = [0] * len(lista)
+    for i in range(len(lista)):
+        lista_invertida[i] = lista[len(lista) - 1 - i]
+    return lista_invertida
+```
+</details>
+
+## Encuentra el mayor de cada columna
+
+Escribe una función `mayores_de_columna(matriz)` que reciba una matriz y devuelva una lista con el mayor de cada columna.
+
+```python
+print(mayores_de_columna([
+    [1, 2, 9], 
+    [4, 8, 6], 
+    [7, 5, 3]
+]))
+```
+
+| [7, 8, 9]
+
+<details>
+<summary>Solución</summary>
+
+```python
+def mayores_de_columna(matriz):
+    mayores = []
+    for j in range(len(matriz[0])):
+        mayor = matriz[0][j]
+        for i in range(1, len(matriz)):
+            if matriz[i][j] > mayor:
+                mayor = matriz[i][j]
+        mayores.append(mayor)
+    return mayores
+```
+
+</details>
+
+## Encuentra los dos mayores de una lista
+
+Escribe una función `dos_mayores(lista)` que reciba una lista y devuelva una lista de dos elementos donde el primero será el mayor y el segundo el segundo mayor de la lista.
+El `mayor` y el `segundo mayor` pueden ser iguales si el mayor se repite.
+
+```python
+print(dos_mayores([5,6,3,8,4,9,2,3,1]))
+print(dos_mayores([5,6,3,9,4,9,2,3,1]))
+```
+
+| [9, 8]
+| [9, 9]
+
+<details>
+<summary>Solución</summary>
+
+```python
+def dos_mayores(lista):
+    mayor = lista[0]
+    segundo_mayor = lista[0]
+    for i in range(len(lista)):
+        if lista[i] > mayor:
+            segundo_mayor = mayor
+            mayor = lista[i]
+        elif lista[i] > segundo_mayor:
+            segundo_mayor = lista[i]
+    return [mayor, segundo_mayor]
+print(dos_mayores([5, 6, 3, 8, 4, 9, 2, 3, 1]))
+print(dos_mayores([5, 6, 3, 9, 4, 9, 2, 3, 1]))
+```
+
+</details>
+
+
+## Matriz transpuesta
+
+Escribe una función `transponer(matriz)` que reciba una matriz y devuelva una nueva matriz que sea la transpuesta de la original.
+
+```python
+print(transponer([
+    [1, 2, 3], 
+    [4, 5, 6], 
+    [7, 8, 9]
+]))
+```
+
+| [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+
+
+<details>
+<summary>Pista</summary>
+
+```python
+def transponer(matriz):
+    nueva = [0] * len(matriz[0])
+    for i in range(len(matriz[0])):
+        nueva[i] = [0] * len(matriz)
+
+    for i in range(len(matriz)):
+        for j in range(len(matriz[0])):
+            nueva[j][i] = matriz[i][j]
+    return nueva
+```
+
+</details>
+
+## Mover pieza
+
+Partiendo del ejercicio [del tablero de ajedrez](../02_problemas/701-ficheros_estructurados.qmd#ficheros-ajedrez), escribe una función `mover_pieza(tablero, origen, destino) ` que reciba un tablero y dos posiciones (origen y destino) y mueva la pieza de la posición origen a la posición destino.
+
+::: {.callout-note}
+- De momento puedes obviar que las columnas deberían nombrarse con letras
+- Si quieres hacer el ejercicio más fácil, puedes:
+    - Hacer que `Posicion` tenga `fila:int` y `columna: str`.
+        - Deberás implementar el mecanismo de traducción de letras a números y viceversa.
+    - Implementar checks de control:
+        - Los peones blancas sólo pueden moverse a filas menores y los negros a filas mayores.
+        - Los alfiles sólo pueden moverse en diagonal.
+        - etc.
+:::
+
+```python
+import dataclasses
+
+@dataclasses.dataclass
+class Posicion:
+    fila: int
+    columna: int
+
+tablero = [
+    ['t', 'c', 'a', 'd', 'r', 'a', 'c', 't'],
+    ['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'],
+    ['.', '.', '.', '.', '.', '.', '.', '.'],
+    ['.', '.', '.', '.', '.', '.', '.', '.'],
+    ['.', '.', '.', '.', '.', '.', '.', '.'],
+    ['.', '.', '.', '.', '.', '.', '.', '.'],
+    ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
+    ['T', 'C', 'A', 'D', 'R', 'A', 'C', 'T']
+]
+
+print(mover_pieza(tablero, Posicion(1, 0), Posicion(3, 0)))
+```
+| [['t', 'c', 'a', 'd', 'r', 'a', 'c', 't'],
+| ['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'],
+| ['.', '.', '.', '.', '.', '.', '.', '.'],
+| ['p', '.', '.', '.', '.', '.', '.', '.'],
+| ['.', '.', '.', '.', '.', '.', '.', '.'],
+| ['.', '.', '.', '.', '.', '.', '.', '.'],
+| ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
+| ['T', 'C', 'A', 'D', 'R', 'A', 'C', 'T']]
+
+
+<details>
+<summary>Solución</summary>
+
+```python
+def copiar_tablero(tablero):
+    nuevo_tablero = [""] * len(tablero)
+    for i in range(len(tablero)):
+        nuevo_tablero[i] = [""] * len(tablero[0])
+        for j in range(len(tablero[0])):
+            nuevo_tablero[i][j] = tablero[i][j]
+    return nuevo_tablero
+
+def mover_pieza(tablero, origen, destino):
+    # Recuerda siempre hacer una copia de los datos de entrada si vas a modificarlos
+    nuevo_tablero = copiar_tablero(tablero)  
+    if tablero[origen.fila][origen.columna] != '.':
+        nuevo_tablero[destino.fila][destino.columna] = tablero[origen.fila][origen.columna]
+        nuevo_tablero[origen.fila][origen.columna] = '.'
+    return nuevo_tablero
+```
+
+</details>
+
+<!--
+## Implementa tu propio `find()`
+
+Escribe una función `mi_find` que reciba dos listas y devuelva la posición de la primera aparición de la segunda lista en la primera.
+Si no se encuentra, devuelve -1.
+
+```python
+print(mi_find([1, 2, 3, 4, 5], [3, 4]))
+```
+| 2
+
+```python
+print(mi_find([1, 2, 3, 4, 5], [6]))
+```
+| -1
+
+<details>
+<summary>Solución</summary>
+
+```python
+def coincide(lista, i, sublista):
+    for j in range(len(sublista)):
+        if lista[i + j] != sublista[j]:
+            return False
+    return True
+
+def mi_find(lista, sublista):
+    for i in range(len(lista) - len(sublista) + 1):
+        if coincide(lista, i, sublista):
+            return i
+    return -1
+```
+
+</details>
+
+## Fichero de traducciones
+
+Una forma común de implementar programas multilenguaje es utilizar un fichero de traducciones, en el que se almacenan las distintas traducciones de cada una de las frases, dirálogos o términos que se utilizan en el programa.
+
+Escribe una función `cargar_traducciones(fichero)` que reciba el nombre de un fichero y devuelva una matriz de traducciones, donde cada fila contiene la traducción de una palabra (un idioma por cada columna).
+
+El idioma se puede identificar por el índice de la columna:
+
+- `0`: Original (inglés)
+- `1`: Español
+- `2`: Japonés
+
+```{.plaintext filename='traducciones.txt'}
+Welcome to the calculator!:Bienvenido a la calculadora!:電卓へようこそ
+Add:Sumar:シュマル
+Substract:Restar:再スター
+Result:Resultado:リザルタード
+```
+
+Escribe una función `t(word, translations, lang)` que reciba una palabra, una matriz de trauducciones y un código de idioma y devuelva la traducción de la palabra en el idioma indicado.
+
+```python
+d = cargar_traducciones("traducciones.txt")
+print("Lang: en[0], es[1], jp[2]")
+l = int(input())
+print(t("Welcome to the calculator!", d, l))
+print(f" - {t('Add', d, l)} (1) ")
+print(f" - {t('Substract', d, l)} (2) ")
+```
+
+| Lang: en[0], es[1], jp[2]
+| **0**
+| Welcome to the calculator!
+| - Add (1) 
+| - Substract (2) 
+
+| Lang: en[0], es[1], jp[2]
+| **1**
+| Bienvenido a la calculadora!
+| - Sumar (1)
+| - Restar (2)
+
+| Lang: en[0], es[1], jp[2]
+| **2**
+| 電卓へようこそ
+| - シュマル (1) 
+| - 再スター (2) 
+
+<details>
+<summary>Solución</summary>
+
+```python
+def cargar_traducciones(fichero):
+    translations = []
+    file = open(fichero, "r")
+    linea = file.readline()
+    while linea != "":
+        translations.append(linea.strip().split(":"))
+        linea = file.readline()
+    file.close()
+    return translations
+
+
+def t(word, translations, lang):
+    for i in range(len(translations)):
+        if translations[i][0] == word:
+            return translations[i][lang]
+```
+-->
+
 
 
 <!--
