@@ -8,8 +8,9 @@ project:
   preview:
     port: 7777
     browser: false
-  resources:
-    - 'src/**/*.pdf'
+  # This is a legacy function for including PDFs in the index
+  # resources:
+    # - 'src/**/*.pdf'
   output-dir: _output
 
 website:
