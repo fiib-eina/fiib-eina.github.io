@@ -1,11 +1,9 @@
 ---
 title: Examen 2024-01-12
-subtitle: Examen teórico
 format: html
-draft: true
 ---
 
-## Ejercicio 3
+## Evolución de criptomonedas
 
 Se quiere hacer un somero análisis de la evolución y fluctuación de dos de las criptomonedas más populares, Bitcoin (BTC) y Ethereum (ETH), en el año 2023. Dicho análisis supone calcular unas estadísticas simples sobre el histórico del valor de cotización de dichas criptomonedas respecto al dólar estadounidense (USD). La cotización de una moneda frente al dólar es el tipo de cambio, esto es, a cuántos dólares equivale un BTC o un ETH. 
 
@@ -15,7 +13,7 @@ En el fichero, las cotizaciones están ordenadas cronológicamente. Sin embargo,
 
 **Ejemplo de fichero `cotizaciones.txt` (se muestra sólo un fragmento del fichero)**
 
-```plaintext
+```{.plaintext filename="cotizaciones.txt"}
 17438.70 BTC 01-01-2023
 1335.55 ETH 01-01-2023
 1388.37 ETH 02-01-2023
@@ -52,7 +50,7 @@ Nota: Para el cálculo de $G$ del último día del año, dado que no tenemos la 
 
 ### Variación relativa interanual
 
-Calcular y mostrar por pantalla la \textit{variación relativa interanual} de cada criptomoneda en 2023. Esto no es más que la variación relativa entre el primer y último día del año:
+Calcular y mostrar por pantalla la _variación relativa interanual_ de cada criptomoneda en 2023. Esto no es más que la variación relativa entre el primer y último día del año:
 
 $$
 G_{IA} = \frac{Z(365) – Z(1)}{Z(1)}
@@ -74,84 +72,6 @@ Volatilidad ETH: 0.045
 Interanual BTC: 0.203
 Interanual ETH: 0.162
 ```
-
-<!-- SOLUCION ORIGINAL EN PASCAL
-
-program criptomonedas_conVec;
-
-const
-   DIASANIO = 365;
-
-type
-   tpVecReales = array[1..DIASANIO] of real;
-   
-function variacionRelativa(cSig, cAnt: real): real;
-begin
-   variacionRelativa := (cSig - cAnt) / cAnt;
-end;
-
-function volatilidadAnual(v: tpVecReales): real;
-var
-   vol: real; i: integer;
-begin
-   vol := 0.0;   
-   for i:=1 to (DIASANIO-1) do
-   begin
-      vol := vol + abs(variacionRelativa(v[i+1], v[i]));
-   end;
-   vol := vol + variacionRelativa(v[DIASANIO], v[DIASANIO-1]);
-   vol := vol / DIASANIO;
-   volatilidadAnual := vol;
-end;
-
-var
-   vETH, vBTC: tpVecReales;
-   f: text;
-   volETH, volBTC: real;
-   interanualETH, interanualBTC: real;
-   i: integer;
-   mon1, mon2, c: char;
-   cot1, cot2: real;
-begin
-   // 0. Leer de fichero y almacenar en vectores correspondientes }
-   assign(f, 'cotizaciones.txt');
-   reset(f);
-   i := 1;
-   while not eof(f) do 
-   begin
-      readln(f, cot1, c, mon1); 
-      readln(f, cot2, c, mon2);
-      { Se asume que mon1 siempre sera B o E, si no, con else-if }
-      if (mon1 = 'B') then 
-      begin
-         vBTC[i] := cot1;
-         vETH[i] := cot2;
-      end
-      else // if (mon1 = 'E') then 
-      begin
-         vBTC[i] := cot2;
-         vETH[i] := cot1;
-      end;
-      i := i + 1;
-   end;
-   close(f);
-   
-   // 1. Volatilidad
-   volETH := volatilidadAnual(vETH);
-   volBTC := volatilidadAnual(vBTC);
-   
-   // 2. Variacion interanual
-   interanualETH := variacionRelativa(vETH[DIASANIO], vETH[1]);
-   interanualBTC := variacionRelativa(vBTC[DIASANIO], vBTC[1]);
-   
-   writeln('Volatilidad BTC: ', volBTC:1:3);
-   writeln('Volatilidad ETH: ', volETH:1:3);
-
-   writeln('Interanual BTC: ', interanualBTC:1:3);
-   writeln('Interanual ETH: ', interanualETH:1:3);
- end.
-
--->
 
 <details>
 <summary>Solución</summary>

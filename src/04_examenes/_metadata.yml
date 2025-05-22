@@ -1,0 +1,13 @@
+format:
+    html: default
+    typst:
+      keep-typ: false
+      papersize: a4
+      toc: false
+      section-numbering: 1.a
+      shift-heading-level-by: -1
+      columns: 1
+      include-before-body:
+      - text: |
+          #show raw.where(block: true): set block(fill: rgb("#ffffff"), stroke: 0.5pt, radius: 0.5em)
+
