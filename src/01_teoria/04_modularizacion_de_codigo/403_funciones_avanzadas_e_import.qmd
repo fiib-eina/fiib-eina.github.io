@@ -432,7 +432,8 @@ def es_primo(n):
     while primo and i < n:
       if n % i == 0:
         primo = False
-  return True
+      i += 1
+  return primo
 ```
 
 ::: 
