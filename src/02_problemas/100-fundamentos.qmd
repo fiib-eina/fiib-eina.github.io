@@ -24,6 +24,97 @@ a = 10
 
 </details>
 
+## Batería
+
+### Ejercicio 1
+
+Escribe por pantalla el número 1
+
+### Ejercicio 2
+
+Lee de teclado un número y escribe por pantalla su valor.
+
+### Ejercicio 3
+
+Lee de teclado un número y escribe por pantalla su doble.
+
+### Ejercicio 4
+
+Lee de teclado un número y escribe por pantalla su cuadrado.
+
+### Ejercicio 5
+
+Lee de teclado dos números y escribe escribe por pantalla su producto
+
+## Hola mundo
+
+Escribe por pantalla el mensaje: `Hola Mundo`
+
+| Hola Mundo
+
+<details>
+<summary>Solución</summary>
+
+```python
+print("Hola Mundo")
+```
+
+</details>
+
+## Sumadora
+
+Escribe un programa que lea dos números de teclado y escriba por pantalla su suma.
+
+| Primer numero:
+| **2**
+| Segundo numero:
+| **3**
+| La suma es:
+| 5
+
+<details>
+<summary>Solución</summary>
+
+```python
+print("Primer numero:")
+a = int(input())
+print("Segundo numero:")
+b = int(input())
+print("La suma es:")
+print(a + b)
+```
+</details>
+
+## Batería 2
+
+### Ejercicio 1
+
+Lee una letra de teclado y escribela por pantalla.
+Luego lee un número y escríbelo por pantalla.
+
+| **a**
+| a
+| **5**
+| 5
+
+### Ejercicio 2
+
+Lee una letra y un número de teclado y luego escríbelos por pantalla.
+
+| **a**
+| **5**
+| a
+| 5
+
+### Ejercicio 3
+
+Lee una letra y un número de teclado y escríbelos por pantalla, primero el número y luego la letra.
+
+| **a**
+| **5**
+| 5
+| a
+
 ## Cambio de valores
 
 Consigue que el valor de `a` pase a ser el de `b` y el de `b` pase a ser el de `a`.
