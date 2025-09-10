@@ -29,9 +29,9 @@ website:
 
 format:
   html:
-    theme: 
-      light: [default, src/_style/custom.scss]
-      dark:  [default, src/_style/custom.scss, src/_style/dark.scss]
+    # theme: 
+    #   light: [default, src/_style/custom.scss]
+    #   dark:  [default, src/_style/custom.scss, src/_style/dark.scss]
     code-copy: true
     code-line-numbers: true
     toc: true
@@ -46,7 +46,7 @@ format:
     revealjs-plugins:
       - tldraw
     date-format: long
-    theme: [default, src/_style/custom.scss]
+    # theme: [default, src/_style/custom.scss]
     # Slides
     incremental: false
     slide-number: true
