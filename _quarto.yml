@@ -21,17 +21,22 @@ website:
         contents: src/01_teoria/**
       - section: Problemas
         contents: src/02_problemas/**
-      - section: Prácticas
-        contents: src/03_practicas/**
+      # - section: Prácticas
+      #   contents: src/03_practicas/**
   search:
     location: sidebar
     type: overlay
 
+brand:
+  light: ./_brand_light.yml
+  dark: ./_brand_dark.yml
+
 format:
   html:
-    theme: 
-      light: [default, src/_style/custom.scss]
-      dark:  [default, src/_style/custom.scss, src/_style/dark.scss]
+    theme: [src/_style/fix.scss]
+    # theme: 
+    #   light: [default, src/_style/custom.scss]
+    #   dark:  [default, src/_style/custom.scss, src/_style/dark.scss]
     code-copy: true
     code-line-numbers: true
     toc: true
@@ -46,7 +51,8 @@ format:
     revealjs-plugins:
       - tldraw
     date-format: long
-    theme: [default, src/_style/custom.scss]
+    theme: [src/_style/fix.scss]
+    # theme: [default, src/_style/custom.scss]
     # Slides
     incremental: false
     slide-number: true
