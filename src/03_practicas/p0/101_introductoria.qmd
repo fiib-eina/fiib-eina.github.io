@@ -20,14 +20,14 @@ format: revealjs
 
 Para desarrollar en `python` necesitamos:
 
-- Intérprete de Python: [Python](https://www.python.org/downloads/)
+- Intérprete de Python: [Python](https://www.python.org/)
 - Entorno de desarrollo: [Visual Studio Code](https://code.visualstudio.com/download)
 
 ---
 
 ### Instalación de Python
 
-- Descarga el instalador de Python desde la [página oficial](https://www.python.org/downloads/).
+- Descarga el instalador de Python desde la [página oficial](https://www.python.org/).
 - Configura la instalación de Python en tu sistema.
 - Verifica la instalación.
 
@@ -90,6 +90,10 @@ Para desarrollar en `python` necesitamos:
 
 ---
 
+![instalacion-vsc-fin](img/12b-conf-vsc-ocultar-copilot.png)
+
+---
+
 ![conf-vsc-tema](img/13-conf-vsc-tema.png)
 
 ---
@@ -117,6 +121,10 @@ Estos tres elementos pueden ser controlados desde `Visual Studio Code`.
 
 ### Sistema de ficheros
 
+
+::: {.columns}
+::: {.column width="50%"}
+
 Se recomienda seguir la siguiente estructura para tener todos los programas organizados.
 Agruparemos el código de cada práctica en su propio directorio (carpeta).
 
@@ -130,6 +138,15 @@ Agruparemos el código de cada práctica en su propio directorio (carpeta).
 ├── ...
 └── p6
 ```
+
+:::
+::: {.column width="50%"}
+
+![](img/25-sistema-ficheros.png)
+
+:::
+:::
+
 
 ---
 

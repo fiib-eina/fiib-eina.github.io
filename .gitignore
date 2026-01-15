@@ -8,3 +8,5 @@ Session.vim
 .vscode/
 bindings.lua
 sandbox*
+
+**/*.quarto_ipynb
