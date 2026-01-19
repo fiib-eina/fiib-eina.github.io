@@ -220,7 +220,7 @@
 <h2>Instalación del entorno de trabajo</h2>
 <p>Para desarrollar en <code>python</code> necesitamos:</p>
 <ul>
-<li>Intérprete de Python: <a href="https://www.python.org/downloads/">Python</a></li>
+<li>Intérprete de Python: <a href="https://www.python.org/">Python</a></li>
 <li>Entorno de desarrollo: <a href="https://code.visualstudio.com/download">Visual Studio Code</a></li>
 </ul>
 </section>
@@ -228,7 +228,7 @@
 
 <h3 id="instalación-de-python">Instalación de Python</h3>
 <ul>
-<li>Descarga el instalador de Python desde la <a href="https://www.python.org/downloads/">página oficial</a>.</li>
+<li>Descarga el instalador de Python desde la <a href="https://www.python.org/">página oficial</a>.</li>
 <li>Configura la instalación de Python en tu sistema.</li>
 <li>Verifica la instalación.</li>
 </ul>
@@ -296,6 +296,10 @@
 <section class="slide level2">
 
 
+<img data-src="img/12b-conf-vsc-ocultar-copilot.png" class="r-stretch quarto-figure-center"><p class="caption">instalacion-vsc-fin</p></section>
+<section class="slide level2">
+
+
 <img data-src="img/13-conf-vsc-tema.png" class="r-stretch quarto-figure-center"><p class="caption">conf-vsc-tema</p></section>
 <section class="slide level2">
 
@@ -317,30 +321,58 @@
 </section>
 <section class="slide level2">
 
-<h3 id="sistema-de-ficheros">Sistema de ficheros</h3>
-<p>Se recomienda seguir la siguiente estructura para tener todos los programas organizados. Agruparemos el código de cada práctica en su propio directorio (carpeta).</p>
-<pre><code>./
-├── p0
-│&nbsp;&nbsp; ├── hello.py
-│&nbsp;&nbsp; ├── ej1.py
-│&nbsp;&nbsp; └── ej2.py
-├── p1
-├── ...
-└── p6</code></pre>
+<h3 id="organización-de-archivos-y-carpetas">Organización de archivos y carpetas</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Os recomendamos seguir una estructura concreta para tener todo el material de prácticas organizado.</p>
+<p>Agruparemos los archivos de código fuente de cada práctica en su propio directorio (carpeta).</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/25-sistema-ficheros.png"></p>
+</div></div>
 </section>
 <section class="slide level2">
 
-<p><strong>Tarea:</strong> Crea la estructura de directorios en tu sistema de ficheros utilizando el <code>Explorador de Windows</code>.</p>
+<h3 id="organización-de-archivos-y-carpetas-1">Organización de archivos y carpetas</h3>
+<p>Os vamos a dar la estructura básica de carpetas junto con unos archivos de configuración de Visual Studio Code que os van a facilitar <strong>hacer pruebas</strong> de los programas que escribáis.</p>
+<p>La estructura básica la tenéis en <a href="./practicas_fiib.zip"><code>practicas_fiib.zip</code></a>.</p>
+<p>Las pruebas de esta práctica 0, en <a href="./tests_p0.zip"><code>tests_p0.zip</code></a>.</p>
+</section>
+<section class="slide level2">
+
+<p><strong>Tarea:</strong> Crea la estructura de carpetas en tu sistema de ficheros utilizando el Explorador de archivos o Finder.</p>
+<p>En el caso de Windows:</p>
 <ol type="1">
-<li><code>Clic derecho</code> &gt; <code>Nueva</code> &gt; <code>Carpeta</code> &gt; <code>p0</code></li>
-<li>Accede a la carpeta <code>p0</code></li>
-<li><code>Clic derecho</code> &gt; <code>Nuevo</code> &gt; <code>Documento de texto</code> &gt; <code>saludo.py</code>
+<li>Crea una carpeta para almacenar los archivos de esta asignatura
+<ul>
+<li>Puedes llamarla, por ejemplo, <code>FIIB</code>.</li>
+<li>Créala en un lugar adecuado, como la carpeta <code>Documentos</code>.</li>
+<li><code>Clic derecho</code> &gt; <code>Nuevo</code> &gt; <code>Carpeta</code> &gt; <code>FIIB</code></li>
+</ul></li>
+<li>Accede a la carpeta que has creado y déjala abierta</li>
+<li>Descarga el fichero <a href="./practicas_fiib.zip"><code>practicas_fiib.zip</code></a>.</li>
+<li>Abre el archivo <code>practicas_fiib.zip</code> que te has descargado.</li>
+<li>Arrastra todo el contenido del archivo <code>practicas_fiib.zip</code> a la carpeta <code>FIIB</code>.</li>
+</ol>
+</section>
+<section class="slide level2">
+
+
+<img data-src="img/26-arrastrar-carpetas-practicas.png" class="r-stretch"></section>
+<section class="slide level2">
+
+<p><strong>Tarea:</strong> Copia los archivos de pruebas de la práctica 0.</p>
 <ol type="1">
-<li>Asegúrate de que la extensión del fichero es <code>.py</code></li>
-</ol></li>
+<li>En tu carpeta de prácticas <code>FIIB</code>, accede a la carpeta <code>tests</code> de la carpeta <code>p0</code> y déjala abierta.</li>
+<li>Descarga el fichero <a href="./tests_p0.zip"><code>tests_p0.zip</code></a>.</li>
+<li>Abre el archivo <code>tests_p0.zip</code> que te has descargado.</li>
+<li>Arrastra todo el contenido del archivo <code>tests_p0</code> a la carpeta <code>tests</code> de la carpeta <code>p0</code>.</li>
 </ol>
 <p><em>Nota:</em> Algunas versiones de Windows ocultan por defecto las extensiones de los ficheros. Puedes mostrarlas en <code>Vista</code> &gt; <code>Mostrar u ocultar</code> &gt; <code>Extensiones de nombre de archivo</code>.</p>
 </section>
+<section class="slide level2">
+
+
+<img data-src="img/27-arrastrar-archivos-pruebas.png" class="r-stretch"></section>
 <section class="slide level2">
 
 <h3 id="visual-studio-code">Visual Studio Code</h3>
@@ -355,7 +387,7 @@
 <li>Forma 2:
 <ol type="1">
 <li>Abre <code>Visual Studio Code</code></li>
-<li><code>Abrir carpeta...</code> &gt; Selecciona la carpeta <code>p0</code></li>
+<li><code>Open Folder</code> &gt; Selecciona la carpeta <code>p0</code></li>
 <li>Confirma que confías en el directorio</li>
 </ol></li>
 </ul>
@@ -404,7 +436,7 @@
 <li>Escribe el siguiente código:</li>
 <li>Guarda los cambios (Ctrl+S)</li>
 </ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="bu">print</span>(<span class="st">"Hello, World!"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="bu">print</span>(<span class="st">"Hello, World!"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
@@ -423,7 +455,7 @@
 <li>Abre la terminal de VSCode (<code>Terminal</code> &gt; <code>Nueva terminal</code>)</li>
 <li>Ejecuta el programa <code>hello.py</code> con el siguiente comando:</li>
 </ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="ex">py</span> hello.py</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="ex">py</span> hello.py</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
@@ -446,17 +478,17 @@
 <li>Escribe el <a href="saluda.py">código</a> en <code>saluda.py</code>.</li>
 <li>Ejecuta el programa <code>saluda.py</code> desde la terminal de VSCode o pulsando el botón de <code>Run</code>.</li>
 </ol>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="co">""" Sergio Martín Segura - 622612</span></span>
-<span id="cb4-2"><a></a><span class="co">El programa pide un nombre al usuario.</span></span>
-<span id="cb4-3"><a></a><span class="co">Luego escribe en la pantalla "Hola, NOMBRE".</span></span>
-<span id="cb4-4"><a></a><span class="co">"""</span></span>
-<span id="cb4-5"><a></a></span>
-<span id="cb4-6"><a></a><span class="co"># Pide al usuario que escriba su nombre, lo lee de teclado y lo guarda en «nombre»</span></span>
-<span id="cb4-7"><a></a><span class="bu">print</span>(<span class="st">"¿Cómo te llamas? "</span>)</span>
-<span id="cb4-8"><a></a>nombre <span class="op">=</span> <span class="bu">input</span>()</span>
-<span id="cb4-9"><a></a></span>
-<span id="cb4-10"><a></a><span class="co"># Saluda al usuario escribiendo un mensaje personalizado en la pantalla </span></span>
-<span id="cb4-11"><a></a><span class="bu">print</span>(<span class="st">"Hola,"</span>, nombre)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co">""" Sergio Martín Segura - 622612</span></span>
+<span id="cb3-2"><a></a><span class="co">El programa pide un nombre al usuario.</span></span>
+<span id="cb3-3"><a></a><span class="co">Luego escribe en la pantalla "Hola, NOMBRE".</span></span>
+<span id="cb3-4"><a></a><span class="co">"""</span></span>
+<span id="cb3-5"><a></a></span>
+<span id="cb3-6"><a></a><span class="co"># Pide al usuario que escriba su nombre, lo lee de teclado y lo guarda en «nombre»</span></span>
+<span id="cb3-7"><a></a><span class="bu">print</span>(<span class="st">"¿Cómo te llamas? "</span>)</span>
+<span id="cb3-8"><a></a>nombre <span class="op">=</span> <span class="bu">input</span>()</span>
+<span id="cb3-9"><a></a></span>
+<span id="cb3-10"><a></a><span class="co"># Saluda al usuario escribiendo un mensaje personalizado en la pantalla </span></span>
+<span id="cb3-11"><a></a><span class="bu">print</span>(<span class="st">"Hola,"</span>, nombre)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
@@ -493,27 +525,31 @@
 <section class="slide level2">
 
 <p><strong><a href="ej1.py">ej1.py</a></strong></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número: "</span>)</span>
-<span id="cb5-2"><a></a>a <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
-<span id="cb5-3"><a></a><span class="bu">print</span>(<span class="st">"Introduce otro número: "</span>)</span>
-<span id="cb5-4"><a></a>b <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
-<span id="cb5-5"><a></a></span>
-<span id="cb5-6"><a></a><span class="bu">print</span>(a <span class="op">+</span> b)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número: "</span>)</span>
+<span id="cb4-2"><a></a>a <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb4-3"><a></a><span class="bu">print</span>(<span class="st">"Introduce otro número: "</span>)</span>
+<span id="cb4-4"><a></a>b <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb4-5"><a></a></span>
+<span id="cb4-6"><a></a><span class="bu">print</span>(a <span class="op">+</span> b)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong><a href="ej2.py">ej2.py</a></strong></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>pi <span class="op">=</span> <span class="fl">3.14159265358979323846</span></span>
-<span id="cb6-2"><a></a><span class="bu">print</span>(<span class="st">"Escribe un número real: "</span>)</span>
-<span id="cb6-3"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
-<span id="cb6-4"><a></a></span>
-<span id="cb6-5"><a></a><span class="bu">print</span>(pi <span class="op">*</span> (x <span class="op">**</span> <span class="dv">2</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>pi <span class="op">=</span> <span class="fl">3.14159265358979323846</span></span>
+<span id="cb5-2"><a></a><span class="bu">print</span>(<span class="st">"Escribe un número real: "</span>)</span>
+<span id="cb5-3"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
+<span id="cb5-4"><a></a></span>
+<span id="cb5-5"><a></a><span class="bu">print</span>(pi <span class="op">*</span> (x <span class="op">**</span> <span class="dv">2</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong><a href="ej3.py">ej3.py</a></strong></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número: "</span>)</span>
-<span id="cb7-2"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
-<span id="cb7-3"><a></a></span>
-<span id="cb7-4"><a></a><span class="cf">if</span> x <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
-<span id="cb7-5"><a></a>    <span class="bu">print</span>(x)</span>
-<span id="cb7-6"><a></a><span class="cf">else</span>:</span>
-<span id="cb7-7"><a></a>    <span class="bu">print</span>(<span class="op">-</span>x)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número: "</span>)</span>
+<span id="cb6-2"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
+<span id="cb6-3"><a></a></span>
+<span id="cb6-4"><a></a><span class="cf">if</span> x <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
+<span id="cb6-5"><a></a>    <span class="bu">print</span>(x)</span>
+<span id="cb6-6"><a></a><span class="cf">else</span>:</span>
+<span id="cb6-7"><a></a>    <span class="bu">print</span>(<span class="op">-</span>x)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
+<section id="ejecución-de-pruebas" class="slide level2">
+<h2>Ejecución de pruebas</h2>
+
+<img data-src="img/28-vsc-unittest.png" class="r-stretch"></section>
 <section id="entrega-de-la-práctica" class="slide level2">
 <h2>Entrega de la práctica</h2>
 <p>Todas las prácticas se entregarán a través de <strong>Moodle</strong>. Esta <code>Práctica 0</code> no es evaluable, pero sí se deberá entregar para familiarizarse con el proceso.</p>
