@@ -8,7 +8,7 @@ format: revealjs
 
 - Sergio Martín Segura (`segura@unizar.es`)
     - Teoría, problemas y prácticas
-    - Despacho: L2.09, Ada Byron
+    - Despacho: D.AYD, Ada Byron
 - Miguel Ángel Latre Abadía (`latre@unizar.es`)
     - Prácticas
     - Despacho: D2.22, Ada Byron
