@@ -4,6 +4,22 @@ subtitle: Tipos Primitivos
 format: html
 ---
 
+## Estructura de archivos y carpetas para la práctica 1
+
+En la [práctica 0](../p0/101_introductoria.html#/22) creamos la estructura básica de carpetas junto con unos archivos de configuración de Visual Studio Code que nos van a facilitar hacer pruebas de los programas que escribamos.
+
+Para aprovechar al máximo las posibilidades de Visual Studio Code, abre la carpeta `p1` de tu carpeta de prácticas `FIIB` que creamos la semana pasada.
+Hazlo seleccionando carpeta `p1` en el Explorador de Windows o en Finder y, con el botón derecho, elige el menú `Abrir directorio en VSCode`.
+También puedes abrir primero Visual Studio Code y, desde allí, ir al menú `File` > `Open Folder` y seleccionar la carpeta `p1`.
+
+Copia también los archivos de pruebas de la práctica 1:
+
+1. En tu carpeta de prácticas `FIIB`, accede a la carpeta `tests` de la carpeta `p1` y déjala abierta.
+1. Descarga el fichero [`tests_p1.zip`](./tests_p1.zip).
+1. Abre el archivo `tests_p1.zip` que te has descargado.
+1. Arrastra todo el contenido del archivo `tests_p1` a la carpeta `tests` de la carpeta `p1`.
+
+
 ## Problemas de conversión
 
 ### Pulgadas
