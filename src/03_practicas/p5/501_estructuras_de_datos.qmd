@@ -197,7 +197,7 @@ Ejemplo de ejecución:
 
 ## Entrega de la práctica
 
-**Antes del 26 de abril a las 18:00,** deberán haberse subido a Moodle los siguientes ficheros:
+**Antes de las 18:00 de la fecha límite establecida en Moodle,** deberán haberse subido a Moodle los siguientes ficheros:
 
 - [ ] `complejos.py`
 - [ ] `calculadora.py`

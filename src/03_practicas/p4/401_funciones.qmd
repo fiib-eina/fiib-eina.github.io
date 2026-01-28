@@ -256,7 +256,7 @@ Al escribir la función `leer_hora()`, apóyate en estas otras funciones:
 
 ## Entrega de la práctica
 
-**Antes del 29 de marzo a las 18:00,** deberán haberse subido a Moodle los siguientes ficheros:
+**Antes de las 18:00 de la fecha límite establecida en Moodle,** deberán haberse subido a Moodle los siguientes ficheros:
 
 - [ ] `amigos.py`
 - [ ] `codigos_perdidos.py`

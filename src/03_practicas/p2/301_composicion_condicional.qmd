@@ -201,7 +201,7 @@ Este aspecto debe ser comprobado por el programa:
 
 ## Entrega de la práctica
 
-**Antes del sábado 1 de marzo a las 18:00,** deberán haberse subido a Moodle los siguientes ficheros:
+**Antes de las 18:00 de la fecha límite establecida en Moodle,** deberán haberse subido a Moodle los siguientes ficheros:
 
 - [ ] `matriculas.py`
 - [ ] `notas.py`

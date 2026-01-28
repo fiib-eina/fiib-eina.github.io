@@ -356,7 +356,7 @@ Implementa el programa `control_acceso.py` que realice lo siguiente:
 
 ## Entrega de la práctica
 
-**Antes del 17 de mayo a las 18:00,** deberán haberse subido a Moodle los siguientes ficheros:
+**Antes de las 18:00 de la fecha límite establecida en Moodle,** deberán haberse subido a Moodle los siguientes ficheros:
 
 - [ ] `filtrar_velocidades.py`
 - [ ] `cuenta_letras.py`

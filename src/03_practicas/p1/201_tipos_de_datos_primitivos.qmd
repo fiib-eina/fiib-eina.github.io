@@ -97,7 +97,7 @@ Un segundo ejemplo se presenta a continuación para ilustrar el comportamiento d
 
 Implementa un programa que:
 
-- Solicite al usuario las coordenadas de dos esquinas opuestas de un rectángulo.
+- Solicite al usuario las coordenadas de dos esquinas opuestas de un rectángulo:
     - `x1`, `y1`, `x2`, `y2`
 - Usando esas coordenadas, calcule:
     - El área del rectángulo
@@ -199,7 +199,7 @@ Otro ejemplo de ejecución:
 
 ## Entrega de la práctica
 
-**Antes del sábado 15 de febrero a las 18:00,** deberán haberse subido a Moodle los siguientes ficheros:
+**Antes de las 18:00 de la fecha límite establecida en Moodle,** deberán haberse subido a Moodle los siguientes ficheros:
 
 - [ ] `pulgadas.py`
 - [ ] `fahrenheit.py`
