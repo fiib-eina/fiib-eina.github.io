@@ -87,7 +87,7 @@
     "href": "src/03_practicas/p5/501_estructuras_de_datos.html#entrega-de-la-práctica",
     "title": "Práctica 5",
     "section": "4 Entrega de la práctica",
-    "text": "4 Entrega de la práctica\nAntes del 26 de abril a las 18:00, deberán haberse subido a Moodle los siguientes ficheros:\n\ncomplejos.py\ncalculadora.py\nlista_complejos.py",
+    "text": "4 Entrega de la práctica\nAntes de las 18:00 de la fecha límite establecida en Moodle, deberán haberse subido a Moodle los siguientes ficheros:\n\ncomplejos.py\ncalculadora.py\nlista_complejos.py",
     "crumbs": [
       "Prácticas",
       "P5",
@@ -171,7 +171,19 @@
     "href": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html",
     "title": "Práctica 1",
     "section": "",
-    "text": "Desarrolla un programa en Python que solicite al usuario un número real, que representará una longitud medida en centímetros, y escriba en la pantalla la medida equivalente en pulgadas.\nUna pulgada anglosajona actual equivale a 25,4 mm.\nUn ejemplo de ejecución:\nIntroduce un valor en centímetros:\n1\nEn pulgadas son:\n0.39370078740157477\nOtro ejemplo de ejecución:\nIntroduce un valor en centímetros:\n25.4\nEn pulgadas son:\n10.0\nY otro más:\nIntroduce un valor en centímetros:\n84.025\nEn pulgadas son:\n33.080708661417326\nEntrega: Escribe tu programa en un fichero denominado pulgadas.py.\n\n\n\nEscribe un programa en Python que solicite una temperatura expresada en grados Fahrenheit y escriba en la pantalla su equivalente en grados Celsius.\nLa fórmula que proporciona la equivalencia entre grados Celsius y Fahrenheit es\n\\[\nC=\\frac{5}{9}(F - 32)\n\\]\ndonde \\(C\\) es la temperatura en grados Celsius y \\(F\\) es la temperatura en grados Fahrenheit.\nUn ejemplo de ejecución:\nEscriba una temperatura expresada en grados Fahrenheit:\n32\nEn grados Celsius son:\n0.0\nY otro:\nEscriba una temperatura expresada en grados Fahrenheit:\n-459.67\nEn grados Celsius son:\n-273.15000000000003\nAunque probablemente no sea cierto, se dice que Daniel Gabriel Fahrenheit estableció el límite superior de su escala (100 °F) en la temperatura del cuerpo humano. Utiliza tu programa para comprobar que Fahrenheit tenía fiebre cuando calibró su escala.\nEntrega: Escribe tu programa en un fichero denominado fahrenheit.py.\n\n\n\nUna casa de cambio de moneda se ha especializado en dos divisas: euro y yen. Esta casa de cambio utiliza una tasa de conversión de euros a yenes fija durante todo un mes. Para este mes de febrero, ha establecido que va a cambiar un euro por 161,03241 yenes.\nEscribe un programa en Python que pida al usuario que escriba una cantidad no negativa de dinero expresada en euros y le informe de su equivalente en yenes:\nEscriba una cantidad no negativa de dinero en euros:\n43.65\nYenes:\n7029\nComo los yenes no tienen moneda fraccionaria (los senes dejaron de utilizarse en 1953), queremos que el número de yenes resultante se escriba sin decimales.\nUn segundo ejemplo se presenta a continuación para ilustrar el comportamiento deseado del programa:\nEscriba una cantidad no negativa de dinero en euros:\n43.69\nYenes:\n7036\nEntrega: Escribe tu programa en un fichero denominado yenes.py.",
+    "text": "En la práctica 0 creamos la estructura básica de carpetas junto con unos archivos de configuración de Visual Studio Code que nos van a facilitar hacer pruebas de los programas que escribamos.\nPara aprovechar al máximo las posibilidades de Visual Studio Code, abre la carpeta p1 de tu carpeta de prácticas FIIB que creamos la semana pasada. Hazlo seleccionando carpeta p1 en el Explorador de Windows o en Finder y, con el botón derecho, elige el menú Abrir directorio en VSCode. También puedes abrir primero Visual Studio Code y, desde allí, ir al menú File &gt; Open Folder y seleccionar la carpeta p1.\nCopia también los archivos de pruebas de la práctica 1:\n\nEn tu carpeta de prácticas FIIB, accede a la carpeta tests de la carpeta p1 y déjala abierta.\nDescarga el fichero tests_p1.zip.\nAbre el archivo tests_p1.zip que te has descargado.\nArrastra todo el contenido del archivo tests_p1 a la carpeta tests de la carpeta p1.",
+    "crumbs": [
+      "Prácticas",
+      "P1",
+      "Práctica 1"
+    ]
+  },
+  {
+    "objectID": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#estructura-de-archivos-y-carpetas-para-la-práctica-1",
+    "href": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#estructura-de-archivos-y-carpetas-para-la-práctica-1",
+    "title": "Práctica 1",
+    "section": "",
+    "text": "En la práctica 0 creamos la estructura básica de carpetas junto con unos archivos de configuración de Visual Studio Code que nos van a facilitar hacer pruebas de los programas que escribamos.\nPara aprovechar al máximo las posibilidades de Visual Studio Code, abre la carpeta p1 de tu carpeta de prácticas FIIB que creamos la semana pasada. Hazlo seleccionando carpeta p1 en el Explorador de Windows o en Finder y, con el botón derecho, elige el menú Abrir directorio en VSCode. También puedes abrir primero Visual Studio Code y, desde allí, ir al menú File &gt; Open Folder y seleccionar la carpeta p1.\nCopia también los archivos de pruebas de la práctica 1:\n\nEn tu carpeta de prácticas FIIB, accede a la carpeta tests de la carpeta p1 y déjala abierta.\nDescarga el fichero tests_p1.zip.\nAbre el archivo tests_p1.zip que te has descargado.\nArrastra todo el contenido del archivo tests_p1 a la carpeta tests de la carpeta p1.",
     "crumbs": [
       "Prácticas",
       "P1",
@@ -182,8 +194,8 @@
     "objectID": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#problemas-de-conversión",
     "href": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#problemas-de-conversión",
     "title": "Práctica 1",
-    "section": "",
-    "text": "Desarrolla un programa en Python que solicite al usuario un número real, que representará una longitud medida en centímetros, y escriba en la pantalla la medida equivalente en pulgadas.\nUna pulgada anglosajona actual equivale a 25,4 mm.\nUn ejemplo de ejecución:\nIntroduce un valor en centímetros:\n1\nEn pulgadas son:\n0.39370078740157477\nOtro ejemplo de ejecución:\nIntroduce un valor en centímetros:\n25.4\nEn pulgadas son:\n10.0\nY otro más:\nIntroduce un valor en centímetros:\n84.025\nEn pulgadas son:\n33.080708661417326\nEntrega: Escribe tu programa en un fichero denominado pulgadas.py.\n\n\n\nEscribe un programa en Python que solicite una temperatura expresada en grados Fahrenheit y escriba en la pantalla su equivalente en grados Celsius.\nLa fórmula que proporciona la equivalencia entre grados Celsius y Fahrenheit es\n\\[\nC=\\frac{5}{9}(F - 32)\n\\]\ndonde \\(C\\) es la temperatura en grados Celsius y \\(F\\) es la temperatura en grados Fahrenheit.\nUn ejemplo de ejecución:\nEscriba una temperatura expresada en grados Fahrenheit:\n32\nEn grados Celsius son:\n0.0\nY otro:\nEscriba una temperatura expresada en grados Fahrenheit:\n-459.67\nEn grados Celsius son:\n-273.15000000000003\nAunque probablemente no sea cierto, se dice que Daniel Gabriel Fahrenheit estableció el límite superior de su escala (100 °F) en la temperatura del cuerpo humano. Utiliza tu programa para comprobar que Fahrenheit tenía fiebre cuando calibró su escala.\nEntrega: Escribe tu programa en un fichero denominado fahrenheit.py.\n\n\n\nUna casa de cambio de moneda se ha especializado en dos divisas: euro y yen. Esta casa de cambio utiliza una tasa de conversión de euros a yenes fija durante todo un mes. Para este mes de febrero, ha establecido que va a cambiar un euro por 161,03241 yenes.\nEscribe un programa en Python que pida al usuario que escriba una cantidad no negativa de dinero expresada en euros y le informe de su equivalente en yenes:\nEscriba una cantidad no negativa de dinero en euros:\n43.65\nYenes:\n7029\nComo los yenes no tienen moneda fraccionaria (los senes dejaron de utilizarse en 1953), queremos que el número de yenes resultante se escriba sin decimales.\nUn segundo ejemplo se presenta a continuación para ilustrar el comportamiento deseado del programa:\nEscriba una cantidad no negativa de dinero en euros:\n43.69\nYenes:\n7036\nEntrega: Escribe tu programa en un fichero denominado yenes.py.",
+    "section": "2 Problemas de conversión",
+    "text": "2 Problemas de conversión\n\n2.1 Pulgadas\nDesarrolla un programa en Python que solicite al usuario un número real, que representará una longitud medida en centímetros, y escriba en la pantalla la medida equivalente en pulgadas.\nUna pulgada anglosajona actual equivale a 25,4 mm.\nUn ejemplo de ejecución:\nIntroduce un valor en centímetros:\n1\nEn pulgadas son:\n0.39370078740157477\nOtro ejemplo de ejecución:\nIntroduce un valor en centímetros:\n25.4\nEn pulgadas son:\n10.0\nY otro más:\nIntroduce un valor en centímetros:\n84.025\nEn pulgadas son:\n33.080708661417326\nEntrega: Escribe tu programa en un fichero denominado pulgadas.py.\n\n\n2.2 Fahrenheit\nEscribe un programa en Python que solicite una temperatura expresada en grados Fahrenheit y escriba en la pantalla su equivalente en grados Celsius.\nLa fórmula que proporciona la equivalencia entre grados Celsius y Fahrenheit es\n\\[\nC=\\frac{5}{9}(F - 32)\n\\]\ndonde \\(C\\) es la temperatura en grados Celsius y \\(F\\) es la temperatura en grados Fahrenheit.\nUn ejemplo de ejecución:\nEscriba una temperatura expresada en grados Fahrenheit:\n32\nEn grados Celsius son:\n0.0\nY otro:\nEscriba una temperatura expresada en grados Fahrenheit:\n-459.67\nEn grados Celsius son:\n-273.15000000000003\nAunque probablemente no sea cierto, se dice que Daniel Gabriel Fahrenheit estableció el límite superior de su escala (100 °F) en la temperatura del cuerpo humano. Utiliza tu programa para comprobar que Fahrenheit tenía fiebre cuando calibró su escala.\nEntrega: Escribe tu programa en un fichero denominado fahrenheit.py.\n\n\n2.3 Cambio de divisas\nUna casa de cambio de moneda se ha especializado en dos divisas: euro y yen. Esta casa de cambio utiliza una tasa de conversión de euros a yenes fija durante todo un mes. Para este mes de febrero, ha establecido que va a cambiar un euro por 161,03241 yenes.\nEscribe un programa en Python que pida al usuario que escriba una cantidad no negativa de dinero expresada en euros y le informe de su equivalente en yenes:\nEscriba una cantidad no negativa de dinero en euros:\n43.65\nYenes:\n7029\nComo los yenes no tienen moneda fraccionaria (los senes dejaron de utilizarse en 1953), queremos que el número de yenes resultante se escriba sin decimales.\nUn segundo ejemplo se presenta a continuación para ilustrar el comportamiento deseado del programa:\nEscriba una cantidad no negativa de dinero en euros:\n43.69\nYenes:\n7036\nEntrega: Escribe tu programa en un fichero denominado yenes.py.",
     "crumbs": [
       "Prácticas",
       "P1",
@@ -194,8 +206,8 @@
     "objectID": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#rectángulo",
     "href": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#rectángulo",
     "title": "Práctica 1",
-    "section": "2 Rectángulo",
-    "text": "2 Rectángulo\nImplementa un programa que:\n\nSolicite al usuario las coordenadas de dos esquinas opuestas de un rectángulo.\n\nx1, y1, x2, y2\n\nUsando esas coordenadas, calcule:\n\nEl área del rectángulo\nEl perímetro del rectángulo\n\n\n\nUn ejemplo de ejecución del programa solicitado:\nIntroduzca x1:\n2\nIntroduzca y1:\n3\nIntroduzca x2:\n5\nIntroduzca y2:\n6\n\nEl área del rectángulo es:\n9.0\n\nEl perímetro del rectángulo es:\n12.0\nY otro:\nIntroduzca x1:\n1.5\nIntroduzca y1:\n7.4\nIntroduzca x2:\n6.8\nIntroduzca y2:\n2.3\n\nEl área del rectángulo es:\n27.03\n\nEl perímetro del rectángulo es:\n20.8\nEntrega: Escribe tu programa en un fichero denominado rectangulo.py.",
+    "section": "3 Rectángulo",
+    "text": "3 Rectángulo\nImplementa un programa que:\n\nSolicite al usuario las coordenadas de dos esquinas opuestas de un rectángulo:\n\nx1, y1, x2, y2\n\nUsando esas coordenadas, calcule:\n\nEl área del rectángulo\nEl perímetro del rectángulo\n\n\n\nUn ejemplo de ejecución del programa solicitado:\nIntroduzca x1:\n2\nIntroduzca y1:\n3\nIntroduzca x2:\n5\nIntroduzca y2:\n6\n\nEl área del rectángulo es:\n9.0\n\nEl perímetro del rectángulo es:\n12.0\nY otro:\nIntroduzca x1:\n1.5\nIntroduzca y1:\n7.4\nIntroduzca x2:\n6.8\nIntroduzca y2:\n2.3\n\nEl área del rectángulo es:\n27.03\n\nEl perímetro del rectángulo es:\n20.8\nEntrega: Escribe tu programa en un fichero denominado rectangulo.py.",
     "crumbs": [
       "Prácticas",
       "P1",
@@ -206,8 +218,8 @@
     "objectID": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#habitación-de-hotel",
     "href": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#habitación-de-hotel",
     "title": "Práctica 1",
-    "section": "3 Habitación de hotel",
-    "text": "3 Habitación de hotel\nEscribe un programa en Python que interaccione con el usuario mostrando el siguiente comportamiento:\nEscriba un número de habitación:\n514\n\nPlanta:\n5\nNúmero:\n14\nEl número de habitación escrito por el usuario sigue el convenio habitual de numeración de habitaciones en hoteles: el número de centenas indican la planta en la que está la habitación y las decenas y unidades indican el número de habitación dentro de la planta. Por el momento, vamos a suponer que el usuario siempre va a escribir números positivos que representan números de habitación válidas con formato establecido.\nUn segundo ejemplo se presenta a continuación para ilustrar el comportamiento deseado del programa.\nEscriba un número de habitación:\n1803\n\nPlanta:\n18\nNúmero:\n3\nEntrega: Escribe tu programa en un fichero denominado hotel.py.",
+    "section": "4 Habitación de hotel",
+    "text": "4 Habitación de hotel\nEscribe un programa en Python que interaccione con el usuario mostrando el siguiente comportamiento:\nEscriba un número de habitación:\n514\n\nPlanta:\n5\nNúmero:\n14\nEl número de habitación escrito por el usuario sigue el convenio habitual de numeración de habitaciones en hoteles: el número de centenas indican la planta en la que está la habitación y las decenas y unidades indican el número de habitación dentro de la planta. Por el momento, vamos a suponer que el usuario siempre va a escribir números positivos que representan números de habitación válidas con formato establecido.\nUn segundo ejemplo se presenta a continuación para ilustrar el comportamiento deseado del programa.\nEscriba un número de habitación:\n1803\n\nPlanta:\n18\nNúmero:\n3\nEntrega: Escribe tu programa en un fichero denominado hotel.py.",
     "crumbs": [
       "Prácticas",
       "P1",
@@ -218,8 +230,8 @@
     "objectID": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#condiciones-booleanas",
     "href": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#condiciones-booleanas",
     "title": "Práctica 1",
-    "section": "4 Condiciones booleanas",
-    "text": "4 Condiciones booleanas\nEscribe un programa en Python que pida al usuario tres números enteros y diga si se cumple que los tres números son pares, positivos y además el segundo número está comprendido estrictamente entre el primero y el tercero:\nEscribe un primer número:\n2\nEscribe un segundo número:\n4\nEscribe un tercer número:\n8\nCumplen todas las condiciones:\nTrue\nOtro ejemplo de ejecución:\nEscribe un primer número:\n3\nEscribe un segundo número:\n-2\nEscribe un tercer número:\n-5\nCumplen todas las condiciones:\nFalse\nEntrega: Escribe tu programa en un fichero denominado entre_pares.py.",
+    "section": "5 Condiciones booleanas",
+    "text": "5 Condiciones booleanas\nEscribe un programa en Python que pida al usuario tres números enteros y diga si se cumple que los tres números son pares, positivos y además el segundo número está comprendido estrictamente entre el primero y el tercero:\nEscribe un primer número:\n2\nEscribe un segundo número:\n4\nEscribe un tercer número:\n8\nCumplen todas las condiciones:\nTrue\nOtro ejemplo de ejecución:\nEscribe un primer número:\n3\nEscribe un segundo número:\n-2\nEscribe un tercer número:\n-5\nCumplen todas las condiciones:\nFalse\nEntrega: Escribe tu programa en un fichero denominado entre_pares.py.",
     "crumbs": [
       "Prácticas",
       "P1",
@@ -230,8 +242,8 @@
     "objectID": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#entrega-de-la-práctica",
     "href": "src/03_practicas/p1/201_tipos_de_datos_primitivos.html#entrega-de-la-práctica",
     "title": "Práctica 1",
-    "section": "5 Entrega de la práctica",
-    "text": "5 Entrega de la práctica\nAntes del sábado 15 de febrero a las 18:00, deberán haberse subido a Moodle los siguientes ficheros:\n\npulgadas.py\nfahrenheit.py\nyenes.py\nrectangulo.py\nhotel.py\nentre_pares.py",
+    "section": "6 Entrega de la práctica",
+    "text": "6 Entrega de la práctica\nAntes de las 18:00 de la fecha límite establecida en Moodle, deberán haberse subido a Moodle los siguientes ficheros:\n\npulgadas.py\nfahrenheit.py\nyenes.py\nrectangulo.py\nhotel.py\nentre_pares.py",
     "crumbs": [
       "Prácticas",
       "P1",
@@ -1377,7 +1389,7 @@
     "href": "src/01_teoria/00_presentacion/000_presentación.html",
     "title": "Presentación de la Asignatura",
     "section": "",
-    "text": "Sergio Martín Segura (segura@unizar.es)\n\nTeoría, problemas y prácticas\nDespacho: L2.09, Ada Byron\n\nMiguel Ángel Latre Abadía (latre@unizar.es)\n\nPrácticas\nDespacho: D2.22, Ada Byron\n\n\nTutorías: Consultar enlace en Moodle",
+    "text": "Sergio Martín Segura (segura@unizar.es)\n\nTeoría, problemas y prácticas\nDespacho: D.AYD, Ada Byron\n\nMiguel Ángel Latre Abadía (latre@unizar.es)\n\nPrácticas\nDespacho: D2.22, Ada Byron\n\n\nTutorías: Consultar enlace en Moodle",
     "crumbs": [
       "Teoría",
       "00 Presentacion",
@@ -1389,7 +1401,7 @@
     "href": "src/01_teoria/00_presentacion/000_presentación.html#profesores",
     "title": "Presentación de la Asignatura",
     "section": "",
-    "text": "Sergio Martín Segura (segura@unizar.es)\n\nTeoría, problemas y prácticas\nDespacho: L2.09, Ada Byron\n\nMiguel Ángel Latre Abadía (latre@unizar.es)\n\nPrácticas\nDespacho: D2.22, Ada Byron\n\n\nTutorías: Consultar enlace en Moodle",
+    "text": "Sergio Martín Segura (segura@unizar.es)\n\nTeoría, problemas y prácticas\nDespacho: D.AYD, Ada Byron\n\nMiguel Ángel Latre Abadía (latre@unizar.es)\n\nPrácticas\nDespacho: D2.22, Ada Byron\n\n\nTutorías: Consultar enlace en Moodle",
     "crumbs": [
       "Teoría",
       "00 Presentacion",
@@ -1437,7 +1449,7 @@
     "href": "src/01_teoria/00_presentacion/000_presentación.reveal.html#profesores",
     "title": "Presentación de la Asignatura",
     "section": "Profesores",
-    "text": "Profesores\n\nSergio Martín Segura (segura@unizar.es)\n\nTeoría, problemas y prácticas\nDespacho: L2.09, Ada Byron\n\nMiguel Ángel Latre Abadía (latre@unizar.es)\n\nPrácticas\nDespacho: D2.22, Ada Byron\n\n\nTutorías: Consultar enlace en Moodle"
+    "text": "Profesores\n\nSergio Martín Segura (segura@unizar.es)\n\nTeoría, problemas y prácticas\nDespacho: D.AYD, Ada Byron\n\nMiguel Ángel Latre Abadía (latre@unizar.es)\n\nPrácticas\nDespacho: D2.22, Ada Byron\n\n\nTutorías: Consultar enlace en Moodle"
   },
   {
     "objectID": "src/01_teoria/00_presentacion/000_presentación.reveal.html#organización",
@@ -2749,7 +2761,7 @@
     "href": "src/03_practicas/p2/301_composicion_condicional.html#entrega-de-la-práctica",
     "title": "Práctica 2",
     "section": "5 Entrega de la práctica",
-    "text": "5 Entrega de la práctica\nAntes del sábado 1 de marzo a las 18:00, deberán haberse subido a Moodle los siguientes ficheros:\n\nmatriculas.py\nnotas.py\nmalabares.py\ntriangulos.py\ncajero.py",
+    "text": "5 Entrega de la práctica\nAntes de las 18:00 de la fecha límite establecida en Moodle, deberán haberse subido a Moodle los siguientes ficheros:\n\nmatriculas.py\nnotas.py\nmalabares.py\ntriangulos.py\ncajero.py",
     "crumbs": [
       "Prácticas",
       "P2",
@@ -2821,7 +2833,7 @@
     "href": "src/03_practicas/p4/401_funciones.html#entrega-de-la-práctica",
     "title": "Práctica 4",
     "section": "5 Entrega de la práctica",
-    "text": "5 Entrega de la práctica\nAntes del 29 de marzo a las 18:00, deberán haberse subido a Moodle los siguientes ficheros:\n\namigos.py\ncodigos_perdidos.py\ntartaglia.py\nhoras.py",
+    "text": "5 Entrega de la práctica\nAntes de las 18:00 de la fecha límite establecida en Moodle, deberán haberse subido a Moodle los siguientes ficheros:\n\namigos.py\ncodigos_perdidos.py\ntartaglia.py\nhoras.py",
     "crumbs": [
       "Prácticas",
       "P4",
@@ -2881,7 +2893,7 @@
     "href": "src/03_practicas/p6/601_ficheros.html#entrega-de-la-práctica",
     "title": "Práctica 6",
     "section": "4 Entrega de la práctica",
-    "text": "4 Entrega de la práctica\nAntes del 17 de mayo a las 18:00, deberán haberse subido a Moodle los siguientes ficheros:\n\nfiltrar_velocidades.py\ncuenta_letras.py\nusuarios.py\nagregar_usuario.py\ncontrol_acceso.py",
+    "text": "4 Entrega de la práctica\nAntes de las 18:00 de la fecha límite establecida en Moodle, deberán haberse subido a Moodle los siguientes ficheros:\n\nfiltrar_velocidades.py\ncuenta_letras.py\nusuarios.py\nagregar_usuario.py\ncontrol_acceso.py",
     "crumbs": [
       "Prácticas",
       "P6",
