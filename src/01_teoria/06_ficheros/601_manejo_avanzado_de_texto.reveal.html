@@ -7,8 +7,8 @@
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.34">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-b754b9fd3853d7e56faef54c29c5d52b.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
 
   <title>Fundamentos de Informática – Teoría 601</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -95,7 +95,7 @@
     code span.vs { color: #008000; } /* VerbatimString */
     code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-f7935cc89ec6222034d74a13893d12e4.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-885290ce3065af1b721f68f6ffa32a74.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -227,7 +227,7 @@
 <ul>
 <li>Escribe una función que lea una secuencia de números enteros (terminada en un salto de línea) y los almacene en una lista.</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="bu">print</span>(leer_lista())</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="bu">print</span>(leer_lista())</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">Introduzca una secuencia de números:<br>
 <strong>1 2 34 5 6 12 8 9</strong><br>
 [1, 2, 34, 5, 6, 12, 8, 9]</div>
@@ -267,10 +267,10 @@
 <section class="slide level2">
 
 <h4 id="ejemplo-leer-dos-números-mal">Ejemplo: Leer dos números (mal)</h4>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="bu">print</span>(<span class="st">"Introduzca dos números:"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="bu">print</span>(<span class="st">"Introduzca dos números:"</span>)</span>
 <span id="cb2-2"><a></a>a <span class="op">=</span> <span class="bu">input</span>()</span>
 <span id="cb2-3"><a></a>b <span class="op">=</span> <span class="bu">input</span>()</span>
-<span id="cb2-4"><a></a><span class="bu">print</span>(<span class="st">"La suma es:"</span>, a <span class="op">+</span> b)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-4"><a></a><span class="bu">print</span>(<span class="st">"La suma es:"</span>, a <span class="op">+</span> b)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">Introduzca dos números:<br>
 <strong>1 2</strong><br>
 <em>el programa se cuelga esperando el segundo input</em></div>
@@ -328,10 +328,10 @@
 </ul></li>
 </ul>
 <p><strong>Ejemplo usando <code>upper()</code> sobre la variable <code>s</code></strong>:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>s <span class="op">=</span> <span class="st">"Hola mundo"</span></span>
-<span id="cb3-2"><a></a>s2 <span class="op">=</span> s.upper()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>s <span class="op">=</span> <span class="st">"Hola mundo"</span></span>
+<span id="cb3-2"><a></a>s2 <span class="op">=</span> s.upper()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Ejemplo usando <code>upper()</code> sobre un literal</strong>:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>s2 <span class="op">=</span> <span class="st">"Hola mundo"</span>.upper()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>s2 <span class="op">=</span> <span class="st">"Hola mundo"</span>.upper()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -347,7 +347,7 @@
 <li><code>list[str]</code>: una lista con las partes del string original</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="bu">print</span>(<span class="st">"Hola mundo"</span>.split(<span class="st">" "</span>)) </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="bu">print</span>(<span class="st">"Hola mundo"</span>.split(<span class="st">" "</span>)) </span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">[‘Hola’, ‘mundo’]</div>
 </section>
 <section class="slide level2">
@@ -356,7 +356,7 @@
 <ul>
 <li>Todas las IPv4 tienen la forma <code>a.b.c.d</code>, donde <code>a</code>, <code>b</code>, <code>c</code> y <code>d</code> son números enteros entre 0 y 255.</li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>ip <span class="op">=</span> <span class="st">"192.168.1.2"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>ip <span class="op">=</span> <span class="st">"192.168.1.2"</span></span>
 <span id="cb6-2"><a></a>partes <span class="op">=</span> ip.split(<span class="st">"."</span>)</span>
 <span id="cb6-3"><a></a><span class="cf">if</span> <span class="bu">len</span>(partes) <span class="op">!=</span> <span class="dv">4</span>:</span>
 <span id="cb6-4"><a></a>    <span class="bu">print</span>(<span class="st">"La IP no es válida"</span>)</span>
@@ -364,7 +364,7 @@
 <span id="cb6-6"><a></a>    <span class="bu">print</span>(partes[<span class="dv">0</span>])</span>
 <span id="cb6-7"><a></a>    <span class="bu">print</span>(partes[<span class="dv">1</span>])</span>
 <span id="cb6-8"><a></a>    <span class="bu">print</span>(partes[<span class="dv">2</span>])</span>
-<span id="cb6-9"><a></a>    <span class="bu">print</span>(partes[<span class="dv">3</span>])</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-9"><a></a>    <span class="bu">print</span>(partes[<span class="dv">3</span>])</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">192<br>
 168<br>
 1<br>
@@ -373,8 +373,8 @@
 <section class="slide level2">
 
 <h4 id="ejemplo-trocear-un-número">Ejemplo: Trocear un número</h4>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>partes <span class="op">=</span> <span class="st">"2.345.543,23"</span>.split(<span class="st">","</span>)</span>
-<span id="cb7-2"><a></a><span class="bu">print</span>(<span class="ss">f"Parte entera: </span><span class="sc">{</span>partes[<span class="dv">0</span>]<span class="sc">}</span><span class="ss">, Parte decimal: </span><span class="sc">{</span>partes[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>partes <span class="op">=</span> <span class="st">"2.345.543,23"</span>.split(<span class="st">","</span>)</span>
+<span id="cb7-2"><a></a><span class="bu">print</span>(<span class="ss">f"Parte entera: </span><span class="sc">{</span>partes[<span class="dv">0</span>]<span class="sc">}</span><span class="ss">, Parte decimal: </span><span class="sc">{</span>partes[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">Parte entera: 2.345.543, Parte decimal: 23</div>
 </section>
 <section class="slide level2">
@@ -391,14 +391,14 @@
 <li><code>string</code>: un string con los elementos de la lista unidos por el string base.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="bu">print</span>(<span class="st">","</span>.join([<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>]))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="bu">print</span>(<span class="st">","</span>.join([<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>]))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">a,b,c</div>
 </section>
 <section class="slide level2">
 
 <h4 id="ejemplo-mostrar-una-lista-de-nombres-separados-por-comas">Ejemplo: Mostrar una lista de nombres separados por comas</h4>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>nombres <span class="op">=</span> [<span class="st">"Juan"</span>, <span class="st">"Pedro"</span>, <span class="st">"María"</span>]</span>
-<span id="cb9-2"><a></a><span class="bu">print</span>(<span class="st">", "</span>.join(nombres))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>nombres <span class="op">=</span> [<span class="st">"Juan"</span>, <span class="st">"Pedro"</span>, <span class="st">"María"</span>]</span>
+<span id="cb9-2"><a></a><span class="bu">print</span>(<span class="st">", "</span>.join(nombres))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">Juan, Pedro, María</div>
 <div class="callout callout-tip callout-style-simple">
 <div class="callout-body">
@@ -414,7 +414,7 @@
 <section class="slide level2">
 
 <h4 id="ejemplo-unir-una-ip">Ejemplo: Unir una IP</h4>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="bu">print</span>(<span class="st">"."</span>.join([<span class="st">"192"</span>, <span class="st">"168"</span>, <span class="st">"1"</span>, <span class="st">"2"</span>]))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="bu">print</span>(<span class="st">"."</span>.join([<span class="st">"192"</span>, <span class="st">"168"</span>, <span class="st">"1"</span>, <span class="st">"2"</span>]))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">192.168.1.2</div>
 <div class="callout callout-warning callout-style-simple">
 <div class="callout-body">
@@ -426,9 +426,9 @@
 <ul>
 <li>Si intentas unir una lista de enteros, obtendrás un error.</li>
 </ul>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="bu">print</span>(<span class="st">"."</span>.join([<span class="dv">192</span>, <span class="dv">168</span>, <span class="dv">1</span>, <span class="dv">2</span>]))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="bu">print</span>(<span class="st">"."</span>.join([<span class="dv">192</span>, <span class="dv">168</span>, <span class="dv">1</span>, <span class="dv">2</span>]))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">TypeError: sequence item 0: expected str instance, int found</div>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="bu">print</span>(<span class="st">"."</span>.join([<span class="bu">str</span>(<span class="dv">192</span>), <span class="bu">str</span>(<span class="dv">168</span>), <span class="bu">str</span>(<span class="dv">1</span>), <span class="bu">str</span>(<span class="dv">2</span>)]))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="bu">print</span>(<span class="st">"."</span>.join([<span class="bu">str</span>(<span class="dv">192</span>), <span class="bu">str</span>(<span class="dv">168</span>), <span class="bu">str</span>(<span class="dv">1</span>), <span class="bu">str</span>(<span class="dv">2</span>)]))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">192.168.1.2</div>
 </div>
 </div>
@@ -437,14 +437,14 @@
 <section class="slide level2">
 
 <h4 id="ejemplo-trocear-y-unir-un-número">Ejemplo: Trocear y unir un número</h4>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>numero_troceado <span class="op">=</span> <span class="st">"2.345.543,23"</span>.split(<span class="st">","</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>numero_troceado <span class="op">=</span> <span class="st">"2.345.543,23"</span>.split(<span class="st">","</span>)</span>
 <span id="cb13-2"><a></a>parte_entera <span class="op">=</span> numero_troceado[<span class="dv">0</span>]</span>
 <span id="cb13-3"><a></a>parte_decimal <span class="op">=</span> numero_troceado[<span class="dv">1</span>]</span>
 <span id="cb13-4"><a></a></span>
 <span id="cb13-5"><a></a>parte_entera_troceada <span class="op">=</span> parte_entera.split(<span class="st">"."</span>)</span>
 <span id="cb13-6"><a></a>parte_entera_sin_puntos <span class="op">=</span> <span class="st">""</span>.join(parte_entera_troceada)</span>
 <span id="cb13-7"><a></a></span>
-<span id="cb13-8"><a></a><span class="bu">print</span>(<span class="ss">f"Parte entera: </span><span class="sc">{</span>parte_entera_sin_puntos<span class="sc">}</span><span class="ss">, Parte decimal: </span><span class="sc">{</span>parte_decimal<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-8"><a></a><span class="bu">print</span>(<span class="ss">f"Parte entera: </span><span class="sc">{</span>parte_entera_sin_puntos<span class="sc">}</span><span class="ss">, Parte decimal: </span><span class="sc">{</span>parte_decimal<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">Parte entera: 2345543, Parte decimal: 23</div>
 <div class="callout callout-warning callout-style-simple">
 <div class="callout-body">
@@ -471,7 +471,7 @@
 <li><code>string</code>: un string sin espacios en blanco al principio y al final.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="bu">print</span>(<span class="st">"   Hola mundo   "</span>.strip())</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="bu">print</span>(<span class="st">"   Hola mundo   "</span>.strip())</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">Hola mundo</div>
 </section>
 <section class="slide level2">
@@ -489,29 +489,29 @@
 <li><code>string</code>: un string con todas las ocurrencias de <code>a</code> reemplazadas por <code>b</code>.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="bu">print</span>(<span class="st">"Tres tristes tigres tragan trigo en un trigal"</span>.replace(<span class="st">"t"</span>, <span class="st">"d"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="bu">print</span>(<span class="st">"Tres tristes tigres tragan trigo en un trigal"</span>.replace(<span class="st">"t"</span>, <span class="st">"d"</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">Tres drisdes digres dragan drigo en un drigal</div>
 </section>
 <section class="slide level2">
 
 <h4 id="ejemplo-reemplazar-palabras-completas">Ejemplo: Reemplazar palabras completas</h4>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="bu">print</span>(<span class="st">"Hola mundo"</span>.replace(<span class="st">"mundo"</span>, <span class="st">"Python"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="bu">print</span>(<span class="st">"Hola mundo"</span>.replace(<span class="st">"mundo"</span>, <span class="st">"Python"</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">Hola Python</div>
 </section>
 <section class="slide level2">
 
 <h4 id="ejemplo-varios-reemplazos-encadenados">Ejemplo: Varios reemplazos encadenados</h4>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>s <span class="op">=</span> <span class="st">"Quiero hablar con el encargado"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>s <span class="op">=</span> <span class="st">"Quiero hablar con el encargado"</span></span>
 <span id="cb17-2"><a></a>s <span class="op">=</span> s.replace(<span class="st">"a"</span>, <span class="st">"i"</span>)</span>
 <span id="cb17-3"><a></a>s <span class="op">=</span> s.replace(<span class="st">"e"</span>, <span class="st">"i"</span>)</span>
 <span id="cb17-4"><a></a>s <span class="op">=</span> s.replace(<span class="st">"o"</span>, <span class="st">"i"</span>)</span>
 <span id="cb17-5"><a></a>s <span class="op">=</span> s.replace(<span class="st">"u"</span>, <span class="st">"i"</span>)</span>
-<span id="cb17-6"><a></a><span class="bu">print</span>(s)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-6"><a></a><span class="bu">print</span>(s)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">Qiiiri hiblir cin il incirgidi</div>
 <p><strong>Opción alternativa (encadenando)</strong>:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>s <span class="op">=</span> <span class="st">"Quiero hablar con el encargado"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>s <span class="op">=</span> <span class="st">"Quiero hablar con el encargado"</span></span>
 <span id="cb18-2"><a></a>s <span class="op">=</span> s.replace(<span class="st">"a"</span>, <span class="st">"i"</span>).replace(<span class="st">"e"</span>, <span class="st">"i"</span>).replace(<span class="st">"o"</span>, <span class="st">"i"</span>).replace(<span class="st">"u"</span>, <span class="st">"i"</span>)</span>
-<span id="cb18-3"><a></a><span class="bu">print</span>(s)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-3"><a></a><span class="bu">print</span>(s)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -531,7 +531,7 @@
 </ul></li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="bu">print</span>(<span class="st">"Hola mundo"</span>.find(<span class="st">" "</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="bu">print</span>(<span class="st">"Hola mundo"</span>.find(<span class="st">" "</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">4</div>
 <div class="callout callout-tip callout-style-simple">
 <div class="callout-body">
@@ -552,11 +552,11 @@
 <section class="slide level2">
 
 <h4 id="ejemplo-buscar-un-string-entero">Ejemplo: Buscar un string entero</h4>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a><span class="bu">print</span>(<span class="st">"Hola mundo"</span>.find(<span class="st">"mundo"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a><span class="bu">print</span>(<span class="st">"Hola mundo"</span>.find(<span class="st">"mundo"</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">5</div>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a><span class="bu">print</span>(<span class="st">"Hola mundo"</span>.find(<span class="st">"Python"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a><span class="bu">print</span>(<span class="st">"Hola mundo"</span>.find(<span class="st">"Python"</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">-1</div>
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a><span class="bu">print</span>(<span class="st">"Hola mundo"</span>.find(<span class="st">"Mundo"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a><span class="bu">print</span>(<span class="st">"Hola mundo"</span>.find(<span class="st">"Mundo"</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">-1</div>
 </section>
 <section class="slide level2">
@@ -573,8 +573,8 @@
 <li><code>string</code>: un string convertido a mayúsculas o minúsculas.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a><span class="bu">print</span>(<span class="st">"Hola mundo"</span>.upper())</span>
-<span id="cb23-2"><a></a><span class="bu">print</span>(<span class="st">"Hola mundo"</span>.lower())</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a><span class="bu">print</span>(<span class="st">"Hola mundo"</span>.upper())</span>
+<span id="cb23-2"><a></a><span class="bu">print</span>(<span class="st">"Hola mundo"</span>.lower())</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">HOLA MUNDO<br>
 hola mundo</div>
 </section>
@@ -586,13 +586,13 @@ hola mundo</div>
 <li>Sin embargo, <code>str</code> <strong>no soporta append</strong>.</li>
 <li>Para combinar strings o construir uno nuevo <em>parte a parte</em> deberás hacerlo con <code>f-strings</code> o <code>+</code>.</li>
 </ul>
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a></a>s <span class="op">=</span> <span class="st">"¡Hola! ¿Qué tal amigo?"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a></a>s <span class="op">=</span> <span class="st">"¡Hola! ¿Qué tal amigo?"</span></span>
 <span id="cb24-2"><a></a>s <span class="op">=</span> s.append(<span class="st">" ¿Cómo estás?"</span>)</span>
-<span id="cb24-3"><a></a><span class="bu">print</span>(s)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb24-3"><a></a><span class="bu">print</span>(s)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">AttributeError: ‘str’ object has no attribute ‘append’</div>
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a>s <span class="op">=</span> <span class="st">"¡Hola! ¿Qué tal amigo?"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a>s <span class="op">=</span> <span class="st">"¡Hola! ¿Qué tal amigo?"</span></span>
 <span id="cb25-2"><a></a>s <span class="op">=</span> s <span class="op">+</span> <span class="st">" ¿Cómo estás?"</span></span>
-<span id="cb25-3"><a></a><span class="bu">print</span>(s)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb25-3"><a></a><span class="bu">print</span>(s)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">¡Hola! ¿Qué tal amigo? ¿Cómo estás?</div>
 </section>
 <section id="ejercicios" class="slide level2 center">
@@ -604,14 +604,14 @@ hola mundo</div>
 <ul>
 <li>Escribe una función que lea una secuencia de números enteros (terminada en un salto de línea) y los almacene en una lista.</li>
 </ul>
-<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a><span class="bu">print</span>(leer_lista())</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a><span class="bu">print</span>(leer_lista())</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">Introduzca una secuencia de números:<br>
 <strong>1 2 34 5 6 12 8 9</strong><br>
 [1, 2, 34, 5, 6, 12, 8, 9]</div>
 </section>
 <section class="slide level2">
 
-<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a></a><span class="kw">def</span> leer_lista():</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a></a><span class="kw">def</span> leer_lista():</span>
 <span id="cb27-2"><a></a>    <span class="bu">print</span>(<span class="st">"Introduzca una secuencia de números:"</span>)</span>
 <span id="cb27-3"><a></a>    linea <span class="op">=</span> <span class="bu">input</span>()</span>
 <span id="cb27-4"><a></a></span>
@@ -622,7 +622,7 @@ hola mundo</div>
 <span id="cb27-9"><a></a>        texto <span class="op">=</span> <span class="bu">int</span>(textos_separados[i])</span>
 <span id="cb27-10"><a></a>        numeros.append(texto)</span>
 <span id="cb27-11"><a></a></span>
-<span id="cb27-12"><a></a>    <span class="cf">return</span> numeros</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb27-12"><a></a>    <span class="cf">return</span> numeros</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -630,15 +630,15 @@ hola mundo</div>
 <ul>
 <li>Escribe una función que emule <code>find()</code> pero que funcione aún cuando las cadenas se distinguen por mayúsculas y minúsculas (<em>case insensitive</em>).</li>
 </ul>
-<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a></a><span class="bu">print</span>(find_case_insensitive(<span class="st">"Hola mundo"</span>, <span class="st">"Mundo"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a></a><span class="bu">print</span>(find_case_insensitive(<span class="st">"Hola mundo"</span>, <span class="st">"Mundo"</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">5</div>
 </section>
 <section class="slide level2">
 
-<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a></a><span class="kw">def</span> find_case_insensitive(s, a):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a></a><span class="kw">def</span> find_case_insensitive(s, a):</span>
 <span id="cb29-2"><a></a>    s <span class="op">=</span> s.lower()</span>
 <span id="cb29-3"><a></a>    a <span class="op">=</span> a.lower()</span>
-<span id="cb29-4"><a></a>    <span class="cf">return</span> s.find(a)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb29-4"><a></a>    <span class="cf">return</span> s.find(a)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -649,25 +649,25 @@ hola mundo</div>
 <li>Durante la década de los 2000, en la red social Tuenti, se popularizó un tipo de escritura que alternaba mayúsculas y minúsculas.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a></a><span class="bu">print</span>(tuenti(<span class="st">"Hola mundo"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a></a><span class="bu">print</span>(tuenti(<span class="st">"Hola mundo"</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">HoLa mUnDo</div>
 </section>
 <section class="slide level2">
 
-<div class="sourceCode" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a></a><span class="kw">def</span> tuenti(s):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a></a><span class="kw">def</span> tuenti(s):</span>
 <span id="cb31-2"><a></a>    resultado <span class="op">=</span> <span class="st">""</span></span>
 <span id="cb31-3"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(s)):</span>
 <span id="cb31-4"><a></a>        <span class="cf">if</span> i <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>:</span>
 <span id="cb31-5"><a></a>            resultado <span class="op">+=</span> s[i].upper()</span>
 <span id="cb31-6"><a></a>        <span class="cf">else</span>:</span>
 <span id="cb31-7"><a></a>            resultado <span class="op">+=</span> s[i].lower()</span>
-<span id="cb31-8"><a></a>    <span class="cf">return</span> resultado</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb31-8"><a></a>    <span class="cf">return</span> resultado</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
+<p><img src="../../../../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>Fundamentos de Informática</p>
 </div>
@@ -857,7 +857,7 @@ hola mundo</div>
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -931,13 +931,14 @@ hola mundo</div>
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

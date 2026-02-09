@@ -7,8 +7,8 @@
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.34">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-b754b9fd3853d7e56faef54c29c5d52b.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
 
   <title>Fundamentos de Informática – Teoría 502</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -95,7 +95,7 @@
     code span.vs { color: #008000; } /* VerbatimString */
     code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-f7935cc89ec6222034d74a13893d12e4.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-885290ce3065af1b721f68f6ffa32a74.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -208,7 +208,7 @@
 <ul>
 <li>Desarrolla un programa Python que lea una secuencia de números dada por el usuario (terminada en 0) y <strong>muestre la suma de los números leídos</strong>.</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce una secuencia de números (termina en 0):"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce una secuencia de números (termina en 0):"</span>)</span>
 <span id="cb1-2"><a></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
 <span id="cb1-3"><a></a>suma <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb1-4"><a></a></span>
@@ -216,7 +216,7 @@
 <span id="cb1-6"><a></a>    suma <span class="op">+=</span> n</span>
 <span id="cb1-7"><a></a>    n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
 <span id="cb1-8"><a></a></span>
-<span id="cb1-9"><a></a><span class="bu">print</span>(<span class="ss">f"La suma de los números es: </span><span class="sc">{</span>suma<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-9"><a></a><span class="bu">print</span>(<span class="ss">f"La suma de los números es: </span><span class="sc">{</span>suma<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>Solo necesitamos almacenar un número <code>n</code> a la vez.</li>
 </ul>
@@ -227,14 +227,14 @@
 <ul>
 <li>Desarrolla un programa Python que lea una secuencia de números dada por el usuario (terminada en 0) y a continuación <strong>los muestre en orden inverso</strong>.</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce una secuencia de números (termina en 0):"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce una secuencia de números (termina en 0):"</span>)</span>
 <span id="cb2-2"><a></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
 <span id="cb2-3"><a></a></span>
 <span id="cb2-4"><a></a><span class="cf">while</span> n <span class="op">!=</span> <span class="dv">0</span>:</span>
 <span id="cb2-5"><a></a>    <span class="co"># ???</span></span>
 <span id="cb2-6"><a></a>    n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
 <span id="cb2-7"><a></a></span>
-<span id="cb2-8"><a></a><span class="co"># ???</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-8"><a></a><span class="co"># ???</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -242,7 +242,7 @@
 <ul>
 <li>Desarrolla un programa Python que lea una secuencia de números dada por el usuario (terminada en 0) y cuente cuántos números hay por encima de la media.</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce una secuencia de números (termina en 0):"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce una secuencia de números (termina en 0):"</span>)</span>
 <span id="cb3-2"><a></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
 <span id="cb3-3"><a></a></span>
 <span id="cb3-4"><a></a>cuenta <span class="op">=</span> <span class="dv">0</span></span>
@@ -252,7 +252,7 @@
 <span id="cb3-8"><a></a>        cuenta <span class="op">+=</span> <span class="dv">1</span></span>
 <span id="cb3-9"><a></a>    n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
 <span id="cb3-10"><a></a></span>
-<span id="cb3-11"><a></a><span class="bu">print</span>(<span class="ss">f"Hay </span><span class="sc">{</span>cuenta<span class="sc">}</span><span class="ss"> números por encima de la media."</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-11"><a></a><span class="bu">print</span>(<span class="ss">f"Hay </span><span class="sc">{</span>cuenta<span class="sc">}</span><span class="ss"> números por encima de la media."</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -314,10 +314,10 @@ las posiciones son ordinales a partir de 1º, mientras que los índices
 <li>y envueltos en corchetes <code>[]</code>.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>mi_lista <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">3</span>]               <span class="co"># Lista de 5 enteros</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>mi_lista <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">3</span>]               <span class="co"># Lista de 5 enteros</span></span>
 <span id="cb4-2"><a></a>condiciones <span class="op">=</span> [<span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">True</span>]  <span class="co"># Lista de 4 booleanos</span></span>
 <span id="cb4-3"><a></a>temperaturas <span class="op">=</span> [<span class="fl">25.5</span>, <span class="fl">27.3</span>, <span class="fl">26.0</span>, <span class="fl">24.8</span>]  <span class="co"># Lista de 4 floats</span></span>
-<span id="cb4-4"><a></a>vacía <span class="op">=</span> []                               <span class="co"># Lista vacía</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-4"><a></a>vacía <span class="op">=</span> []                               <span class="co"># Lista vacía</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -335,17 +335,17 @@ las posiciones son ordinales a partir de 1º, mientras que los índices
 <li>NO la <code>1</code>.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>mi_lista <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">3</span>]</span>
-<span id="cb5-2"><a></a><span class="bu">print</span>(mi_lista[<span class="dv">1</span>]) </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>mi_lista <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">3</span>]</span>
+<span id="cb5-2"><a></a><span class="bu">print</span>(mi_lista[<span class="dv">1</span>]) </span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">8</div>
 </section>
 <section class="slide level2">
 
 <h4 id="ejemplo-imprime-los-elementos-de-una-lista-y-sus-posiciones">Ejemplo: Imprime los elementos de una lista y sus posiciones</h4>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>mi_lista <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">3</span>]  <span class="co"># Tamaño 5</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>mi_lista <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">3</span>]  <span class="co"># Tamaño 5</span></span>
 <span id="cb6-2"><a></a></span>
 <span id="cb6-3"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
-<span id="cb6-4"><a></a>    <span class="bu">print</span>(<span class="ss">f"Elemento </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>mi_lista[i]<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-4"><a></a>    <span class="bu">print</span>(<span class="ss">f"Elemento </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>mi_lista[i]<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">Elemento 0: 5<br>
 Elemento 1: 8<br>
 Elemento 2: 2<br>
@@ -358,7 +358,7 @@ Elemento 4: 3</div>
 </div>
 <div class="callout-content">
 <p>A diferencia de los objetos, las listas <strong>si tienen una representación textual nativa</strong>.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="bu">print</span>(mi_lista)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="bu">print</span>(mi_lista)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">[5, 8, 2, 0, 3]</div>
 <p>Recuerda que solo los objetos de clases definidas como <code>@dataclasses.dataclass</code> pueden imprimirse directamente.</p>
 </div>
@@ -368,22 +368,22 @@ Elemento 4: 3</div>
 <section class="slide level2">
 
 <h4 id="ejemplo-imprime-los-valores-impares-de-una-lista-y-sus-posiciones">Ejemplo: Imprime los valores impares de una lista y sus posiciones</h4>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>mi_lista <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">3</span>]  <span class="co"># Tamaño 5</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>mi_lista <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">3</span>]  <span class="co"># Tamaño 5</span></span>
 <span id="cb8-2"><a></a></span>
 <span id="cb8-3"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
 <span id="cb8-4"><a></a>    el <span class="op">=</span> mi_lista[i]</span>
 <span id="cb8-5"><a></a>    <span class="cf">if</span> el <span class="op">%</span> <span class="dv">2</span> <span class="op">!=</span> <span class="dv">0</span>:</span>
-<span id="cb8-6"><a></a>        <span class="bu">print</span>(<span class="ss">f"Elemento </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>el<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-6"><a></a>        <span class="bu">print</span>(<span class="ss">f"Elemento </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>el<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">Elemento 0: 5<br>
 Elemento 4: 3</div>
 </section>
 <section class="slide level2">
 
 <h4 id="ejemplo-imprime-en-orden-inverso-los-elementos-de-una-lista-y-sus-posiciones">Ejemplo: Imprime en orden inverso los elementos de una lista y sus posiciones</h4>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>mi_lista <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">3</span>]  <span class="co"># Tamaño 5</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>mi_lista <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">3</span>]  <span class="co"># Tamaño 5</span></span>
 <span id="cb9-2"><a></a></span>
 <span id="cb9-3"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>):</span>
-<span id="cb9-4"><a></a>    <span class="bu">print</span>(<span class="ss">f"Elemento </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>mi_lista[i]<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-4"><a></a>    <span class="bu">print</span>(<span class="ss">f"Elemento </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>mi_lista[i]<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">Elemento 4: 3<br>
 Elemento 3: 0<br>
 Elemento 2: 2<br>
@@ -397,8 +397,8 @@ Elemento 0: 5</div>
 <ul>
 <li>¿Qué ocurre si intentamos acceder a una posición que no existe?</li>
 </ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>mi_lista <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">3</span>]</span>
-<span id="cb10-2"><a></a><span class="bu">print</span>(mi_lista[<span class="dv">5</span>])</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>mi_lista <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">3</span>]</span>
+<span id="cb10-2"><a></a><span class="bu">print</span>(mi_lista[<span class="dv">5</span>])</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">IndexError: list index out of range</div>
 <ul>
 <li><strong>¡Cuidado!</strong>
@@ -412,14 +412,14 @@ Elemento 0: 5</div>
 <h4 id="ejemplo-leer-una-lista-de-5-números-y-pintarla-en-orden-inverso">Ejemplo: Leer una lista de 5 números y pintarla en orden inverso</h4>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>mi_lista <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>mi_lista <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]</span>
 <span id="cb11-2"><a></a></span>
 <span id="cb11-3"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
 <span id="cb11-4"><a></a>    <span class="bu">print</span>(<span class="ss">f"Introduce </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">º número: "</span>, end<span class="op">=</span><span class="st">""</span>)</span>
 <span id="cb11-5"><a></a>    mi_lista[i] <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
 <span id="cb11-6"><a></a></span>
 <span id="cb11-7"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>):</span>
-<span id="cb11-8"><a></a>    <span class="bu">print</span>(mi_lista[i])</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-8"><a></a>    <span class="bu">print</span>(mi_lista[i])</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <div class="line-block">Introduce 0º número: <strong>4</strong><br>
 Introduce 1º número: <strong>3</strong><br>
@@ -449,8 +449,8 @@ Introduce 4º número: <strong>4</strong><br>
 <li>En Python, <strong>multiplicar</strong> una lista por un número <code>n</code> <strong>crea</strong> una lista con <code>n</code> <strong>copias</strong> de la lista original.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>mi_lista <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> <span class="dv">5</span>  <span class="co"># [0, 0, 0, 0, 0]</span></span>
-<span id="cb12-2"><a></a>lista_grande <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> <span class="dv">10_000</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>mi_lista <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> <span class="dv">5</span>  <span class="co"># [0, 0, 0, 0, 0]</span></span>
+<span id="cb12-2"><a></a>lista_grande <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> <span class="dv">10_000</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-tip callout-style-simple">
 <div class="callout-body">
 <div class="callout-icon-container">
@@ -476,25 +476,25 @@ Introduce 4º número: <strong>4</strong><br>
 <div class="column" style="width:30%;">
 <p><strong>Acoplada a 5</strong></p>
 <!-- TODO: cambiar el identificador _l_ por otro más legible: ¿lst, lista? -->
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="kw">def</span> suma_acoplada(l):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="kw">def</span> suma_acoplada(l):</span>
 <span id="cb13-2"><a></a>    suma <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb13-3"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
 <span id="cb13-4"><a></a>        suma <span class="op">+=</span> l[i]</span>
-<span id="cb13-5"><a></a>    <span class="cf">return</span> suma</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-5"><a></a>    <span class="cf">return</span> suma</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:30%;">
 <p><strong>Parametrizada</strong></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="kw">def</span> suma_mejor(l, n):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="kw">def</span> suma_mejor(l, n):</span>
 <span id="cb14-2"><a></a>    suma <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb14-3"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
 <span id="cb14-4"><a></a>        suma <span class="op">+=</span> l[i]</span>
-<span id="cb14-5"><a></a>    <span class="cf">return</span> suma</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-5"><a></a>    <span class="cf">return</span> suma</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:40%;">
 <p><strong>Genérica</strong></p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="kw">def</span> suma(l):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="kw">def</span> suma(l):</span>
 <span id="cb15-2"><a></a>    suma <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb15-3"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(l)):</span>
 <span id="cb15-4"><a></a>        suma <span class="op">+=</span> l[i]</span>
-<span id="cb15-5"><a></a>    <span class="cf">return</span> suma</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-5"><a></a>    <span class="cf">return</span> suma</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <ul>
 <li>La función <code>len()</code> devuelve el <strong>número de elementos</strong> de una lista.</li>
@@ -506,20 +506,20 @@ Introduce 4º número: <strong>4</strong><br>
 <ul>
 <li>Desarrolla una función que lea una lista de <code>n</code> números enteros introducidos por el usuario y devuelva la lista.</li>
 </ul>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="kw">def</span> leer_lista(n):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="kw">def</span> leer_lista(n):</span>
 <span id="cb16-2"><a></a>    <span class="co"># ???</span></span>
 <span id="cb16-3"><a></a></span>
 <span id="cb16-4"><a></a><span class="co"># </span><span class="al">TEST</span></span>
-<span id="cb16-5"><a></a>leer_lista(<span class="dv">5</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-5"><a></a>leer_lista(<span class="dv">5</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="kw">def</span> leer_lista(n):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="kw">def</span> leer_lista(n):</span>
 <span id="cb17-2"><a></a>    l <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> n</span>
 <span id="cb17-3"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
 <span id="cb17-4"><a></a>        <span class="bu">print</span>(<span class="ss">f"Introduce </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">º número: "</span>, end<span class="op">=</span><span class="st">""</span>)</span>
 <span id="cb17-5"><a></a>        l[i] <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
-<span id="cb17-6"><a></a>    <span class="cf">return</span> l</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-6"><a></a>    <span class="cf">return</span> l</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -527,16 +527,16 @@ Introduce 4º número: <strong>4</strong><br>
 <ul>
 <li>Desarrolla una función que reciba una lista de números y devuelva cuántos elementos son mayores que la media.</li>
 </ul>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="kw">def</span> contar_por_encima_de_media(l):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="kw">def</span> contar_por_encima_de_media(l):</span>
 <span id="cb18-2"><a></a>    <span class="co"># ???</span></span>
 <span id="cb18-3"><a></a></span>
 <span id="cb18-4"><a></a><span class="co"># </span><span class="al">TEST</span></span>
 <span id="cb18-5"><a></a>contar_por_encima_de_media([<span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">0</span>])</span>
-<span id="cb18-6"><a></a><span class="co"># Debería devolver 2</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-6"><a></a><span class="co"># Debería devolver 2</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="kw">def</span> obtener_media(l):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="kw">def</span> obtener_media(l):</span>
 <span id="cb19-2"><a></a>    suma <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb19-3"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(l)):</span>
 <span id="cb19-4"><a></a>        suma <span class="op">+=</span> l[i]</span>
@@ -549,12 +549,12 @@ Introduce 4º número: <strong>4</strong><br>
 <span id="cb19-11"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(l)):</span>
 <span id="cb19-12"><a></a>        <span class="cf">if</span> l[i] <span class="op">&gt;</span> m:</span>
 <span id="cb19-13"><a></a>            cuenta <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb19-14"><a></a>    <span class="cf">return</span> cuenta</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-14"><a></a>    <span class="cf">return</span> cuenta</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
 <p><strong>Programa completo</strong></p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a><span class="kw">def</span> leer_lista(n):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a><span class="kw">def</span> leer_lista(n):</span>
 <span id="cb20-2"><a></a>    l <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> n</span>
 <span id="cb20-3"><a></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
 <span id="cb20-4"><a></a>        <span class="bu">print</span>(<span class="ss">f"Introduce </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">º número: "</span>, end<span class="op">=</span><span class="st">""</span>)</span>
@@ -578,7 +578,7 @@ Introduce 4º número: <strong>4</strong><br>
 <span id="cb20-22"><a></a></span>
 <span id="cb20-23"><a></a><span class="co"># </span><span class="al">TEST</span></span>
 <span id="cb20-24"><a></a>l <span class="op">=</span> leer_lista(<span class="dv">4</span>)</span>
-<span id="cb20-25"><a></a><span class="bu">print</span>(contar_por_encima_de_media(l))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb20-25"><a></a><span class="bu">print</span>(contar_por_encima_de_media(l))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="strings-listas" class="slide level2 center">
 <h2>Strings… ¿listas?</h2>
@@ -595,8 +595,8 @@ Introduce 4º número: <strong>4</strong><br>
 <li>Pero en realidad, un string es una <strong>secuencia de caracteres</strong>.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a>s <span class="op">=</span> <span class="st">"Hola"</span></span>
-<span id="cb21-2"><a></a><span class="bu">print</span>(s[<span class="dv">0</span>])  <span class="co"># H</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a>s <span class="op">=</span> <span class="st">"Hola"</span></span>
+<span id="cb21-2"><a></a><span class="bu">print</span>(s[<span class="dv">0</span>])  <span class="co"># H</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>En Python no existe el tipo de datos <code>char</code> como en otros lenguajes.
 <ul>
@@ -608,7 +608,7 @@ Introduce 4º número: <strong>4</strong><br>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
+<p><img src="../../../../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>Fundamentos de Informática</p>
 </div>
@@ -798,7 +798,7 @@ Introduce 4º número: <strong>4</strong><br>
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -872,13 +872,14 @@ Introduce 4º número: <strong>4</strong><br>
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

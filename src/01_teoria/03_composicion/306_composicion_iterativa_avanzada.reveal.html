@@ -7,8 +7,8 @@
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.34">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-b754b9fd3853d7e56faef54c29c5d52b.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
 
   <title>Fundamentos de Informática – Teoría 306</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -95,7 +95,7 @@
     code span.vs { color: #008000; } /* VerbatimString */
     code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-f7935cc89ec6222034d74a13893d12e4.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-885290ce3065af1b721f68f6ffa32a74.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -297,14 +297,14 @@
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>seed <span class="op">=</span> <span class="dv">42</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>seed <span class="op">=</span> <span class="dv">42</span></span>
 <span id="cb1-2"><a></a>a <span class="op">=</span> <span class="dv">22695477</span></span>
 <span id="cb1-3"><a></a>c <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb1-4"><a></a>m <span class="op">=</span> <span class="dv">2</span> <span class="op">**</span> <span class="dv">32</span></span>
 <span id="cb1-5"><a></a></span>
 <span id="cb1-6"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">5</span>):</span>
 <span id="cb1-7"><a></a>    seed <span class="op">=</span> (a <span class="op">*</span> seed <span class="op">+</span> c) <span class="op">%</span> m</span>
-<span id="cb1-8"><a></a>    <span class="bu">print</span>(seed)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-8"><a></a>    <span class="bu">print</span>(seed)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <div class="line-block">953210035<br>
 3724055312<br>
@@ -328,12 +328,12 @@
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> random</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> random</span>
 <span id="cb2-2"><a></a></span>
 <span id="cb2-3"><a></a>random.seed(<span class="dv">42</span>)</span>
 <span id="cb2-4"><a></a></span>
 <span id="cb2-5"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">5</span>):</span>
-<span id="cb2-6"><a></a>    <span class="bu">print</span>(random.randint(<span class="dv">0</span>, <span class="dv">2</span><span class="op">**</span><span class="dv">32</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-6"><a></a>    <span class="bu">print</span>(random.randint(<span class="dv">0</span>, <span class="dv">2</span><span class="op">**</span><span class="dv">32</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <div class="line-block">2746317213<br>
 1181241943<br>
@@ -346,7 +346,7 @@
 
 <h4 id="ejemplo-ability-check">Ejemplo: Ability Check</h4>
 <p>Escribe un programa en Python que simule un <strong>chequeo de habilidad</strong>: - El programa debe lanzar un dado de D20 (20 caras). - Si el resultado es mayor o igual que el umbral de habilidad (que el usuario introduce), el chequeo es <strong>exitoso</strong>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">import</span> random</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">import</span> random</span>
 <span id="cb3-2"><a></a></span>
 <span id="cb3-3"><a></a>random.seed(<span class="dv">42</span>)  <span class="co"># Semilla fija para reproducibilidad</span></span>
 <span id="cb3-4"><a></a></span>
@@ -358,7 +358,7 @@
 <span id="cb3-10"><a></a><span class="cf">if</span> resultado <span class="op">&gt;=</span> umbral:</span>
 <span id="cb3-11"><a></a>    <span class="bu">print</span>(<span class="st">"Pass!"</span>)</span>
 <span id="cb3-12"><a></a><span class="cf">else</span>:</span>
-<span id="cb3-13"><a></a>    <span class="bu">print</span>(<span class="st">"Fail!"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-13"><a></a>    <span class="bu">print</span>(<span class="st">"Fail!"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="cálculo-numérico" class="slide level2 center">
 <h2>Cálculo numérico</h2>
@@ -399,7 +399,7 @@
 <section class="slide level2">
 
 <p><strong>Solución:</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>inicio <span class="op">=</span> <span class="dv">0</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>inicio <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb4-2"><a></a>fin <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb4-3"><a></a>intervalos <span class="op">=</span> <span class="dv">1000</span></span>
 <span id="cb4-4"><a></a>paso <span class="op">=</span> (fin <span class="op">-</span> inicio) <span class="op">/</span> intervalos</span>
@@ -413,7 +413,7 @@
 <span id="cb4-12"><a></a>    integral <span class="op">+=</span> area</span>
 <span id="cb4-13"><a></a>    x <span class="op">+=</span> paso</span>
 <span id="cb4-14"><a></a></span>
-<span id="cb4-15"><a></a><span class="bu">print</span>(integral)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-15"><a></a><span class="bu">print</span>(integral)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-tip callout-style-simple">
 <div class="callout-body">
 <div class="callout-icon-container">
@@ -441,7 +441,7 @@
 <section class="slide level2">
 
 <p><strong>Solución:</strong></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="im">import</span> math</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="im">import</span> math</span>
 <span id="cb5-2"><a></a></span>
 <span id="cb5-3"><a></a><span class="bu">print</span>(<span class="st">"Introduce el ángulo (en radianes):"</span>)</span>
 <span id="cb5-4"><a></a>x <span class="op">=</span> <span class="bu">float</span>(<span class="bu">input</span>())</span>
@@ -452,7 +452,7 @@
 <span id="cb5-9"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, n):</span>
 <span id="cb5-10"><a></a>    cos_approx <span class="op">+=</span> ((<span class="op">-</span><span class="dv">1</span>) <span class="op">**</span> i) <span class="op">*</span> ((x <span class="op">**</span> (<span class="dv">2</span> <span class="op">*</span> i)) <span class="op">/</span> math.factorial(<span class="dv">2</span> <span class="op">*</span> i))</span>
 <span id="cb5-11"><a></a></span>
-<span id="cb5-12"><a></a><span class="bu">print</span>(cos_approx)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-12"><a></a><span class="bu">print</span>(cos_approx)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -487,7 +487,7 @@
 <section class="slide level2">
 
 <p><strong>Solución:</strong></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="im">import</span> random</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="im">import</span> random</span>
 <span id="cb6-2"><a></a></span>
 <span id="cb6-3"><a></a>num_dardos <span class="op">=</span> <span class="dv">1000</span></span>
 <span id="cb6-4"><a></a></span>
@@ -499,13 +499,13 @@
 <span id="cb6-10"><a></a>        dardos_dentro <span class="op">+=</span> <span class="dv">1</span></span>
 <span id="cb6-11"><a></a></span>
 <span id="cb6-12"><a></a>pi_approx <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> dardos_dentro <span class="op">/</span> num_dardos</span>
-<span id="cb6-13"><a></a><span class="bu">print</span>(pi_approx)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-13"><a></a><span class="bu">print</span>(pi_approx)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
+<p><img src="../../../../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>Fundamentos de Informática</p>
 </div>
@@ -695,7 +695,7 @@
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -769,13 +769,14 @@
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

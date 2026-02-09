@@ -7,8 +7,8 @@
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.34">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-b754b9fd3853d7e56faef54c29c5d52b.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
 
   <title>Fundamentos de Informática – Teoría 302</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -95,7 +95,7 @@
     code span.vs { color: #008000; } /* VerbatimString */
     code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-f7935cc89ec6222034d74a13893d12e4.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-885290ce3065af1b721f68f6ffa32a74.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -249,7 +249,7 @@
 <ul>
 <li><strong>Sí</strong>, se puede resolver con composición secuencial</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span>
 <span id="cb1-2"><a></a><span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span>
 <span id="cb1-3"><a></a><span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span>
 <span id="cb1-4"><a></a><span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span>
@@ -259,7 +259,7 @@
 <span id="cb1-8"><a></a><span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span>
 <span id="cb1-9"><a></a><span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span>
 <span id="cb1-10"><a></a><span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span>
-<span id="cb1-11"><a></a><span class="co"># 90 veces más</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-11"><a></a><span class="co"># 90 veces más</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><strong>Inconveniente</strong>: Repetitivo</li>
 </ul>
@@ -271,23 +271,23 @@
 <ul>
 <li><em>I will lock my computer when I leave my desk</em></li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número entero:"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número entero:"</span>)</span>
 <span id="cb2-2"><a></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
 <span id="cb2-3"><a></a></span>
 <span id="cb2-4"><a></a><span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span>
 <span id="cb2-5"><a></a><span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span>
-<span id="cb2-6"><a></a><span class="co"># ...</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-6"><a></a><span class="co"># ...</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><strong>Inconveniente</strong>: Cuando paro?</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número entero:"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número entero:"</span>)</span>
 <span id="cb3-2"><a></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
 <span id="cb3-3"><a></a></span>
 <span id="cb3-4"><a></a><span class="cf">if</span> n <span class="op">&gt;</span> <span class="dv">1</span>:</span>
 <span id="cb3-5"><a></a>    <span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span>
 <span id="cb3-6"><a></a><span class="cf">if</span> n <span class="op">&gt;</span> <span class="dv">2</span>:</span>
 <span id="cb3-7"><a></a>    <span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span>
-<span id="cb3-8"><a></a><span class="co"># ...</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-8"><a></a><span class="co"># ...</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><strong>Inconveniente</strong>: Y si <code>n</code> es muy grande?</li>
 </ul>
@@ -296,7 +296,7 @@
 
 <h4 id="ejemplo-calculo-de-múltiplos-de-3">Ejemplo: Calculo de múltiplos de 3</h4>
 <p>Escribe programa Python que imprima por pantalla todos los <strong>múltiplos de 3 menores que 100</strong>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="cf">if</span> <span class="dv">1</span> <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="cf">if</span> <span class="dv">1</span> <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
 <span id="cb4-2"><a></a>    <span class="bu">print</span>(<span class="dv">1</span>)</span>
 <span id="cb4-3"><a></a></span>
 <span id="cb4-4"><a></a><span class="cf">if</span> <span class="dv">2</span> <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
@@ -304,7 +304,7 @@
 <span id="cb4-6"><a></a></span>
 <span id="cb4-7"><a></a><span class="cf">if</span> <span class="dv">3</span> <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
 <span id="cb4-8"><a></a>    <span class="bu">print</span>(<span class="dv">3</span>)</span>
-<span id="cb4-9"><a></a><span class="co"># ...</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-9"><a></a><span class="co"># ...</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><strong>Mismos problemas que antes</strong></li>
 </ul>
@@ -351,13 +351,13 @@
 </ol></li>
 <li>El <strong>bloque de instrucciones</strong> que se ejecuta iterativamente se <strong>identifica</strong> por su <strong>indentación</strong>.</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="co"># bloque_de_instrucciones_principal_1</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="co"># bloque_de_instrucciones_principal_1</span></span>
 <span id="cb5-2"><a></a></span>
 <span id="cb5-3"><a></a><span class="cf">while</span> condicion:</span>
 <span id="cb5-4"><a></a>    <span class="co"># bloque_de_instrucciones que</span></span>
 <span id="cb5-5"><a></a>    <span class="co"># se ejecuta si condicion es True</span></span>
 <span id="cb5-6"><a></a></span>
-<span id="cb5-7"><a></a><span class="co"># bloque_de_instrucciones_principal_2</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-7"><a></a><span class="co"># bloque_de_instrucciones_principal_2</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:30%;">
 <p><img data-src="./img/while.png"></p>
 </div></div>
@@ -373,9 +373,9 @@
 </ul></li>
 </ul>
 <p><strong>¿Funcionará?</strong></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>count <span class="op">=</span> <span class="dv">0</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>count <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb6-2"><a></a><span class="cf">while</span> count <span class="op">&lt;</span> <span class="dv">100</span>:</span>
-<span id="cb6-3"><a></a>    <span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-3"><a></a>    <span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">I will lock my computer when I leave my desk<br>
 I will lock my computer when I leave my desk<br>
 I will lock my computer when I leave my desk<br>
@@ -407,11 +407,11 @@ I will lock my computer when I leave my desk<br>
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>count <span class="op">=</span> <span class="dv">0</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>count <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb7-2"><a></a><span class="cf">while</span> count <span class="op">&lt;</span> <span class="dv">3</span>:</span>
 <span id="cb7-3"><a></a>    <span class="bu">print</span>(<span class="st">"Hello"</span>)</span>
 <span id="cb7-4"><a></a>    count <span class="op">=</span> count <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb7-5"><a></a><span class="bu">print</span>(<span class="st">"Bye"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-5"><a></a><span class="bu">print</span>(<span class="st">"Bye"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <div class="line-block">Hello<br>
 Hello<br>
@@ -428,10 +428,10 @@ Bye</div>
 <li><strong>Incrementar</strong> el valor de <code>count</code> en cada iteración</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>count <span class="op">=</span> <span class="dv">0</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>count <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb8-2"><a></a><span class="cf">while</span> count <span class="op">&lt;</span> <span class="dv">100</span>:</span>
 <span id="cb8-3"><a></a>    <span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span>
-<span id="cb8-4"><a></a>    count <span class="op">=</span> count <span class="op">+</span> <span class="dv">1</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-4"><a></a>    count <span class="op">=</span> count <span class="op">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">I will lock my computer when I leave my desk<br>
 I will lock my computer when I leave my desk<br>
 I will lock my computer when I leave my desk<br>
@@ -463,10 +463,10 @@ I will lock my computer when I leave my desk<br>
 <li><strong>Incrementar</strong> el valor de <code>count</code> en cada iteración</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>count <span class="op">=</span> <span class="dv">0</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>count <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb9-2"><a></a><span class="cf">while</span> count <span class="op">&lt;</span> <span class="dv">100</span>:</span>
 <span id="cb9-3"><a></a>    <span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span>
-<span id="cb9-4"><a></a>    count <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-4"><a></a>    count <span class="op">+=</span> <span class="dv">1</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">I will lock my computer when I leave my desk<br>
 I will lock my computer when I leave my desk<br>
 I will lock my computer when I leave my desk<br>
@@ -484,10 +484,10 @@ I will lock my computer when I leave my desk<br>
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>count <span class="op">=</span> <span class="dv">1</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>count <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb10-2"><a></a><span class="cf">while</span> count <span class="op">&lt;=</span> <span class="dv">5</span>:</span>
 <span id="cb10-3"><a></a>    <span class="bu">print</span>(count)</span>
-<span id="cb10-4"><a></a>    count <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-4"><a></a>    count <span class="op">+=</span> <span class="dv">1</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <div class="line-block">1<br>
 2<br>
@@ -499,13 +499,13 @@ I will lock my computer when I leave my desk<br>
 <section class="slide level2">
 
 <h4 id="ejemplo-repetición-de-un-mensaje-n-veces-1">Ejemplo: Repetición de un mensaje N veces</h4>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número entero:"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número entero:"</span>)</span>
 <span id="cb11-2"><a></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
 <span id="cb11-3"><a></a></span>
 <span id="cb11-4"><a></a>count <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb11-5"><a></a><span class="cf">while</span> count <span class="op">&lt;</span> n:</span>
 <span id="cb11-6"><a></a>    <span class="bu">print</span>(<span class="st">"I will lock my computer when I leave my desk"</span>)</span>
-<span id="cb11-7"><a></a>    count <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-7"><a></a>    count <span class="op">+=</span> <span class="dv">1</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>Hemos decidido (recomendable, será necesario más adelante):
 <ul>
@@ -523,12 +523,12 @@ I will lock my computer when I leave my desk<br>
 <p>Este programa imprime por pantalla todos los <strong>múltiplos de 3 menores que 100</strong>.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>num <span class="op">=</span> <span class="dv">1</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>num <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb12-2"><a></a></span>
 <span id="cb12-3"><a></a><span class="cf">while</span> num <span class="op">&lt;</span> <span class="dv">100</span>:</span>
 <span id="cb12-4"><a></a>    <span class="cf">if</span> num <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
 <span id="cb12-5"><a></a>        <span class="bu">print</span>(num)</span>
-<span id="cb12-6"><a></a>    num <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-6"><a></a>    num <span class="op">+=</span> <span class="dv">1</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <div class="line-block">3<br>
 6<br>
@@ -548,11 +548,11 @@ I will lock my computer when I leave my desk<br>
 <p><span class="math display">\[
 \sum_{i=1}^{100} 2i^2
 \]</span></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>sumatorio <span class="op">=</span> <span class="dv">0</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>sumatorio <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb13-2"><a></a>i <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb13-3"><a></a><span class="cf">while</span> i <span class="op">&lt;=</span> <span class="dv">100</span>:</span>
 <span id="cb13-4"><a></a>    sumatorio <span class="op">+=</span> <span class="dv">2</span> <span class="op">*</span> (i <span class="op">**</span> <span class="dv">2</span>)</span>
-<span id="cb13-5"><a></a>    i <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-5"><a></a>    i <span class="op">+=</span> <span class="dv">1</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -562,13 +562,13 @@ I will lock my computer when I leave my desk<br>
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>x <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb14-2"><a></a><span class="cf">while</span> x <span class="op">&lt;</span> <span class="dv">3</span>:</span>
 <span id="cb14-3"><a></a>    y <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb14-4"><a></a>    <span class="cf">while</span> y <span class="op">&lt;</span> <span class="dv">3</span>:</span>
 <span id="cb14-5"><a></a>        <span class="bu">print</span>(<span class="ss">f"x=</span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">, y=</span><span class="sc">{</span>y<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb14-6"><a></a>        y <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb14-7"><a></a>    x <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-7"><a></a>    x <span class="op">+=</span> <span class="dv">1</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <div class="line-block">x=0, y=0<br>
 x=0, y=1<br>
@@ -585,14 +585,14 @@ x=2, y=2</div>
 
 <h4 id="ejemplo-tabla-de-multiplicar">Ejemplo: Tabla de multiplicar</h4>
 <p>Escribe un programa en Python que imprima por pantalla la tabla de multiplicar del 1 al 10.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>x <span class="op">=</span> <span class="dv">1</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>x <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb15-2"><a></a></span>
 <span id="cb15-3"><a></a><span class="cf">while</span> x <span class="op">&lt;=</span> <span class="dv">10</span>:</span>
 <span id="cb15-4"><a></a>    y <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb15-5"><a></a>    <span class="cf">while</span> y <span class="op">&lt;=</span> <span class="dv">10</span>:</span>
 <span id="cb15-6"><a></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>x<span class="sc">}</span><span class="ss"> x </span><span class="sc">{</span>y<span class="sc">}</span><span class="ss"> = </span><span class="sc">{</span>x <span class="op">*</span> y<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb15-7"><a></a>        y <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb15-8"><a></a>    x <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-8"><a></a>    x <span class="op">+=</span> <span class="dv">1</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>Fíjate en cómo en este caso iniciamos las como <code>x = 1</code> e <code>y = 1</code> y terminamos los bucles cuando <code>x &lt;= 10</code> e <code>y &lt;= 10</code>.
 <ul>
@@ -613,21 +613,21 @@ x=2, y=2</div>
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número par:"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="bu">print</span>(<span class="st">"Introduce un número par:"</span>)</span>
 <span id="cb16-2"><a></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
 <span id="cb16-3"><a></a><span class="cf">while</span> n <span class="op">%</span> <span class="dv">2</span> <span class="op">!=</span> <span class="dv">0</span>:</span>
 <span id="cb16-4"><a></a>    <span class="bu">print</span>(<span class="st">"Introduce un número par:"</span>)</span>
-<span id="cb16-5"><a></a>    n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>n <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb16-5"><a></a>    n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>n <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb17-2"><a></a><span class="cf">while</span> n <span class="op">%</span> <span class="dv">2</span> <span class="op">!=</span> <span class="dv">0</span>:</span>
 <span id="cb17-3"><a></a>    <span class="bu">print</span>(<span class="st">"Introduce un número par:"</span>)</span>
-<span id="cb17-4"><a></a>    n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>par <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb17-4"><a></a>    n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>par <span class="op">=</span> <span class="va">False</span></span>
 <span id="cb18-2"><a></a><span class="cf">while</span> <span class="kw">not</span> par:</span>
 <span id="cb18-3"><a></a>    <span class="bu">print</span>(<span class="st">"Introduce un número par:"</span>)</span>
 <span id="cb18-4"><a></a>    n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
 <span id="cb18-5"><a></a>    <span class="cf">if</span> n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb18-6"><a></a>        par <span class="op">=</span> <span class="va">True</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-6"><a></a>        par <span class="op">=</span> <span class="va">True</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <div class="line-block">Introduce un número par:<br>
 <strong>3</strong><br>
@@ -641,7 +641,7 @@ Introduce un número par:<br>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
+<p><img src="../../../../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>Fundamentos de Informática</p>
 </div>
@@ -831,7 +831,7 @@ Introduce un número par:<br>
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -905,13 +905,14 @@ Introduce un número par:<br>
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

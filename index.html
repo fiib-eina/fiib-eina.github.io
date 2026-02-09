@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,18 +35,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-b5d7a9fd0efe6ae5644a67f785a891e4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-e67ab1ef286a228f97a89504a4d5ebae.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-b5d7a9fd0efe6ae5644a67f785a891e4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3c2874bcb47fcac49e0bf0af066f625e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-1a0c994539ae3df13c4b426f086ca321.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3c2874bcb47fcac49e0bf0af066f625e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bae46e0c90c68260b0a4bbb45f1294a3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-12e34ae91984f684715f9e950e2b140c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-bae46e0c90c68260b0a4bbb45f1294a3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-116479fa16b3443f59da5ce90315efd6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8416b61dbf7538d7ca7b9d83e24c6a70.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-116479fa16b3443f59da5ce90315efd6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -60,7 +61,7 @@ ul.task-list li input[type="checkbox"] {
     "s"
   ],
   "language": {
-    "search-no-results-text": "Sin resultados",
+    "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
     "search-copy-link-title": "Copiar el enlace en la búsqueda",
     "search-hide-matches-text": "Ocultar resultados adicionales",
@@ -118,7 +119,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -322,7 +323,8 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./src/_style/logos/logo_uz.svg" alt="Unizar logo, black" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="./src\_style\logos\logo_uz.svg" alt="Unizar logo, black" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./src\_style\logos\logo_uz.svg" alt="Unizar logo, black" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
@@ -657,136 +659,6 @@ window.Quarto = {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
- <span class="menu-text">Prácticas</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
- <span class="menu-text">P0</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./src/03_practicas/p0/101_introductoria.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 0</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
- <span class="menu-text">P1</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./src/03_practicas/p1/201_tipos_de_datos_primitivos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 1</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
- <span class="menu-text">P2</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./src/03_practicas/p2/301_composicion_condicional.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 2</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
- <span class="menu-text">P3</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./src/03_practicas/p3/302_composicion_iterativa.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 3</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false">
- <span class="menu-text">P4</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./src/03_practicas/p4/401_funciones.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 4</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false">
- <span class="menu-text">P5</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./src/03_practicas/p5/501_estructuras_de_datos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 5</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false">
- <span class="menu-text">P6</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./src/03_practicas/p6/601_ficheros.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 6</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -827,145 +699,192 @@ window.Quarto = {
 <div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
 <ul>
 <li>
-<a href="./src/01_teoria/00_presentacion/000_presentación.html">01_teoria/00_presentacion/ <b>Presentación de la Asignatura</b> - Información general </a>
+<a href="./src/01_teoria/00_presentacion/000_presentación.html">src\01_teoria\00_presentacion<br>
+<b>Presentación de la Asignatura</b> - Información general </a>
 </li>
 <li>
-<a href="./src/01_teoria/01_conceptos_basicos/101_introducción.html">01_teoria/01_conceptos_basicos/ <b>Teoría 101</b> - Computadores y Lenguajes </a>
+<a href="./src/01_teoria/01_conceptos_basicos/101_introducción.html">src\01_teoria\01_conceptos_basicos<br>
+<b>Teoría 101</b> - Computadores y Lenguajes </a>
 </li>
 <li>
-<a href="./src/01_teoria/01_conceptos_basicos/102_lenguajes.html">01_teoria/01_conceptos_basicos/ <b>Teoría 102</b> - Lenguajes </a>
+<a href="./src/01_teoria/01_conceptos_basicos/102_lenguajes.html">src\01_teoria\01_conceptos_basicos<br>
+<b>Teoría 102</b> - Lenguajes </a>
 </li>
 <li>
-<a href="./src/01_teoria/01_conceptos_basicos/103_fundamentos_python.html">01_teoria/01_conceptos_basicos/ <b>Teoría 103</b> - Python </a>
+<a href="./src/01_teoria/01_conceptos_basicos/103_fundamentos_python.html">src\01_teoria\01_conceptos_basicos<br>
+<b>Teoría 103</b> - Python </a>
 </li>
 <li>
-<a href="./src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html">01_teoria/02_tipos_de_datos_basicos/ <b>Teoría 201</b> - Tipos Numerales </a>
+<a href="./src/01_teoria/02_tipos_de_datos_basicos/201_tipos_numerales.html">src\01_teoria\02_tipos_de_datos_basicos<br>
+<b>Teoría 201</b> - Tipos Numerales </a>
 </li>
 <li>
-<a href="./src/01_teoria/02_tipos_de_datos_basicos/202_texto_y_booleanos.html">01_teoria/02_tipos_de_datos_basicos/ <b>Teoría 202</b> - Texto y Booleanos </a>
+<a href="./src/01_teoria/02_tipos_de_datos_basicos/202_texto_y_booleanos.html">src\01_teoria\02_tipos_de_datos_basicos<br>
+<b>Teoría 202</b> - Texto y Booleanos </a>
 </li>
 <li>
-<a href="./src/01_teoria/03_composicion/301_composicion_condicional.html">01_teoria/03_composicion/ <b>Teoría 301</b> - Composición condicional </a>
+<a href="./src/01_teoria/03_composicion/301_composicion_condicional.html">src\01_teoria\03_composicion<br>
+<b>Teoría 301</b> - Composición condicional </a>
 </li>
 <li>
-<a href="./src/01_teoria/03_composicion/302_composicion_iterativa_while.html">01_teoria/03_composicion/ <b>Teoría 302</b> - Composición Iterativa I </a>
+<a href="./src/01_teoria/03_composicion/302_composicion_iterativa_while.html">src\01_teoria\03_composicion<br>
+<b>Teoría 302</b> - Composición Iterativa I </a>
 </li>
 <li>
-<a href="./src/01_teoria/03_composicion/303_composicion_iterativa_while_II.html">01_teoria/03_composicion/ <b>Teoría 303</b> - Composición Iterativa II </a>
+<a href="./src/01_teoria/03_composicion/303_composicion_iterativa_while_II.html">src\01_teoria\03_composicion<br>
+<b>Teoría 303</b> - Composición Iterativa II </a>
 </li>
 <li>
-<a href="./src/01_teoria/03_composicion/304_composicion_iterativa_for.html">01_teoria/03_composicion/ <b>Teoría 304</b> - Composición Iterativa III </a>
+<a href="./src/01_teoria/03_composicion/304_composicion_iterativa_for.html">src\01_teoria\03_composicion<br>
+<b>Teoría 304</b> - Composición Iterativa III </a>
 </li>
 <li>
-<a href="./src/01_teoria/03_composicion/305_composicion_iterativa_for_II.html">01_teoria/03_composicion/ <b>Teoría 305</b> - Composición Iterativa IV </a>
+<a href="./src/01_teoria/03_composicion/305_composicion_iterativa_for_II.html">src\01_teoria\03_composicion<br>
+<b>Teoría 305</b> - Composición Iterativa IV </a>
 </li>
 <li>
-<a href="./src/01_teoria/03_composicion/306_composicion_iterativa_avanzada.html">01_teoria/03_composicion/ <b>Teoría 306</b> - Composición Iterativa V </a>
+<a href="./src/01_teoria/03_composicion/306_composicion_iterativa_avanzada.html">src\01_teoria\03_composicion<br>
+<b>Teoría 306</b> - Composición Iterativa V </a>
 </li>
 <li>
-<a href="./src/01_teoria/04_modularizacion_de_codigo/401_funciones_basicas.html">01_teoria/04_modularizacion_de_codigo/ <b>Teoría 401</b> - Funciones I </a>
+<a href="./src/01_teoria/04_modularizacion_de_codigo/401_funciones_basicas.html">src\01_teoria\04_modularizacion_de_codigo<br>
+<b>Teoría 401</b> - Funciones I </a>
 </li>
 <li>
-<a href="./src/01_teoria/04_modularizacion_de_codigo/402_funciones_return.html">01_teoria/04_modularizacion_de_codigo/ <b>Teoría 402</b> - Funciones II </a>
+<a href="./src/01_teoria/04_modularizacion_de_codigo/402_funciones_return.html">src\01_teoria\04_modularizacion_de_codigo<br>
+<b>Teoría 402</b> - Funciones II </a>
 </li>
 <li>
-<a href="./src/01_teoria/04_modularizacion_de_codigo/403_funciones_avanzadas_e_import.html">01_teoria/04_modularizacion_de_codigo/ <b>Teoría 403</b> - Módulos </a>
+<a href="./src/01_teoria/04_modularizacion_de_codigo/403_funciones_avanzadas_e_import.html">src\01_teoria\04_modularizacion_de_codigo<br>
+<b>Teoría 403</b> - Módulos </a>
 </li>
 <li>
-<a href="./src/01_teoria/04_modularizacion_de_codigo/404_funciones_ejercicios.html">01_teoria/04_modularizacion_de_codigo/ <b>Teoría 404</b> - Funciones avanzadas </a>
+<a href="./src/01_teoria/04_modularizacion_de_codigo/404_funciones_ejercicios.html">src\01_teoria\04_modularizacion_de_codigo<br>
+<b>Teoría 404</b> - Funciones avanzadas </a>
 </li>
 <li>
-<a href="./src/01_teoria/05_estructuras_de_datos/501_objetos.html">01_teoria/05_estructuras_de_datos/ <b>Teoría 501</b> - Objetos </a>
+<a href="./src/01_teoria/05_estructuras_de_datos/501_objetos.html">src\01_teoria\05_estructuras_de_datos<br>
+<b>Teoría 501</b> - Objetos </a>
 </li>
 <li>
-<a href="./src/01_teoria/05_estructuras_de_datos/502_listas.html">01_teoria/05_estructuras_de_datos/ <b>Teoría 502</b> - Listas </a>
+<a href="./src/01_teoria/05_estructuras_de_datos/502_listas.html">src\01_teoria\05_estructuras_de_datos<br>
+<b>Teoría 502</b> - Listas </a>
 </li>
 <li>
-<a href="./src/01_teoria/05_estructuras_de_datos/503_listas_dinamicas.html">01_teoria/05_estructuras_de_datos/ <b>Teoría 503</b> - Listas II </a>
+<a href="./src/01_teoria/05_estructuras_de_datos/503_listas_dinamicas.html">src\01_teoria\05_estructuras_de_datos<br>
+<b>Teoría 503</b> - Listas II </a>
 </li>
 <li>
-<a href="./src/01_teoria/05_estructuras_de_datos/504_estructuras_complejas.html">01_teoria/05_estructuras_de_datos/ <b>Teoría 504</b> - Estructuras complejas </a>
+<a href="./src/01_teoria/05_estructuras_de_datos/504_estructuras_complejas.html">src\01_teoria\05_estructuras_de_datos<br>
+<b>Teoría 504</b> - Estructuras complejas </a>
 </li>
 <li>
-<a href="./src/01_teoria/06_ficheros/601_manejo_avanzado_de_texto.html">01_teoria/06_ficheros/ <b>Teoría 601</b> - Manejo avanzado de texto </a>
+<a href="./src/01_teoria/06_ficheros/601_manejo_avanzado_de_texto.html">src\01_teoria\06_ficheros<br>
+<b>Teoría 601</b> - Manejo avanzado de texto </a>
 </li>
 <li>
-<a href="./src/01_teoria/06_ficheros/602_ficheros.html">01_teoria/06_ficheros/ <b>Teoría 602</b> - Ficheros y ficheros de lectura </a>
+<a href="./src/01_teoria/06_ficheros/602_ficheros.html">src\01_teoria\06_ficheros<br>
+<b>Teoría 602</b> - Ficheros y ficheros de lectura </a>
 </li>
 <li>
-<a href="./src/01_teoria/06_ficheros/603_ficheros_de_escritura.html">01_teoria/06_ficheros/ <b>Teoría 603</b> - Ficheros de escritura </a>
+<a href="./src/01_teoria/06_ficheros/603_ficheros_de_escritura.html">src\01_teoria\06_ficheros<br>
+<b>Teoría 603</b> - Ficheros de escritura </a>
 </li>
 <li>
-<a href="./src/01_teoria/06_ficheros/604_ficheros_estructurados.html">01_teoria/06_ficheros/ <b>Teoría 604</b> - Ficheros estructurados </a>
+<a href="./src/01_teoria/06_ficheros/604_ficheros_estructurados.html">src\01_teoria\06_ficheros<br>
+<b>Teoría 604</b> - Ficheros estructurados </a>
 </li>
 <li>
-<a href="./src/02_problemas/100-fundamentos.html">02_problemas/ <b>Problemas 1</b> - Fundamentos </a>
+<a href="./src/02_problemas/100-fundamentos.html">src\02_problemas<br>
+<b>Problemas 1</b> - Fundamentos </a>
 </li>
 <li>
-<a href="./src/02_problemas/201-tipos_numericos.html">02_problemas/ <b>Problemas 2</b> - Tipos Numéricos </a>
+<a href="./src/02_problemas/201-tipos_numericos.html">src\02_problemas<br>
+<b>Problemas 2</b> - Tipos Numéricos </a>
 </li>
 <li>
-<a href="./src/02_problemas/301-composicion_condicional.html">02_problemas/ <b>Problemas 3</b> - Composición condicional </a>
+<a href="./src/02_problemas/301-composicion_condicional.html">src\02_problemas<br>
+<b>Problemas 3</b> - Composición condicional </a>
 </li>
 <li>
-<a href="./src/02_problemas/302-composicion_iterativa_while.html">02_problemas/ <b>Problemas 4</b> - Composición iterativa: while </a>
+<a href="./src/02_problemas/302-composicion_iterativa_while.html">src\02_problemas<br>
+<b>Problemas 4</b> - Composición iterativa: while </a>
 </li>
 <li>
-<a href="./src/02_problemas/303-composicion_iterativa_for.html">02_problemas/ <b>Problemas 5</b> - Composición iterativa: for y while </a>
+<a href="./src/02_problemas/303-composicion_iterativa_for.html">src\02_problemas<br>
+<b>Problemas 5</b> - Composición iterativa: for y while </a>
 </li>
 <li>
-<a href="./src/02_problemas/401-funciones_basicas.html">02_problemas/ <b>Problemas 6</b> - Funciones I </a>
+<a href="./src/02_problemas/401-funciones_basicas.html">src\02_problemas<br>
+<b>Problemas 6</b> - Funciones I </a>
 </li>
 <li>
-<a href="./src/02_problemas/402-funciones_return.html">02_problemas/ <b>Problemas 7</b> - Funciones II </a>
+<a href="./src/02_problemas/402-funciones_return.html">src\02_problemas<br>
+<b>Problemas 7</b> - Funciones II </a>
 </li>
 <li>
-<a href="./src/02_problemas/501-objetos.html">02_problemas/ <b>Problemas 8</b> - Objetos </a>
+<a href="./src/02_problemas/501-objetos.html">src\02_problemas<br>
+<b>Problemas 8</b> - Objetos </a>
 </li>
 <li>
-<a href="./src/02_problemas/502-listas.html">02_problemas/ <b>Problemas 9</b> - Listas </a>
+<a href="./src/02_problemas/502-listas.html">src\02_problemas<br>
+<b>Problemas 9</b> - Listas </a>
 </li>
 <li>
-<a href="./src/02_problemas/503-estructuras_complejas.html">02_problemas/ <b>Problemas 10</b> - Estructuras de datos complejas </a>
+<a href="./src/02_problemas/503-estructuras_complejas.html">src\02_problemas<br>
+<b>Problemas 10</b> - Estructuras de datos complejas </a>
 </li>
 <li>
-<a href="./src/02_problemas/601-ficheros_de_texto.html">02_problemas/ <b>Problemas 11</b> - Ficheros </a>
+<a href="./src/02_problemas/601-ficheros_de_texto.html">src\02_problemas<br>
+<b>Problemas 11</b> - Ficheros </a>
 </li>
 <li>
-<a href="./src/02_problemas/701-ficheros_estructurados.html">02_problemas/ <b>Problemas 12</b> - Ficheros Estructurados </a>
+<a href="./src/02_problemas/701-ficheros_estructurados.html">src\02_problemas<br>
+<b>Problemas 12</b> - Ficheros Estructurados </a>
 </li>
 <li>
-<a href="./src/03_practicas/p0/101_introductoria.html">03_practicas/p0/ <b>Práctica 0</b> - Introducción </a>
+<a href="./src/03_practicas/p0/101_introductoria.html">src\03_practicas<br>
+<b>Práctica 0</b> - Introducción </a>
 </li>
 <li>
-<a href="./src/03_practicas/p1/201_tipos_de_datos_primitivos.html">03_practicas/p1/ <b>Práctica 1</b> - Tipos Primitivos </a>
+<a href="./src/03_practicas/p1/201_tipos_de_datos_primitivos.html">src\03_practicas<br>
+<b>Práctica 1</b> - Tipos Primitivos </a>
 </li>
 <li>
-<a href="./src/03_practicas/p2/301_composicion_condicional.html">03_practicas/p2/ <b>Práctica 2</b> - Composición condicional </a>
+<a href="./src/03_practicas/p2/301_composicion_condicional.html">src\03_practicas<br>
+<b>Práctica 2</b> - Composición condicional </a>
 </li>
 <li>
-<a href="./src/03_practicas/p3/302_composicion_iterativa.html">03_practicas/p3/ <b>Práctica 3</b> - Composición iterativa </a>
+<a href="./src/03_practicas/p3/302_composicion_iterativa.html">src\03_practicas<br>
+<b>Práctica 3</b> - Composición iterativa </a>
 </li>
 <li>
-<a href="./src/03_practicas/p4/401_funciones.html">03_practicas/p4/ <b>Práctica 4</b> - Funciones </a>
+<a href="./src/03_practicas/p4/401_funciones.html">src\03_practicas<br>
+<b>Práctica 4</b> - Funciones </a>
 </li>
 <li>
-<a href="./src/03_practicas/p5/501_estructuras_de_datos.html">03_practicas/p5/ <b>Práctica 5</b> - Objetos y listas </a>
+<a href="./src/03_practicas/p5/501_estructuras_de_datos.html">src\03_practicas<br>
+<b>Práctica 5</b> - Objetos y listas </a>
 </li>
 <li>
-<a href="./src/03_practicas/p6/601_ficheros.html">03_practicas/p6/ <b>Práctica 6</b> - Ficheros </a>
+<a href="./src/03_practicas/p6/601_ficheros.html">src\03_practicas<br>
+<b>Práctica 6</b> - Ficheros </a>
 </li>
 <li>
-<a href="./src/04_examenes/2023-01-17_Examen.html">04_examenes/ <b>Examen 2023-01-17</b> - Examen teórico </a>
+<a href="./src/04_examenes/2023-01-17_Examen.html">src\04_examenes<br>
+<b>Examen 2023-01-17</b> - Examen teórico </a>
 </li>
 <li>
-<a href="./src/04_examenes/2024-01-12_Examen.html">04_examenes/ <b>Examen 2024-01-12</b> - </a>
+<a href="./src/04_examenes/2024-01-12_Examen.html">src\04_examenes<br>
+<b>Examen 2024-01-12</b> - </a>
 </li>
 <li>
-<a href="./src/04_examenes/2025-05-08_Ejercicios_extra.html">04_examenes/ <b>Ejercicios Extra I</b> - </a>
+<a href="./src/04_examenes/2025-05-08_Ejercicios_extra.html">src\04_examenes<br>
+<b>Ejercicios Extra I</b> - </a>
 </li>
 <li>
-<a href="./src/04_examenes/2025-05-23_Examen.html">04_examenes/ <b>Examen 2025-05-23</b> - </a>
+<a href="./src/04_examenes/2025-05-23_Examen.html">src\04_examenes<br>
+<b>Examen 2025-05-23</b> - </a>
 </li>
 </ul>
 <div class="listing-no-matching d-none">No hay resultados</div>
@@ -1037,13 +956,14 @@ window.Quarto = {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

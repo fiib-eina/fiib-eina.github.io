@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -68,18 +68,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../src/_style/logos/unizar-diis-white.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-b5d7a9fd0efe6ae5644a67f785a891e4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-e67ab1ef286a228f97a89504a4d5ebae.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-b5d7a9fd0efe6ae5644a67f785a891e4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3c2874bcb47fcac49e0bf0af066f625e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-1a0c994539ae3df13c4b426f086ca321.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3c2874bcb47fcac49e0bf0af066f625e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-bae46e0c90c68260b0a4bbb45f1294a3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-12e34ae91984f684715f9e950e2b140c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-bae46e0c90c68260b0a4bbb45f1294a3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-116479fa16b3443f59da5ce90315efd6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-8416b61dbf7538d7ca7b9d83e24c6a70.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-116479fa16b3443f59da5ce90315efd6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -93,7 +94,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "s"
   ],
   "language": {
-    "search-no-results-text": "Sin resultados",
+    "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
     "search-copy-link-title": "Copiar el enlace en la búsqueda",
     "search-hide-matches-text": "Ocultar resultados adicionales",
@@ -121,7 +122,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -325,7 +326,8 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../src/_style/logos/logo_uz.svg" alt="Unizar logo, black" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../src\_style\logos\logo_uz.svg" alt="Unizar logo, black" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../src\_style\logos\logo_uz.svg" alt="Unizar logo, black" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
@@ -660,136 +662,6 @@ window.Quarto = {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
- <span class="menu-text">Prácticas</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
- <span class="menu-text">P0</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../src/03_practicas/p0/101_introductoria.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 0</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
- <span class="menu-text">P1</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../src/03_practicas/p1/201_tipos_de_datos_primitivos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 1</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
- <span class="menu-text">P2</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../src/03_practicas/p2/301_composicion_condicional.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 2</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
- <span class="menu-text">P3</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../src/03_practicas/p3/302_composicion_iterativa.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 3</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false">
- <span class="menu-text">P4</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../src/03_practicas/p4/401_funciones.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 4</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false">
- <span class="menu-text">P5</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../src/03_practicas/p5/501_estructuras_de_datos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 5</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false">
- <span class="menu-text">P6</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../src/03_practicas/p6/601_ficheros.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 6</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -858,19 +730,19 @@ window.Quarto = {
 <li>Desps: <code>-- (1) Saludar</code></li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">def</span> pintar_menu():</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">def</span> pintar_menu():</span>
 <span id="cb1-2"><a href="#cb1-2"></a>    <span class="bu">print</span>(<span class="st">"-- Opción 1: Saludar"</span>)</span>
 <span id="cb1-3"><a href="#cb1-3"></a>    <span class="bu">print</span>(<span class="st">"-- Opción 2: Despedir"</span>)</span>
 <span id="cb1-4"><a href="#cb1-4"></a>    <span class="bu">print</span>(<span class="st">"-- Opción 3: Sumar"</span>)</span>
 <span id="cb1-5"><a href="#cb1-5"></a>    <span class="bu">print</span>(<span class="st">"-- Opción 4: Restar"</span>)</span>
 <span id="cb1-6"><a href="#cb1-6"></a>    <span class="bu">print</span>(<span class="st">"-- (Ctrl+C) Salir"</span>)</span>
 <span id="cb1-7"><a href="#cb1-7"></a></span>
-<span id="cb1-8"><a href="#cb1-8"></a>pintar_menu()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-8"><a href="#cb1-8"></a>pintar_menu()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <details>
 <summary>
 Solución
 </summary>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">def</span> pintar_plantilla(texto):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">def</span> pintar_plantilla(texto):</span>
 <span id="cb2-2"><a href="#cb2-2"></a>    <span class="bu">print</span>(<span class="ss">f"-- </span><span class="sc">{</span>texto<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3"></a></span>
 <span id="cb2-4"><a href="#cb2-4"></a><span class="kw">def</span> pintar_opcion(num, opcion):</span>
@@ -883,12 +755,12 @@ Solución
 <span id="cb2-11"><a href="#cb2-11"></a>    pintar_opcion(<span class="dv">4</span>, <span class="st">"Restar"</span>)</span>
 <span id="cb2-12"><a href="#cb2-12"></a>    pintar_plantilla(<span class="st">"Salir"</span>)</span>
 <span id="cb2-13"><a href="#cb2-13"></a></span>
-<span id="cb2-14"><a href="#cb2-14"></a>pintar_menu()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-14"><a href="#cb2-14"></a>pintar_menu()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details></section>
 <section id="calculadora" class="level3" data-number="1.2">
 <h3 data-number="1.2" class="anchored" data-anchor-id="calculadora"><span class="header-section-number">1.2</span> Calculadora</h3>
 <p>El objetivo es <strong>poder probar el funcionamiento individual de cada operación</strong>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> math</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> math</span>
 <span id="cb3-2"><a href="#cb3-2"></a></span>
 <span id="cb3-3"><a href="#cb3-3"></a>op <span class="op">=</span> <span class="st">""</span></span>
 <span id="cb3-4"><a href="#cb3-4"></a><span class="cf">while</span> op <span class="op">!=</span> <span class="st">"coseno"</span> <span class="kw">and</span> op <span class="op">!=</span> <span class="st">"seno"</span> <span class="kw">and</span> op <span class="op">!=</span> <span class="st">"tangente"</span>:</span>
@@ -916,12 +788,12 @@ Solución
 <span id="cb3-26"><a href="#cb3-26"></a>        sin_approx <span class="op">+=</span> ((<span class="op">-</span><span class="dv">1</span>) <span class="op">**</span> i) <span class="op">*</span> ((x <span class="op">**</span> (<span class="dv">2</span> <span class="op">*</span> i <span class="op">+</span> <span class="dv">1</span>)) <span class="op">/</span> math.factorial(<span class="dv">2</span> <span class="op">*</span> i <span class="op">+</span> <span class="dv">1</span>))</span>
 <span id="cb3-27"><a href="#cb3-27"></a>    tan_approx <span class="op">=</span> sin_approx <span class="op">/</span> cos_approx</span>
 <span id="cb3-28"><a href="#cb3-28"></a>    resultado <span class="op">=</span> tan_approx</span>
-<span id="cb3-29"><a href="#cb3-29"></a><span class="bu">print</span>(<span class="ss">f"El resultado es: </span><span class="sc">{</span>resultado<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-29"><a href="#cb3-29"></a><span class="bu">print</span>(<span class="ss">f"El resultado es: </span><span class="sc">{</span>resultado<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <details>
 <summary>
 Solución
 </summary>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> math</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> math</span>
 <span id="cb4-2"><a href="#cb4-2"></a></span>
 <span id="cb4-3"><a href="#cb4-3"></a><span class="kw">def</span> pedir_operacion():</span>
 <span id="cb4-4"><a href="#cb4-4"></a>    op <span class="op">=</span> <span class="st">""</span></span>
@@ -959,7 +831,7 @@ Solución
 <span id="cb4-36"><a href="#cb4-36"></a><span class="cf">elif</span> op <span class="op">==</span> <span class="st">"tangente"</span>:</span>
 <span id="cb4-37"><a href="#cb4-37"></a>    resultado <span class="op">=</span> tangente(x)</span>
 <span id="cb4-38"><a href="#cb4-38"></a></span>
-<span id="cb4-39"><a href="#cb4-39"></a><span class="bu">print</span>(<span class="ss">f"El resultado es: </span><span class="sc">{</span>resultado<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-39"><a href="#cb4-39"></a><span class="bu">print</span>(<span class="ss">f"El resultado es: </span><span class="sc">{</span>resultado<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details></section>
 </section>
 <section id="funciones-útiles" class="level2" data-number="2">
@@ -971,13 +843,13 @@ Solución
 <p><span class="math display">\[
 \binom{n}{k} = \frac{n!}{k!(n-k)!}
 \]</span></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="bu">print</span>(coeficiente_binomial(<span class="dv">5</span>, <span class="dv">2</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="bu">print</span>(coeficiente_binomial(<span class="dv">5</span>, <span class="dv">2</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">10</div>
 <details>
 <summary>
 Solución
 </summary>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> factorial(n):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> factorial(n):</span>
 <span id="cb6-2"><a href="#cb6-2"></a>    fac <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb6-3"><a href="#cb6-3"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>):</span>
 <span id="cb6-4"><a href="#cb6-4"></a>        fac <span class="op">*=</span> i</span>
@@ -986,7 +858,7 @@ Solución
 <span id="cb6-7"><a href="#cb6-7"></a><span class="kw">def</span> coeficiente_binomial(n, k):</span>
 <span id="cb6-8"><a href="#cb6-8"></a>    <span class="cf">return</span> factorial(n) <span class="op">//</span> (factorial(k) <span class="op">*</span> factorial(n <span class="op">-</span> k))</span>
 <span id="cb6-9"><a href="#cb6-9"></a></span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="bu">print</span>(coeficiente_binomial(<span class="dv">5</span>, <span class="dv">2</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-10"><a href="#cb6-10"></a><span class="bu">print</span>(coeficiente_binomial(<span class="dv">5</span>, <span class="dv">2</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details></section>
 <section id="pitágoras" class="level3" data-number="2.2">
 <h3 data-number="2.2" class="anchored" data-anchor-id="pitágoras"><span class="header-section-number">2.2</span> Pitágoras</h3>
@@ -994,7 +866,7 @@ Solución
 <p><span class="math display">\[
 c = \sqrt{a^2 + b^2}
 \]</span></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="bu">print</span>(pitagoras(<span class="dv">3</span>, <span class="dv">4</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="bu">print</span>(pitagoras(<span class="dv">3</span>, <span class="dv">4</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">5.0</div>
 <details>
 <summary>
@@ -1009,7 +881,7 @@ Pista
 <summary>
 Solución
 </summary>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">import</span> math</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">import</span> math</span>
 <span id="cb8-2"><a href="#cb8-2"></a></span>
 <span id="cb8-3"><a href="#cb8-3"></a><span class="kw">def</span> raiz_cuadrada(n):</span>
 <span id="cb8-4"><a href="#cb8-4"></a>    <span class="cf">return</span> n <span class="op">**</span> <span class="fl">0.5</span></span>
@@ -1017,21 +889,21 @@ Solución
 <span id="cb8-6"><a href="#cb8-6"></a><span class="kw">def</span> pitagoras(a, b):</span>
 <span id="cb8-7"><a href="#cb8-7"></a>    <span class="cf">return</span> raiz_cuadrada(a <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> b <span class="op">**</span> <span class="dv">2</span>)</span>
 <span id="cb8-8"><a href="#cb8-8"></a></span>
-<span id="cb8-9"><a href="#cb8-9"></a><span class="bu">print</span>(pitagoras(<span class="dv">3</span>, <span class="dv">4</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="bu">print</span>(pitagoras(<span class="dv">3</span>, <span class="dv">4</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </section>
 <section id="mayor-de-tres" class="level3" data-number="2.3">
 <h3 data-number="2.3" class="anchored" data-anchor-id="mayor-de-tres"><span class="header-section-number">2.3</span> Mayor de tres</h3>
 <p>Escribe una función <code>mayor_de_tres(a, b, c)</code> que devuelva el mayor de tres números. <strong>No uses la biblioteca <code>math</code></strong>. Desarrolla todas las funciones <em>extra</em> que necesites.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="bu">print</span>(mayor_de_tres(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="bu">print</span>(mayor_de_tres(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">5</div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="bu">print</span>(mayor_de_tres(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">4</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="bu">print</span>(mayor_de_tres(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">4</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">5</div>
 <details>
 <summary>
 Solución
 </summary>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a></span>
 <span id="cb11-2"><a href="#cb11-2"></a><span class="kw">def</span> mayor_de_tres(a, b, c):</span>
 <span id="cb11-3"><a href="#cb11-3"></a>    <span class="cf">if</span> a <span class="op">&gt;=</span> b <span class="kw">and</span> a <span class="op">&gt;=</span> c:</span>
 <span id="cb11-4"><a href="#cb11-4"></a>        <span class="bu">max</span> <span class="op">=</span> a</span>
@@ -1039,28 +911,28 @@ Solución
 <span id="cb11-6"><a href="#cb11-6"></a>        <span class="bu">max</span> <span class="op">=</span> b</span>
 <span id="cb11-7"><a href="#cb11-7"></a>    <span class="cf">else</span>:</span>
 <span id="cb11-8"><a href="#cb11-8"></a>        <span class="bu">max</span> <span class="op">=</span> c</span>
-<span id="cb11-9"><a href="#cb11-9"></a>    <span class="cf">return</span> <span class="bu">max</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-9"><a href="#cb11-9"></a>    <span class="cf">return</span> <span class="bu">max</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </section>
 <section id="mediana-de-tres" class="level3" data-number="2.4">
 <h3 data-number="2.4" class="anchored" data-anchor-id="mediana-de-tres"><span class="header-section-number">2.4</span> Mediana de tres</h3>
 <p>Escribe una función <code>mediana_de_tres(a, b, c)</code> que devuelva la mediana de tres números. <strong>No uses la biblioteca <code>math</code></strong>. Desarrolla todas las funciones <em>extra</em> que necesites.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="bu">print</span>(mediana_de_tres(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="bu">print</span>(mediana_de_tres(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">4</div>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="bu">print</span>(mediana_de_tres(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">4</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="bu">print</span>(mediana_de_tres(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">4</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="line-block">4</div>
 <details>
 <summary>
 Solución
 </summary>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">def</span> mediana_de_tres(a, b, c):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">def</span> mediana_de_tres(a, b, c):</span>
 <span id="cb14-2"><a href="#cb14-2"></a>    <span class="cf">if</span> b <span class="op">&lt;=</span> a <span class="kw">and</span> a <span class="op">&lt;=</span> c <span class="kw">or</span> c <span class="op">&lt;=</span> a <span class="kw">and</span> a <span class="op">&lt;=</span> b:</span>
 <span id="cb14-3"><a href="#cb14-3"></a>        med <span class="op">=</span> a</span>
 <span id="cb14-4"><a href="#cb14-4"></a>    <span class="cf">elif</span> a <span class="op">&lt;=</span> b <span class="kw">and</span> b <span class="op">&lt;=</span> c <span class="kw">or</span> c <span class="op">&lt;=</span> b <span class="kw">and</span> b <span class="op">&lt;=</span> a:</span>
 <span id="cb14-5"><a href="#cb14-5"></a>        med <span class="op">=</span> b</span>
 <span id="cb14-6"><a href="#cb14-6"></a>    <span class="cf">else</span>:</span>
 <span id="cb14-7"><a href="#cb14-7"></a>        med <span class="op">=</span> c</span>
-<span id="cb14-8"><a href="#cb14-8"></a>    <span class="cf">return</span> med</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-8"><a href="#cb14-8"></a>    <span class="cf">return</span> med</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 
 
@@ -1132,13 +1004,14 @@ Solución
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
