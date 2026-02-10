@@ -21,8 +21,8 @@ website:
         contents: src/01_teoria/**
       - section: Problemas
         contents: src/02_problemas/**
-      # - section: Prácticas
-      #   contents: src/03_practicas/**
+      - section: Prácticas
+        contents: src/03_practicas/**
   search:
     location: sidebar
     type: overlay
