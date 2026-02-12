@@ -8,7 +8,7 @@ format: html
 
 ### Matrículas de honor
 
-El artículo 14.2 del [acuerdo de 22 de diciembre de 2010, del Consejo de Gobierno, por el que se aprueba el Reglamento de normas de evaluación y aprendizaje de la Universidad de Zaragoza](https://academico.unizar.es/sites/academico/files/archivos/gradoymaster/legislacion/reglamentodenormasdeevaluaciondelaprendizaje.pdf) establece: 
+El artículo 14.2 del [acuerdo de 22 de diciembre de 2010, del Consejo de Gobierno, por el que se aprueba el Reglamento de normas de evaluación y aprendizaje de la Universidad de Zaragoza](https://zaguan.unizar.es/record/30538/files/Evaluacion%20del%20aprendizaje.pdf) establece: 
 
 _La mención «Matrícula de Honor» podrá ser otorgada a estudiantes que hayan obtenido una calificación igual o superior a 9 en la asignatura. Su número no podrá exceder del 5 % de los estudiantes matriculados en dicha asignatura en el correspondiente grupo docente, salvo cuando sea inferior a 20, en cuyo caso se podrá conceder una sola matrícula de honor._
 
@@ -26,12 +26,19 @@ Otro ejemplo:
 | **19**
 | Se pueden otorgar como máximo 1 matrículas de honor.
 
+Y un ejemplo adicional:
+
+| Escribe el número de matriculados en un grupo docente: 
+| **-3**
+| El número de matriculados tiene que ser positivo.
+
+
 **Entrega:** Escribe tu programa en un fichero denominado `matriculas.py`.
 
 
 ### Calificaciones cualitativas
 
-El artículo 14.1 del mencionado [Reglamento](https://academico.unizar.es/sites/academico/files/archivos/gradoymaster/legislacion/reglamentodenormasdeevaluaciondelaprendizaje.pdf) establece a su vez que _los resultados de cada una de las materias del plan de estudios se calificarán de 0 a 10 [...], añadiendo una calificación cualitativa según la siguiente escala:_ de 0 a 5, suspenso; de 5 a 7, aprobado; de 7 a 9, notable y de 9 a 10, sobresaliente.
+El artículo 14.1 del mencionado [Reglamento](https://zaguan.unizar.es/record/30538/files/Evaluacion%20del%20aprendizaje.pdf) establece a su vez que _los resultados de cada una de las materias del plan de estudios se calificarán de 0 a 10 [...], añadiendo una calificación cualitativa según la siguiente escala:_ de 0 a 5, suspenso; de 5 a 7, aprobado; de 7 a 9, notable y de 9 a 10, sobresaliente.
 
 Escribe un programa en Python que solicite al usuario el valor de una calificación numérica de un estudiante y escriba en la pantalla la calificación cualitativa correspondiente.
 
@@ -45,7 +52,7 @@ Ejemplos de ejecución:
 | **4.99**
 | Calificación: Suspenso.
 
-Ten en cuenta la posibilidad de que el usuario introduzca calificaciones no válidas fuera del intervalo $[0, 10]$:
+Ten en cuenta la posibilidad de que el usuario introduzca calificaciones no válidas fuera del intervalo \[0, 10\]:
 
 | Escribe la nota numérica:
 | **12.5**
@@ -96,6 +103,42 @@ Ejemplos de ejecución:
 | Introduzca un número entero: 
 | **0**
 | Resultado: 0
+
+<!-- TODO: versión para el curso 2026-27 
+
+Escribe un programa en Python que solicite un valor entero al usuario y realice las siguientes acciones:
+
+ - Si el valor dado por el usuario es múltiplo de 7, lo dividirá entre 7. Después:
+	 - Si el resultado de esta división no es múltiplo de 6, elevará el resultado al cuadrado.
+	 - Por el contrario, si el resultado es múltiplo de 6, lo dividirá entre 3.
+ - En el caso de que el valor dado por el usuario no sea múltiplo de 7, entonces:
+	 - Si el valor dado es positivo, le cambiará el signo.
+	 - Si es negativo, lo multiplicará por 2.
+
+Finalmente, el programa informará al usuario del valor transformado, escribiendo por pantalla el resultado.
+
+Ejemplos de ejecución:
+
+| Introduzca un número entero:
+| **14**
+| Resultado: 4
+
+| Introduzca un número entero: 
+| **42**
+| Resultado: 2
+
+| Introduzca un número entero: 
+| **8**
+| Resultado: -8
+
+| Introduzca un número entero: 
+| **-5**
+| Resultado: -10
+
+| Introduzca un número entero: 
+| **0**
+| Resultado: 0
+-->
 
 **Entrega:** Escribe tu programa en un fichero denominado `malabares.py`.
 
@@ -151,11 +194,15 @@ El programa debe presentar una forma de interacción con el usuario como la que 
 Resuelve el problema de forma incremental, es decir, construyendo distintas versiones del programa que, poco a poco, vayan incorporando los requisitos solicitados en el enunciado.
 En particular, se sugiere seguir el siguiente proceso:
 
-- Comienza escribiendo un programa que pida los tres datos al usuario y, si los tres son iguales, escriba en la pantalla el mensaje «El triángulo es equilátero».
-- Continúa modificando el programa para que, además de ser capaz de determinar si el triángulo es equilátero, determine también uno de los casos en los que es isósceles (por ejemplo, cuando los dos primeros lados son iguales).
-- Continúa haciendo que el programa detecte los otros dos casos en los que el triángulo es isósceles (cuando los dos últimos lados son los iguales y cuando son iguales el primero y el tercero).
-- Complétalo haciendo que escriba que es escaleno cuando no sea equilátero ni isósceles.
-- Por último, añade el código necesario para que el programa compruebe si los tres datos suministrados por el usuario son positivos y haz que, en caso de que no lo sean, escriba el mensaje de error «Algún dato no es positivo». 
+- Comienza escribiendo un programa que pida los tres datos al usuario y, si los tres son iguales, escriba en la pantalla el mensaje «El triángulo es equilátero». Pruébalo con los lados de un triángulo equilátero y comprueba que el programa indica que el triángulo es equilátero. Pruébalo también con los lados de un triángulo no equilátero y comprueba que el programa no escribe nada.
+
+- Continúa modificando el programa para que, además de ser capaz de determinar si el triángulo es equilátero, determine también uno de los casos en los que es isósceles (por ejemplo, cuando los dos primeros lados son iguales). Pruébalo de nuevo con los lados de un triángulo equilátero, uno isósceles con los dos primeros lados iguales y con otro que no cumpla con ninguna de estas condiciones.
+
+- Continúa haciendo que el programa detecte los otros dos casos en los que el triángulo es isósceles (cuando los dos últimos lados son los iguales y cuando son iguales el primero y el tercero). Vuelve a probar tu programa. 
+
+- Complétalo haciendo que escriba que es escaleno cuando no sea equilátero ni isósceles. Pruébalo otra vez.
+
+- Por último, añade el código necesario para que el programa compruebe si los tres datos suministrados por el usuario son positivos y haz que, en caso de que no lo sean, escriba el mensaje de error «Algún dato no es positivo». Pruébalo de nuevo. 
 
 **Entrega:** Escribe tu programa en un fichero denominado `triangulos.py`.
 
@@ -197,6 +244,22 @@ Este aspecto debe ser comprobado por el programa:
 | Error: la cantidad a retirar tiene que ser un múltiplo de 10.
 
 **Entrega:** Escribe tu programa en un fichero denominado `cajero.py`.
+
+
+## Pruebas
+
+Copia los archivos de pruebas de la práctica 2 en la carpeta `test` de la carpeta `p2` que creaste con la estructura básica de carpetas En la [práctica 0](../p0/101_introductoria.html#/22):
+
+1. En tu carpeta de prácticas `FIIB`, accede a la carpeta `tests` de la carpeta `p2` y déjala abierta.
+1. Descarga el fichero [`tests_p2.zip`](./tests_p2.zip).
+1. Abre el archivo `tests_p2.zip` que te has descargado.
+1. Arrastra todo el contenido del archivo `tests_p2.zip` a la carpeta `tests` de la carpeta `p2`.
+
+Recuerda que, para poder ejecutar los test, tienes que abrir, en Visual Studio Code, la carpeta `p2` de tu carpeta de prácticas `FIIB` que creamos la semana pasada.
+Hazlo seleccionando carpeta `p2` en el Explorador de Windows o en Finder y, con el botón derecho, elige el menú `Abrir directorio en VSCode`.
+También puedes abrir primero Visual Studio Code y, desde allí, ir al menú `File` > `Open Folder` y seleccionar la carpeta `p2`.
+
+En esta ocasión, hay las pruebas que os proporcionamos son menos exhaustivas que en la práctica 1, por lo que es posible que, aunque tu programa pase todas las pruebas, no cumpla con todos los requisitos solicitados en el enunciado. Para asegurarte de que todos funcionan correctamente, ejecuta manualmente tus programas las veces que sea necesario con distintos datos de entrada para comprobar que funcionan correctamente en todos los casos.
 
 
 ## Entrega de la práctica
