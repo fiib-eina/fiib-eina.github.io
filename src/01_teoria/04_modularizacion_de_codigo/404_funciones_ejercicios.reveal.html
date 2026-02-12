@@ -7,8 +7,8 @@
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-d640c705e8c17715bca3574aa719063f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.26">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.34">
 
   <title>Fundamentos de Informática – Teoría 404</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -95,7 +95,7 @@
     code span.vs { color: #008000; } /* VerbatimString */
     code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-885290ce3065af1b721f68f6ffa32a74.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-f7935cc89ec6222034d74a13893d12e4.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -284,14 +284,14 @@ Desnivel acumulado: 4000m</div>
 <li>Además observa en el ejemplo que <strong>cada vez que se solicita una altura, se muestra el número de checkpoint</strong>.</li>
 </ul>
 <p><strong>Test:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="co"># Input: -20, 200</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="co"># Input: -20, 200</span></span>
 <span id="cb1-2"><a></a><span class="co"># Expected: no valida, 200</span></span>
-<span id="cb1-3"><a></a><span class="bu">print</span>(obtener_altura_valida(<span class="dv">2</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-3"><a></a><span class="bu">print</span>(obtener_altura_valida(<span class="dv">2</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
 <p><strong>Solución:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> obtener_altura(checkpoint_num):</span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> obtener_altura(checkpoint_num):</span>
 <span id="cb2-2"><a></a>    <span class="bu">print</span>(<span class="ss">f"Checkpoint </span><span class="sc">{</span>checkpoint_num<span class="sc">}</span><span class="ss"> - Altura:"</span>, end<span class="op">=</span><span class="st">" "</span>)</span>
 <span id="cb2-3"><a></a>    altura <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
 <span id="cb2-4"><a></a>    <span class="cf">return</span> altura</span>
@@ -306,7 +306,7 @@ Desnivel acumulado: 4000m</div>
 <span id="cb2-13"><a></a>        altura <span class="op">=</span> obtener_altura(checkpoint_num)</span>
 <span id="cb2-14"><a></a>    <span class="cf">return</span> altura</span>
 <span id="cb2-15"><a></a></span>
-<span id="cb2-16"><a></a><span class="co"># Test</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-16"><a></a><span class="co"># Test</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
@@ -325,7 +325,7 @@ Desnivel acumulado: 4000m</div>
 </ul></li>
 </ul>
 <p><strong>Test:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co"># Expected: 1000</span></span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co"># Expected: 1000</span></span>
 <span id="cb3-2"><a></a><span class="bu">print</span>(desnivel_positivo(<span class="dv">1000</span>, <span class="dv">2000</span>))</span>
 <span id="cb3-3"><a></a></span>
 <span id="cb3-4"><a></a><span class="co"># Expected: 0</span></span>
@@ -335,12 +335,12 @@ Desnivel acumulado: 4000m</div>
 <span id="cb3-8"><a></a><span class="bu">print</span>(desnivel_absoluto(<span class="dv">1000</span>, <span class="dv">2000</span>))</span>
 <span id="cb3-9"><a></a></span>
 <span id="cb3-10"><a></a><span class="co"># Expected: 1000</span></span>
-<span id="cb3-11"><a></a><span class="bu">print</span>(desnivel_absoluto(<span class="dv">2000</span>, <span class="dv">1000</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-11"><a></a><span class="bu">print</span>(desnivel_absoluto(<span class="dv">2000</span>, <span class="dv">1000</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
 <p><strong>Solución:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> desnivel_positivo(h1, h2):</span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> desnivel_positivo(h1, h2):</span>
 <span id="cb4-2"><a></a>    <span class="cf">if</span> h2 <span class="op">&gt;</span> h1:</span>
 <span id="cb4-3"><a></a>        desnivel <span class="op">=</span> h2 <span class="op">-</span> h1</span>
 <span id="cb4-4"><a></a>    <span class="cf">else</span>:</span>
@@ -348,7 +348,7 @@ Desnivel acumulado: 4000m</div>
 <span id="cb4-6"><a></a>    <span class="cf">return</span> desnivel</span>
 <span id="cb4-7"><a></a></span>
 <span id="cb4-8"><a></a><span class="kw">def</span> desnivel_absoluto(h1, h2):</span>
-<span id="cb4-9"><a></a>    <span class="cf">return</span> <span class="bu">abs</span>(h2 <span class="op">-</span> h1)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-9"><a></a>    <span class="cf">return</span> <span class="bu">abs</span>(h2 <span class="op">-</span> h1)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
@@ -375,14 +375,14 @@ Desnivel acumulado: 4000m</div>
 </ul></li>
 </ul>
 <p><strong>Test:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="co"># Input: 1000, 2000, 1000, 3000, 3000</span></span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="co"># Input: 1000, 2000, 1000, 3000, 3000</span></span>
 <span id="cb5-2"><a></a><span class="co"># Expected: positivo 3000, acumulado 4000</span></span>
-<span id="cb5-3"><a></a>desniveles_totales()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-3"><a></a>desniveles_totales()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
 <p><strong>Solución:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">def</span> desniveles_totales():</span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">def</span> desniveles_totales():</span>
 <span id="cb6-2"><a></a>    <span class="co"># Obtener los dos primeros checkpoints</span></span>
 <span id="cb6-3"><a></a>    h1 <span class="op">=</span> obtener_altura_valida(<span class="dv">1</span>)</span>
 <span id="cb6-4"><a></a>    h2 <span class="op">=</span> obtener_altura_valida(<span class="dv">2</span>)</span>
@@ -402,7 +402,7 @@ Desnivel acumulado: 4000m</div>
 <span id="cb6-18"><a></a>        h1 <span class="op">=</span> h2</span>
 <span id="cb6-19"><a></a>        h2 <span class="op">=</span> obtener_altura_valida(checkpoint_num <span class="op">+</span> <span class="dv">1</span>)</span>
 <span id="cb6-20"><a></a>    <span class="bu">print</span>(<span class="ss">f"Desnivel positivo: </span><span class="sc">{</span>total_positivo<span class="sc">}</span><span class="ss">m"</span>)</span>
-<span id="cb6-21"><a></a>    <span class="bu">print</span>(<span class="ss">f"Desnivel acumulado: </span><span class="sc">{</span>total_acumulado<span class="sc">}</span><span class="ss">m"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-21"><a></a>    <span class="bu">print</span>(<span class="ss">f"Desnivel acumulado: </span><span class="sc">{</span>total_acumulado<span class="sc">}</span><span class="ss">m"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
@@ -433,7 +433,7 @@ Desnivel acumulado: 4000m</div>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="../../../../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
+<p><img src="../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>Fundamentos de Informática</p>
 </div>
@@ -623,7 +623,7 @@ Desnivel acumulado: 4000m</div>
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -697,14 +697,13 @@ Desnivel acumulado: 4000m</div>
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-          const outerScaffold = trigger.parentElement.cloneNode(true);
-          const codeEl = outerScaffold.querySelector('code');
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
             }
-          }
-          return codeEl.innerText;
+            return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

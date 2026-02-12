@@ -7,8 +7,8 @@
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-d640c705e8c17715bca3574aa719063f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.26">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.34">
 
   <title>Fundamentos de Informática – Teoría 501</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -95,7 +95,7 @@
     code span.vs { color: #008000; } /* VerbatimString */
     code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-885290ce3065af1b721f68f6ffa32a74.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-f7935cc89ec6222034d74a13893d12e4.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -245,11 +245,11 @@
 <li>Supongamos que queremos <strong>modelar</strong> las <strong>aulas</strong> de una <strong>facultad/escuela</strong>.</li>
 <li>Cada aula tiene una serie de <strong>características</strong> que la definen:</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="bu">id</span> <span class="op">=</span> <span class="st">"A23"</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="bu">id</span> <span class="op">=</span> <span class="st">"A23"</span></span>
 <span id="cb1-2"><a></a>planta <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb1-3"><a></a>superficie <span class="op">=</span> <span class="fl">80.5</span></span>
 <span id="cb1-4"><a></a>capacidad <span class="op">=</span> <span class="dv">60</span></span>
-<span id="cb1-5"><a></a>proyector <span class="op">=</span> <span class="va">True</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-5"><a></a>proyector <span class="op">=</span> <span class="va">True</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Utilizamos <strong>cinco variables independientes</strong> para <strong>representar</strong> una <strong>sola entidad</strong>.</li>
 </ul>
@@ -259,7 +259,7 @@
 <ul>
 <li>Si queremos representar dos aulas, necesitamos <strong>diez variables</strong>.</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>id_a23 <span class="op">=</span> <span class="st">"A23"</span></span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>id_a23 <span class="op">=</span> <span class="st">"A23"</span></span>
 <span id="cb2-2"><a></a>planta_a23 <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb2-3"><a></a>superficie_a23 <span class="op">=</span> <span class="fl">80.5</span></span>
 <span id="cb2-4"><a></a>capacidad_a23 <span class="op">=</span> <span class="dv">60</span></span>
@@ -269,7 +269,7 @@
 <span id="cb2-8"><a></a>planta_a12 <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb2-9"><a></a>superficie_a12 <span class="op">=</span> <span class="fl">50.5</span></span>
 <span id="cb2-10"><a></a>capacidad_a12 <span class="op">=</span> <span class="dv">40</span></span>
-<span id="cb2-11"><a></a>proyector_a12 <span class="op">=</span> <span class="va">False</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-11"><a></a>proyector_a12 <span class="op">=</span> <span class="va">False</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
@@ -331,9 +331,9 @@ alumno2 = {“María”, 21, 8.0}</div>
 <li><strong>Después</strong> de <strong>importar módulos</strong> que necesiten.</li>
 </ul></li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="kw">class</span> NombreClase:</span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="kw">class</span> NombreClase:</span>
 <span id="cb3-2"><a></a>    atributo1: tipo1</span>
-<span id="cb3-3"><a></a>    atributo2: tipo2</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-3"><a></a>    atributo2: tipo2</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-tip callout-style-simple">
 <div class="callout-body">
 <div class="callout-icon-container">
@@ -356,18 +356,18 @@ alumno2 = {“María”, 21, 8.0}</div>
 
 <h4 id="ejemplos-definiciones-de-clases">Ejemplos: Definiciones de clases</h4>
 <p><strong>Números complejos</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">class</span> NumeroComplejo:</span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">class</span> NumeroComplejo:</span>
 <span id="cb4-2"><a></a>    real: <span class="bu">float</span></span>
-<span id="cb4-3"><a></a>    imag: <span class="bu">float</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-3"><a></a>    imag: <span class="bu">float</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Fecha</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="kw">class</span> Fecha:</span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="kw">class</span> Fecha:</span>
 <span id="cb5-2"><a></a>    dia: <span class="bu">int</span></span>
 <span id="cb5-3"><a></a>    mes: <span class="bu">int</span></span>
-<span id="cb5-4"><a></a>    anno: <span class="bu">int</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-4"><a></a>    anno: <span class="bu">int</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Coordenadas</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">class</span> Coordenada:</span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">class</span> Coordenada:</span>
 <span id="cb6-2"><a></a>    lat: <span class="bu">float</span></span>
-<span id="cb6-3"><a></a>    lon: <span class="bu">float</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-3"><a></a>    lon: <span class="bu">float</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
@@ -379,12 +379,12 @@ alumno2 = {“María”, 21, 8.0}</div>
 </ul></li>
 <li>Este objeto creado deberemos <strong>asignarlo a una variable</strong> para poder <strong>trabajar con él</strong>.</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="kw">class</span> Fecha:</span>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="kw">class</span> Fecha:</span>
 <span id="cb7-2"><a></a>    dia: <span class="bu">int</span></span>
 <span id="cb7-3"><a></a>    mes: <span class="bu">int</span></span>
 <span id="cb7-4"><a></a>    anno: <span class="bu">int</span></span>
 <span id="cb7-5"><a></a></span>
-<span id="cb7-6"><a></a>f <span class="op">=</span> Fecha() </span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-6"><a></a>f <span class="op">=</span> Fecha() </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>La variable <code>f</code> es un <strong>objeto</strong> de la <strong>clase</strong> <code>Fecha</code>.</li>
 <li>El objeto <code>f</code> tiene <strong>tres atributos</strong>:
@@ -402,17 +402,17 @@ alumno2 = {“María”, 21, 8.0}</div>
 <li><code>nombre_objeto.nombre_atributo</code></li>
 </ul></li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>f1 <span class="op">=</span> Fecha()</span>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>f1 <span class="op">=</span> Fecha()</span>
 <span id="cb8-2"><a></a>f2 <span class="op">=</span> Fecha()</span>
 <span id="cb8-3"><a></a></span>
 <span id="cb8-4"><a></a>f1.dia <span class="co"># El atributo dia del objeto f1</span></span>
-<span id="cb8-5"><a></a>f2.mes <span class="co"># El atributo mes del objeto f2</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-5"><a></a>f2.mes <span class="co"># El atributo mes del objeto f2</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Podemos usar esta notación para hacer <strong>asignaciones</strong> o para <strong>leer</strong> el valor de un atributo.</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>f.dia <span class="op">=</span> <span class="dv">1</span>     <span class="co"># Asignación</span></span>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>f.dia <span class="op">=</span> <span class="dv">1</span>     <span class="co"># Asignación</span></span>
 <span id="cb9-2"><a></a><span class="bu">print</span>(f.dia)  <span class="co"># Lectura</span></span>
-<span id="cb9-3"><a></a>f.dia <span class="op">+=</span> <span class="dv">1</span>    <span class="co"># Lectura y asignación</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb9-3"><a></a>f.dia <span class="op">+=</span> <span class="dv">1</span>    <span class="co"># Lectura y asignación</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-tip callout-style-simple">
 <div class="callout-body">
 <div class="callout-icon-container">
@@ -434,24 +434,24 @@ alumno2 = {“María”, 21, 8.0}</div>
 <li>Cuando se crea un <strong>objeto nuevo</strong>, sus atributos <strong>no tienen valores asignados</strong>.</li>
 <li>Por ello, <strong>debemos asignar valores</strong> a los atributos del objeto para <strong>inicializarlo</strong>.</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>f <span class="op">=</span> Fecha()</span>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>f <span class="op">=</span> Fecha()</span>
 <span id="cb10-2"><a></a>f.dia <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb10-3"><a></a>f.mes <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb10-4"><a></a>f.anno <span class="op">=</span> <span class="dv">2020</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb10-4"><a></a>f.anno <span class="op">=</span> <span class="dv">2020</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
 <ul>
 <li>Podemos <strong>facilitar la inicialización</strong> de un objeto definiendo una función:</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="kw">def</span> nueva_fecha(dia, mes, anno):</span>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="kw">def</span> nueva_fecha(dia, mes, anno):</span>
 <span id="cb11-2"><a></a>    f <span class="op">=</span> Fecha()</span>
 <span id="cb11-3"><a></a>    f.dia <span class="op">=</span> dia</span>
 <span id="cb11-4"><a></a>    f.mes <span class="op">=</span> mes</span>
 <span id="cb11-5"><a></a>    f.anno <span class="op">=</span> anno</span>
 <span id="cb11-6"><a></a>    <span class="cf">return</span> f</span>
 <span id="cb11-7"><a></a></span>
-<span id="cb11-8"><a></a>f <span class="op">=</span> nueva_fecha(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2020</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb11-8"><a></a>f <span class="op">=</span> nueva_fecha(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2020</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Estas funciones son tradicionalmente llamadas <strong>constructores</strong>.
 <ul>
@@ -465,12 +465,12 @@ alumno2 = {“María”, 21, 8.0}</div>
 <ul>
 <li>Las <strong>clases</strong> en Python, por defecto, no pueden ser representadas como cadenas de texto (por ejemplo, por <code>print</code>).</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="bu">print</span>(f)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="bu">print</span>(f)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="line-block"><code>&lt;__main__.Fecha object at 0x7f7e3c7b3b50&gt;</code></div>
 <ul>
 <li>Si quieres ver el <strong>contenido</strong> de un objeto, puedes acceder a sus atributos.</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="bu">print</span>(<span class="ss">f"Fecha: </span><span class="sc">{</span>f<span class="sc">.</span>dia<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>f<span class="sc">.</span>mes<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>f<span class="sc">.</span>anno<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="bu">print</span>(<span class="ss">f"Fecha: </span><span class="sc">{</span>f<span class="sc">.</span>dia<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>f<span class="sc">.</span>mes<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>f<span class="sc">.</span>anno<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="line-block"><code>Fecha: 1/2/2020</code></div>
 </section>
 <section class="slide level2">
@@ -478,10 +478,10 @@ alumno2 = {“María”, 21, 8.0}</div>
 <ul>
 <li>Podemos <strong>personalizar y facilitar la representación de un objeto</strong> definiendo una función:</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="kw">def</span> str_fecha(f):</span>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="kw">def</span> str_fecha(f):</span>
 <span id="cb14-2"><a></a>    <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span>f<span class="sc">.</span>dia<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>f<span class="sc">.</span>mes<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>f<span class="sc">.</span>anno<span class="sc">}</span><span class="ss">"</span></span>
 <span id="cb14-3"><a></a></span>
-<span id="cb14-4"><a></a><span class="bu">print</span>(str_fecha(f))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb14-4"><a></a><span class="bu">print</span>(str_fecha(f))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
@@ -498,7 +498,7 @@ alumno2 = {“María”, 21, 8.0}</div>
 </section>
 <section class="slide level2">
 
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="kw">class</span> NumeroComplejo:</span>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="kw">class</span> NumeroComplejo:</span>
 <span id="cb15-2"><a></a>    real: <span class="bu">float</span></span>
 <span id="cb15-3"><a></a>    imag: <span class="bu">float</span></span>
 <span id="cb15-4"><a></a></span>
@@ -517,7 +517,7 @@ alumno2 = {“María”, 21, 8.0}</div>
 <span id="cb15-17"><a></a>c2.imag <span class="op">=</span> <span class="dv">4</span></span>
 <span id="cb15-18"><a></a></span>
 <span id="cb15-19"><a></a>c <span class="op">=</span> suma_complejos(c1, c2)</span>
-<span id="cb15-20"><a></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>c<span class="sc">.</span>real<span class="sc">}</span><span class="ss">+</span><span class="sc">{</span>c<span class="sc">.</span>imag<span class="sc">}</span><span class="ss">i"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb15-20"><a></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>c<span class="sc">.</span>real<span class="sc">}</span><span class="ss">+</span><span class="sc">{</span>c<span class="sc">.</span>imag<span class="sc">}</span><span class="ss">i"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="dataclasses" class="slide level2 center">
 <h2>Dataclasses</h2>
@@ -527,7 +527,7 @@ alumno2 = {“María”, 21, 8.0}</div>
 <ul>
 <li>Seguramente habrás notado que <strong>crear</strong> una <strong>clase</strong> con <strong>atributos</strong> y <strong>métodos</strong> en Python es <strong>repetitivo</strong> y <strong>tedioso</strong>.</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="kw">class</span> Aula:</span>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="kw">class</span> Aula:</span>
 <span id="cb16-2"><a></a>    <span class="bu">id</span>: <span class="bu">str</span></span>
 <span id="cb16-3"><a></a>    planta: <span class="bu">int</span></span>
 <span id="cb16-4"><a></a>    superficie: <span class="bu">float</span></span>
@@ -539,7 +539,7 @@ alumno2 = {“María”, 21, 8.0}</div>
 <span id="cb16-10"><a></a>a23.planta <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb16-11"><a></a>a23.superficie <span class="op">=</span> <span class="fl">80.5</span></span>
 <span id="cb16-12"><a></a>a23.capacidad <span class="op">=</span> <span class="dv">60</span></span>
-<span id="cb16-13"><a></a>a23.proyector <span class="op">=</span> <span class="va">True</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb16-13"><a></a>a23.proyector <span class="op">=</span> <span class="va">True</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
@@ -559,17 +559,17 @@ alumno2 = {“María”, 21, 8.0}</div>
 <ul>
 <li>Para marcar una <strong>clase</strong> como <strong>dataclass</strong>, simplemente hay que añadir el <em>decorador</em> <code>@dataclasses.dataclass</code> antes de la definición de la clase.</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="im">import</span> dataclasses</span>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="im">import</span> dataclasses</span>
 <span id="cb17-2"><a></a></span>
 <span id="cb17-3"><a></a><span class="at">@dataclasses.dataclass</span></span>
 <span id="cb17-4"><a></a><span class="kw">class</span> Punto:</span>
 <span id="cb17-5"><a></a>    x: <span class="bu">int</span></span>
-<span id="cb17-6"><a></a>    y: <span class="bu">int</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb17-6"><a></a>    y: <span class="bu">int</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>A partir de ahora, podemos <strong>crear</strong> y <strong>representar</strong> objetos de la clase <code>Punto</code> de la siguiente manera:</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>p <span class="op">=</span> Punto(<span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb18-2"><a></a><span class="bu">print</span>(p)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>p <span class="op">=</span> Punto(<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb18-2"><a></a><span class="bu">print</span>(p)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
@@ -577,7 +577,7 @@ alumno2 = {“María”, 21, 8.0}</div>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>Sin dataclass</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="co"># Definición de la clase</span></span>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="co"># Definición de la clase</span></span>
 <span id="cb19-2"><a></a><span class="kw">class</span> Fecha:</span>
 <span id="cb19-3"><a></a>    dia: <span class="bu">int</span></span>
 <span id="cb19-4"><a></a>    mes: <span class="bu">int</span></span>
@@ -590,11 +590,11 @@ alumno2 = {“María”, 21, 8.0}</div>
 <span id="cb19-11"><a></a>f.anno <span class="op">=</span> <span class="dv">2020</span></span>
 <span id="cb19-12"><a></a></span>
 <span id="cb19-13"><a></a><span class="co"># Imprimir atributos</span></span>
-<span id="cb19-14"><a></a><span class="bu">print</span>(f.dia, f.mes, f.anno)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb19-14"><a></a><span class="bu">print</span>(f.dia, f.mes, f.anno)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="line-block">1 2 2020</div>
 </div><div class="column" style="width:50%;">
 <p><strong>Con dataclass</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a><span class="im">import</span> dataclasses</span>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a><span class="im">import</span> dataclasses</span>
 <span id="cb20-2"><a></a></span>
 <span id="cb20-3"><a></a><span class="co"># Definición de la clase</span></span>
 <span id="cb20-4"><a></a><span class="at">@dataclasses.dataclass</span></span>
@@ -607,7 +607,7 @@ alumno2 = {“María”, 21, 8.0}</div>
 <span id="cb20-11"><a></a>f <span class="op">=</span> Fecha(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2022</span>)</span>
 <span id="cb20-12"><a></a></span>
 <span id="cb20-13"><a></a><span class="co"># Imprimir objeto</span></span>
-<span id="cb20-14"><a></a><span class="bu">print</span>(f)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb20-14"><a></a><span class="bu">print</span>(f)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="line-block">Fecha(dia=1, mes=1, anno=2022)</div>
 </div></div>
 </section>
@@ -619,7 +619,7 @@ alumno2 = {“María”, 21, 8.0}</div>
 <li>Define dos variables (objetos) de tipo <code>Aula</code> llamadas <code>a23</code> y <code>a24</code>.</li>
 <li>Imprime sus valores.</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a><span class="im">import</span> dataclasses</span>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a><span class="im">import</span> dataclasses</span>
 <span id="cb21-2"><a></a></span>
 <span id="cb21-3"><a></a><span class="at">@dataclasses.dataclass</span></span>
 <span id="cb21-4"><a></a><span class="kw">class</span> Aula:</span>
@@ -632,7 +632,7 @@ alumno2 = {“María”, 21, 8.0}</div>
 <span id="cb21-11"><a></a>a23 <span class="op">=</span> Aula(<span class="st">"A23"</span>, <span class="dv">2</span>, <span class="fl">80.5</span>, <span class="dv">60</span>, <span class="va">True</span>)</span>
 <span id="cb21-12"><a></a>a24 <span class="op">=</span> Aula(<span class="st">"A24"</span>, <span class="dv">2</span>, <span class="fl">70.5</span>, <span class="dv">50</span>, <span class="va">False</span>)</span>
 <span id="cb21-13"><a></a><span class="bu">print</span>(a23)</span>
-<span id="cb21-14"><a></a><span class="bu">print</span>(a24)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb21-14"><a></a><span class="bu">print</span>(a24)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
@@ -642,7 +642,7 @@ alumno2 = {“María”, 21, 8.0}</div>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>Sin dataclass</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a><span class="kw">def</span> leer_aula():</span>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a><span class="kw">def</span> leer_aula():</span>
 <span id="cb22-2"><a></a>    nueva_aula <span class="op">=</span> Aula()</span>
 <span id="cb22-3"><a></a>    <span class="bu">print</span>(<span class="st">"ID: "</span>)</span>
 <span id="cb22-4"><a></a>    nueva_aula.<span class="bu">id</span> <span class="op">=</span> <span class="bu">input</span>()</span>
@@ -654,10 +654,10 @@ alumno2 = {“María”, 21, 8.0}</div>
 <span id="cb22-10"><a></a>    nueva_aula.capacidad <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
 <span id="cb22-11"><a></a>    <span class="bu">print</span>(<span class="st">"Proyector (s/n): "</span>)</span>
 <span id="cb22-12"><a></a>    nueva_aula.proyector <span class="op">=</span> <span class="bu">input</span>() <span class="op">==</span> <span class="st">"s"</span></span>
-<span id="cb22-13"><a></a>    <span class="cf">return</span> nueva_aula</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb22-13"><a></a>    <span class="cf">return</span> nueva_aula</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <p><strong>Con dataclass</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a><span class="kw">def</span> leer_aula():</span>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a><span class="kw">def</span> leer_aula():</span>
 <span id="cb23-2"><a></a>    <span class="bu">print</span>(<span class="st">"ID: "</span>)</span>
 <span id="cb23-3"><a></a>    <span class="bu">id</span> <span class="op">=</span> <span class="bu">input</span>()</span>
 <span id="cb23-4"><a></a>    <span class="bu">print</span>(<span class="st">"Planta: "</span>)</span>
@@ -669,7 +669,7 @@ alumno2 = {“María”, 21, 8.0}</div>
 <span id="cb23-10"><a></a>    <span class="bu">print</span>(<span class="st">"Proyector (s/n): "</span>)</span>
 <span id="cb23-11"><a></a>    proyector <span class="op">=</span> <span class="bu">input</span>() <span class="op">==</span> <span class="st">"s"</span></span>
 <span id="cb23-12"><a></a>    <span class="cf">return</span> Aula(<span class="bu">id</span>, planta, superficie,</span>
-<span id="cb23-13"><a></a>                capacidad, proyector)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb23-13"><a></a>                capacidad, proyector)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 </section>
 <section class="slide level2">
@@ -677,20 +677,20 @@ alumno2 = {“María”, 21, 8.0}</div>
 <ul>
 <li>Añade la función <code>aula_mas_grande</code> que reciba dos aulas y devuelva la que tenga mayor capacidad.</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a></a><span class="kw">def</span> aula_mas_grande(a1, a2):</span>
+<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a></a><span class="kw">def</span> aula_mas_grande(a1, a2):</span>
 <span id="cb24-2"><a></a>    <span class="cf">if</span> a1.capacidad <span class="op">&gt;</span> a2.capacidad:</span>
 <span id="cb24-3"><a></a>        <span class="cf">return</span> a1</span>
 <span id="cb24-4"><a></a>    <span class="cf">else</span>:</span>
 <span id="cb24-5"><a></a>        <span class="cf">return</span> a2</span>
 <span id="cb24-6"><a></a></span>
 <span id="cb24-7"><a></a>a <span class="op">=</span> aula_mas_grande(a23, a24)</span>
-<span id="cb24-8"><a></a><span class="bu">print</span>(a)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb24-8"><a></a><span class="bu">print</span>(a)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="../../../../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
+<p><img src="../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>Fundamentos de Informática</p>
 </div>
@@ -880,7 +880,7 @@ alumno2 = {“María”, 21, 8.0}</div>
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -954,14 +954,13 @@ alumno2 = {“María”, 21, 8.0}</div>
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-          const outerScaffold = trigger.parentElement.cloneNode(true);
-          const codeEl = outerScaffold.querySelector('code');
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
             }
-          }
-          return codeEl.innerText;
+            return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
