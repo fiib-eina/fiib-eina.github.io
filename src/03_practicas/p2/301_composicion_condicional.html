@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,18 +33,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../src/_style/logos/unizar-diis-white.svg" rel="icon" type="image/svg+xml">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-b5d7a9fd0efe6ae5644a67f785a891e4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-e67ab1ef286a228f97a89504a4d5ebae.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-b5d7a9fd0efe6ae5644a67f785a891e4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-a527cc2a42b9319235ae8b81ad279116.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-e242d740845b5cf392cc0345fc066e68.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-a527cc2a42b9319235ae8b81ad279116.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-bae46e0c90c68260b0a4bbb45f1294a3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-12e34ae91984f684715f9e950e2b140c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-bae46e0c90c68260b0a4bbb45f1294a3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-116479fa16b3443f59da5ce90315efd6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-8416b61dbf7538d7ca7b9d83e24c6a70.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-116479fa16b3443f59da5ce90315efd6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -58,7 +59,7 @@ ul.task-list li input[type="checkbox"] {
     "s"
   ],
   "language": {
-    "search-no-results-text": "Sin resultados",
+    "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
     "search-copy-link-title": "Copiar el enlace en la búsqueda",
     "search-hide-matches-text": "Ocultar resultados adicionales",
@@ -72,35 +73,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -290,7 +262,8 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="../../../index.html" class="sidebar-logo-link">
-      <img src="../../../src/_style/logos/logo_uz.svg" alt="Unizar logo, black" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../../src\_style\logos\logo_uz.svg" alt="Unizar logo, black" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../../src\_style\logos\logo_uz.svg" alt="Unizar logo, black" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
@@ -755,41 +728,6 @@ window.Quarto = {
   </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false">
- <span class="menu-text">Exámenes</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="Alternar sección">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../src/04_examenes/2023-01-17_Examen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Examen 2023-01-17</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../src/04_examenes/2024-01-12_Examen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Examen 2024-01-12</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../src/04_examenes/2025-05-08_Ejercicios_extra.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ejercicios Extra I</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../src/04_examenes/2025-05-23_Examen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Examen 2025-05-23</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -808,7 +746,8 @@ window.Quarto = {
   <li><a href="#malabares-con-instrucciones-condicionales" id="toc-malabares-con-instrucciones-condicionales" class="nav-link" data-scroll-target="#malabares-con-instrucciones-condicionales"><span class="header-section-number">2</span> Malabares con instrucciones condicionales</a></li>
   <li><a href="#triángulos" id="toc-triángulos" class="nav-link" data-scroll-target="#triángulos"><span class="header-section-number">3</span> Triángulos</a></li>
   <li><a href="#cajero-automático" id="toc-cajero-automático" class="nav-link" data-scroll-target="#cajero-automático"><span class="header-section-number">4</span> Cajero automático</a></li>
-  <li><a href="#entrega-de-la-práctica" id="toc-entrega-de-la-práctica" class="nav-link" data-scroll-target="#entrega-de-la-práctica"><span class="header-section-number">5</span> Entrega de la práctica</a></li>
+  <li><a href="#pruebas" id="toc-pruebas" class="nav-link" data-scroll-target="#pruebas"><span class="header-section-number">5</span> Pruebas</a></li>
+  <li><a href="#entrega-de-la-práctica" id="toc-entrega-de-la-práctica" class="nav-link" data-scroll-target="#entrega-de-la-práctica"><span class="header-section-number">6</span> Entrega de la práctica</a></li>
   </ul>
 </nav>
     </div>
@@ -840,7 +779,7 @@ window.Quarto = {
 <h2 data-number="1" class="anchored" data-anchor-id="calificaciones"><span class="header-section-number">1</span> Calificaciones</h2>
 <section id="matrículas-de-honor" class="level3" data-number="1.1">
 <h3 data-number="1.1" class="anchored" data-anchor-id="matrículas-de-honor"><span class="header-section-number">1.1</span> Matrículas de honor</h3>
-<p>El artículo 14.2 del <a href="https://academico.unizar.es/sites/academico/files/archivos/gradoymaster/legislacion/reglamentodenormasdeevaluaciondelaprendizaje.pdf">acuerdo de 22 de diciembre de 2010, del Consejo de Gobierno, por el que se aprueba el Reglamento de normas de evaluación y aprendizaje de la Universidad de Zaragoza</a> establece:</p>
+<p>El artículo 14.2 del <a href="https://zaguan.unizar.es/record/30538/files/Evaluacion%20del%20aprendizaje.pdf">acuerdo de 22 de diciembre de 2010, del Consejo de Gobierno, por el que se aprueba el Reglamento de normas de evaluación y aprendizaje de la Universidad de Zaragoza</a> establece:</p>
 <p><em>La mención «Matrícula de Honor» podrá ser otorgada a estudiantes que hayan obtenido una calificación igual o superior a 9 en la asignatura. Su número no podrá exceder del 5&nbsp;% de los estudiantes matriculados en dicha asignatura en el correspondiente grupo docente, salvo cuando sea inferior a 20, en cuyo caso se podrá conceder una sola matrícula de honor.</em></p>
 <p>Escribe un programa en Python que solicite al usuario el número de matriculados en un grupo docente de una asignatura y escriba el número máximo de matrículas de honor que pueden otorgarse en la Universidad de Zaragoza con ese número de matriculados.</p>
 <p>Por ejemplo:</p>
@@ -851,11 +790,15 @@ Se pueden otorgar como máximo 2 matrículas de honor.</div>
 <div class="line-block">Escribe el número de matriculados en un grupo docente:<br>
 <strong>19</strong><br>
 Se pueden otorgar como máximo 1 matrículas de honor.</div>
+<p>Y un ejemplo adicional:</p>
+<div class="line-block">Escribe el número de matriculados en un grupo docente:<br>
+<strong>-3</strong><br>
+El número de matriculados tiene que ser positivo.</div>
 <p><strong>Entrega:</strong> Escribe tu programa en un fichero denominado <code>matriculas.py</code>.</p>
 </section>
 <section id="calificaciones-cualitativas" class="level3" data-number="1.2">
 <h3 data-number="1.2" class="anchored" data-anchor-id="calificaciones-cualitativas"><span class="header-section-number">1.2</span> Calificaciones cualitativas</h3>
-<p>El artículo 14.1 del mencionado <a href="https://academico.unizar.es/sites/academico/files/archivos/gradoymaster/legislacion/reglamentodenormasdeevaluaciondelaprendizaje.pdf">Reglamento</a> establece a su vez que <em>los resultados de cada una de las materias del plan de estudios se calificarán de 0 a 10 […], añadiendo una calificación cualitativa según la siguiente escala:</em> de 0 a 5, suspenso; de 5 a 7, aprobado; de 7 a 9, notable y de 9 a 10, sobresaliente.</p>
+<p>El artículo 14.1 del mencionado <a href="https://zaguan.unizar.es/record/30538/files/Evaluacion%20del%20aprendizaje.pdf">Reglamento</a> establece a su vez que <em>los resultados de cada una de las materias del plan de estudios se calificarán de 0 a 10 […], añadiendo una calificación cualitativa según la siguiente escala:</em> de 0 a 5, suspenso; de 5 a 7, aprobado; de 7 a 9, notable y de 9 a 10, sobresaliente.</p>
 <p>Escribe un programa en Python que solicite al usuario el valor de una calificación numérica de un estudiante y escriba en la pantalla la calificación cualitativa correspondiente.</p>
 <p>Ejemplos de ejecución:</p>
 <div class="line-block">Escribe la nota numérica:<br>
@@ -864,7 +807,7 @@ Calificación: Notable.</div>
 <div class="line-block">Escribe la nota numérica:<br>
 <strong>4.99</strong><br>
 Calificación: Suspenso.</div>
-<p>Ten en cuenta la posibilidad de que el usuario introduzca calificaciones no válidas fuera del intervalo <span class="math inline">\([0, 10]\)</span>:</p>
+<p>Ten en cuenta la posibilidad de que el usuario introduzca calificaciones no válidas fuera del intervalo [0, 10]:</p>
 <div class="line-block">Escribe la nota numérica:<br>
 <strong>12.5</strong><br>
 Nota numérica no válida.</div>
@@ -909,6 +852,41 @@ Resultado: 25</div>
 <div class="line-block">Introduzca un número entero:<br>
 <strong>0</strong><br>
 Resultado: 0</div>
+<!-- TODO: versión para el curso 2026-27 
+
+Escribe un programa en Python que solicite un valor entero al usuario y realice las siguientes acciones:
+
+ - Si el valor dado por el usuario es múltiplo de 7, lo dividirá entre 7. Después:
+     - Si el resultado de esta división no es múltiplo de 6, elevará el resultado al cuadrado.
+     - Por el contrario, si el resultado es múltiplo de 6, lo dividirá entre 3.
+ - En el caso de que el valor dado por el usuario no sea múltiplo de 7, entonces:
+     - Si el valor dado es positivo, le cambiará el signo.
+     - Si es negativo, lo multiplicará por 2.
+
+Finalmente, el programa informará al usuario del valor transformado, escribiendo por pantalla el resultado.
+
+Ejemplos de ejecución:
+
+| Introduzca un número entero:
+| **14**
+| Resultado: 4
+
+| Introduzca un número entero: 
+| **42**
+| Resultado: 2
+
+| Introduzca un número entero: 
+| **8**
+| Resultado: -8
+
+| Introduzca un número entero: 
+| **-5**
+| Resultado: -10
+
+| Introduzca un número entero: 
+| **0**
+| Resultado: 0
+-->
 <p><strong>Entrega:</strong> Escribe tu programa en un fichero denominado <code>malabares.py</code>.</p>
 </section>
 <section id="triángulos" class="level2" data-number="3">
@@ -952,11 +930,11 @@ Algún dato no es estrictamente positivo.</div>
 Algún dato no es estrictamente positivo.</div>
 <p>Resuelve el problema de forma incremental, es decir, construyendo distintas versiones del programa que, poco a poco, vayan incorporando los requisitos solicitados en el enunciado. En particular, se sugiere seguir el siguiente proceso:</p>
 <ul>
-<li>Comienza escribiendo un programa que pida los tres datos al usuario y, si los tres son iguales, escriba en la pantalla el mensaje «El triángulo es equilátero».</li>
-<li>Continúa modificando el programa para que, además de ser capaz de determinar si el triángulo es equilátero, determine también uno de los casos en los que es isósceles (por ejemplo, cuando los dos primeros lados son iguales).</li>
-<li>Continúa haciendo que el programa detecte los otros dos casos en los que el triángulo es isósceles (cuando los dos últimos lados son los iguales y cuando son iguales el primero y el tercero).</li>
-<li>Complétalo haciendo que escriba que es escaleno cuando no sea equilátero ni isósceles.</li>
-<li>Por último, añade el código necesario para que el programa compruebe si los tres datos suministrados por el usuario son positivos y haz que, en caso de que no lo sean, escriba el mensaje de error «Algún dato no es positivo».</li>
+<li><p>Comienza escribiendo un programa que pida los tres datos al usuario y, si los tres son iguales, escriba en la pantalla el mensaje «El triángulo es equilátero». Pruébalo con los lados de un triángulo equilátero y comprueba que el programa indica que el triángulo es equilátero. Pruébalo también con los lados de un triángulo no equilátero y comprueba que el programa no escribe nada.</p></li>
+<li><p>Continúa modificando el programa para que, además de ser capaz de determinar si el triángulo es equilátero, determine también uno de los casos en los que es isósceles (por ejemplo, cuando los dos primeros lados son iguales). Pruébalo de nuevo con los lados de un triángulo equilátero, uno isósceles con los dos primeros lados iguales y con otro que no cumpla con ninguna de estas condiciones.</p></li>
+<li><p>Continúa haciendo que el programa detecte los otros dos casos en los que el triángulo es isósceles (cuando los dos últimos lados son los iguales y cuando son iguales el primero y el tercero). Vuelve a probar tu programa.</p></li>
+<li><p>Complétalo haciendo que escriba que es escaleno cuando no sea equilátero ni isósceles. Pruébalo otra vez.</p></li>
+<li><p>Por último, añade el código necesario para que el programa compruebe si los tres datos suministrados por el usuario son positivos y haz que, en caso de que no lo sean, escriba el mensaje de error «Algún dato no es positivo». Pruébalo de nuevo.</p></li>
 </ul>
 <p><strong>Entrega:</strong> Escribe tu programa en un fichero denominado <code>triangulos.py</code>.</p>
 </section>
@@ -979,7 +957,7 @@ Billetes 10 €: 0</div>
 <p>Las cantidades que se pueden retirar del cajero tienen que ser estrictamente positivas, múltiplos de 10 e iguales o inferiores al límite máximo de disposición en cajero de 600&nbsp;€. Este aspecto debe ser comprobado por el programa:</p>
 <div class="line-block">Cantidad a retirar en euros:<br>
 <strong>-10</strong><br>
-Error: la cantidad a retirar no puede ser negativa.</div>
+Error: la cantidad a retirar tiene que ser positiva.</div>
 <div class="line-block">Cantidad a retirar en euros:<br>
 <strong>800</strong><br>
 Error: la cantidad a retirar excede el límite máximo.</div>
@@ -988,8 +966,20 @@ Error: la cantidad a retirar excede el límite máximo.</div>
 Error: la cantidad a retirar tiene que ser un múltiplo de 10.</div>
 <p><strong>Entrega:</strong> Escribe tu programa en un fichero denominado <code>cajero.py</code>.</p>
 </section>
-<section id="entrega-de-la-práctica" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="entrega-de-la-práctica"><span class="header-section-number">5</span> Entrega de la práctica</h2>
+<section id="pruebas" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="pruebas"><span class="header-section-number">5</span> Pruebas</h2>
+<p>Copia los archivos de pruebas de la práctica&nbsp;2 en la carpeta <code>test</code> de la carpeta <code>p2</code> que creaste con la estructura básica de carpetas En la <a href="../p0/101_introductoria.html#/22">práctica&nbsp;0</a>:</p>
+<ol type="1">
+<li>En tu carpeta de prácticas <code>FIIB</code>, accede a la carpeta <code>tests</code> de la carpeta <code>p2</code> y déjala abierta.</li>
+<li>Descarga el fichero <a href="./tests_p2.zip"><code>tests_p2.zip</code></a>.</li>
+<li>Abre el archivo <code>tests_p2.zip</code> que te has descargado.</li>
+<li>Arrastra todo el contenido del archivo <code>tests_p2.zip</code> a la carpeta <code>tests</code> de la carpeta <code>p2</code>.</li>
+</ol>
+<p>Recuerda que, para poder ejecutar los test, tienes que abrir, en Visual Studio Code, la carpeta <code>p2</code> de tu carpeta de prácticas <code>FIIB</code> que creamos la semana pasada. Hazlo seleccionando carpeta <code>p2</code> en el Explorador de Windows o en Finder y, con el botón derecho, elige el menú <code>Abrir directorio en VSCode</code>. También puedes abrir primero Visual Studio Code y, desde allí, ir al menú <code>File</code> &gt; <code>Open Folder</code> y seleccionar la carpeta <code>p2</code>.</p>
+<p>En esta ocasión, hay las pruebas que os proporcionamos son menos exhaustivas que en la práctica&nbsp;1, por lo que es posible que, aunque tu programa pase todas las pruebas, no cumpla con todos los requisitos solicitados en el enunciado. Para asegurarte de que todos funcionan correctamente, ejecuta manualmente tus programas las veces que sea necesario con distintos datos de entrada para comprobar que funcionan correctamente en todos los casos.</p>
+</section>
+<section id="entrega-de-la-práctica" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="entrega-de-la-práctica"><span class="header-section-number">6</span> Entrega de la práctica</h2>
 <p><strong>Antes de las 18:00 de la fecha límite establecida en Moodle,</strong> deberán haberse subido a Moodle los siguientes ficheros:</p>
 <ul class="task-list">
 <li><label><input type="checkbox"><code>matriculas.py</code></label></li>
@@ -1067,13 +1057,14 @@ Error: la cantidad a retirar tiene que ser un múltiplo de 10.</div>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

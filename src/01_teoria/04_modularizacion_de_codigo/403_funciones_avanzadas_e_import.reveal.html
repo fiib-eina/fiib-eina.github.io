@@ -7,8 +7,8 @@
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.34">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-d640c705e8c17715bca3574aa719063f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.26">
 
   <title>Fundamentos de Informática – Teoría 403</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -95,7 +95,7 @@
     code span.vs { color: #008000; } /* VerbatimString */
     code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-f7935cc89ec6222034d74a13893d12e4.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-885290ce3065af1b721f68f6ffa32a74.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -269,21 +269,21 @@
 <li>Del mismo modo que <strong>componíamos invocaciones</strong> a funciones para reaprovechar su comportamiento</li>
 <li>También podemos <strong>componer los valores que devuelven</strong>.</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="kw">def</span> f(x):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="kw">def</span> f(x):</span>
 <span id="cb1-2"><a></a>    <span class="cf">return</span> x</span>
 <span id="cb1-3"><a></a></span>
 <span id="cb1-4"><a></a><span class="kw">def</span> g(x):</span>
 <span id="cb1-5"><a></a>    <span class="cf">return</span> x</span>
 <span id="cb1-6"><a></a></span>
 <span id="cb1-7"><a></a><span class="kw">def</span> h(x):</span>
-<span id="cb1-8"><a></a>    <span class="cf">return</span> f(x) <span class="op">+</span> g(x)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-8"><a></a>    <span class="cf">return</span> f(x) <span class="op">+</span> g(x)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
 <h4 id="ejemplo-composición-suma">Ejemplo: Composición suma</h4>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> suma(x):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="kw">def</span> suma(x):</span>
 <span id="cb2-2"><a></a>    <span class="cf">return</span> x <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb2-3"><a></a></span>
 <span id="cb2-4"><a></a><span class="kw">def</span> prod(x):</span>
@@ -293,7 +293,7 @@
 <span id="cb2-8"><a></a>    <span class="co"># Componemos sus resultados</span></span>
 <span id="cb2-9"><a></a>    <span class="cf">return</span> suma(x) <span class="op">+</span> prod(x)</span>
 <span id="cb2-10"><a></a></span>
-<span id="cb2-11"><a></a><span class="bu">print</span>(compo(<span class="dv">3</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-11"><a></a><span class="bu">print</span>(compo(<span class="dv">3</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <div class="line-block">11</div>
 </div></div>
@@ -311,7 +311,7 @@
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="kw">def</span> suma(x):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="kw">def</span> suma(x):</span>
 <span id="cb3-2"><a></a>    <span class="cf">return</span> x <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb3-3"><a></a></span>
 <span id="cb3-4"><a></a><span class="kw">def</span> prod(x):</span>
@@ -322,9 +322,9 @@
 <span id="cb3-9"><a></a>    <span class="cf">return</span> suma(prod(x))</span>
 <span id="cb3-10"><a></a></span>
 <span id="cb3-11"><a></a><span class="bu">print</span>(compo(<span class="dv">3</span>))</span>
-<span id="cb3-12"><a></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>suma(prod(<span class="dv">3</span>))<span class="sc">}</span><span class="ss"> =/= </span><span class="sc">{</span>prod(suma(<span class="dv">3</span>))<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-12"><a></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>suma(prod(<span class="dv">3</span>))<span class="sc">}</span><span class="ss"> =/= </span><span class="sc">{</span>prod(suma(<span class="dv">3</span>))<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> suma(x):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> suma(x):</span>
 <span id="cb4-2"><a></a>    <span class="cf">return</span> x <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb4-3"><a></a></span>
 <span id="cb4-4"><a></a><span class="kw">def</span> prod(x):</span>
@@ -336,7 +336,7 @@
 <span id="cb4-10"><a></a>    <span class="cf">return</span> suma(p)</span>
 <span id="cb4-11"><a></a></span>
 <span id="cb4-12"><a></a><span class="bu">print</span>(compo(<span class="dv">3</span>))</span>
-<span id="cb4-13"><a></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>suma(prod(<span class="dv">3</span>))<span class="sc">}</span><span class="ss"> =/= </span><span class="sc">{</span>prod(suma(<span class="dv">3</span>))<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-13"><a></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>suma(prod(<span class="dv">3</span>))<span class="sc">}</span><span class="ss"> =/= </span><span class="sc">{</span>prod(suma(<span class="dv">3</span>))<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <details>
 <summary>
@@ -351,7 +351,7 @@ Salida
 <h4 id="ejemplo-composición-raíces">Ejemplo: Composición raíces</h4>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="kw">def</span> raiz_n(x, n):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="kw">def</span> raiz_n(x, n):</span>
 <span id="cb5-2"><a></a>    <span class="co"># Raíz general</span></span>
 <span id="cb5-3"><a></a>    <span class="cf">return</span> x <span class="op">**</span> (<span class="dv">1</span><span class="op">/</span>n)</span>
 <span id="cb5-4"><a></a></span>
@@ -365,7 +365,7 @@ Salida
 <span id="cb5-12"><a></a></span>
 <span id="cb5-13"><a></a><span class="bu">print</span>(raiz_cuadrada(<span class="dv">9</span>))</span>
 <span id="cb5-14"><a></a><span class="bu">print</span>(raiz_cubica(<span class="dv">27</span>))</span>
-<span id="cb5-15"><a></a><span class="bu">print</span>(raiz_n(<span class="dv">16</span>, <span class="dv">4</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-15"><a></a><span class="bu">print</span>(raiz_n(<span class="dv">16</span>, <span class="dv">4</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <div class="line-block">3.0<br>
 3.0<br>
@@ -381,13 +381,13 @@ Salida
 <li>Esto es útil cuando lo que buscamos <strong>no es imprimir</strong> el resultado, sino <strong>utilizarlo</strong> para otra cosa.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">def</span> resultado(a, op, b, r):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">def</span> resultado(a, op, b, r):</span>
 <span id="cb6-2"><a></a>    <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>op<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss"> = </span><span class="sc">{</span>r<span class="sc">}</span><span class="ss">"</span></span>
 <span id="cb6-3"><a></a></span>
 <span id="cb6-4"><a></a><span class="kw">def</span> resultado_suma(a, b):</span>
 <span id="cb6-5"><a></a>    resultado(a, <span class="st">'+'</span>, b, a <span class="op">+</span> b)</span>
 <span id="cb6-6"><a></a></span>
-<span id="cb6-7"><a></a>resultado_suma(<span class="dv">3</span>, <span class="dv">5</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-7"><a></a>resultado_suma(<span class="dv">3</span>, <span class="dv">5</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -409,7 +409,7 @@ Tienes 1 manzana</div>
 <p><strong>Solución poco modular</strong></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="kw">def</span> num_manzanas(n):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="kw">def</span> num_manzanas(n):</span>
 <span id="cb7-2"><a></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">1</span>:</span>
 <span id="cb7-3"><a></a>        <span class="cf">return</span> <span class="ss">f"Tienes </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> manzana"</span></span>
 <span id="cb7-4"><a></a>    <span class="cf">else</span>:</span>
@@ -426,7 +426,7 @@ Tienes 1 manzana</div>
 <span id="cb7-15"><a></a><span class="bu">print</span>(num_manzanas(<span class="dv">10</span>))</span>
 <span id="cb7-16"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">1</span>))</span>
 <span id="cb7-17"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">5</span>))</span>
-<span id="cb7-18"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">10</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-18"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">10</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <div class="line-block">tienes 1 manzana<br>
 tienes 5 manzanas<br>
@@ -444,7 +444,7 @@ tienes 10 barcos</div>
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="kw">def</span> flexionar(num, palabra):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="kw">def</span> flexionar(num, palabra):</span>
 <span id="cb8-2"><a></a>    nueva_palabra <span class="op">=</span> palabra</span>
 <span id="cb8-3"><a></a>    <span class="cf">if</span> num <span class="op">!=</span> <span class="dv">1</span>:</span>
 <span id="cb8-4"><a></a>        nueva_palabra <span class="op">+=</span> <span class="st">'s'</span></span>
@@ -461,7 +461,7 @@ tienes 10 barcos</div>
 <span id="cb8-15"><a></a><span class="bu">print</span>(num_manzanas(<span class="dv">10</span>))</span>
 <span id="cb8-16"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">1</span>))</span>
 <span id="cb8-17"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">5</span>))</span>
-<span id="cb8-18"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">10</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-18"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">10</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <div class="line-block">tienes 1 manzana<br>
 tienes 5 manzanas<br>
@@ -479,7 +479,7 @@ tienes 10 barcos</div>
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="kw">def</span> flexionar(num, palabra):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="kw">def</span> flexionar(num, palabra):</span>
 <span id="cb9-2"><a></a>    nueva_palabra <span class="op">=</span> palabra</span>
 <span id="cb9-3"><a></a>    <span class="cf">if</span> num <span class="op">!=</span> <span class="dv">1</span>:</span>
 <span id="cb9-4"><a></a>        nueva_palabra <span class="op">=</span> palabra <span class="op">+</span> <span class="st">'s'</span></span>
@@ -501,7 +501,7 @@ tienes 10 barcos</div>
 <span id="cb9-20"><a></a><span class="bu">print</span>(num_manzanas(<span class="dv">10</span>))</span>
 <span id="cb9-21"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">1</span>))</span>
 <span id="cb9-22"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">5</span>))</span>
-<span id="cb9-23"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">10</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-23"><a></a><span class="bu">print</span>(num_barcos(<span class="dv">10</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <div class="line-block">tienes 1 manzana<br>
 tienes 5 manzanas<br>
@@ -525,13 +525,13 @@ tienes 10 barcos</div>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong><code>operaciones.py</code></strong></p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="kw">def</span> suma(a, b):</span>
-<span id="cb10-2"><a></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="kw">def</span> suma(a, b):</span>
+<span id="cb10-2"><a></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <p><strong><code>main.py</code></strong></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="im">import</span> operaciones</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="im">import</span> operaciones</span>
 <span id="cb11-2"><a></a></span>
-<span id="cb11-3"><a></a><span class="bu">print</span>(operaciones.suma(<span class="dv">3</span>, <span class="dv">5</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-3"><a></a><span class="bu">print</span>(operaciones.suma(<span class="dv">3</span>, <span class="dv">5</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section class="slide level2">
@@ -569,7 +569,7 @@ tienes 10 barcos</div>
 <div class="columns">
 <div class="column" style="width:35%;">
 <p><strong><code>primo.py</code></strong></p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="kw">def</span> es_primo(n):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="kw">def</span> es_primo(n):</span>
 <span id="cb12-2"><a></a>  primo <span class="op">=</span> <span class="va">True</span></span>
 <span id="cb12-3"><a></a>  <span class="cf">if</span> n <span class="op">&lt;</span> <span class="dv">2</span>:</span>
 <span id="cb12-4"><a></a>    primo <span class="op">=</span> <span class="va">False</span></span>
@@ -579,16 +579,16 @@ tienes 10 barcos</div>
 <span id="cb12-8"><a></a>      <span class="cf">if</span> n <span class="op">%</span> i <span class="op">==</span> <span class="dv">0</span>:</span>
 <span id="cb12-9"><a></a>        primo <span class="op">=</span> <span class="va">False</span></span>
 <span id="cb12-10"><a></a>      i <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb12-11"><a></a>  <span class="cf">return</span> primo</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-11"><a></a>  <span class="cf">return</span> primo</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:35%;">
 <p><strong><code>test_primo.py</code></strong></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="im">import</span> primo</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="im">import</span> primo</span>
 <span id="cb13-2"><a></a></span>
 <span id="cb13-3"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">1</span>))</span>
 <span id="cb13-4"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">2</span>))</span>
 <span id="cb13-5"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">3</span>))</span>
 <span id="cb13-6"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">4</span>))</span>
-<span id="cb13-7"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">5</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-7"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">5</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:30%;">
 <p><strong>Out: <code>test_primo.py</code></strong></p>
 <div class="line-block">True<br>
@@ -607,13 +607,13 @@ True</div>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong><code>test_primo.py</code></strong></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="im">import</span> primo</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="im">import</span> primo</span>
 <span id="cb14-2"><a></a></span>
 <span id="cb14-3"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">1</span>) <span class="op">==</span> <span class="va">False</span>)</span>
 <span id="cb14-4"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">2</span>) <span class="op">==</span> <span class="va">True</span>)</span>
 <span id="cb14-5"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">3</span>) <span class="op">==</span> <span class="va">True</span>)</span>
 <span id="cb14-6"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">4</span>) <span class="op">==</span> <span class="va">False</span>)</span>
-<span id="cb14-7"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">5</span>) <span class="op">==</span> <span class="va">True</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-7"><a></a><span class="bu">print</span>(primo.es_primo(<span class="dv">5</span>) <span class="op">==</span> <span class="va">True</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <p><strong>Out: <code>test_primo.py</code></strong></p>
 <div class="line-block">True<br>
@@ -627,7 +627,7 @@ True</div>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
+<p><img src="../../../../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>Fundamentos de Informática</p>
 </div>
@@ -817,7 +817,7 @@ True</div>
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -891,13 +891,14 @@ True</div>
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
