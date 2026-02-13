@@ -767,8 +767,8 @@ window.Quarto = {
     <h2 id="toc-title">En esta página</h2>
    
   <ul>
-  <li><a href="#la-caja-fuerte-del-west-bank" id="toc-la-caja-fuerte-del-west-bank" class="nav-link active" data-scroll-target="#la-caja-fuerte-del-west-bank"><span class="header-section-number">1</span> La caja fuerte del West Bank</a></li>
-  <li><a href="#serie-de-leibniz" id="toc-serie-de-leibniz" class="nav-link" data-scroll-target="#serie-de-leibniz"><span class="header-section-number">2</span> Serie de Leibniz</a></li>
+  <li><a href="#serie-de-leibniz" id="toc-serie-de-leibniz" class="nav-link active" data-scroll-target="#serie-de-leibniz"><span class="header-section-number">1</span> Serie de Leibniz</a></li>
+  <li><a href="#la-caja-fuerte-del-west-bank" id="toc-la-caja-fuerte-del-west-bank" class="nav-link" data-scroll-target="#la-caja-fuerte-del-west-bank"><span class="header-section-number">2</span> La caja fuerte del West Bank</a></li>
   <li><a href="#mano-fuerte-mano-débil" id="toc-mano-fuerte-mano-débil" class="nav-link" data-scroll-target="#mano-fuerte-mano-débil"><span class="header-section-number">3</span> Mano fuerte, mano débil</a></li>
   <li><a href="#mano-fuerte-mano-débil-ii" id="toc-mano-fuerte-mano-débil-ii" class="nav-link" data-scroll-target="#mano-fuerte-mano-débil-ii"><span class="header-section-number">4</span> Mano fuerte, mano débil (II)</a></li>
   <li><a href="#entrega-de-la-práctica" id="toc-entrega-de-la-práctica" class="nav-link" data-scroll-target="#entrega-de-la-práctica"><span class="header-section-number">5</span> Entrega de la práctica</a></li>
@@ -799,8 +799,27 @@ window.Quarto = {
 </header>
 
 
-<section id="la-caja-fuerte-del-west-bank" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="la-caja-fuerte-del-west-bank"><span class="header-section-number">1</span> La caja fuerte del West Bank</h2>
+<section id="serie-de-leibniz" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="serie-de-leibniz"><span class="header-section-number">1</span> Serie de Leibniz</h2>
+<p>En matemáticas, la serie de Leibniz es una serie infinita que sirve para calcular el número <span class="math inline">\(\pi\)</span> de forma aproximada.</p>
+<p><span class="math display">\[
+\sum_{n=0}^{\infty}\frac{(-1)^{n}}{2n+1}= 1 - \frac{1}{3} + \frac{1}{5} -\frac{1}{7} + \frac{1}{9} -\cdots = \frac{\pi}{4}
+\]</span></p>
+<p>Escribe un programa Python que calcule una aproximación de <span class="math inline">\(\pi\)</span> mediante la serie de Leibniz. El programa ha de solicitar al usuario un número entero positivo <code>n</code> y calcular la suma de los <code>n</code> primeros términos de la serie de Leibniz. Finalmente, calculará y mostrará: el valor aproximado, el valor real (puedes usar el valor de <code>math.pi</code>) y el error entre ellos.</p>
+<div class="line-block">Número de términos:<br>
+<strong>10</strong><br>
+Valor aproximado: 3.0418396189294032<br>
+Valor real: 3.141592653589793<br>
+Error: 0.09975303466038987</div>
+<div class="line-block">Número de términos:<br>
+<strong>100</strong><br>
+Valor aproximado: 3.1315929035585537<br>
+Valor real: 3.141592653589793<br>
+Error: 0.00999975003123943</div>
+<p><strong>Entrega:</strong> Escribe tu programa en un fichero denominado <code>leibniz.py</code>.</p>
+</section>
+<section id="la-caja-fuerte-del-west-bank" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="la-caja-fuerte-del-west-bank"><span class="header-section-number">2</span> La caja fuerte del West Bank</h2>
 <p>Las cajas fuertes de dial (o de combinación) son un tipo de caja fuerte que se abre mediante la introducción de una secuencia de números. La caja fuerte del <em>West Bank</em> se abre introduciendo tres números secretos (<code>8, 23, 42</code>).</p>
 <ul>
 <li>Si se acierta un número:
@@ -859,28 +878,9 @@ Diagrama de estados
 </details>
 <p><strong>Entrega:</strong> Escribe tu programa en un fichero denominado <code>westbank.py</code>.</p>
 </section>
-<section id="serie-de-leibniz" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="serie-de-leibniz"><span class="header-section-number">2</span> Serie de Leibniz</h2>
-<p>En matemáticas, la serie de Leibniz es una serie infinita que sirve para calcular el número <span class="math inline">\(\pi\)</span> de forma aproximada.</p>
-<p><span class="math display">\[
-\sum_{n=0}^{\infty}\frac{(-1)^{n}}{2n+1}= 1 - \frac{1}{3} + \frac{1}{5} -\frac{1}{7} + \frac{1}{9} -\cdots = \frac{\pi}{4}
-\]</span></p>
-<p>Escribe un programa Python que calcule una aproximación de <span class="math inline">\(\pi\)</span> mediante la serie de Leibniz. El programa ha de solicitar al usuario un número entero positivo <code>n</code> y calcular la suma de los <code>n</code> primeros términos de la serie de Leibniz. Finalmente, calculará y mostrará: el valor aproximado, el valor real (puedes usar el valor de <code>math.pi</code>) y el error entre ellos.</p>
-<div class="line-block">Número de términos:<br>
-<strong>10</strong><br>
-Valor aproximado: 3.0418396189294032<br>
-Valor real: 3.141592653589793<br>
-Error: 0.09975303466038987</div>
-<div class="line-block">Número de términos:<br>
-<strong>100</strong><br>
-Valor aproximado: 3.1315929035585537<br>
-Valor real: 3.141592653589793<br>
-Error: 0.00999975003123943</div>
-<p><strong>Entrega:</strong> Escribe tu programa en un fichero denominado <code>leibniz.py</code>.</p>
-</section>
 <section id="mano-fuerte-mano-débil" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="mano-fuerte-mano-débil"><span class="header-section-number">3</span> Mano fuerte, mano débil</h2>
-<p>En el juego de “Mano fuerte, mano débil” se enfrentan dos jugadores. Cada uno recibe dos cartas de una baraja de poker. El valor de cada carta viene dado por la siguiente tabla:</p>
+<p>En el juego de “Mano fuerte, mano débil” se enfrentan dos jugadores. Cada uno recibe dos cartas de una baraja de póker. El valor de cada carta viene dado por la siguiente tabla:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -903,11 +903,11 @@ Error: 0.00999975003123943</div>
 </table>
 <p>Una mano <strong>gana</strong> a otra si ambas cartas son <strong>superiores</strong> a las del rival (no importa la posición de la carta)</p>
 <ul>
-<li><p><code>14, 3</code> gana a <code>2, 13</code> (porque <code>14&gt;13</code> y <code>3&gt;2</code>)</p></li>
 <li><p><code>14, 3</code> gana a <code>13, 2</code> (porque <code>14&gt;13</code> y <code>3&gt;2</code>)</p></li>
+<li><p><code>14, 3</code> gana a <code>2, 13</code> (porque <code>14&gt;13</code> y <code>3&gt;2</code>)</p></li>
 <li><p><code>14, 2</code> empata con <code>3, 3</code> (porque <code>14&gt;3</code> y <code>2&lt;3</code>)</p></li>
-<li><p><code>8, 4</code> pierde con <code>14, 8</code> (porque <code>8&gt;4</code> y <code>14&gt;8</code>)</p></li>
-<li><p><code>8, 4</code> empata con <code>8, 8</code> (porque <code>4&lt;8</code> y <code>8=8</code>)</p></li>
+<li><p><code>8, 4</code> pierde con <code>14, 8</code> (porque <code>8&lt;14</code> y <code>4&lt;8</code>)</p></li>
+<li><p><code>8, 4</code> empata con <code>8, 8</code> (porque <code>8=8</code> y <code>4&lt;8</code>)</p></li>
 <li><p>Esto genera varias reglas implícitas:</p>
 <ul>
 <li>Sacar un 14 (as) garantiza victoria o empate. (Ninguna mano puede ganarte porque, como mínimo, empatas).</li>
@@ -1064,7 +1064,7 @@ Error: 0.00999975003123943</div>
 <td>x</td>
 </tr>
 <tr class="odd">
-<td>T</td>
+<td>10</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1080,7 +1080,7 @@ Error: 0.00999975003123943</div>
 <td>x</td>
 </tr>
 <tr class="even">
-<td>J</td>
+<td>11</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1096,7 +1096,7 @@ Error: 0.00999975003123943</div>
 <td>x</td>
 </tr>
 <tr class="odd">
-<td>Q</td>
+<td>12</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1112,7 +1112,7 @@ Error: 0.00999975003123943</div>
 <td>x</td>
 </tr>
 <tr class="even">
-<td>K</td>
+<td>13</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1128,7 +1128,7 @@ Error: 0.00999975003123943</div>
 <td>x</td>
 </tr>
 <tr class="odd">
-<td>A</td>
+<td>14</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1176,20 +1176,20 @@ Derrotas: 32</div>
 Introduce la segunda carta:
 <b>10</b>
 
-   |  2 |  3 |  4 |  5 |  6 |  7 |  8 |  9 | 10 | 11 | 12 | 13 | 14 |
- 2 |  o |  o |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |
- 3 |  o |  o |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |
- 4 |  o |  o |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |
- 5 |  o |  o |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |
- 6 |  o |  o |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |
- 7 |  o |  o |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |
- 8 |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |  . |  . |
- 9 |  o |  o |  o |  o |  o |  o |  . |  . |  . |  x |  x |  x |  x |
-10 |  . |  . |  . |  . |  . |  . |  . |  . |  . |  x |  x |  x |  x |
-11 |  . |  . |  . |  . |  . |  . |  . |  x |  x |  x |  x |  x |  x |
-12 |  . |  . |  . |  . |  . |  . |  . |  x |  x |  x |  x |  x |  x |
-13 |  . |  . |  . |  . |  . |  . |  . |  x |  x |  x |  x |  x |  x |
-14 |  . |  . |  . |  . |  . |  . |  . |  x |  x |  x |  x |  x |  x |
+   | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | T | J | Q | K | A |
+ 2 | o | o | o | o | o | o | o | o | . | . | . | . | . |
+ 3 | o | o | o | o | o | o | o | o | . | . | . | . | . |
+ 4 | o | o | o | o | o | o | o | o | . | . | . | . | . |
+ 5 | o | o | o | o | o | o | o | o | . | . | . | . | . |
+ 6 | o | o | o | o | o | o | o | o | . | . | . | . | . |
+ 7 | o | o | o | o | o | o | o | o | . | . | . | . | . |
+ 8 | o | o | o | o | o | o | . | . | . | . | . | . | . |
+ 9 | o | o | o | o | o | o | . | . | . | x | x | x | x |
+10 | . | . | . | . | . | . | . | . | . | x | x | x | x |
+11 | . | . | . | . | . | . | . | x | x | x | x | x | x |
+12 | . | . | . | . | . | . | . | x | x | x | x | x | x |
+13 | . | . | . | . | . | . | . | x | x | x | x | x | x |
+14 | . | . | . | . | . | . | . | x | x | x | x | x | x |
 
 Victorias: 60
 Empates:   77
@@ -1201,8 +1201,8 @@ Derrotas:  32
 <h2 data-number="5" class="anchored" data-anchor-id="entrega-de-la-práctica"><span class="header-section-number">5</span> Entrega de la práctica</h2>
 <p><strong>Antes del 15 de marzo a las 18:00,</strong> deberán haberse subido a Moodle los siguientes ficheros:</p>
 <ul class="task-list">
-<li><label><input type="checkbox"><code>westbank.py</code></label></li>
 <li><label><input type="checkbox"><code>leibniz.py</code></label></li>
+<li><label><input type="checkbox"><code>westbank.py</code></label></li>
 <li><label><input type="checkbox"><code>manofuerte.py</code></label></li>
 <li><label><input type="checkbox"><code>manofuerte2.py</code></label></li>
 </ul>
