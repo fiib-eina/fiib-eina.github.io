@@ -233,7 +233,7 @@ Este aspecto debe ser comprobado por el programa:
 
 | Cantidad a retirar en euros:
 | **-10**
-| Error: la cantidad a retirar no puede ser negativa.
+| Error: la cantidad a retirar tiene que ser positiva.
 
 | Cantidad a retirar en euros:
 | **800**
