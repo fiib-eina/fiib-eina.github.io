@@ -4,6 +4,31 @@ subtitle: Composición iterativa
 format: html
 ---
 
+## Serie de Leibniz
+
+En matemáticas, la serie de Leibniz es una serie infinita que sirve para calcular el número $\pi$ de forma aproximada.
+
+$$
+\sum_{n=0}^{\infty}\frac{(-1)^{n}}{2n+1}= 1 - \frac{1}{3} + \frac{1}{5} -\frac{1}{7} + \frac{1}{9} -\cdots = \frac{\pi}{4}
+$$
+
+Escribe un programa Python que calcule una aproximación de $\pi$ mediante la serie de Leibniz. El programa ha de solicitar al usuario un número entero positivo `n` y calcular la suma de los `n` primeros términos de la serie de Leibniz. Finalmente, calculará y mostrará: el valor aproximado, el valor real (puedes usar el valor de `math.pi`) y el error entre ellos.
+
+| Número de términos:
+| **10**
+| Valor aproximado: 3.0418396189294032
+| Valor real:       3.141592653589793
+| Error: 0.09975303466038987
+
+| Número de términos:
+| **100**
+| Valor aproximado: 3.1315929035585537
+| Valor real:       3.141592653589793
+| Error: 0.00999975003123943
+
+**Entrega:** Escribe tu programa en un fichero denominado `leibniz.py`.
+
+
 ## La caja fuerte del West Bank
 
 Las cajas fuertes de dial (o de combinación) son un tipo de caja fuerte que se abre mediante la introducción de una secuencia de números. La caja fuerte del _West Bank_ se abre introduciendo tres números secretos (`8, 23, 42`).
@@ -63,33 +88,10 @@ Las cajas fuertes de dial (o de combinación) son un tipo de caja fuerte que se 
 
 **Entrega:** Escribe tu programa en un fichero denominado `westbank.py`.
 
-## Serie de Leibniz
-
-En matemáticas, la serie de Leibniz es una serie infinita que sirve para calcular el número $\pi$ de forma aproximada.
-
-$$
-\sum_{n=0}^{\infty}\frac{(-1)^{n}}{2n+1}= 1 - \frac{1}{3} + \frac{1}{5} -\frac{1}{7} + \frac{1}{9} -\cdots = \frac{\pi}{4}
-$$
-
-Escribe un programa Python que calcule una aproximación de $\pi$ mediante la serie de Leibniz. El programa ha de solicitar al usuario un número entero positivo `n` y calcular la suma de los `n` primeros términos de la serie de Leibniz. Finalmente, calculará y mostrará: el valor aproximado, el valor real (puedes usar el valor de `math.pi`) y el error entre ellos.
-
-| Número de términos:
-| **10**
-| Valor aproximado: 3.0418396189294032
-| Valor real:       3.141592653589793
-| Error: 0.09975303466038987
-
-| Número de términos:
-| **100**
-| Valor aproximado: 3.1315929035585537
-| Valor real:       3.141592653589793
-| Error: 0.00999975003123943
-
-**Entrega:** Escribe tu programa en un fichero denominado `leibniz.py`.
 
 ## Mano fuerte, mano débil
 
-En el juego de "Mano fuerte, mano débil" se enfrentan dos jugadores. Cada uno recibe dos cartas de una baraja de poker.
+En el juego de "Mano fuerte, mano débil" se enfrentan dos jugadores. Cada uno recibe dos cartas de una baraja de póker.
 El valor de cada carta viene dado por la siguiente tabla:
 
 | 2-10 | J   | Q   | K   | A   |
@@ -98,11 +100,11 @@ El valor de cada carta viene dado por la siguiente tabla:
 
 Una mano **gana** a otra si ambas cartas son **superiores** a las del rival (no importa la posición de la carta)
 
-- `14, 3` gana a `2, 13` (porque `14>13` y `3>2`)
 - `14, 3` gana a `13, 2` (porque `14>13` y `3>2`)
+- `14, 3` gana a `2, 13` (porque `14>13` y `3>2`)
 - `14, 2` empata con `3, 3` (porque `14>3` y `2<3`)
-- `8, 4` pierde con `14, 8` (porque `8>4` y `14>8`)
-- `8, 4` empata con `8, 8` (porque `4<8` y `8=8`)
+- `8, 4` pierde con `14, 8` (porque `8<14` y `4<8`)
+- `8, 4` empata con `8, 8` (porque `8=8` y `4<8`)
 
 - Esto genera varias reglas implícitas:
     - Sacar un 14 (as) garantiza victoria o empate. (Ninguna mano puede ganarte porque, como mínimo, empatas).
@@ -120,11 +122,11 @@ La siguiente tabla ilustra todas las combinaciones posibles para la mano `8, 10`
 |  7 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
 |  8 | o | o | o | o | o | o |   |   |   |   |   |   |   | 
 |  9 | o | o | o | o | o | o |   |   |   | x | x | x | x | 
-| T  |   |   |   |   |   |   |   |   |   | x | x | x | x | 
-| J  |   |   |   |   |   |   |   | x | x | x | x | x | x | 
-| Q  |   |   |   |   |   |   |   | x | x | x | x | x | x | 
-| K  |   |   |   |   |   |   |   | x | x | x | x | x | x | 
-| A  |   |   |   |   |   |   |   | x | x | x | x | x | x |
+| 10 |   |   |   |   |   |   |   |   |   | x | x | x | x | 
+| 11 |   |   |   |   |   |   |   | x | x | x | x | x | x | 
+| 12 |   |   |   |   |   |   |   | x | x | x | x | x | x | 
+| 13 |   |   |   |   |   |   |   | x | x | x | x | x | x | 
+| 14 |   |   |   |   |   |   |   | x | x | x | x | x | x |
 
 Escribe un programa Python que, dada una mano de un jugador (introducidas como los dos puntos de cada carta), calcule **cuantas combinaciones ganan, cuantas empatan y cuantas pierden**.
 **NO** has de tener en cuenta las probabilidades de que salga una carta, sólo contar cuantas combinaciones ganan, empatan o pierden.
@@ -164,20 +166,20 @@ Introduce la primera carta:
 Introduce la segunda carta:
 <b>10</b>
 
-   |  2 |  3 |  4 |  5 |  6 |  7 |  8 |  9 | 10 | 11 | 12 | 13 | 14 |
- 2 |  o |  o |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |
- 3 |  o |  o |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |
- 4 |  o |  o |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |
- 5 |  o |  o |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |
- 6 |  o |  o |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |
- 7 |  o |  o |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |
- 8 |  o |  o |  o |  o |  o |  o |  . |  . |  . |  . |  . |  . |  . |
- 9 |  o |  o |  o |  o |  o |  o |  . |  . |  . |  x |  x |  x |  x |
-10 |  . |  . |  . |  . |  . |  . |  . |  . |  . |  x |  x |  x |  x |
-11 |  . |  . |  . |  . |  . |  . |  . |  x |  x |  x |  x |  x |  x |
-12 |  . |  . |  . |  . |  . |  . |  . |  x |  x |  x |  x |  x |  x |
-13 |  . |  . |  . |  . |  . |  . |  . |  x |  x |  x |  x |  x |  x |
-14 |  . |  . |  . |  . |  . |  . |  . |  x |  x |  x |  x |  x |  x |
+   | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | T | J | Q | K | A |
+ 2 | o | o | o | o | o | o | o | o | . | . | . | . | . |
+ 3 | o | o | o | o | o | o | o | o | . | . | . | . | . |
+ 4 | o | o | o | o | o | o | o | o | . | . | . | . | . |
+ 5 | o | o | o | o | o | o | o | o | . | . | . | . | . |
+ 6 | o | o | o | o | o | o | o | o | . | . | . | . | . |
+ 7 | o | o | o | o | o | o | o | o | . | . | . | . | . |
+ 8 | o | o | o | o | o | o | . | . | . | . | . | . | . |
+ 9 | o | o | o | o | o | o | . | . | . | x | x | x | x |
+10 | . | . | . | . | . | . | . | . | . | x | x | x | x |
+11 | . | . | . | . | . | . | . | x | x | x | x | x | x |
+12 | . | . | . | . | . | . | . | x | x | x | x | x | x |
+13 | . | . | . | . | . | . | . | x | x | x | x | x | x |
+14 | . | . | . | . | . | . | . | x | x | x | x | x | x |
 
 Victorias: 60
 Empates:   77
@@ -190,7 +192,7 @@ Derrotas:  32
 
 **Antes del 15 de marzo a las 18:00,** deberán haberse subido a Moodle los siguientes ficheros:
 
-- [ ] `westbank.py`
 - [ ] `leibniz.py`
+- [ ] `westbank.py`
 - [ ] `manofuerte.py`
 - [ ] `manofuerte2.py`
