@@ -103,7 +103,7 @@ print(es_bisiesto)
 
 ```python
 print("Introduce el año:")
-año = int(input())
+anyo = int(input())
 
 multiplo_4 = anyo % 4 == 0
 multiplo_100 = anyo % 100 == 0
