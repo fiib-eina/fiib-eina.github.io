@@ -23,6 +23,8 @@ website:
         contents: src/02_problemas/**
       - section: Prácticas
         contents: src/03_practicas/**
+      - section: Exámenes
+        contents: src/04_examenes/**
   search:
     location: sidebar
     type: overlay
