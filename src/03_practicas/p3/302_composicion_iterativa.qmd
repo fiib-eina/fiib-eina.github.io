@@ -15,6 +15,12 @@ $$
 Escribe un programa Python que calcule una aproximación de $\pi$ mediante la serie de Leibniz. El programa ha de solicitar al usuario un número entero positivo `n` y calcular la suma de los `n` primeros términos de la serie de Leibniz. Finalmente, calculará y mostrará: el valor aproximado, el valor real (puedes usar el valor de `math.pi`) y el error entre ellos.
 
 | Número de términos:
+| **0**
+| Valor aproximado: 0
+| Valor real:       3.141592653589793
+| Error: 3.141592653589793
+
+| Número de términos:
 | **10**
 | Valor aproximado: 3.0418396189294032
 | Valor real:       3.141592653589793
