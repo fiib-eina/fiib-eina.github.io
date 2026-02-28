@@ -248,18 +248,18 @@ Este aspecto debe ser comprobado por el programa:
 
 ## Pruebas
 
-Copia los archivos de pruebas de la práctica 2 en la carpeta `test` de la carpeta `p2` que creaste con la estructura básica de carpetas En la [práctica 0](../p0/101_introductoria.html#/22):
+Copia los archivos de pruebas de la práctica 2 en la carpeta `test` de la carpeta `p2` que creaste con la estructura básica de carpetas en la [práctica 0](../p0/101_introductoria.html#/22):
 
 1. En tu carpeta de prácticas `FIIB`, accede a la carpeta `tests` de la carpeta `p2` y déjala abierta.
 1. Descarga el fichero [`tests_p2.zip`](./tests_p2.zip).
 1. Abre el archivo `tests_p2.zip` que te has descargado.
 1. Arrastra todo el contenido del archivo `tests_p2.zip` a la carpeta `tests` de la carpeta `p2`.
 
-Recuerda que, para poder ejecutar los test, tienes que abrir, en Visual Studio Code, la carpeta `p2` de tu carpeta de prácticas `FIIB` que creamos la semana pasada.
+Recuerda que, para poder ejecutar los test, tienes que abrir, en Visual Studio Code, la carpeta `p2` de tu carpeta de prácticas `FIIB`.
 Hazlo seleccionando carpeta `p2` en el Explorador de Windows o en Finder y, con el botón derecho, elige el menú `Abrir directorio en VSCode`.
 También puedes abrir primero Visual Studio Code y, desde allí, ir al menú `File` > `Open Folder` y seleccionar la carpeta `p2`.
 
-En esta ocasión, hay las pruebas que os proporcionamos son menos exhaustivas que en la práctica 1, por lo que es posible que, aunque tu programa pase todas las pruebas, no cumpla con todos los requisitos solicitados en el enunciado. Para asegurarte de que todos funcionan correctamente, ejecuta manualmente tus programas las veces que sea necesario con distintos datos de entrada para comprobar que funcionan correctamente en todos los casos.
+En esta ocasión, las pruebas que os proporcionamos son menos exhaustivas que en la práctica 1, por lo que es posible que, aunque tu programa pase todas las pruebas, no cumpla con todos los requisitos solicitados en el enunciado. Para asegurarte de que todos funcionan correctamente, ejecuta manualmente tus programas las veces que sea necesario con distintos datos de entrada para comprobar que funcionan correctamente en todos los casos.
 
 
 ## Entrega de la práctica
