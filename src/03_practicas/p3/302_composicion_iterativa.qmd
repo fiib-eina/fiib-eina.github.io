@@ -118,24 +118,24 @@ Una mano **gana** a otra si ambas cartas son **superiores** a las del rival (no 
 
 La siguiente tabla ilustra todas las combinaciones posibles para la mano `8, 10`.
 
-|    | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | T | J | Q | K | A |
-| -- | - | - | - | - | - | - | - | - | - | - | - | - | - |
-|  2 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
-|  3 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
-|  4 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
-|  5 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
-|  6 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
-|  7 | o | o | o | o | o | o | o | o |   |   |   |   |   | 
-|  8 | o | o | o | o | o | o |   |   |   |   |   |   |   | 
-|  9 | o | o | o | o | o | o |   |   |   | x | x | x | x | 
-| 10 |   |   |   |   |   |   |   |   |   | x | x | x | x | 
-| 11 |   |   |   |   |   |   |   | x | x | x | x | x | x | 
-| 12 |   |   |   |   |   |   |   | x | x | x | x | x | x | 
-| 13 |   |   |   |   |   |   |   | x | x | x | x | x | x | 
-| 14 |   |   |   |   |   |   |   | x | x | x | x | x | x |
+|       | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | T | J | Q | K | A |
+|   -   | - | - | - | - | - | - | - | - | - | - | - | - | - |
+| **2** | o | o | o | o | o | o | o | o |   |   |   |   |   | 
+| **3** | o | o | o | o | o | o | o | o |   |   |   |   |   | 
+| **4** | o | o | o | o | o | o | o | o |   |   |   |   |   | 
+| **5** | o | o | o | o | o | o | o | o |   |   |   |   |   | 
+| **6** | o | o | o | o | o | o | o | o |   |   |   |   |   | 
+| **7** | o | o | o | o | o | o | o | o |   |   |   |   |   | 
+| **8** | o | o | o | o | o | o |   |   |   |   |   |   |   | 
+| **9** | o | o | o | o | o | o |   |   |   | x | x | x | x | 
+| **T** |   |   |   |   |   |   |   |   |   | x | x | x | x | 
+| **J** |   |   |   |   |   |   |   | x | x | x | x | x | x | 
+| **Q** |   |   |   |   |   |   |   | x | x | x | x | x | x | 
+| **K** |   |   |   |   |   |   |   | x | x | x | x | x | x | 
+| **A** |   |   |   |   |   |   |   | x | x | x | x | x | x |
 
-Escribe un programa Python que, dada una mano de un jugador (introducidas como los dos puntos de cada carta), calcule **cuantas combinaciones ganan, cuantas empatan y cuantas pierden**.
-**NO** has de tener en cuenta las probabilidades de que salga una carta, sólo contar cuantas combinaciones ganan, empatan o pierden.
+Escribe un programa Python que, dada una mano de un jugador (introducidas como los dos puntos de cada carta), calcule **cuántas combinaciones ganan, cuántas empatan y cuántas pierden**.
+**NO** has de tener en cuenta las probabilidades de que salga una carta, solo contar cuantas combinaciones ganan, empatan o pierden.
 
 
 | Introduce la primera carta:
@@ -192,11 +192,34 @@ Empates:   77
 Derrotas:  32
 </pre>
 
+Para evitar problemas con el programa de pruebas, utiliza el carácter «o» minúscula (`o`), «x» minúscula (`x`), punto (`.`) y pleca o barra vertical (`|`) al escribir la tabla.
+La barra vertical se genera en los teclados con distribución española presionando las teclas `Alt Gr` + `1` del bloque alfanumérico.
+
 **Entrega:** Escribe tu programa en un fichero denominado `manofuerte2.py`.
+
+
+## Pruebas
+
+Copia los archivos de pruebas de la práctica 3 en la carpeta `test` de la carpeta `p3` que creaste con la estructura básica de carpetas en la [práctica 0](../p0/101_introductoria.html#/22):
+
+1. En tu carpeta de prácticas `FIIB`, accede a la carpeta `tests` de la carpeta `p3` y déjala abierta.
+1. Descarga el fichero [`tests_p3.zip`](./tests_p3.zip).
+1. Abre el archivo `tests_p3.zip` que te has descargado.
+1. Arrastra todo el contenido del archivo `tests_p3.zip` a la carpeta `tests` de la carpeta `p3`.
+
+Recuerda que, para poder ejecutar los test, tienes que abrir, en Visual Studio Code, la carpeta `p3` de tu carpeta de prácticas `FIIB`.
+Hazlo seleccionando carpeta `p3` en el Explorador de Windows o en Finder y, con el botón derecho, elige el menú `Abrir directorio en VSCode`.
+También puedes abrir primero Visual Studio Code y, desde allí, ir al menú `File` > `Open Folder` y seleccionar la carpeta `p3`.
+
+Las pruebas que os proporcionamos en esta práctica son menos exigentes con el formato de la salida escrita en la pantalla que las de la práctica anterior. 
+También son menos exhaustivas que en la práctica 1, por lo que es posible que, aunque tu programa pase todas las pruebas, no cumpla con todos los requisitos solicitados en el enunciado. Por ello, para asegurarte de que todos funcionan correctamente, ejecuta manualmente tus programas las veces que sea necesario con distintos datos de entrada para comprobar que funcionan correctamente en todos los casos y comprueba que el formato de la salida de tus programas es el solicitado en el enunciado.
+
+En particular, las pruebas del programa `westbank.py` solo comprueba que las onomatopeyas _tick_ y _clonk_ aparecen en la secuencia correcta y las pruebas del programa `manofuerte2.py` solo comprueba que los caracteres `o`, `x` y `.` aparecen las veces correctas y en el orden adecuado.
+No comprueba ningún otro aspecto del formato de la tabla, por lo que tendrás que ser tú quien se asegure de que esta aparece correctamente alineada al ejecutar el programa.
 
 ## Entrega de la práctica
 
-**Antes del 15 de marzo a las 18:00,** deberán haberse subido a Moodle los siguientes ficheros:
+**Antes de las 18:00 de la fecha límite establecida en Moodle,** deberán haberse subido a Moodle los siguientes ficheros:
 
 - [ ] `leibniz.py`
 - [ ] `westbank.py`
