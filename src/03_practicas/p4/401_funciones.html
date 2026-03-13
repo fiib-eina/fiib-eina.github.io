@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,18 +33,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../src/_style/logos/unizar-diis-white.svg" rel="icon" type="image/svg+xml">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-b5d7a9fd0efe6ae5644a67f785a891e4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-e67ab1ef286a228f97a89504a4d5ebae.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-b5d7a9fd0efe6ae5644a67f785a891e4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-a527cc2a42b9319235ae8b81ad279116.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-e242d740845b5cf392cc0345fc066e68.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-a527cc2a42b9319235ae8b81ad279116.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-bae46e0c90c68260b0a4bbb45f1294a3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-12e34ae91984f684715f9e950e2b140c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-bae46e0c90c68260b0a4bbb45f1294a3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-116479fa16b3443f59da5ce90315efd6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-8416b61dbf7538d7ca7b9d83e24c6a70.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-116479fa16b3443f59da5ce90315efd6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -58,7 +59,7 @@ ul.task-list li input[type="checkbox"] {
     "s"
   ],
   "language": {
-    "search-no-results-text": "Sin resultados",
+    "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
     "search-copy-link-title": "Copiar el enlace en la búsqueda",
     "search-hide-matches-text": "Ocultar resultados adicionales",
@@ -86,7 +87,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -290,7 +291,8 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="../../../index.html" class="sidebar-logo-link">
-      <img src="../../../src/_style/logos/logo_uz.svg" alt="Unizar logo, black" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../../src\_style\logos\logo_uz.svg" alt="Unizar logo, black" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../../src\_style\logos\logo_uz.svg" alt="Unizar logo, black" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
@@ -804,7 +806,8 @@ window.Quarto = {
   <li><a href="#códigos-perdidos-exploración-de-combinaciones" id="toc-códigos-perdidos-exploración-de-combinaciones" class="nav-link" data-scroll-target="#códigos-perdidos-exploración-de-combinaciones"><span class="header-section-number">2</span> Códigos perdidos (exploración de combinaciones)</a></li>
   <li><a href="#triángulo-de-tartaglia" id="toc-triángulo-de-tartaglia" class="nav-link" data-scroll-target="#triángulo-de-tartaglia"><span class="header-section-number">3</span> Triángulo de Tartaglia</a></li>
   <li><a href="#hora-en-lenguaje-natural" id="toc-hora-en-lenguaje-natural" class="nav-link" data-scroll-target="#hora-en-lenguaje-natural"><span class="header-section-number">4</span> Hora en lenguaje natural</a></li>
-  <li><a href="#entrega-de-la-práctica" id="toc-entrega-de-la-práctica" class="nav-link" data-scroll-target="#entrega-de-la-práctica"><span class="header-section-number">5</span> Entrega de la práctica</a></li>
+  <li><a href="#pruebas" id="toc-pruebas" class="nav-link" data-scroll-target="#pruebas"><span class="header-section-number">5</span> Pruebas</a></li>
+  <li><a href="#entrega-de-la-práctica" id="toc-entrega-de-la-práctica" class="nav-link" data-scroll-target="#entrega-de-la-práctica"><span class="header-section-number">6</span> Entrega de la práctica</a></li>
   </ul>
 </nav>
     </div>
@@ -835,12 +838,12 @@ window.Quarto = {
 <section id="números-amigos" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="números-amigos"><span class="header-section-number">1</span> Números amigos</h2>
 <p>Dos números enteros positivos <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> son <em>amigos</em> si la suma de los divisores propios de <span class="math inline">\(a\)</span> es igual a <span class="math inline">\(b\)</span> y la suma de los divisores propios de <span class="math inline">\(b\)</span> es igual a <span class="math inline">\(a\)</span>. Los <em>divisores propios</em> de un número son sus divisores positivos excluyendo el propio número.</p>
-<p>Así, por ejemplo, los números 220 y 284 son amigos. Los divisores propios de 220 son 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 y 110, que suman en total 284. A su vez, los divisores propios de 284 son 1, 2, 4, 71 and 142, que suman 220.</p>
+<p>Así, por ejemplo, los números 220 y 284 son amigos. Los divisores propios de 220 son 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 y 110, que suman en total 284. A su vez, los divisores propios de 284 son 1, 2, 4, 71 y 142, que suman 220.</p>
 <p>Desarrolla:</p>
 <ul>
 <li>Una función <code>suma_divisores_propios()</code> que reciba un número entero positivo y devuelva la suma de sus divisores propios.</li>
 <li>Una función <code>son_amigos()</code> que reciba dos números enteros positivos y devuelva <code>True</code> si son amigos y <code>False</code> en caso contrario.</li>
-<li>Un programa en Python que solicite al usuario un número entero positivo <code>n</code> y encuentre los primero <code>n</code> pares de números amigos.</li>
+<li>Un programa en Python que solicite al usuario un número entero positivo <code>n</code> y encuentre los <code>n</code> primeros pares de números amigos.</li>
 </ul>
 <div class="line-block">Introduce un número entero positivo:<br>
 <strong>10</strong><br>
@@ -856,7 +859,6 @@ Los primeros 10 pares de números amigos son:<br>
 63020 y 76084<br>
 66928 y 66992</div>
 <p><strong>Entrega:</strong> Escribe tu programa en un fichero denominado <code>amigos.py</code>.</p>
-<p><strong>Pruebas:</strong> Si ejecutas el código del fichero <a href="./tests/test_amigos.py"><code>test_amigos.py</code></a>, se harán pruebas de unidad de las funciones <code>suma_divisores_propios()</code> y <code>son_amigos()</code>.</p>
 </section>
 <section id="códigos-perdidos-exploración-de-combinaciones" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="códigos-perdidos-exploración-de-combinaciones"><span class="header-section-number">2</span> Códigos perdidos (exploración de combinaciones)</h2>
@@ -865,7 +867,6 @@ Los primeros 10 pares de números amigos son:<br>
 <p>Apóyate en una función denominada <code>sumar_cifras()</code> que, dado un número positivo, devuelva el valor de la suma de los dígitos de ese número.</p>
 <p>En este ejercicio, no se pide la escritura de un programa completo, sino simplemente la de la función <code>codigos_perdidos()</code>. No obstante, para probar que <code>codigos_perdidos()</code> funciona correctamente, necesitarás escribir un programa que lo compruebe.</p>
 <p><strong>Entrega:</strong> Escribe tu código en un fichero denominado <code>codigos_perdidos.py</code>.</p>
-<p><strong>Pruebas:</strong> Si ejecutas el código del fichero <a href="./tests/test_codigos_perdidos.py"><code>test_codigos_perdidos.py</code></a>, se harán pruebas de unidad de las funciones <code>sumar_cifras()</code> y <code>codigos_perdidos()</code>, aunque de esta última, solo se comprueba que el valor devuelto (número de pares) sea correcto. No comprueba si lo que se ha escrito en la pantalla era correcto o no.</p>
 </section>
 <section id="triángulo-de-tartaglia" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="triángulo-de-tartaglia"><span class="header-section-number">3</span> Triángulo de Tartaglia</h2>
@@ -1150,7 +1151,7 @@ Los primeros 10 pares de números amigos son:<br>
 </td>
 </tr>
 </tbody></table>
-<p>Pese a que, para calcular cada elemento de cada fila del triángulo de Tartaglia, basta con sumar los valores de los dos elementos de la fila superior, si quisiéramos escribir un programa que lo hiciera, no podríamos con lo que hemos visto de programación hasta el momento.</p>
+<p>Pese a que, para calcular cada elemento de cada fila del triángulo de Tartaglia, basta con sumar los valores de los dos elementos de la fila superior, con lo que hemos visto de programación hasta este momento no podríamos escribir un programa que lo hiciera de esta manera.</p>
 <p>En su lugar, vamos a calcular cada elemento del triángulo a través del coeficiente binomial que le corresponde. Al único elemento de la primera fila, le corresponde el coeficiente binomial <span class="math inline">\(\binom{0}{0}\)</span>. Los dos elementos de la segunda fila son los coeficientes binomiales <span class="math inline">\(\binom{1}{0}\)</span> y <span class="math inline">\(\binom{1}{1}\)</span>. Los tres elementos de la tercera fila son <span class="math inline">\(\binom{2}{0}\)</span>, <span class="math inline">\(\binom{2}{1}\)</span> y <span class="math inline">\(\binom{2}{2}\)</span> y así sucesivamente:</p>
 <table>
 <tbody><tr>
@@ -1350,8 +1351,21 @@ Los primeros 10 pares de números amigos son:<br>
 <p><strong>Entrega:</strong> Escribe tu código en un fichero denominado <code>horas.py</code>.</p>
 <p><strong>Pruebas:</strong> Si ejecutas el código del fichero <a href="./tests/test_horas.py"><code>test_horas.py</code></a>, se harán pruebas de unidad de las funciones <code>leer_hora()</code>, <code>hora_en_palabras()</code>, <code>minutos_en_palabras()</code> y <code>periodo_del_dia()</code>.</p>
 </section>
-<section id="entrega-de-la-práctica" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="entrega-de-la-práctica"><span class="header-section-number">5</span> Entrega de la práctica</h2>
+<section id="pruebas" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="pruebas"><span class="header-section-number">5</span> Pruebas</h2>
+<p>Copia los archivos de pruebas de la práctica&nbsp;4 en la carpeta <code>test</code> de la carpeta <code>p4</code> que creaste con la estructura básica de carpetas en la <a href="../p0/101_introductoria.html#/22">práctica&nbsp;0</a>:</p>
+<ol type="1">
+<li>En tu carpeta de prácticas <code>FIIB</code>, accede a la carpeta <code>tests</code> de la carpeta <code>p4</code> y déjala abierta.</li>
+<li>Descarga el fichero <a href="./tests_p4.zip"><code>tests_p4.zip</code></a>.</li>
+<li>Abre el archivo <code>tests_p4.zip</code> que te has descargado.</li>
+<li>Arrastra todo el contenido del archivo <code>tests_p4.zip</code> a la carpeta <code>tests</code> de la carpeta <code>p4</code>.</li>
+</ol>
+<p>Recuerda que, para poder ejecutar los test, tienes que abrir, en Visual Studio Code, la carpeta <code>p4</code> de tu carpeta de prácticas <code>FIIB</code>. Hazlo seleccionando carpeta <code>p4</code> en el Explorador de Windows o en Finder y, con el botón derecho, elige el menú <code>Abrir directorio en VSCode</code>. También puedes abrir primero Visual Studio Code y, desde allí, ir al menú <code>File</code> &gt; <code>Open Folder</code> y seleccionar la carpeta <code>p4</code>.</p>
+<p>Las pruebas que os proporcionamos en esta práctica son <em>pruebas de unidad</em>: solo comprueban que las funciones que os pedimos implementar en los distintos programas devuelven los valores correctos. Para ello, es necesario que el nombre de las funciones sea exactamente el que se indica en el enunciado de cada ejercicio y que el número y tipo de los argumentos que reciben también sea el adecuado.</p>
+<p>Ninguna de las pruebas comprueba si lo que se ha escrito en la pantalla es correcto o no, ni si el formato utilizado es el solicitado. Tendrás que ser tú quien se asegure de que esta es correcta al ejecutar el programa.</p>
+</section>
+<section id="entrega-de-la-práctica" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="entrega-de-la-práctica"><span class="header-section-number">6</span> Entrega de la práctica</h2>
 <p><strong>Antes de las 18:00 de la fecha límite establecida en Moodle,</strong> deberán haberse subido a Moodle los siguientes ficheros:</p>
 <ul class="task-list">
 <li><label><input type="checkbox"><code>amigos.py</code></label></li>
@@ -1428,13 +1442,14 @@ Los primeros 10 pares de números amigos son:<br>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

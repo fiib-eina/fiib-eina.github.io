@@ -7,8 +7,8 @@
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.34">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-d640c705e8c17715bca3574aa719063f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.26">
 
   <title>Fundamentos de Informática – Teoría 202</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -95,7 +95,7 @@
     code span.vs { color: #008000; } /* VerbatimString */
     code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-f7935cc89ec6222034d74a13893d12e4.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-885290ce3065af1b721f68f6ffa32a74.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -238,11 +238,11 @@
 </ul></li>
 <li>Las cadenas <strong>no pueden contener saltos de línea</strong>, necesitamos utilizar <code>\n</code> para ello</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>texto0 <span class="op">=</span> <span class="st">""</span>                                <span class="co"># cadena vacía</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>texto0 <span class="op">=</span> <span class="st">""</span>                                <span class="co"># cadena vacía</span></span>
 <span id="cb1-2"><a></a>texto1 <span class="op">=</span> <span class="st">"Hola, mundo!"</span>                    <span class="co"># cadena de texto normal</span></span>
 <span id="cb1-3"><a></a>texto2 <span class="op">=</span> <span class="st">'Y Arquímedes dijo: "Eureka!"'</span>    <span class="co"># comillas simples para envolver comillas dobles</span></span>
 <span id="cb1-4"><a></a>texto3 <span class="op">=</span> <span class="st">"Y Arquímedes dijo: </span><span class="ch">\"</span><span class="st">Eureka!</span><span class="ch">\"</span><span class="st">"</span>  <span class="co"># caracter de escape para comillas dobles</span></span>
-<span id="cb1-5"><a></a>texto4 <span class="op">=</span> <span class="st">"Frase en</span><span class="ch">\n</span><span class="st">dos líneas"</span>            <span class="co"># salto de línea</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a></a>texto4 <span class="op">=</span> <span class="st">"Frase en</span><span class="ch">\n</span><span class="st">dos líneas"</span>            <span class="co"># salto de línea</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -263,7 +263,7 @@
 <li>Caracteres Unicode: <code>💪</code>, <code>🙈</code>, <code>💩</code>, <code>💦</code></li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>texto <span class="op">=</span> <span class="st">"Hola, mundo! 😉"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>texto <span class="op">=</span> <span class="st">"Hola, mundo! 😉"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -306,12 +306,12 @@
 </ul></li>
 </ul>
 <p><strong>Ejemplos</strong>:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>texto1 <span class="op">=</span> <span class="st">"Hola"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>texto1 <span class="op">=</span> <span class="st">"Hola"</span></span>
 <span id="cb3-2"><a></a>texto2 <span class="op">=</span> <span class="st">"mundo"</span></span>
 <span id="cb3-3"><a></a>texto3 <span class="op">=</span> texto1 <span class="op">+</span> <span class="st">", "</span> <span class="op">+</span> texto2 <span class="op">+</span> <span class="st">"!"</span></span>
 <span id="cb3-4"><a></a></span>
 <span id="cb3-5"><a></a>cond1  <span class="op">=</span> <span class="st">"Hola"</span> <span class="op">==</span> <span class="st">"hola"</span>  <span class="co"># Falso</span></span>
-<span id="cb3-6"><a></a>cond2  <span class="op">=</span> <span class="st">"aa"</span> <span class="op">&lt;</span> <span class="st">"ab"</span>       <span class="co"># Verdadero</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-6"><a></a>cond2  <span class="op">=</span> <span class="st">"aa"</span> <span class="op">&lt;</span> <span class="st">"ab"</span>       <span class="co"># Verdadero</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -343,13 +343,13 @@
 </tbody>
 </table>
 <p><strong>Ejemplos</strong>:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>texto <span class="op">=</span> <span class="bu">str</span>(<span class="dv">42</span>)       <span class="co"># str: "42"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>texto <span class="op">=</span> <span class="bu">str</span>(<span class="dv">42</span>)       <span class="co"># str: "42"</span></span>
 <span id="cb4-2"><a></a></span>
 <span id="cb4-3"><a></a>valor <span class="op">=</span> <span class="bu">ord</span>(<span class="st">"A"</span>)      <span class="co"># int: 65</span></span>
 <span id="cb4-4"><a></a>letra <span class="op">=</span> <span class="bu">chr</span>(<span class="dv">65</span>)       <span class="co"># str: "A"</span></span>
 <span id="cb4-5"><a></a>igual <span class="op">=</span> <span class="bu">chr</span>(<span class="bu">ord</span>(<span class="st">"A"</span>)) <span class="co"># str: "A"</span></span>
 <span id="cb4-6"><a></a></span>
-<span id="cb4-7"><a></a>longitud <span class="op">=</span> <span class="bu">len</span>(texto) <span class="co"># int: 2</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-7"><a></a>longitud <span class="op">=</span> <span class="bu">len</span>(texto) <span class="co"># int: 2</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -377,9 +377,9 @@
 </ul></li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>texto <span class="op">=</span> <span class="st">"""Este es un texto que ocupa varias líneas</span></span>
-<span id="cb5-2"><a></a><span class="st">y se escribe con triple comilla"""</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="bu">print</span>(<span class="st">"""⠀</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>texto <span class="op">=</span> <span class="st">"""Este es un texto que ocupa varias líneas</span></span>
+<span id="cb5-2"><a></a><span class="st">y se escribe con triple comilla"""</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="bu">print</span>(<span class="st">"""⠀</span></span>
 <span id="cb6-2"><a></a><span class="st">    ⠀⠀⠀⡄⡀⠀⠀⠀⠀⠀⠀⠀</span></span>
 <span id="cb6-3"><a></a><span class="st">    ⠀⠀⣼⣿⠇⠀⠀⠈⢿⣿⣦⠀</span></span>
 <span id="cb6-4"><a></a><span class="st">    ⠀⢰⣿⣿⠀⠀⠀⠀⠀⢿⣿⡇</span></span>
@@ -394,7 +394,7 @@
 <span id="cb6-13"><a></a><span class="st">    ⠀⠀⠀⠀⢻⣿⣿⣿⣿⣿⣿⠇</span></span>
 <span id="cb6-14"><a></a><span class="st">    ⠀⠀⠀⠀⠸⣿⠁⠙⠃⢿⠟⠀</span></span>
 <span id="cb6-15"><a></a><span class="st">"""</span>)</span>
-<span id="cb6-16"><a></a><span class="co"># Credits: https://emojicombos.com/hollow-knight</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-16"><a></a><span class="co"># Credits: https://emojicombos.com/hollow-knight</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -406,8 +406,8 @@
 <li>Útil para expresiones regulares, rutas de archivos, etc.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>fichero1 <span class="op">=</span>  <span class="st">"C:</span><span class="ch">\\</span><span class="st">Users</span><span class="ch">\\</span><span class="st">usuario</span><span class="ch">\\</span><span class="st">archivo.txt"</span>  <span class="co"># Tenemos que escapar cada barra</span></span>
-<span id="cb7-2"><a></a>fichero2 <span class="op">=</span> <span class="vs">r"C:</span><span class="er">\</span><span class="vs">Users</span><span class="er">\</span><span class="vs">usuario</span><span class="ch">\a</span><span class="vs">rchivo</span><span class="dv">.</span><span class="vs">txt"</span>     <span class="co"># La r indica que el contenide se toma literalmente</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>fichero1 <span class="op">=</span>  <span class="st">"C:</span><span class="ch">\\</span><span class="st">Users</span><span class="ch">\\</span><span class="st">usuario</span><span class="ch">\\</span><span class="st">archivo.txt"</span>  <span class="co"># Tenemos que escapar cada barra</span></span>
+<span id="cb7-2"><a></a>fichero2 <span class="op">=</span> <span class="vs">r"C:</span><span class="er">\</span><span class="vs">Users</span><span class="er">\</span><span class="vs">usuario</span><span class="ch">\a</span><span class="vs">rchivo</span><span class="dv">.</span><span class="vs">txt"</span>     <span class="co"># La r indica que el contenide se toma literalmente</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -419,11 +419,11 @@
 <li>Útil para formatear cadenas de texto</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>nombre <span class="op">=</span> <span class="st">"Juan"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>nombre <span class="op">=</span> <span class="st">"Juan"</span></span>
 <span id="cb8-2"><a></a>edad <span class="op">=</span> <span class="dv">21</span></span>
 <span id="cb8-3"><a></a></span>
 <span id="cb8-4"><a></a>saludo1 <span class="op">=</span> <span class="st">"Hola, me llamo "</span> <span class="op">+</span> nombre <span class="op">+</span> <span class="st">" y tengo "</span> <span class="op">+</span> edad <span class="op">+</span> <span class="st">" años"</span>  <span class="co"># Concatenando</span></span>
-<span id="cb8-5"><a></a>saludo2 <span class="op">=</span> <span class="ss">f"Hola, me llamo </span><span class="sc">{</span>nombre<span class="sc">}</span><span class="ss"> y tengo </span><span class="sc">{</span>edad<span class="sc">}</span><span class="ss"> años"</span>             <span class="co"># F-string</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-5"><a></a>saludo2 <span class="op">=</span> <span class="ss">f"Hola, me llamo </span><span class="sc">{</span>nombre<span class="sc">}</span><span class="ss"> y tengo </span><span class="sc">{</span>edad<span class="sc">}</span><span class="ss"> años"</span>             <span class="co"># F-string</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="booleanos" class="slide level2 center">
 <h2>Booleanos</h2>
@@ -451,8 +451,8 @@
 </ul></li>
 <li>La primera letra <strong>mayúscula</strong> es <strong>obligatoria</strong></li>
 </ul>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>cond1 <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb9-2"><a></a>cond2 <span class="op">=</span> <span class="va">False</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>cond1 <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb9-2"><a></a>cond2 <span class="op">=</span> <span class="va">False</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -573,25 +573,25 @@
 <section class="slide level2">
 
 <h4 id="ejemplos-de-operaciones-lógicas">Ejemplos de operaciones lógicas</h4>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>ha_llovido <span class="op">=</span> <span class="va">True</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>ha_llovido <span class="op">=</span> <span class="va">True</span></span>
 <span id="cb10-2"><a></a>he_fregado_el_suelo <span class="op">=</span> <span class="va">False</span></span>
 <span id="cb10-3"><a></a></span>
-<span id="cb10-4"><a></a>el_suelo_esta_mojado <span class="op">=</span> ha_llovido <span class="kw">or</span> he_fregado_el_suelo</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>aprobado_practicas <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb10-4"><a></a>el_suelo_esta_mojado <span class="op">=</span> ha_llovido <span class="kw">or</span> he_fregado_el_suelo</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>aprobado_practicas <span class="op">=</span> <span class="va">True</span></span>
 <span id="cb11-2"><a></a>aprobado_teoricas <span class="op">=</span> <span class="va">True</span></span>
 <span id="cb11-3"><a></a>aprobado_problemas <span class="op">=</span> <span class="va">False</span></span>
 <span id="cb11-4"><a></a></span>
-<span id="cb11-5"><a></a>aprobado <span class="op">=</span> aprobado_practicas <span class="kw">and</span> aprobado_teoricas  <span class="co"># Los problemas no cuentan</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>tengo_leche <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb11-5"><a></a>aprobado <span class="op">=</span> aprobado_practicas <span class="kw">and</span> aprobado_teoricas  <span class="co"># Los problemas no cuentan</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>tengo_leche <span class="op">=</span> <span class="va">False</span></span>
 <span id="cb12-2"><a></a>tengo_agua <span class="op">=</span> <span class="va">True</span></span>
 <span id="cb12-3"><a></a>tengo_pure_en_polvo <span class="op">=</span> <span class="va">True</span></span>
 <span id="cb12-4"><a></a></span>
-<span id="cb12-5"><a></a>puedo_hacer_pure <span class="op">=</span> (tengo_leche <span class="kw">or</span> tengo_agua) <span class="kw">and</span> tengo_pure_en_polvo</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>estoy_en_casa <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb12-5"><a></a>puedo_hacer_pure <span class="op">=</span> (tengo_leche <span class="kw">or</span> tengo_agua) <span class="kw">and</span> tengo_pure_en_polvo</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>estoy_en_casa <span class="op">=</span> <span class="va">False</span></span>
 <span id="cb13-2"><a></a>llega_un_paquete <span class="op">=</span> <span class="va">True</span></span>
 <span id="cb13-3"><a></a></span>
 <span id="cb13-4"><a></a>entrega_fallida <span class="op">=</span> <span class="kw">not</span> estoy_en_casa <span class="kw">and</span> llega_un_paquete  <span class="co"># </span></span>
-<span id="cb13-5"><a></a><span class="co"># El not tiene prioridad:  (not estoy_en_casa) and llega_un_paquete</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-5"><a></a><span class="co"># El not tiene prioridad:  (not estoy_en_casa) and llega_un_paquete</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -612,13 +612,13 @@
 </ul></li>
 </ul>
 <p><strong>Ejemplos</strong>:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="co"># CUIDADO</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="co"># CUIDADO</span></span>
 <span id="cb14-2"><a></a>verdadero <span class="op">=</span> <span class="bu">bool</span>(<span class="st">"True"</span>)  <span class="co"># True</span></span>
 <span id="cb14-3"><a></a>falso <span class="op">=</span> <span class="bu">bool</span>(<span class="st">"False"</span>)     <span class="co"># True</span></span>
 <span id="cb14-4"><a></a></span>
 <span id="cb14-5"><a></a><span class="co"># CORRECTO</span></span>
 <span id="cb14-6"><a></a>valor <span class="op">=</span> <span class="st">"No"</span>               <span class="co"># El usuario introduce "Si" o "No"</span></span>
-<span id="cb14-7"><a></a>verdadero <span class="op">=</span> valor <span class="op">==</span> <span class="st">"Si"</span>  <span class="co"># False</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-7"><a></a>verdadero <span class="op">=</span> valor <span class="op">==</span> <span class="st">"Si"</span>  <span class="co"># False</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -627,7 +627,7 @@
 <li>El <em>Bar Zoomer</em> sólo abre los <strong>fines de semana</strong>.<br></li>
 <li>El <em>Bar Zoomer</em> no admite <strong>menores</strong>, ni <strong>boomers</strong>, ni <strong>millennials</strong>.</li>
 </ul>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>edad <span class="op">=</span> <span class="dv">21</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>edad <span class="op">=</span> <span class="dv">21</span></span>
 <span id="cb15-2"><a></a></span>
 <span id="cb15-3"><a></a>es_mayor_de_edad <span class="op">=</span> edad <span class="op">&gt;=</span> <span class="dv">18</span>                                                     <span class="co"># True</span></span>
 <span id="cb15-4"><a></a>es_zoomer <span class="op">=</span> es_mayor_de_edad <span class="kw">and</span> edad <span class="op">&lt;</span> <span class="dv">25</span>                                        <span class="co"># True</span></span>
@@ -636,7 +636,7 @@
 <span id="cb15-7"><a></a>dia_de_la_semana <span class="op">=</span> <span class="st">"Lunes"</span></span>
 <span id="cb15-8"><a></a>es_fin_de_semana <span class="op">=</span> dia_de_la_semana <span class="op">==</span> <span class="st">"Sábado"</span> <span class="kw">or</span> dia_de_la_semana <span class="op">==</span> <span class="st">"Domingo"</span>  <span class="co"># False</span></span>
 <span id="cb15-9"><a></a></span>
-<span id="cb15-10"><a></a>puede_entrar <span class="op">=</span> es_zoomer <span class="kw">and</span> es_fin_de_semana                                     <span class="co"># False</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-10"><a></a>puede_entrar <span class="op">=</span> es_zoomer <span class="kw">and</span> es_fin_de_semana                                     <span class="co"># False</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
@@ -648,7 +648,7 @@
 <li>Las becas de excelencia se otorgan a los estudiantes con una <strong>nota media</strong> igual o superior a <strong>9.5</strong>.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a>ingresos_anuales <span class="op">=</span> <span class="dv">500_000</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a>ingresos_anuales <span class="op">=</span> <span class="dv">500_000</span></span>
 <span id="cb16-2"><a></a>num_matriculas <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb16-3"><a></a>nota_media <span class="op">=</span> <span class="fl">9.8</span></span>
 <span id="cb16-4"><a></a></span>
@@ -658,14 +658,14 @@
 <span id="cb16-8"><a></a>beca_social <span class="op">=</span> primera_matricula <span class="kw">and</span> <span class="kw">not</span> ingresos_superiores    <span class="co"># False</span></span>
 <span id="cb16-9"><a></a>beca_excelencia <span class="op">=</span> nota_media <span class="op">&gt;=</span> <span class="fl">9.5</span>                            <span class="co"># True</span></span>
 <span id="cb16-10"><a></a></span>
-<span id="cb16-11"><a></a>beca <span class="op">=</span> beca_social <span class="kw">or</span> beca_excelencia                          <span class="co"># True</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-11"><a></a>beca <span class="op">=</span> beca_social <span class="kw">or</span> beca_excelencia                          <span class="co"># True</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><em><strong>Propuesta</strong></em>: Adapta el ejemplo de las becas para que sea interactivo (<code>print()</code> y <code>input()</code>) y comprueba su funcionamiento para distintos valores de entrada.</p>
 
 
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
+<p><img src="../../../../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>Fundamentos de Informática</p>
 </div>
@@ -855,7 +855,7 @@
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -929,13 +929,14 @@
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
