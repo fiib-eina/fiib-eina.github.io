@@ -10,13 +10,13 @@ Dos números enteros positivos $a$ y $b$ son _amigos_ si la suma de los divisore
 Los _divisores propios_ de un número son sus divisores positivos excluyendo el propio número.
 
 Así, por ejemplo, los números 220 y 284 son amigos. Los divisores propios de 220 son 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 y 110, que suman en total 284.
-A su vez, los divisores propios de 284 son 1, 2, 4, 71 and 142, que suman 220. 
+A su vez, los divisores propios de 284 son 1, 2, 4, 71 y 142, que suman 220. 
 
 Desarrolla:
 
 - Una función `suma_divisores_propios()` que reciba un número entero positivo y devuelva la suma de sus divisores propios.
 - Una función `son_amigos()` que reciba dos números enteros positivos y devuelva `True` si son amigos y `False` en caso contrario.
-- Un programa en Python que solicite al usuario un número entero positivo `n` y encuentre los primero `n` pares de números amigos.
+- Un programa en Python que solicite al usuario un número entero positivo `n` y encuentre los `n` primeros pares de números amigos.
 
 | Introduce un número entero positivo:
 | **10**
@@ -34,8 +34,6 @@ Desarrolla:
 
 **Entrega:** Escribe tu programa en un fichero denominado `amigos.py`.
 
-**Pruebas:** Si ejecutas el código del fichero [`test_amigos.py`](./tests/test_amigos.py), se harán pruebas de unidad de las funciones `suma_divisores_propios()` y `son_amigos()`. 
-
 
 ## Códigos perdidos (exploración de combinaciones)
 
@@ -50,8 +48,6 @@ En este ejercicio, no se pide la escritura de un programa completo, sino simplem
 No obstante, para probar que `codigos_perdidos()` funciona correctamente, necesitarás escribir un programa que lo compruebe.
 
 **Entrega:** Escribe tu código en un fichero denominado `codigos_perdidos.py`.
-
-**Pruebas:** Si ejecutas el código del fichero [`test_codigos_perdidos.py`](./tests/test_codigos_perdidos.py), se harán pruebas de unidad de las funciones `sumar_cifras()` y `codigos_perdidos()`, aunque de esta última, solo se comprueba que el valor devuelto (número de pares) sea correcto. No comprueba si lo que se ha escrito en la pantalla era correcto o no.
 
 
 ## Triángulo de Tartaglia
@@ -150,7 +146,7 @@ Las primeras líneas del triángulo de Tartaglia son:
     </tr>
 </table>
 
-Pese a que, para calcular cada elemento de cada fila del triángulo de Tartaglia, basta con sumar los valores de los dos elementos de la fila superior, si quisiéramos escribir un programa que lo hiciera, no podríamos con lo que hemos visto de programación hasta el momento.
+Pese a que, para calcular cada elemento de cada fila del triángulo de Tartaglia, basta con sumar los valores de los dos elementos de la fila superior, con lo que hemos visto de programación hasta este momento no podríamos escribir un programa que lo hiciera de esta manera.
 
 En su lugar, vamos a calcular cada elemento del triángulo a través del coeficiente binomial que le corresponde.
 Al único elemento de la primera fila, le corresponde el coeficiente binomial $\binom{0}{0}$.
@@ -253,6 +249,25 @@ Al escribir la función `leer_hora()`, apóyate en estas otras funciones:
 
 **Pruebas:** Si ejecutas el código del fichero [`test_horas.py`](./tests/test_horas.py), se harán pruebas de unidad de las funciones `leer_hora()`, `hora_en_palabras()`,  `minutos_en_palabras()` y `periodo_del_dia()`. 
 
+
+## Pruebas
+
+Copia los archivos de pruebas de la práctica 4 en la carpeta `test` de la carpeta `p4` que creaste con la estructura básica de carpetas en la [práctica 0](../p0/101_introductoria.html#/22):
+
+1. En tu carpeta de prácticas `FIIB`, accede a la carpeta `tests` de la carpeta `p4` y déjala abierta.
+1. Descarga el fichero [`tests_p4.zip`](./tests_p4.zip).
+1. Abre el archivo `tests_p4.zip` que te has descargado.
+1. Arrastra todo el contenido del archivo `tests_p4.zip` a la carpeta `tests` de la carpeta `p4`.
+
+Recuerda que, para poder ejecutar los test, tienes que abrir, en Visual Studio Code, la carpeta `p4` de tu carpeta de prácticas `FIIB`.
+Hazlo seleccionando carpeta `p4` en el Explorador de Windows o en Finder y, con el botón derecho, elige el menú `Abrir directorio en VSCode`.
+También puedes abrir primero Visual Studio Code y, desde allí, ir al menú `File` > `Open Folder` y seleccionar la carpeta `p4`.
+
+Las pruebas que os proporcionamos en esta práctica son _pruebas de unidad_: solo comprueban que las funciones que os pedimos implementar en los distintos programas devuelven los valores correctos.
+Para ello, es necesario que el nombre de las funciones sea exactamente el que se indica en el enunciado de cada ejercicio y que el número y tipo de los argumentos que reciben también sea el adecuado.
+
+Ninguna de las pruebas comprueba si lo que se ha escrito en la pantalla es correcto o no, ni si el formato utilizado es el solicitado.
+Tendrás que ser tú quien se asegure de que esta es correcta al ejecutar el programa.
 
 ## Entrega de la práctica
 
