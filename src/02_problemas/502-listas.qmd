@@ -20,9 +20,9 @@ print(lee_lista(3))
 ```
 
 | **1**
+| **8**
 | **2**
-| **3**
-| [1, 2, 3]
+| [1, 8, 2]
 
 <details>
 <summary>Solución</summary>

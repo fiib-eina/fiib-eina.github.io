@@ -85,6 +85,35 @@ def comprobar_posicion(tablero, x, y):
 
 </details>
 
+### _Extra:_ `pintar_tablero`
+
+Escribe una función `pintar_tablero` que reciba un tablero y lo imprima por pantalla. Usa el símbolo "X" para representar las celdas ocupadas por barcos y "." para representar las celdas vacías.
+
+```python
+def pintar_tablero(tablero):
+    # ???
+```
+
+| . . . . .
+| . X . . .
+| . . . X .
+| . . . . .
+| . . X . .
+
+<details>
+<summary>Solución</summary>
+
+```python
+def pintar_tablero(tablero):
+    for i in range(len(tablero)):
+        for j in range(len(tablero[i])):
+            if tablero[i][j]:
+                print("X ", end="")
+            else:
+                print(". ", end="")
+        print()
+```
+
 ## RPG
 
 Vamos a modelar el sistema de enemigos de un juego de rol.
