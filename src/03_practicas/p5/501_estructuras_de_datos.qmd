@@ -12,11 +12,11 @@ Para ello, vamos a definir un módulo denominado `complejos.py` que contendrá u
 En el módulo `complejos.py` debes definir:
 
 - Una clase (_dataclass_) denominada `Complejo`, que represente un número complejo con dos atributos: `real` e `imag`.
-- Una función denominada `str_complejo()` que, dado un dato de tipo `Complejo` devuelva un string con la representación del número en forma binomial ($a+bi$) con 4 decimales máximos para cada componente.
+- Una función denominada `str_complejo()` que, dado un dato de tipo `Complejo` devuelva un string con la representación del número en forma binomial ($a+bi$) siendo dos reales con 4 decimales máximos para cada componente.
 - Una función denominada `sumar()` que, dados dos número complejos, devuelva otro que represente su suma.
 - Una función denominada `restar()` que, dados dos número complejos, devuelva otro que represente su diferencia. 
 - Una función denominada `modulo()` que, dado un número complejo, devuelva su módulo.
-- Una función denominada `mayor_que()`, `menor_que()` e `igual_que()` que, dados dos números complejos, devuelvan `True` si se cumple que el módulo del primero sea mayor/menor/igual que el módulo del segundo.
+- Tres funciones denominadas `mayor_que()`, `menor_que()` e `igual_que()` que, dados dos números complejos, devuelvan `True` si se cumple que el módulo del primero sea mayor/menor/igual que el módulo del segundo.
 
 <!-- NOTE: Queremos que controlen el número de decimales redondeando a 4. -->
 
@@ -26,7 +26,7 @@ Ejemplo de representación:
 print(str_complejo(Complejo(3, 4)))
 ```
 
-| 3+4i
+| 3.0+4.0i
 
 Ejemplo de representación:
 
@@ -43,7 +43,7 @@ Ejemplo de ejecución de la función `sumar()`:
 print(str_complejo(sumar(Complejo(3, 4), Complejo(1, 2))))
 ```
 
-| 4+6i
+| 4.0+6.0i
 
 Ejemplo de ejecución de la función `modulo()`:
 
@@ -138,10 +138,8 @@ Ejemplo de ejecución:
 | Número complejo de menor módulo:
 | 4.2194+0.592i
 | 
-| 
 | Suma de los números complejos:
 | 29.7991+17.2591i
-| 
 | 
 | Números complejos del primer cuadrante:
 | 6.2752+2.1476i, 4.2194+0.592i, 7.341+4.6596i, 2.3868+8.4841i, 9.5767+1.3759i
@@ -158,10 +156,8 @@ Ejemplo de ejecución:
 | Número complejo de menor módulo:
 | -0.0047-0.0187i
 | 
-| 
 | Suma de los números complejos:
 | -0.1812-0.2133i
-| 
 | 
 | Números complejos del primer cuadrante:
 | 
@@ -183,10 +179,8 @@ Ejemplo de ejecución:
 | Número complejo de menor módulo:
 | 0.5002+0.7605i
 | 
-| 
 | Suma de los números complejos:
 | -1.3033+2.7311i
-| 
 | 
 | Números complejos del primer cuadrante:
 | 0.5002+0.7605i, 0.9307+1.7915i
@@ -194,6 +188,15 @@ Ejemplo de ejecución:
 **Entrega:** Escribe tu programa en un fichero denominado `lista_complejos.py`.
 
 **Pruebas:** Si ejecutas el código del fichero [`test_lista_complejos.py`](./tests/test_lista_complejos.py), se harán pruebas de unidad de ese módulo.
+
+## Pruebas
+
+Copia los archivos de pruebas de la práctica 4 en la carpeta `test` de la carpeta `p5` que creaste con la estructura básica de carpetas en la [práctica 0](../p0/101_introductoria.html#/22):
+
+1. En tu carpeta de prácticas `FIIB`, accede a la carpeta `tests` de la carpeta `p5` y déjala abierta.
+1. Descarga el fichero [`tests_p5.zip`](./tests_p5.zip).
+1. Abre el archivo `tests_p5.zip` que te has descargado.
+1. Arrastra todo el contenido del archivo `tests_p5.zip` a la carpeta `tests` de la carpeta `p5`.
 
 ## Entrega de la práctica
 
