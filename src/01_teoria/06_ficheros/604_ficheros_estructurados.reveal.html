@@ -7,8 +7,8 @@
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-d640c705e8c17715bca3574aa719063f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.26">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.34">
 
   <title>Fundamentos de Informática – Teoría 604</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -95,7 +95,7 @@
     code span.vs { color: #008000; } /* VerbatimString */
     code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-885290ce3065af1b721f68f6ffa32a74.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-f7935cc89ec6222034d74a13893d12e4.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -217,12 +217,12 @@
 <li>Listas, objetos, listas de objetos, etc.</li>
 </ul></li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>alumnos <span class="op">=</span> [</span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>alumnos <span class="op">=</span> [</span>
 <span id="cb1-2"><a></a>    Alumno(<span class="st">"Julio González"</span>, <span class="dv">110101</span>, <span class="dv">3</span>, <span class="dv">836</span>),</span>
 <span id="cb1-3"><a></a>    Alumno(<span class="st">"Mery Lopez"</span>, <span class="dv">110102</span>, <span class="dv">3</span>, <span class="dv">836</span>),</span>
 <span id="cb1-4"><a></a>    Alumno(<span class="st">"Hector Cortés"</span>, <span class="dv">110103</span>, <span class="dv">3</span>, <span class="dv">837</span>),</span>
 <span id="cb1-5"><a></a>    Alumno(<span class="st">"Luis Gracia"</span>, <span class="dv">110104</span>, <span class="dv">3</span>, <span class="dv">837</span>)</span>
-<span id="cb1-6"><a></a>]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-6"><a></a>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>¿Cómo <strong>guardamos</strong> esta lista de alumnos en un fichero?</li>
 <li>¿Cómo la <strong>leemos</strong> después?</li>
@@ -264,7 +264,7 @@
 <ul>
 <li>Para leer dicho fichero y cargarlo en un vector de enteros:</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"waveform.txt"</span>, <span class="st">"r"</span>)</span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"waveform.txt"</span>, <span class="st">"r"</span>)</span>
 <span id="cb2-2"><a></a>texto <span class="op">=</span> f.read()</span>
 <span id="cb2-3"><a></a>f.close()</span>
 <span id="cb2-4"><a></a></span>
@@ -272,7 +272,7 @@
 <span id="cb2-6"><a></a>lista <span class="op">=</span> []</span>
 <span id="cb2-7"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lista_texto)):</span>
 <span id="cb2-8"><a></a>    numero <span class="op">=</span> <span class="bu">int</span>(lista_texto[i])</span>
-<span id="cb2-9"><a></a>    lista.append(numero)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-9"><a></a>    lista.append(numero)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-tip callout-style-simple">
 <div class="callout-body">
 <div class="callout-icon-container">
@@ -386,11 +386,11 @@
 
 <h3 id="estructura-de-un-fichero-csv">Estructura de un fichero CSV</h3>
 <p><strong>alumnos.csv</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>Nombre,NIP,Clase,Curso</span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource csv number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>Nombre,NIP,Clase,Curso</span>
 <span id="cb3-2"><a></a>Julio González,110101,3,836</span>
 <span id="cb3-3"><a></a>Mery Lopez,110102,3,836</span>
 <span id="cb3-4"><a></a>Hector Cortés,110103,3,837</span>
-<span id="cb3-5"><a></a>Luis Gracia,110104,3,837</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-5"><a></a>Luis Gracia,110104,3,837</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Como puedes observar, a menudo los ficheros CSV incluyen una <strong>cabecera</strong> con el nombre de los campos.
 <ul>
@@ -401,7 +401,7 @@
 <section class="slide level2">
 
 <h4 id="ejemplo-leer-un-csv">Ejemplo: Leer un CSV</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"alumnos.csv"</span>, <span class="st">"r"</span>)</span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"alumnos.csv"</span>, <span class="st">"r"</span>)</span>
 <span id="cb4-2"><a></a>cabecera <span class="op">=</span> f.readline()</span>
 <span id="cb4-3"><a></a></span>
 <span id="cb4-4"><a></a>alumnos <span class="op">=</span> []</span>
@@ -413,7 +413,7 @@
 <span id="cb4-10"><a></a>    alumnos.append(alumno)</span>
 <span id="cb4-11"><a></a>    linea <span class="op">=</span> f.readline()</span>
 <span id="cb4-12"><a></a></span>
-<span id="cb4-13"><a></a>f.close()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-13"><a></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Esta es una estructrua que <strong>repetiremos</strong> a menudo.</li>
 <li>Las partes que variarán serán:
@@ -509,7 +509,7 @@ NoPuedesPasar 80</div>
 <ul>
 <li>Primero vamos a definir las estructuras de datos que utilizaremos para representar la ficha de personaje.</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="im">import</span> dataclasses</span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="im">import</span> dataclasses</span>
 <span id="cb5-2"><a></a></span>
 <span id="cb5-3"><a></a><span class="at">@dataclasses.dataclass</span></span>
 <span id="cb5-4"><a></a><span class="kw">class</span> Ataque:</span>
@@ -525,7 +525,7 @@ NoPuedesPasar 80</div>
 <span id="cb5-14"><a></a>    fuerza: <span class="bu">int</span></span>
 <span id="cb5-15"><a></a>    destreza: <span class="bu">int</span></span>
 <span id="cb5-16"><a></a>    inteligencia: <span class="bu">int</span></span>
-<span id="cb5-17"><a></a>    ataques: <span class="bu">list</span>[Ataque]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-17"><a></a>    ataques: <span class="bu">list</span>[Ataque]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
@@ -540,7 +540,7 @@ Hobbit Escudero<br>
 Sartenazo 5<br>
 Daga 15</div>
 </div><div class="column" style="width:70%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="co"># PASO 1: Cargamos primero los datos fijos del personaje</span></span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="co"># PASO 1: Cargamos primero los datos fijos del personaje</span></span>
 <span id="cb6-2"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"sam.txt"</span>, <span class="st">"r"</span>)</span>
 <span id="cb6-3"><a></a>l1 <span class="op">=</span> f.readline()</span>
 <span id="cb6-4"><a></a>l2 <span class="op">=</span> f.readline().split(<span class="st">" "</span>)</span>
@@ -563,7 +563,7 @@ Daga 15</div>
 <span id="cb6-21"><a></a>    ataque <span class="op">=</span> Ataque(datos[<span class="dv">0</span>].strip(), <span class="bu">int</span>(datos[<span class="dv">1</span>]))</span>
 <span id="cb6-22"><a></a>    personaje.ataques.append(ataque)</span>
 <span id="cb6-23"><a></a>    linea_ataque <span class="op">=</span> f.readline()</span>
-<span id="cb6-24"><a></a>f.close()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-24"><a></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 </section>
 <section id="json" class="slide level2 center">
@@ -587,18 +587,18 @@ Daga 15</div>
 <li>Es un formato <strong>MUY</strong> popular y es posible que lo encuentres como formato de intercambio de datos.</li>
 <li>Python tiene soporte nativo para JSON a través del módulo <code>json</code>.</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="im">import</span> json</span>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="im">import</span> json</span>
 <span id="cb7-2"><a></a></span>
 <span id="cb7-3"><a></a><span class="co"># Cargar un fichero JSON</span></span>
 <span id="cb7-4"><a></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"datos.json"</span>, <span class="st">"r"</span>)</span>
 <span id="cb7-5"><a></a><span class="co"># Necesitarás aprender manejo de dicts</span></span>
 <span id="cb7-6"><a></a>datos <span class="op">=</span> json.load(f) </span>
-<span id="cb7-7"><a></a>f.close()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-7"><a></a>f.close()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section class="slide level2">
 
 <p><strong>gandalf.json</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb8-1"><a></a><span class="fu">{</span></span>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb8-1"><a></a><span class="fu">{</span></span>
 <span id="cb8-2"><a></a>  <span class="dt">"nombre"</span><span class="fu">:</span> <span class="st">"Gandalf el Blanco"</span><span class="fu">,</span></span>
 <span id="cb8-3"><a></a>  <span class="dt">"raza"</span><span class="fu">:</span> <span class="st">"Maia"</span><span class="fu">,</span></span>
 <span id="cb8-4"><a></a>  <span class="dt">"clase"</span><span class="fu">:</span> <span class="st">"Mago"</span><span class="fu">,</span></span>
@@ -616,13 +616,13 @@ Daga 15</div>
 <span id="cb8-16"><a></a>      <span class="dt">"dano"</span><span class="fu">:</span> <span class="dv">80</span></span>
 <span id="cb8-17"><a></a>    <span class="fu">}</span></span>
 <span id="cb8-18"><a></a>  <span class="ot">]</span></span>
-<span id="cb8-19"><a></a><span class="fu">}</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-19"><a></a><span class="fu">}</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="../../../../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
+<p><img src="../../../src/_style/logos/unizar-diis-white.svg" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>Fundamentos de Informática</p>
 </div>
@@ -812,7 +812,7 @@ Daga 15</div>
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -886,14 +886,13 @@ Daga 15</div>
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-          const outerScaffold = trigger.parentElement.cloneNode(true);
-          const codeEl = outerScaffold.querySelector('code');
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
             }
-          }
-          return codeEl.innerText;
+            return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

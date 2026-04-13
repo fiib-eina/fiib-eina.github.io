@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -68,19 +68,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../src/_style/logos/unizar-diis-white.svg" rel="icon" type="image/svg+xml">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-a527cc2a42b9319235ae8b81ad279116.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-e242d740845b5cf392cc0345fc066e68.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-a527cc2a42b9319235ae8b81ad279116.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-b5d7a9fd0efe6ae5644a67f785a891e4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-e67ab1ef286a228f97a89504a4d5ebae.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-b5d7a9fd0efe6ae5644a67f785a891e4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-116479fa16b3443f59da5ce90315efd6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-8416b61dbf7538d7ca7b9d83e24c6a70.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-116479fa16b3443f59da5ce90315efd6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-bae46e0c90c68260b0a4bbb45f1294a3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-12e34ae91984f684715f9e950e2b140c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-bae46e0c90c68260b0a4bbb45f1294a3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -94,7 +93,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "s"
   ],
   "language": {
-    "search-no-results-text": "No se han encontrado resultados",
+    "search-no-results-text": "Sin resultados",
     "search-matching-documents-text": "documentos encontrados",
     "search-copy-link-title": "Copiar el enlace en la búsqueda",
     "search-hide-matches-text": "Ocultar resultados adicionales",
@@ -122,7 +121,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -326,8 +325,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="../../../index.html" class="sidebar-logo-link">
-      <img src="../../../src\_style\logos\logo_uz.svg" alt="Unizar logo, black" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="../../../src\_style\logos\logo_uz.svg" alt="Unizar logo, black" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <img src="../../../src/_style/logos/logo_uz.svg" alt="Unizar logo, black" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
@@ -840,7 +838,8 @@ window.Quarto = {
   <li><a href="#biblioteca-de-números-complejos" id="toc-biblioteca-de-números-complejos" class="nav-link active" data-scroll-target="#biblioteca-de-números-complejos"><span class="header-section-number">1</span> Biblioteca de números complejos</a></li>
   <li><a href="#calculadora-de-números-complejos" id="toc-calculadora-de-números-complejos" class="nav-link" data-scroll-target="#calculadora-de-números-complejos"><span class="header-section-number">2</span> Calculadora de números complejos</a></li>
   <li><a href="#listas-de-números-complejos" id="toc-listas-de-números-complejos" class="nav-link" data-scroll-target="#listas-de-números-complejos"><span class="header-section-number">3</span> Listas de números complejos</a></li>
-  <li><a href="#entrega-de-la-práctica" id="toc-entrega-de-la-práctica" class="nav-link" data-scroll-target="#entrega-de-la-práctica"><span class="header-section-number">4</span> Entrega de la práctica</a></li>
+  <li><a href="#pruebas" id="toc-pruebas" class="nav-link" data-scroll-target="#pruebas"><span class="header-section-number">4</span> Pruebas</a></li>
+  <li><a href="#entrega-de-la-práctica" id="toc-entrega-de-la-práctica" class="nav-link" data-scroll-target="#entrega-de-la-práctica"><span class="header-section-number">5</span> Entrega de la práctica</a></li>
   </ul>
 </nav>
     </div>
@@ -874,7 +873,7 @@ window.Quarto = {
 <p>En el módulo <code>complejos.py</code> debes definir:</p>
 <ul>
 <li>Una clase (<em>dataclass</em>) denominada <code>Complejo</code>, que represente un número complejo con dos atributos: <code>real</code> e <code>imag</code>.</li>
-<li>Una función denominada <code>str_complejo()</code> que, dado un dato de tipo <code>Complejo</code> devuelva un string con la representación del número en forma binomial (<span class="math inline">\(a+bi\)</span>) con 4 decimales máximos para cada componente.</li>
+<li>Una función denominada <code>str_complejo()</code> que, dado un dato de tipo <code>Complejo</code> devuelva un string con la representación del número en forma binomial (<span class="math inline">\(a+bi\)</span>) siendo dos reales con 4 decimales máximos para cada componente.</li>
 <li>Una función denominada <code>sumar()</code> que, dados dos número complejos, devuelva otro que represente su suma.</li>
 <li>Una función denominada <code>restar()</code> que, dados dos número complejos, devuelva otro que represente su diferencia.</li>
 <li>Una función denominada <code>modulo()</code> que, dado un número complejo, devuelva su módulo.</li>
@@ -882,16 +881,16 @@ window.Quarto = {
 </ul>
 <!-- NOTE: Queremos que controlen el número de decimales redondeando a 4. -->
 <p>Ejemplo de representación:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">print</span>(str_complejo(Complejo(<span class="dv">3</span>, <span class="dv">4</span>)))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="line-block">3+4i</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">print</span>(str_complejo(Complejo(<span class="dv">3</span>, <span class="dv">4</span>)))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">3.0+4.0i</div>
 <p>Ejemplo de representación:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="bu">print</span>(str_complejo(Complejo(<span class="fl">3.22</span>, <span class="fl">4.1111111111</span>)))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="bu">print</span>(str_complejo(Complejo(<span class="fl">3.22</span>, <span class="fl">4.1111111111</span>)))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="line-block">3.22+4.1111i</div>
 <p>Ejemplo de ejecución de la función <code>sumar()</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="bu">print</span>(str_complejo(sumar(Complejo(<span class="dv">3</span>, <span class="dv">4</span>), Complejo(<span class="dv">1</span>, <span class="dv">2</span>))))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="line-block">4+6i</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="bu">print</span>(str_complejo(sumar(Complejo(<span class="dv">3</span>, <span class="dv">4</span>), Complejo(<span class="dv">1</span>, <span class="dv">2</span>))))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="line-block">4.0+6.0i</div>
 <p>Ejemplo de ejecución de la función <code>modulo()</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="bu">print</span>(modulo(Complejo(<span class="dv">3</span>, <span class="dv">4</span>)))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="bu">print</span>(modulo(Complejo(<span class="dv">3</span>, <span class="dv">4</span>)))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="line-block">5.0</div>
 <p><strong>Entrega:</strong> Escribe tu programa en un fichero denominado <code>complejos.py</code>.</p>
 <p><strong>Pruebas:</strong> Si ejecutas el código del fichero <a href="./tests/test_complejos.py"><code>test_complejos.py</code></a>, se harán pruebas de unidad de ese módulo.</p>
@@ -961,10 +960,8 @@ Lista de números complejos generada:<br>
 Número complejo de menor módulo:<br>
 4.2194+0.592i<br>
 <br>
-<br>
 Suma de los números complejos:<br>
 29.7991+17.2591i<br>
-<br>
 <br>
 Números complejos del primer cuadrante:<br>
 6.2752+2.1476i, 4.2194+0.592i, 7.341+4.6596i, 2.3868+8.4841i, 9.5767+1.3759i</div>
@@ -979,10 +976,8 @@ Lista de números complejos generada:<br>
 Número complejo de menor módulo:<br>
 -0.0047-0.0187i<br>
 <br>
-<br>
 Suma de los números complejos:<br>
 -0.1812-0.2133i<br>
-<br>
 <br>
 Números complejos del primer cuadrante:<br>
 </div>
@@ -1001,18 +996,26 @@ Lista de números complejos generada:<br>
 Número complejo de menor módulo:<br>
 0.5002+0.7605i<br>
 <br>
-<br>
 Suma de los números complejos:<br>
 -1.3033+2.7311i<br>
-<br>
 <br>
 Números complejos del primer cuadrante:<br>
 0.5002+0.7605i, 0.9307+1.7915i</div>
 <p><strong>Entrega:</strong> Escribe tu programa en un fichero denominado <code>lista_complejos.py</code>.</p>
 <p><strong>Pruebas:</strong> Si ejecutas el código del fichero <a href="./tests/test_lista_complejos.py"><code>test_lista_complejos.py</code></a>, se harán pruebas de unidad de ese módulo.</p>
 </section>
-<section id="entrega-de-la-práctica" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="entrega-de-la-práctica"><span class="header-section-number">4</span> Entrega de la práctica</h2>
+<section id="pruebas" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="pruebas"><span class="header-section-number">4</span> Pruebas</h2>
+<p>Copia los archivos de pruebas de la práctica&nbsp;4 en la carpeta <code>test</code> de la carpeta <code>p5</code> que creaste con la estructura básica de carpetas en la <a href="../p0/101_introductoria.html#/22">práctica&nbsp;0</a>:</p>
+<ol type="1">
+<li>En tu carpeta de prácticas <code>FIIB</code>, accede a la carpeta <code>tests</code> de la carpeta <code>p5</code> y déjala abierta.</li>
+<li>Descarga el fichero <a href="./tests_p5.zip"><code>tests_p5.zip</code></a>.</li>
+<li>Abre el archivo <code>tests_p5.zip</code> que te has descargado.</li>
+<li>Arrastra todo el contenido del archivo <code>tests_p5.zip</code> a la carpeta <code>tests</code> de la carpeta <code>p5</code>.</li>
+</ol>
+</section>
+<section id="entrega-de-la-práctica" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="entrega-de-la-práctica"><span class="header-section-number">5</span> Entrega de la práctica</h2>
 <p><strong>Antes de las 18:00 de la fecha límite establecida en Moodle,</strong> deberán haberse subido a Moodle los siguientes ficheros:</p>
 <ul class="task-list">
 <li><label><input type="checkbox"><code>complejos.py</code></label></li>
@@ -1088,14 +1091,13 @@ Números complejos del primer cuadrante:<br>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
