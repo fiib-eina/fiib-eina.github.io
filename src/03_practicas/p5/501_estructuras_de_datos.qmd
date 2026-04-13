@@ -23,7 +23,7 @@ En el módulo `complejos.py` debes definir:
 Ejemplo de representación:
 
 ```python
-print(str_complejo(Complejo(3, 4)))
+print(str_complejo(Complejo(3.0, 4.0)))
 ```
 
 | 3.0+4.0i
@@ -40,7 +40,7 @@ print(str_complejo(Complejo(3.22, 4.1111111111)))
 Ejemplo de ejecución de la función `sumar()`:
 
 ```python
-print(str_complejo(sumar(Complejo(3, 4), Complejo(1, 2))))
+print(str_complejo(sumar(Complejo(3.0, 4.0), Complejo(1.0, 2.0))))
 ```
 
 | 4.0+6.0i
@@ -48,7 +48,7 @@ print(str_complejo(sumar(Complejo(3, 4), Complejo(1, 2))))
 Ejemplo de ejecución de la función `modulo()`:
 
 ```python
-print(modulo(Complejo(3, 4)))
+print(modulo(Complejo(3.0, 4.0)))
 ```
 
 | 5.0
