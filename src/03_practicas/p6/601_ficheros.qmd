@@ -151,6 +151,14 @@ print(indice) # 25
 
 **Tip 2**
 
+- Puedes obtener el carácter correspondiente a un valor numérico utilizando la función `chr()` (carácter).
+    - `chr(65)` devuelve `A` y `chr(97)` devuelve `a`.
+:::
+
+::: {.callout-tip}
+
+**Tip 3**
+
 - Puedes averiguar si un carácter es una letra utilizando la función `isalpha()`.
 
 ```python
@@ -280,9 +288,6 @@ El formato del fichero `usuarios.txt` será el siguiente:
 | usuario2:contraseña2
 | usuario3:contraseña3
 
-<!-- TODO: Add lin -->
-Se provee un fichero `usuarios.txt` de ejemplo.
-
 ### `usuarios.py`
 
 Implementa el módulo `usuarios.py` que contenga las siguientes funciones:
@@ -309,7 +314,7 @@ Implementa el programa `agregar_usuario.py` que realice lo siguiente:
 - Abrir el fichero `usuarios.txt` en modo **escritura**.
 - Guardar la lista de usuarios en el fichero `usuarios.txt`.
 
-_usuarios.txt_ ([link de descarga](./tests/usuarios.txt))
+_usuarios.txt_
 
 | maria:12345678
 | hector:secreto
@@ -353,6 +358,15 @@ Implementa el programa `control_acceso.py` que realice lo siguiente:
 | Introduce el nombre de usuario: **juan**
 | Introduce la contraseña: **1234**
 | Usuario no existe
+
+## Pruebas
+
+Copia los archivos de pruebas de la práctica 4 en la carpeta `test` de la carpeta `p6` que creaste con la estructura básica de carpetas en la [práctica 0](../p0/101_introductoria.html#/22):
+ 
+1. En tu carpeta de prácticas `FIIB`, accede a la carpeta `tests` de la carpeta `p6` y déjala abierta.
+1. Descarga el fichero [`tests_p6.zip`](./tests_p6.zip).
+1. Abre el archivo `tests_p6.zip` que te has descargado.
+1. Arrastra todo el contenido del archivo `tests_p6.zip` a la carpeta `tests` de la carpeta `p6`.
 
 ## Entrega de la práctica
 

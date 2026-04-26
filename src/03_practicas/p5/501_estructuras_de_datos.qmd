@@ -55,8 +55,6 @@ print(modulo(Complejo(3.0, 4.0)))
 
 **Entrega:** Escribe tu programa en un fichero denominado `complejos.py`.
 
-**Pruebas:** Si ejecutas el código del fichero [`test_complejos.py`](./tests/test_complejos.py), se harán pruebas de unidad de ese módulo.
-
 ## Calculadora de números complejos
 
 Escribe un programa Python `calculadora.py` que implemente una **calculadora de números complejos** con las siguientes operaciones: suma y resta.
@@ -186,8 +184,6 @@ Ejemplo de ejecución:
 | 0.5002+0.7605i, 0.9307+1.7915i
 
 **Entrega:** Escribe tu programa en un fichero denominado `lista_complejos.py`.
-
-**Pruebas:** Si ejecutas el código del fichero [`test_lista_complejos.py`](./tests/test_lista_complejos.py), se harán pruebas de unidad de ese módulo.
 
 ## Pruebas
 
