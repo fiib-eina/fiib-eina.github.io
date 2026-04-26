@@ -852,7 +852,8 @@ window.Quarto = {
   <li><a href="#agregar_usuario.py" id="toc-agregar_usuario.py" class="nav-link" data-scroll-target="#agregar_usuario.py"><span class="header-section-number">3.2</span> <code>agregar_usuario.py</code></a></li>
   <li><a href="#control_acceso.py" id="toc-control_acceso.py" class="nav-link" data-scroll-target="#control_acceso.py"><span class="header-section-number">3.3</span> <code>control_acceso.py</code></a></li>
   </ul></li>
-  <li><a href="#entrega-de-la-práctica" id="toc-entrega-de-la-práctica" class="nav-link" data-scroll-target="#entrega-de-la-práctica"><span class="header-section-number">4</span> Entrega de la práctica</a></li>
+  <li><a href="#pruebas" id="toc-pruebas" class="nav-link" data-scroll-target="#pruebas"><span class="header-section-number">4</span> Pruebas</a></li>
+  <li><a href="#entrega-de-la-práctica" id="toc-entrega-de-la-práctica" class="nav-link" data-scroll-target="#entrega-de-la-práctica"><span class="header-section-number">5</span> Entrega de la práctica</a></li>
   </ul>
 </nav>
     </div>
@@ -1031,6 +1032,22 @@ Y_i = \frac{X_{i-1} + X_i + X_{i+1}}{3}
 <div class="callout-body-container">
 <p><strong>Tip 2</strong></p>
 <ul>
+<li>Puedes obtener el carácter correspondiente a un valor numérico utilizando la función <code>chr()</code> (carácter).
+<ul>
+<li><code>chr(65)</code> devuelve <code>A</code> y <code>chr(97)</code> devuelve <code>a</code>.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Tip 3</strong></p>
+<ul>
 <li>Puedes averiguar si un carácter es una letra utilizando la función <code>isalpha()</code>.</li>
 </ul>
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="bu">print</span>(<span class="st">"z"</span>.isalpha()) <span class="co"># True</span></span>
@@ -1143,8 +1160,6 @@ Recuerda, no puedes utilizar:
 <div class="line-block">usuario1:contraseña1<br>
 usuario2:contraseña2<br>
 usuario3:contraseña3</div>
-<!-- TODO: Add lin -->
-<p>Se provee un fichero <code>usuarios.txt</code> de ejemplo.</p>
 <section id="usuarios.py" class="level3" data-number="3.1">
 <h3 data-number="3.1" class="anchored" data-anchor-id="usuarios.py"><span class="header-section-number">3.1</span> <code>usuarios.py</code></h3>
 <p>Implementa el módulo <code>usuarios.py</code> que contenga las siguientes funciones:</p>
@@ -1178,7 +1193,7 @@ usuario3:contraseña3</div>
 <li>Abrir el fichero <code>usuarios.txt</code> en modo <strong>escritura</strong>.</li>
 <li>Guardar la lista de usuarios en el fichero <code>usuarios.txt</code>.</li>
 </ul>
-<p><em>usuarios.txt</em> (<a href="./tests/usuarios.txt">link de descarga</a>)</p>
+<p><em>usuarios.txt</em></p>
 <div class="line-block">maria:12345678<br>
 hector:secreto</div>
 <p><strong>Ejemplo de ejecución:</strong></p>
@@ -1218,8 +1233,18 @@ Introduce la contraseña: <strong>1234</strong><br>
 Usuario no existe</div>
 </section>
 </section>
-<section id="entrega-de-la-práctica" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="entrega-de-la-práctica"><span class="header-section-number">4</span> Entrega de la práctica</h2>
+<section id="pruebas" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="pruebas"><span class="header-section-number">4</span> Pruebas</h2>
+<p>Copia los archivos de pruebas de la práctica&nbsp;4 en la carpeta <code>test</code> de la carpeta <code>p6</code> que creaste con la estructura básica de carpetas en la <a href="../p0/101_introductoria.html#/22">práctica&nbsp;0</a>:</p>
+<ol type="1">
+<li>En tu carpeta de prácticas <code>FIIB</code>, accede a la carpeta <code>tests</code> de la carpeta <code>p6</code> y déjala abierta.</li>
+<li>Descarga el fichero <a href="./tests_p6.zip"><code>tests_p6.zip</code></a>.</li>
+<li>Abre el archivo <code>tests_p6.zip</code> que te has descargado.</li>
+<li>Arrastra todo el contenido del archivo <code>tests_p6.zip</code> a la carpeta <code>tests</code> de la carpeta <code>p6</code>.</li>
+</ol>
+</section>
+<section id="entrega-de-la-práctica" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="entrega-de-la-práctica"><span class="header-section-number">5</span> Entrega de la práctica</h2>
 <p><strong>Antes de las 18:00 de la fecha límite establecida en Moodle,</strong> deberán haberse subido a Moodle los siguientes ficheros:</p>
 <ul class="task-list">
 <li><label><input type="checkbox"><code>filtrar_velocidades.py</code></label></li>
